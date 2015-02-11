@@ -1,0 +1,3 @@
+[submodule "Popbill"]
+	path = Popbill
+	url = https://github.com/linkhub-sdk/popbill.sdk.php5.git
