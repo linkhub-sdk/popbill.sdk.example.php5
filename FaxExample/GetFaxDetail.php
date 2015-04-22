@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';	#팝빌 회원 사업자 번호, "-"제외 10자리
 	$testUserID = 'testkorea';		#팝빌 회원 아이디
-	$ReceiptNum = '015021116530400001';		#팩스전송 접수번호
+	$ReceiptNum = '015042217263000001';		#팩스전송 접수번호
 
 	try {
 		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum, $testUserID);
@@ -32,23 +32,31 @@
 							<li>Response.message : <? echo $message ?></li>
 					<?
 						} else {
+							for ($i=0; $i < Count($result); $i++){
+
 					?>
-							<li> sendState : <? echo $result->sendState; ?> </li>
-							<li> convState : <? echo $result->convState; ?> </li>
-							<li> sendNum : <? echo $result->sendNum; ?> </li>
-							<li> receiveNum : <? echo $result->receiveNum; ?> </li>
-							<li> receiveName : <? echo $result->receiveName; ?> </li>
-							<li> sendPageCnt : <? echo $result->sendPageCnt; ?> </li>
-							<li> successPageCnt : <? echo $result->successPageCnt; ?> </li>
-							<li> failPageCnt : <? echo $result->failPageCnt; ?> </li>
-							<li> refundPageCnt : <? echo $result->refundPageCnt; ?> </li>
-							<li> cancelPageCnt : <? echo $result->cancelPageCnt; ?> </li>
-							<li> reserveDT : <? echo $result->reserveDT; ?> </li>
-							<li> sendDT : <? echo $result->sendDT; ?> </li>
-							<li> resultDT : <? echo $result->resultDT; ?> </li>
-							<li> sendResult : <? echo $result->sendResult; ?> </li>
+						<fieldset class="fieldset2"> 
+								<legend> 팩스전송내역 조회 결과 [<? echo $i+1 ?>/<? echo Count($result)?>]</legend>
+								<ul>
+									<li> sendState : <? echo $result[$i]->sendState; ?> </li>
+									<li> convState : <? echo $result[$i]->convState; ?> </li>
+									<li> sendNum : <? echo $result[$i]->sendNum; ?> </li>
+									<li> receiveNum : <? echo $result[$i]->receiveNum; ?> </li>
+									<li> receiveName : <? echo $result[$i]->receiveName; ?> </li>
+									<li> sendPageCnt : <? echo $result[$i]->sendPageCnt; ?> </li>
+									<li> successPageCnt : <? echo $result[$i]->successPageCnt; ?> </li>
+									<li> failPageCnt : <? echo $result[$i]->failPageCnt; ?> </li>
+									<li> refundPageCnt : <? echo $result[$i]->refundPageCnt; ?> </li>
+									<li> cancelPageCnt : <? echo $result[$i]->cancelPageCnt; ?> </li>
+									<li> reserveDT : <? echo $result[$i]->reserveDT; ?> </li>
+									<li> sendDT : <? echo $result[$i]->sendDT; ?> </li>
+									<li> resultDT : <? echo $result[$i]->resultDT; ?> </li>
+									<li> sendResult : <? echo $result[$i]->sendResult; ?> </li>
+								</ul>
+							</fieldset>
 
 					<?
+							}
 						}
 					?>					
 				</ul>

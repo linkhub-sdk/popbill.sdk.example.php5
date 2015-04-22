@@ -50,10 +50,18 @@
 				</fieldset>
 				
 				<fieldset class="fieldset2">
-					<legend>단/장문 문자 자동 전송</legend>
+					<legend>단/장문 문자 자동인식 전송</legend>
 					<ul>
 						<li><a href="SendXMS.php">sendXMS</a> - 단/장문 문자메시지 1건 전송</li>
 						<li><a href="SendXMS_Multi.php">sendXMS</a> - 단/장문 문자메시지 다량(최대1000건) 전송</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>MMS 문자 전송</legend>
+					<ul>
+						<li><a href="SendMMS.php">sendMMS</a> - MMS 문자메시지 1건 전송</li>
+						<li><a href="SendMMS_Multi.php">sendMMS</a> - MMS 문자메시지 (최대1000건) 전송</li>
 					</ul>
 				</fieldset>
 				
