@@ -2,10 +2,10 @@
 
 require_once '../Popbill/PopbillTaxinvoice.php';
 
-//연동 아이디
+//링크 아이디
 $LinkID = 'TESTER';
 //발급받은 비밀키. 유출에 주의하시기 바랍니다.
-$SecretKey = 'jkjiPCCWfjb9yItA2CMxemSQDVEyBxZg0iymxZvaWKc=';
+$SecretKey = 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I=';
 
 $TaxinvoiceService = new TaxinvoiceService($LinkID,$SecretKey);
 

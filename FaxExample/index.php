@@ -1,16 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		
-		<title>팝빌 SDK PHP 5.0 Example.</title>
+		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 
 	<body>
 
 		<div id="content">
 
-			<p class="heading1">팝빌 팩스 SDK PHP 5.0 Example.</p>
+			<p class="heading1">팝빌 팩스 SDK PHP 5.X Example.</p>
 			
 			<br/>
 
