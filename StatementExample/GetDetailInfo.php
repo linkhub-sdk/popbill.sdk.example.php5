@@ -10,7 +10,7 @@
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호, "-"제외 10자리
 	$testUserID = 'testkorea';		# 팝빌회원 아이디
 	$itemCode = '121';				# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)					
-	$mgtKey = '20150206-01';		# 문서관리번호
+	$mgtKey = '20150624-01';		# 문서관리번호
 
 	try {
 		$result = $StatementService->GetDetailInfo($testCorpNum, $itemCode, $mgtKey, $testUserID);

@@ -16,7 +16,7 @@
 	$Receivers = array();
 	
 	$Receivers[] = array(
-		'rcv' => '1112222',			#수신번호
+		'rcv' => '06264429700',			#수신번호
 		'rcvnm' => '팝빌담당자'		#수신자 명칭
 	);
 	

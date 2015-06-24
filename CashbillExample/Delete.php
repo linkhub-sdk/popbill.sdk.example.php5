@@ -8,7 +8,7 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';	# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$mgtKey = '20150206-01';		# 문서관리번호
+	$mgtKey = '20150624-01';		# 문서관리번호
 
 	try {
 		$result = $CashbillService->Delete($testCorpNum,$mgtKey);
