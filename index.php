@@ -17,6 +17,7 @@
 						<li><a href="StatementExample">StatementService</a> - 전자명세서 API</li>
 						<li><a href="MessageExample">MessageService</a> - 문자메시지 API</li>
 						<li><a href="FaxExample">FaxService</a> - 팩스 API</li>
+						<li><a href="ClosedownExample">ClosedownService</a> - 휴폐업조회 API</li>
 					</ul>
 			</fieldset>
 		 </div>
