@@ -10,9 +10,10 @@
 	$testCorpNum = '1234567890';			# 팝빌 회원 사업자번호, '-' 제외 10자리
 	$testUserID = 'testkorea';				# 팝빌 회원 아이디
 	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
-	$mgtKey = '20150211-01';				# 문서관리번호
-	$filePath = './uploadtest.jpg';			# 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
+	$mgtKey = '20151006-01';				# 문서관리번호
+	$filePath = './uploadtest.jpg';				# 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
 
+		
 	try {
 		#세금계산서 1건당 최대 5개 파일 첨부가능.
 		$result = $TaxinvoiceService->AttachFile($testCorpNum,$mgtKeyType,$mgtKey,$filePath,$testUserID);

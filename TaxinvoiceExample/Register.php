@@ -8,7 +8,7 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';				# 회원 사업자번호, '-' 제외 10자리
-	$invoicerMgtKey = '20150615-06';			# 문서관리번호
+	$invoicerMgtKey = '20151006-01';			# 문서관리번호
 	$testUserID = 'testkorea';					# 회원 아이디
 	$writeSpecification = false;				# 거래명세서 동시작성 여부
 
@@ -16,7 +16,7 @@
 	# 전자세금계산서 객체, 자세한 구성방법은 전자세금계산서 API 연동매뉴얼의 [4.1 세금계산서 구성] 참고.
 	$Taxinvoice = new Taxinvoice();
 
-	$Taxinvoice->writeDate = '20150615';		# [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
+	$Taxinvoice->writeDate = '20151005';		# [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
 	$Taxinvoice->issueType = '정발행';			# [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
 	$Taxinvoice->chargeDirection = '정과금';	# [필수] 과금방향, '정과금'(공급자 과금), '역과금'(공급받는자 과금) 중 기재, 역과금은 역발행시에만 가능.
 	$Taxinvoice->purposeType = '영수';			# [필수] '영수', '청구' 중 기재

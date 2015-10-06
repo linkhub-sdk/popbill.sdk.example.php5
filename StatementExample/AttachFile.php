@@ -10,9 +10,9 @@
 	$testCorpNum = '1234567890';	# 팝빌 회원 사업자번호, "-" 제외 10자리
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
 	$itemCode= '121';				# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
-	$mgtKey = '20150206-01';		# 문서관리번호
-	$filepath = 'uploadtest.jpg';	# 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
-
+	$mgtKey = '20151006-01';		# 문서관리번호
+	$filepath = './uploadtest.jpg';	# 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
+	
 	try {
 		#전자명세서 1건당 최대 5개 파일 첨부가능.
 		$result = $StatementService->AttachFile($testCorpNum, $itemCode, $mgtKey, $filepath, $testUserID);

@@ -13,6 +13,7 @@
 	$MgtKeyList = array(					# 문서관리번호 배열, 최대 1000건
 			'20150211-01',
 			'20150211-02',
+			'20151001-01',
 	);
 
 	try {
@@ -49,6 +50,7 @@
 								<li>purposeType : <? echo $result[$i]->purposeType ; ?></li>
 								<li>modifyCode : <? echo $result[$i]->modifyCode ; ?></li>
 								<li>issueType : <? echo $result[$i]->issueType ; ?></li>
+								<li>lateIssueYN : <? echo $result[$i]->lateIssueYN ; ?></li>
 								<li>writeDate : <? echo $result[$i]->writeDate ; ?></li>
 								<li>invoicerCorpName : <? echo $result[$i]->invoicerCorpName ; ?></li>
 								<li>invoicerCorpNum : <? echo $result[$i]->invoicerCorpNum ; ?></li>

@@ -8,7 +8,7 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$mgtKey = '20150206-01';			# 문서관리번호, 발행자별로 중복없이 1~24자리 영문,숫자로 구성
+	$mgtKey = '20150206-01';			# 관리번호, 발행자별로 중복없이 1~24자리 영문,숫자로 구성
 	$mgtKeyType = ENumMgtKeyType::SELL;	# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
 
 	try {
@@ -25,7 +25,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동관리번호 사용여부 확인</legend>
+				<legend>관리번호 사용여부 확인</legend>
 				<ul>
 					<?
 						if(isset($code)) { 

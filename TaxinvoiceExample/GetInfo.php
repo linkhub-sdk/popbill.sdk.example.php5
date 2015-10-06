@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-'제외 10자리
 	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
-	$mgtKey = '20150203-01';				# 문서관리번호
+	$mgtKey = '20151001-11';				# 문서관리번호
 
 	try {
 		$result = $TaxinvoiceService->GetInfo($testCorpNum, $mgtKeyType, $mgtKey);
@@ -42,6 +42,7 @@
 							<li>purposeType : <? echo $result->purposeType ; ?></li>
 							<li>modifyCode : <? echo $result->modifyCode ; ?></li>
 							<li>issueType : <? echo $result->issueType ; ?></li>
+							<li>lateIssueYN : <? echo $result->lateIssueYN ; ?></li>
 							<li>writeDate : <? echo $result->writeDate ; ?></li>
 							<li>invoicerCorpName : <? echo $result->invoicerCorpName ; ?></li>
 							<li>invoicerCorpNum : <? echo $result->invoicerCorpNum ; ?></li>

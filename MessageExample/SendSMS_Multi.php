@@ -11,6 +11,7 @@
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
 	$reserveDT = null;				# 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 #	$reserveDT = '20151212230000';  	
+	$adsYN = true;					# 광고문자 전송여부
 
 	$Messages = array();
 
@@ -25,7 +26,7 @@
 
 	try {
 		#SendSMS(사업자번호, 동보전송발신번호, 동보전송내용, 전송정보배열, 예약전송일시, 회원아이디)
-		$receiptNum = $MessagingService->SendSMS($testCorpNum,'','',$Messages, $reserveDT, $testUserID);
+		$receiptNum = $MessagingService->SendSMS($testCorpNum,'','',$Messages, $reserveDT, $adsYN, $testUserID);
 	} catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
