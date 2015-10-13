@@ -11,7 +11,7 @@
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
 	$reserveDT = null;				# 예약전송일시(yyyyMMddHHmmss), null인경우 즉시전송 
 #	$reserveDT = '20151212230000';  
-	$adsYN = true;					# 광고문자 전송여부
+	$adsYN = false;					# 광고문자 전송여부
 	
 	$Messages = array();
 	

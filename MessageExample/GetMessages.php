@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-'제외 10자리
 	$testUserID = 'testkorea';				# 팝빌회원 아이디
-	$ReceiptNum = '015042217000000006';		# 문자전송 요청 시 발급받은 접수번호(receiptNum)
+	$ReceiptNum = '015101310000000012';		# 문자전송 요청 시 발급받은 접수번호(receiptNum)
 	
 	try {
 		$result = $MessagingService->GetMessages($testCorpNum, $ReceiptNum, $testUserID);
@@ -50,6 +50,7 @@
 									<li> sendDT : <? echo $result[$i]->sendDT; ?> </li>
 									<li> resultDT : <? echo $result[$i]->resultDT; ?> </li>
 									<li> sendResult : <? echo $result[$i]->sendResult; ?> </li>
+									<li> tranNet : <? echo $result[$i]->tranNet; ?> </li>
 								</ul>
 							</fieldset>
 					<?

@@ -58,16 +58,16 @@
 				<fieldset class="fieldset2">
 					<legend>단/장문 문자 자동인식 전송</legend>
 					<ul>
-						<li><a href="SendXMS.php">sendXMS</a> - 단/장문 문자메시지 1건 전송</li>
-						<li><a href="SendXMS_Multi.php">sendXMS</a> - 단/장문 문자메시지 다량(최대1000건) 전송</li>
+						<li><a href="SendXMS.php">sendXMS</a> - 단/장문 자동인식 문자메시지 1건 전송</li>
+						<li><a href="SendXMS_Multi.php">sendXMS</a> - 단/장문 자동인식 문자메시지 다량(최대1000건) 전송</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>MMS 문자 전송</legend>
+					<legend>포토 문자 전송</legend>
 					<ul>
-						<li><a href="SendMMS.php">sendMMS</a> - MMS 문자메시지 1건 전송</li>
-						<li><a href="SendMMS_Multi.php">sendMMS</a> - MMS 문자메시지 (최대1000건) 전송</li>
+						<li><a href="SendMMS.php">sendMMS</a> - 포토 문자메시지 1건 전송</li>
+						<li><a href="SendMMS_Multi.php">sendMMS</a> - 포토 문자메시지 (최대1000건) 전송</li>
 					</ul>
 				</fieldset>
 				
@@ -76,7 +76,7 @@
 					<ul>
 						<li><a href="Search.php">search</a> - 문자 전송내역 기간조회</li>
 						<li><a href="GetMessages.php">getMessages</a> - 접수번호에 해당하는 문자메시지 전송결과 확인</li>
-						<li><a href="CancelReserve.php">cancelReserve</a> - 예약문자메시지의 예약 취소. 예약시간 10분전까지만 가능.</li>
+						<li><a href="CancelReserve.php">cancelReserve</a> - 예약문자 메시지의 예약 취소. 예약시간 10분전까지만 가능.</li>
 					</ul>
 				</fieldset>
 				
@@ -84,7 +84,7 @@
 					<legend>기타</legend>
 					<ul>
 						<li><a href="GetURL.php">getURL</a> - 문자메시지 관련 SSO URL 확인</li>
-						<li><a href="GetUnitCost.php">getUnitCost</a> - 세금계산서 발행 단가 확인</li>
+						<li><a href="GetUnitCost.php">getUnitCost</a> - 문자 전송 단가 확인</li>
 					</ul>
 				</fieldset>
 

@@ -67,6 +67,7 @@
 									<li> sendDT : <? echo $result->list[$i]->sendDT; ?> </li>
 									<li> resultDT : <? echo $result->list[$i]->resultDT; ?> </li>
 									<li> sendResult : <? echo $result->list[$i]->sendResult; ?> </li>
+									<li> tranNet : <? echo $result->list[$i]->tranNet; ?> </li>
 								</ul>
 							</fieldset>
 					<?

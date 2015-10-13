@@ -10,14 +10,13 @@
 	$testCorpNum = '1234567890';	# 팝빌 회원 사업자번호, "-"제외 10자리
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
 	$reserveDT = null;				# 예약전송일시(yyyyMMddHHmmss), null인경우 즉시전송 
-	
 #	$reserveDT = '20151212230000';  
 	$adsYN = false;					# 광고문자 전송여부
 
 	$Messages = array();
 	
 	$Messages[] = array(
-		'snd' => '07075106766',			# 발신번호
+		'snd' => '07075103710',			# 발신번호
 		'rcv' => '010111222',			# 수신번호
 		'rcvnm' => '수신자성명',		# 수신자 성명
 		'msg'	=> '개별 메시지 내용',	# 개별 메시지 내용. 장문은 2000byte로 길이가 조정되어 전송됨.

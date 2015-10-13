@@ -11,13 +11,13 @@
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
 	$reserveDT = null;	# 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 #	$reserveDT = '20151212230000';  
-	$adsYN = true;					# 광고문자 전송여부
+	$adsYN = false;					# 광고문자 전송여부
 	
 	$Messages = array();
 
 	$Messages[] = array(
 		'snd' => '07075106766',			# 발신번호
-		'rcv' => '01043245117',			# 수신번호
+		'rcv' => '010111222',			# 수신번호
 		'rcvnm' => '수신자성명',		# 수신자성명
 		'msg'	=> '안녕하세요.'	# 개별 메시지 내용
 	);
