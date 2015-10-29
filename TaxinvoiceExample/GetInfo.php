@@ -48,6 +48,7 @@
 							<li>invoicerCorpNum : <? echo $result->invoicerCorpNum ; ?></li>
 							<li>invoicerMgtKey : <? echo $result->invoicerMgtKey ; ?></li>
 							<li>invoiceeCorpName : <? echo $result->invoiceeCorpName ; ?></li>
+							<li>invoiceeCorpNum : <? echo $result->invoiceeCorpNum ; ?></li>
 							<li>invoiceeMgtKey : <? echo $result->invoiceeMgtKey ; ?></li>
 							<li>trusteeCorpName : <? echo $result->trusteeCorpName ; ?></li>
 							<li>trusteeCorpNum : <? echo $result->trusteeCorpNum ; ?></li>
