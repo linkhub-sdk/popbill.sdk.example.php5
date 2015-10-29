@@ -56,6 +56,7 @@
 								<li>invoicerCorpNum : <? echo $result[$i]->invoicerCorpNum ; ?></li>
 								<li>invoicerMgtKey : <? echo $result[$i]->invoicerMgtKey ; ?></li>
 								<li>invoiceeCorpName : <? echo $result[$i]->invoiceeCorpName ; ?></li>
+								<li>invoiceeCorpNum : <? echo $result[$i]->invoiceeCorpNum ; ?></li>
 								<li>invoiceeMgtKey : <? echo $result[$i]->invoiceeMgtKey ; ?></li>
 								<li>trusteeCorpName : <? echo $result[$i]->trusteeCorpName ; ?></li>
 								<li>trusteeCorpNum : <? echo $result[$i]->trusteeCorpNum ; ?></li>
