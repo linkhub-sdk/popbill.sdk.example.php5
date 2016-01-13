@@ -85,6 +85,7 @@
 					<ul>
 						<li><a href="GetURL.php">getURL</a> - 문자메시지 관련 SSO URL 확인</li>
 						<li><a href="GetUnitCost.php">getUnitCost</a> - 문자 전송 단가 확인</li>
+						<li><a href="GetAutoDenyList.php">getAutoDenyList</a> - 080 수신거부 목록 확인</li>
 					</ul>
 				</fieldset>
 

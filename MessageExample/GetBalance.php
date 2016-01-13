@@ -10,7 +10,7 @@
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호, "-"제외 10자리
 
 	try {
-		$remainPoint = $MessagingService->GetBalance('1234567890');
+		$remainPoint = $MessagingService->GetBalance($testCorpNum);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

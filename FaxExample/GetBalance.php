@@ -10,7 +10,7 @@
 	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호
 
 	try {
-		$remainPoint = $FaxService->GetBalance('1234567890');
+		$remainPoint = $FaxService->GetBalance($testCorpNum);
 	} catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
