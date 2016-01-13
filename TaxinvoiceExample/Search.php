@@ -7,22 +7,36 @@
 <?php 
 	include 'common.php';	
 
-	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';			    # 팝빌회원 사업자번호, '-'제외 10자리
 	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
 	
-	$DType = 'W';						# [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입
-	$SDate = '20141001';				# [필수] 시작일자
-	$EDate = '20151001';				# [필수] 종료일자
-	$State = array('100','2**','3**');	# 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
-	$Type = array('N','M');				# 문서유형, N-일반, M-수정, 선택 배열
-	$TaxType = array('T','N','Z');		# 과세형태, T-과세, N-면세, Z-영세 선택 배열
-	$LateOnly = 0;						# 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
-	$Page = 1;							# 페이지 번호 기본값 1
-	$PerPage = 1000;					# 페이지당 검색갯수, 기본값 500, 최대값 1000
-	
+	$DType = 'W';						              # [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입
+	$SDate = '20141001';				          # [필수] 시작일자
+	$EDate = '20151001';				          # [필수] 종료일자
 
+	$State = array (                      # 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회  
+    '100',
+    '2**',
+    '3**'
+  );
+  
+	$Type = array (                       # 문서유형, N-일반, M-수정, 선택 배열
+    'N',
+    'M'
+  );
+  
+	$TaxType = array (                    # 과세형태, T-과세, N-면세, Z-영세 선택 배열
+    'T',
+    'N',
+    'Z'
+  );		    
+
+	$LateOnly = 0;						            # 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
+	$Page = 1;							              # 페이지 번호 기본값 1
+	$PerPage = 50;					            # 페이지당 검색갯수, 기본값 500, 최대값 1000
+	
 	try {
-		$result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType,$SDate,$EDate,$State,$Type,$TaxType,null,$Page,$PerPage);
+		$result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage);
 	}
 
 	catch(PopbillException $pe) {

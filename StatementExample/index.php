@@ -62,6 +62,7 @@
 						<li><a href="GetInfos.php">getInfos</a> - 전자명세서 상태 대량 확인</li>
 						<li><a href="GetLogs.php">getLogs</a> - 전자명세서 이력 확인</li>
 						<li><a href="GetDetailInfo.php">getDetailInfo</a> - 전자명세서 상세정보 확인</li>
+            <li><a href="Search.php">search</a> - 전자명세서 목록조회</li>
 					</ul>
 				</fieldset>
 				
