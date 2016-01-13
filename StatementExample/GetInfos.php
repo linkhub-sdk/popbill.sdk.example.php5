@@ -51,8 +51,10 @@
 									<li> writeDate : <? echo $result[$i]->writeDate ?></li>
 									<li> senderCorpName : <? echo $result[$i]->senderCorpName ?></li>
 									<li> senderCorpNum : <? echo $result[$i]->senderCorpNum ?></li>
+									<li> senderPrintYN : <? echo $result[$i]->senderPrintYN ?></li>
 									<li> receiverCorpName : <? echo $result[$i]->receiverCorpName ?></li>
 									<li> receiverCorpNum : <? echo $result[$i]->receiverCorpNum ?></li>
+									<li> receiverPrintYN : <? echo $result[$i]->receiverPrintYN ?></li>
 									<li> supplyCostTotal : <? echo $result[$i]->supplyCostTotal ?></li>
 									<li> taxTotal : <? echo $result[$i]->taxTotal ?></li>
 									<li> issueDT : <? echo $result[$i]->issueDT ?></li>

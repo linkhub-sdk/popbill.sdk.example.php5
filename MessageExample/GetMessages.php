@@ -46,7 +46,8 @@
 									<li> sendNum : <? echo $result[$i]->sendNum; ?> </li>
 									<li> receiveNum : <? echo $result[$i]->receiveNum; ?> </li>
 									<li> receiveName : <? echo $result[$i]->receiveName; ?> </li>
-									<li> reserveDT : <? echo $result[$i]->reserveDT; ?> </li>
+									<li> receiptDT : <? echo $result[$i]->receiptDT; ?> </li>
+                  <li> reserveDT : <? echo $result[$i]->reserveDT; ?> </li>
 									<li> sendDT : <? echo $result[$i]->sendDT; ?> </li>
 									<li> resultDT : <? echo $result[$i]->resultDT; ?> </li>
 									<li> sendResult : <? echo $result[$i]->sendResult; ?> </li>

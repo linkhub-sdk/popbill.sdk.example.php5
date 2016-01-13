@@ -8,7 +8,7 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
-  $SDate = '20151201';          # 시작일자
+  $SDate = '20160101';          # 시작일자
   $EDate = '20160112';          # 종료일자
   
   $State = array(               # 전송상태값 배열, 1-대기, 2-성공, 3-실패, 4-취소  
@@ -18,15 +18,16 @@
     4
   );
 
-  $ReserveYN = true;            # 예약여부, true(예약전송건 검색)
-  $SenderOnly = true;           # 개인조회여부, true(개인조회)
+  $ReserveYN = false;           # 예약여부, true(예약전송건 검색)
+  $SenderOnly = false;          # 개인조회여부, true(개인조회)
   
   $Page = 1;                    # 페이지 번호, 기본값 1
   $PerPage = 30;                # 페이지당 검색갯수, 기본값 500, 최대값 1000
-
+  $Order = 'A';                 # 정렬방향, D-내림차순, A-오름차순
+  
   try {
 		
-    $result = $FaxService->Search($testCorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage);
+    $result = $FaxService->Search($testCorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order);
 
 	} catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -70,10 +71,13 @@
 									<li> failPageCnt : <? echo $result->list[$i]->failPageCnt; ?> </li>
 									<li> refundPageCnt : <? echo $result->list[$i]->refundPageCnt; ?> </li>
 									<li> cancelPageCnt : <? echo $result->list[$i]->cancelPageCnt; ?> </li>
-									<li> reserveDT : <? echo $result->list[$i]->reserveDT; ?> </li>
-									<li> sendDT : <? echo $result->list[$i]->sendDT; ?> </li>
+                  <li> receiptDT : <? echo $result->list[$i]->receiptDT; ?> </li>
+                  <li> reserveDT : <? echo $result->list[$i]->reserveDT; ?> </li>
+                  <li> sendDT : <? echo $result->list[$i]->sendDT; ?> </li>
 									<li> resultDT : <? echo $result->list[$i]->resultDT; ?> </li>
 									<li> sendResult : <? echo $result->list[$i]->sendResult; ?> </li>
+                  <li> fileNames : <? echo implode(', ',$result->list[$i]->fileNames); ?> </li>
+
 								</ul>
 							</fieldset>
 					<?

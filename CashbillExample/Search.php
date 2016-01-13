@@ -37,10 +37,13 @@
 
   $Page = 1;                    # 페이지번호, 기본값 1
   $PerPage = 30;                # 페이지당 검색갯수, 기본값 500, 최대값 1000
+  $Order = 'D';                 # 정렬방향, D-내림차순, A-오름차순
 
-	try {
-		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType, $TradeUsage, $TaxationType, $Page, $PerPage );
-	}	catch(PopbillException $pe) {
+  try {
+
+		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType, $TradeUsage, $TaxationType, $Page, $PerPage, $Order );
+	
+  }	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -52,8 +55,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 목록조회</legend>
 				<ul>
-						<?
-						if(isset($code)) { 
+   				<?
+						if( isset ( $code ) ) { 
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>

@@ -55,12 +55,15 @@
 								<li>invoicerCorpName : <? echo $result[$i]->invoicerCorpName ; ?></li>
 								<li>invoicerCorpNum : <? echo $result[$i]->invoicerCorpNum ; ?></li>
 								<li>invoicerMgtKey : <? echo $result[$i]->invoicerMgtKey ; ?></li>
+								<li>invoicerPrintYN : <? echo $result[$i]->invoicerMgtKey ; ?></li>
 								<li>invoiceeCorpName : <? echo $result[$i]->invoiceeCorpName ; ?></li>
 								<li>invoiceeCorpNum : <? echo $result[$i]->invoiceeCorpNum ; ?></li>
 								<li>invoiceeMgtKey : <? echo $result[$i]->invoiceeMgtKey ; ?></li>
+								<li>invoiceePrintYN : <? echo $result[$i]->invoiceeMgtKey ; ?></li>
 								<li>trusteeCorpName : <? echo $result[$i]->trusteeCorpName ; ?></li>
 								<li>trusteeCorpNum : <? echo $result[$i]->trusteeCorpNum ; ?></li>
 								<li>trusteeMgtKey : <? echo $result[$i]->trusteeMgtKey ; ?></li>
+								<li>trusteePrintYN : <? echo $result[$i]->trusteePrintYN ; ?></li>
 								<li>supplyCostTotal : <? echo $result[$i]->supplyCostTotal ; ?></li>
 								<li>taxTotal : <? echo $result[$i]->taxTotal ; ?></li>
 								<li>issueDT : <? echo $result[$i]->issueDT ; ?></li>

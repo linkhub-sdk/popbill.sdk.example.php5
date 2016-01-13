@@ -48,13 +48,15 @@
 									<li> failPageCnt : <? echo $result[$i]->failPageCnt; ?> </li>
 									<li> refundPageCnt : <? echo $result[$i]->refundPageCnt; ?> </li>
 									<li> cancelPageCnt : <? echo $result[$i]->cancelPageCnt; ?> </li>
-									<li> reserveDT : <? echo $result[$i]->reserveDT; ?> </li>
+                  <li> receiptDT : <? echo $result[$i]->receiptDT; ?> </li>
+                  <li> reserveDT : <? echo $result[$i]->reserveDT; ?> </li>
 									<li> sendDT : <? echo $result[$i]->sendDT; ?> </li>
 									<li> resultDT : <? echo $result[$i]->resultDT; ?> </li>
 									<li> sendResult : <? echo $result[$i]->sendResult; ?> </li>
+                  <li> fileNames : <? echo implode(', ',$result[$i]->fileNames); ?> </li>
+
 								</ul>
 							</fieldset>
-
 					<?
 							}
 						}

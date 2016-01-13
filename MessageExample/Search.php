@@ -10,20 +10,33 @@
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
 	$testUserID = 'testkorea';			# 팝빌회원 아이디
 
-	$SDate = '20141001';				# [필수] 시작일자
-	$EDate = '20151001';				# [필수] 종료일자
-	$State = array('1','2','3','4');	# 전송상태값 배열, 1-대기 2-성공 3-실패 4-취소
-	$Item = array('SMS','LMS');			# 검색대상 배열 SMS,LMS,MMS
-	$ReserveYN = false;					# 예약여부, false-전체조회, true-예약전송만 조회
-	$SenderYN = false;					# 개인조회여부, false-전체조회, true-개인조회
+	$SDate = '20151001';				    # [필수] 시작일자
+	$EDate = '20160113';				    # [필수] 종료일자
 	
-	$Page = 1;							# 페이지번호
-	$PerPage = 1000;					# 페이지 검색개수, 기본값 500, 최대값 1000
+  $State = array(                 # 전송상태값 배열, 1-대기 2-성공 3-실패 4-취소
+    '1',
+    '2',
+    '3',
+    '4'
+  );	
+
+	$Item = array (                 # 전송유형 배열 SMS, LMS, MMS
+    'SMS',
+    'LMS',
+    'MMS'
+  );			  
+	$ReserveYN = false;					    # 예약여부, false-전체조회, true-예약전송만 조회
+	$SenderYN = false;					    # 개인조회여부, false-전체조회, true-개인조회
+	
+	$Page = 1;							        # 페이지번호
+	$PerPage = 50;				  	      # 페이지 검색개수, 기본값 500, 최대값 1000
+  $Order = 'D';                   # 정렬방향, D-내림차순, A-오름차순
 
 	try {
-		$result = $MessagingService->Search($testCorpNum,$SDate,$EDate,$State,$Item,$ReserveYN,$SenderYN,$Page,$PerPage);
-	}
-	catch(PopbillException $pe) {
+
+		$result = $MessagingService->Search( $testCorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order );
+
+	}	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -63,6 +76,7 @@
 									<li> sendNum : <? echo $result->list[$i]->sendNum; ?> </li>
 									<li> receiveNum : <? echo $result->list[$i]->receiveNum; ?> </li>
 									<li> receiveName : <? echo $result->list[$i]->receiveName; ?> </li>
+									<li> receiptDT : <? echo $result->list[$i]->receiptDT; ?> </li>
 									<li> reserveDT : <? echo $result->list[$i]->reserveDT; ?> </li>
 									<li> sendDT : <? echo $result->list[$i]->sendDT; ?> </li>
 									<li> resultDT : <? echo $result->list[$i]->resultDT; ?> </li>

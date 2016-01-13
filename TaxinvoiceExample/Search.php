@@ -11,8 +11,8 @@
 	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
 	
 	$DType = 'W';						              # [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입
-	$SDate = '20141001';				          # [필수] 시작일자
-	$EDate = '20151001';				          # [필수] 종료일자
+	$SDate = '20151001';				          # [필수] 시작일자
+	$EDate = '20160101';				          # [필수] 종료일자
 
 	$State = array (                      # 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회  
     '100',
@@ -33,10 +33,11 @@
 
 	$LateOnly = 0;						            # 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
 	$Page = 1;							              # 페이지 번호 기본값 1
-	$PerPage = 50;					            # 페이지당 검색갯수, 기본값 500, 최대값 1000
-	
+	$PerPage = 50;					              # 페이지당 검색갯수, 기본값 500, 최대값 1000
+	$Order = 'D';                         # 정렬방향, D-내림차순, A-오름차순
+
 	try {
-		$result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage);
+		$result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order);
 	}
 
 	catch(PopbillException $pe) {
@@ -83,11 +84,14 @@
 										<li>invoicerCorpName : <? echo $result->list[$i]->invoicerCorpName ; ?></li>
 										<li>invoicerCorpNum : <? echo $result->list[$i]->invoicerCorpNum ; ?></li>
 										<li>invoicerMgtKey : <? echo $result->list[$i]->invoicerMgtKey ; ?></li>
+										<li>invoicerPrintYN : <? echo $result->list[$i]->invoicerPrintYN ; ?></li>
 										<li>invoiceeCorpName : <? echo $result->list[$i]->invoiceeCorpName ; ?></li>
 										<li>invoiceeMgtKey : <? echo $result->list[$i]->invoiceeMgtKey ; ?></li>
+										<li>invoiceePrintYN : <? echo $result->list[$i]->invoiceePrintYN ; ?></li>
 										<li>trusteeCorpName : <? echo $result->list[$i]->trusteeCorpName ; ?></li>
 										<li>trusteeCorpNum : <? echo $result->list[$i]->trusteeCorpNum ; ?></li>
 										<li>trusteeMgtKey : <? echo $result->list[$i]->trusteeMgtKey ; ?></li>
+										<li>trusteerPrintYN : <? echo $result->list[$i]->trusteePrintYN ; ?></li>
 										<li>supplyCostTotal : <? echo $result->list[$i]->supplyCostTotal ; ?></li>
 										<li>taxTotal : <? echo $result->list[$i]->taxTotal ; ?></li>
 										<li>issueDT : <? echo $result->list[$i]->issueDT ; ?></li>

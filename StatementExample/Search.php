@@ -30,12 +30,13 @@
 
   $Page = 1;                    # 페이지 번호, 기본값 1
   $PerPage = 20;                # 페이지당 검색갯수, 기본값(500), 최대값(1000)
+  $Order = 'A';                 # 정렬방향, D-내림차순, A-오름차순
 
 	try {
-		$result = $StatementService->Search($testCorpNum, $DType, $SDate, $EDate, $State, $ItemCode, $Page, $PerPage);
-	}
 
-	catch(PopbillException $pe) {
+    $result = $StatementService->Search($testCorpNum, $DType, $SDate, $EDate, $State, $ItemCode, $Page, $PerPage, $Order);
+	
+  }	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -76,8 +77,10 @@
 									<li> purposeType : <? echo $result->list[$i]->purposeType ?></li>
 									<li> senderCorpName : <? echo $result->list[$i]->senderCorpName ?></li>
 									<li> senderCorpNum : <? echo $result->list[$i]->senderCorpNum ?></li>
+									<li> senderPrintYN : <? echo $result->list[$i]->senderPrintYN ?></li>
 									<li> receiverCorpName : <? echo $result->list[$i]->receiverCorpName ?></li>
 									<li> receiverCorpNum : <? echo $result->list[$i]->receiverCorpNum ?></li>
+									<li> receiverPrintYN : <? echo $result->list[$i]->receiverPrintYN ?></li>
 									<li> supplyCostTotal : <? echo $result->list[$i]->supplyCostTotal ?></li>
 									<li> taxTotal : <? echo $result->list[$i]->taxTotal ?></li>
 									<li> issueDT : <? echo $result->list[$i]->issueDT ?></li>

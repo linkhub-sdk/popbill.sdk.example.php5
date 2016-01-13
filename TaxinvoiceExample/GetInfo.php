@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-'제외 10자리
 	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
-	$mgtKey = '20151001-11';				# 문서관리번호
+	$mgtKey = '20160112-01';				# 문서관리번호
 
 	try {
 		$result = $TaxinvoiceService->GetInfo($testCorpNum, $mgtKeyType, $mgtKey);
@@ -47,12 +47,15 @@
 							<li>invoicerCorpName : <? echo $result->invoicerCorpName ; ?></li>
 							<li>invoicerCorpNum : <? echo $result->invoicerCorpNum ; ?></li>
 							<li>invoicerMgtKey : <? echo $result->invoicerMgtKey ; ?></li>
+							<li>invoicerPrintYN : <? echo $result->invoicerPrintYN ; ?></li>
 							<li>invoiceeCorpName : <? echo $result->invoiceeCorpName ; ?></li>
 							<li>invoiceeCorpNum : <? echo $result->invoiceeCorpNum ; ?></li>
 							<li>invoiceeMgtKey : <? echo $result->invoiceeMgtKey ; ?></li>
+							<li>invoiceePrintYN : <? echo $result->invoiceePrintYN ; ?></li>
 							<li>trusteeCorpName : <? echo $result->trusteeCorpName ; ?></li>
 							<li>trusteeCorpNum : <? echo $result->trusteeCorpNum ; ?></li>
 							<li>trusteeMgtKey : <? echo $result->trusteeMgtKey ; ?></li>
+							<li>trusteePrintYN : <? echo $result->trusteePrintYN ; ?></li>
 							<li>supplyCostTotal : <? echo $result->supplyCostTotal ; ?></li>
 							<li>taxTotal : <? echo $result->taxTotal ; ?></li>
 							<li>issueDT : <? echo $result->issueDT ; ?></li>

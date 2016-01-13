@@ -44,8 +44,10 @@
 							<li> writeDate : <? echo $result->writeDate ?></li>
 							<li> senderCorpName : <? echo $result->senderCorpName ?></li>
 							<li> senderCorpNum : <? echo $result->senderCorpNum ?></li>
+							<li> senderPrintYN : <? echo $result->senderPrintYN ?></li>
 							<li> receiverCorpName : <? echo $result->receiverCorpName ?></li>
 							<li> receiverCorpNum : <? echo $result->receiverCorpNum ?></li>
+							<li> receiverPrintYN : <? echo $result->receiverPrintYN ?></li>
 							<li> supplyCostTotal : <? echo $result->supplyCostTotal ?></li>
 							<li> taxTotal : <? echo $result->taxTotal ?></li>
 							<li> issueDT : <? echo $result->issueDT ?></li>
