@@ -73,6 +73,8 @@
 						<li><a href="SendSMS.php">sendSMS</a> - 알림문자 재전송</li>
 						<li><a href="SendFAX.php">sendFAX</a> - 전자명세서 팩스 전송</li>
 						<li><a href="FAXSend.php">FAXSend</a> - 선팩스 전송</li>
+            <li><a href="AttachStatement.php">attachStatement</a> - 다른 전자명세서 첨부</li>
+            <li><a href="DetachStatement.php">detachStatement</a> - 다른 전자명세서 첨부해제</li>
 					</ul>
 				</fieldset>
 				

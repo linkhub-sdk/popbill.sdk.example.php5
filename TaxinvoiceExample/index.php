@@ -80,6 +80,8 @@
 						<li><a href="SendEmail.php">sendEmail</a> - 처리 프로세스에 대한 이메일 재전송 요청</li>
 						<li><a href="SendSMS.php">sendSMS</a> - 발행예정/발행/역)발행요청 에 대한 문자메시지 안내 재전송 요청.</li>
 						<li><a href="SendFAX.php">sendFAX</a> - 세금계산서에 대한 팩스 전송 요청..</li>
+						<li><a href="AttachStatement.php">attachStatement</a> - 전자명세서 첨부</li>
+						<li><a href="DetachStatement.php">detachStatement</a> - 전자명세서 첨부해제</li>
 					</ul>
 				</fieldset>
 				

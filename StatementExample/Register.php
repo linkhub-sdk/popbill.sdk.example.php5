@@ -8,12 +8,12 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';				# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$mgtKey = '20151006-01';					# 문서관리번호, 발행자별 고유번호 할당, 1~24자리 영문,숫자 조합으로 중복없이 구성
+	$mgtKey = '20160113-02';					# 문서관리번호, 발행자별 고유번호 할당, 1~24자리 영문,숫자 조합으로 중복없이 구성
 	$testUserID = 'testkorea';					# 팝빌 회원 아이디
 	$itemCode = '121';							# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 
 	$Statement = new Statement();				
-	$Statement->writeDate = '20151006';         # [필수] 기재상 작성일자   
+	$Statement->writeDate = '20160113';         # [필수] 기재상 작성일자   
 	$Statement->purposeType = '영수';			# [필수] (영수, 청구) 중 기재
 	$Statement->taxType = '과세';				# [필수] (과세, 영세, 면세) 중 기재
 	$Statement->formCode = '';					# 맞춤양식코드 (기본값 '') 
