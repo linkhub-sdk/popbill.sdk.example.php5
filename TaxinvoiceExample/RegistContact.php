@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?php
 	include 'common.php';
 
 	$testCorpNum = '1234567890';				# 팝빌회원 사업자번호, '-' 제외 10자리

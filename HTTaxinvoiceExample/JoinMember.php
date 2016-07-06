@@ -24,7 +24,7 @@
 
 	try
 	{
-		$result = $MessagingService->JoinMember($joinForm);
+		$result = $HTTaxinvoiceService->JoinMember($joinForm);
 		$code = $result->code;
 		$message = $result->message;
 	}
@@ -40,8 +40,8 @@
 			<fieldset class="fieldset1">
 				<legend>연동회원 가입 여부 확인 결과</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

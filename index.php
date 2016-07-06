@@ -2,7 +2,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		
+
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 	<body>
@@ -17,6 +17,8 @@
 						<li><a href="CashbillExample">CashbillService</a> - 현금영수증 API</li>
 						<li><a href="MessageExample">MessageService</a> - 문자메시지 API</li>
 						<li><a href="FaxExample">FaxService</a> - 팩스 API</li>
+            <li><a href="HTTaxinvoiceExample">HTTaxinvoiceExample</a> - 홈택스 전자(세금)계산서 연계 API</li>
+            <li><a href="HTCashbillExample">HTCashbillExample</a> - 홈택스 현금영수증 연계 API</li>
 						<li><a href="ClosedownExample">ClosedownService</a> - 휴폐업조회 API</li>
 					</ul>
 			</fieldset>
