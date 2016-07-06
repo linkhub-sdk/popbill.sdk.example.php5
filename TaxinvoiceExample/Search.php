@@ -4,40 +4,51 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?php
+	include 'common.php';
 
 	$testCorpNum = '1234567890';			    # 팝빌회원 사업자번호, '-'제외 10자리
-	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
-	
-	$DType = 'W';						              # [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입
-	$SDate = '20151001';				          # [필수] 시작일자
-	$EDate = '20160101';				          # [필수] 종료일자
+  $testUserID = 'testkorea';            # 팝빌회원 아이디
 
-	$State = array (                      # 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회  
-    '100',
-    '2**',
-    '3**'
+	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
+
+	$DType = 'W';						              # [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입
+	$SDate = '20160601';				          # [필수] 시작일자
+	$EDate = '20160831';				          # [필수] 종료일자
+
+  # 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
+	$State = array (
+    '3**',
+    '6**'
   );
-  
-	$Type = array (                       # 문서유형, N-일반, M-수정, 선택 배열
+
+  # 문서유형 배열, N-일반, M-수정, 선택 배열
+	$Type = array (
     'N',
     'M'
   );
-  
-	$TaxType = array (                    # 과세형태, T-과세, N-면세, Z-영세 선택 배열
+
+
+  # 과세형태 배열 , T-과세, N-면세, Z-영세 선택 배열
+	$TaxType = array (
     'T',
     'N',
     'Z'
-  );		    
+  );
 
 	$LateOnly = 0;						            # 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
+
+  #종사업장번호 조회 조건
+  $TaxRegIDType = "S";                  # 종사업장번호 사업자유형, S-공급자, B-공급받는자, T-수탁자
+  $TaxRegIDYN = "0";                    # 종사업장 유무, 공백-전체조회, 0-종사업장번호 없는경우 조회, 1-종사업장번호 있는건만 조회
+  $TaxRegID = "";                       # 종사업장번호, 콤마(",")로 구분하여 구성, ex) 1234,0001
+
 	$Page = 1;							              # 페이지 번호 기본값 1
 	$PerPage = 50;					              # 페이지당 검색갯수, 기본값 500, 최대값 1000
 	$Order = 'D';                         # 정렬방향, D-내림차순, A-오름차순
 
 	try {
-		$result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order);
+    $result = $TaxinvoiceService->Search ( $testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order, $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $testUserID) ;
 	}
 
 	catch(PopbillException $pe) {
@@ -53,7 +64,7 @@
 				<legend>세금계산서 기간조회 </legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if(isset($code)) {
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>
@@ -68,7 +79,7 @@
 							<li>message : <? echo $result->message ?> </li>
 
 					<?
-							for ($i = 0; $i < Count($result->list); $i++) { 
+							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 								<fieldset class="fieldset2">
 									<legend> 조회결과 [<? echo $i+1?>]</legend>
@@ -110,9 +121,9 @@
 
 					<?
 							}
-						}	
+						}
 					?>
-					
+
 				</ul>
 			</fieldset>
 		 </div>
