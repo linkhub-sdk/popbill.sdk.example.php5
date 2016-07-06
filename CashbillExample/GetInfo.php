@@ -4,8 +4,8 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?php
+	include 'common.php';
 
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
 	$mgtKey = '20150211-01';		# 문서관리번호
@@ -26,7 +26,7 @@
 				<legend>현금영수증 요약정보 및 상태정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if(isset($code)) {
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>
@@ -60,7 +60,7 @@
 					<?
 							}
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>
