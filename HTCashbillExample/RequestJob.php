@@ -8,14 +8,13 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-  $TIKeyType = KeyType::SELL;     # 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-위수탁
-  $DType = 'W';                   # 수집일자유형, W-작성일자, R-등록일자, I-발행일자
+  $CBType = KeyType::SELL;        # 현금영수증, SELL-매출, BUY-매입
   $SDate = '20160601';            # 시작일자, 형식(yyyyMMdd)
   $EDate = '20160831';            # 종료일자, 형식(yyyyMMdd)
 	$testUserID = 'testkorea';			# 팝빌회원 아이디
 
 	try {
-		$jobID = $HTTaxinvoiceService->RequestJob ( $testCorpNum, $TIKeyType, $DType, $SDate, $EDate, $testUserID );
+		$jobID = $HTCashbillService->RequestJob ( $testCorpNum, $CBType, $SDate, $EDate, $testUserID );
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();

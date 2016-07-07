@@ -7,10 +7,13 @@
 <?php
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
+	$testUserID = 'testkorea';	// 조회할 아이디
 
-	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
+	try
+	{
+		$result = $HTCashbillService->CheckID($testUserID);
+		$code = $result->code;
+		$message = $result->message;
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -22,20 +25,10 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여 포인트 확인</legend>
+				<legend>연동회원 아이디 중복 확인</legend>
 				<ul>
-					<?
-						if ( isset ( $remainPoint ) ) {
-					?>
-							<li>잔여포인트 : <?= $remainPoint ?></li>
-					<?
-						} else {
-					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
-						}
-					?>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

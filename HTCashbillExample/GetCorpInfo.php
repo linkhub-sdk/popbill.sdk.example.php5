@@ -8,17 +8,13 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-  $TIKeyType = KeyType::SELL;     # 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-위수탁
-  $DType = 'W';                   # 수집일자유형, W-작성일자, R-등록일자, I-발행일자
-  $SDate = '20160601';            # 시작일자, 형식(yyyyMMdd)
-  $EDate = '20160831';            # 종료일자, 형식(yyyyMMdd)
 	$testUserID = 'testkorea';			# 팝빌회원 아이디
 
 	try {
-		$jobID = $HTTaxinvoiceService->RequestJob ( $testCorpNum, $TIKeyType, $DType, $SDate, $EDate, $testUserID );
+		$result = $HTCashbillService->GetCorpInfo($testCorpNum,$testUserID);
 	}
 	catch(PopbillException $pe) {
-    $code = $pe->getCode();
+		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
 ?>
@@ -27,17 +23,21 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>수집 요청</legend>
+				<legend>회사정보 확인</legend>
 				<ul>
 					<?
-						if ( isset ( $code ) ) {
+						if(isset($code)) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>
-						<li>jobID(작업아이디) : <?= $jobID ?></li>
+						<li>ceoname : <?= $result->ceoname ?></li>
+						<li>corpName : <?= $result->corpName ?></li>
+						<li>addr : <?= $result->addr  ?></li>
+						<li>bizType : <?= $result->bizType ?></li>
+						<li>bizClass : <?= $result->bizClass ?></li>
 					<?
 						}
 					?>

@@ -8,11 +8,11 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-  $jobID = '016070709000000003';
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+  $jobID = '016070717000000019';  # 수집요청시 발급받은 작업아이디
+	$testUserID = 'testkorea';		# 팝빌회원 아이디
 
 	try {
-		$result = $HTTaxinvoiceService->GetJobState ( $testCorpNum, $jobID, $testUserID );
+		$result = $HTCashbillService->GetJobState ( $testCorpNum, $jobID, $testUserID );
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

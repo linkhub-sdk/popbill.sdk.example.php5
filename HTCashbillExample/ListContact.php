@@ -11,7 +11,7 @@
 	$testUserID = 'testkorea';			# 팝빌회원 아이디
 
 	try {
-		$result = $HTTaxinvoiceService->ListContact ( $testCorpNum, $testUserID ) ;
+		$result = $HTCashbillService->ListContact ( $testCorpNum, $testUserID ) ;
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

@@ -7,10 +7,12 @@
 <?php
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
+	$testCorpNum = '1234567890';   # 사업자번호, "-"제외 10자리
 
-	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
+	try	{
+		$result = $HTCashbillService->CheckIsMember($testCorpNum,$LinkID);
+		$code = $result->code;
+		$message = $result->message;
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -22,20 +24,10 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여 포인트 확인</legend>
+				<legend>연동회원사 가입 여부 확인 결과</legend>
 				<ul>
-					<?
-						if ( isset ( $remainPoint ) ) {
-					?>
-							<li>잔여포인트 : <?= $remainPoint ?></li>
-					<?
-						} else {
-					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
-						}
-					?>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

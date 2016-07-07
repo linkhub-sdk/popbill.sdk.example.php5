@@ -10,7 +10,7 @@
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
 
 	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
+		$remainPoint = $HTCashbillService->GetBalance($testCorpNum);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -22,7 +22,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여 포인트 확인</legend>
+				<legend>연동회원 잔여포인트 확인 테스트</legend>
 				<ul>
 					<?
 						if ( isset ( $remainPoint ) ) {

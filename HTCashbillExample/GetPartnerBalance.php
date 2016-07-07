@@ -10,7 +10,8 @@
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
 
 	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
+		$remainPoint = $HTCashbillService->GetPartnerBalance ( $testCorpNum );
+
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

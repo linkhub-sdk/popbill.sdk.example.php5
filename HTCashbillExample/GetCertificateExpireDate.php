@@ -7,10 +7,10 @@
 <?php
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
+	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
 
 	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
+		$ExpireDate = $HTCashbillService->GetCertificateExpireDate ( $testCorpNum ) ;
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -22,12 +22,12 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여 포인트 확인</legend>
+				<legend>홈택스 연계 공인인증서 만료일시 확인</legend>
 				<ul>
 					<?
-						if ( isset ( $remainPoint ) ) {
+						if ( isset ( $ExpireDate ) ) {
 					?>
-							<li>잔여포인트 : <?= $remainPoint ?></li>
+							<li>ExpireDate(만료일시) : <?= $ExpireDate ?></li>
 					<?
 						} else {
 					?>

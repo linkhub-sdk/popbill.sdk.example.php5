@@ -14,40 +14,23 @@
   $testUserID = 'testkorea';
 
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '016070711000000001';
+  $JobID = '016070717000000020';
 
-  // 문서형태 배열, N-일반세금계산서, M-수정세금계산서
-  $Type = array (
+  // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
+  $TradeType = array (
     'N',
-    'M'
+    'C'
   );
 
-  // 과세형태 배열, T-과세, N-면세, Z-영세
-  $TaxType = array (
-    'T',
-    'N',
-    'Z'
+  // 거래용도 배열, P-소득공제용, C-지출증빙용
+  $TradeUsage = array (
+    'P',
+    'C'
   );
-
-  // 영수/청구 배열, R-영수, C-청구, N-없음
-  $PurposeType = array (
-    'R',
-    'C',
-    'N'
-  );
-
-  // 종사업장 유무, 공백-전체조회, 0-종사업장 없는 건만 조회, 1-종사업장번호 조건에 따라 조회
-  $TaxRegIDYN = "";
-
-  // 종사업장번호 유형, 공백-전체, S-공급자, B-공급받는자, T-수탁자
-  $TaxRegIDType = "";
-
-  // 종사업장번호, 콤마(",")로 구분하여 구성 ex) "1234,0001";
-  $TaxRegID = "";
 
 	try {
 
-		$response = $HTTaxinvoiceService->Summary ( $testCorpNum, $JobID, $Type, $TaxType, $PurposeType, $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $testUserID );
+		$response = $HTCashbillService->Summary ( $testCorpNum, $JobID, $TradeType, $TradeUsage, $testUserID );
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();
@@ -72,6 +55,7 @@
 						  <li>count (수집 결과 건수) : <?= $response->count ?></li>
               <li>supplyCostTotal (공급가액 합계) : <?= $response->supplyCostTotal ?></li>
               <li>taxTotal (세액 합계) : <?= $response->taxTotal ?></li>
+              <li>serviceFeeTotal (봉사료 합계) : <?= $response->serviceFeeTotal ?></li>
               <li>amountTotal (합계 금액) : <?= $response->amountTotal ?></li>
 					<?
         	  }

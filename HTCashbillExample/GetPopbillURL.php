@@ -7,10 +7,12 @@
 <?php
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
+	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
+	$testUserID = 'testkorea';		# 팝빌 회원 아이디
+	$TOGO = 'LOGIN';				# [LOGIN] : 팝빌 로그인URL, [CHRG] : 포인트충전 URL
 
 	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
+		$url = $HTCashbillService->GetPopbillURL ( $testCorpNum, $testUserID, $TOGO ) ;
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -22,12 +24,12 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여 포인트 확인</legend>
+				<legend>팝빌 기본 URL 확인</legend>
 				<ul>
 					<?
-						if ( isset ( $remainPoint ) ) {
+						if ( isset ( $url ) ) {
 					?>
-							<li>잔여포인트 : <?= $remainPoint ?></li>
+							<li>url : <?= $url ?></li>
 					<?
 						} else {
 					?>
