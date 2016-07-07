@@ -13,7 +13,6 @@
 	try {
 		$result = $HTTaxinvoiceService->GetCorpInfo($testCorpNum,$testUserID);
 	}
-
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -29,16 +28,16 @@
 					<?
 						if(isset($code)) {
 					?>
-						<li>Response.code : <? $code ?> </li>
-						<li>Response.message : <? $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>
-						<li>ceoname : <? echo $result->ceoname ; ?></li>
-						<li>corpName : <? echo $result->corpName ; ?></li>
-						<li>addr : <? echo $result->addr ; ?></li>
-						<li>bizType : <? echo $result->bizType ; ?></li>
-						<li>bizClass : <? echo $result->bizClass ; ?></li>
+						<li>ceoname : <?= $result->ceoname ?></li>
+						<li>corpName : <?= $result->corpName ?></li>
+						<li>addr : <?= $result->addr  ?></li>
+						<li>bizType : <?= $result->bizType ?></li>
+						<li>bizClass : <?= $result->bizClass ?></li>
 					<?
 						}
 					?>

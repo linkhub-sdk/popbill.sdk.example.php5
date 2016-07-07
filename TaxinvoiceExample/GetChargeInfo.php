@@ -29,14 +29,14 @@
 					<?
 						if(isset($code)) {
 					?>
-						<li>Response.code : <? $code ?> </li>
-						<li>Response.message : <? $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>
-						<li>unitCost(단가) : <? echo $result->unitCost ; ?></li>
-						<li>chargeMethod(과금유형) : <? echo $result->chargeMethod ; ?></li>
-						<li>rateSystem(과금제도) : <? echo $result->rateSystem ; ?></li>
+						<li>unitCost(단가) : <?= $result->unitCost ?></li>
+						<li>chargeMethod(과금유형) : <?= $result->chargeMethod ?></li>
+						<li>rateSystem(과금제도) : <?= $result->rateSystem ?></li>
 					<?
 						}
 					?>

@@ -11,7 +11,6 @@
 
 	try
 	{
-
 		$result = $HTTaxinvoiceService->CheckID($testUserID);
 		$code = $result->code;
 		$message = $result->message;
@@ -28,8 +27,8 @@
 			<fieldset class="fieldset1">
 				<legend>연동회원 아이디 중복 확인</legend>
 				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

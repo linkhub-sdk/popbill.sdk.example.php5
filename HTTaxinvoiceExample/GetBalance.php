@@ -25,14 +25,14 @@
 				<legend>연동회원 잔여포인트 확인 테스트</legend>
 				<ul>
 					<?
-						if(isset($remainPoint)) {
+						if ( isset ( $remainPoint ) ) {
 					?>
-							<li>잔여포인트 : <? echo $remainPoint ?></li>
+							<li>잔여포인트 : <?= $remainPoint ?></li>
 					<?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
 					?>

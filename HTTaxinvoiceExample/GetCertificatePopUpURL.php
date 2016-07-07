@@ -7,13 +7,12 @@
 <?php
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
+	$testUserID = 'testkorea';		# 팝빌 회원 아이디
 
 	try {
-		$result = $HTTaxinvoiceService->GetChargeInfo($testCorpNum,$testUserID);
+		$url = $HTTaxinvoiceService->GetCertificatePopUpURL ( $testCorpNum, $testUserID ) ;
 	}
-
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -24,19 +23,17 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>과금정보 확인</legend>
+				<legend>공인인증서 등록 URL</legend>
 				<ul>
 					<?
-						if(isset($code)) {
+						if ( isset ( $url ) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
+							<li>url : <?= $url ?></li>
 					<?
 						} else {
 					?>
-						<li>unitCost(단가) : <?= $result->unitCost ?></li>
-						<li>chargeMethod(과금유형) : <?= $result->chargeMethod ?></li>
-						<li>rateSystem(과금제도) : <?= $result->rateSystem ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
 					?>

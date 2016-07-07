@@ -10,7 +10,7 @@
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
 
 	try {
-		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance($testCorpNum);
+		$remainPoint = $HTTaxinvoiceService->GetPartnerBalance ( $testCorpNum );
 
 	}
 	catch(PopbillException $pe) {
@@ -26,14 +26,14 @@
 				<legend>파트너 잔여 포인트 확인</legend>
 				<ul>
 					<?
-						if(isset($remainPoint)) {
+						if ( isset ( $remainPoint ) ) {
 					?>
-							<li>잔여포인트 : <? echo $remainPoint ?></li>
+							<li>잔여포인트 : <?= $remainPoint ?></li>
 					<?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
 					?>
