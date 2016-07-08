@@ -13,7 +13,6 @@
 	try {
 		$result = $HTCashbillService->GetChargeInfo($testCorpNum,$testUserID);
 	}
-
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();

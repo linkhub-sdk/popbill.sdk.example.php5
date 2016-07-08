@@ -13,7 +13,6 @@
 	try {
 		$result = $HTCashbillService->GetFlatRateState ( $testCorpNum,$testUserID ) ;
 	}
-
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();

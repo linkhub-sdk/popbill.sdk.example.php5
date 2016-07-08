@@ -10,7 +10,7 @@
 	$testCorpNum = '1234567890';   # 사업자번호, "-"제외 10자리
 
 	try	{
-		$result = $HTCashbillService->CheckIsMember($testCorpNum,$LinkID);
+		$result = $HTCashbillService->CheckIsMember ( $testCorpNum, $LinkID );
 		$code = $result->code;
 		$message = $result->message;
 	}

@@ -9,9 +9,8 @@
 
 	$testUserID = 'testkorea';	// 조회할 아이디
 
-	try
-	{
-		$result = $HTCashbillService->CheckID($testUserID);
+	try	{
+		$result = $HTCashbillService->CheckID ( $testUserID );
 		$code = $result->code;
 		$message = $result->message;
 	}

@@ -14,7 +14,7 @@
   $testUserID = 'testkorea';
 
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '016070717000000020';
+  $JobID = '016070813000000001';
 
   // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
   $TradeType = array (
