@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';	#팝빌 회원 사업자 번호, "-"제외 10자리
 	$testUserID = 'testkorea';		#팝빌 회원 아이디
-	$ReceiptNum = '015042217263000001';		#팩스전송 접수번호
+	$ReceiptNum = '016070810410400001';		#팩스전송 접수번호
 
 	try {
 		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum, $testUserID);
@@ -26,7 +26,7 @@
 				<legend>팩스전송 내역 및 전송상태 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if(isset($code)) {
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>
@@ -35,7 +35,7 @@
 							for ($i=0; $i < Count($result); $i++){
 
 					?>
-						<fieldset class="fieldset2"> 
+						<fieldset class="fieldset2">
 								<legend> 팩스전송내역 조회 결과 [<? echo $i+1 ?>/<? echo Count($result)?>]</legend>
 								<ul>
 									<li> sendState : <? echo $result[$i]->sendState; ?> </li>
@@ -60,7 +60,7 @@
 					<?
 							}
 						}
-					?>					
+					?>
 				</ul>
 			</fieldset>
 		 </div>

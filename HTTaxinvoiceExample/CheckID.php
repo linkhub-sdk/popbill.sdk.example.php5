@@ -9,9 +9,8 @@
 
 	$testUserID = 'testkorea';	// 조회할 아이디
 
-	try
-	{
-		$result = $HTTaxinvoiceService->CheckID($testUserID);
+	try	{
+		$result = $HTTaxinvoiceService->CheckID ( $testUserID ) ;
 		$code = $result->code;
 		$message = $result->message;
 	}

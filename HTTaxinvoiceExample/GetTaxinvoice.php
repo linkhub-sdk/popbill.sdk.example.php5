@@ -11,7 +11,7 @@
 	$testCorpNum = '1234567890';
 
   #국세청 승인번호
-  $NTSConfirmNum = '201607044100002900000353';
+  $NTSConfirmNum = '201607074100002900000604';
 
   # 팝빌회원 아이디
 	$testUserID = 'testkorea';

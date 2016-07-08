@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
-	$TOGO = 'LOGIN';				# [LOGIN] : 팝빌 로그인URL, [CHRG] : 포인트충전 URL
+	$TOGO = 'CHRG';				# [LOGIN] : 팝빌 로그인URL, [CHRG] : 포인트충전 URL
 
 	try {
 		$url = $HTTaxinvoiceService->GetPopbillURL ( $testCorpNum, $testUserID, $TOGO ) ;

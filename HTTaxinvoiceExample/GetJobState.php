@@ -8,7 +8,7 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-  $jobID = '016070709000000003';
+  $jobID = '016070811000000001';  # 수집 요청시 반환받은 작업아이디
 	$testUserID = 'testkorea';			# 팝빌회원 아이디
 
 	try {
