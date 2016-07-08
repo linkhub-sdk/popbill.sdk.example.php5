@@ -11,12 +11,12 @@
 	$testUserID = 'testkorea';		#팝빌 회원 아이디
 	$reserveDT = null;				#예약전송일시(yyyyMMddHHmmss), null인경우 즉시전송
 #	$reserveDT = '20151212230000';
-	$Sender = '0264429700';		#발신번호
+	$Sender = '07075103710';		#발신번호
 
 	$Receivers = array();
 
 	$Receivers[] = array(
-		'rcv' => '64429700',			#수신번호
+		'rcv' => '070111222',			#수신번호
 		'rcvnm' => '팝빌담당자'		#수신자 명칭
 	);
 
