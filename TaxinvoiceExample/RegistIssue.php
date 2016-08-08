@@ -8,13 +8,13 @@
 	include 'common.php';
 
 	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-' 제외 10자리
-	$invoicerMgtKey = '20160707-02';		# 관리번호
-	$testUserID = 'innoposttest';				# 회원 아이디
+	$invoicerMgtKey = '20160715-01';		# 관리번호
+	$testUserID = 'testkorea';				# 회원 아이디
 	$writeSpecification = false;			# 거래명세서 동시작성 여부
 	$forceIssue = false;					# 지연발행 강제여부
 	$memo = '즉시발행 메모';				# 메모
 	$emailSubject = '안내메일 제목';		# 안내메일 제목, 미기재시 기본제목으로 전송
-	$dealInvoiceMgtKey = '20151001-31';		# 거래명세서 동시작성시, 명세서 관리번호
+	$dealInvoiceMgtKey = '20161001-31';		# 거래명세서 동시작성시, 명세서 관리번호
 
 
 	# 전자세금계산서 객체, 자세한 구성방법은 전자세금계산서 API 연동매뉴얼의 [4.1 세금계산서 구성] 참고.
@@ -78,8 +78,8 @@
 	$Taxinvoice->remark1 = '비고1';					# 기재상 '비고1'항목
 	$Taxinvoice->remark2 = '비고2';					# 기재상 '비고2'항목
 	$Taxinvoice->remark3 = '비고3';					# 기재상 '비고3'항목
-	$Taxinvoice->kwon = '1';						# 기재상 '권' 항목
-	$Taxinvoice->ho = '1';							# 기재상 '호' 항목
+	$Taxinvoice->kwon = null;						# 기재상 '권' 항목
+	$Taxinvoice->ho = null;							# 기재상 '호' 항목
 
 	$Taxinvoice->businessLicenseYN = false;			# 사업자등록증 파일 첨부여부
 	$Taxinvoice->bankBookYN = false;				# 통장사본 파일 첨부여부

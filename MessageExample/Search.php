@@ -4,30 +4,30 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?php
+	include 'common.php';
 
 	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
 	$testUserID = 'testkorea';			# 팝빌회원 아이디
 
-	$SDate = '20151001';				    # [필수] 시작일자
-	$EDate = '20160113';				    # [필수] 종료일자
-	
+	$SDate = '20160801';				    # [필수] 시작일자
+	$EDate = '20160831';				    # [필수] 종료일자
+
   $State = array(                 # 전송상태값 배열, 1-대기 2-성공 3-실패 4-취소
     '1',
     '2',
     '3',
     '4'
-  );	
+  );
 
 	$Item = array (                 # 전송유형 배열 SMS, LMS, MMS
     'SMS',
     'LMS',
     'MMS'
-  );			  
+  );
 	$ReserveYN = false;					    # 예약여부, false-전체조회, true-예약전송만 조회
 	$SenderYN = false;					    # 개인조회여부, false-전체조회, true-개인조회
-	
+
 	$Page = 1;							        # 페이지번호
 	$PerPage = 50;				  	      # 페이지 검색개수, 기본값 500, 최대값 1000
   $Order = 'D';                   # 정렬방향, D-내림차순, A-오름차순
@@ -49,7 +49,7 @@
 				<legend>문자전송 내역 및 전송상태 확인 </legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if(isset($code)) {
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>
@@ -64,9 +64,9 @@
 							<li>pageCount : <? echo $result->pageCount ?> </li>
 							<li>message : <? echo $result->message ?> </li>
 					<?
-							for ($i = 0; $i < Count($result->list); $i++) { 
+							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
-							<fieldset class="fieldset2"> 
+							<fieldset class="fieldset2">
 								<legend> 문자전송내역 조회 결과 [<? echo $i+1 ?>/<? echo Count($result->list)?>]</legend>
 								<ul>
 									<li> state : <? echo $result->list[$i]->state; ?> </li>
@@ -74,6 +74,7 @@
 									<li> type : <? echo $result->list[$i]->type; ?> </li>
 									<li> content : <? echo $result->list[$i]->content; ?> </li>
 									<li> sendNum : <? echo $result->list[$i]->sendNum; ?> </li>
+                  <li> senderName : <? echo $result->list[$i]->senderName; ?> </li>
 									<li> receiveNum : <? echo $result->list[$i]->receiveNum; ?> </li>
 									<li> receiveName : <? echo $result->list[$i]->receiveName; ?> </li>
 									<li> receiptDT : <? echo $result->list[$i]->receiptDT; ?> </li>
@@ -87,7 +88,7 @@
 					<?
 							}
 						}
-					?>	
+					?>
 				</ul>
 			</fieldset>
 		 </div>

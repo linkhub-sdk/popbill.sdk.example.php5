@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
 	$testUserID = 'testkorea';		# 팝빌 회원 아이디
-	$TOGO = 'CHRG';				# [LOGIN] : 팝빌 로그인 팝업 URL, [CHRG] : 포인트충전 팝업 URL
+	$TOGO = 'CHRG';				# [LOGIN] : 팝빌 로그인 팝업 URL, [CHRG] : 포인트충전 팝업 URL, [SEAL] : 인감 및 첨부문서 등록 URL
 
 	try {
 		$url = $StatementService->GetPopbillURL($testCorpNum, $testUserID, $TOGO);
@@ -27,7 +27,7 @@
 				<legend>팝빌 기본 URL 확인</legend>
 				<ul>
 					<?
-						if(isset($url)) { 
+						if(isset($url)) {
 					?>
 						<li>url : <? echo $url ?></li>
 					<?
@@ -37,7 +37,7 @@
 						<li>Response.message : <? echo $message ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

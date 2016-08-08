@@ -9,7 +9,7 @@
 
 	$testCorpNum = '1234567890';	#팝빌 회원 사업자 번호, "-"제외 10자리
 	$testUserID = 'testkorea';		#팝빌 회원 아이디
-	$ReceiptNum = '016070810410400001';		#팩스전송 접수번호
+	$ReceiptNum = '016080814593500001';		#팩스전송 접수번호
 
 	try {
 		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum, $testUserID);
@@ -41,6 +41,7 @@
 									<li> sendState : <? echo $result[$i]->sendState; ?> </li>
 									<li> convState : <? echo $result[$i]->convState; ?> </li>
 									<li> sendNum : <? echo $result[$i]->sendNum; ?> </li>
+                  <li> senderName : <? echo $result[$i]->senderName; ?> </li>
 									<li> receiveNum : <? echo $result[$i]->receiveNum; ?> </li>
 									<li> receiveName : <? echo $result[$i]->receiveName; ?> </li>
 									<li> sendPageCnt : <? echo $result[$i]->sendPageCnt; ?> </li>
