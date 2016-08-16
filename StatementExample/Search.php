@@ -4,14 +4,14 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?php
+	include 'common.php';
 
 	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호, '-'제외 10자리
-  $DType = 'R';                 # [필수] 조회일자 유형, R-등록일자, W-작성일자, I-발행일자
-  $SDate = '20151001';          # [필수] 시작일자
-  $EDate = '20160112';          # [필수] 종료일자
- 
+  $DType = 'W';                 # [필수] 조회일자 유형, R-등록일자, W-작성일자, I-발행일자
+  $SDate = '20160701';          # [필수] 시작일자
+  $EDate = '20160831';          # [필수] 종료일자
+
 	$State = array(			          # 전송상태값 배열, 문서상태값 3자리 배열, 2,3번째 와일드카드 사용가능
 			'100',
 			'2**',
@@ -30,12 +30,14 @@
 
   $Page = 1;                    # 페이지 번호, 기본값 1
   $PerPage = 20;                # 페이지당 검색갯수, 기본값(500), 최대값(1000)
-  $Order = 'A';                 # 정렬방향, D-내림차순, A-오름차순
+  $Order = 'D';                 # 정렬방향, D-내림차순, A-오름차순
+
+  $QString = '';             # 거래처 조회, 거래처 상호 또는 거래처 사업자등록번호 기재하여 조회, 미기재시 전체조회
 
 	try {
 
-    $result = $StatementService->Search($testCorpNum, $DType, $SDate, $EDate, $State, $ItemCode, $Page, $PerPage, $Order);
-	
+    $result = $StatementService->Search($testCorpNum, $DType, $SDate, $EDate, $State, $ItemCode, $Page, $PerPage, $Order, $QString);
+
   }	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -49,7 +51,7 @@
 				<legend>전자명세서 목록조회</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if(isset($code)) {
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>
@@ -64,7 +66,7 @@
               <li>message : <? echo $result->message ?> </li>
 
           <?
-							for ($i = 0; $i < Count($result->list); $i++) { 
+							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 							<fieldset class="fieldset2">
 								<legend> 전자명세서 요약정보[<? echo $i+1?>]</legend>
@@ -88,14 +90,14 @@
 									<li> openYN : <? echo $result->list[$i]->openYN ?></li>
 									<li> openDT : <? echo $result->list[$i]->openDT ?></li>
 									<li> stateMemo : <? echo $result->list[$i]->stateMemo ?></li>
-									<li> regDT : <? echo $result->list[$i]->regDT ?></li>								
+									<li> regDT : <? echo $result->list[$i]->regDT ?></li>
 								</ul>
 							</fieldset>
 					<?
 							}
 						}
 					?>
-					
+
 				</ul>
 			</fieldset>
 		 </div>

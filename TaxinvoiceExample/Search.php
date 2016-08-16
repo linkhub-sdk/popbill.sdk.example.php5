@@ -13,7 +13,7 @@
 	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
 
 	$DType = 'W';						              # [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입
-	$SDate = '20160601';				          # [필수] 시작일자
+	$SDate = '20160701';				          # [필수] 시작일자
 	$EDate = '20160831';				          # [필수] 종료일자
 
   # 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
@@ -47,8 +47,11 @@
 	$PerPage = 50;					              # 페이지당 검색갯수, 기본값 500, 최대값 1000
 	$Order = 'D';                         # 정렬방향, D-내림차순, A-오름차순
 
+  $QString = '공급';                     # 거래처 조회, 거래처 상호 또는 거래처 사업자등록번호 기재하여 조회, 미기재시 전체조회
+
 	try {
-    $result = $TaxinvoiceService->Search ( $testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order, $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $testUserID) ;
+    $result = $TaxinvoiceService->Search ( $testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly,
+                                            $Page, $PerPage, $Order, $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $testUserID) ;
 	}
 
 	catch(PopbillException $pe) {

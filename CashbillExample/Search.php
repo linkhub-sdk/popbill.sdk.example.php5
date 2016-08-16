@@ -4,19 +4,20 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<? 
-	include 'common.php';	
+<?
+	include 'common.php';
 
 	$testCorpNum = '1234567890';	# [필수] 팝빌회원 사업자번호
-  $DType = 'I';                 # [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
-  $SDate = '20150601';          # [필수] 시작일자
-  $EDate = '20160112';          # [필수] 종료일자
+  $DType = 'T';                 # [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
+  $SDate = '20160701';          # [필수] 시작일자
+  $EDate = '20160831';          # [필수] 종료일자
 
-		
+
 	$State = array(			          # 문서상태값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     '100',
     '2**',
-    '3**'
+    '3**',
+    '4**'
 	);
 
   $TradeType = array(			      # 거래형태, N-일반현금영수증, C-취소현금영수증
@@ -38,11 +39,12 @@
   $Page = 1;                    # 페이지번호, 기본값 1
   $PerPage = 30;                # 페이지당 검색갯수, 기본값 500, 최대값 1000
   $Order = 'D';                 # 정렬방향, D-내림차순, A-오름차순
+  $QString = '';            # 식별번호 조회, 미기재시 전체조회
 
   try {
 
-		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType, $TradeUsage, $TaxationType, $Page, $PerPage, $Order );
-	
+		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType, $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString );
+
   }	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -56,7 +58,7 @@
 				<legend>현금영수증 목록조회</legend>
 				<ul>
    				<?
-						if( isset ( $code ) ) { 
+						if( isset ( $code ) ) {
 					?>
 							<li>Response.code : <? echo $code ?> </li>
 							<li>Response.message : <? echo $message ?></li>
@@ -68,10 +70,10 @@
               <li>pageNum : <? echo $result->pageNum ?> </li>
               <li>perPage : <? echo $result->perPage ?> </li>
               <li>pageCount : <? echo $result->pageCount ?> </li>
-              <li>message : <? echo $result->message ?> </li>              
+              <li>message : <? echo $result->message ?> </li>
 
           <?
-							for ($i = 0; $i < Count($result->list); $i++) { 
+							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 								<fieldset class="fieldset2">
 									<legend> 현금영수증 요약정보[<? echo $i+1?>]</legend>
@@ -105,7 +107,7 @@
 							}
 						}
 					?>
-					
+
 				</ul>
 			</fieldset>
 		 </div>
