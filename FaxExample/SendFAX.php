@@ -12,7 +12,6 @@
 	$reserveDT = null;				#예약전송일시(yyyyMMddHHmmss), null인경우 즉시전송
 #	$reserveDT = '20151212230000';
 	$Sender = '07075103710';		#발신번호
-  $SenderName = '발신자명';     #발신자명
 
 	$Receivers = array();
 
@@ -25,7 +24,7 @@
 	$Files = array('./uploadtest.jpg','./uploadtest2.jpg');
 
 	try {
-		$receiptNum = $FaxService->SendFAX($testCorpNum,$Sender,$SenderName,$Receivers, $Files, $reserveDT, $testUserID);
+		$receiptNum = $FaxService->SendFAX($testCorpNum,$Sender,$Receivers, $Files, $reserveDT, $testUserID);
 	} catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();

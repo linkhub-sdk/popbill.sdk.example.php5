@@ -29,8 +29,8 @@
 	$Files = array('./test.jpg');
 
 	try {
-		#SendMMS(사업자번호, 동보전송발신번호, 동보전송발신자명, 동보전송제목, 동보전송내용, 전송정보배열, 파일경로, 예약전송일시, 회원아이디)
-		$receiptNum = $MessagingService->SendMMS($testCorpNum,'', '','','',$Messages, $Files, $reserveDT, $adsYN, $testUserID);
+		#SendMMS(사업자번호, 동보전송발신번호, 동보전송제목, 동보전송내용, 전송정보배열, 파일경로, 예약전송일시, 회원아이디)
+		$receiptNum = $MessagingService->SendMMS($testCorpNum,'','','',$Messages, $Files, $reserveDT, $adsYN, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

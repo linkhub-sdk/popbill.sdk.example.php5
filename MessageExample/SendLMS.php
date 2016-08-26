@@ -24,8 +24,8 @@
 	);
 
 	try {
-		#SendLMS(사업자번호, 동보전송발신자명, 동보전송발신번호, 동보전송제목 동보전송내용, 전송정보배열, 예약전송일시, 회원아이디)
-		$receiptNum = $MessagingService->SendLMS($testCorpNum,'','','','',$Messages, $reserveDT, $adsYN, $testUserID);
+		#SendLMS(사업자번호, 동보전송발신번호, 동보전송제목 동보전송내용, 전송정보배열, 예약전송일시, 회원아이디)
+		$receiptNum = $MessagingService->SendLMS($testCorpNum,'','','',$Messages, $reserveDT, $adsYN, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

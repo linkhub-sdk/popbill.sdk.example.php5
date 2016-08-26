@@ -25,8 +25,8 @@
 
 	try {
 		# 자동인식 문자전송의 경우 문자메시지 내용의 길이에 따라 90Byte 이상인경우 장문(LMS)으로 전송됩니다.
-		# SendXMS(사업자번호, 동보전송발신번호, 동보전송발신자명, 동보전송제목, 동보전송내용, 전송정보배열, 예약전송일시, 회원아이디)
-		$receiptNum = $MessagingService->SendXMS($testCorpNum, '', '', '', '', $Messages, $reserveDT, $adsYN, $testUserID);
+		# SendXMS(사업자번호, 동보전송발신번호, 동보전송제목, 동보전송내용, 전송정보배열, 예약전송일시, 회원아이디)
+		$receiptNum = $MessagingService->SendXMS($testCorpNum, '', '', '', $Messages, $reserveDT, $adsYN, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
