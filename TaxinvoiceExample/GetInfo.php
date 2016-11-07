@@ -4,12 +4,23 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?
+  /**
+  * 1건의 세금계산서 상태/요약 정보를 확인합니다.
+  * - 세금계산서 상태정보(GetInfo API) 응답항목에 대한 자세한 정보는
+  *   "[전자세금계산서 API 연동매뉴얼] > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+  */
 
-	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-'제외 10자리
-	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
-	$mgtKey = '20160112-01';				# 문서관리번호
+	include 'common.php';
+
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  $mgtKeyType = ENumMgtKeyType::SELL;
+
+  // 조회할 세금계산서 문서관리번호
+	$mgtKey = '20161102-04';
 
 	try {
 		$result = $TaxinvoiceService->GetInfo($testCorpNum, $mgtKeyType, $mgtKey);
@@ -24,55 +35,48 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 요약정보 및 상태정보 확인</legend>
+				<legend>세금계산서 상태 및 요약 정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if ( isset($code) ) {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
-
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
-
 					?>
-							<li>itemKey : <? echo $result->itemKey ; ?></li>
-							<li>stateCode : <? echo $result->stateCode ; ?></li>
-							<li>taxType : <? echo $result->taxType ; ?></li>
-							<li>purposeType : <? echo $result->purposeType ; ?></li>
-							<li>modifyCode : <? echo $result->modifyCode ; ?></li>
-							<li>issueType : <? echo $result->issueType ; ?></li>
-							<li>lateIssueYN : <? echo $result->lateIssueYN ; ?></li>
-							<li>writeDate : <? echo $result->writeDate ; ?></li>
-							<li>invoicerCorpName : <? echo $result->invoicerCorpName ; ?></li>
-							<li>invoicerCorpNum : <? echo $result->invoicerCorpNum ; ?></li>
-							<li>invoicerMgtKey : <? echo $result->invoicerMgtKey ; ?></li>
-							<li>invoicerPrintYN : <? echo $result->invoicerPrintYN ; ?></li>
-							<li>invoiceeCorpName : <? echo $result->invoiceeCorpName ; ?></li>
-							<li>invoiceeCorpNum : <? echo $result->invoiceeCorpNum ; ?></li>
-							<li>invoiceeMgtKey : <? echo $result->invoiceeMgtKey ; ?></li>
-							<li>invoiceePrintYN : <? echo $result->invoiceePrintYN ; ?></li>
-							<li>trusteeCorpName : <? echo $result->trusteeCorpName ; ?></li>
-							<li>trusteeCorpNum : <? echo $result->trusteeCorpNum ; ?></li>
-							<li>trusteeMgtKey : <? echo $result->trusteeMgtKey ; ?></li>
-							<li>trusteePrintYN : <? echo $result->trusteePrintYN ; ?></li>
-							<li>supplyCostTotal : <? echo $result->supplyCostTotal ; ?></li>
-							<li>taxTotal : <? echo $result->taxTotal ; ?></li>
-							<li>issueDT : <? echo $result->issueDT ; ?></li>
-							<li>preIssueDT : <? echo $result->preIssueDT ; ?></li>
-							<li>stateDT : <? echo $result->stateDT ; ?></li>
-							<li>openYN : <? echo $result->openYN ; ?></li>
-							<li>openDT : <? echo $result->openDT ; ?></li>
-							<li>ntsresult : <? echo $result->ntsresult ; ?></li>
-							<li>ntsconfirmNum : <? echo $result->ntsconfirmNum ; ?></li>
-							<li>ntssendDT : <? echo $result->ntssendDT ; ?></li>
-							<li>ntsresultDT : <? echo $result->ntsresultDT ; ?></li>
-							<li>ntssendErrCode : <? echo $result->ntssendErrCode ; ?></li>
-							<li>stateMemo : <? echo $result->stateMemo ; ?></li>
-
+							<li>itemKey : <?= $result->itemKey ?></li>
+							<li>stateCode : <?= $result->stateCode ?></li>
+							<li>taxType : <?= $result->taxType ?></li>
+							<li>purposeType : <?= $result->purposeType ?></li>
+							<li>modifyCode : <?= $result->modifyCode ?></li>
+							<li>issueType : <?= $result->issueType ?></li>
+							<li>lateIssueYN : <?= $result->lateIssueYN ?></li>
+							<li>writeDate : <?= $result->writeDate ?></li>
+							<li>invoicerCorpName : <?= $result->invoicerCorpName ?></li>
+							<li>invoicerCorpNum : <?= $result->invoicerCorpNum ?></li>
+							<li>invoicerMgtKey : <?= $result->invoicerMgtKey ?></li>
+							<li>invoicerPrintYN : <?= $result->invoicerPrintYN ?></li>
+							<li>invoiceeCorpName : <?= $result->invoiceeCorpName ?></li>
+							<li>invoiceeCorpNum : <?= $result->invoiceeCorpNum ?></li>
+							<li>invoiceeMgtKey : <?= $result->invoiceeMgtKey ?></li>
+							<li>invoiceePrintYN : <?= $result->invoiceePrintYN ?></li>
+              <li>supplyCostTotal : <?= $result->supplyCostTotal ?></li>
+							<li>taxTotal : <?= $result->taxTotal ?></li>
+							<li>issueDT : <?= $result->issueDT ?></li>
+							<li>preIssueDT : <?= $result->preIssueDT ?></li>
+							<li>stateDT : <?= $result->stateDT ?></li>
+							<li>openYN : <?= $result->openYN ?></li>
+							<li>openDT : <?= $result->openDT ?></li>
+							<li>ntsresult : <?= $result->ntsresult ?></li>
+							<li>ntsconfirmNum : <?= $result->ntsconfirmNum ?></li>
+							<li>ntssendDT : <?= $result->ntssendDT ?></li>
+							<li>ntsresultDT : <?= $result->ntsresultDT ?></li>
+							<li>ntssendErrCode : <?= $result->ntssendErrCode ?></li>
+							<li>stateMemo : <?= $result->stateMemo ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

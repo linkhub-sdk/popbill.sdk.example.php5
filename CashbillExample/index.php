@@ -44,7 +44,7 @@
 					<legend>등록/수정/발행/삭제</legend>
 					<ul>
 						<li><a href="CheckMgtKeyInUse.php">checkMgtKeyInUse</a> - 문서관리번호 사용여부 확인</li>
-						<li><a href="RegistIssue.php">registIssue</a> - 현금영수증 임시저장</li>
+						<li><a href="RegistIssue.php">registIssue</a> - 현금영수증 즉시발행</li>
 						<li><a href="Register.php">register</a> - 현금영수증 임시저장</li>
 						<li><a href="Update.php">update</a> - 현금영수증 수정</li>
 						<li><a href="Issue.php">issue</a> - 현금영수증 발행</li>

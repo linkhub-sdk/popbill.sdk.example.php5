@@ -4,16 +4,21 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
+  * - LinkID는 common.php 파일에 선언되어 있는 인증정보 입니다.
+  */
 	include 'common.php';
 
-	$testCorpNum = '1234567890';   # 사업자번호, "-"제외 10자리
+  // 사업자번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
 
 	try	{
-		$result = $TaxinvoiceService->CheckIsMember($testCorpNum,$LinkID); 
+		$result = $TaxinvoiceService->CheckIsMember($testCorpNum,$LinkID);
 		$code = $result->code;
 		$message = $result->message;
-	} 
+	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -26,8 +31,8 @@
 			<fieldset class="fieldset1">
 				<legend>연동회원사 가입 여부 확인 결과</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

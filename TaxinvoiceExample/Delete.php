@@ -4,18 +4,23 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
 	include 'common.php';
 
-	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-' 제외 10자리
-	$mgtKey = '20150206-01';				# 문서관리번호
-	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
+  // 팝빌회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호
+	$mgtKey = '20161102-01';
+
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  $mgtKeyType = ENumMgtKeyType::SELL;
 
 	try {
 		$result = $TaxinvoiceService->Delete($testCorpNum,$mgtKeyType,$mgtKey);
 		$code = $result->code;
 		$message = $result->message;
-	} 
+	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -26,10 +31,10 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자세금계산서 삭제</legend>
+				<legend>세금계산서 삭제</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

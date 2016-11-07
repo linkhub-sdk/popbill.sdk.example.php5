@@ -4,16 +4,16 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	#팝빌 회원 사업자 번호, "-"제외 10자리
+  // 팝빌 회원 사업자 번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
 
 	try {
 		$emailList = $TaxinvoiceService->GetEmailPublicKeys($testCorpNum);
-		
 	}
-	catch(PopbillException $pe) {
+	catch ( PopbillException $pe ) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -26,15 +26,15 @@
 				<legend>ASP사업자 유통메일 목록 확인</legend>
 				<ul>
 					<?
-						if(isset($emailList)) { 
-							for($i=0; $i< Count($emailList); $i++){
+						if ( isset($emailList) ) {
+							for ( $i = 0; $i < Count($emailList); $i++){
 					?>
 							 <fieldset class ="fieldset2">
 							 <ul>
 					<?
-								foreach($emailList[$i] as $key=>$val) {
+								foreach ( $emailList[$i] as $key=>$val) {
 					?>
-									<li> <? echo $key; ?> : <? echo $val; ?> </li>
+									<li> <?= $key; ?> : <?= $val; ?> </li>
 					<?
 								}
 					?>
@@ -44,11 +44,11 @@
 							}
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

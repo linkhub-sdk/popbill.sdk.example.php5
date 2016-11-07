@@ -4,17 +4,32 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 역발행 세금계산서를 [취소] 처리합니다.
+  * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)
+  *   를 호출해야 합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';				# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testUserID = 'testkorea';					# 팝빌 회원 아이디
-	$mgtKeyType = ENumMgtKeyType::BUY;			# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
-	$mgtKey = '20150204-01';					# 문서관리번호
-	$memo = '역)발행 요청 취소메모입니다';		# 메모
+  // 팝빌 회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌 회원 아이디
+	$testUserID = 'testkorea';
+
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  $mgtKeyType = ENumMgtKeyType::SELL;
+
+  // 문서관리번호
+	$mgtKey = '20150204-01';
+
+  // 메모
+	$memo = '역발행 요청 취소메모입니다';
 
 	try {
-		$result = $TaxinvoiceService->CanCelRequest($testCorpNum,$mgtKeyType,$mgtKey,$memo,$testUserID);
+		$result = $TaxinvoiceService->CanCelRequest($testCorpNum, $mgtKeyType, $mgtKey, $memo, $testUserID);
 		$code = $result->code;
 		$message = $result->message;
 	}
@@ -28,10 +43,10 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>역)발행 요청 취소</legend>
+				<legend>역발행 요청 취소</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

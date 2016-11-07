@@ -4,12 +4,23 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 팝빌 전자세금계산서 문서함 팝업 URL을 반환합니다.
+  * TOGO - TBOX(임시문서함), SBOX(매출문서함), PBOX(매입문서함), WRITE(매출문서작성)
+  * 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testUserID = 'testkorea';			# 팝빌 회원 아이디
-	$TOGO = 'WRITE';					# [TBOX] 임시문서함, [SBOX] 매출문서함, [PBOX] 매입문서함, [WRITE] 매출문서작성
+  // 팝빌 회원 사업자 번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌 회원 아이디
+	$testUserID = 'testkorea';
+
+  // [TBOX] 임시문서함, [SBOX] 매출문서함, [PBOX] 매입문서함, [WRITE] 매출문서작성
+	$TOGO = 'TBOX';
 
 	try {
 		$url = $TaxinvoiceService->GetURL($testCorpNum, $testUserID, $TOGO);
@@ -24,20 +35,20 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 URL 확인</legend>
+				<legend>팝빌 전자세금계산서 문서함 URL 확인</legend>
 				<ul>
 					<?
-						if(isset($url)) { 
+						if ( isset($url) ) {
 					?>
-							<li>url : <? echo $url ?></li>
+							<li>url : <?= $url ?></li>
 					<?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

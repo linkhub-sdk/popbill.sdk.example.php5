@@ -4,16 +4,22 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 전자세금계산서 API 서비스 과금정보를 확인합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
 
 	try {
-		$result = $TaxinvoiceService->GetChargeInfo($testCorpNum,$testUserID);
+		$result = $TaxinvoiceService->GetChargeInfo($testCorpNum, $testUserID);
 	}
-
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -27,16 +33,16 @@
 				<legend>과금정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) {
+						if ( isset($code) ) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>
-						<li>unitCost(단가) : <?= $result->unitCost ?></li>
-						<li>chargeMethod(과금유형) : <?= $result->chargeMethod ?></li>
-						<li>rateSystem(과금제도) : <?= $result->rateSystem ?></li>
+						<li>unitCost (발행단가) : <?= $result->unitCost ?></li>
+						<li>chargeMethod (과금유형) : <?= $result->chargeMethod ?></li>
+						<li>rateSystem (과금제도) : <?= $result->rateSystem ?></li>
 					<?
 						}
 					?>

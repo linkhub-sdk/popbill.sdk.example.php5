@@ -4,25 +4,33 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?
+  /**
+  * 대량의 세금계산서 상태/요약 정보를 확인합니다. (최대 1000건)
+  * - 세금계산서 상태정보(GetInfos API) 응답항목에 대한 자세한 정보는 "[전자세금계산서 API 연동매뉴얼]
+  * > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+  */
 
-	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-'제외 10자리
-	$mgtKeyType = ENumMgtKeyType::SELL;		# 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTT:위수탁
+	include 'common.php';
 
-	$MgtKeyList = array(					# 문서관리번호 배열, 최대 1000건
-			'20150211-01',
-			'20150211-02',
-			'20151001-01',
-	);
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum= '1234567890';
+
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  $mgtKeyType = ENumMgtKeyType::SELL;
+
+  // 세금계산서 문서관리번호 배열, 최대 1000건
+	$MgtKeyList = array();
+  array_push($MgtKeyList, "20161102-02");
+  array_push($MgtKeyList, '20161102-03');
+  array_push($MgtKeyList, '20161102-04');
 
 	try {
 		$result = $TaxinvoiceService->GetInfos($testCorpNum, $mgtKeyType, $MgtKeyList);
 	}
-
 	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
+		$code= $pe->getCode();
+		$message= $pe->getMessage();
 	}
 ?>
 	<body>
@@ -33,57 +41,56 @@
 				<legend>세금계산서 요약정보 대량 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if ( isset($code) ) {
 					?>
-						<li>Response.code : <? echo $code ?> </li>
-						<li>Response.message : <? echo $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
-							for ($i = 0; $i < Count($result); $i++) { 
+							for ( $i = 0; $i < Count($result) ; $i++ ) {
 					?>
 							<fieldset class="fieldset2">
-							<legend> 세금계산서 요약정보[<? echo $i+1?>]</legend>
+							<legend> 세금계산서 요약정보[<?= $i+1?>]</legend>
 							<ul>
-								<li>itemKey : <? echo $result[$i]->itemKey ; ?></li>
-								<li>stateCode : <? echo $result[$i]->stateCode ; ?></li>
-								<li>taxType : <? echo $result[$i]->taxType ; ?></li>
-								<li>purposeType : <? echo $result[$i]->purposeType ; ?></li>
-								<li>modifyCode : <? echo $result[$i]->modifyCode ; ?></li>
-								<li>issueType : <? echo $result[$i]->issueType ; ?></li>
-								<li>lateIssueYN : <? echo $result[$i]->lateIssueYN ; ?></li>
-								<li>writeDate : <? echo $result[$i]->writeDate ; ?></li>
-								<li>invoicerCorpName : <? echo $result[$i]->invoicerCorpName ; ?></li>
-								<li>invoicerCorpNum : <? echo $result[$i]->invoicerCorpNum ; ?></li>
-								<li>invoicerMgtKey : <? echo $result[$i]->invoicerMgtKey ; ?></li>
-								<li>invoicerPrintYN : <? echo $result[$i]->invoicerMgtKey ; ?></li>
-								<li>invoiceeCorpName : <? echo $result[$i]->invoiceeCorpName ; ?></li>
-								<li>invoiceeCorpNum : <? echo $result[$i]->invoiceeCorpNum ; ?></li>
-								<li>invoiceeMgtKey : <? echo $result[$i]->invoiceeMgtKey ; ?></li>
-								<li>invoiceePrintYN : <? echo $result[$i]->invoiceeMgtKey ; ?></li>
-								<li>trusteeCorpName : <? echo $result[$i]->trusteeCorpName ; ?></li>
-								<li>trusteeCorpNum : <? echo $result[$i]->trusteeCorpNum ; ?></li>
-								<li>trusteeMgtKey : <? echo $result[$i]->trusteeMgtKey ; ?></li>
-								<li>trusteePrintYN : <? echo $result[$i]->trusteePrintYN ; ?></li>
-								<li>supplyCostTotal : <? echo $result[$i]->supplyCostTotal ; ?></li>
-								<li>taxTotal : <? echo $result[$i]->taxTotal ; ?></li>
-								<li>issueDT : <? echo $result[$i]->issueDT ; ?></li>
-								<li>preIssueDT : <? echo $result[$i]->preIssueDT ; ?></li>
-								<li>stateDT : <? echo $result[$i]->stateDT ; ?></li>
-								<li>openYN : <? echo $result[$i]->openYN ; ?></li>
-								<li>openDT : <? echo $result[$i]->openDT ; ?></li>
-								<li>ntsresult : <? echo $result[$i]->ntsresult ; ?></li>
-								<li>ntsconfirmNum : <? echo $result[$i]->ntsconfirmNum ; ?></li>
-								<li>ntssendDT : <? echo $result[$i]->ntssendDT ; ?></li>
-								<li>ntsresultDT : <? echo $result[$i]->ntsresultDT ; ?></li>
-								<li>ntssendErrCode : <? echo $result[$i]->ntssendErrCode ; ?></li>
-								<li>stateMemo : <? echo $result[$i]->stateMemo ; ?></li>
+								<li>itemKey : <?= $result[$i]->itemKey ?></li>
+								<li>stateCode : <?= $result[$i]->stateCode ?></li>
+								<li>taxType : <?= $result[$i]->taxType ?></li>
+								<li>purposeType : <?= $result[$i]->purposeType ?></li>
+								<li>modifyCode : <?= $result[$i]->modifyCode ?></li>
+								<li>issueType : <?= $result[$i]->issueType ?></li>
+								<li>lateIssueYN : <?= $result[$i]->lateIssueYN ?></li>
+								<li>writeDate : <?= $result[$i]->writeDate ?></li>
+								<li>invoicerCorpName : <?= $result[$i]->invoicerCorpName ?></li>
+								<li>invoicerCorpNum : <?= $result[$i]->invoicerCorpNum ?></li>
+								<li>invoicerMgtKey : <?= $result[$i]->invoicerMgtKey ?></li>
+								<li>invoicerPrintYN : <?= $result[$i]->invoicerMgtKey ?></li>
+								<li>invoiceeCorpName : <?= $result[$i]->invoiceeCorpName ?></li>
+								<li>invoiceeCorpNum : <?= $result[$i]->invoiceeCorpNum ?></li>
+								<li>invoiceeMgtKey : <?= $result[$i]->invoiceeMgtKey ?></li>
+								<li>invoiceePrintYN : <?= $result[$i]->invoiceeMgtKey ?></li>
+								<li>trusteeCorpName : <?= $result[$i]->trusteeCorpName ?></li>
+								<li>trusteeCorpNum : <?= $result[$i]->trusteeCorpNum ?></li>
+								<li>trusteeMgtKey : <?= $result[$i]->trusteeMgtKey ?></li>
+								<li>trusteePrintYN : <?= $result[$i]->trusteePrintYN ?></li>
+								<li>supplyCostTotal : <?= $result[$i]->supplyCostTotal ?></li>
+								<li>taxTotal : <?= $result[$i]->taxTotal ?></li>
+								<li>issueDT : <?= $result[$i]->issueDT ?></li>
+								<li>preIssueDT : <?= $result[$i]->preIssueDT ?></li>
+								<li>stateDT : <?= $result[$i]->stateDT ?></li>
+								<li>openYN : <?= $result[$i]->openYN ?></li>
+								<li>openDT : <?= $result[$i]->openDT ?></li>
+								<li>ntsresult : <?= $result[$i]->ntsresult ?></li>
+								<li>ntsconfirmNum : <?= $result[$i]->ntsconfirmNum ?></li>
+								<li>ntssendDT : <?= $result[$i]->ntssendDT ?></li>
+								<li>ntsresultDT : <?= $result[$i]->ntsresultDT ?></li>
+								<li>ntssendErrCode : <?= $result[$i]->ntssendErrCode ?></li>
+								<li>stateMemo : <?= $result[$i]->stateMemo ?></li>
 							</ul>
 							</fieldset>
 					<?
 							}
 						}
 					?>
-					
 				</ul>
 			</fieldset>
 		 </div>

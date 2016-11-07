@@ -44,6 +44,7 @@
 					<legend>등록/수정/확인/삭제</legend>
 					<ul>
 						<li><a href="CheckMgtKeyInUse.php">checkMgtKeyInUse</a> - 관리번호의 등록/사용여부 확인</li>
+            <li><a href="RegistIssue.php">registIssue</a> - 세금계산서 즉시발행 처리</li>
 						<li><a href="Register.php">register</a> - 세금계산서 등록</li>
 						<li><a href="Update.php">update</a> - 세금계산서 수정</li>
 						<li><a href="GetInfo.php">getInfo</a> - 세금계산서 상태/요약 정보 확인</li>
@@ -61,7 +62,6 @@
 				<fieldset class="fieldset2">
 					<legend>처리 프로세스</legend>
 					<ul>
-						<li><a href="RegistIssue.php">registIssue</a> - 세금계산서 즉시발행 처리</li>
 						<li><a href="Send.php">send</a> - 정발행/위수탁 세금계산서 발행예정 처리</li>
 						<li><a href="CancelSend.php">cancelSend</a> - 정발행/위수탁 세금계산서 발행예정 취소 처리</li>
 						<li><a href="Accept.php">accept</a> - 정발행/위수탁 세금계산서 발행예정에 대한 공급받는자의 승인 처리</li>
