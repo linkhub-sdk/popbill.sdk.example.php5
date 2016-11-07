@@ -4,15 +4,26 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * [발행완료] 상태의 현금영수증을 [발행취소] 합니다.
+  * - 발행취소는 국세청 전송전에만 가능합니다.
+  * - 발행취소된 형금영수증은 국세청에 전송되지 않습니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$mgtKey = '20150624-01';			# 문서관리번호
-	$memo = '현금영수증 발행메모';		# 메모
+  // 팝빌 회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호
+	$mgtKey = '20161107-02';
+
+  // 메모
+	$memo = '현금영수증 발행메모';
 
 	try {
-		$result = $CashbillService->Issue($testCorpNum,$mgtKey,$memo);
+		$result = $CashbillService->Issue($testCorpNum, $mgtKey, $memo);
 		$code = $result->code;
 		$message = $result->message;
 	}
@@ -28,8 +39,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 발행</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

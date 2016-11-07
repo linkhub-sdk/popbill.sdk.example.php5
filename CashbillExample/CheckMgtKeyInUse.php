@@ -4,17 +4,24 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 현금영수증 관리번호 중복여부를 확인합니다.
+  * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
+  */
+  
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	#팝빌회원 사업자번호, "-"제외 10자리
-	$mgtKey = '20150206-01';		#문서관리번호, 1~24자리, 영문,숫자 조합으로 구성
+  // 팝빌회원 사업자번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호, 1~24자리, 영문, 숫자, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+	$mgtKey = '20161107-01';
 
 	try {
 		$result = $CashbillService->CheckMgtKeyInUse($testCorpNum, $mgtKey);
 		$result ? $result = '사용중' : $result = '미사용중';
 	}
-
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -28,18 +35,18 @@
 				<legend>연동관리번호 사용여부 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if ( isset($code) ) {
 					?>
-						<li>Response.code : <? echo $code ?> </li>
-						<li>Response.message : <? echo $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 
 					<?
 						} else {
 					?>
-						<li>연동관리번호 사용여부 : <? echo $result ?></li>
+						<li>연동관리번호 사용여부 : <?= $result ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

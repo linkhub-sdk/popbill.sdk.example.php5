@@ -4,18 +4,27 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 1건의 현금영수증을 삭제합니다.
+  * - 현금영수증을 삭제하면 사용된 문서관리번호(mgtKey)를 재사용할 수 있습니다.
+  * - 삭제가능한 문서 상태 : [임시저장], [발행취소]
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$mgtKey = '20150624-01';		# 문서관리번호
+  // 팝빌 회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호
+	$mgtKey = '20161107-02';
 
 	try {
-		$result = $CashbillService->Delete($testCorpNum,$mgtKey);
+		$result = $CashbillService->Delete($testCorpNum, $mgtKey);
 		$code = $result->code;
 		$message = $result->message;
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -27,8 +36,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 삭제</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

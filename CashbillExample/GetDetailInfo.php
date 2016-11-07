@@ -4,16 +4,25 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?
+  /**
+  * 현금영수증 1건의 상세정보를 조회합니다.
+  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1.
+  *   현금영수증 구성" 을 참조하시기 바랍니다.
+  */
+  
+	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호, "-"제외 10자리
-	$mgtKey = '20150211-01';		# 문서관리번호
+  // 팝빌회원 사업자번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호
+	$mgtKey = '20161107-02';
 
 	try {
 		$result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -25,44 +34,41 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 상세정보 확인</legend>
 				<ul>
-						<?
-						if(isset($code)) { 
+					<?
+						if ( isset($code) ) {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>
-								<li>mgtKey : <? echo $result->mgtKey?> </li>
-								<li>tradeDate : <? echo $result->tradeDate?> </li>
-								<li>tradeUsage : <? echo $result->tradeUsage?> </li>
-								<li>tradeType : <? echo $result->tradeType ?> </li>
-								<li>taxationType : <? echo $result->taxationType ?> </li>
-								<li>supplyCost : <? echo $result->supplyCost ?> </li>
-								<li>tax : <? echo $result->tax ?> </li>
-								<li>serviceFee : <? echo $result->serviceFee ?> </li>
-								<li>totalAmount : <? echo $result->totalAmount ?> </li>
-								<li>franchiseCorpNum : <? echo $result->franchiseCorpNum ?> </li>
-								<li>franchiseCorpName : <? echo $result->franchiseCorpName ?> </li>
-								<li>franchiseCEOName : <? echo $result->franchiseCEOName ?> </li>
-								<li>franchiseAddr : <? echo $result->franchiseAddr ?> </li>
-								<li>franchiseTEL : <? echo $result->franchiseTEL ?> </li>
-								<li>identityNum : <? echo $result->identityNum ?> </li>
-								<li>customerName : <? echo $result->customerName ?> </li>
-								<li>itemName : <? echo $result->itemName ?> </li>
-								<li>orderNumber : <? echo $result->orderNumber ?> </li>
-								<li>email : <? echo $result->email ?> </li>
-								<li>hp : <? echo $result->hp ?> </li>
-								<li>fax : <? echo $result->fax ?> </li>
-								<li>smssendYN : <? echo $result->smssendYN ?> </li>
-								<li>faxsendYN : <? echo $result->faxsendYN ?> </li>
-								<li>orgConfirmNum : <? echo $result->orgConfirmNum ?> </li>
-
+  						<li>mgtKey : <?= $result->mgtKey?> </li>
+  						<li>tradeDate : <?= $result->tradeDate?> </li>
+  						<li>tradeUsage : <?= $result->tradeUsage?> </li>
+  						<li>tradeType : <?= $result->tradeType ?> </li>
+  						<li>taxationType : <?= $result->taxationType ?> </li>
+  						<li>supplyCost : <?= $result->supplyCost ?> </li>
+  						<li>tax : <?= $result->tax ?> </li>
+  						<li>serviceFee : <?= $result->serviceFee ?> </li>
+  						<li>totalAmount : <?= $result->totalAmount ?> </li>
+  						<li>franchiseCorpNum : <?= $result->franchiseCorpNum ?> </li>
+  						<li>franchiseCorpName : <?= $result->franchiseCorpName ?> </li>
+  						<li>franchiseCEOName : <?= $result->franchiseCEOName ?> </li>
+  						<li>franchiseAddr : <?= $result->franchiseAddr ?> </li>
+  						<li>franchiseTEL : <?= $result->franchiseTEL ?> </li>
+  						<li>identityNum : <?= $result->identityNum ?> </li>
+  						<li>customerName : <?= $result->customerName ?> </li>
+  						<li>itemName : <?= $result->itemName ?> </li>
+  						<li>orderNumber : <?= $result->orderNumber ?> </li>
+  						<li>email : <?= $result->email ?> </li>
+  						<li>hp : <?= $result->hp ?> </li>
+  						<li>fax : <?= $result->fax ?> </li>
+  						<li>smssendYN : <?= $result->smssendYN ?> </li>
+  						<li>faxsendYN : <?= $result->faxsendYN ?> </li>
+  						<li>orgConfirmNum : <?= $result->orgConfirmNum ?> </li>
 					<?
 						}
-					?>			
-		
-
+					?>
 				</ul>
 			</fieldset>
 		 </div>

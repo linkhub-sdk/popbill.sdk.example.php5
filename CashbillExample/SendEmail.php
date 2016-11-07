@@ -4,12 +4,21 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 발행 안내메일을 재전송합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌 회원 사업자번호, "-" 제외 10자리
-	$mgtKey = '20150206-01';		# 문서관리번호
-	$receiver = 'frenchofkiss@gmail.com';	# 수신 이메일주소
+  // 팝빌 회원 사업자번호, "-" 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호
+	$mgtKey = '20161107-02';
+
+  // 수신메일 주소
+	$receiver = 'test@test.com';
 
 	try {
 		$result = $CashbillService->SendEmail($testCorpNum,$mgtKey,$receiver);
@@ -28,8 +37,8 @@
 			<fieldset class="fieldset1">
 				<legend>알림메일 재전송</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

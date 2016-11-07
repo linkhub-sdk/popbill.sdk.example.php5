@@ -4,11 +4,20 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 1건의 현금영수증 상태/요약 정보를 확인합니다.
+  * - 응답항목에 대한 자세한 정보는 "[현금영수증 API 연동매뉴얼] > 4.2.
+  *   현금영수증 상태정보 구성"을 참조하시기 바랍니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호
-	$mgtKey = '20150211-01';		# 문서관리번호
+  // 팝빌회원 사업자번호
+	$testCorpNum = '1234567890';
+
+  // 문서관리번호
+	$mgtKey = '20161107-02';
 
 	try {
 		$result = $CashbillService->GetInfo($testCorpNum, $mgtKey);
@@ -26,37 +35,37 @@
 				<legend>현금영수증 요약정보 및 상태정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) {
+						if ( isset($code) ) {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 							{
 					?>
-								<li> itemKey : <? echo $result->itemKey ?></li>
-								<li> mgtKey : <? echo $result->mgtKey ?></li>
-								<li> tradeDate : <? echo $result->tradeDate ?></li>
-								<li> issueDT : <? echo $result->issueDT ?></li>
-								<li> customerName : <? echo $result->customerName ?></li>
-								<li> itemName : <? echo $result->itemName ?></li>
-								<li> identityNum : <? echo $result->identityNum ?></li>
-								<li> taxationType : <? echo $result->taxationType ?></li>
-								<li> totalAmount : <? echo $result->totalAmount ?></li>
-								<li> tradeUsage : <? echo $result->tradeUsage ?></li>
-								<li> tradeType : <? echo $result->tradeType ?></li>
-								<li> stateCode : <? echo $result->stateCode ?></li>
-								<li> stateDT : <? echo $result->stateDT ?></li>
-								<li> printYN : <? echo $result->printYN ?></li>
-								<li> confirmNum : <? echo $result->confirmNum ?></li>
-								<li> orgTradeDate : <? echo $result->orgTradeDate ?></li>
-								<li> orgConfirmNum : <? echo $result->orgConfirmNum ?></li>
-								<li> ntssendDT : <? echo $result->ntssendDT ?></li>
-								<li> ntsresult : <? echo $result->ntsresult ?></li>
-								<li> ntsresultDT : <? echo $result->ntsresultDT ?></li>
-								<li> ntsresultCode : <? echo $result->ntsresultCode ?></li>
-								<li> ntsresultMessage : <? echo $result->ntsresultMessage ?></li>
-								<li> regDT : <? echo $result->regDT ?></li>
+								<li> itemKey : <?= $result->itemKey ?></li>
+								<li> mgtKey : <?= $result->mgtKey ?></li>
+								<li> tradeDate : <?= $result->tradeDate ?></li>
+								<li> issueDT : <?= $result->issueDT ?></li>
+								<li> customerName : <?= $result->customerName ?></li>
+								<li> itemName : <?= $result->itemName ?></li>
+								<li> identityNum : <?= $result->identityNum ?></li>
+								<li> taxationType : <?= $result->taxationType ?></li>
+								<li> totalAmount : <?= $result->totalAmount ?></li>
+								<li> tradeUsage : <?= $result->tradeUsage ?></li>
+								<li> tradeType : <?= $result->tradeType ?></li>
+								<li> stateCode : <?= $result->stateCode ?></li>
+								<li> stateDT : <?= $result->stateDT ?></li>
+								<li> printYN : <?= $result->printYN ?></li>
+								<li> confirmNum : <?= $result->confirmNum ?></li>
+								<li> orgTradeDate : <?= $result->orgTradeDate ?></li>
+								<li> orgConfirmNum : <?= $result->orgConfirmNum ?></li>
+								<li> ntssendDT : <?= $result->ntssendDT ?></li>
+								<li> ntsresult : <?= $result->ntsresult ?></li>
+								<li> ntsresultDT : <?= $result->ntsresultDT ?></li>
+								<li> ntsresultCode : <?= $result->ntsresultCode ?></li>
+								<li> ntsresultMessage : <?= $result->ntsresultMessage ?></li>
+								<li> regDT : <?= $result->regDT ?></li>
 					<?
 							}
 						}

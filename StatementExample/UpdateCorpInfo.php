@@ -17,6 +17,8 @@
   // 팝빌회원 아이디
 	$testUserID = 'testkorea';
 
+  
+
   // 회사정보 클래스 생성
 	$CorpInfo = new CorpInfo();
 

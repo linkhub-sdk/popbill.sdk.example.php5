@@ -5,46 +5,68 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?
+  /**
+  * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
+  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] >
+  *   4.2. 현금영수증 상태정보 구성" 을 참조하시기 바랍니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# [필수] 팝빌회원 사업자번호
-  $DType = 'T';                 # [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
-  $SDate = '20160701';          # [필수] 시작일자
-  $EDate = '20160831';          # [필수] 종료일자
+  // [필수] 팝빌회원 사업자번호
+  $testCorpNum = '1234567890';
+
+  // [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
+  $DType = 'T';
+
+  // [필수] 시작일자
+  $SDate = '20160901';
+
+  // [필수] 종료일자
+  $EDate = '20161131';
 
 
-	$State = array(			          # 문서상태값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
+  // 문서상태값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
+	$State = array(
     '100',
     '2**',
     '3**',
     '4**'
 	);
 
-  $TradeType = array(			      # 거래형태, N-일반현금영수증, C-취소현금영수증
+  // 거래형태, N-일반현금영수증, C-취소현금영수증
+  $TradeType = array(
 			'N',
 			'C'
 	);
 
-
-  $TradeUsage = array(			    # 거래용도, P-소득공제, C-지출증빙
+  // 거래용도, P-소득공제, C-지출증빙
+  $TradeUsage = array(
 			'P',
       'C'
 	);
 
-  $TaxationType = array(			  # 과세형태, T-과세, N-비과세
+  // 과세형태, T-과세, N-비과세
+  $TaxationType = array(
 			'T',
 			'N'
 	);
 
-  $Page = 1;                    # 페이지번호, 기본값 1
-  $PerPage = 30;                # 페이지당 검색갯수, 기본값 500, 최대값 1000
-  $Order = 'D';                 # 정렬방향, D-내림차순, A-오름차순
-  $QString = '';            # 식별번호 조회, 미기재시 전체조회
+  // 페이지번호, 기본값 1
+  $Page = 1;
+
+  // 페이지당 검색갯수, 기본값 500, 최대값 1000
+  $PerPage = 30;
+
+  // 정렬방향, D-내림차순, A-오름차순
+  $Order = 'D';
+
+  // 식별번호 조회, 미기재시 전체조회
+  $QString = '';
 
   try {
-
-		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType, $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString );
-
+		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
+                              $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString );
   }	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -60,54 +82,53 @@
    				<?
 						if( isset ( $code ) ) {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
           ?>
-              <li>code : <? echo $result->code ?> </li>
-              <li>total : <? echo $result->total ?> </li>
-              <li>pageNum : <? echo $result->pageNum ?> </li>
-              <li>perPage : <? echo $result->perPage ?> </li>
-              <li>pageCount : <? echo $result->pageCount ?> </li>
-              <li>message : <? echo $result->message ?> </li>
+              <li>code : <?= $result->code ?> </li>
+              <li>total : <?= $result->total ?> </li>
+              <li>pageNum : <?= $result->pageNum ?> </li>
+              <li>perPage : <?= $result->perPage ?> </li>
+              <li>pageCount : <?= $result->pageCount ?> </li>
+              <li>message : <?= $result->message ?> </li>
 
           <?
 							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 								<fieldset class="fieldset2">
-									<legend> 현금영수증 요약정보[<? echo $i+1?>]</legend>
+									<legend> 현금영수증 요약정보[<?= $i+1?>]</legend>
 									<ul>
-										<li> itemKey : <? echo $result->list[$i]->itemKey ?></li>
-										<li> mgtKey : <? echo $result->list[$i]->mgtKey ?></li>
-										<li> tradeDate : <? echo $result->list[$i]->tradeDate ?></li>
-										<li> issueDT : <? echo $result->list[$i]->issueDT ?></li>
-										<li> customerName : <? echo $result->list[$i]->customerName ?></li>
-										<li> itemName : <? echo $result->list[$i]->itemName ?></li>
-										<li> identityNum : <? echo $result->list[$i]->identityNum ?></li>
-										<li> taxationType : <? echo $result->list[$i]->taxationType ?></li>
-										<li> totalAmount : <? echo $result->list[$i]->totalAmount ?></li>
-										<li> tradeUsage : <? echo $result->list[$i]->tradeUsage ?></li>
-										<li> tradeType : <? echo $result->list[$i]->tradeType ?></li>
-										<li> stateCode : <? echo $result->list[$i]->stateCode ?></li>
-										<li> stateDT : <? echo $result->list[$i]->stateDT ?></li>
-										<li> printYN : <? echo $result->list[$i]->printYN ?></li>
-										<li> confirmNum : <? echo $result->list[$i]->confirmNum ?></li>
-										<li> orgTradeDate : <? echo $result->list[$i]->orgTradeDate ?></li>
-										<li> orgConfirmNum : <? echo $result->list[$i]->orgConfirmNum ?></li>
-										<li> ntssendDT : <? echo $result->list[$i]->ntssendDT ?></li>
-										<li> ntsresult : <? echo $result->list[$i]->ntsresult ?></li>
-										<li> ntsresultDT : <? echo $result->list[$i]->ntsresultDT ?></li>
-										<li> ntsresultCode : <? echo $result->list[$i]->ntsresultCode ?></li>
-										<li> ntsresultMessage : <? echo $result->list[$i]->ntsresultMessage ?></li>
-										<li> regDT : <? echo $result->list[$i]->regDT ?></li>
+										<li> itemKey : <?= $result->list[$i]->itemKey ?></li>
+										<li> mgtKey : <?= $result->list[$i]->mgtKey ?></li>
+										<li> tradeDate : <?= $result->list[$i]->tradeDate ?></li>
+										<li> issueDT : <?= $result->list[$i]->issueDT ?></li>
+										<li> customerName : <?= $result->list[$i]->customerName ?></li>
+										<li> itemName : <?= $result->list[$i]->itemName ?></li>
+										<li> identityNum : <?= $result->list[$i]->identityNum ?></li>
+										<li> taxationType : <?= $result->list[$i]->taxationType ?></li>
+										<li> totalAmount : <?= $result->list[$i]->totalAmount ?></li>
+										<li> tradeUsage : <?= $result->list[$i]->tradeUsage ?></li>
+										<li> tradeType : <?= $result->list[$i]->tradeType ?></li>
+										<li> stateCode : <?= $result->list[$i]->stateCode ?></li>
+										<li> stateDT : <?= $result->list[$i]->stateDT ?></li>
+										<li> printYN : <?= $result->list[$i]->printYN ?></li>
+										<li> confirmNum : <?= $result->list[$i]->confirmNum ?></li>
+										<li> orgTradeDate : <?= $result->list[$i]->orgTradeDate ?></li>
+										<li> orgConfirmNum : <?= $result->list[$i]->orgConfirmNum ?></li>
+										<li> ntssendDT : <?= $result->list[$i]->ntssendDT ?></li>
+										<li> ntsresult : <?= $result->list[$i]->ntsresult ?></li>
+										<li> ntsresultDT : <?= $result->list[$i]->ntsresultDT ?></li>
+										<li> ntsresultCode : <?= $result->list[$i]->ntsresultCode ?></li>
+										<li> ntsresultMessage : <?= $result->list[$i]->ntsresultMessage ?></li>
+										<li> regDT : <?= $result->list[$i]->regDT ?></li>
 									</ul>
 								</fieldset>
 					<?
 							}
 						}
 					?>
-
 				</ul>
 			</fieldset>
 		 </div>
