@@ -7,11 +7,8 @@
 	</head>
 	<body>
 		<div id="content">
-
 			<p class="heading1">팝빌 전자명세서 SDK PHP 5.X Example.</p>
-
 			<br/>
-
 			<fieldset class="fieldset1">
 				<legend>팝빌 기본 API</legend>
 

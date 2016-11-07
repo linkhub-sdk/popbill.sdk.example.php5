@@ -4,18 +4,36 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 전자명세서를 팩스전송합니다.
+  * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역]
+  *   메뉴에서 전송결과를 확인할 수 있습니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';				# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testUserID = 'testkorea';					# 팝빌 회원 아이디
-	$itemCode = '121';							# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
-	$mgtKey = '20150206-01';					# 문서관리번호
-	$sender = '07075103710';					# 발신번호	
-	$receiver = '0264429700';					# 수신팩스번호
+  // 팝빌 회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌 회원 아이디
+	$testUserID = 'testkorea';
+
+  // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+	$itemCode = '121';
+
+  // 문서관리번호
+	$mgtKey = '20161107-03';
+
+  // 발신번호
+	$sender = '07043042991';
+
+  // 수신팩스번호
+	$receiver = '070111222';
 
 	try {
-		$result = $StatementService->SendFAX($testCorpNum,$itemCode,$mgtKey,$sender,$receiver,$testUserID);
+		$result = $StatementService->SendFAX($testCorpNum, $itemCode, $mgtKey, $sender, $receiver, $testUserID);
 		$code = $result->code;
 		$message = $result->message;
 	}
@@ -31,8 +49,8 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 팩스전송</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

@@ -4,22 +4,34 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 1건의 [임시저장] 상태의 전자명세서를 발행처리합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, "-"제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
-	$itemCode = '121';					# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
-	$MgtKey = '20150624-01';			# 문서관리번호
-	$memo = '전자명세서 발행 메모';		# 메모
+  // 팝빌회원 사업자번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
 
-	try
-	{
-		$result = $StatementService->Issue($testCorpNum,$itemCode,$MgtKey,$memo,$testUserID);
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
+
+  // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+	$itemCode = '121';
+
+  // 전자명세서 문서관리번호
+	$MgtKey = '20161107-03';
+
+  // 메모
+	$memo = '전자명세서 발행 메모';
+
+	try	{
+		$result = $StatementService->Issue($testCorpNum, $itemCode, $MgtKey, $memo, $testUserID);
 		$code = $result->code;
 		$message = $result->message;
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -31,8 +43,8 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 발행</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

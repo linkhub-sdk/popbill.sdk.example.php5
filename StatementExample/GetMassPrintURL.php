@@ -4,20 +4,31 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+/**
+* 다수건의 전자명세서 인쇄팝업 URL을 반환합니다. (최대 100건)
+* - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+*/
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testUserID = 'testkorea';		# 팝빌 회원 아이디
-	$itemCode = '121';				# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+  // 팝빌 회원 사업자 번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
 
-	$mgtKeyList = array (			# 문서관리번호 배열, 최대 100건
-				'20150206-01',
-				'20150206-02',
+  // 팝빌 회원 아이디
+	$testUserID = 'testkorea';
+
+  // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+	$itemCode = '121';
+
+  // 문서관리번호 배열, 최대 100건
+	$mgtKeyList = array (
+				'20161107-01',
+				'20161107-02',
+        '20161107-03'
 	);
 
 	try {
-		$url = $StatementService->GetMassPrintURL($testCorpNum,$itemCode,$mgtKeyList,$testUserID);
+		$url = $StatementService->GetMassPrintURL($testCorpNum, $itemCode, $mgtKeyList, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -29,20 +40,20 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 다량 인쇄 URL </legend>
+				<legend>전자명세서 인쇄 팝업 URL - 대량 </legend>
 				<ul>
 					<?
-						if(isset($url)) { 
+						if ( isset($url) ) {
 					?>
-							<li>url : <? echo $url ?></li>
+							<li>url : <?= $url ?></li>
 					<?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

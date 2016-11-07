@@ -4,103 +4,161 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 1건의 전자명세서를 즉시발행 처리합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';				# 팝빌 회원 사업자번호, '-' 제외 10자리
-	$mgtKey = '20151001-01';					# 팩스전송 파일명
-	$testUserID = 'testkorea';					# 팝빌 회원 아이디
-	$itemCode = '121';							# 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+  // 팝빌 회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 전자명세서 문서관리번호
+  // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+	$mgtKey = '20161107-02';
+
+  // 팝빌 회원 아이디
+	$testUserID = 'testkorea';
+
+  // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+	$itemCode = '121';
+
+  // 메모
 	$memo = '즉시발행 메모';
 
-	$Statement = new Statement();				
-	$Statement->writeDate = '20151001';         # [필수] 기재상 작성일자   
-	$Statement->purposeType = '영수';			# [필수] (영수, 청구) 중 기재
-	$Statement->taxType = '과세';				# [필수] (과세, 영세, 면세) 중 기재
-	$Statement->formCode = '';					# 맞춤양식코드, 미기재시 기본폼으로 처리 
 
-	$Statement->itemCode = $itemCode;           # 명세서 코드  
-	$Statement->mgtKey = $mgtKey;				
+  // 전자명세서 객체 생성
+	$Statement = new Statement();
 
-	$Statement->senderCorpNum = $testCorpNum;   
-	$Statement->senderTaxRegID = '';						# 종사업장 식별번호. 필요시 기재. 형식은 숫자 4자리
-	$Statement->senderCorpName = '공급자 상호';					
-	$Statement->senderCEOName = '공급자 대표자 성명';      
-	$Statement->senderAddr = ' 공급자 주소';         
-	$Statement->senderBizClass = '공급자 업종';     
-	$Statement->senderBizType = '공급자 업태';      
-	$Statement->senderContactName = '공급자 담당자명';  
-	$Statement->senderTEL = '070-7070-0707';          
-	$Statement->senderHP = '010-000-2222';           
-	$Statement->senderEmail = 'test@test.com';        
+  /************************************************************
+  *                       전자명세서 정보
+  ************************************************************/
 
-	$Statement->receiverCorpNum = '8888888888';    
-	$Statement->receiverTaxRegID = '';						# 공급받는자 종사업장 식별번호, 필요시 기재. 형식은 숫자 4자리
-	$Statement->receiverCorpName = '공급받는자 대표자 성명';   
-	$Statement->receiverCEOName = '공급받는자 대표자 성명';    
-	$Statement->receiverAddr = '공급받는자 주소';       
-	$Statement->receiverBizClass = '공급받는자 업종';   
-	$Statement->receiverBizType = '공급받는자 업태';    
+  // [필수] 기재상 작성일자
+	$Statement->writeDate = '20161107';
+
+  // [필수] (영수, 청구) 중 기재
+	$Statement->purposeType = '영수';
+
+  // [필수]  과세형태, (과세, 영세, 면세) 중 기재
+	$Statement->taxType = '과세';
+
+  // 맞춤양식코드, 미기재시 기본양식으로 처리
+	$Statement->formCode = '';
+
+  // 명세서 종류 코드
+	$Statement->itemCode = $itemCode;
+
+  // 전자명세서 문서관리번호
+	$Statement->mgtKey = $mgtKey;
+
+
+  /************************************************************
+  *                         공급자 정보
+  ************************************************************/
+
+	$Statement->senderCorpNum = $testCorpNum;
+	$Statement->senderTaxRegID = '';
+	$Statement->senderCorpName = '공급자 상호';
+	$Statement->senderCEOName = '공급자 대표자 성명';
+	$Statement->senderAddr = ' 공급자 주소';
+	$Statement->senderBizClass = '공급자 업종';
+	$Statement->senderBizType = '공급자 업태';
+	$Statement->senderContactName = '공급자 담당자명';
+	$Statement->senderTEL = '070-7070-0707';
+	$Statement->senderHP = '010-000-2222';
+	$Statement->senderEmail = 'test@test.com';
+
+
+  /************************************************************
+  *                         공급받는자 정보
+  ************************************************************/
+
+	$Statement->receiverCorpNum = '8888888888';
+	$Statement->receiverTaxRegID = '';						// 공급받는자 종사업장 식별번호, 필요시 기재. 형식은 숫자 4자리
+	$Statement->receiverCorpName = '공급받는자 대표자 성명';
+	$Statement->receiverCEOName = '공급받는자 대표자 성명';
+	$Statement->receiverAddr = '공급받는자 주소';
+	$Statement->receiverBizClass = '공급받는자 업종';
+	$Statement->receiverBizType = '공급받는자 업태';
 	$Statement->receiverContactName = '공급받는자 담당자명';
-	$Statement->receiverTEL = '010-0000-1111';        
-	$Statement->receiverHP = '010-1111-2222';         
-	$Statement->receiverEmail = 'test@test.com';      
+	$Statement->receiverTEL = '010-0000-1111';
+	$Statement->receiverHP = '010-1111-2222';
+	$Statement->receiverEmail = 'test@test.com';
 
-	$Statement->supplyCostTotal = '200000' ;				# [필수] 공급가액 합계
-	$Statement->taxTotal = '20000';							# [필수] 세액 합계
-	$Statement->totalAmount = '220000';						# [필수] 합계금액 (공급가액 합계+세액합계)
 
-	$Statement->serialNum = '123';							# 기재상 일련번호 항목
-	$Statement->remark1 = '비고1';							
-	$Statement->remark2 = '비고2';            
-	$Statement->remark3 = '비고3';            
+  /************************************************************
+  *                       전자명세서 기재정보
+  ************************************************************/
 
-	$Statement->businessLicenseYN = False;					#사업자등록증 첨부 여부
-	$Statement->bankBookYN = False;							#통장사본 첨부 여부
-	$Statement->smssendYN = False;							#발행시 안내문자 전송여부
+	$Statement->supplyCostTotal = '200000' ;				// [필수] 공급가액 합계
+	$Statement->taxTotal = '20000';							// [필수] 세액 합계
+	$Statement->totalAmount = '220000';						// [필수] 합계금액 (공급가액 합계+세액합계)
 
-	$Statement->detailList = array();				
+	$Statement->serialNum = '123';							// 기재상 일련번호 항목
+	$Statement->remark1 = '비고1';
+	$Statement->remark2 = '비고2';
+	$Statement->remark3 = '비고3';
+
+	$Statement->businessLicenseYN = False;					//사업자등록증 첨부 여부
+	$Statement->bankBookYN = False;							//통장사본 첨부 여부
+	$Statement->smssendYN = False;							//발행시 안내문자 전송여부
+
+
+  /************************************************************
+  *                       상세항목(품목) 정보
+  ************************************************************/
+
+	$Statement->detailList = array();
 
 	$Statement->detailList[] = new StatementDetail();
 
-    $Statement->detailList[0]->serialNum = '1';					#품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20150205';			#거래일자 yyyyMMdd
-    $Statement->detailList[0]->itemName = '품명';
-    $Statement->detailList[0]->spec = '규격';
-	$Statement->detailList[0]->unit = '단위';
-    $Statement->detailList[0]->qty = '1';						#수량
-    $Statement->detailList[0]->unitCost = '100000';
-    $Statement->detailList[0]->supplyCost = '100000';
-    $Statement->detailList[0]->tax = '10000';
-    $Statement->detailList[0]->remark = '비고';
-    $Statement->detailList[0]->spare1 = 'spare1';
-    $Statement->detailList[0]->spare2 = 'spare2';
-    $Statement->detailList[0]->spare3 = 'spare3';
-    $Statement->detailList[0]->spare4 = 'spare4';
-    $Statement->detailList[0]->spare5 = 'spare5';
+  $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
+  $Statement->detailList[0]->purchaseDT = '20150205';			//거래일자 yyyyMMdd
+  $Statement->detailList[0]->itemName = '품명';
+  $Statement->detailList[0]->spec = '규격';
+  $Statement->detailList[0]->unit = '단위';
+  $Statement->detailList[0]->qty = '1';						//수량
+  $Statement->detailList[0]->unitCost = '100000';
+  $Statement->detailList[0]->supplyCost = '100000';
+  $Statement->detailList[0]->tax = '10000';
+  $Statement->detailList[0]->remark = '비고';
+  $Statement->detailList[0]->spare1 = 'spare1';
+  $Statement->detailList[0]->spare2 = 'spare2';
+  $Statement->detailList[0]->spare3 = 'spare3';
+  $Statement->detailList[0]->spare4 = 'spare4';
+  $Statement->detailList[0]->spare5 = 'spare5';
 
-    $Statement->detailList[1]->serialNum = '2';					#품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20150205';			#거래일자 yyyyMMdd
-    $Statement->detailList[1]->itemName = '품명';
-    $Statement->detailList[1]->spec = '규격';
-	$Statement->detailList[1]->unit = '단위';
-    $Statement->detailList[1]->qty = '1';						
-    $Statement->detailList[1]->unitCost = '100000';
-    $Statement->detailList[1]->supplyCost = '100000';
-    $Statement->detailList[1]->tax = '10000';
-    $Statement->detailList[1]->remark = '비고';
-    $Statement->detailList[1]->spare1 = 'spare1';
-    $Statement->detailList[1]->spare2 = 'spare2';
-    $Statement->detailList[1]->spare3 = 'spare3';
-    $Statement->detailList[1]->spare4 = 'spare4';
-    $Statement->detailList[1]->spare5 = 'spare5';				
+  $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
+  $Statement->detailList[1]->purchaseDT = '20150205';			//거래일자 yyyyMMdd
+  $Statement->detailList[1]->itemName = '품명';
+  $Statement->detailList[1]->spec = '규격';
+  $Statement->detailList[1]->unit = '단위';
+  $Statement->detailList[1]->qty = '1';
+  $Statement->detailList[1]->unitCost = '100000';
+  $Statement->detailList[1]->supplyCost = '100000';
+  $Statement->detailList[1]->tax = '10000';
+  $Statement->detailList[1]->remark = '비고';
+  $Statement->detailList[1]->spare1 = 'spare1';
+  $Statement->detailList[1]->spare2 = 'spare2';
+  $Statement->detailList[1]->spare3 = 'spare3';
+  $Statement->detailList[1]->spare4 = 'spare4';
+  $Statement->detailList[1]->spare5 = 'spare5';
 
-	#추가속성, 자세한사항은 전자명세서 API 연동매뉴얼 [5.부록>5.2 기본양식 추가속성 테이블] 참조.
+
+  /************************************************************
+  * 전자명세서 추가속성
+  * - 추가속성에 관한 자세한 사항은 "[전자명세서 API 연동매뉴얼] >
+  *   5.2. 기본양식 추가속성 테이블"을 참조하시기 바랍니다.
+  ************************************************************/
+
 	$Statement->propertyBag = array(
-			'Balance' => '50000',			# 전잔액 항목
-			'Deposit' => '100000',			# 입금액 항목
-			'CBalance' => '150000',			# 현잔액 항목
+			'Balance' => '50000',
+			'Deposit' => '100000',
+			'CBalance' => '150000'
 	);
+
 
 	try {
 		$result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo, $testUserID);
@@ -119,8 +177,8 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 즉시발행</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>
