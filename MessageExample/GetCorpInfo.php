@@ -4,17 +4,23 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
-	include 'common.php';	
+<?
+  /**
+  * 연동회원의 회사정보를 확인합니다.
+  */
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+	include 'common.php';
+
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
 
 	try {
-		$result = $MessagingService->GetCorpInfo($testCorpNum,$testUserID);
+		$result = $MessagingService->GetCorpInfo($testCorpNum, $testUserID);
 	}
-
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -27,18 +33,18 @@
 				<legend>회사정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) { 
+						if ( isset($code) ) {
 					?>
 						<li>Response.code : <? $code ?> </li>
 						<li>Response.message : <? $message ?></li>
 					<?
 						} else {
 					?>
-						<li>ceoname : <? echo $result->ceoname ; ?></li>
-						<li>corpName : <? echo $result->corpName ; ?></li>
-						<li>addr : <? echo $result->addr ; ?></li>
-						<li>bizType : <? echo $result->bizType ; ?></li>
-						<li>bizClass : <? echo $result->bizClass ; ?></li>						
+						<li>ceoname : <?= $result->ceoname ?></li>
+						<li>corpName : <?= $result->corpName ?></li>
+						<li>addr : <?= $result->addr ?></li>
+						<li>bizType : <?= $result->bizType ?></li>
+						<li>bizClass : <?= $result->bizClass ?></li>
 					<?
 						}
 					?>

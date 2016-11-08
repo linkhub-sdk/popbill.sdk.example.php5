@@ -4,18 +4,22 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
-  $messageType = ENumMessageType::SMS;	# 문자 전송유형 ENumMessageType::SMS(단문), ENumMessageType::LMS(장문)
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
+
+  // 문자 전송유형, ENumMessageType::SMS(단문), ENumMessageType::LMS(장문), ENumMessageType::MMS(포토)
+  $messageType = ENumMessageType::SMS;
 
 	try {
 		$result = $MessagingService->GetChargeInfo($testCorpNum, $messageType, $testUserID);
 	}
-
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -28,16 +32,16 @@
 				<legend>과금정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) {
+						if ( isset($code) ) {
 					?>
-						<li>Response.code : <? $code ?> </li>
-						<li>Response.message : <? $message ?></li>
+						  <li>Response.code : <?= $code ?> </li>
+						  <li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>
-						<li>unitCost(단가) : <? echo $result->unitCost ; ?></li>
-						<li>chargeMethod(과금유형) : <? echo $result->chargeMethod ; ?></li>
-						<li>rateSystem(과금제도) : <? echo $result->rateSystem ; ?></li>
+						  <li>unitCost(단가) : <?= $result->unitCost ?></li>
+						  <li>chargeMethod(과금유형) : <?= $result->chargeMethod ?></li>
+						  <li>rateSystem(과금제도) : <?= $result->rateSystem ?></li>
 					<?
 						}
 					?>

@@ -4,39 +4,52 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 검색조건을 사용하여 문자전송 내역을 조회합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
 
-	$SDate = '20160801';				    # [필수] 시작일자
-	$EDate = '20160831';				    # [필수] 종료일자
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
 
-  $State = array(                 # 전송상태값 배열, 1-대기 2-성공 3-실패 4-취소
-    '1',
-    '2',
-    '3',
-    '4'
-  );
 
-	$Item = array (                 # 전송유형 배열 SMS, LMS, MMS
-    'SMS',
-    'LMS',
-    'MMS'
-  );
-	$ReserveYN = false;					    # 예약여부, false-전체조회, true-예약전송만 조회
-	$SenderYN = false;					    # 개인조회여부, false-전체조회, true-개인조회
+  // [필수] 시작일자
+	$SDate = '20160901';
 
-	$Page = 1;							        # 페이지번호
-	$PerPage = 50;				  	      # 페이지 검색개수, 기본값 500, 최대값 1000
-  $Order = 'D';                   # 정렬방향, D-내림차순, A-오름차순
+  // [필수] 종료일자
+	$EDate = '20161131';
+
+  // 전송상태값 배열, 1-대기 2-성공 3-실패 4-취소
+  $State = array('1', '2', '3', '4');
+
+  // 전송유형 배열 SMS, LMS, MMS
+	$Item = array ( 'SMS', 'LMS', 'MMS' );
+
+  // 예약여부, false-전체조회, true-예약전송만 조회
+	$ReserveYN = false;
+
+  // 개인조회여부, false-전체조회, true-개인조회
+	$SenderYN = false;
+
+  // 페이지번호
+	$Page = 1;
+
+  // 페이지 검색개수, 기본값 500, 최대값 1000
+	$PerPage = 50;
+
+  // 정렬방향, D-내림차순, A-오름차순
+  $Order = 'D';
 
 	try {
-
-		$result = $MessagingService->Search( $testCorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order );
-
-	}	catch(PopbillException $pe) {
+		$result = $MessagingService->Search( $testCorpNum, $SDate, $EDate, $State,
+                          $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order );
+	}
+  catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -46,43 +59,42 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>문자전송 내역 및 전송상태 확인 </legend>
+				<legend>문자전송내역 목록 조회 </legend>
 				<ul>
 					<?
-						if(isset($code)) {
+						if ( isset($code) ) {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
-
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}else{
 					?>
-							<li>code : <? echo $result->code ?> </li>
-							<li>total : <? echo $result->total ?> </li>
-							<li>perPage : <? echo $result->perPage ?> </li>
-							<li>pageNum : <? echo $result->pageNum ?> </li>
-							<li>pageCount : <? echo $result->pageCount ?> </li>
-							<li>message : <? echo $result->message ?> </li>
+							<li>code : <?= $result->code ?> </li>
+							<li>total : <?= $result->total ?> </li>
+							<li>perPage : <?= $result->perPage ?> </li>
+							<li>pageNum : <?= $result->pageNum ?> </li>
+							<li>pageCount : <?= $result->pageCount ?> </li>
+							<li>message : <?= $result->message ?> </li>
 					<?
 							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 							<fieldset class="fieldset2">
-								<legend> 문자전송내역 조회 결과 [<? echo $i+1 ?>/<? echo Count($result->list)?>]</legend>
+								<legend> 문자전송내역 조회 결과 [<?= $i+1 ?>/<?= Count($result->list)?>]</legend>
 								<ul>
-									<li> state : <? echo $result->list[$i]->state; ?> </li>
-									<li> subject : <? echo $result->list[$i]->subject; ?> </li>
-									<li> type : <? echo $result->list[$i]->type; ?> </li>
-									<li> content : <? echo $result->list[$i]->content; ?> </li>
-									<li> sendNum : <? echo $result->list[$i]->sendNum; ?> </li>
-                  <li> senderName : <? echo $result->list[$i]->senderName; ?> </li>
-									<li> receiveNum : <? echo $result->list[$i]->receiveNum; ?> </li>
-									<li> receiveName : <? echo $result->list[$i]->receiveName; ?> </li>
-									<li> receiptDT : <? echo $result->list[$i]->receiptDT; ?> </li>
-									<li> reserveDT : <? echo $result->list[$i]->reserveDT; ?> </li>
-									<li> sendDT : <? echo $result->list[$i]->sendDT; ?> </li>
-									<li> resultDT : <? echo $result->list[$i]->resultDT; ?> </li>
-									<li> sendResult : <? echo $result->list[$i]->sendResult; ?> </li>
-									<li> tranNet : <? echo $result->list[$i]->tranNet; ?> </li>
+									<li> state : <?= $result->list[$i]->state ?> </li>
+									<li> subject : <?= $result->list[$i]->subject ?> </li>
+									<li> type : <?= $result->list[$i]->type ?> </li>
+									<li> content : <?= $result->list[$i]->content ?> </li>
+									<li> sendNum : <?= $result->list[$i]->sendNum ?> </li>
+                  <li> senderName : <?= $result->list[$i]->senderName ?> </li>
+									<li> receiveNum : <?= $result->list[$i]->receiveNum ?> </li>
+									<li> receiveName : <?= $result->list[$i]->receiveName ?> </li>
+									<li> receiptDT : <?= $result->list[$i]->receiptDT ?> </li>
+									<li> reserveDT : <?= $result->list[$i]->reserveDT ?> </li>
+									<li> sendDT : <?= $result->list[$i]->sendDT ?> </li>
+									<li> resultDT : <?= $result->list[$i]->resultDT ?> </li>
+									<li> sendResult : <?= $result->list[$i]->sendResult ?> </li>
+									<li> tranNet : <?= $result->list[$i]->tranNet ?> </li>
 								</ul>
 							</fieldset>
 					<?

@@ -4,31 +4,38 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌 회원 사업자번호, "-" 제외 10자리
-	$testUserID = 'testkorea';		# 팝빌 회원 아이디
-	$reserveDT = null;				# 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-#	$reserveDT = '20151212230000';
-	$adsYN = false;					# 광고문자 전송여부
+  // 팝빌 회원 사업자번호, "-" 제외 10자리
+	$testCorpNum = '1234567890';
 
-	$Messages = array();
+  // 팝빌 회원 아이디
+	$testUserID = 'testkorea';
 
-	for ($i=0; $i<99; $i++){
+
+  // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인 경우 즉시전송
+	$reserveDT = null;
+
+  // 광고문자 전송여부
+	$adsYN = false;
+
+
+	for ($i = 0; $i < 100; $i++ ) {
+    // 문자전송정보 최대 1000건까지 호출가능
 		$Messages[] = array(
-			'snd' => '07075106766',			# 발신번호
-      'sndnm' => '발신자명',			# 발신자명
-			'rcv' => '010111222',			# 수신번호
-			'rcvnm' => '수신자성명'+$i,		# 수신자성명
-			'msg'	=> '개별 메시지 내용'	# 개별 메시지 내용
+			'snd' => '07043042991',		// 발신번호
+      'sndnm' => '발신자명',			// 발신자명
+			'rcv' => '010111222',			// 수신번호
+			'rcvnm' => '수신자성명'.$i,	// 수신자성명
+			'msg'	=> '개별 메시지 내용'	 // 개별 메시지 내용
 		);
 	}
 
-	try {
-		#SendSMS(사업자번호, 동보전송발신번호, 동보전송내용, 전송정보배열, 예약전송일시, 회원아이디)
+  try {
 		$receiptNum = $MessagingService->SendSMS($testCorpNum,'','', $Messages, $reserveDT, $adsYN, $testUserID);
-	} catch(PopbillException $pe) {
+	}
+  catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -41,14 +48,14 @@
 				<legend>단문문자 100건 전송</legend>
 				<ul>
 					<?
-						if(isset($receiptNum)) {
+						if ( isset($receiptNum) ) {
 					?>
-							<li>receiptNum : <? echo $receiptNum?></li>
+							<li>receiptNum(접수번호) : <?= $receiptNum?></li>
 					<?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
 					?>

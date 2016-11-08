@@ -4,15 +4,20 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 080 서비스 수신거부 목록을 확인합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';	# 팝빌회원 사업자번호, "-"제외 10자리
+  // 팝빌회원 사업자번호, "-"제외 10자리
+	$testCorpNum = '1234567890';
 
 	try {
 		$result = $MessagingService->GetAutoDenyList($testCorpNum);
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -25,37 +30,35 @@
 				<legend>080 수신거부목록 확인</legend>
 				<ul>
 					<?
-						if ( isset( $result ) ) { 
+						if ( isset( $result ) ) {
           ?>
               <fieldset class="fieldset2">
               <ul>
           <?
-              for ( $i = 0; $i < Count ( $result ) ; $i++) { 
+              for ( $i = 0; $i < Count ( $result ) ; $i++) {
 					?>
                 <li>
           <?
                 foreach($result[$i] as $number=>$regDT) {
           ?>
-							  <? echo $number ?> : <? echo $regDT?> 
+							  <?= $number ?> : <?= $regDT?>
           <?
                 }
-             
           ?>
                 </li>
   				<?
-            }
+              }
           ?>
-
-            </ul>
-            </fieldset>
+              </ul>
+              </fieldset>
           <?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>
