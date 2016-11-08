@@ -4,16 +4,22 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * XML형식의 전자(세금)계산서 상세정보를 1건을 확인합니다.
+  * - 응답항목에 관한 정보는 "[홈택스 전자(세금)계산서 연계 API 연동매뉴얼]
+  *   > 3.3.4. GetXML (상세정보 확인 - XML)" 을 참고하시기 바랍니다.
+  */
+
 	include 'common.php';
 
-  # 팝빌회원 사업자번호, '-'제외 10자리
+  // 팝빌회원 사업자번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
-  #국세청 승인번호
-  $NTSConfirmNum = '201607074100002900000604';
+  //국세청 승인번호
+  $NTSConfirmNum = '2016110441000203000005a9';
 
-  # 팝빌회원 아이디
+  // 팝빌회원 아이디
 	$testUserID = 'testkorea';
 
 	try {

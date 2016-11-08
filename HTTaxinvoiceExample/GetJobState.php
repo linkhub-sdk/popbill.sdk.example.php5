@@ -4,17 +4,28 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 수집 요청 상태를 확인합니다.
+  * - 응답항목 관한 정보는 "[홈택스 전자(세금)계산서 연계 API 연동매뉴얼
+  *   > 3.2.2. GetJobState(수집 상태 확인)" 을 참고하시기 바랍니다 .
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-  $jobID = '016070811000000001';  # 수집 요청시 반환받은 작업아이디
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 수집 요청시 반환받은 작업아이디
+  $jobID = '016110815000000004';
+
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
 
 	try {
-		$result = $HTTaxinvoiceService->GetJobState ( $testCorpNum, $jobID, $testUserID );
+		$result = $HTTaxinvoiceService->GetJobState( $testCorpNum, $jobID, $testUserID );
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}

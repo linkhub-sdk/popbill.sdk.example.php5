@@ -4,7 +4,13 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 검색조건을 사용하여 수집결과를 조회합니다.
+  * - 응답항목에 관한 정보는 "[홈택스 전자(세금)계산서 연계 API 연동매뉴얼]
+  *   > 3.3.1. Search (수집 결과 조회)" 을 참고하시기 바랍니다.
+  */
+
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
@@ -14,7 +20,7 @@
   $testUserID = 'testkorea';
 
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '016070811000000002';
+  $JobID = '016110815000000004';
 
   // 문서형태 배열, N-일반세금계산서, M-수정세금계산서
   $Type = array (
@@ -55,7 +61,8 @@
   $Order = "D";
 
 	try {
-		$response = $HTTaxinvoiceService->Search ( $testCorpNum, $JobID, $Type, $TaxType, $PurposeType, $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $Page, $PerPage, $Order, $testUserID );
+		$response = $HTTaxinvoiceService->Search ( $testCorpNum, $JobID, $Type, $TaxType, $PurposeType,
+              $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $Page, $PerPage, $Order, $testUserID );
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();
@@ -89,7 +96,7 @@
               {
           ?>
             <fieldset class="fieldset2">
-              <legend> 전자(세금)계산서 정보 [<? echo $i+1?>]</legend>
+              <legend> 전자(세금)계산서 정보 [<?= $i+1?>]</legend>
               <ul>
                 <li>ntsconfirmNum (국세청승인번호) : <?= $response->list[$i]->ntsconfirmNum ; ?></li>
                 <li>writeDate (작성일자) : <?= $response->list[$i]->writeDate ; ?></li>

@@ -4,17 +4,23 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 연동회원의 정액제 서비스 이용상태를 확인합니다.
+  */
+  
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
 
 	try {
 		$result = $HTTaxinvoiceService->GetFlatRateState ( $testCorpNum,$testUserID ) ;
 	}
-
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -43,7 +49,6 @@
             <li>useRestrictYN (정액제 서비스 사용제한 여부) : <?= $result->useRestrictYN ? 'true' : 'false' ?></li>
             <li>closeOnExpired (정액제 서비스 만료 시 해지여부) : <?= $result->closeOnExpired  ? 'true' : 'false' ?></li>
             <li>unPaidYN (미수금 보유 여부) : <?= $result->unPaidYN ? 'true' : 'false' ?></li>
-
 					<?
 						}
 					?>

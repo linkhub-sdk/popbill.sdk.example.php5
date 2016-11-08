@@ -4,16 +4,23 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 연동회원의 담당자 목록을 확인합니다.
+  */
+
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호, '-'제외 10자리
-	$testUserID = 'testkorea';			# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-'제외 10자리
+	$testCorpNum = '1234567890';
+
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
 
 	try {
-		$result = $HTTaxinvoiceService->ListContact ( $testCorpNum, $testUserID ) ;
+		$result = $HTTaxinvoiceService->ListContact($testCorpNum, $testUserID);
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -46,14 +53,12 @@
 								<li>fax : <?= $result[$i]->fax ; ?></li>
 								<li>mgrYN : <?= $result[$i]->mgrYN ; ?></li>
 								<li>regDT : <?= $result[$i]->regDT ; ?></li>
-
 							</ul>
 							</fieldset>
 					<?
 							}
 						}
 					?>
-
 				</ul>
 			</fieldset>
 		 </div>
