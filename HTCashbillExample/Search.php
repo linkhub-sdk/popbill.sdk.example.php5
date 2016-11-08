@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
@@ -14,7 +14,7 @@
   $testUserID = 'testkorea';
 
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '016070813000000001';
+  $JobID = '016110816000000003';
 
   // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
   $TradeType = array (
@@ -38,9 +38,9 @@
   $Order = "D";
 
 	try {
-		$response = $HTCashbillService->Search ( $testCorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order, $testUserID );
+		$response = $HTCashbillService->Search($testCorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order, $testUserID);
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
     $code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -68,11 +68,10 @@
               <li>pageCount (페이지 개수) : <?= $response->pageCount ?></li>
 
           <?
-              for ( $i = 0; $i < Count ( $response->list ); $i++ )
-              {
+              for ( $i = 0; $i < Count ( $response->list ); $i++ ) {
           ?>
             <fieldset class="fieldset2">
-              <legend> 현금영수증 정보 [<? echo $i+1?>]</legend>
+              <legend> 현금영수증 정보 [<?= $i+1?>]</legend>
               <ul>
                 <li>ntsconfirmNum (국세청승인번호) : <?= $response->list[$i]->ntsconfirmNum ?></li>
                 <li>tradeDT (거래일시) : <?= $response->list[$i]->tradeDT ?></li>
