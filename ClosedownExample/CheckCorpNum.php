@@ -4,19 +4,25 @@
 		<link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 1건의 사업자에 대한 휴폐업여부를 조회합니다.
+  */
+
 	include 'common.php';
-	
 
-	if(isset($_GET['CorpNum']) && $_GET['CorpNum'] != ''){
+	if ( isset($_GET['CorpNum']) && $_GET['CorpNum'] != '' ) {
 
-		$MemberCorpNum = "1234567890";			//팝빌회원 사업자번호
-		$CheckCorpNum = $_GET['CorpNum'];		//조회 사업자번호
+    // 팝빌회원 사업자번호
+		$MemberCorpNum = "1234567890";
+
+    // 조회 사업자번호
+		$CheckCorpNum = $_GET['CorpNum'];
 
 		try {
 			$result = $ClosedownService->checkCorpNum($MemberCorpNum, $CheckCorpNum);
 		}
-		catch(PopbillException $pe) {
+		catch (PopbillException $pe) {
 			$code = $pe->getCode();
 			$message = $pe->getMessage();
 		}
@@ -30,22 +36,22 @@
 				<legend>휴폐업조회 - 단건</legend>
 					<div class ="fieldset4">
 					<form method= "GET" id="corpnum_form" action="CheckCorpNum.php">
-						<input class= "txtCorpNum left" type="text" placeholder="사업자번호 기재" id="CorpNum" name="CorpNum" value ='<?= (isset($result->corpNum) ? $result->corpNum : "") ?>'"tabindex=1/>
+						<input class= "txtCorpNum left" type="text" placeholder="사업자번호 기재" id="CorpNum" name="CorpNum" value ='<?= (isset($result->corpNum) ? $result->corpNum : "") ?>' tabindex=1/>
 						<p class="find_btn find_btn01 hand" onclick="search()" tabindex=2>조회</p>
 					</form>
 					</div>
 			</fieldset>
 			<?
-				if(isset($result)) { 
+				if(isset($result)) {
 			?>
 				<fieldset class="fieldset2">
 					<legend>휴폐업조회 - 단건</legend>
 					<ul>
-						<li>사업자번호(corpNum) : <?= $result->corpNum?></li>		
-						<li>사업자유형(type) : <?= $result->type?></li>	
+						<li>사업자번호(corpNum) : <?= $result->corpNum?></li>
+						<li>사업자유형(type) : <?= $result->type?></li>
 						<li>휴폐업상태(state) : <?= $result->state?></li>
-						<li>휴폐업일자(stateDate) : <?= $result->stateDate?></li>	
-						<li>국세청 확일일자(checkDate) : <?= $result->checkDate?></li>	
+						<li>휴폐업일자(stateDate) : <?= $result->stateDate?></li>
+						<li>국세청 확일일자(checkDate) : <?= $result->checkDate?></li>
 					</ul>
 					<p class="info">> state (휴폐업상태) : null-알수없음, 0-등록되지 않은 사업자번호, 1-사업중, 2-폐업, 3-휴업</p>
 					<p class="info">> type (사업 유형) : null-알수없음, 1-일반과세자, 2-면세과세자, 3-간이과세자, 4-비영리법인, 국가기관</p>
@@ -65,7 +71,7 @@
 				</fieldset>
 			<?
 				}
-			?>		
+			?>
 
 		 </div>
 
@@ -73,11 +79,11 @@
 		 window.onload=function(){
 			 document.getElementById('CorpNum').focus();
 		 }
-		 
+
 		 function search(){
 			document.getElementById('corpnum_form').submit();
 		 }
-		 
+
 		 </script>
 	</body>
 </html>

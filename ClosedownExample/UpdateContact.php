@@ -4,21 +4,40 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 연동회원의 담당자 정보를 수정합니다.
+  */
+  
 	include 'common.php';
 
-	$testCorpNum = '1234567890';				# 팝빌회원 사업자번호, '-' 제외 10자리
-	$testUserID = 'testkorea';					# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
 
+  // 팝빌회원 아이디
+  $testUserID = 'testkorea';
+
+
+  // 담당자 정보 객체 생성
 	$ContactInfo = new ContactInfo();
 
+  // 담당자명
 	$ContactInfo->personName = '담당자_수정';
-	$ContactInfo->tel = '070-7510-3710';
-	$ContactInfo->hp = '010-1234-4321';
+
+  // 담당자 연락처
+	$ContactInfo->tel = '070-4304-2991';
+
+  // 핸드폰 번호
+	$ContactInfo->hp = '010-1234-1234';
+
+  // 이메일 주소
 	$ContactInfo->email = 'test@test.com';
-	$ContactInfo->fax = '02-6442-9700';
+
+  // 팩스번호
+	$ContactInfo->fax = '070-111-222';
+
+  // 전체조회 여부, false-개인조회, true-전체조회
 	$ContactInfo->searchAllAllowYN = true;
-	$ContactInfo->mgrYN = false;
 
 	try {
 		$result = $ClosedownService->UpdateContact($testCorpNum, $ContactInfo, $testUserID);
@@ -37,8 +56,8 @@
 			<fieldset class="fieldset1">
 				<legend>담당자 정보 수정</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

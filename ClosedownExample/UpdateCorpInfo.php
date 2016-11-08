@@ -4,18 +4,37 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php 
+<?
+  /**
+  * 연동회원의 회사정보를 수정합니다
+  */
+  
 	include 'common.php';
 
-	$testCorpNum = '1234567890';			# 팝빌회원 사업자번호, '-' 제외 10자리
-	$testUserID = 'testkorea';				# 팝빌회원 아이디
+  // 팝빌회원 사업자번호, '-' 제외 10자리
+	$testCorpNum = '1234567890';
 
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
+
+
+  // 회사정보 클래스 생성
 	$CorpInfo = new CorpInfo();
-	$CorpInfo->ceoname = '대표자명';		# 대표자명
-	$CorpInfo->corpName = '이노포스트';		# 상호
-	$CorpInfo->addr = '서울시 영등포';		# 주소
-	$CorpInfo->bizType = '업태';			# 업태
-	$CorpInfo->bizClass = '업종';			# 업종
+
+  // 대표자명
+	$CorpInfo->ceoname = '대표자명';
+
+  // 상호
+	$CorpInfo->corpName = '링크허브';
+
+  // 주소
+	$CorpInfo->addr = '서울시 강남구 영동대로';
+
+  // 업태
+	$CorpInfo->bizType = '업태';
+
+  // 종목
+	$CorpInfo->bizClass = '종목';
 
 	try {
 		$result = $ClosedownService->UpdateCorpInfo($testCorpNum, $CorpInfo, $testUserID);
@@ -34,8 +53,8 @@
 			<fieldset class="fieldset1">
 				<legend>회사정보 수정</legend>
 				<ul>
-					<li>Response.code : <? echo $code ?></li>
-					<li>Response.message : <? echo $message ?></li>
+					<li>Response.code : <?= $code ?></li>
+					<li>Response.message : <?= $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>
