@@ -20,7 +20,7 @@
 				<fieldset class="fieldset2">
 					<legend>회원사 정보</legend>
 					<ul>
-						<li><a href="CheckIsMember.php">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="CheckIsMember.php">checkIsMember</a> - 연동회원사 가입 여부 확인</li>
 						<li><a href="CheckID.php">checkID</a> - 연동회원 아이디 중복 확인</li>
 						<li><a href="JoinMember.php">joinMember</a> - 연동회원사 가입 요청</li>
             <li><a href="GetChargeInfo.php">getChargeInfo</a> - 과금정보 확인</li>

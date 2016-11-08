@@ -4,14 +4,22 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?php
+<?
+  /**
+  * 파트너의 잔여포인트를 확인합니다.
+  * - 과금방식이 연동과금인 경우 연동회원 잔여포인트(GetBalance API)를
+  *   이용하시기 바랍니다.
+  */
+  
 	include 'common.php';
 
-	$testCorpNum = '1234567890';		# 팝빌회원 사업자번호
+  // 팝빌회원 사업자번호
+	$testCorpNum = '1234567890';
 
 	try {
 		$remainPoint = $FaxService->GetPartnerBalance($testCorpNum);
-	} catch(PopbillException $pe) {
+	}
+  catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -24,17 +32,17 @@
 				<legend>파트너 잔여 포인트 확인</legend>
 				<ul>
 					<?
-						if(isset($remainPoint)) { 
+						if ( isset($remainPoint) ) {
 					?>
-							<li>잔여포인트 : <? echo $remainPoint ?></li>
+							<li>잔여포인트 : <?= $remainPoint ?></li>
 					<?
 						} else {
 					?>
-							<li>Response.code : <? echo $code ?> </li>
-							<li>Response.message : <? echo $message ?></li>
+							<li>Response.code : <?= $code ?> </li>
+							<li>Response.message : <?= $message ?></li>
 					<?
 						}
-					?>		
+					?>
 				</ul>
 			</fieldset>
 		 </div>

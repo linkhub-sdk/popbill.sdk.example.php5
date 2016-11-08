@@ -49,8 +49,7 @@
   // 비밀번호, 6자 이상 20자미만
 	$joinForm->PWD = 'thisispassword';
 
-	try
-	{
+	try	{
 		$result = $TaxinvoiceService->JoinMember($joinForm);
 		$code = $result->code;
 		$message = $result->message;

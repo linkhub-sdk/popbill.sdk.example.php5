@@ -1,4 +1,4 @@
-<?php
+<?
 /**
 * 팜빌 전자세금계산서 API PHP SDK Example
 *
