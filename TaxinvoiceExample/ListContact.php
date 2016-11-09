@@ -53,7 +53,6 @@
 								<li>fax : <?= $result[$i]->fax ; ?></li>
 								<li>mgrYN : <?= $result[$i]->mgrYN ; ?></li>
 								<li>regDT : <?= $result[$i]->regDT ; ?></li>
-
 							</ul>
 							</fieldset>
 					<?

@@ -29,7 +29,7 @@
 	$mgtKey = '20150204-01';
 
   // 메모
-	$memo= '역발행 요청 메모입니다';
+	$memo = '역발행 요청 메모입니다';
 
 	try {
 		$result = $TaxinvoiceService->Request($testCorpNum, $mgtKeyType, $mgtKey, $memo, $testUserID);

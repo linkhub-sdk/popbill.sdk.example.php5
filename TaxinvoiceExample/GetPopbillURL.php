@@ -9,7 +9,7 @@
   * 팝빌 관련 URL을 반환합니다.
   * 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
   */
-  
+
 	include 'common.php';
 
   // 팝빌 회원 사업자 번호, "-"제외 10자리
@@ -22,7 +22,7 @@
   // [CHRG] : 포인트충전 URL
   // [CERT] : 공인인증서 등록 URL
   // [SEAL] : 인감 및 첨부문서 등록 URL
-	$TOGO = 'SEAL';
+	$TOGO = 'CHRG';
 
 	try {
 		$url = $TaxinvoiceService->GetPopbillURL($testCorpNum, $testUserID, $TOGO);

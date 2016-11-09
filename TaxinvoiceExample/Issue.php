@@ -31,6 +31,8 @@
 	$memo = '발행 메모입니다';
 
   // 지연발행 강제여부
+  // 지연발행 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
+  // 지연발행 세금계산서를 신고해야 하는 경우 $forceIssue 값을 true 선언하여 발행(Issue API)을 호출할 수 있습니다.
 	$forceIssue = false;
 
   // 발행 안내메일 제목, 미기재시 기본제목으로 전송
@@ -51,7 +53,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>발행 테스트</legend>
+				<legend>세금계산서 발행</legend>
 				<ul>
 					<li>Response.code : <?= $code ?></li>
 					<li>Response.message : <?= $message ?></li>

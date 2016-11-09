@@ -34,7 +34,7 @@
 	$emailSubject = null;
 
 	try {
-		$result = $TaxinvoiceService->Send($testCorpNum, $mgtKeyType, $mgtKey , $memo, $emailSubject, $testUserID);
+		$result = $TaxinvoiceService->Send($testCorpNum, $mgtKeyType, $mgtKey, $memo, $emailSubject, $testUserID);
 		$code = $result->code;
 		$message = $result->message;
 	}
