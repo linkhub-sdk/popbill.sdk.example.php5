@@ -18,10 +18,10 @@
 	$testUserID = 'testkorea';
 
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::BUY;
+  $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161101-01';
+	$mgtKey = '20161109-02';
 
   // 메모
 	$memo = '발행예정 승인메모입니다';

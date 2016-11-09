@@ -21,13 +21,13 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20150206-01';
+	$mgtKey = '20161109-01';
 
   // 수신이메일주소
 	$receiver = 'test@test.com';
 
 	try {
-		$result = $TaxinvoiceService->SendEmail($testCorpNum , $mgtKeyType, $mgtKey, $receiver, $testUserID);
+		$result = $TaxinvoiceService->SendEmail($testCorpNum, $mgtKeyType, $mgtKey, $receiver, $testUserID);
 		$code = $result->code;
 		$message = $result->message;
 	}

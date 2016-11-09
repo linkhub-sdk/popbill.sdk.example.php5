@@ -25,7 +25,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20160113-01';
+	$mgtKey = '20161109-03';
 
   // 메모
 	$memo = '발행 메모입니다';

@@ -20,7 +20,7 @@
 
   // 세금계산서 문서관리번호
   // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-  $invoicerMgtKey = '20161102-07';
+  $invoicerMgtKey = '20161109-01';
 
   // 지연발행 강제여부
 	$forceIssue = false;
@@ -48,7 +48,7 @@
 	$Taxinvoice = new Taxinvoice();
 
   // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-	$Taxinvoice->writeDate = '20161102';
+	$Taxinvoice->writeDate = '20161109';
 
   // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
 	$Taxinvoice->issueType = '정발행';
@@ -149,7 +149,7 @@
 	$Taxinvoice->invoiceeContactName1 = '공급받는자 담당자성명';
 
   // 공급받는자 담당자 메일주소
-	$Taxinvoice->invoiceeEmail1 = 'frenchofkiss@gmail.com';
+	$Taxinvoice->invoiceeEmail1 = 'test@test.com';
 
   // 공급받는자 담당자 연락처
 	$Taxinvoice->invoiceeTEL1 = '070-111-222';

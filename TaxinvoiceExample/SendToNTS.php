@@ -26,7 +26,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20150204-02';
+	$mgtKey = '20161109-02';
 
 	try {
 		$result = $TaxinvoiceService->SendToNTS($testCorpNum, $mgtKeyType, $mgtKey, $testUserID);

@@ -11,7 +11,7 @@
   *   "[전자세금계산서 API 연동매뉴얼] > 3.6.4 상태 변경이력 확인"
   *   을 참조하시기 바랍니다.
   */
-  
+
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
@@ -21,7 +21,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161102-05';
+	$mgtKey = '20161109-02';
 
   try {
 		$result = $TaxinvoiceService->GetLogs($testCorpNum, $mgtKeyType, $mgtKey);

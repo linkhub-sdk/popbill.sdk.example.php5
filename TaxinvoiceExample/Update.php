@@ -23,7 +23,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161102-04';
+	$mgtKey = '20161109-02';
 
 
   /************************************************************
@@ -34,7 +34,7 @@
 	$Taxinvoice = new Taxinvoice();
 
   // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-	$Taxinvoice->writeDate = '20161102';
+	$Taxinvoice->writeDate = '20161108';
 
   // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
 	$Taxinvoice->issueType = '정발행';

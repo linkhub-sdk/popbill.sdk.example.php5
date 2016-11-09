@@ -23,10 +23,10 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20161103-01';
+	$mgtKey = '20161109-02';
 
   // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
-	$FileID = 'F7635366-BABD-4951-BF45-62025A6F4515.PBF';
+	$FileID = '539AFC42-B3ED-4B39-8AF1-DA5A16F485B9.PBF';
 
 	try {
 		$result = $TaxinvoiceService->DeleteFile($testCorpNum, $mgtKeyType, $mgtKey, $FileID, $testUserID);

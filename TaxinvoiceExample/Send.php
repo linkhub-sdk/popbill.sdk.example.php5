@@ -25,12 +25,12 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161103-02';
+	$mgtKey = '20161109-02';
 
   // 메모
 	$memo= '발행예정 메모입니다';
 
-  //발행예정 메일제목, 미지정시 기본제목으로 전송
+  // 발행예정 메일제목, 미지정시 기본제목으로 전송
 	$emailSubject = null;
 
 	try {
