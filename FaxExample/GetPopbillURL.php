@@ -23,7 +23,8 @@
 
 	try {
 		$url = $FaxService->GetPopbillURL($testCorpNum, $testUserID, $TOGO);
-	} catch(PopbillException $pe) {
+	}
+  catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}

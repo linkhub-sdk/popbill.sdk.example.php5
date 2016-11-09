@@ -19,7 +19,8 @@
 		$result = $FaxService->CheckIsMember($testCorpNum, $LinkID);
 		$code = $result->code;
 		$message = $result->message;
-	} catch (PopbillException $pe) {
+	}
+  catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}

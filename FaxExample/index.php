@@ -51,17 +51,17 @@
 				<fieldset class="fieldset2">
 					<legend>전송결과/예약취소</legend>
 					<ul>
-						<li><a href="GetFaxDetail.php">getFaxDetail</a> - 접수번호에 해당하는 팩스전송 전송결과 확인</li>
-						<li><a href="Search.php">search</a> - 팩스전송내역 조회</li>
-						<li><a href="CancelReserve.php">cancelReserve</a> - 예약 전송 팩스의 예약 취소. 예약시간 10분전까지만 가능</li>
+						<li><a href="GetFaxDetail.php">getFaxDetail</a> - 팩스전송 전송결과 확인</li>
+						<li><a href="Search.php">search</a> - 팩스전송 목록조회</li>
+						<li><a href="CancelReserve.php">cancelReserve</a> - 예약전송 팩스 취소</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>
-						<li><a href="GetURL.php">getURL</a> - 팩스 관련 URL 확인</li>
-						<li><a href="GetUnitCost.php">getUnitCost</a> 팩스 전송 단가 확인</li>
+						<li><a href="GetURL.php">getURL</a> - 팩스 전송내역 팝업 URL</li>
+						<li><a href="GetUnitCost.php">getUnitCost</a> 팩스 전송단가 확인</li>
 					</ul>
 				</fieldset>
 			</fieldset>

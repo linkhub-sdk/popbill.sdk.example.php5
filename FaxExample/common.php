@@ -27,7 +27,7 @@ define('LINKHUB_COMM_MODE','CURL');
 
 $FaxService = new FaxService($LinkID, $SecretKey);
 
-// 개발용(true), 상업용(false)
+// 연동환경 설정값, 개발용(true), 상업용(false)
 $FaxService->IsTest(true);
 
 ?>

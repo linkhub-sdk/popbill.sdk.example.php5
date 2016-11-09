@@ -8,7 +8,7 @@
   /**
   * 팝빌 연동회원 가입을 요청합니다.
   */
-  
+
 	include 'common.php';
 
   $joinForm = new JoinForm();
@@ -53,7 +53,8 @@
 		$result = $FaxService->JoinMember($joinForm);
 		$code = $result->code;
 		$message = $result->message;
-	} catch(PopbillException $pe) {
+	}
+  catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
@@ -63,7 +64,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동회원 가입여부 확인 </legend>
+				<legend>연동회원 가입여부 확인</legend>
 				<ul>
 					<li>Response.code : <?= $code ?></li>
 					<li>Response.message : <?= $message ?></li>

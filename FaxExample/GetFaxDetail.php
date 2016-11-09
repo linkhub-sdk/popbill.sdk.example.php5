@@ -13,9 +13,8 @@
   // 팝빌 회원 아이디
 	$testUserID = 'testkorea';
 
-
   // 팩스전송 접수번호
-	$ReceiptNum = '016110810213500001';
+	$ReceiptNum = '016110914543000001';
 
 	try {
 		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum, $testUserID);
