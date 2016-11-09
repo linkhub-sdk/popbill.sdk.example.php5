@@ -6,7 +6,7 @@
 	</head>
 <?
   /**
-  * 발행 안내메일을 재전송합니다.
+  * 현금영수증 발행 안내메일을 재전송합니다.
   */
 
 	include 'common.php';
@@ -15,13 +15,13 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20161107-02';
+	$mgtKey = '20161109-02';
 
   // 수신메일 주소
 	$receiver = 'test@test.com';
 
 	try {
-		$result = $CashbillService->SendEmail($testCorpNum,$mgtKey,$receiver);
+		$result = $CashbillService->SendEmail($testCorpNum, $mgtKey, $receiver);
 		$code = $result->code;
 		$message = $result->message;
 	}

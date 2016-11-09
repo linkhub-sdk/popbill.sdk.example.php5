@@ -19,7 +19,7 @@
 	$testUserID = 'testkorea';
 
   // 문서관리번호
-	$mgtKey = '20161107-02';
+	$mgtKey = '20161109-02';
 
 	try {
 		$url = $CashbillService->GetEPrintURL($testCorpNum, $mgtKey, $testUserID);

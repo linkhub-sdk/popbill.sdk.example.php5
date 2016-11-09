@@ -27,7 +27,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 발행 단가 확인</legend>
+				<legend>현금영수증 발행단가 확인</legend>
 				<ul>
 					<?
 						if ( isset($unitCost) ) {

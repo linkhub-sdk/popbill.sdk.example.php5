@@ -10,7 +10,7 @@
   * - 과금방식이 파트너과금인 경우 파트너 잔여포인트(GetPartnerBalance API)
   *   를 통해 확인하시기 바랍니다.
   */
-  
+
 	include 'common.php';
 
   // 팝빌회원 사업자번호
@@ -34,7 +34,7 @@
 					<?
 						if ( isset($remainPoint) ) {
 					?>
-						<li>remainPoint (잔여포인트) : <?= $remainPoint ?></li>
+						<li>remainPoint(잔여포인트) : <?= $remainPoint ?></li>
 					<?
 						} else {
 					?>

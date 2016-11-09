@@ -21,7 +21,7 @@
 	$mgtKey = '20161107-02';
 
 	try {
-		$url = $CashbillService->GetPopUpURL($testCorpNum,$mgtKey,$testUserID);
+		$url = $CashbillService->GetPopUpURL($testCorpNum, $mgtKey, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

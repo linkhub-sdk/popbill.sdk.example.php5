@@ -38,8 +38,8 @@
 					<?
 						if ( isset($code) ) {
 					?>
-						<li>Response.code : <? $code ?> </li>
-						<li>Response.message : <? $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>

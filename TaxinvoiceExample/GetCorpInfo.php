@@ -40,11 +40,11 @@
 					<?
 						} else {
 					?>
-						<li>ceoname : <?= $result->ceoname ; ?></li>
-						<li>corpName : <?= $result->corpName ; ?></li>
-						<li>addr : <?= $result->addr ; ?></li>
-						<li>bizType : <?= $result->bizType ; ?></li>
-						<li>bizClass : <?= $result->bizClass ; ?></li>
+						<li>ceoname : <?= $result->ceoname ?></li>
+						<li>corpName : <?= $result->corpName ?></li>
+						<li>addr : <?= $result->addr ?></li>
+						<li>bizType : <?= $result->bizType ?></li>
+						<li>bizClass : <?= $result->bizClass ?></li>
 					<?
 						}
 					?>

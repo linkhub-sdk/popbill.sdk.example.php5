@@ -38,7 +38,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>대량 현금영수증 인쇄 URL </legend>
+				<legend>현금영수증 인쇄 URL - 대량</legend>
 				<ul>
 					<?
 						if ( isset($url) ) {

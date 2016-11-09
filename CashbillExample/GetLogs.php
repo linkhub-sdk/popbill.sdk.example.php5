@@ -18,7 +18,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20161107-02';
+	$mgtKey = '20161109-02';
 
 	try {
 		$result = $CashbillService->GetLogs($testCorpNum, $mgtKey);
@@ -33,7 +33,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 문서이력 확인</legend>
+				<legend>현금영수증 상태변경 이력</legend>
 				<ul>
 					<?
 						if ( isset($code) ) {

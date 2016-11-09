@@ -18,7 +18,7 @@
 	$testUserID = 'testkorea';
 
 	try {
-		$result = $CashbillService->GetCorpInfo($testCorpNum,$testUserID);
+		$result = $CashbillService->GetCorpInfo($testCorpNum, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -35,8 +35,8 @@
 					<?
 						if ( isset($code) ) {
 					?>
-						<li>Response.code : <? $code ?> </li>
-						<li>Response.message : <? $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 					<?
 						} else {
 					?>

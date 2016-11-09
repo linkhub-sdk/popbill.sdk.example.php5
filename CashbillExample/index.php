@@ -18,7 +18,7 @@
 				<fieldset class="fieldset2">
 					<legend>회원정보</legend>
 					<ul>
-						<li><a href="CheckIsMember.php">checkIsMember</a> - 연동회원 가입 여부 확인</li>
+						<li><a href="CheckIsMember.php">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="CheckID.php">checkID</a> - 연동회원 아이디 중복 확인</li>
 						<li><a href="JoinMember.php">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="GetChargeInfo.php">getChargeInfo</a> - 과금정보 확인</li>
@@ -32,7 +32,6 @@
 						<li><a href="UpdateCorpInfo.php">updateCorpInfo</a> - 회사정보 수정</li>
 					</ul>
 				</fieldset>
-
 			</fieldset>
 
 			<br />
@@ -56,20 +55,20 @@
 				<fieldset class="fieldset2">
 					<legend>정보 확인</legend>
 					<ul>
-						<li><a href="GetInfo.php">getInfo</a> - 현금영수증 상태확인</li>
-						<li><a href="GetInfos.php">getInfos</a> - 현금영수증 상태 대량 확인</li>
-						<li><a href="GetLogs.php">getLogs</a> - 현금영수증 이력 확인</li>
+						<li><a href="GetInfo.php">getInfo</a> - 현금영수증 상태/요약정보 확인</li>
+						<li><a href="GetInfos.php">getInfos</a> - 현금영수증 상태/요약정보 확인 - 대량</li>
+						<li><a href="GetLogs.php">getLogs</a> - 현금영수증 상태변경 이력 확인</li>
 						<li><a href="GetDetailInfo.php">getDetailInfo</a> - 현금영수증 상세정보 확인</li>
-						<li><a href="Search.php">search</a> - 현금영수증 목록조회 </li>
+						<li><a href="Search.php">search</a> - 현금영수증 목록조회</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
 					<legend>부가기능</legend>
 					<ul>
-						<li><a href="SendEmail.php">sendEmail</a> - 알림메일 재전송</li>
-						<li><a href="SendSMS.php">sendSMS</a> - 알림문자 재전송</li>
-						<li><a href="SendFAX.php">sendFAX</a> - 현금영수증 팩스 전송</li>
+						<li><a href="SendEmail.php">sendEmail</a> - 알림메일 전송</li>
+						<li><a href="SendSMS.php">sendSMS</a> - 알림문자 전송</li>
+						<li><a href="SendFAX.php">sendFAX</a> - 현금영수증 팩스전송</li>
 					</ul>
 				</fieldset>
 
@@ -77,11 +76,11 @@
 					<legend>팝빌 현금영수증 SSO URL 기능</legend>
 					<ul>
 						<li><a href="GetURL.php">getURL</a> - 현금영수증 관련 SSO URL 확인</li>
-						<li><a href="GetPopUpURL.php">getPopUpURL</a> - 해당 현금영수증의 팝빌 화면을 표시하는 URL 확인</li>
-						<li><a href="GetPrintURL.php">getPrintURL</a> - 해당 현금영수증의 팝빌 인쇄 화면을 표시하는 URL 확인</li>
-						<li><a href="GetEPrintURL.php">getEPrintURL</a> - 해당 현금영수증의 팝빌 인쇄 화면을 표시하는 URL 확인(공급받는자용)</li>
-						<li><a href="GetMassPrintURL.php">getMassPrintURL</a> - 다량(최대100건)의 현금영수증 인쇄 화면을 표시하는 URL 확인 </li>
-						<li><a href="GetMailURL.php">getMailURL</a> - 해당 현금영수증의 전송메일상의 "보기" 버튼에 해당하는 URL 확인 </li>
+						<li><a href="GetPopUpURL.php">getPopUpURL</a> - 현금영수증 보기 팝업 URL</li>
+						<li><a href="GetPrintURL.php">getPrintURL</a> - 현금영수증 인쇄 팝업 URL</li>
+						<li><a href="GetEPrintURL.php">getEPrintURL</a> - 현금영수증 인쇄 팝업 URL - 공급받는자용</li>
+						<li><a href="GetMassPrintURL.php">getMassPrintURL</a> - 현금영수증 인쇄 팝업 URL - 대량 </li>
+						<li><a href="GetMailURL.php">getMailURL</a> - 현금영수증 메일링크 URL</li>
 					</ul>
 				</fieldset>
 				<fieldset class="fieldset2">

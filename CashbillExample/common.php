@@ -1,7 +1,6 @@
 <?
-
   /**
-  * 팜빌 전자명세서 API PHP SDK Example
+  * 팜빌 현금영수증 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : blog.linkhub.co.kr/584
   * 업테이트 일자 : 2016-11-07
@@ -26,9 +25,8 @@
   // STREAM 사용시에는 allow_fopen_url = on 으로 설정해야함.
   define('LINKHUB_COMM_MODE','CURL');
 
-  $CashbillService = new CashbillService($LinkID,$SecretKey);
+  $CashbillService = new CashbillService($LinkID, $SecretKey);
 
-  // 개발용(true), 상업용(false)
+  // 연동환경 설정값, 개발용(true), 상업용(false)
   $CashbillService->IsTest(true);
-
 ?>

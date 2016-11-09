@@ -35,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 요약정보 대량 확인</legend>
+				<legend>현금영수증 요약/상태정보 확인 - 대량</legend>
 				<ul>
 					<?
 						if ( isset($code) ) {

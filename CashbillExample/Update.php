@@ -19,7 +19,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20161107-02';
+	$mgtKey = '20161109-02';
 
   // 팝빌 회원 아이디
 	$testUserID = 'testkorea';

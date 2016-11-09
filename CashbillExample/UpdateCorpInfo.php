@@ -25,7 +25,7 @@
   $CorpInfo->ceoname = '대표자';
 
   // 상호
-  $CorpInfo->corpName = '링크허브';
+  $CorpInfo->corpName = '주식회사 링크허브';
 
   // 주소
   $CorpInfo->addr = '서울시 강남구 ';
