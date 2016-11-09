@@ -19,13 +19,13 @@
   // 팝빌회원 아이디
 	$testUserID = 'testkorea';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
 	$mgtKey = '20161103-01';
 
-  // 첨부파일아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
+  // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
 	$FileID = 'F7635366-BABD-4951-BF45-62025A6F4515.PBF';
 
 	try {

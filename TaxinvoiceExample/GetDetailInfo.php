@@ -6,7 +6,7 @@
 	</head>
 <?
   /**
-  * 1건의 세금계산서 상세항목을 확인합니다.
+  * 1건의 세금계산서 상세정보를 확인합니다.
   * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] > 4.1 (세금)계산서 구성" 을 참조하시기 바랍니다.
   */
 
@@ -15,10 +15,10 @@
   // 팝빌회원, 사업자번호
 	$testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 조회할 세금계산서 문서관리번호
+  // 세금계산서 문서관리번호
 	$mgtKey = '20161102-05';
 
 	try {

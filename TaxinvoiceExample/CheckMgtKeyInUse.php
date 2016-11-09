@@ -6,8 +6,8 @@
 	</head>
 <?
   /**
-  * 세금계산서 관리번호 중복여부를 확인합니다.
-  * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
+  * 세금계산서 문서관리번호 중복여부를 확인합니다.
+  * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 사업자별로 중복되지 않도록 구성해야 합니다.
   */
 
 	include 'common.php';
@@ -18,11 +18,11 @@
   // 세금계산서 관리번호, 발행자별로 중복없이 1~24자리 영문,숫자로 구성
 	$mgtKey = '20161102-01';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
 	try {
-		$result = $TaxinvoiceService->CheckMgtKeyInUse($testCorpNum,$mgtKeyType,$mgtKey);
+		$result = $TaxinvoiceService->CheckMgtKeyInUse($testCorpNum, $mgtKeyType, $mgtKey);
 		$result ? $result = '사용중' : $result = '미사용중';
 	}
 	catch(PopbillException $pe) {

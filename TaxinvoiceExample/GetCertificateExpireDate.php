@@ -8,7 +8,7 @@
   /**
   * 팝빌에 등록되어 있는 공인인증서의 만료일자를 확인합니다.
   * - 공인인증서가 갱신/재발급/비밀번호 변경이 되는 경우 해당 인증서를
-  *   재등록 하셔야 정상적으로 API를 이용하실 수 있습니다.
+  *   재등록 하셔야 정상적으로 세금계산서를 발행할 수 있습니다.
   */
 
 	include 'common.php';
@@ -29,12 +29,12 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>공인인증서 만료일 확인</legend>
+				<legend>공인인증서 만료일시 확인</legend>
 				<ul>
 					<?
 						if ( isset($certExpireDate) ) {
 					?>
-							<li>공인인증서 만료일자 : <?= $certExpireDate ?></li>
+							<li>공인인증서 만료일시 : <?= $certExpireDate ?></li>
 					<?
 						} else {
 					?>

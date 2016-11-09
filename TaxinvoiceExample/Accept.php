@@ -17,11 +17,11 @@
   // 팝빌회원 아이디
 	$testUserID = 'testkorea';
 
-  # 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+  $mgtKeyType = ENumMgtKeyType::BUY;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20150204-01';
+	$mgtKey = '20161101-01';
 
   // 메모
 	$memo = '발행예정 승인메모입니다';

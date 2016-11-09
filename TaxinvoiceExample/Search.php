@@ -13,7 +13,7 @@
   // 팝빌회원 아이디
   $testUserID = 'testkorea';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // [필수] 일자유형, R-등록일시, W-작성일자, I-발행일시 중 1개 기입

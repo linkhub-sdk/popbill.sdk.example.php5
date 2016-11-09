@@ -14,8 +14,7 @@
   // 조회할 아이디
 	$testUserID = 'testkorea';
 
-	try
-	{
+	try	{
 		$result = $TaxinvoiceService->CheckID($testUserID);
 		$code = $result->code;
 		$message = $result->message;

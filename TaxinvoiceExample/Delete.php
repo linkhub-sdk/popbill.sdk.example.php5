@@ -13,11 +13,11 @@
   // 문서관리번호
 	$mgtKey = '20161102-01';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
 	try {
-		$result = $TaxinvoiceService->Delete($testCorpNum,$mgtKeyType,$mgtKey);
+		$result = $TaxinvoiceService->Delete($testCorpNum, $mgtKeyType, $mgtKey);
 		$code = $result->code;
 		$message = $result->message;
 	}

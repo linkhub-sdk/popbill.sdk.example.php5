@@ -6,7 +6,7 @@
 	</head>
 <?
   /**
-  * 세금계산서 인쇄(공급받는자) URL을 반환합니다.
+  * 세금계산서 인쇄(공급받는자) 팝업 URL을 반환합니다.
   * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
   */
 
@@ -18,7 +18,7 @@
   // 팝빌 회원 아이디
 	$testUserID = 'testkorea';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호

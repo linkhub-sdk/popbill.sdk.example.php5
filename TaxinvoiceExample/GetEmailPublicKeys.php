@@ -5,6 +5,10 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?
+  /**
+  * 대용량 연계사업자 유통메일주소 목록을 반환합니다.
+  */
+
 	include 'common.php';
 
   // 팝빌 회원 사업자 번호, "-"제외 10자리

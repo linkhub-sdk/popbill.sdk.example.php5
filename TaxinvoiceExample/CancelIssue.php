@@ -9,8 +9,8 @@
   * [발행완료] 상태의 세금계산서를 [발행취소] 처리합니다.
   * - [발행취소]는 국세청 전송전에만 가능합니다.
   * - 발행취소된 세금계산서는 국세청에 전송되지 않습니다.
-  * - 발행취소 세금계산서에 기재된 문서관리번호를 재사용 하기 위해서는
-  *   삭제(Delete API)를 호출하여 [삭제] 처리 하셔야 합니다.
+  * - 발행취소 세금계산서에 사용된 문서관리번호를 재사용 하기 위해서는
+  *   삭제(Delete API)를 호출하여 해당세금계산서를 삭제해야 합니다.
   */
 
 	include 'common.php';
@@ -21,7 +21,7 @@
   // 팝빌 회원 아이디
 	$testUserID = 'testkorea';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TURSTEE:위수탁
+  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
@@ -35,7 +35,7 @@
 		$code = $result->code;
 		$message = $result->message;
 	}
-	catch(PopbillException $pe) {
+	catch (PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
 	}
