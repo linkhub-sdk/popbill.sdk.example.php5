@@ -75,9 +75,9 @@
 				<fieldset class="fieldset2">
 					<legend>전송결과/예약취소</legend>
 					<ul>
-						<li><a href="Search.php">search</a> - 문자 전송내역 기간조회</li>
-						<li><a href="GetMessages.php">getMessages</a> - 접수번호에 해당하는 문자메시지 전송결과 확인</li>
-						<li><a href="CancelReserve.php">cancelReserve</a> - 예약문자 메시지의 예약 취소. 예약시간 10분전까지만 가능.</li>
+						<li><a href="Search.php">search</a> - 문자전송 목록 조회</li>
+						<li><a href="GetMessages.php">getMessages</a> - 문자메시지 전송결과 확인</li>
+						<li><a href="CancelReserve.php">cancelReserve</a> - 예약문자 메시지 예약취소</li>
 					</ul>
 				</fieldset>
 

@@ -36,7 +36,7 @@
 				<legend>수집 상태 목록 확인</legend>
 				<ul>
 					<?
-						if ( isset ( $code ) ) {
+						if ( isset($code)) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>

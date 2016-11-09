@@ -19,7 +19,7 @@
 	$testUserID = 'testkorea';
 
 	try {
-		$url = $HTTaxinvoiceService->GetCertificatePopUpURL( $testCorpNum, $testUserID );
+		$url = $HTTaxinvoiceService->GetCertificatePopUpURL($testCorpNum, $testUserID);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();

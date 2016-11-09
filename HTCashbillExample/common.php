@@ -1,6 +1,6 @@
 <?
   /**
-  * 팜빌 홈택스 전자세금계산서 연계 API PHP SDK Example
+  * 팜빌 홈택스 현금영수증 연계 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : blog.linkhub.co.kr/584
   * 업테이트 일자 : 2016-11-08
@@ -8,7 +8,7 @@
   * 연동기술지원 이메일 : dev@linkhub.co.kr
   *
   * <테스트 연동개발 준비사항>
-  * 1) 22, 25번 라인에 선언된 링크아이디(LinkID)와 비밀키(SecretKey)를
+  * 1) 23, 26번 라인에 선언된 링크아이디(LinkID)와 비밀키(SecretKey)를
   *    링크허브 가입시 메일로 발급받은 인증정보를 참조하여 변경합니다.
   * 2) 팝빌 개발용 사이트(test.popbill.com)에 연동회원으로 가입합니다.
   * 3) 홈택스에서 이용가능한 공인인증서를 등록합니다.
@@ -16,6 +16,7 @@
   *    - 공인인증서 등록(GetCertificatePopUpURL API) 반환된 URL을 이용하여
   *      팝업 페이지에서 공인인증서 등록
   */
+
   require_once '../Popbill/PopbillHTCashbill.php';
 
   //링크 아이디

@@ -52,8 +52,8 @@
   $TaxRegID = "";
 
 	try {
-		$response = $HTTaxinvoiceService->Summary ( $testCorpNum, $JobID, $Type, $TaxType,
-                $PurposeType, $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $testUserID );
+		$response = $HTTaxinvoiceService->Summary($testCorpNum, $JobID, $Type, $TaxType,
+                $PurposeType, $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $testUserID);
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();
@@ -68,7 +68,7 @@
 				<legend>수집결과 요약정보 조회</legend>
 				<ul>
 					<?
-						if ( isset ( $code ) ) {
+						if ( isset($code) ) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>

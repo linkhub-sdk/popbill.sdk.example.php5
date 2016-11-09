@@ -34,7 +34,7 @@
 					<?
 						if ( isset($remainPoint) ) {
 					?>
-							<li>remainPoint : <?= $remainPoint ?></li>
+							<li>잔여포인트(remainPoint) : <?= $remainPoint ?></li>
 					<?
 						} else {
 					?>

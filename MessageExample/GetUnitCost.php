@@ -6,7 +6,7 @@
 	</head>
 <?
   /**
-  * 문자 메시지 전송단가를 확인합니다.
+  * 문자메시지 전송단가를 확인합니다.
   */
 
 	include 'common.php';
@@ -30,7 +30,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전송 단가 확인</legend>
+				<legend>문자메시지 전송단가 확인</legend>
 				<ul>
 					<?
 						if ( isset($unitCost) ) {

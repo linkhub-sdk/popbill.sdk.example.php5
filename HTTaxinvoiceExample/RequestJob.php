@@ -33,7 +33,7 @@
 	$testUserID = 'testkorea';
 
 	try {
-		$jobID = $HTTaxinvoiceService->RequestJob ( $testCorpNum, $TIKeyType, $DType, $SDate, $EDate, $testUserID );
+		$jobID = $HTTaxinvoiceService->RequestJob($testCorpNum, $TIKeyType, $DType, $SDate, $EDate, $testUserID);
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();
@@ -48,7 +48,7 @@
 				<legend>수집 요청</legend>
 				<ul>
 					<?
-						if ( isset ( $code ) ) {
+						if ( isset($code) ) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>

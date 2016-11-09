@@ -60,7 +60,6 @@
 							}
 						}
 					?>
-
 				</ul>
 			</fieldset>
 		 </div>

@@ -23,7 +23,7 @@
 	$testUserID = 'testkorea';
 
 	try {
-		$result = $HTTaxinvoiceService->GetTaxinvoice( $testCorpNum, $NTSConfirmNum, $testUserID );
+		$result = $HTTaxinvoiceService->GetTaxinvoice($testCorpNum, $NTSConfirmNum, $testUserID);
 	}
   catch(PopbillException $pe) {
 		$code = $pe->getCode();
@@ -38,7 +38,7 @@
 				<legend>세금계산서 상세정보 확인</legend>
 				<ul>
 					<?
-						if(isset($code)) {
+						if ( isset($code) ) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>

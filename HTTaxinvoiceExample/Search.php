@@ -77,7 +77,7 @@
 				<legend>수집 결과 조회</legend>
 				<ul>
 					<?
-						if ( isset ( $code ) ) {
+						if ( isset($code) ) {
 					?>
 						<li>Response.code : <?= $code ?> </li>
 						<li>Response.message : <?= $message ?></li>
@@ -92,8 +92,7 @@
               <li>pageCount (페이지 개수) : <?= $response->pageCount ?></li>
 
           <?
-              for ( $i = 0; $i < Count ( $response->list ); $i++ )
-              {
+              for ( $i = 0; $i < Count ( $response->list ); $i++ ) {
           ?>
             <fieldset class="fieldset2">
               <legend> 전자(세금)계산서 정보 [<?= $i+1?>]</legend>

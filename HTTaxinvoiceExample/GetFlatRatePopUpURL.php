@@ -9,7 +9,7 @@
   * 정액제 신청 팝업 URL을 반환합니다.
   * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
   */
-  
+
 	include 'common.php';
 
   // 팝빌 회원 사업자 번호, "-"제외 10자리
@@ -19,7 +19,7 @@
 	$testUserID = 'testkorea';
 
 	try {
-		$url = $HTTaxinvoiceService->GetFlatRatePopUpURL( $testCorpNum, $testUserID );
+		$url = $HTTaxinvoiceService->GetFlatRatePopUpURL($testCorpNum, $testUserID);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

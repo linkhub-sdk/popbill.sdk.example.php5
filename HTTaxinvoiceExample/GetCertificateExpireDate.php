@@ -15,7 +15,7 @@
 	$testCorpNum = '1234567890';
 
 	try {
-		$ExpireDate = $HTTaxinvoiceService->GetCertificateExpireDate ( $testCorpNum ) ;
+		$ExpireDate = $HTTaxinvoiceService->GetCertificateExpireDate($testCorpNum);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();

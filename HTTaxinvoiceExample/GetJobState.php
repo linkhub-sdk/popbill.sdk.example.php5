@@ -23,7 +23,7 @@
 	$testUserID = 'testkorea';
 
 	try {
-		$result = $HTTaxinvoiceService->GetJobState( $testCorpNum, $jobID, $testUserID );
+		$result = $HTTaxinvoiceService->GetJobState($testCorpNum, $jobID, $testUserID);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();

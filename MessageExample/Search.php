@@ -28,7 +28,7 @@
   $State = array('1', '2', '3', '4');
 
   // 전송유형 배열 SMS, LMS, MMS
-	$Item = array ( 'SMS', 'LMS', 'MMS' );
+	$Item = array( 'SMS', 'LMS', 'MMS' );
 
   // 예약여부, false-전체조회, true-예약전송만 조회
 	$ReserveYN = false;

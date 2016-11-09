@@ -5,6 +5,10 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?
+  /**
+  * 문자 API 서비스 과금정보를 확인합니다.
+  */
+  
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
@@ -39,7 +43,7 @@
 					<?
 						} else {
 					?>
-						  <li>unitCost(단가) : <?= $result->unitCost ?></li>
+						  <li>unitCost(전송단가) : <?= $result->unitCost ?></li>
 						  <li>chargeMethod(과금유형) : <?= $result->chargeMethod ?></li>
 						  <li>rateSystem(과금제도) : <?= $result->rateSystem ?></li>
 					<?

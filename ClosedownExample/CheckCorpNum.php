@@ -65,8 +65,8 @@
 				<fieldset class="fieldset2">
 					<legend>휴폐업조회 - 단건</legend>
 					<ul>
-						<li>Response.code : <? echo $code ?> </li>
-						<li>Response.message : <? echo $message ?></li>
+						<li>Response.code : <?= $code ?> </li>
+						<li>Response.message : <?= $message ?></li>
 					</ul>
 				</fieldset>
 			<?
