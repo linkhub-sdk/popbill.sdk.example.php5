@@ -42,7 +42,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 요약정보 확인 - 대량</legend>
+				<legend>전자명세서 상태/요약정보 확인 - 대량</legend>
 				<ul>
 					<?
 						if ( isset($code) ) {
@@ -54,7 +54,7 @@
 							for ($i = 0; $i < Count($result); $i++) {
 					?>
 							<fieldset class="fieldset2">
-								<legend> 전자명세서 요약정보[<?= $i+1?>]</legend>
+								<legend> 전자명세서 상태/요약정보[<?= $i+1?>]</legend>
 								<ul>
 									<li> itemKey : <?= $result[$i]->itemKey ?></li>
 									<li> stateCode : <?= $result[$i]->stateCode ?></li>

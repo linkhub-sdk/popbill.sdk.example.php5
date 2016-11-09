@@ -21,7 +21,7 @@
 	$itemCode = '121';
 
   // 문서관리번호
-	$mgtKey = '20150211-01';
+	$mgtKey = '20161109-03';
 
 	try {
 		$result = $StatementService->GetLogs($testCorpNum, $itemCode, $mgtKey);
@@ -36,7 +36,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 문서 상태변경 이력 확인</legend>
+				<legend>전자명세서 상태변경 이력 확인</legend>
 				<ul>
 					<?
 						if ( isset($code) ) {

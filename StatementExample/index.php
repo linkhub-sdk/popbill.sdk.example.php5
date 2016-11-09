@@ -15,7 +15,7 @@
 				<fieldset class="fieldset2">
 					<legend>회원정보</legend>
 					<ul>
-						<li><a href="CheckIsMember.php">checkIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="CheckIsMember.php">checkIsMember</a> - 연동회원사 가입여부 확인</li>
 						<li><a href="CheckID.php">checkID</a> - 연동회원 아이디 중복 확인</li>
 						<li><a href="JoinMember.php">joinMember</a> - 연동회원사 가입 요청</li>
             <li><a href="GetChargeInfo.php">getChargeInfo</a> - 과금정보 확인</li>
@@ -45,11 +45,11 @@
 						<li><a href="Register.php">register</a> - 전자명세서 임시저장</li>
 						<li><a href="Update.php">update</a> - 전자명세서 수정</li>
 						<li><a href="Issue.php">issue</a> - 전자명세서 발행</li>
-						<li><a href="CancelIssue.php">cancelIssue</a> - 전자명세서발행취소</li>
+						<li><a href="CancelIssue.php">cancelIssue</a> - 전자명세서 발행취소</li>
 						<li><a href="Delete.php">delete</a> - 전자명세서 삭제</li>
 						<li><a href="AttachFile.php">attachFile</a> - 전자명세서 첨부파일 추가</li>
 						<li><a href="GetFiles.php">getFiles</a> - 전자명세서 첨부파일 목록확인</li>
-						<li><a href="DeleteFile.php">deleteFile</a> - 전자명세서 첨부파일 1개 삭제</li>
+						<li><a href="DeleteFile.php">deleteFile</a> - 전자명세서 첨부파일 삭제</li>
 					</ul>
 				</fieldset>
 
@@ -80,11 +80,11 @@
 					<legend>팝빌 전자명세서 SSO URL 기능</legend>
 					<ul>
 						<li><a href="GetURL.php">getURL</a> - 전자명세서 관련 SSO URL 확인</li>
-						<li><a href="GetPopUpURL.php">getPopUpURL</a> - 해당 전자명세서의 팝빌 화면을 표시하는 URL 확인</li>
-						<li><a href="GetPrintURL.php">getPrintURL</a> - 해당 전자명세서의 팝빌 인쇄 화면을 표시하는 URL 확인</li>
-						<li><a href="GetEPrintURL.php">getEPrintURL</a> - 해당 전자명세서의 팝빌 인쇄 화면을 표시하는 URL 확인</li>
-						<li><a href="GetMassPrintURL.php">getMassPrintURL</a> - 다량(최대100건)의 전자명세서 인쇄 화면을 표시하는 URL 확인 </li>
-						<li><a href="GetMailURL.php">getMailURL</a> - 해당 전자명세서의 전송메일상의 "보기" 버튼에 해당하는 URL 확인 </li>
+						<li><a href="GetPopUpURL.php">getPopUpURL</a> - 전자명세서 보기 팝업 URL</li>
+						<li><a href="GetPrintURL.php">getPrintURL</a> - 전자명세서 인쇄 팝업 URL</li>
+						<li><a href="GetEPrintURL.php">getEPrintURL</a> - 전자명세서 인쇄 팝업 URL - 공급받는자</li>
+						<li><a href="GetMassPrintURL.php">getMassPrintURL</a> - 전자명세서 대량 인쇄 팝업 URL </li>
+						<li><a href="GetMailURL.php">getMailURL</a> - 전자명세서 공급받는자 메일링크 URL</li>
 					</ul>
 				</fieldset>
 				<fieldset class="fieldset2">

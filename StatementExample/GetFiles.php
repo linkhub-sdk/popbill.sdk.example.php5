@@ -20,7 +20,7 @@
 	$itemCode = '121';
 
   // 문서관리번호
-	$mgtKey = '20161107-03';
+	$mgtKey = '20161109-03';
 
   // 팝빌회원 아이디
 	$testUserID = 'testkorea';

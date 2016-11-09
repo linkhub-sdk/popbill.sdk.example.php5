@@ -18,7 +18,7 @@
 	$testCorpNum = '1234567890';
 
   // 팩스 파일명
-	$mgtKey = '20161107-04';
+	$mgtKey = '20161109-04';
 
   // 팝빌 회원 아이디
 	$testUserID = 'testkorea';

@@ -23,10 +23,10 @@
 	$itemCode = '121';
 
   // 문서관리번호
-	$mgtKey = '20161107-03';
+	$mgtKey = '20161109-03';
 
   // 첨부된 파일의 아이디, GetFiles API 응답항목중 AttachedFile 항목
-	$FileID= '7EE1DD35-8077-4C1F-B288-4CDE05BA129A.PBF';
+	$FileID= '1390CE69-1E9D-41FE-9994-2253B26FA585.PBF';
 
 	try {
 		$result = $StatementService->DeleteFile($testCorpNum, $itemCode, $mgtKey, $FileID, $testUserID);
