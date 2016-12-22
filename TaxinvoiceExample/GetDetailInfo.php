@@ -19,7 +19,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161109-02';
+	$mgtKey = '20161221-03';
 
 	try {
 		$result = $TaxinvoiceService->GetDetailInfo($testCorpNum, $mgtKeyType, $mgtKey);
@@ -69,7 +69,9 @@
 							<li> invoiceeHP1  : <?= $result->invoiceeHP1  ?> </li>
 							<li> invoiceeEmail1  : <?= $result->invoiceeEmail1 ?> </li>
 							<li> invoiceeSMSSendYN  : <?= $result->invoiceeSMSSendYN  ?> </li>
-							<li> trusteeSMSSendYN  : <?= $result->trusteeSMSSendYN  ?> </li>
+							<li> closeDownState  : <?= $result->closeDownState ?> </li>
+              <li> closeDownStateDate  : <?= $result->closeDownStateDate ?> </li>
+
 							<li> taxTotal  : <?= $result->taxTotal ?>  </li>
 							<li> supplyCostTotal  : <?= $result->supplyCostTotal  ?> </li>
 							<li> totalAmount  : <?= $result->totalAmount  ?> </li>

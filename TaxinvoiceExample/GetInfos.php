@@ -21,7 +21,7 @@
 
   // 세금계산서 문서관리번호 배열, 최대 1000건
 	$MgtKeyList = array();
-  array_push($MgtKeyList, "20161102-02");
+  array_push($MgtKeyList, "20161221-03");
   array_push($MgtKeyList, '20161102-03');
   array_push($MgtKeyList, '20161102-04');
 
@@ -68,6 +68,9 @@
 								<li>invoiceeCorpNum : <?= $result[$i]->invoiceeCorpNum ?></li>
 								<li>invoiceeMgtKey : <?= $result[$i]->invoiceeMgtKey ?></li>
 								<li>invoiceePrintYN : <?= $result[$i]->invoiceeMgtKey ?></li>
+                <li>closeDownState : <?= $result[$i]->closeDownState ?></li>
+                <li>closeDownStateDate : <?= $result[$i]->closeDownStateDate ?></li>
+
 								<li>trusteeCorpName : <?= $result[$i]->trusteeCorpName ?></li>
 								<li>trusteeCorpNum : <?= $result[$i]->trusteeCorpNum ?></li>
 								<li>trusteeMgtKey : <?= $result[$i]->trusteeMgtKey ?></li>

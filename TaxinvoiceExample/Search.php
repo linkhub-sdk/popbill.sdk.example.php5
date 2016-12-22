@@ -29,7 +29,7 @@
 	$SDate = '20160901';
 
   // [필수] 종료일자
-	$EDate = '20161131';
+	$EDate = '20161231';
 
   // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
 	$State = array (
@@ -125,10 +125,8 @@
 										<li>invoiceeCorpName : <?= $result->list[$i]->invoiceeCorpName ?></li>
 										<li>invoiceeMgtKey : <?= $result->list[$i]->invoiceeMgtKey ?></li>
 										<li>invoiceePrintYN : <?= $result->list[$i]->invoiceePrintYN ?></li>
-										<li>trusteeCorpName : <?= $result->list[$i]->trusteeCorpName ?></li>
-										<li>trusteeCorpNum : <?= $result->list[$i]->trusteeCorpNum ?></li>
-										<li>trusteeMgtKey : <?= $result->list[$i]->trusteeMgtKey ?></li>
-										<li>trusteerPrintYN : <?= $result->list[$i]->trusteePrintYN ?></li>
+                    <li>closeDownState : <?= $result->list[$i]->closeDownState ?></li>
+                    <li>closeDownStateDate : <?= $result->list[$i]->closeDownStateDate ?></li>										
 										<li>supplyCostTotal : <?= $result->list[$i]->supplyCostTotal ?></li>
 										<li>taxTotal : <?= $result->list[$i]->taxTotal ?></li>
 										<li>issueDT : <?= $result->list[$i]->issueDT ?></li>
