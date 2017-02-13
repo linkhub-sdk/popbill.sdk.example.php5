@@ -93,7 +93,7 @@
 									<li> reserveDT : <?= $result->list[$i]->reserveDT ?> </li>
 									<li> sendDT : <?= $result->list[$i]->sendDT ?> </li>
 									<li> resultDT : <?= $result->list[$i]->resultDT ?> </li>
-									<li> sendResult : <?= $result->list[$i]->sendResult ?> </li>
+									<li> result : <?= $result->list[$i]->result ?> </li>
 									<li> tranNet : <?= $result->list[$i]->tranNet ?> </li>
 								</ul>
 							</fieldset>
