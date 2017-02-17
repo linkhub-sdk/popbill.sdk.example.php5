@@ -45,6 +45,8 @@
 					<ul>
 						<li><a href="SendFAX.php">sendFAX</a> - 팩스 전송. 1파일 1건 전송</li>
 						<li><a href="SendFAX_Multi.php">sendFAX_Multi</a> - 팩스 전송. 1파일 동보 전송(수신번호 최대 1000개)</li>
+            <li><a href="ResendFAX.php">ResendFAX</a> - 팩스 재전송</li>
+            <li><a href="ResendFAX_Multi.php">ResendFAX_Multi</a> - 팩스 동보 재전송</li>
 					</ul>
 				</fieldset>
 
