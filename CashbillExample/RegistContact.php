@@ -8,15 +8,11 @@
   /**
   * 연동회원의 담당자를 신규로 등록합니다.
   */
-  
+
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
-
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
 
   // 담당자 정보 객체 생성
   $ContactInfo = new ContactInfo();
@@ -49,7 +45,7 @@
   $ContactInfo->mgrYN = false;
 
 	try {
-		$result = $CashbillService->RegistContact($testCorpNum, $ContactInfo, $testUserID);
+		$result = $CashbillService->RegistContact($testCorpNum, $ContactInfo);
 		$code = $result->code;
 		$message = $result->message;
 	}

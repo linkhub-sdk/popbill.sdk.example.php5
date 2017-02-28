@@ -14,10 +14,6 @@
   // 팝빌회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
-
   // 담당자 정보 객체 생성
 	$ContactInfo = new ContactInfo();
 
@@ -49,7 +45,7 @@
 	$ContactInfo->mgrYN = false;
 
 	try {
-		$result = $StatementService->RegistContact($testCorpNum, $ContactInfo, $testUserID);
+		$result = $StatementService->RegistContact($testCorpNum, $ContactInfo);
 		$code = $result->code;
 		$message = $result->message;
 	}

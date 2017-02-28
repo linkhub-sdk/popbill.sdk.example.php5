@@ -14,9 +14,6 @@
   // 팝빌회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
   // 회사정보 클래스 생성
 	$CorpInfo = new CorpInfo();
 
@@ -36,7 +33,7 @@
 	$CorpInfo->bizClass = '종목';
 
 	try {
-		$result = $HTTaxinvoiceService->UpdateCorpInfo($testCorpNum, $CorpInfo, $testUserID);
+		$result = $HTTaxinvoiceService->UpdateCorpInfo($testCorpNum, $CorpInfo);
 		$code = $result->code;
 		$message = $result->message;
 	}
