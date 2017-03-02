@@ -18,10 +18,7 @@
 	$testCorpNum = '1234567890';
 
   // 팩스 파일명
-	$mgtKey = '20161109-04';
-
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
+	$mgtKey = '20170302-05';
 
   // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
@@ -42,7 +39,7 @@
   ************************************************************/
 
   // [필수] 기재상 작성일자
-	$Statement->writeDate = '20161107';
+	$Statement->writeDate = '20170302';
 
   // [필수] (영수, 청구) 중 기재
 	$Statement->purposeType = '영수';
@@ -166,7 +163,7 @@
 	);
 
 	try {
-		$receiptNum = $StatementService->FAXSend($testCorpNum, $Statement, $sendNum, $receiveNum, $testUserID);
+		$receiptNum = $StatementService->FAXSend($testCorpNum, $Statement, $sendNum, $receiveNum);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

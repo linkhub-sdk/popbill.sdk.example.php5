@@ -16,21 +16,18 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
   // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
 
   // 조회할 전자명세서 문서관리번호 배열, 최대 1000건
 	$MgtKeyList = array(
-			'20161107-01',
+			'20170302-04',
 			'20161107-02',
       '20161107-03'
 	);
 
 	try {
-		$result = $StatementService->GetInfos($testCorpNum, $itemCode, $MgtKeyList, $testUserID);
+		$result = $StatementService->GetInfos($testCorpNum, $itemCode, $MgtKeyList);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

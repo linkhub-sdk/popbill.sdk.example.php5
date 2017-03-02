@@ -20,13 +20,10 @@
 	$itemCode = '121';
 
   // 문서관리번호
-	$mgtKey = '20161109-03';
-
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
+	$mgtKey = '20170302-04';
 
 	try {
-		$result = $StatementService->GetFiles($testCorpNum, $itemCode, $mgtKey, $testUserID);
+		$result = $StatementService->GetFiles($testCorpNum, $itemCode, $mgtKey);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

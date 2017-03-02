@@ -21,7 +21,7 @@
 	$itemCode = '121';
 
   // 문서관리번호
-	$mgtKey = '20161109-03';
+	$mgtKey = '20170302-04';
 
 	try {
 		$result = $StatementService->GetLogs($testCorpNum, $itemCode, $mgtKey);

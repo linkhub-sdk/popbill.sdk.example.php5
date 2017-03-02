@@ -16,10 +16,7 @@
 
   // 전자명세서 문서관리번호
   // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-	$mgtKey = '20161109-02';
-
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
+	$mgtKey = '20170302-02';
 
   // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
@@ -36,7 +33,7 @@
   ************************************************************/
 
   // [필수] 기재상 작성일자
-	$Statement->writeDate = '20161107';
+	$Statement->writeDate = '20170302';
 
   // [필수] (영수, 청구) 중 기재
 	$Statement->purposeType = '영수';
@@ -77,7 +74,7 @@
 
 	$Statement->receiverCorpNum = '8888888888';
 	$Statement->receiverTaxRegID = '';						// 공급받는자 종사업장 식별번호, 필요시 기재. 형식은 숫자 4자리
-	$Statement->receiverCorpName = '공급받는자 대표자 성명';
+	$Statement->receiverCorpName = '공급받는자 상호';
 	$Statement->receiverCEOName = '공급받는자 대표자 성명';
 	$Statement->receiverAddr = '공급받는자 주소';
 	$Statement->receiverBizClass = '공급받는자 업종';
@@ -161,7 +158,7 @@
 
 
 	try {
-		$result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo, $testUserID);
+		$result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo);
 		$code = $result->code;
 		$message = $result->message;
 	}

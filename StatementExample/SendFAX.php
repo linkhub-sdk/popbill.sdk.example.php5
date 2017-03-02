@@ -17,14 +17,11 @@
   // 팝빌 회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
 
   // 문서관리번호
-	$mgtKey = '20161109-03';
+	$mgtKey = '20170302-04';
 
   // 발신번호
 	$sender = '07043042991';
@@ -33,7 +30,7 @@
 	$receiver = '070111222';
 
 	try {
-		$result = $StatementService->SendFAX($testCorpNum, $itemCode, $mgtKey, $sender, $receiver, $testUserID);
+		$result = $StatementService->SendFAX($testCorpNum, $itemCode, $mgtKey, $sender, $receiver);
 		$code = $result->code;
 		$message = $result->message;
 	}

@@ -19,7 +19,7 @@
 	$itemCode = '121';
 
   // 문서관리번호, 1~24자리
-	$mgtKey = '20161109-01';
+	$mgtKey = '20170302-01';
 
 	try {
 		$result = $StatementService->CheckMgtKeyInUse($testCorpNum ,$itemCode, $mgtKey);

@@ -15,10 +15,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호, 발행자별 고유번호 할당, 1~24자리 영문,숫자 조합으로 중복없이 구성
-	$mgtKey = '20161109-03';
-
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
+	$mgtKey = '20170302-04';
 
   // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
@@ -33,7 +30,7 @@
   ************************************************************/
 
   // [필수] 기재상 작성일자
-  $Statement->writeDate = '20161107';
+  $Statement->writeDate = '20170302';
 
   // [필수] (영수, 청구) 중 기재
   $Statement->purposeType = '영수';
@@ -157,7 +154,7 @@
   );
 
 	try {
-		$result = $StatementService->Register($testCorpNum, $Statement, $testUserID);
+		$result = $StatementService->Register($testCorpNum, $Statement);
 		$code = $result->code;
 		$message = $result->message;
 	}
