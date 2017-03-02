@@ -10,19 +10,14 @@
   // 팝빌 회원 사업자번호, "-" 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
-
   // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인 경우 즉시전송
 	$reserveDT = null;
 
   // 광고문자 전송여부
 	$adsYN = false;
 
-
-	for ($i = 0; $i < 100; $i++ ) {
-    // 문자전송정보 최대 1000건까지 호출가능
+  // 문자전송정보 최대 1000건까지 호출가능
+  for ($i = 0; $i < 10; $i++ ) {
 		$Messages[] = array(
 			'snd' => '07043042991',		// 발신번호
       'sndnm' => '발신자명',			// 발신자명
@@ -33,7 +28,7 @@
 	}
 
   try {
-		$receiptNum = $MessagingService->SendSMS($testCorpNum,'','', $Messages, $reserveDT, $adsYN, $testUserID);
+		$receiptNum = $MessagingService->SendSMS($testCorpNum,'','', $Messages, $reserveDT, $adsYN);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();

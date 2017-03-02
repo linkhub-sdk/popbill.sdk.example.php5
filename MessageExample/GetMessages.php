@@ -14,14 +14,11 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
   // 문자전송 요청 시 발급받은 접수번호(receiptNum)
 	$ReceiptNum = '016080814000000017';
 
 	try {
-		$result = $MessagingService->GetMessages($testCorpNum, $ReceiptNum, $testUserID);
+		$result = $MessagingService->GetMessages($testCorpNum, $ReceiptNum);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();

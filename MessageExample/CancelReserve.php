@@ -15,14 +15,11 @@
   // 팝빌 회원 사업자번호, "-"제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 예약문자전송 요청시 발급받은 접수번호
 	$ReceiptNum = '015020611000000006';
 
 	try {
-		$result = $MessagingService->CancelReserve($testCorpNum ,$ReceiptNum, $testUserID);
+		$result = $MessagingService->CancelReserve($testCorpNum ,$ReceiptNum);
 		$code = $result->code;
 		$message = $result->message;
 	}

@@ -10,9 +10,6 @@
   // 팝빌 회원 사업자번호, "-"제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 예약전송일시(yyyyMMddHHmmss) ex)20161108200000, null인경우 즉시전송
 	$reserveDT = null;
 
@@ -32,7 +29,7 @@
 	$Files = array('./test.jpg');
 
 	try {
-		$receiptNum = $MessagingService->SendMMS($testCorpNum,'','','',$Messages, $Files, $reserveDT, $adsYN, $testUserID);
+		$receiptNum = $MessagingService->SendMMS($testCorpNum,'','','',$Messages, $Files, $reserveDT, $adsYN);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();
