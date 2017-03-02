@@ -16,11 +16,8 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
   $testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-  $testUserID = 'testkorea';
-
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '016110815000000004';
+  $JobID = '017030214000000001';
 
   // 문서형태 배열, N-일반세금계산서, M-수정세금계산서
   $Type = array (
@@ -62,7 +59,7 @@
 
 	try {
 		$response = $HTTaxinvoiceService->Search ( $testCorpNum, $JobID, $Type, $TaxType, $PurposeType,
-              $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $Page, $PerPage, $Order, $testUserID );
+              $TaxRegIDYN, $TaxRegIDType, $TaxRegID, $Page, $PerPage, $Order );
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();

@@ -19,11 +19,8 @@
   //국세청 승인번호
   $NTSConfirmNum = '2016110441000203000005a9';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
 	try {
-		$result = $HTTaxinvoiceService->GetXML($testCorpNum, $NTSConfirmNum, $testUserID);
+		$result = $HTTaxinvoiceService->GetXML($testCorpNum, $NTSConfirmNum);
 	}
   catch(PopbillException $pe) {
 		$code = $pe->getCode();

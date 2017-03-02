@@ -24,16 +24,13 @@
   $DType = 'W';
 
   // 시작일자, 형식(yyyyMMdd)
-  $SDate = '20160901';
+  $SDate = '20170101';
 
   // 종료일자, 형식(yyyyMMdd)
-  $EDate = '20161131';
-
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
+  $EDate = '20170301';
 
 	try {
-		$jobID = $HTTaxinvoiceService->RequestJob($testCorpNum, $TIKeyType, $DType, $SDate, $EDate, $testUserID);
+		$jobID = $HTTaxinvoiceService->RequestJob($testCorpNum, $TIKeyType, $DType, $SDate, $EDate);
 	}
 	catch(PopbillException $pe) {
     $code = $pe->getCode();

@@ -17,13 +17,10 @@
 	$testCorpNum = '1234567890';
 
   // 수집 요청시 반환받은 작업아이디
-  $jobID = '016110815000000004';
-
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
+  $jobID = '017030214000000001';
 
 	try {
-		$result = $HTTaxinvoiceService->GetJobState($testCorpNum, $jobID, $testUserID);
+		$result = $HTTaxinvoiceService->GetJobState($testCorpNum, $jobID);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();
