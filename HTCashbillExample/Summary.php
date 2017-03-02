@@ -16,11 +16,8 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
   $testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-  $testUserID = 'testkorea';
-
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '016110816000000003';
+  $JobID = '017030215000000001';
 
   // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
   $TradeType = array (
@@ -35,7 +32,7 @@
   );
 
 	try {
-		$response = $HTCashbillService->Summary($testCorpNum, $JobID, $TradeType, $TradeUsage, $testUserID);
+		$response = $HTCashbillService->Summary($testCorpNum, $JobID, $TradeType, $TradeUsage);
 	}
 	catch (PopbillException $pe) {
     $code = $pe->getCode();

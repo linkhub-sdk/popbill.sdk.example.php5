@@ -18,19 +18,16 @@
 	$testCorpNum = '1234567890';
 
   // 현금영수증, SELL-매출, BUY-매입
-  $CBType = KeyType::SELL;
+  $CBType = KeyType::BUY;
 
   // 시작일자, 형식(yyyyMMdd)
-  $SDate = '20160911';
+  $SDate = '20170101';
 
   // 종료일자, 형식(yyyyMMdd)
-  $EDate = '20161131';
-
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
+  $EDate = '20170301';
 
 	try {
-		$jobID = $HTCashbillService->RequestJob( $testCorpNum, $CBType, $SDate, $EDate, $testUserID);
+		$jobID = $HTCashbillService->RequestJob( $testCorpNum, $CBType, $SDate, $EDate);
 	}
 	catch (PopbillException $pe) {
     $code = $pe->getCode();
