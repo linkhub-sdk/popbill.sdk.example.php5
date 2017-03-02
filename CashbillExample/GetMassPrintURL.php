@@ -15,18 +15,15 @@
   // 팝빌 회원 사업자 번호, "-"제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 문서관리번호 배열, 최대 100건
 	$mgtKeyList = array (
-		'20161107-01',
+		'20170302-01',
 		'20161107-02',
 		'20161107-03'
 	);
 
 	try {
-		$url = $CashbillService->GetMassPrintURL($testCorpNum, $mgtKeyList, $testUserID);
+		$url = $CashbillService->GetMassPrintURL($testCorpNum, $mgtKeyList);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();

@@ -20,10 +20,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
-	$mgtKey = '20161109-01';
-
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
+	$mgtKey = '20170302-01';
 
   // 메모
 	$memo = '현금영수증 즉시발행 메모';
@@ -96,7 +93,7 @@
 	$Cashbill->email = 'test@test.com';
 
   // 고객 휴대폰 번호
-	$Cashbill->hp = '010-4324-5117';
+	$Cashbill->hp = '010-111-222';
 
   // 발행시 알림문자 전송여부
 	$Cashbill->smssendYN = false;

@@ -18,7 +18,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20161109-02';
+	$mgtKey = '20170302-01';
 
 	try {
 		$result = $CashbillService->GetLogs($testCorpNum, $mgtKey);

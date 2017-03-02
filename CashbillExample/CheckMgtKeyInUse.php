@@ -16,7 +16,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호, 1~24자리, 영문, 숫자, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-	$mgtKey = '20161107-01';
+	$mgtKey = '20170302-01';
 
 	try {
 		$result = $CashbillService->CheckMgtKeyInUse($testCorpNum, $mgtKey);

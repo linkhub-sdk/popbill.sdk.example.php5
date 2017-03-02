@@ -15,7 +15,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20161109-02';
+	$mgtKey = '20170302-01';
 
   // 수신메일 주소
 	$receiver = 'test@test.com';

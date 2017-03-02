@@ -14,14 +14,11 @@
   // 팝빌 회원 사업자 번호, "-"제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 문서관리번호
-	$mgtKey = '20161107-02';
+	$mgtKey = '20170302-01';
 
 	try {
-		$url = $CashbillService->GetPopUpURL($testCorpNum, $mgtKey, $testUserID);
+		$url = $CashbillService->GetPopUpURL($testCorpNum, $mgtKey);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();
