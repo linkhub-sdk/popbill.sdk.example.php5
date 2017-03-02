@@ -10,14 +10,11 @@
   // 팝빌 회원 사업자 번호, "-"제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 팩스전송 접수번호
-	$ReceiptNum = '016110914543000001';
+	$ReceiptNum = '017030211300900001';
 
 	try {
-		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum, $testUserID);
+		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();

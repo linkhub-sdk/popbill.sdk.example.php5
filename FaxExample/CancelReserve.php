@@ -15,14 +15,11 @@
   // 팝빌 회원 사업자번호, "-"제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 팩스예약전송 접수번호
-	$ReceiptNum = '016110810272300001';
+	$ReceiptNum = '017030211311800001';
 
 	try {
-		$result = $FaxService->CancelReserve($testCorpNum ,$ReceiptNum, $testUserID);
+		$result = $FaxService->CancelReserve($testCorpNum ,$ReceiptNum);
 		$code = $result->code;
 		$message = $result->message;
 	}

@@ -10,9 +10,6 @@
   // 팝빌 회원 사업자번호
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
 	$reserveDT = null;
 
@@ -38,7 +35,7 @@
 	$Files = array('./uploadtest.jpg','./uploadtest2.jpg');
 
 	try {
-		$receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files, $reserveDT, $testUserID);
+		$receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files, $reserveDT);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();

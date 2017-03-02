@@ -15,9 +15,6 @@
   // 팝빌 회원 사업자번호
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 팩스 접수번호
   $ReceiptNum = '017021617471100001';
 
@@ -51,7 +48,7 @@
 	$reserveDT = null;
 
 	try {
-		$receiptNum = $FaxService->ResendFAX($testCorpNum, $ReceiptNum, $Sender, $SenderName, $Receivers, $reserveDT, $testUserID);
+		$receiptNum = $FaxService->ResendFAX($testCorpNum, $ReceiptNum, $Sender, $SenderName, $Receivers, $reserveDT);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
