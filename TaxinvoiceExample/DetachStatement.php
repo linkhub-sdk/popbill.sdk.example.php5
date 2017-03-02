@@ -14,14 +14,11 @@
   // 팝빌 회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20160113-01';
+	$mgtKey = '20170302-05';
 
   // 첨부해제할 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$subItemCode = 121;
@@ -30,7 +27,7 @@
   $subMgtKey = '20160113-01';
 
 	try {
-		$result = $TaxinvoiceService->DetachStatement($testCorpNum, $mgtKeyType, $mgtKey, $subItemCode, $subMgtKey, $testUserID);
+		$result = $TaxinvoiceService->DetachStatement($testCorpNum, $mgtKeyType, $mgtKey, $subItemCode, $subMgtKey);
 		$code = $result->code;
 		$message = $result->message;
 	}

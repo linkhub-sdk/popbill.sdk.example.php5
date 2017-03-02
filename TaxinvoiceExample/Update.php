@@ -16,14 +16,11 @@
   // 팝빌회원 사업자번호, '-' 제외 10자리
   $testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161109-02';
+	$mgtKey = '20170302-04';
 
 
   /************************************************************
@@ -34,7 +31,7 @@
 	$Taxinvoice = new Taxinvoice();
 
   // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-	$Taxinvoice->writeDate = '20161108';
+	$Taxinvoice->writeDate = '20170302';
 
   // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
 	$Taxinvoice->issueType = '정발행';
@@ -257,11 +254,8 @@
 	$Taxinvoice->addContactList[1]->email = 'test@test.com';	    // 이메일주소
 	$Taxinvoice->addContactList[1]->contactName	= '링크허브';		  // 담당자명
 
-  // 거래명세서 동시작성여부
-  $writeSpecification = false;
-
 	try {
-		$result = $TaxinvoiceService->Update($testCorpNum, $mgtKeyType, $mgtKey, $Taxinvoice, $testUserID, $writeSpecification);
+		$result = $TaxinvoiceService->Update($testCorpNum, $mgtKeyType, $mgtKey, $Taxinvoice);
 		$code = $result->code;
 		$message = $result->message;
 	}

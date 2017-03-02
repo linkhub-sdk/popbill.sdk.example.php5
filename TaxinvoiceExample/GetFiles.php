@@ -20,7 +20,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20161109-02';
+	$mgtKey = '20170302-04';
 
 	try {
 		$result = $TaxinvoiceService->GetFiles($testCorpNum, $mgtKeyType, $mgtKey);

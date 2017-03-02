@@ -16,20 +16,17 @@
   // 팝빌 회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20161109-02';
+	$mgtKey = '20170302-04';
 
   // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
 	$filePath = './uploadtest.jpg';
 
 	try {
-		$result = $TaxinvoiceService->AttachFile($testCorpNum, $mgtKeyType, $mgtKey, $filePath, $testUserID);
+		$result = $TaxinvoiceService->AttachFile($testCorpNum, $mgtKeyType, $mgtKey, $filePath);
 		$code = $result->code;
 		$message = $result->message;
 	}

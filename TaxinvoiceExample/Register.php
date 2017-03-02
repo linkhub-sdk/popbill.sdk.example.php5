@@ -20,12 +20,9 @@
   // 팝빌회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
-
   // 세금계산서 문서관리번호
   // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-  $invoicerMgtKey = '20161109-03';
+  $invoicerMgtKey = '20170302-05';
 
 
 
@@ -37,7 +34,7 @@
 	$Taxinvoice = new Taxinvoice();
 
   // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-	$Taxinvoice->writeDate = '20161109';
+	$Taxinvoice->writeDate = '20170302';
 
   // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
 	$Taxinvoice->issueType = '정발행';
@@ -264,7 +261,7 @@
 	$writeSpecification = false;
 
 	try {
-		$result = $TaxinvoiceService->Register($testCorpNum, $Taxinvoice, $testUserID, $writeSpecification);
+		$result = $TaxinvoiceService->Register($testCorpNum, $Taxinvoice);
 		$code = $result->code;
 		$message = $result->message;
 	}

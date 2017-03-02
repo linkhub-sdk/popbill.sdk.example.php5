@@ -16,9 +16,6 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-  $testUserID = 'testkorea';
-
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
@@ -76,7 +73,7 @@
 
 	try {
     $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly,
-                                            $Page, $PerPage, $Order, $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $testUserID);
+                                            $Page, $PerPage, $Order, $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();
@@ -126,7 +123,7 @@
 										<li>invoiceeMgtKey : <?= $result->list[$i]->invoiceeMgtKey ?></li>
 										<li>invoiceePrintYN : <?= $result->list[$i]->invoiceePrintYN ?></li>
                     <li>closeDownState : <?= $result->list[$i]->closeDownState ?></li>
-                    <li>closeDownStateDate : <?= $result->list[$i]->closeDownStateDate ?></li>										
+                    <li>closeDownStateDate : <?= $result->list[$i]->closeDownStateDate ?></li>
 										<li>supplyCostTotal : <?= $result->list[$i]->supplyCostTotal ?></li>
 										<li>taxTotal : <?= $result->list[$i]->taxTotal ?></li>
 										<li>issueDT : <?= $result->list[$i]->issueDT ?></li>

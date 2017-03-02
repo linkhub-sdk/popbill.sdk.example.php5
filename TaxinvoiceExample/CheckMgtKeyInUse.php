@@ -16,7 +16,7 @@
 	$testCorpNum = '1234567890';
 
   // 세금계산서 관리번호, 발행자별로 중복없이 1~24자리 영문,숫자로 구성
-	$mgtKey = '20161109-01';
+	$mgtKey = '20170302-01';
 
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;

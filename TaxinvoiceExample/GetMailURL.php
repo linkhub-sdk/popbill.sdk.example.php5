@@ -15,17 +15,14 @@
   // 팝빌 회원 사업자 번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20150206-01';
+	$mgtKey = '20170302-05';
 
 	try {
-		$url = $TaxinvoiceService->GetMailURL($testCorpNum, $mgtKeyType, $mgtKey, $testUserID);
+		$url = $TaxinvoiceService->GetMailURL($testCorpNum, $mgtKeyType, $mgtKey);
 	}
 	catch(PopbillException $pe) {
 		$code = $pe->getCode();

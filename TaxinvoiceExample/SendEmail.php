@@ -14,20 +14,17 @@
   // 팝빌 회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
-
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 문서관리번호
-	$mgtKey = '20161109-01';
+	$mgtKey = '20170302-05';
 
   // 수신이메일주소
 	$receiver = 'test@test.com';
 
 	try {
-		$result = $TaxinvoiceService->SendEmail($testCorpNum, $mgtKeyType, $mgtKey, $receiver, $testUserID);
+		$result = $TaxinvoiceService->SendEmail($testCorpNum, $mgtKeyType, $mgtKey, $receiver);
 		$code = $result->code;
 		$message = $result->message;
 	}
