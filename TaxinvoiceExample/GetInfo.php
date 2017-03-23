@@ -52,6 +52,7 @@
 							<li>modifyCode : <?= $result->modifyCode ?></li>
 							<li>issueType : <?= $result->issueType ?></li>
 							<li>lateIssueYN : <?= $result->lateIssueYN ?></li>
+              <li>interOPYN : <?= $result->interOPYN ?></li>
 							<li>writeDate : <?= $result->writeDate ?></li>
 							<li>invoicerCorpName : <?= $result->invoicerCorpName ?></li>
 							<li>invoicerCorpNum : <?= $result->invoicerCorpNum ?></li>

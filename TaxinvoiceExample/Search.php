@@ -114,6 +114,7 @@
 										<li>modifyCode : <?= $result->list[$i]->modifyCode ?></li>
 										<li>issueType : <?= $result->list[$i]->issueType ?></li>
 										<li>lateIssueYN : <?= $result->list[$i]->lateIssueYN ?></li>
+                    <li>interOPYN : <?= $result->list[$i]->interOPYN ?></li>
 										<li>writeDate : <?= $result->list[$i]->writeDate ?></li>
 										<li>invoicerCorpName : <?= $result->list[$i]->invoicerCorpName ?></li>
 										<li>invoicerCorpNum : <?= $result->list[$i]->invoicerCorpNum ?></li>

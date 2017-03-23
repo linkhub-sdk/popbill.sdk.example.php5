@@ -14,6 +14,8 @@
   // 팝빌회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
+  $testUserID = 'testkorea';
+
   // 담당자 정보 객체 생성
 	$ContactInfo = new ContactInfo();
 
@@ -36,7 +38,7 @@
 	$ContactInfo->searchAllAllowYN = true;
 
 	try {
-		$result = $TaxinvoiceService->UpdateContact($testCorpNum, $ContactInfo);
+		$result = $TaxinvoiceService->UpdateContact($testCorpNum, $ContactInfo, $testUserID);
 		$code = $result->code;
 		$message = $result->message;
 	}
