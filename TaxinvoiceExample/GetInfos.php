@@ -52,43 +52,41 @@
 							<fieldset class="fieldset2">
 							<legend> 세금계산서 요약정보[<?= $i+1?>]</legend>
 							<ul>
-								<li>itemKey : <?= $result[$i]->itemKey ?></li>
-								<li>stateCode : <?= $result[$i]->stateCode ?></li>
-								<li>taxType : <?= $result[$i]->taxType ?></li>
-								<li>purposeType : <?= $result[$i]->purposeType ?></li>
-								<li>modifyCode : <?= $result[$i]->modifyCode ?></li>
-								<li>issueType : <?= $result[$i]->issueType ?></li>
-								<li>lateIssueYN : <?= $result[$i]->lateIssueYN ?></li>
-                <li>interOPYN : <?= $result[$i]->interOPYN ?></li>
-								<li>writeDate : <?= $result[$i]->writeDate ?></li>
-								<li>invoicerCorpName : <?= $result[$i]->invoicerCorpName ?></li>
-								<li>invoicerCorpNum : <?= $result[$i]->invoicerCorpNum ?></li>
-								<li>invoicerMgtKey : <?= $result[$i]->invoicerMgtKey ?></li>
-								<li>invoicerPrintYN : <?= $result[$i]->invoicerMgtKey ?></li>
-								<li>invoiceeCorpName : <?= $result[$i]->invoiceeCorpName ?></li>
-								<li>invoiceeCorpNum : <?= $result[$i]->invoiceeCorpNum ?></li>
-								<li>invoiceeMgtKey : <?= $result[$i]->invoiceeMgtKey ?></li>
-								<li>invoiceePrintYN : <?= $result[$i]->invoiceeMgtKey ?></li>
-                <li>closeDownState : <?= $result[$i]->closeDownState ?></li>
-                <li>closeDownStateDate : <?= $result[$i]->closeDownStateDate ?></li>
+                <li>itemKey (팝빌 관리번호) : <?= $result[$i]->itemKey ?></li>
+                <li>stateCode (상태코드) : <?= $result[$i]->stateCode ?></li>
+                <li>taxType (과세형태) : <?= $result[$i]->taxType ?></li>
+                <li>purposeType (영수/청구) : <?= $result[$i]->purposeType ?></li>
+                <li>modifyCode (수정 사유코드) : <?= $result[$i]->modifyCode ?></li>
+                <li>issueType (발행형태) : <?= $result[$i]->issueType ?></li>
+                <li>lateIssueYN (지연발행 여부) : <?= $result[$i]->lateIssueYN ? 'true' : 'false' ?></li>
+                <li>interOPYN (연동문서 여부) : <?= $result[$i]->interOPYN ? 'true' : 'false' ?></li>
+                <li>writeDate (작성일자) : <?= $result[$i]->writeDate ?></li>
 
-								<li>trusteeCorpName : <?= $result[$i]->trusteeCorpName ?></li>
-								<li>trusteeCorpNum : <?= $result[$i]->trusteeCorpNum ?></li>
-								<li>trusteeMgtKey : <?= $result[$i]->trusteeMgtKey ?></li>
-								<li>trusteePrintYN : <?= $result[$i]->trusteePrintYN ?></li>
-								<li>supplyCostTotal : <?= $result[$i]->supplyCostTotal ?></li>
-								<li>taxTotal : <?= $result[$i]->taxTotal ?></li>
-								<li>issueDT : <?= $result[$i]->issueDT ?></li>
-								<li>preIssueDT : <?= $result[$i]->preIssueDT ?></li>
-								<li>stateDT : <?= $result[$i]->stateDT ?></li>
-								<li>openYN : <?= $result[$i]->openYN ?></li>
-								<li>openDT : <?= $result[$i]->openDT ?></li>
-								<li>ntsresult : <?= $result[$i]->ntsresult ?></li>
-								<li>ntsconfirmNum : <?= $result[$i]->ntsconfirmNum ?></li>
-								<li>ntssendDT : <?= $result[$i]->ntssendDT ?></li>
-								<li>ntsresultDT : <?= $result[$i]->ntsresultDT ?></li>
-								<li>ntssendErrCode : <?= $result[$i]->ntssendErrCode ?></li>
-								<li>stateMemo : <?= $result[$i]->stateMemo ?></li>
+                <li>invoicerCorpName (공급자 상호) : <?= $result[$i]->invoicerCorpName ?></li>
+                <li>invoicerCorpNum (공급자 사업자번호) : <?= $result[$i]->invoicerCorpNum ?></li>
+                <li>invoicerMgtKey (공급자 문서관리번호) : <?= $result[$i]->invoicerMgtKey ?></li>
+                <li>invoicerPrintYN (공급자 인쇄여부) : <?= $result[$i]->invoicerPrintYN ? 'true' : 'false' ?></li>
+
+                <li>invoiceeCorpName (공급받는자 상호) : <?= $result[$i]->invoiceeCorpName ?></li>
+                <li>invoiceeCorpNum (공급받는자 사업자번호) : <?= $result[$i]->invoiceeCorpNum ?></li>
+                <li>invoiceeMgtKey (공급받는자 관리번호) : <?= $result[$i]->invoiceeMgtKey ?></li>
+                <li>invoiceePrintYN (공급받는자 인쇄여부) : <?= $result[$i]->invoiceePrintYN ? 'true' : 'false' ?></li>
+                <li>closeDownState (공급받는자 휴폐업상태) : <?= $result[$i]->closeDownState ?></li>
+                <li>closeDownStateDate (공급받는자 휴폐업일자) : <?= $result[$i]->closeDownStateDate ?></li>
+
+                <li>supplyCostTotal (공급가액 합계): <?= $result[$i]->supplyCostTotal ?></li>
+                <li>taxTotal (세액 합계) : <?= $result[$i]->taxTotal ?></li>
+                <li>issueDT (발행일시) : <?= $result[$i]->issueDT ?></li>
+                <li>preIssueDT (발행예정일시) : <?= $result[$i]->preIssueDT ?></li>
+                <li>stateDT (상태변경일시) : <?= $result[$i]->stateDT ?></li>
+                <li>openYN (개봉 여부) : <?= $result[$i]->openYN ? 'true' : 'false' ?></li>
+                <li>openDT (개봉 일시) : <?= $result[$i]->openDT ?></li>
+                <li>ntsresult (국세청 전송결과) : <?= $result[$i]->ntsresult ?></li>
+                <li>ntsconfirmNum (국세청승인번호) : <?= $result[$i]->ntsconfirmNum ?></li>
+                <li>ntssendDT (국세청 전송일시) : <?= $result[$i]->ntssendDT ?></li>
+                <li>ntsresultDT (국세청 결과 수신일시) : <?= $result[$i]->ntsresultDT ?></li>
+                <li>ntssendErrCode (전송실패 사유코드) : <?= $result[$i]->ntssendErrCode ?></li>
+                <li>stateMemo (상태메모) : <?= $result[$i]->stateMemo ?></li>
 							</ul>
 							</fieldset>
 					<?

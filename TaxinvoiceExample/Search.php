@@ -71,9 +71,13 @@
   // 거래처 조회, 거래처 상호 또는 거래처 사업자등록번호 기재하여 조회, 미기재시 전체조회
   $QString = '';
 
+  // 연동문서 조회여부, 공백-전체조회, 0-일반문서 조회, 1-연동문서 조회
+  $InterOPYN = '';
+
 	try {
-    $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate, $EDate, $State, $Type, $TaxType, $LateOnly,
-                                            $Page, $PerPage, $Order, $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString);
+    $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
+      $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
+      $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();
@@ -107,37 +111,41 @@
 								<fieldset class="fieldset2">
 									<legend> 조회결과 [<?= $i+1?>]</legend>
 									<ul>
-										<li>itemKey : <?= $result->list[$i]->itemKey ?></li>
-										<li>stateCode : <?= $result->list[$i]->stateCode ?></li>
-										<li>taxType : <?= $result->list[$i]->taxType ?></li>
-										<li>purposeType : <?= $result->list[$i]->purposeType ?></li>
-										<li>modifyCode : <?= $result->list[$i]->modifyCode ?></li>
-										<li>issueType : <?= $result->list[$i]->issueType ?></li>
-										<li>lateIssueYN : <?= $result->list[$i]->lateIssueYN ?></li>
-                    <li>interOPYN : <?= $result->list[$i]->interOPYN ?></li>
-										<li>writeDate : <?= $result->list[$i]->writeDate ?></li>
-										<li>invoicerCorpName : <?= $result->list[$i]->invoicerCorpName ?></li>
-										<li>invoicerCorpNum : <?= $result->list[$i]->invoicerCorpNum ?></li>
-										<li>invoicerMgtKey : <?= $result->list[$i]->invoicerMgtKey ?></li>
-										<li>invoicerPrintYN : <?= $result->list[$i]->invoicerPrintYN ?></li>
-										<li>invoiceeCorpName : <?= $result->list[$i]->invoiceeCorpName ?></li>
-										<li>invoiceeMgtKey : <?= $result->list[$i]->invoiceeMgtKey ?></li>
-										<li>invoiceePrintYN : <?= $result->list[$i]->invoiceePrintYN ?></li>
-                    <li>closeDownState : <?= $result->list[$i]->closeDownState ?></li>
-                    <li>closeDownStateDate : <?= $result->list[$i]->closeDownStateDate ?></li>
-										<li>supplyCostTotal : <?= $result->list[$i]->supplyCostTotal ?></li>
-										<li>taxTotal : <?= $result->list[$i]->taxTotal ?></li>
-										<li>issueDT : <?= $result->list[$i]->issueDT ?></li>
-										<li>preIssueDT : <?= $result->list[$i]->preIssueDT ?></li>
-										<li>stateDT : <?= $result->list[$i]->stateDT ?></li>
-										<li>openYN : <?= $result->list[$i]->openYN ?></li>
-										<li>openDT : <?= $result->list[$i]->openDT ?></li>
-										<li>ntsresult : <?= $result->list[$i]->ntsresult ?></li>
-										<li>ntsconfirmNum : <?= $result->list[$i]->ntsconfirmNum ?></li>
-										<li>ntssendDT : <?= $result->list[$i]->ntssendDT ?></li>
-										<li>ntsresultDT : <?= $result->list[$i]->ntsresultDT ?></li>
-										<li>ntssendErrCode : <?= $result->list[$i]->ntssendErrCode ?></li>
-										<li>stateMemo : <?= $result->list[$i]->stateMemo ?></li>
+                    <li>itemKey (팝빌 관리번호) : <?= $result->list[$i]->itemKey ?></li>
+                    <li>stateCode (상태코드) : <?= $result->list[$i]->stateCode ?></li>
+                    <li>taxType (과세형태) : <?= $result->list[$i]->taxType ?></li>
+                    <li>purposeType (영수/청구) : <?= $result->list[$i]->purposeType ?></li>
+                    <li>modifyCode (수정 사유코드) : <?= $result->list[$i]->modifyCode ?></li>
+                    <li>issueType (발행형태) : <?= $result->list[$i]->issueType ?></li>
+                    <li>lateIssueYN (지연발행 여부) : <?= $result->list[$i]->lateIssueYN ? 'true' : 'false' ?></li>
+                    <li>interOPYN (연동문서 여부) : <?= $result->list[$i]->interOPYN ? 'true' : 'false' ?></li>
+                    <li>writeDate (작성일자) : <?= $result->list[$i]->writeDate ?></li>
+
+                    <li>invoicerCorpName (공급자 상호) : <?= $result->list[$i]->invoicerCorpName ?></li>
+                    <li>invoicerCorpNum (공급자 사업자번호) : <?= $result->list[$i]->invoicerCorpNum ?></li>
+                    <li>invoicerMgtKey (공급자 문서관리번호) : <?= $result->list[$i]->invoicerMgtKey ?></li>
+                    <li>invoicerPrintYN (공급자 인쇄여부) : <?= $result->list[$i]->invoicerPrintYN ? 'true' : 'false' ?></li>
+
+                    <li>invoiceeCorpName (공급받는자 상호) : <?= $result->list[$i]->invoiceeCorpName ?></li>
+                    <li>invoiceeCorpNum (공급받는자 사업자번호) : <?= $result->list[$i]->invoiceeCorpNum ?></li>
+                    <li>invoiceeMgtKey (공급받는자 관리번호) : <?= $result->list[$i]->invoiceeMgtKey ?></li>
+                    <li>invoiceePrintYN (공급받는자 인쇄여부) : <?= $result->list[$i]->invoiceePrintYN ? 'true' : 'false' ?></li>
+                    <li>closeDownState (공급받는자 휴폐업상태) : <?= $result->list[$i]->closeDownState ?></li>
+                    <li>closeDownStateDate (공급받는자 휴폐업일자) : <?= $result->list[$i]->closeDownStateDate ?></li>
+
+                    <li>supplyCostTotal (공급가액 합계): <?= $result->list[$i]->supplyCostTotal ?></li>
+                    <li>taxTotal (세액 합계) : <?= $result->list[$i]->taxTotal ?></li>
+                    <li>issueDT (발행일시) : <?= $result->list[$i]->issueDT ?></li>
+                    <li>preIssueDT (발행예정일시) : <?= $result->list[$i]->preIssueDT ?></li>
+                    <li>stateDT (상태변경일시) : <?= $result->list[$i]->stateDT ?></li>
+                    <li>openYN (개봉 여부) : <?= $result->list[$i]->openYN ? 'true' : 'false' ?></li>
+                    <li>openDT (개봉 일시) : <?= $result->list[$i]->openDT ?></li>
+                    <li>ntsresult (국세청 전송결과) : <?= $result->list[$i]->ntsresult ?></li>
+                    <li>ntsconfirmNum (국세청승인번호) : <?= $result->list[$i]->ntsconfirmNum ?></li>
+                    <li>ntssendDT (국세청 전송일시) : <?= $result->list[$i]->ntssendDT ?></li>
+                    <li>ntsresultDT (국세청 결과 수신일시) : <?= $result->list[$i]->ntsresultDT ?></li>
+                    <li>ntssendErrCode (전송실패 사유코드) : <?= $result->list[$i]->ntssendErrCode ?></li>
+                    <li>stateMemo (상태메모) : <?= $result->list[$i]->stateMemo ?></li>
 									</ul>
 								</fieldset>
 					<?

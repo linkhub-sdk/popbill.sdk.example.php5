@@ -45,39 +45,41 @@
 					<?
 						} else {
 					?>
-							<li>itemKey : <?= $result->itemKey ?></li>
-							<li>stateCode : <?= $result->stateCode ?></li>
-							<li>taxType : <?= $result->taxType ?></li>
-							<li>purposeType : <?= $result->purposeType ?></li>
-							<li>modifyCode : <?= $result->modifyCode ?></li>
-							<li>issueType : <?= $result->issueType ?></li>
-							<li>lateIssueYN : <?= $result->lateIssueYN ?></li>
-              <li>interOPYN : <?= $result->interOPYN ?></li>
-							<li>writeDate : <?= $result->writeDate ?></li>
-							<li>invoicerCorpName : <?= $result->invoicerCorpName ?></li>
-							<li>invoicerCorpNum : <?= $result->invoicerCorpNum ?></li>
-							<li>invoicerMgtKey : <?= $result->invoicerMgtKey ?></li>
-							<li>invoicerPrintYN : <?= $result->invoicerPrintYN ?></li>
-							<li>invoiceeCorpName : <?= $result->invoiceeCorpName ?></li>
-							<li>invoiceeCorpNum : <?= $result->invoiceeCorpNum ?></li>
-							<li>invoiceeMgtKey : <?= $result->invoiceeMgtKey ?></li>
-							<li>invoiceePrintYN : <?= $result->invoiceePrintYN ?></li>
-              <li>closeDownState : <?= $result->closeDownState ?></li>
-              <li>closeDownStateDate : <?= $result->closeDownStateDate ?></li>
-              <li>invoiceePrintYN : <?= $result->invoiceePrintYN ?></li>
-              <li>supplyCostTotal : <?= $result->supplyCostTotal ?></li>
-							<li>taxTotal : <?= $result->taxTotal ?></li>
-							<li>issueDT : <?= $result->issueDT ?></li>
-							<li>preIssueDT : <?= $result->preIssueDT ?></li>
-							<li>stateDT : <?= $result->stateDT ?></li>
-							<li>openYN : <?= $result->openYN ?></li>
-							<li>openDT : <?= $result->openDT ?></li>
-							<li>ntsresult : <?= $result->ntsresult ?></li>
-							<li>ntsconfirmNum : <?= $result->ntsconfirmNum ?></li>
-							<li>ntssendDT : <?= $result->ntssendDT ?></li>
-							<li>ntsresultDT : <?= $result->ntsresultDT ?></li>
-							<li>ntssendErrCode : <?= $result->ntssendErrCode ?></li>
-							<li>stateMemo : <?= $result->stateMemo ?></li>
+							<li>itemKey (팝빌 관리번호) : <?= $result->itemKey ?></li>
+							<li>stateCode (상태코드) : <?= $result->stateCode ?></li>
+							<li>taxType (과세형태) : <?= $result->taxType ?></li>
+							<li>purposeType (영수/청구) : <?= $result->purposeType ?></li>
+							<li>modifyCode (수정 사유코드) : <?= $result->modifyCode ?></li>
+							<li>issueType (발행형태) : <?= $result->issueType ?></li>
+							<li>lateIssueYN (지연발행 여부) : <?= $result->lateIssueYN ? 'true' : 'false' ?></li>
+              <li>interOPYN (연동문서 여부) : <?= $result->interOPYN ? 'true' : 'false' ?></li>
+							<li>writeDate (작성일자) : <?= $result->writeDate ?></li>
+
+              <li>invoicerCorpName (공급자 상호) : <?= $result->invoicerCorpName ?></li>
+							<li>invoicerCorpNum (공급자 사업자번호) : <?= $result->invoicerCorpNum ?></li>
+							<li>invoicerMgtKey (공급자 문서관리번호) : <?= $result->invoicerMgtKey ?></li>
+							<li>invoicerPrintYN (공급자 인쇄여부) : <?= $result->invoicerPrintYN ? 'true' : 'false' ?></li>
+
+							<li>invoiceeCorpName (공급받는자 상호) : <?= $result->invoiceeCorpName ?></li>
+							<li>invoiceeCorpNum (공급받는자 사업자번호) : <?= $result->invoiceeCorpNum ?></li>
+							<li>invoiceeMgtKey (공급받는자 관리번호) : <?= $result->invoiceeMgtKey ?></li>
+							<li>invoiceePrintYN (공급받는자 인쇄여부) : <?= $result->invoiceePrintYN ? 'true' : 'false' ?></li>
+              <li>closeDownState (공급받는자 휴폐업상태) : <?= $result->closeDownState ?></li>
+              <li>closeDownStateDate (공급받는자 휴폐업일자) : <?= $result->closeDownStateDate ?></li>
+
+              <li>supplyCostTotal (공급가액 합계): <?= $result->supplyCostTotal ?></li>
+							<li>taxTotal (세액 합계) : <?= $result->taxTotal ?></li>
+							<li>issueDT (발행일시) : <?= $result->issueDT ?></li>
+							<li>preIssueDT (발행예정일시) : <?= $result->preIssueDT ?></li>
+							<li>stateDT (상태변경일시) : <?= $result->stateDT ?></li>
+							<li>openYN (개봉 여부) : <?= $result->openYN ? 'true' : 'false' ?></li>
+							<li>openDT (개봉 일시) : <?= $result->openDT ?></li>
+							<li>ntsresult (국세청 전송결과) : <?= $result->ntsresult ?></li>
+							<li>ntsconfirmNum (국세청승인번호) : <?= $result->ntsconfirmNum ?></li>
+							<li>ntssendDT (국세청 전송일시) : <?= $result->ntssendDT ?></li>
+							<li>ntsresultDT (국세청 결과 수신일시) : <?= $result->ntsresultDT ?></li>
+							<li>ntssendErrCode (전송실패 사유코드) : <?= $result->ntssendErrCode ?></li>
+							<li>stateMemo (상태메모) : <?= $result->stateMemo ?></li>
 					<?
 						}
 					?>
