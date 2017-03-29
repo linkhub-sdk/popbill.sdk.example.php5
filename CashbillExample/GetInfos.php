@@ -35,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 요약/상태정보 확인 - 대량</legend>
+				<legend>현금영수증 상태/요약정보 확인 - 대량</legend>
 				<ul>
 					<?
 						if ( isset($code) ) {
@@ -47,31 +47,30 @@
 							for ($i = 0; $i < Count($result); $i++) {
 					?>
 								<fieldset class="fieldset2">
-									<legend> 현금영수증 요약정보[<?= $i+1?>]</legend>
+									<legend> 현금영수증 상태/요약정보[<?= $i+1?>]</legend>
 									<ul>
-										<li> itemKey : <?= $result[$i]->itemKey ?></li>
-										<li> mgtKey : <?= $result[$i]->mgtKey ?></li>
-										<li> tradeDate : <?= $result[$i]->tradeDate ?></li>
-										<li> issueDT : <?= $result[$i]->issueDT ?></li>
-										<li> customerName : <?= $result[$i]->customerName ?></li>
-										<li> itemName : <?= $result[$i]->itemName ?></li>
-										<li> identityNum : <?= $result[$i]->identityNum ?></li>
-										<li> taxationType : <?= $result[$i]->taxationType ?></li>
-										<li> totalAmount : <?= $result[$i]->totalAmount ?></li>
-										<li> tradeUsage : <?= $result[$i]->tradeUsage ?></li>
-										<li> tradeType : <?= $result[$i]->tradeType ?></li>
-										<li> stateCode : <?= $result[$i]->stateCode ?></li>
-										<li> stateDT : <?= $result[$i]->stateDT ?></li>
-										<li> printYN : <?// $result[$i]->printYN ?></li>
-										<li> confirmNum : <?= $result[$i]->confirmNum ?></li>
-										<li> orgTradeDate : <?= $result[$i]->orgTradeDate ?></li>
-										<li> orgConfirmNum : <?= $result[$i]->orgConfirmNum ?></li>
-										<li> ntssendDT : <?= $result[$i]->ntssendDT ?></li>
-										<li> ntsresult : <?= $result[$i]->ntsresult ?></li>
-										<li> ntsresultDT : <?= $result[$i]->ntsresultDT ?></li>
-										<li> ntsresultCode : <?= $result[$i]->ntsresultCode ?></li>
-										<li> ntsresultMessage : <?= $result[$i]->ntsresultMessage ?></li>
-										<li> regDT : <?= $result[$i]->regDT ?></li>
+                    <li> itemKey (현금영수증 아이템키) : <?= $result[$i]->itemKey ?></li>
+    								<li> mgtKey (문서관리번호) : <?= $result[$i]->mgtKey ?></li>
+    								<li> tradeDate (거래일자) : <?= $result[$i]->tradeDate ?></li>
+    								<li> issueDT (발행일시) : <?= $result[$i]->issueDT ?></li>
+                    <li> regDT (등록일시) : <?= $result[$i]->regDT ?></li>
+                    <li> customerName (고객명) : <?= $result[$i]->customerName ?></li>
+    								<li> itemName (상품명) : <?= $result[$i]->itemName ?></li>
+    								<li> identityNum (거래처 식별번호) : <?= $result[$i]->identityNum ?></li>
+    								<li> taxationType (과세형태) : <?= $result[$i]->taxationType ?></li>
+    								<li> totalAmount (거래금액) : <?= $result[$i]->totalAmount ?></li>
+    								<li> tradeUsage (거래용도) : <?= $result[$i]->tradeUsage ?></li>
+    								<li> tradeType (현금영수증 형태) : <?= $result[$i]->tradeType ?></li>
+    								<li> stateCode (상태코드) : <?= $result[$i]->stateCode ?></li>
+    								<li> stateDT (상태변경일시) : <?= $result[$i]->stateDT ?></li>
+    								<li> printYN (인쇄여부) : <?= $result[$i]->printYN ?></li>
+    								<li> confirmNum (국세청 승인번호) : <?= $result[$i]->confirmNum ?></li>
+    								<li> ntssendDT (국세청 전송일시) : <?= $result[$i]->ntssendDT ?></li>
+    								<li> ntsresultDT (국세청 처리결과 수신일시) : <?= $result[$i]->ntsresultDT ?></li>
+    								<li> ntsresultCode (국세청 처리결과 상태코드) : <?= $result[$i]->ntsresultCode ?></li>
+    								<li> ntsresultMessage (국세청 처리결과 메시지) : <?= $result[$i]->ntsresultMessage ?></li>
+                    <li> orgTradeDate (원본 현금영수증 거래일자) : <?= $result[$i]->orgTradeDate ?></li>
+    								<li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?= $result[$i]->orgConfirmNum ?></li>
 									</ul>
 								</fieldset>
 					<?

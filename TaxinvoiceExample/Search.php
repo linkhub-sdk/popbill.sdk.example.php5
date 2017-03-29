@@ -109,7 +109,7 @@
 							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 								<fieldset class="fieldset2">
-									<legend> 조회결과 [<?= $i+1?>]</legend>
+									<legend> 세금계산서 상태/요약 정보 [<?= $i+1?>]</legend>
 									<ul>
                     <li>itemKey (팝빌 관리번호) : <?= $result->list[$i]->itemKey ?></li>
                     <li>stateCode (상태코드) : <?= $result->list[$i]->stateCode ?></li>

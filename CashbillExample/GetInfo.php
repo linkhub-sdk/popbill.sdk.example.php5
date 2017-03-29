@@ -43,29 +43,28 @@
 						} else {
 							{
 					?>
-								<li> itemKey : <?= $result->itemKey ?></li>
-								<li> mgtKey : <?= $result->mgtKey ?></li>
-								<li> tradeDate : <?= $result->tradeDate ?></li>
-								<li> issueDT : <?= $result->issueDT ?></li>
-								<li> customerName : <?= $result->customerName ?></li>
-								<li> itemName : <?= $result->itemName ?></li>
-								<li> identityNum : <?= $result->identityNum ?></li>
-								<li> taxationType : <?= $result->taxationType ?></li>
-								<li> totalAmount : <?= $result->totalAmount ?></li>
-								<li> tradeUsage : <?= $result->tradeUsage ?></li>
-								<li> tradeType : <?= $result->tradeType ?></li>
-								<li> stateCode : <?= $result->stateCode ?></li>
-								<li> stateDT : <?= $result->stateDT ?></li>
-								<li> printYN : <?= $result->printYN ?></li>
-								<li> confirmNum : <?= $result->confirmNum ?></li>
-								<li> orgTradeDate : <?= $result->orgTradeDate ?></li>
-								<li> orgConfirmNum : <?= $result->orgConfirmNum ?></li>
-								<li> ntssendDT : <?= $result->ntssendDT ?></li>
-								<li> ntsresult : <?= $result->ntsresult ?></li>
-								<li> ntsresultDT : <?= $result->ntsresultDT ?></li>
-								<li> ntsresultCode : <?= $result->ntsresultCode ?></li>
-								<li> ntsresultMessage : <?= $result->ntsresultMessage ?></li>
-								<li> regDT : <?= $result->regDT ?></li>
+								<li> itemKey (현금영수증 아이템키) : <?= $result->itemKey ?></li>
+								<li> mgtKey (문서관리번호) : <?= $result->mgtKey ?></li>
+								<li> tradeDate (거래일자) : <?= $result->tradeDate ?></li>
+								<li> issueDT (발행일시) : <?= $result->issueDT ?></li>
+                <li> regDT (등록일시) : <?= $result->regDT ?></li>
+                <li> customerName (고객명) : <?= $result->customerName ?></li>
+								<li> itemName (상품명) : <?= $result->itemName ?></li>
+								<li> identityNum (거래처 식별번호) : <?= $result->identityNum ?></li>
+								<li> taxationType (과세형태) : <?= $result->taxationType ?></li>
+								<li> totalAmount (거래금액) : <?= $result->totalAmount ?></li>
+								<li> tradeUsage (거래용도) : <?= $result->tradeUsage ?></li>
+								<li> tradeType (현금영수증 형태) : <?= $result->tradeType ?></li>
+								<li> stateCode (상태코드) : <?= $result->stateCode ?></li>
+								<li> stateDT (상태변경일시) : <?= $result->stateDT ?></li>
+								<li> printYN (인쇄여부) : <?= $result->printYN ?></li>
+								<li> confirmNum (국세청 승인번호) : <?= $result->confirmNum ?></li>
+								<li> ntssendDT (국세청 전송일시) : <?= $result->ntssendDT ?></li>
+								<li> ntsresultDT (국세청 처리결과 수신일시) : <?= $result->ntsresultDT ?></li>
+								<li> ntsresultCode (국세청 처리결과 상태코드) : <?= $result->ntsresultCode ?></li>
+								<li> ntsresultMessage (국세청 처리결과 메시지) : <?= $result->ntsresultMessage ?></li>
+                <li> orgTradeDate (원본 현금영수증 거래일자) : <?= $result->orgTradeDate ?></li>
+								<li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?= $result->orgConfirmNum ?></li>
 					<?
 							}
 						}

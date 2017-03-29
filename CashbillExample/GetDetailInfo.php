@@ -42,30 +42,30 @@
 					<?
 						} else {
 					?>
-  						<li>mgtKey : <?= $result->mgtKey?> </li>
-  						<li>tradeDate : <?= $result->tradeDate?> </li>
-  						<li>tradeUsage : <?= $result->tradeUsage?> </li>
-  						<li>tradeType : <?= $result->tradeType ?> </li>
-  						<li>taxationType : <?= $result->taxationType ?> </li>
-  						<li>supplyCost : <?= $result->supplyCost ?> </li>
-  						<li>tax : <?= $result->tax ?> </li>
-  						<li>serviceFee : <?= $result->serviceFee ?> </li>
-  						<li>totalAmount : <?= $result->totalAmount ?> </li>
-  						<li>franchiseCorpNum : <?= $result->franchiseCorpNum ?> </li>
-  						<li>franchiseCorpName : <?= $result->franchiseCorpName ?> </li>
-  						<li>franchiseCEOName : <?= $result->franchiseCEOName ?> </li>
-  						<li>franchiseAddr : <?= $result->franchiseAddr ?> </li>
-  						<li>franchiseTEL : <?= $result->franchiseTEL ?> </li>
-  						<li>identityNum : <?= $result->identityNum ?> </li>
-  						<li>customerName : <?= $result->customerName ?> </li>
-  						<li>itemName : <?= $result->itemName ?> </li>
-  						<li>orderNumber : <?= $result->orderNumber ?> </li>
-  						<li>email : <?= $result->email ?> </li>
-  						<li>hp : <?= $result->hp ?> </li>
-  						<li>fax : <?= $result->fax ?> </li>
-  						<li>smssendYN : <?= $result->smssendYN ?> </li>
-  						<li>faxsendYN : <?= $result->faxsendYN ?> </li>
-  						<li>orgConfirmNum : <?= $result->orgConfirmNum ?> </li>
+  						<li>mgtKey (현금영수증 관리번호) : <?= $result->mgtKey ?> </li>
+              <li>tradeDate (거래일자) : <?= $result->tradeDate ?> </li>
+  						<li>tradeUsage (거래유형) : <?= $result->tradeUsage ?> </li>
+  						<li>tradeType (현금영수증 형태) : <?= $result->tradeType ?> </li>
+  						<li>taxationType (과세형태) : <?= $result->taxationType ?> </li>
+  						<li>supplyCost (공급가액) : <?= $result->supplyCost ?> </li>
+  						<li>tax (세액) : <?= $result->tax ?> </li>
+  						<li>serviceFee (봉사료) : <?= $result->serviceFee ?> </li>
+  						<li>totalAmount (거래금액) : <?= $result->totalAmount ?> </li>
+
+  						<li>franchiseCorpNum (발행자 사업자번호) : <?= $result->franchiseCorpNum ?> </li>
+  						<li>franchiseCorpName (발행자 상호) : <?= $result->franchiseCorpName ?> </li>
+  						<li>franchiseCEOName (발행자 대표자 성명) : <?= $result->franchiseCEOName ?> </li>
+  						<li>franchiseAddr (발행자 주소) : <?= $result->franchiseAddr ?> </li>
+  						<li>franchiseTEL (발행자 연락처) : <?= $result->franchiseTEL ?> </li>
+
+  						<li>identityNum (거래처 식별번호) : <?= $result->identityNum ?> </li>
+  						<li>customerName (고객명) : <?= $result->customerName ?> </li>
+  						<li>itemName (상품명) : <?= $result->itemName ?> </li>
+  						<li>orderNumber (가맹점주문번호) : <?= $result->orderNumber ?> </li>
+  						<li>email (고객 이메일) : <?= $result->email ?> </li>
+  						<li>hp (고객 휴대폰번호) : <?= $result->hp ?> </li>
+  						<li>smssendYN (발행 안내문자 전송여부) : <?= $result->smssendYN ?> </li>
+  						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?= $result->orgConfirmNum ?> </li>
 					<?
 						}
 					?>
