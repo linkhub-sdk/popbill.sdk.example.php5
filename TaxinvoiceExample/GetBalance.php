@@ -14,7 +14,7 @@
 	include 'common.php';
 
   // 팝빌회원 사업자번호
-	$testCorpNum = '123467890';
+	$testCorpNum = '1234567890';
 
 	try {
 		$remainPoint = $TaxinvoiceService->GetBalance($testCorpNum);

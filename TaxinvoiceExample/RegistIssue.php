@@ -20,7 +20,7 @@
 
   // 세금계산서 문서관리번호
   // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-  $invoicerMgtKey = '20170302-02';
+  $invoicerMgtKey = '20170407-02';
 
   // 지연발행 강제여부
 	$forceIssue = false;
@@ -48,7 +48,7 @@
 	$Taxinvoice = new Taxinvoice();
 
   // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-	$Taxinvoice->writeDate = '20170302';
+	$Taxinvoice->writeDate = '20170407';
 
   // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
 	$Taxinvoice->issueType = '정발행';
