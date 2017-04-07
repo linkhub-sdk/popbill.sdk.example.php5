@@ -20,7 +20,7 @@
   $mgtKeyType = ENumMgtKeyType::SELL;
 
   // 세금계산서 문서관리번호
-	$mgtKey = '20170407-01';
+	$mgtKey = '20170407-04';
 
   // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
 	$filePath = './uploadtest.jpg';
