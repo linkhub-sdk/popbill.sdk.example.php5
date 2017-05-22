@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 1건의 세금계산서를 임시저장 합니다.
   * - 세금계산서 임시저장(Register API) 호출후에는 발행(Issue API)을 호출해야만
@@ -277,8 +277,8 @@
 			<fieldset class="fieldset1">
 				<legend>전자세금계산서 임시저장</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 역발행 세금계산서를 [취소] 처리합니다.
   * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)
@@ -42,8 +42,8 @@
 			<fieldset class="fieldset1">
 				<legend>역발행 요청 취소</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

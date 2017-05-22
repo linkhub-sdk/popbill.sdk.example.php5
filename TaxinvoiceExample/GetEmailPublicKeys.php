@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 대용량 연계사업자 유통메일주소 목록을 반환합니다.
   */
@@ -29,28 +29,28 @@
 			<fieldset class="fieldset1">
 				<legend>ASP사업자 유통메일 목록 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($emailList) ) {
 							for ( $i = 0; $i < Count($emailList); $i++){
 					?>
 							 <fieldset class ="fieldset2">
 							 <ul>
-					<?
+					<?php
 								foreach ( $emailList[$i] as $key=>$val) {
 					?>
-									<li> <?= $key; ?> : <?= $val; ?> </li>
-					<?
+									<li> <?php echo $key; ?> : <?php echo $val; ?> </li>
+					<?php
 								}
 					?>
 							</ul>
 							</fieldset>
-					<?
+					<?php
 							}
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
 * 팜빌 전자세금계산서 API PHP SDK Example
 *
@@ -30,7 +30,7 @@ $SecretKey = 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I=';
 // STREAM 사용시에는 php.ini의 allow_fopen_url = on 으로 설정해야함.
 define('LINKHUB_COMM_MODE','CURL');
 
-$TaxinvoiceService = new TaxinvoiceService($LinkID,$SecretKey);
+$TaxinvoiceService = new TaxinvoiceService($LinkID, $SecretKey);
 
 // 연동환경 설정값, 개발용(true), 상업용(false)
 $TaxinvoiceService->IsTest(true);

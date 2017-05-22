@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 세금계산서 첨부파일 목록을 확인합니다.
   * - 응답항목 중 파일아이디(AttachedFile) 항목은 파일삭제(DeleteFile API)
@@ -37,26 +37,26 @@
 			<fieldset class="fieldset1">
 				<legend>세금계산서 첨부파일 목록 확인 </legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 
-						for ($i = 0; $i < Count($result) ; $i++) {
+						for ( $i = 0; $i < Count($result) ; $i++ ) {
 					?>
 							<fieldset class ="fieldset2">
-								<legend> 첨부파일 [<?= $i+1 ?>] </legend>
+								<legend> 첨부파일 [<?php echo $i+1 ?>] </legend>
 								<ul>
-									<li> serialNum : <?= $result[$i]->serialNum; ?></li>
-									<li> displayName : <?= $result[$i]->displayName; ?></li>
-									<li> attachedFile : <?= $result[$i]->attachedFile; ?></li>
-									<li> regDT : <?= $result[$i]->regDT; ?></li>
+									<li> serialNum : <?php echo $result[$i]->serialNum; ?></li>
+									<li> displayName : <?php echo $result[$i]->displayName; ?></li>
+									<li> attachedFile : <?php echo $result[$i]->attachedFile; ?></li>
+									<li> regDT : <?php echo $result[$i]->regDT; ?></li>
 								</ul>
 							</fieldset>
-					<?
+					<?php
 							}
 						}
 					?>

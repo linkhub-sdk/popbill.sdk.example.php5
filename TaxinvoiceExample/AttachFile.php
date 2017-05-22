@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 세금계산서에 첨부파일을 등록합니다.
   * - [임시저장] 상태의 세금계산서만 파일을 첨부할수 있습니다.
@@ -42,8 +42,8 @@
 			<fieldset class="fieldset1">
 				<legend>세금계산서 첨부파일 등록</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

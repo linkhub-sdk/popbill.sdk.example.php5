@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 1건의 [임시저장] 상태의 세금계산서를 [발행예정] 처리합니다.
   * - 발행예정이란 공급자와 공급받는자 사이에 세금계산서 확인 후 발행하는
@@ -47,8 +47,8 @@
 			<fieldset class="fieldset1">
 				<legend>발행예정</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

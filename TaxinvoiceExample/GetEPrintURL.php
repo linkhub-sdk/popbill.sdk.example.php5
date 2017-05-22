@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 세금계산서 인쇄(공급받는자) 팝업 URL을 반환합니다.
   * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
@@ -36,16 +36,16 @@
 			<fieldset class="fieldset1">
 				<legend>세금계산서 인쇄 팝업 URL - 공급받는자용</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($url) ) {
 					?>
-							<li>url : <?= $url ?></li>
-					<?
+							<li>url : <?php echo $url ?></li>
+					<?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

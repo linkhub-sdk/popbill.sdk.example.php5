@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 공급받는자가 공급자에게 1건의 역발행 세금계산서를 요청합니다.
   * - 역발행 세금계산서 프로세스를 구현하기 위해서는 공급자/공급받는자가 모두
@@ -45,8 +45,8 @@
 			<fieldset class="fieldset1">
 				<legend>역발행 요청</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

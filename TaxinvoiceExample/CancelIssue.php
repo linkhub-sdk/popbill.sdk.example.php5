@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * [발행완료] 상태의 세금계산서를 [발행취소] 처리합니다.
   * - [발행취소]는 국세청 전송전에만 가능합니다.
@@ -44,8 +44,8 @@
 			<fieldset class="fieldset1">
 				<legend>발행취소 확인</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>
