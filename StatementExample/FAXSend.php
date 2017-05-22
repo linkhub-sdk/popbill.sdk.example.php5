@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 팝빌에 전자명세서를 등록하지 않고 공급받는자에게 팩스전송합니다.
   * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
@@ -177,16 +177,16 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 선팩스전송</legend>
 					<ul>
-					<?
+					<?php
 						if ( isset($receiptNum) ) {
 					?>
-							<li>receiptNum(팩스전송 접수번호) : <?= $receiptNum?></li>
-					<?
+							<li>receiptNum(팩스전송 접수번호) : <?php echo $receiptNum?></li>
+					<?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 					</ul>

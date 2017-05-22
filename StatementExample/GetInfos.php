@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 다수건의 전자명세서 상태/요약 정보를 확인합니다.
   * - 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼] > 3.3.2.
@@ -41,40 +41,40 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 상태/요약정보 확인 - 대량</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 							for ($i = 0; $i < Count($result); $i++) {
 					?>
 							<fieldset class="fieldset2">
-								<legend> 전자명세서 상태/요약정보[<?= $i+1?>]</legend>
+								<legend> 전자명세서 상태/요약정보[<?php echo $i+1?>]</legend>
 								<ul>
-									<li> itemKey : <?= $result[$i]->itemKey ?></li>
-									<li> stateCode : <?= $result[$i]->stateCode ?></li>
-									<li> taxType : <?= $result[$i]->taxType ?></li>
-									<li> purposeType : <?= $result[$i]->purposeType ?></li>
-									<li> writeDate : <?= $result[$i]->writeDate ?></li>
-									<li> senderCorpName : <?= $result[$i]->senderCorpName ?></li>
-									<li> senderCorpNum : <?= $result[$i]->senderCorpNum ?></li>
-									<li> senderPrintYN : <?= $result[$i]->senderPrintYN ?></li>
-									<li> receiverCorpName : <?= $result[$i]->receiverCorpName ?></li>
-									<li> receiverCorpNum : <?= $result[$i]->receiverCorpNum ?></li>
-									<li> receiverPrintYN : <?= $result[$i]->receiverPrintYN ?></li>
-									<li> supplyCostTotal : <?= $result[$i]->supplyCostTotal ?></li>
-									<li> taxTotal : <?= $result[$i]->taxTotal ?></li>
-									<li> issueDT : <?= $result[$i]->issueDT ?></li>
-									<li> stateDT : <?= $result[$i]->stateDT ?></li>
-									<li> openYN : <?= $result[$i]->openYN ?></li>
-									<li> openDT : <?= $result[$i]->openDT ?></li>
-									<li> stateMemo : <?= $result[$i]->stateMemo ?></li>
-									<li> regDT : <?= $result[$i]->regDT ?></li>
+									<li> itemKey : <?php echo $result[$i]->itemKey ?></li>
+									<li> stateCode : <?php echo $result[$i]->stateCode ?></li>
+									<li> taxType : <?php echo $result[$i]->taxType ?></li>
+									<li> purposeType : <?php echo $result[$i]->purposeType ?></li>
+									<li> writeDate : <?php echo $result[$i]->writeDate ?></li>
+									<li> senderCorpName : <?php echo $result[$i]->senderCorpName ?></li>
+									<li> senderCorpNum : <?php echo $result[$i]->senderCorpNum ?></li>
+									<li> senderPrintYN : <?php echo $result[$i]->senderPrintYN ?></li>
+									<li> receiverCorpName : <?php echo $result[$i]->receiverCorpName ?></li>
+									<li> receiverCorpNum : <?php echo $result[$i]->receiverCorpNum ?></li>
+									<li> receiverPrintYN : <?php echo $result[$i]->receiverPrintYN ?></li>
+									<li> supplyCostTotal : <?php echo $result[$i]->supplyCostTotal ?></li>
+									<li> taxTotal : <?php echo $result[$i]->taxTotal ?></li>
+									<li> issueDT : <?php echo $result[$i]->issueDT ?></li>
+									<li> stateDT : <?php echo $result[$i]->stateDT ?></li>
+									<li> openYN : <?php echo $result[$i]->openYN ?></li>
+									<li> openDT : <?php echo $result[$i]->openDT ?></li>
+									<li> stateMemo : <?php echo $result[$i]->stateMemo ?></li>
+									<li> regDT : <?php echo $result[$i]->regDT ?></li>
 								</ul>
 							</fieldset>
-					<?
+					<?php
 							}
 						}
 					?>

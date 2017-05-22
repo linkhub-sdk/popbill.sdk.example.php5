@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 전자명세서에 첨부된 파일을 삭제합니다.
   * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
@@ -42,8 +42,8 @@
 			<fieldset class="fieldset1">
 				<legend>첨부파일 삭제 </legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

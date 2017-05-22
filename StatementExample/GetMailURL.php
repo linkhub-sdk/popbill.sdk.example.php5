@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 공급받는자 메일링크 URL을 반환합니다.
   * - 메일링크 URL은 유효시간이 존재하지 않습니다.
@@ -36,16 +36,16 @@
 			<fieldset class="fieldset1">
 				<legend>메일 링크 URL </legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($url) ) {
 					?>
-							<li>url : <?= $url ?></li>
-					<?
+							<li>url : <?php echo $url ?></li>
+					<?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

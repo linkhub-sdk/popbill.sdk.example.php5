@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 전자명세서에 첨부파일을 등록합니다.
   * - 첨부파일 등록은 전자명세서가 [임시저장] 상태인 경우에만 가능합니다.
@@ -42,8 +42,8 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 첨부파일 등록</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

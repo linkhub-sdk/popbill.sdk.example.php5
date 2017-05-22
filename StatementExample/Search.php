@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 검색조건을 사용하여 전자명세서 목록을 조회합니다.
   * - 응답항목에 대한 자세한 사항은 "[전자명세서 API 연동매뉴얼] >
@@ -70,50 +70,49 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 목록조회</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
           ?>
-              <li>code : <?= $result->code ?> </li>
-              <li>total : <?= $result->total ?> </li>
-              <li>pageNum : <?= $result->pageNum ?> </li>
-              <li>perPage : <?= $result->perPage ?> </li>
-              <li>pageCount : <?= $result->pageCount ?> </li>
-              <li>message : <?= $result->message ?> </li>
-
-          <?
+              <li>code : <?php echo $result->code ?> </li>
+              <li>total : <?php echo $result->total ?> </li>
+              <li>pageNum : <?php echo $result->pageNum ?> </li>
+              <li>perPage : <?php echo $result->perPage ?> </li>
+              <li>pageCount : <?php echo $result->pageCount ?> </li>
+              <li>message : <?php echo $result->message ?> </li>
+          <?php
 							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 							<fieldset class="fieldset2">
-								<legend> 전자명세서 요약정보[<?= $i+1?>]</legend>
+								<legend> 전자명세서 요약정보[<?php echo $i+1?>]</legend>
 								<ul>
-									<li> mgtKey : <?= $result->list[$i]->mgtKey ?></li>
-									<li> writeDate : <?= $result->list[$i]->writeDate ?></li>
-                  <li> itemKey : <?= $result->list[$i]->itemKey ?></li>
-									<li> stateCode : <?= $result->list[$i]->stateCode ?></li>
-									<li> taxType : <?= $result->list[$i]->taxType ?></li>
-									<li> purposeType : <?= $result->list[$i]->purposeType ?></li>
-									<li> senderCorpName : <?= $result->list[$i]->senderCorpName ?></li>
-									<li> senderCorpNum : <?= $result->list[$i]->senderCorpNum ?></li>
-									<li> senderPrintYN : <?= $result->list[$i]->senderPrintYN ?></li>
-									<li> receiverCorpName : <?= $result->list[$i]->receiverCorpName ?></li>
-									<li> receiverCorpNum : <?= $result->list[$i]->receiverCorpNum ?></li>
-									<li> receiverPrintYN : <?= $result->list[$i]->receiverPrintYN ?></li>
-									<li> supplyCostTotal : <?= $result->list[$i]->supplyCostTotal ?></li>
-									<li> taxTotal : <?= $result->list[$i]->taxTotal ?></li>
-									<li> issueDT : <?= $result->list[$i]->issueDT ?></li>
-									<li> stateDT : <?= $result->list[$i]->stateDT ?></li>
-									<li> openYN : <?= $result->list[$i]->openYN ?></li>
-									<li> openDT : <?= $result->list[$i]->openDT ?></li>
-									<li> stateMemo : <?= $result->list[$i]->stateMemo ?></li>
-									<li> regDT : <?= $result->list[$i]->regDT ?></li>
+									<li> mgtKey : <?php echo $result->list[$i]->mgtKey ?></li>
+									<li> writeDate : <?php echo $result->list[$i]->writeDate ?></li>
+                  <li> itemKey : <?php echo $result->list[$i]->itemKey ?></li>
+									<li> stateCode : <?php echo $result->list[$i]->stateCode ?></li>
+									<li> taxType : <?php echo $result->list[$i]->taxType ?></li>
+									<li> purposeType : <?php echo $result->list[$i]->purposeType ?></li>
+									<li> senderCorpName : <?php echo $result->list[$i]->senderCorpName ?></li>
+									<li> senderCorpNum : <?php echo $result->list[$i]->senderCorpNum ?></li>
+									<li> senderPrintYN : <?php echo $result->list[$i]->senderPrintYN ?></li>
+									<li> receiverCorpName : <?php echo $result->list[$i]->receiverCorpName ?></li>
+									<li> receiverCorpNum : <?php echo $result->list[$i]->receiverCorpNum ?></li>
+									<li> receiverPrintYN : <?php echo $result->list[$i]->receiverPrintYN ?></li>
+									<li> supplyCostTotal : <?php echo $result->list[$i]->supplyCostTotal ?></li>
+									<li> taxTotal : <?php echo $result->list[$i]->taxTotal ?></li>
+									<li> issueDT : <?php echo $result->list[$i]->issueDT ?></li>
+									<li> stateDT : <?php echo $result->list[$i]->stateDT ?></li>
+									<li> openYN : <?php echo $result->list[$i]->openYN ?></li>
+									<li> openDT : <?php echo $result->list[$i]->openDT ?></li>
+									<li> stateMemo : <?php echo $result->list[$i]->stateMemo ?></li>
+									<li> regDT : <?php echo $result->list[$i]->regDT ?></li>
 								</ul>
 							</fieldset>
-					<?
+					<?php
 							}
 						}
 					?>

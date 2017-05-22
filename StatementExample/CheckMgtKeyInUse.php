@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 전자명세서 관리번호 중복여부를 확인합니다.
   * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합하여 사업자별로 중복되지 않도록 구성해야합니다.
@@ -37,16 +37,16 @@
 			<fieldset class="fieldset1">
 				<legend>문서관리번호 사용여부 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-							<li>문서관리번호 사용여부 : <?= $result ?></li>
-					<?
+							<li>문서관리번호 사용여부 : <?php echo $result ?></li>
+					<?php
 						}
 					?>
 				</ul>
