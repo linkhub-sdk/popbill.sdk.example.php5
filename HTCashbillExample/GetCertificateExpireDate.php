@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
   */
@@ -29,16 +29,16 @@
 			<fieldset class="fieldset1">
 				<legend>홈택스 연계 공인인증서 만료일시 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset ( $ExpireDate ) ) {
 					?>
-							<li>ExpireDate(만료일시) : <?= $ExpireDate ?></li>
-					<?
+							<li>ExpireDate(만료일시) : <?php echo $ExpireDate ?></li>
+					<?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

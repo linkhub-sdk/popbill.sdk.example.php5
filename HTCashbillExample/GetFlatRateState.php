@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 연동회원의 정액제 서비스 이용상태를 확인합니다.
   */
@@ -29,24 +29,24 @@
 			<fieldset class="fieldset1">
 				<legend>정액제 서비스 상태 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset ( $code ) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						<li>referenceID (사업자번호) : <?= $result->referenceID ?></li>
-            <li>contractDT (정액제 서비스 시작일시) : <?= $result->contractDT ?></li>
-            <li>useEndDate (정액제 서비스 종료일) : <?= $result->useEndDate ?></li>
-            <li>baseDate (자동연장 결제일) : <?= $result->baseDate ?></li>
-            <li>state (정액제 서비스 상태) : <?= $result->state ?></li>
-            <li>closeRequestYN (정액제 서비스 해지신청 여부) : <?= $result->closeRequestYN ? 'true' : 'false' ?></li>
-            <li>useRestrictYN (정액제 서비스 사용제한 여부) : <?= $result->useRestrictYN ? 'true' : 'false' ?></li>
-            <li>closeOnExpired (정액제 서비스 만료 시 해지여부) : <?= $result->closeOnExpired  ? 'true' : 'false' ?></li>
-            <li>unPaidYN (미수금 보유 여부) : <?= $result->unPaidYN ? 'true' : 'false' ?></li>
-					<?
+						<li>referenceID (사업자번호) : <?php echo $result->referenceID ?></li>
+            <li>contractDT (정액제 서비스 시작일시) : <?php echo $result->contractDT ?></li>
+            <li>useEndDate (정액제 서비스 종료일) : <?php echo $result->useEndDate ?></li>
+            <li>baseDate (자동연장 결제일) : <?php echo $result->baseDate ?></li>
+            <li>state (정액제 서비스 상태) : <?php echo $result->state ?></li>
+            <li>closeRequestYN (정액제 서비스 해지신청 여부) : <?php echo $result->closeRequestYN ? 'true' : 'false' ?></li>
+            <li>useRestrictYN (정액제 서비스 사용제한 여부) : <?php echo $result->useRestrictYN ? 'true' : 'false' ?></li>
+            <li>closeOnExpired (정액제 서비스 만료 시 해지여부) : <?php echo $result->closeOnExpired  ? 'true' : 'false' ?></li>
+            <li>unPaidYN (미수금 보유 여부) : <?php echo $result->unPaidYN ? 'true' : 'false' ?></li>
+					<?php
 						}
 					?>
 				</ul>

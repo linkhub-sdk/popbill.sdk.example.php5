@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 연동회원의 회사정보를 확인합니다.
   */
@@ -29,20 +29,20 @@
 			<fieldset class="fieldset1">
 				<legend>회사정보 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						<li>ceoname : <?= $result->ceoname ?></li>
-						<li>corpName : <?= $result->corpName ?></li>
-						<li>addr : <?= $result->addr  ?></li>
-						<li>bizType : <?= $result->bizType ?></li>
-						<li>bizClass : <?= $result->bizClass ?></li>
-					<?
+						<li>ceoname : <?php echo $result->ceoname ?></li>
+						<li>corpName : <?php echo $result->corpName ?></li>
+						<li>addr : <?php echo $result->addr  ?></li>
+						<li>bizType : <?php echo $result->bizType ?></li>
+						<li>bizClass : <?php echo $result->bizClass ?></li>
+					<?php
 						}
 					?>
 				</ul>

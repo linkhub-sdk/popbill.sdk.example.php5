@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 수집 요청 상태를 확인합니다.
   * - 응답항목 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼
@@ -34,27 +34,27 @@
 			<fieldset class="fieldset1">
 				<legend>수집 상태 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset ( $code ) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						<li>jobID (작업아이디) : <?= $result->jobID ?></li>
-            <li>jobState (수집상태) : <?= $result->jobState ?></li>
-            <li>queryType (수집유형) : <?= $result->queryType ?></li>
-            <li>queryDateType (일자유형) : <?= $result->queryDateType ?></li>
-            <li>queryStDate (시작일자) : <?= $result->queryStDate ?></li>
-            <li>queryEnDate (종료일자) : <?= $result->queryEnDate ?></li>
-            <li>errorCode (오류코드) : <?= $result->errorCode ?></li>
-            <li>errorReason (오류메시지) : <?= $result->errorReason ?></li>
-            <li>jobStartDT (작업 시작일시) : <?= $result->jobStartDT ?></li>
-            <li>jobEndDT (작업 종료일시) : <?= $result->jobEndDT ?></li>
-            <li>collectCount (수집개수) : <?= $result->collectCount ?></li>
-            <li>regDT (수집 요청일시) : <?= $result->regDT ?></li>
-					<?
+						<li>jobID (작업아이디) : <?php echo $result->jobID ?></li>
+            <li>jobState (수집상태) : <?php echo $result->jobState ?></li>
+            <li>queryType (수집유형) : <?php echo $result->queryType ?></li>
+            <li>queryDateType (일자유형) : <?php echo $result->queryDateType ?></li>
+            <li>queryStDate (시작일자) : <?php echo $result->queryStDate ?></li>
+            <li>queryEnDate (종료일자) : <?php echo $result->queryEnDate ?></li>
+            <li>errorCode (오류코드) : <?php echo $result->errorCode ?></li>
+            <li>errorReason (오류메시지) : <?php echo $result->errorReason ?></li>
+            <li>jobStartDT (작업 시작일시) : <?php echo $result->jobStartDT ?></li>
+            <li>jobEndDT (작업 종료일시) : <?php echo $result->jobEndDT ?></li>
+            <li>collectCount (수집개수) : <?php echo $result->collectCount ?></li>
+            <li>regDT (수집 요청일시) : <?php echo $result->regDT ?></li>
+					<?php
 						}
 					?>
 				</ul>

@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 휴폐업조회 API 서비스 과금정보를 확인합니다.
   */
@@ -32,18 +32,18 @@
 			<fieldset class="fieldset1">
 				<legend>과금정보 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						<li>unitCost(조회단가) : <?= $result->unitCost ?></li>
-						<li>chargeMethod(과금유형) : <?= $result->chargeMethod ?></li>
-						<li>rateSystem(과금제도) : <?= $result->rateSystem ?></li>
-					<?
+						<li>unitCost(조회단가) : <?php echo $result->unitCost ?></li>
+						<li>chargeMethod(과금유형) : <?php echo $result->chargeMethod ?></li>
+						<li>rateSystem(과금제도) : <?php echo $result->rateSystem ?></li>
+					<?php
 						}
 					?>
 				</ul>

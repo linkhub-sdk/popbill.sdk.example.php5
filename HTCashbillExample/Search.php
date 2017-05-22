@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
@@ -49,46 +49,45 @@
 			<fieldset class="fieldset1">
 				<legend>수집 결과 조회</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset ( $code ) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						  <li>code (응답코드) : <?= $response->code ?></li>
-              <li>message (응답메시지) : <?= $response->message ?></li>
-              <li>total (총 검색결고 건수) : <?= $response->total ?></li>
-              <li>perPage (페이지당 검색개수) : <?= $response->perPage ?></li>
-              <li>pageNum (페이지 번호) : <?= $response->pageNum ?></li>
-              <li>pageCount (페이지 개수) : <?= $response->pageCount ?></li>
-
-          <?
+						  <li>code (응답코드) : <?php echo $response->code ?></li>
+              <li>message (응답메시지) : <?php echo $response->message ?></li>
+              <li>total (총 검색결고 건수) : <?php echo $response->total ?></li>
+              <li>perPage (페이지당 검색개수) : <?php echo $response->perPage ?></li>
+              <li>pageNum (페이지 번호) : <?php echo $response->pageNum ?></li>
+              <li>pageCount (페이지 개수) : <?php echo $response->pageCount ?></li>
+          <?php
               for ( $i = 0; $i < Count ( $response->list ); $i++ ) {
           ?>
             <fieldset class="fieldset2">
-              <legend> 현금영수증 정보 [<?= $i+1?>]</legend>
+              <legend> 현금영수증 정보 [<?php echo $i+1?>]</legend>
               <ul>
-                <li>ntsconfirmNum (국세청승인번호) : <?= $response->list[$i]->ntsconfirmNum ?></li>
-                <li>tradeDT (거래일시) : <?= $response->list[$i]->tradeDT ?></li>
-                <li>tradeUsage (거래유형) : <?= $response->list[$i]->tradeUsage ?></li>
-                <li>tradeType (현금영수증 형태) : <?= $response->list[$i]->tradeType ?></li>
-                <li>supplyCost (공급가액) : <?= $response->list[$i]->supplyCost ?></li>
-                <li>tax (세액) : <?= $response->list[$i]->tax ?></li>
-                <li>serviceFee (봉사료) : <?= $response->list[$i]->serviceFee ?></li>
-                <li>totalAmount (거래금액) : <?= $response->list[$i]->totalAmount ?></li>
-                <li>franchiseCorpNum (발행자 사업자번호) : <?= $response->list[$i]->franchiseCorpNum ?></li>
-                <li>franchiseCorpName (발행자 상호) : <?= $response->list[$i]->franchiseCorpName ?></li>
-                <li>franchiseCorpType (발행자 사업자유형) : <?= $response->list[$i]->franchiseCorpType ?></li>
-                <li>identityNum (거래처 식별번호) : <?= $response->list[$i]->identityNum ?></li>
-                <li>identityNumType (식별번호유형) : <?= $response->list[$i]->identityNumType ?></li>
-                <li>customerName (고객명) : <?= $response->list[$i]->customerName ?></li>
-                <li>cardOwnerName (카드소유자명) : <?= $response->list[$i]->cardOwnerName ?></li>
-                <li>deductionType (공제유형) : <?= $response->list[$i]->deductionType ?></li>
+                <li>ntsconfirmNum (국세청승인번호) : <?php echo $response->list[$i]->ntsconfirmNum ?></li>
+                <li>tradeDT (거래일시) : <?php echo $response->list[$i]->tradeDT ?></li>
+                <li>tradeUsage (거래유형) : <?php echo $response->list[$i]->tradeUsage ?></li>
+                <li>tradeType (현금영수증 형태) : <?php echo $response->list[$i]->tradeType ?></li>
+                <li>supplyCost (공급가액) : <?php echo $response->list[$i]->supplyCost ?></li>
+                <li>tax (세액) : <?php echo $response->list[$i]->tax ?></li>
+                <li>serviceFee (봉사료) : <?php echo $response->list[$i]->serviceFee ?></li>
+                <li>totalAmount (거래금액) : <?php echo $response->list[$i]->totalAmount ?></li>
+                <li>franchiseCorpNum (발행자 사업자번호) : <?php echo $response->list[$i]->franchiseCorpNum ?></li>
+                <li>franchiseCorpName (발행자 상호) : <?php echo $response->list[$i]->franchiseCorpName ?></li>
+                <li>franchiseCorpType (발행자 사업자유형) : <?php echo $response->list[$i]->franchiseCorpType ?></li>
+                <li>identityNum (거래처 식별번호) : <?php echo $response->list[$i]->identityNum ?></li>
+                <li>identityNumType (식별번호유형) : <?php echo $response->list[$i]->identityNumType ?></li>
+                <li>customerName (고객명) : <?php echo $response->list[$i]->customerName ?></li>
+                <li>cardOwnerName (카드소유자명) : <?php echo $response->list[$i]->cardOwnerName ?></li>
+                <li>deductionType (공제유형) : <?php echo $response->list[$i]->deductionType ?></li>
               </ul>
             </fieldset>
-					<?
+					<?php
               }
 						}
 					?>

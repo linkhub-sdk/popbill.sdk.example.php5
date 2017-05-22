@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 전자(세금)계산서 매출/매입 내역 수집을 요청합니다
   * - 매출/매입 연계 프로세스는 "[홈택스 전자(세금)계산서 연계 API 연동매뉴얼]
@@ -44,16 +44,16 @@
 			<fieldset class="fieldset1">
 				<legend>수집 요청</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						<li>jobID(작업아이디) : <?= $jobID ?></li>
-					<?
+						<li>jobID(작업아이디) : <?php echo $jobID ?></li>
+					<?php
 						}
 					?>
 				</ul>

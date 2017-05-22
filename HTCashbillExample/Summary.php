@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 검색조건을 사용하여 수집 결과 요약정보를 조회합니다.
   * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
@@ -46,20 +46,20 @@
 			<fieldset class="fieldset1">
 				<legend>수집 결과 요약정보 조회</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset ( $code ) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 					?>
-						  <li>count (수집 결과 건수) : <?= $response->count ?></li>
-              <li>supplyCostTotal (공급가액 합계) : <?= $response->supplyCostTotal ?></li>
-              <li>taxTotal (세액 합계) : <?= $response->taxTotal ?></li>
-              <li>serviceFeeTotal (봉사료 합계) : <?= $response->serviceFeeTotal ?></li>
-              <li>amountTotal (합계 금액) : <?= $response->amountTotal ?></li>
-					<?
+						  <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
+              <li>supplyCostTotal (공급가액 합계) : <?php echo $response->supplyCostTotal ?></li>
+              <li>taxTotal (세액 합계) : <?php echo $response->taxTotal ?></li>
+              <li>serviceFeeTotal (봉사료 합계) : <?php echo $response->serviceFeeTotal ?></li>
+              <li>amountTotal (합계 금액) : <?php echo $response->amountTotal ?></li>
+					<?php
         	  }
 					?>
 				</ul>

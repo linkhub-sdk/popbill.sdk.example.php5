@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 연동회원의 담당자 목록을 확인합니다.
   */
@@ -29,31 +29,31 @@
 			<fieldset class="fieldset1">
 				<legend>담당자 목록 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
-					<?
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
 							for ($i = 0; $i < Count($result); $i++) {
 					?>
 							<fieldset class="fieldset2">
-							<legend> 담당자 정보 [<?= $i+1?>]</legend>
+							<legend> 담당자 정보 [<?php echo $i+1?>]</legend>
 							<ul>
-								<li>id : <?= $result[$i]->id ?></li>
-								<li>email : <?= $result[$i]->email ?></li>
-								<li>hp : <?= $result[$i]->hp ?></li>
-								<li>personName : <?= $result[$i]->personName ?></li>
-								<li>searchAllAllowYN : <?= $result[$i]->searchAllAllowYN ?></li>
-								<li>tel : <?= $result[$i]->tel ?></li>
-								<li>fax : <?= $result[$i]->fax ?></li>
-								<li>mgrYN : <?= $result[$i]->mgrYN ?></li>
-								<li>regDT : <?= $result[$i]->regDT ?></li>
+								<li>id : <?php echo $result[$i]->id ?></li>
+								<li>email : <?php echo $result[$i]->email ?></li>
+								<li>hp : <?php echo $result[$i]->hp ?></li>
+								<li>personName : <?php echo $result[$i]->personName ?></li>
+								<li>searchAllAllowYN : <?php echo $result[$i]->searchAllAllowYN ?></li>
+								<li>tel : <?php echo $result[$i]->tel ?></li>
+								<li>fax : <?php echo $result[$i]->fax ?></li>
+								<li>mgrYN : <?php echo $result[$i]->mgrYN ?></li>
+								<li>regDT : <?php echo $result[$i]->regDT ?></li>
 
 							</ul>
 							</fieldset>
-					<?
+					<?php
 							}
 						}
 					?>

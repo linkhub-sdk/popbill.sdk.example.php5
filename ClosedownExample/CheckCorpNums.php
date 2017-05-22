@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 다수의 사업자에 대한 휴폐업여부를 조회합니다. (최대 1000건)
   */
@@ -34,39 +34,39 @@
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
-			<?
+			<?php
 				if ( isset($code) ) {
 			?>
 
 				<fieldset class="fieldset2">
 					<ul>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
+						<li>Response.code : <?php echo $code ?> </li>
+						<li>Response.message : <?php echo $message ?></li>
 					</ul>
 				</fieldset>
-			<?
+			<?php
 				} else {
 			?>
 					<p class="info">> state (휴폐업상태) : null-알수없음, 0-등록되지 않은 사업자번호, 1-사업중, 2-폐업, 3-휴업</p>
 					<p class="info">> type (사업 유형) : null-알수없음, 1-일반과세자, 2-면세과세자, 3-간이과세자, 4-비영리법인, 국가기관</p>
 					<br/>
-				<?
-					for ($i = 0; $i < Count($result); $i++){
-				?>
-						<fieldset class="fieldset2">
-							<legend>휴폐업조회 결과 [ <?= $i+1?> ]</legend>
-							<ul>
-								<li>사업자번호(corpNum) : <?= $result[$i]->corpNum?></li>
-								<li>사업자유형(type) : <?= $result[$i]->type?></li>
-								<li>휴폐업상태(state) : <?= $result[$i]->state?></li>
-								<li>휴폐업일자(stateDate) : <?= $result[$i]->stateDate?></li>
-								<li>국세청 확일일자(checkDate) : <?= $result[$i]->checkDate?></li>
-							</ul>
-						</fieldset>
-				<?
-						}
+			<?php
+				for ($i = 0; $i < Count($result); $i++){
+			?>
+					<fieldset class="fieldset2">
+						<legend>휴폐업조회 결과 [ <?php echo $i+1?> ]</legend>
+						<ul>
+							<li>사업자번호(corpNum) : <?php echo $result[$i]->corpNum?></li>
+							<li>사업자유형(type) : <?php echo $result[$i]->type?></li>
+							<li>휴폐업상태(state) : <?php echo $result[$i]->state?></li>
+							<li>휴폐업일자(stateDate) : <?php echo $result[$i]->stateDate?></li>
+							<li>국세청 확일일자(checkDate) : <?php echo $result[$i]->checkDate?></li>
+						</ul>
+					</fieldset>
+			<?php
 					}
-				?>
+				}
+			?>
 		 </div>
 		 </script>
 	</body>
