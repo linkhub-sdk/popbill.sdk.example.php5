@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 1건의 현금영수증을 수정합니다.
   * - [임시저장] 상태의 현금영수증만 수정할 수 있습니다.
@@ -108,8 +108,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 수정</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

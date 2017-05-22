@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 연동회원의 담당자 정보를 수정합니다.
   */
@@ -17,11 +17,15 @@
   // 팝빌회원 아이디
 	$testUserID = 'testkorea';
 
+
   // 담당자 정보 객체 생성
 	$ContactInfo = new ContactInfo();
 
   // 담당자명
 	$ContactInfo->personName = '담당자_수정';
+
+  // 담당자 아이디
+	$ContactInfo->id = 'testkorea';
 
   // 담당자 연락처
 	$ContactInfo->tel = '070-4304-2991';
@@ -55,8 +59,8 @@
 			<fieldset class="fieldset1">
 				<legend>담당자 정보 수정</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

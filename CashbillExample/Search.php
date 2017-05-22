@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
   * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] >
@@ -79,51 +79,51 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 목록조회</legend>
 				<ul>
-   				<?
+   				<?php
 						if( isset ( $code ) ) {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						} else {
           ?>
-              <li>code (응답코드) : <?= $result->code ?> </li>
-              <li>total (총 검색결과 건수) : <?= $result->total ?> </li>
-              <li>pageNum (페이지 번호) : <?= $result->pageNum ?> </li>
-              <li>perPage (페이지당 목록개수) : <?= $result->perPage ?> </li>
-              <li>pageCount (페이지 개수) : <?= $result->pageCount ?> </li>
-              <li>message (응답메시지) : <?= $result->message ?> </li>
-          <?
+              <li>code (응답코드) : <?php echo $result->code ?> </li>
+              <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
+              <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
+              <li>perPage (페이지당 목록개수) : <?php echo $result->perPage ?> </li>
+              <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
+              <li>message (응답메시지) : <?php echo $result->message ?> </li>
+          <?php
 							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 								<fieldset class="fieldset2">
-									<legend> 현금영수증 상태/요약 정보[<?= $i+1?>]</legend>
+									<legend> 현금영수증 상태/요약 정보[<?php echo $i+1?>]</legend>
 									<ul>
-                    <li> itemKey (현금영수증 아이템키) : <?= $result->list[$i]->itemKey ?></li>
-    								<li> mgtKey (문서관리번호) : <?= $result->list[$i]->mgtKey ?></li>
-    								<li> tradeDate (거래일자) : <?= $result->list[$i]->tradeDate ?></li>
-    								<li> issueDT (발행일시) : <?= $result->list[$i]->issueDT ?></li>
-                    <li> regDT (등록일시) : <?= $result->list[$i]->regDT ?></li>
-                    <li> customerName (고객명) : <?= $result->list[$i]->customerName ?></li>
-    								<li> itemName (상품명) : <?= $result->list[$i]->itemName ?></li>
-    								<li> identityNum (거래처 식별번호) : <?= $result->list[$i]->identityNum ?></li>
-    								<li> taxationType (과세형태) : <?= $result->list[$i]->taxationType ?></li>
-    								<li> totalAmount (거래금액) : <?= $result->list[$i]->totalAmount ?></li>
-    								<li> tradeUsage (거래용도) : <?= $result->list[$i]->tradeUsage ?></li>
-    								<li> tradeType (현금영수증 형태) : <?= $result->list[$i]->tradeType ?></li>
-    								<li> stateCode (상태코드) : <?= $result->list[$i]->stateCode ?></li>
-    								<li> stateDT (상태변경일시) : <?= $result->list[$i]->stateDT ?></li>
-    								<li> printYN (인쇄여부) : <?= $result->list[$i]->printYN ?></li>
-    								<li> confirmNum (국세청 승인번호) : <?= $result->list[$i]->confirmNum ?></li>
-    								<li> ntssendDT (국세청 전송일시) : <?= $result->list[$i]->ntssendDT ?></li>
-    								<li> ntsresultDT (국세청 처리결과 수신일시) : <?= $result->list[$i]->ntsresultDT ?></li>
-    								<li> ntsresultCode (국세청 처리결과 상태코드) : <?= $result->list[$i]->ntsresultCode ?></li>
-    								<li> ntsresultMessage (국세청 처리결과 메시지) : <?= $result->list[$i]->ntsresultMessage ?></li>
-                    <li> orgTradeDate (원본 현금영수증 거래일자) : <?= $result->list[$i]->orgTradeDate ?></li>
-    								<li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?= $result->list[$i]->orgConfirmNum ?></li>
+                    <li> itemKey (현금영수증 아이템키) : <?php echo $result->list[$i]->itemKey ?></li>
+    								<li> mgtKey (문서관리번호) : <?php echo $result->list[$i]->mgtKey ?></li>
+    								<li> tradeDate (거래일자) : <?php echo $result->list[$i]->tradeDate ?></li>
+    								<li> issueDT (발행일시) : <?php echo $result->list[$i]->issueDT ?></li>
+                    <li> regDT (등록일시) : <?php echo $result->list[$i]->regDT ?></li>
+                    <li> customerName (고객명) : <?php echo $result->list[$i]->customerName ?></li>
+    								<li> itemName (상품명) : <?php echo $result->list[$i]->itemName ?></li>
+    								<li> identityNum (거래처 식별번호) : <?php echo $result->list[$i]->identityNum ?></li>
+    								<li> taxationType (과세형태) : <?php echo $result->list[$i]->taxationType ?></li>
+    								<li> totalAmount (거래금액) : <?php echo $result->list[$i]->totalAmount ?></li>
+    								<li> tradeUsage (거래용도) : <?php echo $result->list[$i]->tradeUsage ?></li>
+    								<li> tradeType (현금영수증 형태) : <?php echo $result->list[$i]->tradeType ?></li>
+    								<li> stateCode (상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
+    								<li> stateDT (상태변경일시) : <?php echo $result->list[$i]->stateDT ?></li>
+    								<li> printYN (인쇄여부) : <?php echo $result->list[$i]->printYN ?></li>
+    								<li> confirmNum (국세청 승인번호) : <?php echo $result->list[$i]->confirmNum ?></li>
+    								<li> ntssendDT (국세청 전송일시) : <?php echo $result->list[$i]->ntssendDT ?></li>
+    								<li> ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result->list[$i]->ntsresultDT ?></li>
+    								<li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->list[$i]->ntsresultCode ?></li>
+    								<li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->list[$i]->ntsresultMessage ?></li>
+                    <li> orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->list[$i]->orgTradeDate ?></li>
+    								<li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->list[$i]->orgConfirmNum ?></li>
 									</ul>
 								</fieldset>
-					<?
+					<?php
 							}
 						}
 					?>

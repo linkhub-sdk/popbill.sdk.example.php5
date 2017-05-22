@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 현금영수증을 팩스전송합니다.
   * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
@@ -43,8 +43,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 팩스전송</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

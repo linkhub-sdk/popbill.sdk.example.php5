@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 팝빌 현금영수증 문서함 팝업 URL을 반환합니다.
   * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
@@ -36,16 +36,16 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 관련 URL 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($url) ) {
 					?>
-						  <li>url : <?= $url ?></li>
-					<?
+						  <li>url : <?php echo $url ?></li>
+					<?php
 						} else {
 					?>
-						  <li>Response.code : <?= $code ?> </li>
-						  <li>Response.message : <?= $message ?></li>
-					<?
+						  <li>Response.code : <?php echo $code ?> </li>
+						  <li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 1건의 임시저장 현금영수증을 발행처리합니다.
   * - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청
@@ -41,8 +41,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 발행</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

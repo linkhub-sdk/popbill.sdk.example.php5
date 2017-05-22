@@ -1,4 +1,4 @@
-<?
+<?php
   /**
   * 팜빌 현금영수증 API PHP SDK Example
   *

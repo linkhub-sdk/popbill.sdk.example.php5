@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 1건의 현금영수증을 임시저장 합니다.
   * - [임시저장] 상태의 현금영수증은 발행(Issue API)을 호출해야만 국세청에
@@ -115,8 +115,8 @@
 			<fieldset class="fieldset1">
 				<legend>현금영수증 임시저장</legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>
