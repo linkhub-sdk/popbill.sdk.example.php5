@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 예약전송 팩스요청건을 취소합니다.
   * - 예약전송 취소는 예약전송시간 10분전까지 가능합니다.
@@ -35,8 +35,8 @@
 			<fieldset class="fieldset1">
 				<legend>팩스 예약전송 취소 </legend>
 				<ul>
-					<li>Response.code : <?= $code ?></li>
-					<li>Response.message : <?= $message ?></li>
+					<li>Response.code : <?php echo $code ?></li>
+					<li>Response.message : <?php echo $message ?></li>
 				</ul>
 			</fieldset>
 		 </div>

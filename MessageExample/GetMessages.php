@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 문자전송요청에 대한 전송결과를 확인합니다.
   */
@@ -32,36 +32,36 @@
 			<fieldset class="fieldset1">
 				<legend>문자전송 내역 및 전송상태 확인 </legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($code) ) {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
 
-					<?
+					<?php
 						} else {
 							for ($i = 0; $i < Count($result); $i++) {
 					?>
 							<fieldset class="fieldset2">
-								<legend> 문자전송내역 조회 결과 [<?= $i+1 ?>/<?= Count($result)?>]</legend>
+								<legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result)?>]</legend>
 								<ul>
-									<li> state : <?= $result[$i]->state ?> </li>
-									<li> subject : <?= $result[$i]->subject ?> </li>
-									<li> type : <?= $result[$i]->type ?> </li>
-									<li> content : <?= $result[$i]->content ?> </li>
-									<li> sendNum : <?= $result[$i]->sendNum ?> </li>
-                  <li> senderName : <?= $result[$i]->senderName ?> </li>
-									<li> receiveNum : <?= $result[$i]->receiveNum ?> </li>
-									<li> receiveName : <?= $result[$i]->receiveName ?> </li>
-									<li> receiptDT : <?= $result[$i]->receiptDT ?> </li>
-                  <li> reserveDT : <?= $result[$i]->reserveDT ?> </li>
-									<li> sendDT : <?= $result[$i]->sendDT ?> </li>
-									<li> resultDT : <?= $result[$i]->resultDT ?> </li>
-									<li> result : <?= $result[$i]->result ?> </li>
-									<li> tranNet : <?= $result[$i]->tranNet ?> </li>
+									<li> state : <?php echo $result[$i]->state ?> </li>
+									<li> subject : <?php echo $result[$i]->subject ?> </li>
+									<li> type : <?php echo $result[$i]->type ?> </li>
+									<li> content : <?php echo $result[$i]->content ?> </li>
+									<li> sendNum : <?php echo $result[$i]->sendNum ?> </li>
+                  <li> senderName : <?php echo $result[$i]->senderName ?> </li>
+									<li> receiveNum : <?php echo $result[$i]->receiveNum ?> </li>
+									<li> receiveName : <?php echo $result[$i]->receiveName ?> </li>
+									<li> receiptDT : <?php echo $result[$i]->receiptDT ?> </li>
+                  <li> reserveDT : <?php echo $result[$i]->reserveDT ?> </li>
+									<li> sendDT : <?php echo $result[$i]->sendDT ?> </li>
+									<li> resultDT : <?php echo $result[$i]->resultDT ?> </li>
+									<li> result : <?php echo $result[$i]->result ?> </li>
+									<li> tranNet : <?php echo $result[$i]->tranNet ?> </li>
 								</ul>
 							</fieldset>
-					<?
+					<?php
 							}
 						}
 					?>

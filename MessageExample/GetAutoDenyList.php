@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 080 서비스 수신거부 목록을 확인합니다.
   */
@@ -29,34 +29,34 @@
 			<fieldset class="fieldset1">
 				<legend>080 수신거부목록 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset( $result ) ) {
           ?>
               <fieldset class="fieldset2">
               <ul>
-          <?
+          <?php
               for ( $i = 0; $i < Count ( $result ) ; $i++) {
 					?>
                 <li>
-          <?
+          <?php
                 foreach($result[$i] as $number=>$regDT) {
           ?>
-							  <?= $number ?> : <?= $regDT?>
-          <?
+							  <?php echo $number ?> : <?php echo $regDT?>
+          <?php
                 }
           ?>
                 </li>
-  				<?
+  				<?php
               }
           ?>
               </ul>
               </fieldset>
-          <?
+          <?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

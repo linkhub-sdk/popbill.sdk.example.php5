@@ -1,4 +1,4 @@
-<?
+<?php
   /**
   * 팜빌 홈택스 전자세금계산서 연계 API PHP SDK Example
   *

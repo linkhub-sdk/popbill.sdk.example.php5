@@ -4,11 +4,11 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
   /**
   * 팩스 전송단가를 확인합니다.
   */
-  
+
 	include 'common.php';
 
   // 팝빌 회원 사업자 번호, "-"제외 10자리
@@ -29,16 +29,16 @@
 			<fieldset class="fieldset1">
 				<legend>팩스 전송단가 확인</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($unitCost) ) {
 					?>
-							<li>팩스 전송단가 : <?= $unitCost ?></li>
-					<?
+							<li>팩스 전송단가 : <?php echo $unitCost ?></li>
+					<?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

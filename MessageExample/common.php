@@ -1,4 +1,4 @@
-<?
+<?php
   /**
   * 팜빌 팩스 API PHP SDK Example
   *

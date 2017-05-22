@@ -1,4 +1,4 @@
-<?
+<?php
   /**
   * 팜빌 홈택스 현금영수증 연계 API PHP SDK Example
   *

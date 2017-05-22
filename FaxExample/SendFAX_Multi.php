@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
-<?
+<?php
 	include 'common.php';
 
   // 팝빌 회원 사업자번호
@@ -49,16 +49,16 @@
 			<fieldset class="fieldset1">
 				<legend>팩스 전송 - 대량</legend>
 				<ul>
-					<?
+					<?php
 						if ( isset($receiptNum) ) {
 					?>
-							<li>receiptNum (팩스접수번호) : <?= $receiptNum ?></li>
-					<?
+							<li>receiptNum (팩스접수번호) : <?php echo $receiptNum ?></li>
+					<?php
 						} else {
 					?>
-							<li>Response.code : <?= $code ?> </li>
-							<li>Response.message : <?= $message ?></li>
-					<?
+							<li>Response.code : <?php echo $code ?> </li>
+							<li>Response.message : <?php echo $message ?></li>
+					<?php
 						}
 					?>
 				</ul>

@@ -1,4 +1,4 @@
-<?
+<?php
   /**
   * 팜빌 휴폐업조회 API PHP SDK Example
   *
