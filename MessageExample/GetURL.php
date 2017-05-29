@@ -6,7 +6,7 @@
 	</head>
 <?php
   /**
-  * 문자메시지 전송내역 팝업 URL을 반환합니다.
+  * 문자 API 관련 팝업 URL을 반환합니다.
   * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
   */
 
@@ -18,8 +18,8 @@
   // 팝빌 회원 아이디
 	$testUserID = 'testkorea';
 
-  // [BOX] : 문자전송내역 조회
-	$TOGO = 'BOX';
+  // [BOX] : 문자전송내역 조회 URL / [SENDER] : 발신번호 관리 팝업 URL
+	$TOGO = 'SENDER';
 
 	try {
 		$url = $MessagingService->GetURL($testCorpNum, $testUserID, $TOGO);
@@ -34,7 +34,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>문자 전송내역 팝업 URL</legend>
+				<legend>문자 API 관련 팝업 URL</legend>
 				<ul>
 					<?php
 						if ( isset($url)) {

@@ -84,9 +84,10 @@
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>
-						<li><a href="GetURL.php">getURL</a> - 문자메시지 관련 SSO URL 확인</li>
+						<li><a href="GetURL.php">getURL</a> - 문자 API 관련 SSO URL 확인</li>
 						<li><a href="GetUnitCost.php">getUnitCost</a> - 문자 전송 단가 확인</li>
 						<li><a href="GetAutoDenyList.php">getAutoDenyList</a> - 080 수신거부 목록 확인</li>
+            <li><a href="GetSenderNumberList.php">getSenderNumberList</a> - 문자 발신번호 목록 확인</li>
 					</ul>
 				</fieldset>
 

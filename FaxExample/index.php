@@ -62,8 +62,9 @@
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>
-						<li><a href="GetURL.php">getURL</a> - 팩스 전송내역 팝업 URL</li>
+						<li><a href="GetURL.php">getURL</a> - 팩스 API 관련 팝업 URL</li>
 						<li><a href="GetUnitCost.php">getUnitCost</a> 팩스 전송단가 확인</li>
+            <li><a href="GetSenderNumberList.php">getSenderNumberList</a> 팩스 발신번호 목록 확인</li>
 					</ul>
 				</fieldset>
 			</fieldset>
