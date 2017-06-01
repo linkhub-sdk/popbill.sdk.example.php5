@@ -10,11 +10,15 @@
   // 팝빌 회원 사업자번호
 	$testCorpNum = '1234567890';
 
-  // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
-	$reserveDT = null;
+  // 팝빌 회원 아이디
+  $testUserID = 'testkorea';
+
 
   // 팩스전송 발신번호
 	$Sender = '07043042991';
+
+  // 팩스전송 발신자명
+  $SenderName = '발신자명';
 
   // 팩스 수신정보 배열, 최대 1000건
 	$Receivers[] = array(
@@ -34,8 +38,15 @@
 	// 팩스전송파일, 해당파일에 읽기 권한이 설정되어 있어야 함. 최대 5개.
 	$Files = array('./uploadtest.jpg','./uploadtest2.jpg');
 
+  // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
+  $reserveDT = null;
+
+  // 광고팩스 전송여부
+  $adsYN = false;
+
 	try {
-		$receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files, $reserveDT);
+		$receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files,
+      $reserveDT, $UserID, $SenderName, $adsYN);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
