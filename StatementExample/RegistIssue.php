@@ -16,7 +16,7 @@
 
   // 전자명세서 문서관리번호
   // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-	$mgtKey = '20170302-02';
+	$mgtKey = '20170627-03';
 
   // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
@@ -33,7 +33,7 @@
   ************************************************************/
 
   // [필수] 기재상 작성일자
-	$Statement->writeDate = '20170302';
+	$Statement->writeDate = '20170623';
 
   // [필수] (영수, 청구) 중 기재
 	$Statement->purposeType = '영수';
@@ -42,7 +42,7 @@
 	$Statement->taxType = '과세';
 
   // 맞춤양식코드, 미기재시 기본양식으로 처리
-	$Statement->formCode = '';
+	$Statement->formCode = '12106231';
 
   // 명세서 종류 코드
 	$Statement->itemCode = $itemCode;
@@ -84,7 +84,6 @@
 	$Statement->receiverHP = '010-1111-2222';
 	$Statement->receiverEmail = 'test@test.com';
 
-
   /************************************************************
   *                       전자명세서 기재정보
   ************************************************************/
@@ -116,13 +115,13 @@
   $Statement->detailList[0]->itemName = '품명';
   $Statement->detailList[0]->spec = '규격';
   $Statement->detailList[0]->unit = '단위';
-  $Statement->detailList[0]->qty = '1';						//수량
-  $Statement->detailList[0]->unitCost = '100000';
-  $Statement->detailList[0]->supplyCost = '100000';
-  $Statement->detailList[0]->tax = '10000';
-  $Statement->detailList[0]->remark = '비고';
-  $Statement->detailList[0]->spare1 = 'spare1';
-  $Statement->detailList[0]->spare2 = 'spare2';
+  $Statement->detailList[0]->qty = '1000';						//수량
+  $Statement->detailList[0]->unitCost = '1000000';
+  $Statement->detailList[0]->supplyCost = '10000000';
+  $Statement->detailList[0]->tax = '1000000';
+  $Statement->detailList[0]->remark = '11,000,000';
+  $Statement->detailList[0]->spare1 = '1000000';
+  $Statement->detailList[0]->spare2 = '1000000';
   $Statement->detailList[0]->spare3 = 'spare3';
   $Statement->detailList[0]->spare4 = 'spare4';
   $Statement->detailList[0]->spare5 = 'spare5';

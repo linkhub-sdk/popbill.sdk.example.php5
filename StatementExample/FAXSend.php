@@ -18,7 +18,7 @@
 	$testCorpNum = '1234567890';
 
   // 팩스 파일명
-	$mgtKey = '20170302-05';
+	$mgtKey = '20170608-10';
 
   // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
 	$itemCode = '121';
@@ -119,7 +119,7 @@
 
   $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
   $Statement->detailList[0]->purchaseDT = '20150205';			//거래일자 yyyyMMdd
-  $Statement->detailList[0]->itemName = '품명';
+  $Statement->detailList[0]->itemName = '일이삼사오육칠팔구십일이삼사오육칠팔구십일이 삼사오육칠팔구십';
   $Statement->detailList[0]->spec = '규격';
   $Statement->detailList[0]->unit = '단위';
   $Statement->detailList[0]->qty = '1';						//수량
