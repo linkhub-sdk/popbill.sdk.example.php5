@@ -36,7 +36,7 @@
 	);
 
 	// 팩스전송파일, 해당파일에 읽기 권한이 설정되어 있어야 함. 최대 5개.
-	$Files = array('./uploadtest.jpg','./uploadtest2.jpg');
+	$Files = array('./test.pdf');
 
   // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
   $reserveDT = null;
@@ -44,9 +44,13 @@
   // 광고팩스 전송여부
   $adsYN = false;
 
+  // 팩스 제목
+  $title = '팩스 동보전송 제목';
+
+
 	try {
 		$receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files,
-      $reserveDT, $UserID, $SenderName, $adsYN);
+      $reserveDT, $testUserID, $SenderName, $adsYN, $title);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();

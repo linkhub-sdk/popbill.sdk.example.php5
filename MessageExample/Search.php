@@ -77,20 +77,20 @@
 							<fieldset class="fieldset2">
 								<legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result->list)?>]</legend>
 								<ul>
-									<li> state : <?php echo $result->list[$i]->state ?> </li>
-									<li> subject : <?php echo $result->list[$i]->subject ?> </li>
-									<li> type : <?php echo $result->list[$i]->type ?> </li>
-									<li> content : <?php echo $result->list[$i]->content ?> </li>
-									<li> sendNum : <?php echo $result->list[$i]->sendNum ?> </li>
-                  <li> senderName : <?php echo $result->list[$i]->senderName ?> </li>
-									<li> receiveNum : <?php echo $result->list[$i]->receiveNum ?> </li>
-									<li> receiveName : <?php echo $result->list[$i]->receiveName ?> </li>
-									<li> receiptDT : <?php echo $result->list[$i]->receiptDT ?> </li>
-									<li> reserveDT : <?php echo $result->list[$i]->reserveDT ?> </li>
-									<li> sendDT : <?php echo $result->list[$i]->sendDT ?> </li>
-									<li> resultDT : <?php echo $result->list[$i]->resultDT ?> </li>
-									<li> result : <?php echo $result->list[$i]->result ?> </li>
-									<li> tranNet : <?php echo $result->list[$i]->tranNet ?> </li>
+                  <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
+									<li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
+									<li> subject (제목) : <?php echo $result->list[$i]->subject ?> </li>
+									<li> type (메시지 유형) : <?php echo $result->list[$i]->type ?> </li>
+									<li> content (메시지 내용) : <?php echo $result->list[$i]->content ?> </li>
+									<li> sendNum (발신번호) : <?php echo $result->list[$i]->sendNum ?> </li>
+                  <li> senderName (발신자명) : <?php echo $result->list[$i]->senderName ?> </li>
+									<li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
+									<li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
+									<li> receiptDT (접수일시) : <?php echo $result->list[$i]->receiptDT ?> </li>
+									<li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
+									<li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
+                  <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
+									<li> tranNet (전송처리 이동통신사명) : <?php echo $result->list[$i]->tranNet ?> </li>
 								</ul>
 							</fieldset>
 					<?php

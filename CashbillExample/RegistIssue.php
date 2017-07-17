@@ -20,7 +20,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
-	$mgtKey = '20170710-03';
+	$mgtKey = '20170717-06';
 
   // 메모
 	$memo = '현금영수증 즉시발행 메모';
@@ -37,17 +37,17 @@
 
   // [취소 현금영수증 발행시 필수] 원본 현금영수증 국세청 승인번호
   // 국세청 승인번호는 GetInfo API의 ConfirmNum 항목으로 확인할 수 있습니다.
-  $Cashbill->orgConfirmNum = '837976048';
+  $Cashbill->orgConfirmNum = '';
 
 
   // [취소 현금영수증 발행시 필수] 원본 현금영수증 거래일자
   // 현금영수증 거래일자는 GetInfo API의 TradeDate 항목으로 확인할 수 있습니다.
-  $Cashbill->orgTradeDate = '20170307';
+  $Cashbill->orgTradeDate = '';
 
   // [필수] 거래처 식별번호, 거래유형에 따라 작성
   // 소득공제용 - 주민등록/휴대폰/카드번호 기재가능
   // 지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
-	$Cashbill->identityNum = '01011112222';
+	$Cashbill->identityNum = '0101112222';
 
   // [필수] 과세, 비과세 중 기재
 	$Cashbill->taxationType = '과세';

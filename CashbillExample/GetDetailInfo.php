@@ -17,7 +17,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20170302-01';
+	$mgtKey = '20170711-09';
 
 	try {
 		$result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);
@@ -66,6 +66,7 @@
   						<li>hp (고객 휴대폰번호) : <?php echo $result->hp ?> </li>
   						<li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN ?> </li>
   						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
+              <li>orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?> </li>
 					<?php
 						}
 					?>

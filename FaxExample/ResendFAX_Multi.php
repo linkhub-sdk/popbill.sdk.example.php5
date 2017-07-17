@@ -15,8 +15,11 @@
   // 팝빌 회원 사업자번호
 	$testCorpNum = '1234567890';
 
+  // 팝빌 회원 아이디
+  $testUserID = 'testkorea';
+
   // 팩스 접수번호
-  $ReceiptNum = '017021617471100001';
+  $ReceiptNum = '017071715394000001';
 
   // 팩스전송 발신번호, 공백처리시 기존전송정보로 재전송
   $Sender = '07043042991';
@@ -47,8 +50,12 @@
   // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
 	$reserveDT = null;
 
+  // 팩스 제목
+  $title = '팩스 재전송 제목';
+
 	try {
-		$receiptNum = $FaxService->ResendFAX($testCorpNum, $ReceiptNum, $Sender, $SenderName, $Receivers, $reserveDT);
+		$receiptNum = $FaxService->ResendFAX($testCorpNum, $ReceiptNum, $Sender,
+      $SenderName, $Receivers, $reserveDT, $testUserID, $title);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();

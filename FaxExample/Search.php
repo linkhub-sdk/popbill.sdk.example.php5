@@ -11,10 +11,10 @@
 	$testCorpNum = '1234567890';
 
   // 검색시작일자
-  $SDate = '20170101';
+  $SDate = '20170701';
 
   // 검색종료일자
-  $EDate = '20170301';
+  $EDate = '20170731';
 
   // 전송상태값 배열, 1-대기, 2-성공, 3-실패, 4-취소
   $State = array( 1, 2, 3, 4 );
@@ -70,23 +70,23 @@
 				  		<fieldset class="fieldset2">
 								<legend> 팩스전송내역 조회 결과 [<?php echo $i+1 ?>]</legend>
 								<ul>
-									<li> sendState : <?php echo $result->list[$i]->sendState ?> </li>
-									<li> convState : <?php echo $result->list[$i]->convState ?> </li>
-									<li> sendNum : <?php echo $result->list[$i]->sendNum ?> </li>
-                  <li> senderName : <?php echo $result->list[$i]->senderName ?> </li>
-									<li> receiveNum : <?php echo $result->list[$i]->receiveNum ?> </li>
-									<li> receiveName : <?php echo $result->list[$i]->receiveName ?> </li>
-									<li> sendPageCnt : <?php echo $result->list[$i]->sendPageCnt ?> </li>
-									<li> successPageCnt : <?php echo $result->list[$i]->successPageCnt ?> </li>
-									<li> failPageCnt : <?php echo $result->list[$i]->failPageCnt ?> </li>
-									<li> refundPageCnt : <?php echo $result->list[$i]->refundPageCnt ?> </li>
-									<li> cancelPageCnt : <?php echo $result->list[$i]->cancelPageCnt ?> </li>
-                  <li> receiptDT : <?php echo $result->list[$i]->receiptDT ?> </li>
-                  <li> reserveDT : <?php echo $result->list[$i]->reserveDT ?> </li>
-                  <li> sendDT : <?php echo $result->list[$i]->sendDT ?> </li>
-									<li> resultDT : <?php echo $result->list[$i]->resultDT ?> </li>
-									<li> sendResult : <?php echo $result->list[$i]->sendResult ?> </li>
-                  <li> fileNames : <?php echo implode(', ',$result->list[$i]->fileNames) ?> </li>
+                  <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
+									<li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
+									<li> sendNum (발신번호) : <?php echo $result->list[$i]->sendNum ?> </li>
+                  <li> senderName (발신자명) : <?php echo $result->list[$i]->senderName ?> </li>
+									<li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
+									<li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
+                  <li> title (팩스제목) : <?php echo $result->list[$i]->title ?> </li>
+									<li> sendPageCnt (전체 페이지수) : <?php echo $result->list[$i]->sendPageCnt ?> </li>
+									<li> successPageCnt (성공 페이지수) : <?php echo $result->list[$i]->successPageCnt ?> </li>
+									<li> failPageCnt (실패 페이지수) : <?php echo $result->list[$i]->failPageCnt ?> </li>
+									<li> refundPageCnt (환불 페이지수) : <?php echo $result->list[$i]->refundPageCnt ?> </li>
+									<li> cancelPageCnt (취소 페이지수) : <?php echo $result->list[$i]->cancelPageCnt ?> </li>
+                  <li> receiptDT (접수일시) : <?php echo $result->list[$i]->receiptDT ?> </li>
+                  <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
+									<li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
+									<li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
+									<li> fileNames (전송파일명 리스트) : <?php echo implode(', ',$result->list[$i]->fileNames) ?> </li>
 								</ul>
 							</fieldset>
 					<?php
