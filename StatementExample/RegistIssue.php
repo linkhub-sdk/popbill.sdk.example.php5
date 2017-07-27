@@ -42,7 +42,7 @@
 	$Statement->taxType = '과세';
 
   // 맞춤양식코드, 미기재시 기본양식으로 처리
-	$Statement->formCode = '12106231';
+	$Statement->formCode = '';
 
   // 명세서 종류 코드
 	$Statement->itemCode = $itemCode;
