@@ -52,6 +52,14 @@
 					</ul>
 				</fieldset>
 
+        <fieldset class="fieldset2">
+					<legend>취소현금영수증 발행</legend>
+					<ul>
+						<li><a href="RevokeRegistIssue.php">revokeRegistIssue</a> - 취소현금영수증 즉시발행</li>
+						<li><a href="RevokeRegister.php">revokeRegister</a> - 취소현금영수증 임시저장</li>
+					</ul>
+				</fieldset>
+
 				<fieldset class="fieldset2">
 					<legend>정보 확인</legend>
 					<ul>

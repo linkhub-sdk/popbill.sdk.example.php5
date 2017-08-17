@@ -50,7 +50,8 @@
 						<li>사업자번호(corpNum) : <?php echo $result->corpNum?></li>
 						<li>사업자유형(type) : <?php echo $result->type?></li>
 						<li>휴폐업상태(state) : <?php echo $result->state?></li>
-						<li>휴폐업일자(stateDate) : <?php echo $result->stateDate?></li>
+            <li>휴폐업일자(stateDate) : <?php echo $result->stateDate?></li>
+						<li>과세유형 전환일자(typeDate) : <?php echo $result->typeDate?></li>
 						<li>국세청 확일일자(checkDate) : <?php echo $result->checkDate?></li>
 					</ul>
 					<p class="info">> state (휴폐업상태) : null-알수없음, 0-등록되지 않은 사업자번호, 1-사업중, 2-폐업, 3-휴업</p>

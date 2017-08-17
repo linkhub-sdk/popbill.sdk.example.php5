@@ -18,7 +18,7 @@
 	$CorpNumList = array(
 		"1234567890",
 		"6798700433",
-		"124-95-28799",
+		"401-03-94930",
 	);
 
 	try {
@@ -60,6 +60,7 @@
 							<li>사업자유형(type) : <?php echo $result[$i]->type?></li>
 							<li>휴폐업상태(state) : <?php echo $result[$i]->state?></li>
 							<li>휴폐업일자(stateDate) : <?php echo $result[$i]->stateDate?></li>
+              <li>과세유형 전환일자(typeDate) : <?php echo $result[$i]->typeDate?></li>
 							<li>국세청 확일일자(checkDate) : <?php echo $result[$i]->checkDate?></li>
 						</ul>
 					</fieldset>
