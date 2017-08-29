@@ -73,6 +73,7 @@
                 <li>tradeDT (거래일시) : <?php echo $response->list[$i]->tradeDT ?></li>
                 <li>tradeUsage (거래유형) : <?php echo $response->list[$i]->tradeUsage ?></li>
                 <li>tradeType (현금영수증 형태) : <?php echo $response->list[$i]->tradeType ?></li>
+                <li>invoiceType (구분) : <?php echo $response->list[$i]->invoiceType ; ?></li>
                 <li>supplyCost (공급가액) : <?php echo $response->list[$i]->supplyCost ?></li>
                 <li>tax (세액) : <?php echo $response->list[$i]->tax ?></li>
                 <li>serviceFee (봉사료) : <?php echo $response->list[$i]->serviceFee ?></li>

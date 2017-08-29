@@ -14,10 +14,10 @@
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
-  $testCorpNum = '1234567890';
+  $testCorpNum = '6798700433';
 
   // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '017030214000000001';
+  $JobID = '017082910000000001';
 
   // 문서형태 배열, N-일반세금계산서, M-수정세금계산서
   $Type = array (
@@ -98,6 +98,7 @@
                 <li>writeDate (작성일자) : <?php echo $response->list[$i]->writeDate ; ?></li>
                 <li>issueDate (발행일자) : <?php echo $response->list[$i]->issueDate ; ?></li>
                 <li>sendDate (전송일자) : <?php echo $response->list[$i]->sendDate ; ?></li>
+                <li>invoiceType (구분) : <?php echo $response->list[$i]->invoiceType ; ?></li>
                 <li>taxType (과세형태) : <?php echo $response->list[$i]->taxType ; ?></li>
                 <li>purposeType (영수/청구) : <?php echo $response->list[$i]->purposeType ; ?></li>
                 <li>supplyCostTotal (공급가액 합계) : <?php echo $response->list[$i]->supplyCostTotal ; ?></li>
