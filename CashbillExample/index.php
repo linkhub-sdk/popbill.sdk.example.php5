@@ -23,8 +23,9 @@
 						<li><a href="JoinMember.php">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="GetChargeInfo.php">getChargeInfo</a> - 과금정보 확인</li>
 						<li><a href="GetBalance.php">getBalance</a> - 연동회원 잔여포인트 확인</li>
-						<li><a href="GetPartnerBalance.php">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-						<li><a href="GetPopbillURL.php">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+            <li><a href="GetPopbillURL.php">getPopbillURL</a> - 팝빌 SSO URL 요청(로그인, 포인트 충전)</li>
+            <li><a href="GetPartnerBalance.php">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
+            <li><a href="GetPartnerURL.php">getPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
 						<li><a href="RegistContact.php">registContact</a> - 담당자 추가</li>
 						<li><a href="ListContact.php">listContact</a> - 담당자 목록 확인</li>
 						<li><a href="UpdateContact.php">updateContact</a> - 담당자 정보 수정</li>
