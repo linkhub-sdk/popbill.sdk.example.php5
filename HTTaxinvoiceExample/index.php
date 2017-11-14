@@ -65,8 +65,8 @@
 					<ul>
 						<li><a href="GetFlatRatePopUpURL.php">GetFlatRatePopUpURL</a> - 정액제 서비스 신청 URL</li>
 						<li><a href="GetFlatRateState.php">GetFlatRateState</a> - 정액제 서비스 상태 확인</li>
-						<li><a href="GetCertificatePopUpURL.php">GetCertificatePopUpURL</a> - 홈택스연계 공인인증서 등록 URL</li>
-						<li><a href="GetCertificateExpireDate.php">GetCertificateExpireDate</a> - 홈택스연계 공인인증서 만료일자 확인</li>
+						<li><a href="GetCertificatePopUpURL.php">GetCertificatePopUpURL</a> - 홈택스연동 인증관리 팝업 URL</li>
+						<li><a href="GetCertificateExpireDate.php">GetCertificateExpireDate</a> - 홈택스연동 공인인증서 만료일자 확인</li>
 					</ul>
 				</fieldset>
 
