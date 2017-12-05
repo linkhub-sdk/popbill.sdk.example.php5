@@ -16,6 +16,9 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
+  // 팝빌회원 아이디
+	$testUserID = 'testkorea';
+
   // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
   $mgtKeyType = ENumMgtKeyType::SELL;
 
@@ -23,10 +26,10 @@
 	$DType = 'W';
 
   // [필수] 시작일자
-	$SDate = '20160901';
+	$SDate = '20171101';
 
   // [필수] 종료일자
-	$EDate = '20161231';
+	$EDate = '20171231';
 
   // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
 	$State = array (
@@ -47,6 +50,13 @@
     'Z'
   );
 
+  // 발행형태 배열 , N-정발행, R-역발행, T-위수탁 선택 배열
+	$IssueType = array (
+    'N',
+    'R',
+    'T'
+  );
+
   // 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
 	$LateOnly = 0;
 
@@ -63,7 +73,7 @@
 	$Page = 1;
 
   // 페이지당 검색갯수, 기본값 500, 최대값 1000
-	$PerPage = 50;
+	$PerPage = 5;
 
   // 정렬방향, D-내림차순, A-오름차순
 	$Order = 'D';
@@ -77,7 +87,7 @@
 	try {
     $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
       $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
-      $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN);
+      $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserId, $IssueType);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();
