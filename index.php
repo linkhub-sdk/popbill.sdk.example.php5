@@ -23,6 +23,6 @@
 					</ul>
 			</fieldset>
 		 </div>
-		 <?phpinfo()?>
+		 <?php phpinfo() ?>
 	</body>
 </html>
