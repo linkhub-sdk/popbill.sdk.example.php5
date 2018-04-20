@@ -78,6 +78,7 @@
 					<ul>
 						<li><a href="Search.php">search</a> - 문자전송 목록 조회</li>
 						<li><a href="GetMessages.php">getMessages</a> - 문자메시지 전송결과 확인</li>
+            <li><a href="GetStates.php">getStates</a> - 문자메시지 전송결과 요약정보 확인</li>
 						<li><a href="CancelReserve.php">cancelReserve</a> - 예약문자 메시지 예약취소</li>
 					</ul>
 				</fieldset>
