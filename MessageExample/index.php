@@ -74,12 +74,26 @@
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>전송결과/예약취소</legend>
+					<legend>전송내역조회/요약정보확인</legend>
 					<ul>
 						<li><a href="Search.php">search</a> - 문자전송 목록 조회</li>
-						<li><a href="GetMessages.php">getMessages</a> - 문자메시지 전송결과 확인</li>
             <li><a href="GetStates.php">getStates</a> - 문자메시지 전송결과 요약정보 확인</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>접수번호 관련 기능 (요청번호 미할당)</legend>
+					<ul>
+						<li><a href="GetMessages.php">getMessages</a> - 문자메시지 전송결과 확인</li>
 						<li><a href="CancelReserve.php">cancelReserve</a> - 예약문자 메시지 예약취소</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>요청번호 할당 전송건 관련 기능</legend>
+					<ul>
+						<li><a href="GetMessagesRN.php">getMessagesRN</a> - 문자메시지 전송결과 확인</li>
+						<li><a href="CancelReserveRN.php">cancelReserveRN</a> - 예약문자 메시지 예약취소</li>
 					</ul>
 				</fieldset>
 

@@ -6,7 +6,9 @@
 	</head>
 <?php
   /**
-  * 문자전송요청에 대한 전송결과를 확인합니다.
+  * 문자전송요청시 발급받은 접수번호(receiptNum)로 전송상태를 확인합니다
+  * - 응답항목에 대한 자세한 사항은 "[문자 API 연동매뉴얼] >
+  * 3.3.1. GetMessages (전송내역 확인)을 참조하시기 바랍니다.
   */
 
 	include 'common.php';
@@ -15,7 +17,7 @@
 	$testCorpNum = '1234567890';
 
   // 문자전송 요청 시 발급받은 접수번호(receiptNum)
-	$ReceiptNum = '016080814000000017';
+	$ReceiptNum = '';
 
 	try {
 		$result = $MessagingService->GetMessages($testCorpNum, $ReceiptNum);
@@ -61,6 +63,7 @@
 									<li> tranNet (전송처리 이동통신사명) : <?php echo $result[$i]->tranNet ?> </li>
 								</ul>
 							</fieldset>
+
 					<?php
 							}
 						}

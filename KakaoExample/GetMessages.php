@@ -6,7 +6,7 @@
 	</head>
 <?php
   /**
-  * 카카오톡 전송에 대한 전송결과를 확인합니다.
+  * 카카오톡 전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
   */
 
 	include 'common.php';
@@ -15,7 +15,7 @@
 	$testCorpNum = '1234567890';
 
   // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
-	$ReceiptNum = '018030211582300001';
+	$ReceiptNum = '018062710250600001';
 
 	try {
 		$result = $KakaoService->GetMessages($testCorpNum, $ReceiptNum);
@@ -57,7 +57,7 @@
               <li>altCnt (대체문자 건수) : <?php echo $result->altCnt ?> </li>
               <li>cancelCnt (취소건수) : <?php echo $result->cancelCnt ?> </li>
             </ul>
-            
+
           <?php
 							for ($i = 0; $i < Count($result->btns); $i++) {
 					?>

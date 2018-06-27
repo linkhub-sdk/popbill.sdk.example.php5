@@ -6,7 +6,9 @@
 	</head>
 <?php
 /**
-* 친구톡(이미지) 개별내용 대량전송을 요청합니다.
+* 친구톡(이미지) 전송을 요청합니다. (개별내용 대량전송)
+* - 친구톡은 심야 전송(20:00~08:00)이 제한된다.
+* - 이미지 전송규격 / jpg 포맷, 용량 최대 500KByte, 가로/세로 1.5 미만
 */
 
 	include 'common.php';
@@ -21,7 +23,7 @@
   $plusFriendID = '@팝빌';
 
   // 팝빌에 사전 등록된 발신번호
-  $sender = '07043042993';
+  $sender = '07043042991';
 
   // 대체문자 유형, 공백-미전송, A-대체문자내용 전송, C-친구톡내용 전송
   $altSendType = 'A';
@@ -29,11 +31,16 @@
   // 광고전송여부
   $adsYN = True;
 
+	// 전송요청번호
+	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+	$requestNum = '';
+
   // 수신정보 배열, 최대 1000건
   for($i=0; $i<10; $i++){
     $receivers[] = array(
       // 수신번호
-      'rcv' => '01000123',
+      'rcv' => '010111222',
       // 수신자명
       'rcvnm' => '수신자명',
       // 친구톡 내용, 최대 1000자
@@ -57,7 +64,7 @@
   );
 
   // 예약전송일시, yyyyMMddHHmmss
-  $reserveDT = '';
+  $reserveDT = null;
 
   // 친구톡 이미지 전송규격
   // - 전송 포맷 : JPG 파일(.jpg, jpeg)
@@ -70,7 +77,7 @@
 
 	try {
 		$receiptNum = $KakaoService->SendFMS($testCorpNum, $plusFriendID, $sender,
-      '', '', $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $files, $imageURL, $testUserID);
+      '', '', $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $files, $imageURL, $testUserID, $requestNum);
 	} catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();

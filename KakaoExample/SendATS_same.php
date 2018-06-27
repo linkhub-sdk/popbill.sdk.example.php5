@@ -6,7 +6,8 @@
 	</head>
 <?php
 /**
-* 알림톡 동일내용 대량전송을 요청합니다.
+* 알림톡 전송을 요청합니다. (동일내용 대량전송)
+* 사전에 승인된 템플릿의 내용과 알림톡 전송내용(altMsg)이 다를 경우 전송실패 처리됩니다.
 */
 
 	include 'common.php';
@@ -18,10 +19,10 @@
   $testUserID = 'testkorea';
 
   // 템플릿 코드 - 템플릿 목록 조회 (ListATSTemplate API)의 반환항목 확인
-  $templateCode = '018020000001';
+  $templateCode = '018060000179';
 
   // 팝빌에 사전 등록된 발신번호
-  $sender = '07043042993';
+  $sender = '07043042991';
 
   // 알림톡 내용, 최대 1000자
   $content = '[테스트] 테스트 템플릿입니다.';
@@ -33,20 +34,25 @@
   $altSendType = 'A';
 
   // 예약전송일시, yyyyMMddHHmmss
-  $reserveDT = '';
+  $reserveDT = null;
+
+	// 전송요청번호
+	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+	$requestNum = '';
 
   // 수신정보 배열, 최대 1000건
   for($i=0; $i<10; $i++){
     $receivers[] = array(
       // 수신번호
-      'rcv' => '01043245117',
+      'rcv' => '010111222',
       // 수신자명
       'rcvnm' => '수신자명'
     );
   }
 
 	try {
-		$receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID);
+		$receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID, $requestNum);
 	} catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();

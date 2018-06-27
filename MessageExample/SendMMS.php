@@ -16,6 +16,11 @@
   // 광고문자 전송여부
 	$adsYN = false;
 
+	// 전송요청번호
+	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+	$requestNum = '';
+
 	$Messages[] = array(
 		'snd' => '07043042991',		// 발신번호
     'sndnm' => '발신자명',			// 발신자명
@@ -29,7 +34,7 @@
 	$Files = array('./test.jpg');
 
 	try {
-		$receiptNum = $MessagingService->SendMMS($testCorpNum,'','','',$Messages, $Files, $reserveDT, $adsYN);
+		$receiptNum = $MessagingService->SendMMS($testCorpNum,'','','',$Messages, $Files, $reserveDT, $adsYN, '', '', '', $requestNum);
 	}
 	catch (PopbillException $pe) {
 		$code = $pe->getCode();
