@@ -46,17 +46,33 @@
 					<ul>
 						<li><a href="SendFAX.php">sendFAX</a> - 팩스 전송. 1파일 1건 전송</li>
 						<li><a href="SendFAX_Multi.php">sendFAX_Multi</a> - 팩스 전송. 1파일 동보 전송(수신번호 최대 1000개)</li>
-            <li><a href="ResendFAX.php">ResendFAX</a> - 팩스 재전송</li>
-            <li><a href="ResendFAX_Multi.php">ResendFAX_Multi</a> - 팩스 동보 재전송</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>전송결과/예약취소</legend>
+					<legend>전송내역조회</legend>
+					<ul>
+						<li><a href="Search.php">search</a> - 팩스전송 목록조회</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>접수번호 관련 기능 (요청번호 미할당)</legend>
 					<ul>
 						<li><a href="GetFaxDetail.php">getFaxDetail</a> - 팩스전송 전송결과 확인</li>
-						<li><a href="Search.php">search</a> - 팩스전송 목록조회</li>
 						<li><a href="CancelReserve.php">cancelReserve</a> - 예약전송 팩스 취소</li>
+						<li><a href="ResendFAX.php">ResendFAX</a> - 팩스 재전송</li>
+						<li><a href="ResendFAX_Multi.php">ResendFAX_Multi</a> - 팩스 동보 재전송</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>요청번호 할당 전송건 관련 기능</legend>
+					<ul>
+						<li><a href="GetFaxDetailRN.php">getFaxDetailRN</a> - 팩스전송 전송결과 확인</li>
+						<li><a href="CancelReserveRN.php">cancelReserveRN</a> - 예약전송 팩스 취소</li>
+						<li><a href="ResendFAXRN.php">ResendFAXRN</a> - 팩스 재전송</li>
+						<li><a href="ResendFAXRN_Multi.php">ResendFAXRN_Multi</a> - 팩스 동보 재전송</li>
 					</ul>
 				</fieldset>
 

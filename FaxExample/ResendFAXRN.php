@@ -5,12 +5,12 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-/**
-* 팩스를 재전송합니다.
-* - 전송일로부터 180일이 경과된 경우 재전송할 수 없습니다.
-* - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
-* - 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
-*/
+  /**
+  * 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
+  * - 전송일로부터 180일이 경과된 경우 재전송할 수 없습니다.
+  * - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+  * - 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
+  */
 
 	include 'common.php';
 
@@ -19,9 +19,6 @@
 
   // 팝빌 회원 아이디
   $testUserID = 'testkorea';
-
-  // 팩스 접수번호
-  $ReceiptNum = '018062617471500001';
 
   // 팩스전송 발신번호, 공백처리시 기존전송정보로 재전송
   $Sender = '07043042991';
@@ -49,6 +46,9 @@
   // 팩스 제목
   $title = '팩스 재전송 제목';
 
+  // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
+  $originalFAXrequestNum = '';
+
 	// 재전송 팩스의 전송요청번호
 	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
 	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
@@ -56,8 +56,8 @@
 	$requestNum = '';
 
 	try {
-		$receiptNum = $FaxService->ResendFAX($testCorpNum, $ReceiptNum, $Sender,
-      $SenderName, $Receivers, $reserveDT, $testUserID, $title, $requestNum);
+		$receiptNum = $FaxService->ResendFAXRN($testCorpNum, $requestNum, $Sender,
+      $SenderName, $Receivers, $originalFAXrequestNum, $reserveDT, $testUserID, $title);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();

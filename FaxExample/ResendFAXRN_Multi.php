@@ -6,7 +6,7 @@
 	</head>
 <?php
 /**
-* 팩스를 재전송합니다.
+* 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
 * - 전송일로부터 180일이 경과된 경우 재전송할 수 없습니다.
 * - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
 * - 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
@@ -20,34 +20,40 @@
   // 팝빌 회원 아이디
   $testUserID = 'testkorea';
 
-  // 팩스 접수번호
-  $ReceiptNum = '018062617471500001';
-
   // 팩스전송 발신번호, 공백처리시 기존전송정보로 재전송
   $Sender = '07043042991';
 
   // 팩스전송 발신자명, 공백처리시 기존전송정보로 재전송
   $SenderName = '발신자명';
 
-  // 팩스 수신정보 배열, NULL로 처리하는 경우 기존전송정보로 재전송
-  $Receivers = NULL;
+  // 팩스 수신정보, NULL로 처리하는 경우 기존전송정보로 재전송
+  //$Receivers = NULL;
 
-  /*
-  // 팩스 수신정보가 기존전송정보와 다를경우 아래의 코드 참조
+
+  // 팩스 수신정보가 기존전송정보와 다르게 동보전송하는 경우 아래의 코드 참조
 	$Receivers[] = array(
     // 팩스 수신번호
 		'rcv' => '070111222',
-
-    // 수신자명
+    // 팩스 수신자명
 		'rcvnm' => '팝빌담당자'
 	);
-  */
 
-  // 예약전송일시(yyyyMMddHHmmss) ex) 20151212230000, null인경우 즉시전송
+	$Receivers[] = array(
+    // 팩스 수신번호
+		'rcv' => '070333444',
+    // 팩스 수신자명
+		'rcvnm' => '수신담당자'
+	);
+
+
+  // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
 	$reserveDT = null;
 
   // 팩스 제목
   $title = '팩스 재전송 제목';
+
+  // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
+  $originalFAXrequestNum = '';
 
 	// 재전송 팩스의 전송요청번호
 	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
@@ -56,8 +62,8 @@
 	$requestNum = '';
 
 	try {
-		$receiptNum = $FaxService->ResendFAX($testCorpNum, $ReceiptNum, $Sender,
-      $SenderName, $Receivers, $reserveDT, $testUserID, $title, $requestNum);
+		$receiptNum = $FaxService->ResendFAXRN($testCorpNum, $requestNum, $Sender,
+      $SenderName, $Receivers, $originalFAXrequestNum, $reserveDT, $testUserID, $title, $requestNum);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
@@ -69,12 +75,12 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>팩스 재전송 요청</legend>
+				<legend>팩스 재전송</legend>
 				<ul>
 					<?php
 						if ( isset($receiptNum) ) {
 					?>
-							<li>receiptNum(팩스접수번호) : <?php echo $receiptNum?></li>
+							<li>receiptNum (팩스접수번호) : <?php echo $receiptNum ?></li>
 					<?php
 						} else {
 					?>

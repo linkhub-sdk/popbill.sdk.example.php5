@@ -33,17 +33,22 @@
 	$Files = array('./test.pdf');
 
   // 예약전송일시(yyyyMMddHHmmss) ex) 20151212230000, null인경우 즉시전송
-  $reserveDT = '';
+  $reserveDT = null;
 
   // 광고팩스 전송여부
   $adsYN = false;
 
   // 팩스제목
-  $title = "팩스 단건전송 제목";
+  $title = '팩스 단건전송 제목';
+
+	// 전송요청번호
+	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+	$requestNum = '';
 
 	try {
 		$receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files,
-      $reserveDT, $testUserID, $SenderName, $adsYN, $title);
+      $reserveDT, $testUserID, $SenderName, $adsYN, $title, $requestNum);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
