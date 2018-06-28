@@ -84,6 +84,7 @@
 						<li><a href="SendFAX.php">sendFAX</a> - 세금계산서 팩스 전송</li>
 						<li><a href="AttachStatement.php">attachStatement</a> - 전자명세서 첨부</li>
 						<li><a href="DetachStatement.php">detachStatement</a> - 전자명세서 첨부해제</li>
+						<li><a href="AssignMgtKey.php">AssignMgtKey</a> - 문서관리번호 할당</li>
 					</ul>
 				</fieldset>
 
