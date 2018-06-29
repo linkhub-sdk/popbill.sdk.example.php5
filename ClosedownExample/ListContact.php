@@ -50,6 +50,7 @@
 								<li>fax : <?php echo $result[$i]->fax ?></li>
 								<li>mgrYN : <?php echo $result[$i]->mgrYN ?></li>
 								<li>regDT : <?php echo $result[$i]->regDT ?></li>
+								<li>state : <?php echo $result[$i]->state ?></li>
 
 							</ul>
 							</fieldset>
