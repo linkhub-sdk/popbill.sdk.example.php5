@@ -85,6 +85,8 @@
 						<li><a href="AttachStatement.php">attachStatement</a> - 전자명세서 첨부</li>
 						<li><a href="DetachStatement.php">detachStatement</a> - 전자명세서 첨부해제</li>
 						<li><a href="AssignMgtKey.php">AssignMgtKey</a> - 문서관리번호 할당</li>
+						<li><a href="ListEmailConfig.php">ListEmailConfig</a> - 알림메일 전송목록 확인</li>
+						<li><a href="UpdateEmailConfig.php">UpdateEmailConfig</a> - 알림메일 전송설정 수정</li>
 					</ul>
 				</fieldset>
 

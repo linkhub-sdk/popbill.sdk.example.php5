@@ -80,6 +80,8 @@
 						<li><a href="SendEmail.php">sendEmail</a> - 알림메일 전송</li>
 						<li><a href="SendSMS.php">sendSMS</a> - 알림문자 전송</li>
 						<li><a href="SendFAX.php">sendFAX</a> - 현금영수증 팩스전송</li>
+						<li><a href="ListEmailConfig.php">ListEmailConfig</a> - 알림메일 전송목록 확인</li>
+						<li><a href="UpdateEmailConfig.php">UpdateEmailConfig</a> - 알림메일 전송설정 수정</li>
 					</ul>
 				</fieldset>
 
