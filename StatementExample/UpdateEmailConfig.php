@@ -26,7 +26,7 @@
   $emailType = 'SMT_ISSUE';
 
   // 전송 여부 (True = 전송, False = 미전송)
-  $sendYN = 'True';
+  $sendYN = True;
 
 	try {
 		$result = $StatementService->UpdateEmailConfig($testCorpNum, $emailType, $sendYN);

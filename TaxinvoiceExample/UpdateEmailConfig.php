@@ -60,7 +60,7 @@
   $emailType = 'TAX_ISSUE';
 
   // 전송 여부 (True = 전송, False = 미전송)
-  $sendYN = 'True';
+  $sendYN = True;
 
 	try {
 		$result = $TaxinvoiceService->UpdateEmailConfig($testCorpNum, $emailType, $sendYN);
