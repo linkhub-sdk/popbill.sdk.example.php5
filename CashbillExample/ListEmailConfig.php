@@ -42,9 +42,9 @@
 									<li>CSH_ISSUE(고객에게 현금영수증이 발행 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
               <?php
 								}
-								if ($result[$i]->emailType == CSH_CANCELISSUE) {
+								if ($result[$i]->emailType == CSH_CANCEL) {
 					    ?>
-									<li>CSH_CANCELISSUE(고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
+									<li>CSH_CANCEL(고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 					    <?php
 								}
 							}
