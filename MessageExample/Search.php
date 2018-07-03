@@ -7,6 +7,7 @@
 <?php
   /**
   * 검색조건을 사용하여 문자전송 내역을 조회합니다.
+	* - 최대 검색기간 : 6개월 이내
   */
 
 	include 'common.php';
@@ -15,10 +16,10 @@
 	$testCorpNum = '1234567890';
 
   // [필수] 시작일자
-	$SDate = '20160901';
+	$SDate = '20180601';
 
   // [필수] 종료일자
-	$EDate = '20161131';
+	$EDate = '20180630';
 
   // 전송상태값 배열, 1-대기 2-성공 3-실패 4-취소
   $State = array('1', '2', '3', '4');
@@ -36,14 +37,20 @@
 	$Page = 1;
 
   // 페이지 검색개수, 기본값 500, 최대값 1000
-	$PerPage = 50;
+	$PerPage = 500;
 
   // 정렬방향, D-내림차순, A-오름차순
   $Order = 'D';
 
+	// 조회 검색어.
+	// 문자 전송시 입력한 발신자명 또는 수신자명 기재.
+	// 조회 검색어를 포함한 발신자명 또는 수신자명을 검색합니다.
+	$QString = '';
+
 	try {
 		$result = $MessagingService->Search( $testCorpNum, $SDate, $EDate, $State,
-                          $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order );
+                          $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order,
+												  '', $QString );
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
@@ -91,6 +98,8 @@
 									<li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
                   <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
 									<li> tranNet (전송처리 이동통신사명) : <?php echo $result->list[$i]->tranNet ?> </li>
+									<li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
+									<li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
 								</ul>
 							</fieldset>
 					<?php

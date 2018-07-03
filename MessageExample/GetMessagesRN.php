@@ -61,6 +61,8 @@
 									<li> resultDT (전송결과 수신일시) : <?php echo $result[$i]->resultDT ?> </li>
                   <li> reserveDT (예약일시) : <?php echo $result[$i]->reserveDT ?> </li>
 									<li> tranNet (전송처리 이동통신사명) : <?php echo $result[$i]->tranNet ?> </li>
+									<li> receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
+									<li> requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
 								</ul>
 							</fieldset>
 					<?php

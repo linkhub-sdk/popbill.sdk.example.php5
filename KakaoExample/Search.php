@@ -6,20 +6,20 @@
 	</head>
 <?php
   /**
-  * 검색조건을 사용하여 문자전송 내역을 조회합니다.
+  * 검색조건을 사용하여 카카오톡전송 내역을 조회합니다.
+	* - 최대 검색기간 : 6개월 이내
   */
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
+
 	include 'common.php';
 
   // 팝빌회원 사업자번호, '-'제외 10자리
 	$testCorpNum = '1234567890';
 
   // [필수] 시작일자, 날짜형식(yyyyMMdd)
-	$SDate = '20180302';
+	$SDate = '20180601';
 
   // [필수] 종료일자, 날짜형식(yyyyMMdd)
-	$EDate = '20180302';
+	$EDate = '20180630';
 
   // 전송상태값 배열, 0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-예약취소
   $State = array('0', '1', '2', '3', '4', '5');
@@ -37,14 +37,20 @@
 	$Page = 1;
 
   // 페이지 검색개수, 기본값 500, 최대값 1000
-	$PerPage = 50;
+	$PerPage = 500;
 
   // 정렬방향, D-내림차순, A-오름차순
   $Order = 'D';
 
+	// 조회 검색어.
+	// 카카오톡 전송시 입력한 수신자명 기재.
+	// 조회 검색어를 포함한 수신자명을 검색합니다.
+	$QString = '';
+
 	try {
 		$result = $KakaoService->Search( $testCorpNum, $SDate, $EDate, $State,
-                          $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order );
+                          $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order,
+												  '', $QString );
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
@@ -90,6 +96,10 @@
                   <li> altSendDT (대체문자 전송일시) : <?php echo $result->list[$i]->altSendDT ?> </li>
                   <li> altResult (대체문자 전송결과 코드) : <?php echo $result->list[$i]->altResult ?> </li>
                   <li> altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->list[$i]->altResultDT ?> </li>
+									<li> altContent (대체문자 내용) : <?php echo $result->list[$i]->altContent ?> </li>
+                  <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
+									<li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
+                  <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
 								</ul>
 							</fieldset>
 					<?php

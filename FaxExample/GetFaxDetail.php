@@ -17,7 +17,7 @@
 	$testCorpNum = '1234567890';
 
   // 팩스전송 접수번호
-	$ReceiptNum = '018062617560000001';
+	$ReceiptNum = '';
 
 	try {
 		$result = $FaxService->GetFaxDetail($testCorpNum ,$ReceiptNum);
@@ -63,6 +63,8 @@
 									<li> sendDT (전송일시) : <?php echo $result[$i]->sendDT ?> </li>
 									<li> resultDT (전송결과 수신일시) : <?php echo $result[$i]->resultDT ?> </li>
 									<li> fileNames (전송파일명 리스트) : <?php echo implode(', ',$result[$i]->fileNames) ?> </li>
+									<li> receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
+									<li> requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
 								</ul>
 							</fieldset>
 					<?php
