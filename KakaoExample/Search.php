@@ -48,9 +48,7 @@
 	$QString = '';
 
 	try {
-		$result = $KakaoService->Search( $testCorpNum, $SDate, $EDate, $State,
-                          $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order,
-												  '', $QString );
+		$result = $KakaoService->Search( $testCorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order,	'', $QString );
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
