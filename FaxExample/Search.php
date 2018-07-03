@@ -45,7 +45,7 @@
 	$QString = '';
 
   try {
-    $result = $FaxService->Search($testCorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order,	'', $QString);
+    $result = $FaxService->Search($testCorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order, '', $QString);
 	}
   catch (PopbillException $pe) {
 		$code = $pe->getCode();
