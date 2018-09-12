@@ -17,7 +17,7 @@
 	$testCorpNum = '1234567890';
 
   // 문서관리번호
-	$mgtKey = '20171114-70';
+	$mgtKey = '20180912-01';
 
 	try {
 		$result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);
@@ -43,30 +43,29 @@
 						} else {
 					?>
   						<li>mgtKey (현금영수증 관리번호) : <?php echo $result->mgtKey ?> </li>
-              <li>tradeDate (거래일자) : <?php echo $result->tradeDate ?> </li>
-  						<li>tradeUsage (거래유형) : <?php echo $result->tradeUsage ?> </li>
-  						<li>tradeType (현금영수증 형태) : <?php echo $result->tradeType ?> </li>
-  						<li>taxationType (과세형태) : <?php echo $result->taxationType ?> </li>
-  						<li>supplyCost (공급가액) : <?php echo $result->supplyCost ?> </li>
-  						<li>tax (세액) : <?php echo $result->tax ?> </li>
-  						<li>serviceFee (봉사료) : <?php echo $result->serviceFee ?> </li>
-  						<li>totalAmount (거래금액) : <?php echo $result->totalAmount ?> </li>
-
-  						<li>franchiseCorpNum (발행자 사업자번호) : <?php echo $result->franchiseCorpNum ?> </li>
-  						<li>franchiseCorpName (발행자 상호) : <?php echo $result->franchiseCorpName ?> </li>
-  						<li>franchiseCEOName (발행자 대표자 성명) : <?php echo $result->franchiseCEOName ?> </li>
-  						<li>franchiseAddr (발행자 주소) : <?php echo $result->franchiseAddr ?> </li>
-  						<li>franchiseTEL (발행자 연락처) : <?php echo $result->franchiseTEL ?> </li>
-
-  						<li>identityNum (거래처 식별번호) : <?php echo $result->identityNum ?> </li>
-  						<li>customerName (고객명) : <?php echo $result->customerName ?> </li>
-  						<li>itemName (상품명) : <?php echo $result->itemName ?> </li>
-  						<li>orderNumber (가맹점주문번호) : <?php echo $result->orderNumber ?> </li>
-  						<li>email (고객 이메일) : <?php echo $result->email ?> </li>
-  						<li>hp (고객 휴대폰번호) : <?php echo $result->hp ?> </li>
-  						<li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN ?> </li>
-  						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
+							<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
               <li>orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?> </li>
+							<li>tradeDate (거래일자) : <?php echo $result->tradeDate ?> </li>
+							<li>tradeType (문서형태) : <?php echo $result->tradeType ?> </li>
+							<li>tradeUsage (거래구분) : <?php echo $result->tradeUsage ?> </li>
+							<li>tradeOpt (거래유형) : <?php echo $result->tradeOpt ?> </li>
+							<li>taxationType (과세형태) : <?php echo $result->taxationType ?> </li>
+							<li>totalAmount (거래금액) : <?php echo $result->totalAmount ?> </li>
+  						<li>supplyCost (공급가액) : <?php echo $result->supplyCost ?> </li>
+  						<li>tax (부가세) : <?php echo $result->tax ?> </li>
+  						<li>serviceFee (봉사료) : <?php echo $result->serviceFee ?> </li>
+							<li>franchiseCorpNum (가맹점 사업자번호) : <?php echo $result->franchiseCorpNum ?> </li>
+  						<li>franchiseCorpName (가맹점 상호) : <?php echo $result->franchiseCorpName ?> </li>
+  						<li>franchiseCEOName (가맹점 대표자 성명) : <?php echo $result->franchiseCEOName ?> </li>
+  						<li>franchiseAddr (가맹점 주소) : <?php echo $result->franchiseAddr ?> </li>
+  						<li>franchiseTEL (가맹점 전화번호) : <?php echo $result->franchiseTEL ?> </li>
+  						<li>identityNum (식별번호) : <?php echo $result->identityNum ?> </li>
+  						<li>customerName (주문자명) : <?php echo $result->customerName ?> </li>
+  						<li>itemName (주문상품명) : <?php echo $result->itemName ?> </li>
+  						<li>orderNumber (주문번호) : <?php echo $result->orderNumber ?> </li>
+  						<li>email (주문자 이메일) : <?php echo $result->email ?> </li>
+  						<li>hp (주문자 휴대폰) : <?php echo $result->hp ?> </li>
+  						<li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN ?> </li>
               <li>cancelType (취소사유) : <?php echo $result->cancelType ?> </li>
 					<?php
 						}

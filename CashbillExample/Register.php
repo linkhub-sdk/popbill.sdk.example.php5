@@ -16,15 +16,13 @@
   * - 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
   */
 
-
 	include 'common.php';
 
   // 팝빌 회원 사업자번호, '-' 제외 10자리
 	$testCorpNum = '1234567890';
 
   // 문서관리번호, 발행자별 중복없이 1~24자리 영문,숫자로 구성
-	$mgtKey = '20170302-02';
-
+	$mgtKey = '20180912-01';
 
   // 현금영수증 객체 생성
 	$Cashbill = new Cashbill();
@@ -32,67 +30,63 @@
   // [필수] 현금영수증 문서관리번호,
 	$Cashbill->mgtKey = $mgtKey;
 
-  // [필수] 거래유형, (승인거래, 취소거래) 중 기재
+	// [필수] 문서형태, (승인거래, 취소거래) 중 기재
 	$Cashbill->tradeType = '승인거래';
 
-  // [취소 현금영수증 발행시 필수] 원본 현금영수증 국세청 승인번호
-  // 국세청 승인번호는 GetInfo API의 ConfirmNum 항목으로 확인할 수 있습니다.
-  // $Cashbill->orgConfirmNum = '';
+	// [필수] 거래구분, (소득공제용, 지출증빙용) 중 기재
+	$Cashbill->tradeUsage = '소득공제용';
 
-  // [필수] 거래처 식별번호, 거래유형에 따라 작성
+	// [필수] 거래유형, (일반, 도서공연, 대중교통) 중 기재
+	$Cashbill->tradeOpt = '일반';
+
+	// [필수] 과세형태, (과세, 비과세) 중 기재
+	$Cashbill->taxationType = '과세';
+
+	// [필수] 거래금액, ','콤마 불가 숫자만 가능
+	$Cashbill->totalAmount = '11000';
+
+	// [필수] 공급가액, ','콤마 불가 숫자만 가능
+	$Cashbill->supplyCost = '10000';
+
+  // [필수] 부가세, ','콤마 불가 숫자만 가능
+	$Cashbill->tax = '1000';
+
+	// [필수] 봉사료, ','콤마 불가 숫자만 가능
+  $Cashbill->serviceFee = '0';
+
+	// [필수] 가맹점 사업자번호
+	$Cashbill->franchiseCorpNum = $testCorpNum;
+
+  // 가맹점 상호
+	$Cashbill->franchiseCorpName = '발행자 상호';
+
+  // 가맹점 대표자 성명
+	$Cashbill->franchiseCEOName = '발행자 대표자명';
+
+  // 가맹점 주소
+	$Cashbill->franchiseAddr = '발행자 주소';
+
+  // 가맹점 전화번호
+	$Cashbill->franchiseTEL = '070-1234-1234';
+
+  // [필수] 식별번호, 거래구분에 따라 작성
   // 소득공제용 - 주민등록/휴대폰/카드번호 기재가능
   // 지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
 	$Cashbill->identityNum = '01011112222';
 
-  // [필수] 과세, 비과세 중 기재
-	$Cashbill->taxationType = '과세';
-
-  // [필수] 공급가액, ','콤마 불가 숫자만 가능
-	$Cashbill->supplyCost = '10000';
-
-  // [필수] 세액, ','콤마 불가 숫자만 가능
-	$Cashbill->tax = '1000';
-
-  // [필수] 봉사료, ','콤마 불가 숫자만 가능
-  $Cashbill->serviceFee = '0';
-
-  // [필수] 거래금액, ','콤마 불가 숫자만 가능
-	$Cashbill->totalAmount = '11000';
-
-  // [필수] 소득공제용, 지출증빙용 중 기재
-	$Cashbill->tradeUsage = '소득공제용';
-
-
-  // [필수] 발행자 사업자번호
-	$Cashbill->franchiseCorpNum = $testCorpNum;
-
-  // 발행자 상호
-	$Cashbill->franchiseCorpName = '발행자 상호';
-
-  // 발행자 대표자 성명
-	$Cashbill->franchiseCEOName = '발행자 대표자명';
-
-  // 발행자 주소
-	$Cashbill->franchiseAddr = '발행자 주소';
-
-  // 발항자 연락처
-	$Cashbill->franchiseTEL = '070-1234-1234';
-
-
-
-  // 고객명
+  // 주문자명
   $Cashbill->customerName = '고객명';
 
-  // 상품명
+  // 주문상품명
 	$Cashbill->itemName = '상품명';
 
   // 주문번호
 	$Cashbill->orderNumber = '주문번호';
 
-  // 고객 메일주소
+  // 주문자 이메일
 	$Cashbill->email = 'test@test.com';
 
-  // 고객 휴대폰 번호
+  // 주문자 휴대폰
 	$Cashbill->hp = '010-111-222';
 
   // 발행시 알림문자 전송여부

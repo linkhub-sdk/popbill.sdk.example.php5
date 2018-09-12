@@ -20,13 +20,12 @@
   $DType = 'R';
 
   // [필수] 시작일자
-  $SDate = '20170601';
+  $SDate = '20180912';
 
   // [필수] 종료일자
-  $EDate = '20170731';
+  $EDate = '20180912';
 
-
-  // 문서상태값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
+  // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
 	$State = array(
     '100',
     '2**',
@@ -34,16 +33,23 @@
     '4**'
 	);
 
-  // 거래형태, N-일반현금영수증, C-취소현금영수증
+  // 문서형태, N-일반현금영수증, C-취소현금영수증
   $TradeType = array(
 			'N',
 			'C'
 	);
 
-  // 거래용도, P-소득공제, C-지출증빙
+  // 거래구분, P-소득공제, C-지출증빙
   $TradeUsage = array(
 			'P',
       'C'
+	);
+
+	// 거래유형, N-일반, B-도서공연, T-대중교통
+	$TradeOpt = array(
+			'N',
+			'B',
+			'T'
 	);
 
   // 과세형태, T-과세, N-비과세
@@ -66,7 +72,7 @@
 
   try {
 		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
-                              $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString );
+                              $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString, $TradeOpt);
   }	catch(PopbillException $pe) {
 		$code = $pe->getCode();
 		$message = $pe->getMessage();
@@ -102,25 +108,27 @@
                     <li> itemKey (현금영수증 아이템키) : <?php echo $result->list[$i]->itemKey ?></li>
     								<li> mgtKey (문서관리번호) : <?php echo $result->list[$i]->mgtKey ?></li>
     								<li> tradeDate (거래일자) : <?php echo $result->list[$i]->tradeDate ?></li>
-    								<li> issueDT (발행일시) : <?php echo $result->list[$i]->issueDT ?></li>
+										<li> tradeType (문서형태) : <?php echo $result->list[$i]->tradeType ?></li>
+										<li> tradeUsage (거래구분) : <?php echo $result->list[$i]->tradeUsage ?></li>
+										<li> tradeOpt (거래유형) : <?php echo $result->list[$i]->tradeOpt ?></li>
+										<li> taxationType (과세형태) : <?php echo $result->list[$i]->taxationType ?></li>
+										<li> totalAmount (거래금액) : <?php echo $result->list[$i]->totalAmount ?></li>
+										<li> issueDT (발행일시) : <?php echo $result->list[$i]->issueDT ?></li>
                     <li> regDT (등록일시) : <?php echo $result->list[$i]->regDT ?></li>
-                    <li> customerName (고객명) : <?php echo $result->list[$i]->customerName ?></li>
-    								<li> itemName (상품명) : <?php echo $result->list[$i]->itemName ?></li>
-    								<li> identityNum (거래처 식별번호) : <?php echo $result->list[$i]->identityNum ?></li>
-    								<li> taxationType (과세형태) : <?php echo $result->list[$i]->taxationType ?></li>
-    								<li> totalAmount (거래금액) : <?php echo $result->list[$i]->totalAmount ?></li>
-    								<li> tradeUsage (거래용도) : <?php echo $result->list[$i]->tradeUsage ?></li>
-    								<li> tradeType (현금영수증 형태) : <?php echo $result->list[$i]->tradeType ?></li>
-    								<li> stateCode (상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
+										<li> stateMemo (상태메모) : <?php echo $result->list[$i]->stateMemo ?></li>
+										<li> stateCode (상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
     								<li> stateDT (상태변경일시) : <?php echo $result->list[$i]->stateDT ?></li>
-    								<li> printYN (인쇄여부) : <?php echo $result->list[$i]->printYN ?></li>
-    								<li> confirmNum (국세청 승인번호) : <?php echo $result->list[$i]->confirmNum ?></li>
-    								<li> ntssendDT (국세청 전송일시) : <?php echo $result->list[$i]->ntssendDT ?></li>
+										<li> identityNum (식별번호) : <?php echo $result->list[$i]->identityNum ?></li>
+										<li> itemName (주문상품명) : <?php echo $result->list[$i]->itemName ?></li>
+										<li> customerName (주문자명) : <?php echo $result->list[$i]->customerName ?></li>
+										<li> confirmNum (국세청승인번호) : <?php echo $result->list[$i]->confirmNum ?></li>
+										<li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->list[$i]->orgConfirmNum ?></li>
+										<li> orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->list[$i]->orgTradeDate ?></li>
+										<li> ntssendDT (국세청 전송일시) : <?php echo $result->list[$i]->ntssendDT ?></li>
     								<li> ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result->list[$i]->ntsresultDT ?></li>
     								<li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->list[$i]->ntsresultCode ?></li>
     								<li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->list[$i]->ntsresultMessage ?></li>
-                    <li> orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->list[$i]->orgTradeDate ?></li>
-    								<li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->list[$i]->orgConfirmNum ?></li>
+    								<li> printYN (인쇄여부) : <?php echo $result->list[$i]->printYN ?></li>
 									</ul>
 								</fieldset>
 					<?php
