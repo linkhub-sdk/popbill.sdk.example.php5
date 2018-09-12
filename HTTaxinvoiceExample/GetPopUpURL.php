@@ -13,7 +13,7 @@
 	include 'common.php';
 
   // 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testCorpNum = '6798700433';
+	$testCorpNum = '1234567890';
 
   // 국세청 승인번호
 	$NTSConfirmNum = "20161031410002030000277c";
