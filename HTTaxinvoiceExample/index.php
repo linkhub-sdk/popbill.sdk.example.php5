@@ -57,6 +57,7 @@
 						<li><a href="Summary.php">Summary</a> - 수집 결과 요약정보 조회</li>
 						<li><a href="GetTaxinvoice.php">GetTaxinvoice</a> - 상세정보 확인</li>
             <li><a href="GetXML.php">GetXML</a> - 상세정보 확인 (XML)</li>
+						<li><a href="GetPopUpURL.php">GetPopUpURL</a> - 홈택스 전자세금계산서 보기 팝업 URL</li>
 					</ul>
 				</fieldset>
 
