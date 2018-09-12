@@ -107,6 +107,7 @@
 					<ul>
 						<li><a href="GetUnitCost.php">getUnitCost</a> - 세금계산서 발행 단가 확인</li>
 						<li><a href="GetCertificateExpireDate.php">getCertificateExpireDate</a> - 공인인증서 만료일시 확인</li>
+						<li><a href="CheckCertValidation.php">checkCertValidation</a> - 공인인증서 유효성 확인</li>
 						<li><a href="GetEmailPublicKeys.php">getEmailPublicKeys</a> - 대용량 연계사업자 이메일 목록 확인</li>
 					</ul>
 				</fieldset>
