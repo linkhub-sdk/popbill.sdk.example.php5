@@ -52,6 +52,7 @@
 									<li> sDT (전송일시) : <?php echo $result[$i]->sDT ?> </li>
 									<li> rDT (전송결과 수신일시) : <?php echo $result[$i]->rDT ?> </li>
                   <li> net (전송처리 이동통신사명) : <?php echo $result[$i]->net ?> </li>
+									<li> srt (구 전송결과 코드) : <?php echo $result[$i]->srt ?> </li>
 								</ul>
 							</fieldset>
 					<?php
