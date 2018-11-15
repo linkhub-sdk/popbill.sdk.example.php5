@@ -31,6 +31,7 @@
             <ul>
                 <li><a href="Search.php">Search</a> - 팩스전송 목록조회</li>
                 <li><a href="GetSentListURL.php">GetSentListURL</a> - 팩스 전송내역 팝업 URL</li>
+                <li><a href="GetPreviewURL.php">GetPreviewURL</a> - 팩스 미리보기 팝업 URL</li>
             </ul>
         </fieldset>
         <fieldset class="fieldset2">
