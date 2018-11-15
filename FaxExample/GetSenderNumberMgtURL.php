@@ -6,7 +6,7 @@
 </head>
 <?php
 /**
- * 발신번호 관리 팝업 URL을 반합니다.
+ * 팩스 발신번호 관리 팝업 URL을 반합니다.
  * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
  */
 
@@ -19,7 +19,7 @@ $testCorpNum = '1234567890';
 $testUserID = 'testkorea';
 
 try {
-    $url = $KakaoService->GetSenderNumberMgtURL($testCorpNum, $testUserID);
+    $url = $FaxService->GetSenderNumberMgtURL($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
