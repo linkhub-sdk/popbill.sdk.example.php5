@@ -32,7 +32,7 @@ try {
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend></legend>
+        <legend>공인인증서 등록 URL</legend>
         <ul>
             <?php
             if (isset($url)) {

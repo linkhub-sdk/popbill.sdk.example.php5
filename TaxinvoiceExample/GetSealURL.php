@@ -30,7 +30,7 @@ try {
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend></legend>
+        <legend>팝빌 인감 및 첨부문서 등록 URL</legend>
         <ul>
             <?php
             if (isset($url)) {

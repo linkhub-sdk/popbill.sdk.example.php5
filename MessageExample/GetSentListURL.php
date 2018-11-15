@@ -30,7 +30,7 @@ try {
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend></legend>
+        <legend>문자 전송내역 팝업 URL</legend>
         <ul>
             <?php
             if (isset($url)) {
