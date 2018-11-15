@@ -35,30 +35,33 @@
     </fieldset>
 
     <fieldset class="fieldset1">
-        <legend>알림톡 전송</legend>
-        <ul>
-            <li><a href="SendATS_one.php">SendATS</a> - 알림톡 단건 전송</li>
-            <li><a href="SendATS_same.php">SendATS</a> - 알림톡 동일내용 대량 전송</li>
-            <li><a href="SendATS_multi.php">SendATS</a> - 알림톡 개별내용 대량 전송</li>
-        </ul>
-    </fieldset>
+        <legend>알림톡 / 친구톡 전송 API</legend>
+        <fieldset class="fieldset2">
+            <legend>알림톡 전송</legend>
+            <ul>
+                <li><a href="SendATS_one.php">SendATS</a> - 알림톡 단건 전송</li>
+                <li><a href="SendATS_same.php">SendATS</a> - 알림톡 동일내용 대량 전송</li>
+                <li><a href="SendATS_multi.php">SendATS</a> - 알림톡 개별내용 대량 전송</li>
+            </ul>
+        </fieldset>
 
-    <fieldset class="fieldset1">
-        <legend>친구톡 텍스트 전송</legend>
-        <ul>
-            <li><a href="SendFTS_one.php">SendFTS</a> - 친구톡 텍스트 단건 전송</li>
-            <li><a href="SendFTS_same.php">SendFTS</a> - 친구톡 텍스트 동일내용 대량전송</li>
-            <li><a href="SendFTS_multi.php">SendFTS</a> - 친구톡 텍스트 개별내용 대량전송</li>
-        </ul>
-    </fieldset>
+        <fieldset class="fieldset2">
+            <legend>친구톡 텍스트 전송</legend>
+            <ul>
+                <li><a href="SendFTS_one.php">SendFTS</a> - 친구톡 텍스트 단건 전송</li>
+                <li><a href="SendFTS_same.php">SendFTS</a> - 친구톡 텍스트 동일내용 대량전송</li>
+                <li><a href="SendFTS_multi.php">SendFTS</a> - 친구톡 텍스트 개별내용 대량전송</li>
+            </ul>
+        </fieldset>
 
-    <fieldset class="fieldset1">
-        <legend>친구톡 이미지 전송</legend>
-        <ul>
-            <li><a href="SendFMS_one.php">SendFMS</a> - 친구톡 이미지 단건 전송</li>
-            <li><a href="SendFMS_same.php">SendFMS</a> - 친구톡 이미지 동일내용 대량전송</li>
-            <li><a href="SendFMS_multi.php">SendFMS</a> - 친구톡 이미지 개별내용 대량전송</li>
-        </ul>
+        <fieldset class="fieldset2">
+            <legend>친구톡 이미지 전송</legend>
+            <ul>
+                <li><a href="SendFMS_one.php">SendFMS</a> - 친구톡 이미지 단건 전송</li>
+                <li><a href="SendFMS_same.php">SendFMS</a> - 친구톡 이미지 동일내용 대량전송</li>
+                <li><a href="SendFMS_multi.php">SendFMS</a> - 친구톡 이미지 개별내용 대량전송</li>
+            </ul>
+        </fieldset>
     </fieldset>
 
     <fieldset class="fieldset1">
