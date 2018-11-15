@@ -13,8 +13,8 @@
     <fieldset class="fieldset1">
         <legend>발신번호 사전등록</legend>
         <ul>
-            <li><a href="GetSenderNumberMgtURL.php">GetURL</a> - 발신번호 관리 팝업 URL</li>
-            <li><a href="GetSenderNumberList.php">GetSenderNumberList</a> - 문자 발신번호 목록 확인</li>
+            <li><a href="GetSenderNumberMgtURL.php">GetSenderNumberMgtURL</a> - 팩스 발신번호 관리 팝업 URL</li>
+            <li><a href="GetSenderNumberList.php">GetSenderNumberList</a> - 팩스 발신번호 목록 확인</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
