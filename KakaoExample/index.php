@@ -13,7 +13,7 @@
     <fieldset class="fieldset1">
         <legend>플리스친구 계정관리</legend>
         <ul>
-            <li><a href="GetURL_PLUSFRIEND.php">GetURL</a> - 플러스친구 계정관리 팝업 URL</li>
+            <li><a href="GetPlusFriendMgtURL.php">GetPlusFriendMgtURL</a> - 플러스친구 계정관리 팝업 URL</li>
             <li><a href="ListPlusFriendID.php">ListPlusFriendID</a> - 플러스친구 목록 확인</li>
         </ul>
     </fieldset>
@@ -21,7 +21,7 @@
     <fieldset class="fieldset1">
         <legend>발신번호 관리</legend>
         <ul>
-            <li><a href="GetURL_SENDER.php">GetURL</a> - 발신번호 관리 팝업 URL</li>
+            <li><a href="GetSenderNumberMgtURL.php">GetSenderNumberMgtURL</a> - 발신번호 관리 팝업 URL</li>
             <li><a href="GetSenderNumberList.php">GetSenderNumberList</a> - 발신번호 목록 확인</li>
         </ul>
     </fieldset>
@@ -29,7 +29,7 @@
     <fieldset class="fieldset1">
         <legend>알림톡 템플릿 관리</legend>
         <ul>
-            <li><a href="GetURL_TEMPLATE.php">GetURL</a> - 알림톡 템플릿관리 팝업 URL</li>
+            <li><a href="GetATSTemplateMgtURL.php">GetATSTemplateMgtURL</a> - 알림톡 템플릿관리 팝업 URL</li>
             <li><a href="ListATSTemplate.php">ListATSTemplate</a> - 알림톡 템플릿 목록 확인</li>
         </ul>
     </fieldset>
@@ -65,7 +65,7 @@
         <legend>전송내역조회</legend>
         <ul>
             <li><a href="Search.php">Search</a> - 전송내역 목록 조회</li>
-            <li><a href="GetURL_BOX.php">GetURL</a> - 카카오톡 전송내역 팝업 URL</li>
+            <li><a href="GetSentListURL.php">GetSentListURL</a> - 카카오톡 전송내역 팝업 URL</li>
         </ul>
     </fieldset>
 
@@ -88,12 +88,12 @@
     <fieldset class="fieldset1">
         <legend>포인트관리</legend>
         <ul>
-            <li><a href="GetUnitCost.php">GetUnitCost</a> - 전송단가 확인</li>
-            <li><a href="GetChargeInfo.php">GetChargeInfo</a> - 과금정보 확인</li>
             <li><a href="GetBalance.php">GetBalance</a> - 연동회원 잔여포인트 확인</li>
-            <li><a href="GetPopbillURL_CHRG.php">GetPopbillURL</a> - 연동회원 포인트 충전 팝업 URL</li>
+            <li><a href="GetChargeURL.php">GetPopbillURL</a> - 연동회원 포인트 충전 팝업 URL</li>
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="GetUnitCost.php">GetUnitCost</a> - 전송단가 확인</li>
+            <li><a href="GetChargeInfo.php">GetChargeInfo</a> - 과금정보 확인</li>
         </ul>
     </fieldset>
 
@@ -103,6 +103,7 @@
             <li><a href="CheckIsMember.php">CheckIsMember</a> - 연동회원 가입여부 확인</li>
             <li><a href="CheckID.php">CheckID</a> - 연동회원 아이디 중복 확인</li>
             <li><a href="JoinMember.php">JoinMember</a> - 연동회원사 신규가입</li>
+            <li><a href="GetAccessURL.php">GetAccessURL</a> - 팝빌 로그인 URL</li>
             <li><a href="GetPopbillURL_LOGIN.php">GetPopbillURL</a> - 팝빌 로그인 URL</li>
             <li><a href="RegistContact.php">RegistContact</a> - 담당자 추가</li>
             <li><a href="ListContact.php">ListContact</a> - 담당자 목록 확인</li>
