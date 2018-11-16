@@ -92,7 +92,7 @@
         <legend>포인트관리</legend>
         <ul>
             <li><a href="GetBalance.php">GetBalance</a> - 연동회원 잔여포인트 확인</li>
-            <li><a href="GetChargeURL.php">GetPopbillURL</a> - 연동회원 포인트 충전 팝업 URL</li>
+            <li><a href="GetChargeURL.php">GetChargeURL</a> - 연동회원 포인트 충전 팝업 URL</li>
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> - 파트너 포인트충전 URL</li>
             <li><a href="GetUnitCost.php">GetUnitCost</a> - 전송단가 확인</li>
@@ -107,7 +107,6 @@
             <li><a href="CheckID.php">CheckID</a> - 연동회원 아이디 중복 확인</li>
             <li><a href="JoinMember.php">JoinMember</a> - 연동회원사 신규가입</li>
             <li><a href="GetAccessURL.php">GetAccessURL</a> - 팝빌 로그인 URL</li>
-            <li><a href="GetPopbillURL_LOGIN.php">GetPopbillURL</a> - 팝빌 로그인 URL</li>
             <li><a href="RegistContact.php">RegistContact</a> - 담당자 추가</li>
             <li><a href="ListContact.php">ListContact</a> - 담당자 목록 확인</li>
             <li><a href="UpdateContact.php">UpdateContact</a> - 담당자 정보 수정</li>

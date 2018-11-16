@@ -18,20 +18,20 @@
         <fieldset class="fieldset2">
             <legend>회원사 정보</legend>
             <ul>
-                <li><a href="CheckIsMember.php">checkIsMember</a> - 연동회원 가입 여부 확인</li>
-                <li><a href="CheckID.php">checkID</a> - 연동회원 아이디 중복 확인</li>
-                <li><a href="JoinMember.php">joinMember</a> - 연동회원 가입 요청</li>
-                <li><a href="GetChargeInfo.php">getChargeInfo</a> - 과금정보 확인</li>
-                <li><a href="GetBalance.php">getBalance</a> - 연동회원 잔여포인트 확인</li>
+                <li><a href="CheckIsMember.php">CheckIsMember</a> - 연동회원 가입 여부 확인</li>
+                <li><a href="CheckID.php">CheckID</a> - 연동회원 아이디 중복 확인</li>
+                <li><a href="JoinMember.php">JoinMember</a> - 연동회원 가입 요청</li>
+                <li><a href="GetChargeInfo.php">GetChargeInfo</a> - 과금정보 확인</li>
+                <li><a href="GetBalance.php">GetBalance</a> - 연동회원 잔여포인트 확인</li>
                 <li><a href="GetAccessURL.php">GetAccessURL</a> - 팝빌 로그인 URL</li>
                 <li><a href="GetChargeURL.php">GetChargeURL</a> - 연동회원 포인트충전 URL</li>
-                <li><a href="GetPartnerBalance.php">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-                <li><a href="GetPartnerURL.php">getPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
-                <li><a href="RegistContact.php">registContact</a> - 담당자 추가</li>
-                <li><a href="ListContact.php">listContact</a> - 담당자 목록 확인</li>
-                <li><a href="UpdateContact.php">updateContact</a> - 담당자 정보 수정</li>
-                <li><a href="GetCorpInfo.php">getCorpInfo</a> - 회사정보 확인</li>
-                <li><a href="UpdateCorpInfo.php">updateCorpInfo</a> - 회사정보 수정</li>
+                <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
+                <li><a href="GetPartnerURL.php">GetPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
+                <li><a href="RegistContact.php">RegistContact</a> - 담당자 추가</li>
+                <li><a href="ListContact.php">ListContact</a> - 담당자 목록 확인</li>
+                <li><a href="UpdateContact.php">UpdateContact</a> - 담당자 정보 수정</li>
+                <li><a href="GetCorpInfo.php">GetCorpInfo</a> - 회사정보 확인</li>
+                <li><a href="UpdateCorpInfo.php">UpdateCorpInfo</a> - 회사정보 수정</li>
             </ul>
         </fieldset>
 
