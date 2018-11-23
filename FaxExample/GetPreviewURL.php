@@ -35,18 +35,18 @@ try {
     <fieldset class="fieldset1">
         <legend>팩스 미리보기 팝업 URL</legend>
         <ul>
-            <?php
-            if (isset($url)) {
-                ?>
-                <li>url : <?php echo $url ?></li>
-                <?php
-            } else {
-                ?>
-                <li>Response.code : <?php echo $code ?> </li>
-                <li>Response.message : <?php echo $message ?></li>
-                <?php
-            }
-            ?>
+          <?php
+          if (isset($url)) {
+          ?>
+              <li>url : <?php echo $url ?></li>
+          <?php
+          } else {
+          ?>
+              <li>Response.code : <?php echo $code ?> </li>
+              <li>Response.message : <?php echo $message ?></li>
+          <?php
+          }
+          ?>
         </ul>
     </fieldset>
 </div>

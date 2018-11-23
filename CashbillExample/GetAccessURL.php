@@ -34,14 +34,14 @@ try {
         <ul>
             <?php
             if (isset($url)) {
-                ?>
+            ?>
                 <li>url : <?php echo $url ?></li>
-                <?php
+            <?php
             } else {
-                ?>
+            ?>
                 <li>Response.code : <?php echo $code ?> </li>
                 <li>Response.message : <?php echo $message ?></li>
-                <?php
+            <?php
             }
             ?>
         </ul>
