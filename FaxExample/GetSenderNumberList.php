@@ -5,22 +5,22 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-/**
- * 팩스 발신번호 목록을 반환합니다.
- */
+    /**
+     * 팩스 발신번호 목록을 반환합니다.
+     */
 
-include 'common.php';
+    include 'common.php';
 
-// 팝빌회원 사업자번호, "-"제외 10자리
-$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-try {
-    $result = $FaxService->GetSenderNumberList($testCorpNum);
-}
-catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
+    try {
+        $result = $FaxService->GetSenderNumberList($testCorpNum);
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 <body>
 <div id="content">

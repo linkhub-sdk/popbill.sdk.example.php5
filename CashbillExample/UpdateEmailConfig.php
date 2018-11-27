@@ -6,35 +6,35 @@
 	</head>
 <?php
 
-  /**
-  * 현금영수증 관련 메일전송 항목에 대한 전송여부를 수정한다.
-  *
-  * 메일전송유형
-  * CSH_ISSUE : 고객에게 현금영수증이 발행 되었음을 알려주는 메일 입니다.
-  * CSH_CANCEL : 고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 입니다.
-  */
+    /**
+     * 현금영수증 관련 메일전송 항목에 대한 전송여부를 수정한다.
+     *
+     * 메일전송유형
+     * CSH_ISSUE : 고객에게 현금영수증이 발행 되었음을 알려주는 메일 입니다.
+     * CSH_CANCEL : 고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 입니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 메일 전송 유형
-  $emailType = 'CSH_ISSUE';
+    // 메일 전송 유형
+    $emailType = 'CSH_ISSUE';
 
-  // 전송 여부 (True = 전송, False = 미전송)
-  $sendYN = True;
+    // 전송 여부 (True = 전송, False = 미전송)
+    $sendYN = True;
 
-	try {
-		$result = $CashbillService->UpdateEmailConfig($testCorpNum, $emailType, $sendYN);
+    try {
+        $result = $CashbillService->UpdateEmailConfig($testCorpNum, $emailType, $sendYN);
 
-    $code = $result->code;
-		$message = $result->message;
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

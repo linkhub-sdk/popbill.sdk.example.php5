@@ -5,22 +5,22 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 전자세금계산서 발행단가를 확인합니다.
-  */
+    /**
+     * 전자세금계산서 발행단가를 확인합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-	try {
-		$unitCost = $TaxinvoiceService->GetUnitCost($testCorpNum);
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $unitCost = $TaxinvoiceService->GetUnitCost($testCorpNum);
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

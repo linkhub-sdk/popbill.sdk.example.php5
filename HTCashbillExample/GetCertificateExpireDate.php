@@ -5,22 +5,22 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
-  */
+    /**
+     * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-	try {
-		$ExpireDate = $HTCashbillService->GetCertificateExpireDate($testCorpNum);
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $ExpireDate = $HTCashbillService->GetCertificateExpireDate($testCorpNum);
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

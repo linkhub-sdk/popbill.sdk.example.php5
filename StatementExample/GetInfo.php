@@ -5,30 +5,30 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 1건의 전자명세서 상태/요약 정보를 확인합니다.
-  * - 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼] > 3.3.1.
-  *   GetInfo (상태 확인)"을 참조하시기 바랍니다.
-  */
+    /**
+     * 1건의 전자명세서 상태/요약 정보를 확인합니다.
+     * - 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼] > 3.3.1.
+     *   GetInfo (상태 확인)"을 참조하시기 바랍니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
-	$itemCode = '121';
+    // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+    $itemCode = '121';
 
-  // 문서관리번호
-	$mgtKey = '20170302-04';
+    // 문서관리번호
+    $mgtKey = '20170302-04';
 
-	try {
-		$result = $StatementService->GetInfo($testCorpNum, $itemCode, $mgtKey);
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $StatementService->GetInfo($testCorpNum, $itemCode, $mgtKey);
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

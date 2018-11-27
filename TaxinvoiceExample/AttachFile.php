@@ -5,35 +5,35 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 세금계산서에 첨부파일을 등록합니다.
-  * - [임시저장] 상태의 세금계산서만 파일을 첨부할수 있습니다.
-  * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
-  */
+    /**
+     * 세금계산서에 첨부파일을 등록합니다.
+     * - [임시저장] 상태의 세금계산서만 파일을 첨부할수 있습니다.
+     * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 세금계산서 문서관리번호
-	$mgtKey = '20170407-05';
+    // 세금계산서 문서관리번호
+    $mgtKey = '20170407-05';
 
-  // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
-	$filePath = './uploadtest.jpg';
+    // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
+    $filePath = './uploadtest.jpg';
 
-	try {
-		$result = $TaxinvoiceService->AttachFile($testCorpNum, $mgtKeyType, $mgtKey, $filePath);
-		$code = $result->code;
-		$message = $result->message;
-	}
-  catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $TaxinvoiceService->AttachFile($testCorpNum, $mgtKeyType, $mgtKey, $filePath);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

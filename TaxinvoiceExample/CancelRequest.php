@@ -5,35 +5,35 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 역발행 세금계산서를 [취소] 처리합니다.
-  * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)
-  *   를 호출해야 합니다.
-  */
+    /**
+     * 역발행 세금계산서를 [취소] 처리합니다.
+     * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)
+     *   를 호출해야 합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 문서관리번호
-	$mgtKey = '20170302-05';
+    // 문서관리번호
+    $mgtKey = '20170302-05';
 
-  // 메모
-	$memo = '역발행 요청 취소메모입니다';
+    // 메모
+    $memo = '역발행 요청 취소메모입니다';
 
-	try {
-		$result = $TaxinvoiceService->CanCelRequest($testCorpNum, $mgtKeyType, $mgtKey, $memo);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $TaxinvoiceService->CanCelRequest($testCorpNum, $mgtKeyType, $mgtKey, $memo);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

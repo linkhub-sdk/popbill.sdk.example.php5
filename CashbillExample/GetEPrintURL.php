@@ -5,26 +5,26 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 현금영수증 인쇄(공급받는자) URL을 반환합니다.
-  * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
-  */
+    /**
+     * 현금영수증 인쇄(공급받는자) URL을 반환합니다.
+     * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 문서관리번호
-	$mgtKey = '20170302-01';
+    // 문서관리번호
+    $mgtKey = '20170302-01';
 
-	try {
-		$url = $CashbillService->GetEPrintURL($testCorpNum, $mgtKey);
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $url = $CashbillService->GetEPrintURL($testCorpNum, $mgtKey);
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

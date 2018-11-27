@@ -5,42 +5,42 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 연동회원의 회사정보를 수정합니다
-  */
+    /**
+     * 연동회원의 회사정보를 수정합니다
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 회사정보 클래스 생성
-	$CorpInfo = new CorpInfo();
+    // 회사정보 클래스 생성
+    $CorpInfo = new CorpInfo();
 
-  // 대표자명
-	$CorpInfo->ceoname = '대표자명';
+    // 대표자명
+    $CorpInfo->ceoname = '대표자명';
 
-  // 상호
-	$CorpInfo->corpName = '링크허브';
+    // 상호
+    $CorpInfo->corpName = '링크허브';
 
-  // 주소
-	$CorpInfo->addr = '서울시 강남구 영동대로';
+    // 주소
+    $CorpInfo->addr = '서울시 강남구 영동대로';
 
-  // 업태
-	$CorpInfo->bizType = '업태';
+    // 업태
+    $CorpInfo->bizType = '업태';
 
-  // 종목
-	$CorpInfo->bizClass = '종목';
+    // 종목
+    $CorpInfo->bizClass = '종목';
 
-	try {
-		$result = $HTTaxinvoiceService->UpdateCorpInfo($testCorpNum, $CorpInfo);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $HTTaxinvoiceService->UpdateCorpInfo($testCorpNum, $CorpInfo);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

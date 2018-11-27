@@ -5,59 +5,59 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 팝빌 연동회원 가입을 요청합니다.
-  */
+    /**
+     * 팝빌 연동회원 가입을 요청합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  $joinForm = new JoinForm();
+    $joinForm = new JoinForm();
 
-  // 링크아이디
-	$joinForm->LinkID = $LinkID;
+    // 링크아이디
+    $joinForm->LinkID = $LinkID;
 
-  // 사업자번호, "-"제외 10자리
-	$joinForm->CorpNum = '0000010022';
+    // 사업자번호, "-"제외 10자리
+    $joinForm->CorpNum = '0000010022';
 
-  // 대표자성명
-	$joinForm->CEOName = '대표자성명';
+    // 대표자성명
+    $joinForm->CEOName = '대표자성명';
 
-  // 사업자상호
-	$joinForm->CorpName = '상호';
+    // 사업자상호
+    $joinForm->CorpName = '상호';
 
-  // 사업자주소
-	$joinForm->Addr	= '주소';
+    // 사업자주소
+    $joinForm->Addr	= '주소';
 
-  // 업태
-	$joinForm->BizType = '업태';
+    // 업태
+    $joinForm->BizType = '업태';
 
-  // 종목
-	$joinForm->BizClass	= '종목';
+    // 종목
+    $joinForm->BizClass	= '종목';
 
-  // 담당자명
-	$joinForm->ContactName = '담당자명';
+    // 담당자명
+    $joinForm->ContactName = '담당자명';
 
-  // 담당자 이메일
-	$joinForm->ContactEmail	= 'test@test.com';
+    // 담당자 이메일
+    $joinForm->ContactEmail	= 'test@test.com';
 
-  // 담당자 연락처
-	$joinForm->ContactTEL	= '010-1234-1234';
+    // 담당자 연락처
+    $joinForm->ContactTEL	= '010-1234-1234';
 
-  // 아이디, 6자 이상 20자미만
-  $joinForm->ID = 'userid_phpdd__';
+    // 아이디, 6자 이상 20자미만
+    $joinForm->ID = 'userid_phpdd__';
 
-  // 비밀번호, 6자 이상 20자미만
-	$joinForm->PWD = 'thisispassword';
+    // 비밀번호, 6자 이상 20자미만
+    $joinForm->PWD = 'thisispassword';
 
-	try	{
-		$result = $StatementService->JoinMember($joinForm);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try	{
+        $result = $StatementService->JoinMember($joinForm);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

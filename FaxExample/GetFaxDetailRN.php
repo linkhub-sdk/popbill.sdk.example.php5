@@ -5,26 +5,26 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-/**
- * 팩스전송요청시 할당한 전송요청번호(requestNum)으로 전송결과를 확인합니다
- * - 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.2
- *   GetFaxDetailRN (전송내역 및 전송상태 확인 - 요청번호 할당)을 참조하시기 바랍니다.
- */
+    /**
+     * 팩스전송요청시 할당한 전송요청번호(requestNum)으로 전송결과를 확인합니다
+     * - 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.2
+     *   GetFaxDetailRN (전송내역 및 전송상태 확인 - 요청번호 할당)을 참조하시기 바랍니다.
+     */
 
-include 'common.php';
+    include 'common.php';
 
-// 팝빌 회원 사업자 번호, "-"제외 10자리
-$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-// 팩스전송 요청시 할당한 전송요청번호
-$requestNum = '20180929-001';
+    // 팩스전송 요청시 할당한 전송요청번호
+    $requestNum = '20180929-001';
 
-try {
-    $result = $FaxService->GetFaxDetailRN($testCorpNum, $requestNum);
-} catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
+    try {
+        $result = $FaxService->GetFaxDetailRN($testCorpNum, $requestNum);
+    } catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 <body>
 <div id="content">

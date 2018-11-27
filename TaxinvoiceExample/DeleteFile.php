@@ -5,35 +5,35 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 세금계산서에 첨부된 파일을 삭제합니다.
-  * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목 중
-  *   파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
-  */
+    /**
+     * 세금계산서에 첨부된 파일을 삭제합니다.
+     * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목 중
+     *   파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 문서관리번호
-	$mgtKey = '20170302-04';
+    // 문서관리번호
+    $mgtKey = '20170302-04';
 
-  // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
-	$FileID = 'B6DB6884-EDA9-4D0F-A790-0334BD822118.PBF';
+    // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
+    $FileID = 'B6DB6884-EDA9-4D0F-A790-0334BD822118.PBF';
 
-	try {
-		$result = $TaxinvoiceService->DeleteFile($testCorpNum, $mgtKeyType, $mgtKey, $FileID);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $TaxinvoiceService->DeleteFile($testCorpNum, $mgtKeyType, $mgtKey, $FileID);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

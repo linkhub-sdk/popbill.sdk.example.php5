@@ -5,33 +5,33 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 발행예정 세금계산서를 [거부]처리 합니다.
-  * - [거부]처리된 세금계산서를 삭제(Delete API)하면 등록된 문서관리번호를 재사용할 수 있습니다.
-  */
+    /**
+     * 발행예정 세금계산서를 [거부]처리 합니다.
+     * - [거부]처리된 세금계산서를 삭제(Delete API)하면 등록된 문서관리번호를 재사용할 수 있습니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 세금계산서 문서관리번호
-	$mgtKey = '20170302-04';
+    // 세금계산서 문서관리번호
+    $mgtKey = '20170302-04';
 
-  // 메모
-	$memo = '발행예정 거부메모입니다';
+    // 메모
+    $memo = '발행예정 거부메모입니다';
 
-	try {
-		$result = $TaxinvoiceService->Deny($testCorpNum, $mgtKeyType, $mgtKey, $memo);
-		$code = $result->code;
-		$message = $result->message;
-	} catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $TaxinvoiceService->Deny($testCorpNum, $mgtKeyType, $mgtKey, $memo);
+        $code = $result->code;
+        $message = $result->message;
+    } catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

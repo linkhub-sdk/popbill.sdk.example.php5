@@ -5,29 +5,29 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 팝빌 전자명세서 문서함 관련 팝업 URL을 반환합니다.
-  * 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
-  */
+    /**
+     * 팝빌 전자명세서 문서함 관련 팝업 URL을 반환합니다.
+     * 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 팝빌 회원 아이디
-	$testUserID = 'testkorea';
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
 
-  // 임시문서함(TBOX), 발행문서함(SBOX)
-	$TOGO = 'TBOX';
+    // 임시문서함(TBOX), 발행문서함(SBOX)
+    $TOGO = 'TBOX';
 
-	try {
-		$url = $StatementService->GetURL($testCorpNum, $testUserID, $TOGO);
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $url = $StatementService->GetURL($testCorpNum, $testUserID, $TOGO);
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

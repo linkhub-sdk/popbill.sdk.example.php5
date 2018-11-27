@@ -5,28 +5,28 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 1건의 사업자에 대한 휴폐업여부를 조회합니다.
-  */
+    /**
+     * 1건의 사업자에 대한 휴폐업여부를 조회합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-	if ( isset($_GET['CorpNum']) && $_GET['CorpNum'] != '' ) {
+    if ( isset($_GET['CorpNum']) && $_GET['CorpNum'] != '' ) {
 
-    // 팝빌회원 사업자번호
-		$MemberCorpNum = "1234567890";
+        // 팝빌회원 사업자번호
+        $MemberCorpNum = "1234567890";
 
-    // 조회 사업자번호
-		$CheckCorpNum = $_GET['CorpNum'];
+        // 조회 사업자번호
+        $CheckCorpNum = $_GET['CorpNum'];
 
-		try {
-			$result = $ClosedownService->checkCorpNum($MemberCorpNum, $CheckCorpNum);
-		}
-		catch (PopbillException $pe) {
-			$code = $pe->getCode();
-			$message = $pe->getMessage();
-		}
-	}
+        try {
+            $result = $ClosedownService->checkCorpNum($MemberCorpNum, $CheckCorpNum);
+        }
+        catch (PopbillException $pe) {
+            $code = $pe->getCode();
+            $message = $pe->getMessage();
+        }
+    }
 ?>
 	<body>
 		<div id="content">
@@ -47,12 +47,12 @@
 				<fieldset class="fieldset2">
 					<legend>휴폐업조회 - 단건</legend>
 					<ul>
-						<li>사업자번호(corpNum) : <?php echo $result->corpNum?></li>
-						<li>사업자유형(type) : <?php echo $result->type?></li>
-						<li>휴폐업상태(state) : <?php echo $result->state?></li>
-            <li>휴폐업일자(stateDate) : <?php echo $result->stateDate?></li>
-						<li>과세유형 전환일자(typeDate) : <?php echo $result->typeDate?></li>
-						<li>국세청 확일일자(checkDate) : <?php echo $result->checkDate?></li>
+                        <li>사업자번호(corpNum) : <?php echo $result->corpNum?></li>
+                        <li>사업자유형(type) : <?php echo $result->type?></li>
+                        <li>휴폐업상태(state) : <?php echo $result->state?></li>
+                        <li>휴폐업일자(stateDate) : <?php echo $result->stateDate?></li>
+                        <li>과세유형 전환일자(typeDate) : <?php echo $result->typeDate?></li>
+                        <li>국세청 확일일자(checkDate) : <?php echo $result->checkDate?></li>
 					</ul>
 					<p class="info">> state (휴폐업상태) : null-알수없음, 0-등록되지 않은 사업자번호, 1-사업중, 2-폐업, 3-휴업</p>
 					<p class="info">> type (사업 유형) : null-알수없음, 1-일반과세자, 2-면세과세자, 3-간이과세자, 4-비영리법인, 국가기관</p>

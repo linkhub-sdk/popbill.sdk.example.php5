@@ -1,9 +1,9 @@
 <?php
   /**
-  * 팜빌 전자명세서 API PHP SDK Example
+  * 팝빌 전자명세서 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : blog.linkhub.co.kr/584
-  * 업테이트 일자 : 2018-07-02
+  * 업데이트 일자 : 2018-11-27
   * 연동기술지원 연락처 : 1600-9854 / 070-4304-2991
   * 연동기술지원 이메일 : code@linkhub.co.kr
   *

@@ -5,78 +5,78 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
-  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] >
-  *   4.2. 현금영수증 상태정보 구성" 을 참조하시기 바랍니다.
-  */
+    /**
+     * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
+     * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] >
+     *   4.2. 현금영수증 상태정보 구성" 을 참조하시기 바랍니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // [필수] 팝빌회원 사업자번호
-  $testCorpNum = '1234567890';
+    // [필수] 팝빌회원 사업자번호
+    $testCorpNum = '1234567890';
 
-  // [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
-  $DType = 'R';
+    // [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
+    $DType = 'R';
 
-  // [필수] 시작일자
-  $SDate = '20180912';
+    // [필수] 시작일자
+    $SDate = '20180912';
 
-  // [필수] 종료일자
-  $EDate = '20180912';
+    // [필수] 종료일자
+    $EDate = '20180912';
 
-  // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
-	$State = array(
-    '100',
-    '2**',
-    '3**',
-    '4**'
-	);
+    // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
+    $State = array(
+        '100',
+        '2**',
+        '3**',
+        '4**'
+    );
 
-  // 문서형태, N-일반현금영수증, C-취소현금영수증
-  $TradeType = array(
-			'N',
-			'C'
-	);
+    // 문서형태, N-일반현금영수증, C-취소현금영수증
+    $TradeType = array(
+        'N',
+        'C'
+    );
 
-  // 거래구분, P-소득공제, C-지출증빙
-  $TradeUsage = array(
-			'P',
-      'C'
-	);
+    // 거래구분, P-소득공제, C-지출증빙
+    $TradeUsage = array(
+        'P',
+        'C'
+    );
 
-	// 거래유형, N-일반, B-도서공연, T-대중교통
-	$TradeOpt = array(
-			'N',
-			'B',
-			'T'
-	);
+    // 거래유형, N-일반, B-도서공연, T-대중교통
+    $TradeOpt = array(
+        'N',
+        'B',
+        'T'
+    );
 
-  // 과세형태, T-과세, N-비과세
-  $TaxationType = array(
-			'T',
-			'N'
-	);
+    // 과세형태, T-과세, N-비과세
+    $TaxationType = array(
+        'T',
+        'N'
+    );
 
-  // 페이지번호, 기본값 1
-  $Page = 1;
+    // 페이지번호, 기본값 1
+    $Page = 1;
 
-  // 페이지당 검색갯수, 기본값 500, 최대값 1000
-  $PerPage = 30;
+    // 페이지당 검색갯수, 기본값 500, 최대값 1000
+    $PerPage = 30;
 
-  // 정렬방향, D-내림차순, A-오름차순
-  $Order = 'D';
+    // 정렬방향, D-내림차순, A-오름차순
+    $Order = 'D';
 
-  // 식별번호 조회, 미기재시 전체조회
-  $QString = '';
+    // 식별번호 조회, 미기재시 전체조회
+    $QString = '';
 
-  try {
-		$result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
-                              $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString, $TradeOpt);
-  }	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
+            $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString, $TradeOpt);
+    }	catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

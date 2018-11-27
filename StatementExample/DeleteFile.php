@@ -5,35 +5,35 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 전자명세서에 첨부된 파일을 삭제합니다.
-  * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
-  *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
-  */
+    /**
+     * 전자명세서에 첨부된 파일을 삭제합니다.
+     * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
+     *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
-	$itemCode = '121';
+    // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+    $itemCode = '121';
 
-  // 문서관리번호
-	$mgtKey = '20170302-04';
+    // 문서관리번호
+    $mgtKey = '20170302-04';
 
-  // 첨부된 파일의 아이디, GetFiles API 응답항목중 AttachedFile 항목
-	$FileID= 'A0450FBE-FF2D-43E7-ABAB-EFC17886C456.PBF';
+    // 첨부된 파일의 아이디, GetFiles API 응답항목중 AttachedFile 항목
+    $FileID= 'A0450FBE-FF2D-43E7-ABAB-EFC17886C456.PBF';
 
-	try {
-		$result = $StatementService->DeleteFile($testCorpNum, $itemCode, $mgtKey, $FileID);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $StatementService->DeleteFile($testCorpNum, $itemCode, $mgtKey, $FileID);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

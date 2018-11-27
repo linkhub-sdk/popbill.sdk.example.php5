@@ -5,30 +5,30 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 홈택스 현금영수증 부서사용자 계정을 등록한다.
-  */
+    /**
+     * 홈택스 현금영수증 부서사용자 계정을 등록한다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 사업자번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 사업자번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 홈택스에서 생성한 현금영수증 부서사용자 아이디
-	$deptUserID = 'userid_test';
+    // 홈택스에서 생성한 현금영수증 부서사용자 아이디
+    $deptUserID = 'userid_test';
 
-  // 홈택스에서 생성한 현금영수증 부서사용자 비밀번호
-	$deptUserPWD = 'passwd_test';
+    // 홈택스에서 생성한 현금영수증 부서사용자 비밀번호
+    $deptUserPWD = 'passwd_test';
 
-	try	{
-		$result = $HTCashbillService->RegistDeptUser($testCorpNum, $deptUserID, $deptUserPWD);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try	{
+        $result = $HTCashbillService->RegistDeptUser($testCorpNum, $deptUserID, $deptUserPWD);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

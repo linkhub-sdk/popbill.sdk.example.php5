@@ -5,25 +5,25 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-/**
- * 팝빌에 로그인 상태로 접근할 수 있는 팝업 URL을 반환합니다.
- * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
- */
+    /**
+     * 팝빌에 로그인 상태로 접근할 수 있는 팝업 URL을 반환합니다.
+     * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
+     */
 
-include 'common.php';
+    include 'common.php';
 
-// 팝빌 회원 사업자 번호, "-"제외 10자리
-$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-// 팝빌 회원 아이디
-$testUserID = 'testkorea';
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
 
-try {
-    $url = $KakaoService->GetAccessURL($testCorpNum, $testUserID);
-} catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
+    try {
+        $url = $KakaoService->GetAccessURL($testCorpNum, $testUserID);
+    } catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 <body>
 <div id="content">

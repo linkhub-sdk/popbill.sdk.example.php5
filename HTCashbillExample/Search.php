@@ -5,41 +5,41 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-include 'common.php';
+    include 'common.php';
 
-// 팝빌회원 사업자번호, '-'제외 10자리
-$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-// 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-$JobID = '018092923000000001';
+    // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
+    $JobID = '018092923000000001';
 
-// 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
-$TradeType = array(
-    'N',
-    'C'
-);
+    // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
+    $TradeType = array(
+        'N',
+        'C'
+    );
 
-// 거래용도 배열, P-소득공제용, C-지출증빙용
-$TradeUsage = array(
-    'P',
-    'C'
-);
+    // 거래용도 배열, P-소득공제용, C-지출증빙용
+    $TradeUsage = array(
+        'P',
+        'C'
+    );
 
-// 페이지 번호
-$Page = 1;
+    // 페이지 번호
+    $Page = 1;
 
-// 페이지당 목록개수
-$PerPage = 10;
+    // 페이지당 목록개수
+    $PerPage = 10;
 
-// 정렬방향, D-내림차순, A-오름차순
-$Order = "D";
+    // 정렬방향, D-내림차순, A-오름차순
+    $Order = "D";
 
-try {
-    $response = $HTCashbillService->Search($testCorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order);
-} catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
+    try {
+        $response = $HTCashbillService->Search($testCorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order);
+    } catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 <body>
 <div id="content">

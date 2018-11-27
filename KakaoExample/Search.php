@@ -5,55 +5,55 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 검색조건을 사용하여 카카오톡전송 내역을 조회합니다.
-	* - 최대 검색기간 : 6개월 이내
-  */
+    /**
+     * 검색조건을 사용하여 카카오톡전송 내역을 조회합니다.
+     * - 최대 검색기간 : 6개월 이내
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-  // [필수] 시작일자, 날짜형식(yyyyMMdd)
-	$SDate = '20180601';
+    // [필수] 시작일자, 날짜형식(yyyyMMdd)
+    $SDate = '20180601';
 
-  // [필수] 종료일자, 날짜형식(yyyyMMdd)
-	$EDate = '20180630';
+    // [필수] 종료일자, 날짜형식(yyyyMMdd)
+    $EDate = '20180630';
 
-  // 전송상태값 배열, 0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-예약취소
-  $State = array('0', '1', '2', '3', '4', '5');
+    // 전송상태값 배열, 0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-예약취소
+    $State = array('0', '1', '2', '3', '4', '5');
 
-  // 검색대상, ATS-알림톡, FTS-친구톡(텍스트), FMS-친구톡(이미지)
-	$Item = array('ATS','FTS','FMS');
+    // 검색대상, ATS-알림톡, FTS-친구톡(텍스트), FMS-친구톡(이미지)
+    $Item = array('ATS','FTS','FMS');
 
-  // 예약여부, 공백-전체조회, 1-예약전송조회, 0-즉시전송조회
-	$ReserveYN = '';
+    // 예약여부, 공백-전체조회, 1-예약전송조회, 0-즉시전송조회
+    $ReserveYN = '';
 
-  // 개인조회여부, false-전체조회, true-개인조회
-	$SenderYN = false;
+    // 개인조회여부, false-전체조회, true-개인조회
+    $SenderYN = false;
 
-  // 페이지번호
-	$Page = 1;
+    // 페이지번호
+    $Page = 1;
 
-  // 페이지 검색개수, 기본값 500, 최대값 1000
-	$PerPage = 500;
+    // 페이지 검색개수, 기본값 500, 최대값 1000
+    $PerPage = 500;
 
-  // 정렬방향, D-내림차순, A-오름차순
-  $Order = 'D';
+    // 정렬방향, D-내림차순, A-오름차순
+    $Order = 'D';
 
-	// 조회 검색어.
-	// 카카오톡 전송시 입력한 수신자명 기재.
-	// 조회 검색어를 포함한 수신자명을 검색합니다.
-	$QString = '';
+    // 조회 검색어.
+    // 카카오톡 전송시 입력한 수신자명 기재.
+    // 조회 검색어를 포함한 수신자명을 검색합니다.
+    $QString = '';
 
-	try {
-		$result = $KakaoService->Search( $testCorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, '', $QString );
-	}
-  catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $KakaoService->Search( $testCorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, '', $QString );
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

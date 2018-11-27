@@ -5,28 +5,28 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 문자 API 서비스 과금정보를 확인합니다.
-  */
+    /**
+     * 문자 API 서비스 과금정보를 확인합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 팝빌회원 아이디
-	$testUserID = 'testkorea';
+    // 팝빌회원 아이디
+    $testUserID = 'testkorea';
 
-  // 문자 전송유형, ENumMessageType::SMS(단문), ENumMessageType::LMS(장문), ENumMessageType::MMS(포토)
-  $messageType = ENumMessageType::SMS;
+    // 문자 전송유형, ENumMessageType::SMS(단문), ENumMessageType::LMS(장문), ENumMessageType::MMS(포토)
+    $messageType = ENumMessageType::SMS;
 
-	try {
-		$result = $MessagingService->GetChargeInfo($testCorpNum, $messageType, $testUserID);
-	}
-	catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $MessagingService->GetChargeInfo($testCorpNum, $messageType, $testUserID);
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

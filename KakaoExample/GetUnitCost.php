@@ -5,25 +5,25 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 카카오톡 전송단가를 확인합니다.
-  */
+    /**
+     * 카카오톡 전송단가를 확인합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자 번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 카카오톡 전송유형 ATS-알림톡, FTS-친구톡(텍스트), FMS-친구톡(이미지)
-	$kakaoType = ENumKakaoType::ATS;
+    // 카카오톡 전송유형 ATS-알림톡, FTS-친구톡(텍스트), FMS-친구톡(이미지)
+    $kakaoType = ENumKakaoType::ATS;
 
-	try {
-		$unitCost= $KakaoService->GetUnitCost($testCorpNum, $kakaoType);
-	}
-	catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $unitCost= $KakaoService->GetUnitCost($testCorpNum, $kakaoType);
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

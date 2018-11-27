@@ -5,39 +5,39 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 검색조건을 사용하여 수집 결과 요약정보를 조회합니다.
-  * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
-  *   > 3.3.2. Summary (수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
-  */
+    /**
+     * 검색조건을 사용하여 수집 결과 요약정보를 조회합니다.
+     * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
+     *   > 3.3.2. Summary (수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
-  $testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-  $JobID = '017030215000000001';
+    // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
+    $JobID = '017030215000000001';
 
-  // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
-  $TradeType = array (
-    'N',
-    'C'
-  );
+    // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
+    $TradeType = array (
+        'N',
+        'C'
+    );
 
-  // 거래용도 배열, P-소득공제용, C-지출증빙용
-  $TradeUsage = array (
-    'P',
-    'C'
-  );
+    // 거래용도 배열, P-소득공제용, C-지출증빙용
+    $TradeUsage = array (
+        'P',
+        'C'
+    );
 
-	try {
-		$response = $HTCashbillService->Summary($testCorpNum, $JobID, $TradeType, $TradeUsage);
-	}
-	catch (PopbillException $pe) {
-    $code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $response = $HTCashbillService->Summary($testCorpNum, $JobID, $TradeType, $TradeUsage);
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

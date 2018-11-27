@@ -5,29 +5,29 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 공급받는자 메일링크 URL을 반환합니다.
-  * - 메일링크 URL은 유효시간이 존재하지 않습니다.
-  */
+    /**
+     * 공급받는자 메일링크 URL을 반환합니다.
+     * - 메일링크 URL은 유효시간이 존재하지 않습니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자 번호, '-'제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 문서관리번호
-	$mgtKey = '20170302-05';
+    // 문서관리번호
+    $mgtKey = '20170302-05';
 
-	try {
-		$url = $TaxinvoiceService->GetMailURL($testCorpNum, $mgtKeyType, $mgtKey);
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $url = $TaxinvoiceService->GetMailURL($testCorpNum, $mgtKeyType, $mgtKey);
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

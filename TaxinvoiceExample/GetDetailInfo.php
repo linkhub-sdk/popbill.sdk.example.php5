@@ -5,28 +5,28 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 1건의 세금계산서 상세정보를 확인합니다.
-  * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] > 4.1 (세금)계산서 구성" 을 참조하시기 바랍니다.
-  */
+    /**
+     * 1건의 세금계산서 상세정보를 확인합니다.
+     * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] > 4.1 (세금)계산서 구성" 을 참조하시기 바랍니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원, 사업자번호
-	$testCorpNum = '1234567890';
+    // 팝빌회원, 사업자번호
+    $testCorpNum = '1234567890';
 
-  // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-  $mgtKeyType = ENumMgtKeyType::SELL;
+    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    $mgtKeyType = ENumMgtKeyType::SELL;
 
-  // 세금계산서 문서관리번호
-	$mgtKey = '20170302-04';
+    // 세금계산서 문서관리번호
+    $mgtKey = '20170302-04';
 
-	try {
-		$result = $TaxinvoiceService->GetDetailInfo($testCorpNum, $mgtKeyType, $mgtKey);
-	} catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $TaxinvoiceService->GetDetailInfo($testCorpNum, $mgtKeyType, $mgtKey);
+    } catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">
@@ -43,50 +43,50 @@
 					<?php
 						} else {
 					?>
-							<li> writeDate (작성일자) : <?php echo $result->writeDate  ?> </li>
-							<li> chargeDirection (과금방향) : <?php echo $result->chargeDirection  ?> </li>
-							<li> issueType (발행형태) : <?php echo $result->issueType  ?> </li>
-							<li> issueTiming (발행시점) : <?php echo $result->issueTiming  ?> </li>
-							<li> taxType (과세형태) : <?php echo $result->taxType  ?> </li>
-              <li> supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal  ?> </li>
-              <li> taxTotal (세액 합계) : <?php echo $result->taxTotal ?>  </li>
-              <li> totalAmount (합계금액) : <?php echo $result->totalAmount  ?> </li>
-              <li> ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum  ?> </li>
+                            <li> writeDate (작성일자) : <?php echo $result->writeDate  ?> </li>
+                            <li> chargeDirection (과금방향) : <?php echo $result->chargeDirection  ?> </li>
+                            <li> issueType (발행형태) : <?php echo $result->issueType  ?> </li>
+                            <li> issueTiming (발행시점) : <?php echo $result->issueTiming  ?> </li>
+                            <li> taxType (과세형태) : <?php echo $result->taxType  ?> </li>
+                            <li> supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal  ?> </li>
+                            <li> taxTotal (세액 합계) : <?php echo $result->taxTotal ?>  </li>
+                            <li> totalAmount (합계금액) : <?php echo $result->totalAmount  ?> </li>
+                            <li> ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum  ?> </li>
 
-							<li> invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?> </li>
-							<li> invoicerMgtKey (공급자 문서관리번호) : <?php echo $result->invoicerMgtKey  ?> </li>
-							<li> invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName  ?> </li>
-							<li> invoicerCEOName (공급자 대표자명) : <?php echo $result->invoicerCEOName  ?> </li>
-							<li> invoicerAddr (공급자 주소) : <?php echo $result->invoicerAddr  ?> </li>
-							<li> invoicerContactName (공급자 담당자명) : <?php echo $result->invoicerContactName  ?> </li>
-							<li> invoicerTEL (공급자 담당자 연락처) : <?php echo $result->invoicerTEL  ?> </li>
-							<li> invoicerHP (공급자 담당자 휴대폰) : <?php echo $result->invoicerHP  ?> </li>
-							<li> invoicerEmail (공급자 담당자 메일) : <?php echo $result->invoicerEmail  ?> </li>
-							<li> invoicerSMSSendYN (발행안내문자 전송여부) : <?php echo $result->invoicerSMSSendYN  ?> </li>
+                            <li> invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?> </li>
+                            <li> invoicerMgtKey (공급자 문서관리번호) : <?php echo $result->invoicerMgtKey  ?> </li>
+                            <li> invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName  ?> </li>
+                            <li> invoicerCEOName (공급자 대표자명) : <?php echo $result->invoicerCEOName  ?> </li>
+                            <li> invoicerAddr (공급자 주소) : <?php echo $result->invoicerAddr  ?> </li>
+                            <li> invoicerContactName (공급자 담당자명) : <?php echo $result->invoicerContactName  ?> </li>
+                            <li> invoicerTEL (공급자 담당자 연락처) : <?php echo $result->invoicerTEL  ?> </li>
+                            <li> invoicerHP (공급자 담당자 휴대폰) : <?php echo $result->invoicerHP  ?> </li>
+                            <li> invoicerEmail (공급자 담당자 메일) : <?php echo $result->invoicerEmail  ?> </li>
+                            <li> invoicerSMSSendYN (발행안내문자 전송여부) : <?php echo $result->invoicerSMSSendYN  ?> </li>
 
-							<li> invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum  ?> </li>
-							<li> invoiceeType (공급받는자 구분) : <?php echo $result->invoiceeType ?>  </li>
-							<li> invoiceeMgtKey (공급받는자 문서관리번호) : <?php echo $result->invoiceeMgtKey  ?> </li>
-							<li> invoiceeCorpName (공급받는자 상호) : <?php echo $result->invoiceeCorpName  ?> </li>
-							<li> invoiceeCEOName (공급받는자 대표자명) : <?php echo $result->invoiceeCEOName  ?> </li>
-							<li> invoiceeAddr (공급받는자 주소) : <?php echo $result->invoiceeAddr  ?> </li>
-							<li> invoiceeContactName1 (공급받는자 담당자명) : <?php echo $result->invoiceeContactName1  ?> </li>
-							<li> invoiceeTEL1 (공급받는자 담당자 연락처) : <?php echo $result->invoiceeTEL1  ?> </li>
-							<li> invoiceeHP1 (공급받는자 담당자 휴대폰) : <?php echo $result->invoiceeHP1  ?> </li>
-							<li> invoiceeEmail1 (공급받는자 담당자 메일) : <?php echo $result->invoiceeEmail1 ?> </li>
-							<li> invoiceeSMSSendYN (역발행안내문자 전송여부) : <?php echo $result->invoiceeSMSSendYN  ?> </li>
-							<li> closeDownState (공급받는자 휴폐업상태) : <?php echo $result->closeDownState ?> </li>
-              <li> closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result->closeDownStateDate ?> </li>
+                            <li> invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum  ?> </li>
+                            <li> invoiceeType (공급받는자 구분) : <?php echo $result->invoiceeType ?>  </li>
+                            <li> invoiceeMgtKey (공급받는자 문서관리번호) : <?php echo $result->invoiceeMgtKey  ?> </li>
+                            <li> invoiceeCorpName (공급받는자 상호) : <?php echo $result->invoiceeCorpName  ?> </li>
+                            <li> invoiceeCEOName (공급받는자 대표자명) : <?php echo $result->invoiceeCEOName  ?> </li>
+                            <li> invoiceeAddr (공급받는자 주소) : <?php echo $result->invoiceeAddr  ?> </li>
+                            <li> invoiceeContactName1 (공급받는자 담당자명) : <?php echo $result->invoiceeContactName1  ?> </li>
+                            <li> invoiceeTEL1 (공급받는자 담당자 연락처) : <?php echo $result->invoiceeTEL1  ?> </li>
+                            <li> invoiceeHP1 (공급받는자 담당자 휴대폰) : <?php echo $result->invoiceeHP1  ?> </li>
+                            <li> invoiceeEmail1 (공급받는자 담당자 메일) : <?php echo $result->invoiceeEmail1 ?> </li>
+                            <li> invoiceeSMSSendYN (역발행안내문자 전송여부) : <?php echo $result->invoiceeSMSSendYN  ?> </li>
+                            <li> closeDownState (공급받는자 휴폐업상태) : <?php echo $result->closeDownState ?> </li>
+                            <li> closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result->closeDownStateDate ?> </li>
 
-							<li> purposeType (영수/청구) : <?php echo $result->purposeType  ?> </li>
-							<li> serialNum (일련번호) : <?php echo $result->serialNum ?>  </li>
-							<li> remark1 (비고1) : <?php echo $result->remark1 ?>  </li>
-							<li> remark2 (비고2) : <?php echo $result->remark2  ?> </li>
-							<li> remark3 (비고3) : <?php echo $result->remark3  ?> </li>
-							<li> kwon (권) : <?php echo $result->kwon  ?> </li>
-							<li> ho(호)  : <?php echo $result->ho  ?> </li>
-							<li> businessLicenseYN (사업자등록증 이미지 첨부여부) : <?php echo $result->businessLicenseYN  ?> </li>
-							<li> bankBookYN (통장사본이미지 첨부여부) : <?php echo $result->bankBookYN  ?> </li>
+                            <li> purposeType (영수/청구) : <?php echo $result->purposeType  ?> </li>
+                            <li> serialNum (일련번호) : <?php echo $result->serialNum ?>  </li>
+                            <li> remark1 (비고1) : <?php echo $result->remark1 ?>  </li>
+                            <li> remark2 (비고2) : <?php echo $result->remark2  ?> </li>
+                            <li> remark3 (비고3) : <?php echo $result->remark3  ?> </li>
+                            <li> kwon (권) : <?php echo $result->kwon  ?> </li>
+                            <li> ho(호)  : <?php echo $result->ho  ?> </li>
+                            <li> businessLicenseYN (사업자등록증 이미지 첨부여부) : <?php echo $result->businessLicenseYN  ?> </li>
+                            <li> bankBookYN (통장사본이미지 첨부여부) : <?php echo $result->bankBookYN  ?> </li>
 
 					    <?php
 							if ( isset($result->detailList) ) {

@@ -5,28 +5,28 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-	* 팩스전송요청시 할당한 전송요청번호(requestNum)로 팩스 예약전송건을 취소합니다.
-  * - 예약전송 취소는 예약전송시간 10분전까지 가능하며, 팩스변환 이후 가능합니다.
-  */
+    /**
+     * 팩스전송요청시 할당한 전송요청번호(requestNum)로 팩스 예약전송건을 취소합니다.
+     * - 예약전송 취소는 예약전송시간 10분전까지 가능하며, 팩스변환 이후 가능합니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-  // 예약팩스전송 요청시 할당한 전송요청번호
-	$requestNum = '';
+    // 예약팩스전송 요청시 할당한 전송요청번호
+    $requestNum = '';
 
-	try {
-		$result = $FaxService->CancelReserveRN($testCorpNum ,$requestNum);
-		$code = $result->code;
-		$message = $result->message;
-	}
-  catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $FaxService->CancelReserveRN($testCorpNum ,$requestNum);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

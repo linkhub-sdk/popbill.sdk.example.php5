@@ -5,52 +5,52 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-/**
- * 검색조건을 사용하여 팩스전송 내역을 조회합니다.
- * - 최대 검색기간 : 6개월 이내
- */
+    /**
+     * 검색조건을 사용하여 팩스전송 내역을 조회합니다.
+     * - 최대 검색기간 : 6개월 이내
+     */
 
-include 'common.php';
+    include 'common.php';
 
-// 팝빌 회원 사업자 번호, "-"제외 10자리
-$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-// 검색시작일자
-$SDate = '20180925';
+    // 검색시작일자
+    $SDate = '20180925';
 
-// 검색종료일자
-$EDate = '20180930';
+    // 검색종료일자
+    $EDate = '20180930';
 
-// 전송상태값 배열, 1-대기, 2-성공, 3-실패, 4-취소
-$State = array(1, 2, 3, 4);
+    // 전송상태값 배열, 1-대기, 2-성공, 3-실패, 4-취소
+    $State = array(1, 2, 3, 4);
 
-// 예약전송 조회여부, true(예약전송건 검색)
-$ReserveYN = false;
+    // 예약전송 조회여부, true(예약전송건 검색)
+    $ReserveYN = false;
 
-// 개인조회여부, true(개인조회), false(회사조회)
-$SenderOnly = false;
+    // 개인조회여부, true(개인조회), false(회사조회)
+    $SenderOnly = false;
 
-// 페이지 번호, 기본값 1
-$Page = 1;
+    // 페이지 번호, 기본값 1
+    $Page = 1;
 
-// 페이지당 검색갯수, 기본값 500, 최대값 1000
-$PerPage = 500;
+    // 페이지당 검색갯수, 기본값 500, 최대값 1000
+    $PerPage = 500;
 
-// 정렬방향, D-내림차순, A-오름차순
-$Order = 'D';
+    // 정렬방향, D-내림차순, A-오름차순
+    $Order = 'D';
 
-// 조회 검색어.
-// 팩스 전송시 입력한 발신자명 또는 수신자명 기재.
-// 조회 검색어를 포함한 발신자명 또는 수신자명을 검색합니다.
-$QString = '';
+    // 조회 검색어.
+    // 팩스 전송시 입력한 발신자명 또는 수신자명 기재.
+    // 조회 검색어를 포함한 발신자명 또는 수신자명을 검색합니다.
+    $QString = '';
 
-try {
-    $result = $FaxService->Search($testCorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order, '', $QString);
-} catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
-?>
+    try {
+        $result = $FaxService->Search($testCorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order, '', $QString);
+    } catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
+    ?>
 <body>
 <div id="content">
     <p class="heading1">Response</p>

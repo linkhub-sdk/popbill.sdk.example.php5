@@ -5,24 +5,24 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 팝빌에 등록된 공인인증서의 유효성을 확인한다.
-  */
+    /**
+     * 팝빌에 등록된 공인인증서의 유효성을 확인한다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌 회원 사업자번호, '-' 제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    $testCorpNum = '1234567890';
 
-	try	{
-		$result = $TaxinvoiceService->CheckCertValidation($testCorpNum);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch(PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try	{
+        $result = $TaxinvoiceService->CheckCertValidation($testCorpNum);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch(PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

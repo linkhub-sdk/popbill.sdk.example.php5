@@ -5,28 +5,28 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-/**
- * 다수의 사업자에 대한 휴폐업여부를 조회합니다. (최대 1000건)
- */
+    /**
+     * 다수의 사업자에 대한 휴폐업여부를 조회합니다. (최대 1000건)
+     */
 
-include 'common.php';
+    include 'common.php';
 
-//팝빌회원 사업자번호
-$MemberCorpNum = "1234567890";
+    //팝빌회원 사업자번호
+    $MemberCorpNum = "1234567890";
 
-// 조회할 사업자번호 배열, 최대 1000건
-$CorpNumList = array(
-    "1234567890",
-    "6798700433",
-    "401-03-94930",
-);
+    // 조회할 사업자번호 배열, 최대 1000건
+    $CorpNumList = array(
+        "1234567890",
+        "6798700433",
+        "401-03-94930",
+    );
 
-try {
-    $result = $ClosedownService->checkCorpNums($MemberCorpNum, $CorpNumList);
-} catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
+    try {
+        $result = $ClosedownService->checkCorpNums($MemberCorpNum, $CorpNumList);
+    } catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 
 ?>
 <body>

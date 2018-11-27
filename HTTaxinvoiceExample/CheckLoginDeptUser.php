@@ -5,24 +5,24 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  *  팝빌에 등록된 전자세금계산서 부서사용자 계정정보를 이용하여 홈택스 로그인을 테스트한다.
-  */
+    /**
+     *  팝빌에 등록된 전자세금계산서 부서사용자 계정정보를 이용하여 홈택스 로그인을 테스트한다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 사업자번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 사업자번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-	try	{
-		$result = $HTTaxinvoiceService->CheckLoginDeptUser($testCorpNum);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try	{
+        $result = $HTTaxinvoiceService->CheckLoginDeptUser($testCorpNum);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">

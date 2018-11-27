@@ -5,23 +5,23 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * (주)카카오로 부터 승인된 알림톡 템플릿 목록을 확인합니다.
-  * - 반환항목중 템플릿코드(templateCode)는 알림톡 전송시 사용됩니다.
-  */
+    /**
+    * (주)카카오로 부터 승인된 알림톡 템플릿 목록을 확인합니다.
+    * - 반환항목중 템플릿코드(templateCode)는 알림톡 전송시 사용됩니다.
+    */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
-	$testCorpNum = '1234567890';
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    $testCorpNum = '1234567890';
 
-	try {
-		$result = $KakaoService->ListATSTemplate($testCorpNum);
-	}
-	catch (PopbillException $pe) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try {
+        $result = $KakaoService->ListATSTemplate($testCorpNum);
+    }
+    catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">
@@ -43,9 +43,9 @@
 							<legend> 알림톡 템플릿 목록 [<?php echo $i+1?>]</legend>
 							<ul>
 								<li>templateCode (템플릿 코드) : <?php echo $result[$i]->templateCode ?></li>
-                <li>templateName (템플릿 제목) : <?php echo $result[$i]->templateName ?></li>
-                <li>template (템플릿 내용) : <?php echo $result[$i]->template ?></li>
-                <li>plusFriendID (플러스친구 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
+                                <li>templateName (템플릿 제목) : <?php echo $result[$i]->templateName ?></li>
+                                <li>template (템플릿 내용) : <?php echo $result[$i]->template ?></li>
+                                <li>plusFriendID (플러스친구 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
 							</ul>
 							</fieldset>
 					<?php

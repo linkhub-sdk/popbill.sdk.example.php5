@@ -5,28 +5,28 @@
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
-/**
- * 접수한 팩스 전송건에 대한 미리보기 팝업 URL을 반환합니다.
- * - 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
- */
+    /**
+     * 접수한 팩스 전송건에 대한 미리보기 팝업 URL을 반환합니다.
+     * - 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
+     */
 
-include 'common.php';
+    include 'common.php';
 
-// 팝빌 회원 사업자 번호, "-"제외 10자리
-$testCorpNum = '1234567890';
+    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-// 팩스전송 접수번호
-$ReceiptNum = '018091015373100001';
+    // 팩스전송 접수번호
+    $ReceiptNum = '018091015373100001';
 
-// 팝빌 회원 아이디
-$testUserID = 'testkorea';
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
 
-try {
-    $url = $FaxService->GetPreviewURL($testCorpNum,$ReceiptNum,$testUserID);
-} catch (PopbillException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-}
+    try {
+        $url = $FaxService->GetPreviewURL($testCorpNum,$ReceiptNum,$testUserID);
+    } catch (PopbillException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 <body>
 <div id="content">

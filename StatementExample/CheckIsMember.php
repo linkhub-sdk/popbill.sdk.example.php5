@@ -5,25 +5,25 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-  /**
-  * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
-  * - LinkID는 인증정보로 설정되어 있는 링크아이디 값입니다.
-  */
+    /**
+     * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
+     * - LinkID는 인증정보로 설정되어 있는 링크아이디 값입니다.
+     */
 
-	include 'common.php';
+    include 'common.php';
 
-  // 조회할 사업자번호, "-"제외 10자리
-	$testCorpNum = '1234567890';
+    // 조회할 사업자번호, "-"제외 10자리
+    $testCorpNum = '1234567890';
 
-	try	{
-		$result = $StatementService->CheckIsMember($testCorpNum ,$LinkID);
-		$code = $result->code;
-		$message = $result->message;
-	}
-	catch ( PopbillException $pe ) {
-		$code = $pe->getCode();
-		$message = $pe->getMessage();
-	}
+    try	{
+        $result = $StatementService->CheckIsMember($testCorpNum ,$LinkID);
+        $code = $result->code;
+        $message = $result->message;
+    }
+    catch ( PopbillException $pe ) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
 	<body>
 		<div id="content">
