@@ -6,7 +6,7 @@
 	</head>
 <?php
     /**
-     * 홈택스 공인인증서 등록 팝업 URL을 반환합니다.
+     * 홈택스 인증정보 설정 팝업 URL을 반환합니다.
      * - 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
      */
 
@@ -28,7 +28,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>홈택스 공인인증서 등록 URL</legend>
+				<legend>홈택스 인증정보 설정 팝업 URL</legend>
 				<ul>
 					<?php
 						if ( isset ( $url ) ) {
