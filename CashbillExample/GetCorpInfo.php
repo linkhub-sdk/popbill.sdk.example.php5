@@ -37,11 +37,11 @@
 					<?
 						} else {
 					?>
-						<li>ceoname : <?= $result->ceoname ?></li>
-						<li>corpName : <?= $result->corpName ?></li>
-						<li>addr : <?= $result->addr ?></li>
-						<li>bizType : <?= $result->bizType ?></li>
-						<li>bizClass : <?= $result->bizClass ?></li>
+						<li>ceoname(대표자성명) : <?= $result->ceoname ?></li>
+						<li>corpName(상호) : <?= $result->corpName ?></li>
+						<li>addr(주소) : <?= $result->addr ?></li>
+						<li>bizType(업태) : <?= $result->bizType ?></li>
+						<li>bizClass(종목) : <?= $result->bizClass ?></li>
 					<?
 						}
 					?>

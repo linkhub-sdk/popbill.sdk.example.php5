@@ -36,13 +36,13 @@
 						<li>Response.message : <?php echo $message ?></li>
 					<?php
 						} else {
-							for($i=0; $i<Count($result); $i++){
-								if ($result[$i]->emailType == CSH_ISSUE) {
+							for( $i = 0; $i < Count($result); $i++ ){
+								if ($result[$i]->emailType == "CSH_ISSUE") {
 					?>
 									<li>CSH_ISSUE(고객에게 현금영수증이 발행 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
               <?php
 								}
-								if ($result[$i]->emailType == CSH_CANCEL) {
+								if ($result[$i]->emailType == "CSH_CANCEL") {
 					    ?>
 									<li>CSH_CANCEL(고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 					    <?php
