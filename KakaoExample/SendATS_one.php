@@ -19,13 +19,13 @@
     $testUserID = 'testkorea';
 
     // 템플릿 코드 - 템플릿 목록 조회 (ListATSTemplate API)의 반환항목 확인
-    $templateCode = '018060000179';
+    $templateCode = '018110000047';
 
     // 팝빌에 사전 등록된 발신번호
     $sender = '07043042991';
 
     // 알림톡 내용, 최대 1000자
-    $content = '[테스트] 테스트 템플릿입니다.';
+    $content = '테스트 템플릿입니다.';
 
     // 대체문자 내용
     $altContent = '대체문자 내용';
@@ -34,7 +34,7 @@
     $altSendType = 'A';
 
     // 예약전송일시, yyyyMMddHHmmss
-    $reserveDT = '20180302200000';
+    $reserveDT = '';
 
     // 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
