@@ -22,8 +22,6 @@
         $code = $pe->getCode();
         $message = $pe->getMessage();
     }
-
-    var_dump($result);
 ?>
 	<body>
 		<div id="content">
