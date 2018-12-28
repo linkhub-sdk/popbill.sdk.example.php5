@@ -20,10 +20,10 @@
     $DType = 'W';
 
     // [필수] 시작일자
-    $SDate = '20160901';
+    $SDate = '20181201';
 
     // [필수] 종료일자
-    $EDate = '20161131';
+    $EDate = '20181231';
 
 
     // 전송상태값 배열, 문서상태값 3자리 배열, 2,3번째 와일드카드 사용가능
@@ -78,38 +78,38 @@
                 <?php
             } else {
                 ?>
-                <li>code : <?php echo $result->code ?> </li>
-                <li>total : <?php echo $result->total ?> </li>
-                <li>pageNum : <?php echo $result->pageNum ?> </li>
-                <li>perPage : <?php echo $result->perPage ?> </li>
-                <li>pageCount : <?php echo $result->pageCount ?> </li>
-                <li>message : <?php echo $result->message ?> </li>
+                <li>code(응답 상태코드) : <?php echo $result->code ?> </li>
+                <li>total(총 검색결과 건수) : <?php echo $result->total ?> </li>
+                <li>pageNum(페이지 번호) : <?php echo $result->pageNum ?> </li>
+                <li>perPage(페이지당 검색개수) : <?php echo $result->perPage ?> </li>
+                <li>pageCount(페이지 개수) : <?php echo $result->pageCount ?> </li>
+                <li>message(응답 메시지) : <?php echo $result->message ?> </li>
                 <?php
                 for ($i = 0; $i < Count($result->list); $i++) {
                     ?>
                     <fieldset class="fieldset2">
                         <legend> 전자명세서 요약정보[<?php echo $i+1?>]</legend>
                         <ul>
-                            <li> mgtKey : <?php echo $result->list[$i]->mgtKey ?></li>
-                            <li> writeDate : <?php echo $result->list[$i]->writeDate ?></li>
-                            <li> itemKey : <?php echo $result->list[$i]->itemKey ?></li>
-                            <li> stateCode : <?php echo $result->list[$i]->stateCode ?></li>
-                            <li> taxType : <?php echo $result->list[$i]->taxType ?></li>
-                            <li> purposeType : <?php echo $result->list[$i]->purposeType ?></li>
-                            <li> senderCorpName : <?php echo $result->list[$i]->senderCorpName ?></li>
-                            <li> senderCorpNum : <?php echo $result->list[$i]->senderCorpNum ?></li>
-                            <li> senderPrintYN : <?php echo $result->list[$i]->senderPrintYN ?></li>
-                            <li> receiverCorpName : <?php echo $result->list[$i]->receiverCorpName ?></li>
-                            <li> receiverCorpNum : <?php echo $result->list[$i]->receiverCorpNum ?></li>
-                            <li> receiverPrintYN : <?php echo $result->list[$i]->receiverPrintYN ?></li>
-                            <li> supplyCostTotal : <?php echo $result->list[$i]->supplyCostTotal ?></li>
-                            <li> taxTotal : <?php echo $result->list[$i]->taxTotal ?></li>
-                            <li> issueDT : <?php echo $result->list[$i]->issueDT ?></li>
-                            <li> stateDT : <?php echo $result->list[$i]->stateDT ?></li>
-                            <li> openYN : <?php echo $result->list[$i]->openYN ?></li>
-                            <li> openDT : <?php echo $result->list[$i]->openDT ?></li>
-                            <li> stateMemo : <?php echo $result->list[$i]->stateMemo ?></li>
-                            <li> regDT : <?php echo $result->list[$i]->regDT ?></li>
+                            <li> itemKey(아이템키) : <?php echo $result->list[$i]->itemKey ?></li>
+                            <li> itemCode(문서종류코드) : <?php echo $result->list[$i]->itemCode ?></li>
+              							<li> stateCode(상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
+              							<li> taxType(세금형태) : <?php echo $result->list[$i]->taxType ?></li>
+              							<li> purposeType(영수/청구) : <?php echo $result->list[$i]->purposeType ?></li>
+              							<li> writeDate(작성일자) : <?php echo $result->list[$i]->writeDate ?></li>
+              							<li> senderCorpName(발신자 상호) : <?php echo $result->list[$i]->senderCorpName ?></li>
+              							<li> senderCorpNum(발신자 사업자번호) : <?php echo $result->list[$i]->senderCorpNum ?></li>
+              							<li> senderPrintYN(발신자 인쇄여부) : <?php echo $result->list[$i]->senderPrintYN ?></li>
+              							<li> receiverCorpName(수신자 상호) : <?php echo $result->list[$i]->receiverCorpName ?></li>
+              							<li> receiverCorpNum(수신자 사업자번호) : <?php echo $result->list[$i]->receiverCorpNum ?></li>
+              							<li> receiverPrintYN(수신자 인쇄여부) : <?php echo $result->list[$i]->receiverPrintYN ?></li>
+              							<li> supplyCostTotal(공급가액 합계) : <?php echo $result->list[$i]->supplyCostTotal ?></li>
+              							<li> taxTotal(세액 합계) : <?php echo $result->list[$i]->taxTotal ?></li>
+              							<li> issueDT(발행일시) : <?php echo $result->list[$i]->issueDT ?></li>
+              							<li> stateDT(상태 변경일시) : <?php echo $result->list[$i]->stateDT ?></li>
+              							<li> openYN(메일 개봉 여부) : <?php echo $result->list[$i]->openYN ?></li>
+              							<li> openDT(개봉 일시) : <?php echo $result->list[$i]->openDT ?></li>
+              							<li> stateMemo(상태메모) : <?php echo $result->list[$i]->stateMemo ?></li>
+              							<li> regDT(등록일시) : <?php echo $result->list[$i]->regDT ?></li>
                         </ul>
                     </fieldset>
                     <?php

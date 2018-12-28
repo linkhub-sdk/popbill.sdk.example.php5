@@ -20,7 +20,7 @@
     $itemCode = '121';
 
     // 문서관리번호
-    $MgtKey = '20170302-04';
+    $MgtKey = '20181228-04';
 
     try	{
         $result = $StatementService->Delete($testCorpNum, $itemCode, $MgtKey);

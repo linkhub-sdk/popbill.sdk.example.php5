@@ -21,7 +21,7 @@
     $itemCode = '121';
 
     // 문서관리번호
-    $mgtKey = '20170302-04';
+    $mgtKey = '20181228-04';
 
     try {
         $result = $StatementService->GetLogs($testCorpNum, $itemCode, $mgtKey);
@@ -48,7 +48,7 @@
 							for ($i = 0; $i < Count($result) ; $i++) {
 					?>
 								<fieldset class ="fieldset2">
-								<legend>전자명세서 상태변경 이력 [<?php echo $i ?>] </legend>
+								<legend>전자명세서 상태변경 이력 [<?php echo $i+1 ?>] </legend>
 									<ul>
 										<li>docLogType : <?php echo $result[$i]->docLogType ?></li>
 										<li>log : <?php echo $result[$i]->log ?></li>

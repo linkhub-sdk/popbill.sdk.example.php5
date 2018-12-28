@@ -20,7 +20,7 @@
     $itemCode = '121';
 
     // 문서관리번호
-    $mgtKey = '20170302-04';
+    $mgtKey = '20181228-04';
 
     // 첨부된 파일의 아이디, GetFiles API 응답항목중 AttachedFile 항목
     $FileID= 'A0450FBE-FF2D-43E7-ABAB-EFC17886C456.PBF';

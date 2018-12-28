@@ -17,12 +17,10 @@
 
     // 전자명세서 문서관리번호
     // 1~24자리로 영문, 숫자 '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20170302-04';
+    $mgtKey = '20181228-04';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
-
-
 
     // 전자명세서 객체 생성
     $Statement = new Statement();
@@ -32,10 +30,10 @@
      ************************************************************/
 
     // [필수] 기재상 작성일자
-    $Statement->writeDate = '20170302';
+    $Statement->writeDate = '20181228';
 
     // [필수] (영수, 청구) 중 기재
-    $Statement->purposeType = '영수';
+    $Statement->purposeType = '청구';
 
     // [필수]  과세형태, (과세, 영세, 면세) 중 기재
     $Statement->taxType = '과세';
@@ -108,10 +106,10 @@
 
     $Statement->detailList = array();
 
-    $Statement->detailList[] = new StatementDetail();
+    $Statement->detailList[0] = new StatementDetail();
 
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20150205';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20181228';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -126,8 +124,10 @@
     $Statement->detailList[0]->spare4 = 'spare4';
     $Statement->detailList[0]->spare5 = 'spare5';
 
+    $Statement->detailList[1] = new StatementDetail();
+
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20150205';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20181228';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';

@@ -24,8 +24,8 @@
                 <li><a href="GetChargeURL.php">GetChargeURL</a> - 연동회원 포인트충전 URL</li>
                 <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
                 <li><a href="GetPartnerURL.php">GetPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
-                <li><a href="RegistContact.php">RegistContact</a> - 담당자 목록 확인</li>
-                <li><a href="ListContact.php">ListContact</a> - 담당자 추가</li>
+                <li><a href="RegistContact.php">RegistContact</a> - 담당자 추가</li>
+                <li><a href="ListContact.php">ListContact</a> - 담당자 목록 확인</li>
                 <li><a href="UpdateContact.php">UpdateContact</a> - 담당자 정보 수정</li>
                 <li><a href="GetCorpInfo.php">GetCorpInfo</a> - 회사정보 확인</li>
                 <li><a href="UpdateCorpInfo.php">UpdateCorpInfo</a> - 회사정보 수정</li>
@@ -69,7 +69,7 @@
         <fieldset class="fieldset2">
             <legend>부가기능</legend>
             <ul>
-                <li><a href="SendEmail.php">SEndEmail</a> - 알림메일 재전송</li>
+                <li><a href="SendEmail.php">SendEmail</a> - 알림메일 재전송</li>
                 <li><a href="SendSMS.php">SendSMS</a> - 알림문자 재전송</li>
                 <li><a href="SendFAX.php">SendFAX</a> - 전자명세서 팩스 전송</li>
                 <li><a href="FAXSend.php">FAXSend</a> - 선팩스 전송</li>

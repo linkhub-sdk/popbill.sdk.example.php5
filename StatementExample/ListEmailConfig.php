@@ -37,27 +37,27 @@
 					<?php
 						} else {
 							for($i=0; $i<Count($result); $i++){
-								if ($result[$i]->emailType == SMT_ISSUE) {
+								if ($result[$i]->emailType == "SMT_ISSUE") {
 					?>
 									<li>SMT_ISSUE(공급받는자에게 전자명세서가 발행 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 							<?php
 								}
-								if ($result[$i]->emailType == SMT_ACCEPT) {
+								if ($result[$i]->emailType == "SMT_ACCEPT") {
 							?>
 									<li>SMT_ACCEPT(공급자에게 전자명세서가 승인 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 							<?php
 								}
-								if ($result[$i]->emailType == SMT_DENY) {
+								if ($result[$i]->emailType == "SMT_DENY") {
 							?>
 									<li>SMT_DENY(공급자에게 전자명세서가 거부 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 							<?php
 								}
-								if ($result[$i]->emailType == SMT_CANCEL) {
+								if ($result[$i]->emailType == "SMT_CANCEL") {
 							?>
 									<li>SMT_CANCEL(공급받는자에게 전자명세서가 취소 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 							<?php
 								}
-								if ($result[$i]->emailType == SMT_CANCEL_ISSUE) {
+								if ($result[$i]->emailType == "SMT_CANCEL_ISSUE") {
 					    ?>
 									<li>SMT_CANCEL_ISSUE(공급받는자에게 전자명세서가 발행취소 되었음을 알려주는 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 					    <?php
