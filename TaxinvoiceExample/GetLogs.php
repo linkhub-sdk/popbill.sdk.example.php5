@@ -21,7 +21,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서관리번호
-    $mgtKey = '20170302-04';
+    $mgtKey = '20181228-04';
 
     try {
         $result = $TaxinvoiceService->GetLogs($testCorpNum, $mgtKeyType, $mgtKey);

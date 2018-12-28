@@ -18,7 +18,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20170302-05';
+    $mgtKey = '20181228-05';
 
     // 수신이메일주소
     $receiver = 'test@test.com';

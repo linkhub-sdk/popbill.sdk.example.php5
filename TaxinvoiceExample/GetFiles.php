@@ -20,7 +20,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20170302-04';
+    $mgtKey = '20181228-02';
 
     try {
         $result = $TaxinvoiceService->GetFiles($testCorpNum, $mgtKeyType, $mgtKey);
@@ -50,10 +50,10 @@
 							<fieldset class ="fieldset2">
 								<legend> 첨부파일 [<?php echo $i+1 ?>] </legend>
 								<ul>
-									<li> serialNum : <?php echo $result[$i]->serialNum; ?></li>
-									<li> displayName : <?php echo $result[$i]->displayName; ?></li>
-									<li> attachedFile : <?php echo $result[$i]->attachedFile; ?></li>
-									<li> regDT : <?php echo $result[$i]->regDT; ?></li>
+									<li> serialNum(순번) : <?php echo $result[$i]->serialNum; ?></li>
+									<li> displayName(파일명) : <?php echo $result[$i]->displayName; ?></li>
+									<li> attachedFile(파일아이디) : <?php echo $result[$i]->attachedFile; ?></li>
+									<li> regDT(등록일시) : <?php echo $result[$i]->regDT; ?></li>
 								</ul>
 							</fieldset>
 					<?php

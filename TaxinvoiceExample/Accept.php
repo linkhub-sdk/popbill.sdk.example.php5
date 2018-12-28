@@ -18,7 +18,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서관리번호
-    $mgtKey = '20170407-02';
+    $mgtKey = '20181228-02';
 
     // 메모
     $memo = '발행예정 승인메모입니다';

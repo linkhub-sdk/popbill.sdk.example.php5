@@ -26,10 +26,10 @@
     $DType = 'W';
 
     // [필수] 시작일자
-    $SDate = '20171101';
+    $SDate = '20181201';
 
     // [필수] 종료일자
-    $EDate = '20171231';
+    $EDate = '20181231';
 
     // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array (
@@ -87,7 +87,7 @@
     try {
         $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
             $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
-            $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserId, $IssueType);
+            $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserID, $IssueType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

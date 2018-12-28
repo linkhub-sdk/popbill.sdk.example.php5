@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20170302-05';
+    $mgtKey = '20181228-05';
 
     try {
         $url = $TaxinvoiceService->GetPopUpURL($testCorpNum, $mgtKeyType, $mgtKey);

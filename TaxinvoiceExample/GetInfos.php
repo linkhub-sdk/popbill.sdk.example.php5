@@ -21,9 +21,9 @@
 
     // 세금계산서 문서관리번호 배열, 최대 1000건
     $MgtKeyList = array();
-    array_push($MgtKeyList, "20161221-03");
-    array_push($MgtKeyList, '20161102-03');
-    array_push($MgtKeyList, '20161102-04');
+    array_push($MgtKeyList, "20181228-03");
+    array_push($MgtKeyList, '20181228-03');
+    array_push($MgtKeyList, '20181228-04');
 
     try {
         $result = $TaxinvoiceService->GetInfos($testCorpNum, $mgtKeyType, $MgtKeyList);

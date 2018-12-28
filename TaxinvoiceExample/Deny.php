@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서관리번호
-    $mgtKey = '20170302-04';
+    $mgtKey = '20181228-04';
 
     // 메모
     $memo = '발행예정 거부메모입니다';
