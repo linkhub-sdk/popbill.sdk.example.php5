@@ -15,7 +15,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $testCorpNum = '123456790';
 
     // 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-위수탁
     $TIKeyType = KeyType::SELL;
@@ -24,10 +24,10 @@
     $DType = 'W';
 
     // 시작일자, 형식(yyyyMMdd)
-    $SDate = '20170101';
+    $SDate = '20180601';
 
     // 종료일자, 형식(yyyyMMdd)
-    $EDate = '20170301';
+    $EDate = '20181231';
 
     try {
         $jobID = $HTTaxinvoiceService->RequestJob($testCorpNum, $TIKeyType, $DType, $SDate, $EDate);
