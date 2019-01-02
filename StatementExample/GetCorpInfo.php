@@ -29,22 +29,22 @@
 			<fieldset class="fieldset1">
 				<legend>회사정보 확인</legend>
 				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-						<li>ceoname(대표자성명) : <?php echo $result->ceoname ?></li>
-						<li>corpName(상호) : <?php echo $result->corpName ?></li>
-						<li>addr(주소) : <?php echo $result->addr ?></li>
-						<li>bizType(업태) : <?php echo $result->bizType ?></li>
-						<li>bizClass(종목) : <?php echo $result->bizClass ?></li>
-					<?php
-						}
-					?>
+                    <?php
+                    if ( isset($code) ) {
+                        ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                        <?php
+                    } else {
+                        ?>
+                        <li>ceoname(대표자 성명) : <?php echo $result->ceoname ?></li>
+                        <li>corpName(상호) : <?php echo $result->corpName ?></li>
+                        <li>addr(주소) : <?php echo $result->addr ?></li>
+                        <li>bizType(업태) : <?php echo $result->bizType ?></li>
+                        <li>bizClass(종목) : <?php echo $result->bizClass ?></li>
+                        <?php
+                    }
+                    ?>
 				</ul>
 			</fieldset>
 		 </div>

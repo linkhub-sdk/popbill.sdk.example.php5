@@ -34,17 +34,17 @@
                         ?>
                         <li>Response.code : <?php echo $code ?> </li>
                         <li>Response.message : <?php echo $message ?></li>
-					<?
-						} else {
-					?>
-						<li>ceoname(대표자성명) : <?= $result->ceoname ?></li>
-						<li>corpName(상호) : <?= $result->corpName ?></li>
-						<li>addr(주소) : <?= $result->addr ?></li>
-						<li>bizType(업태) : <?= $result->bizType ?></li>
-						<li>bizClass(종목) : <?= $result->bizClass ?></li>
-					<?
-						}
-					?>
+                        <?php
+                    } else {
+                        ?>
+                        <li>ceoname(대표자 성명) : <?php echo $result->ceoname ?></li>
+                        <li>corpName(상호) : <?php echo $result->corpName ?></li>
+                        <li>addr(주소) : <?php echo $result->addr ?></li>
+                        <li>bizType(업태) : <?php echo $result->bizType ?></li>
+                        <li>bizClass(종목) : <?php echo $result->bizClass ?></li>
+                        <?php
+                    }
+                    ?>
 				</ul>
 			</fieldset>
 		 </div>
