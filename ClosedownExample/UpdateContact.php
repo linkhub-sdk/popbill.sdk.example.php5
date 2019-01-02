@@ -17,7 +17,6 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-
     // 담당자 정보 객체 생성
     $ContactInfo = new ContactInfo();
 
