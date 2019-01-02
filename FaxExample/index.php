@@ -22,10 +22,10 @@
             <li><a href="SendFAX.php">SendFAX</a> (팩스 전송. 1파일 1건 전송)</li>
             <li><a href="SendFAX_Multi.php">SendFAX_Multi</a> (팩스 전송. 1파일 동보 전송(수신번호 최대 1000개))</li>
             <li><a href="ResendFAX.php">ResendFAX</a> (팩스 재전송)</li>
-            <li><a href="ResendFAX_Multi.php">ResendFAX_Multi</a> (팩스 동보 재전송)</li>
-            <li><a href="CancelReserve.php">CancelReserve</a> (예약전송 팩스 취소)</li>
             <li><a href="ResendFAXRN.php">ResendFAXRN</a> (팩스 재전송 - 요청번호할당)</li>
+            <li><a href="ResendFAX_Multi.php">ResendFAX_Multi</a> (팩스 동보 재전송)</li>
             <li><a href="ResendFAXRN_Multi.php">ResendFAXRN_Multi</a> (팩스 동보 재전송 - 요청번호할당)</li>
+            <li><a href="CancelReserve.php">CancelReserve</a> (예약전송 팩스 취소)</li>
             <li><a href="CancelReserveRN.php">CancelReserveRN</a> (예약전송 팩스 취소 - 요청번호할당)</li>
         </ul>
     </fieldset>
