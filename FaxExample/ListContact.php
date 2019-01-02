@@ -49,8 +49,8 @@
                                 <li>tel(담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
                                 <li>regDT(등록일시) : <?php echo $result[$i]->regDT ; ?></li>
                                 <li>searchAllAllowYN(담당자 조회권한 설정) : <?php echo $result[$i]->searchAllAllowYN ? 'true' : 'fasle' ?></li>
-                                -회사조회(true) : 모든 담당자의 전송내역 조회가능 <br/>
-                                -개인조회(flase) : 본인이 접수한 전송내역 조회가능
+                                -회사조회(true) : 모든 담당자의 팩스전송내역 조회가능 <br/>
+                                -개인조회(flase) : 본인이 접수한 팩스전송내역 조회가능
                                 <li>mgrYN(관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
                                 <li>state(상태) : <?php echo $result[$i]->state ; ?></li>
 							</ul>
