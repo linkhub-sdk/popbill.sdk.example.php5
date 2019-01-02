@@ -5,6 +5,11 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
+    /**
+     * MMS(포토)를 전송합니다.
+     *  - 메시지 내용이 2,000Byte 초과시 메시지 내용은 자동으로 제거됩니다.
+     *  - 이미지 파일의 크기는 최대 300Kbtye (JPEG), 가로/세로 1500px 이하 권장
+     */
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리

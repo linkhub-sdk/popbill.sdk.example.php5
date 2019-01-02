@@ -5,6 +5,11 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
+    /**
+     * SMS(단문)를 전송합니다.
+     *  - 메시지 내용이 90Byte 초과시 메시지 내용은 자동으로 제거됩니다.
+     */
+
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리

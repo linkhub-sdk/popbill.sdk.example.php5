@@ -37,11 +37,11 @@
 					<?php
 						} else {
 					?>
-						<li>ceoname : <?php echo $result->ceoname ?></li>
-						<li>corpName : <?php echo $result->corpName ?></li>
-						<li>addr : <?php echo $result->addr ?></li>
-						<li>bizType : <?php echo $result->bizType ?></li>
-						<li>bizClass : <?php echo $result->bizClass ?></li>
+                        <li>ceoname(대표자 성명) : <?php echo $result->ceoname ?></li>
+                        <li>corpName(상호) : <?php echo $result->corpName ?></li>
+                        <li>addr(주소) : <?php echo $result->addr ?></li>
+                        <li>bizType(업태) : <?php echo $result->bizType ?></li>
+                        <li>bizClass(종목) : <?php echo $result->bizClass ?></li>
 					<?php
 						}
 					?>

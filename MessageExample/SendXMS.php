@@ -5,6 +5,11 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
+    /**
+     * XMS(단문/장문 자동인식)를 전송합니다.
+     *  - 메시지 내용의 길이(90byte)에 따라 SMS/LMS(단문/장문)를 자동인식하여 전송합니다.
+     *  - 90byte 초과시 LMS(장문)으로 인식 합니다.
+     */
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
