@@ -195,10 +195,12 @@
     $Taxinvoice->remark2 = '비고2';
     $Taxinvoice->remark3 = '비고3';
 
-    // 기재상 '권' 항목, 최대값 32767, 미기재시 null 처리
+    // 기재상 '권' 항목, 최대값 32767
+    // 미기재시 $Taxinvoice->kwon = 'null';
     $Taxinvoice->kwon = '1';
 
-    // 기재상 '호' 항목, 최대값 32767 ,미기재시 null 처리
+    // 기재상 '호' 항목, 최대값 32767
+    // 미기재시 $Taxinvoice->ho = 'null';
     $Taxinvoice->ho = '1';
 
     // 사업자등록증 이미지파일 첨부여부
@@ -220,7 +222,6 @@
 
     // 원본세금계산서 ItemKey 기재, 문서확인 (GetInfo API)의 응답결과(ItemKey 항목) 확인
     //$Taxinvoice->originalTaxinvoiceKey = '';
-
 
 
     /************************************************************
