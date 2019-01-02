@@ -18,7 +18,7 @@
     $itemCode = '121';
 
     // 문서관리번호
-    $mgtKey = '20170302-01';
+    $mgtKey = '20190101-001';
 
     // 수신자 이메일주소
     $receiver = 'test@test.com';

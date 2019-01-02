@@ -21,7 +21,7 @@
     $ContactInfo->id = 'testkorea001';
 
     // 담당자 패스워드
-    $ContactInfo->pwd = 'testkorea001_!@//';
+    $ContactInfo->pwd = 'testkorea!@#$';
 
     // 담당자명
     $ContactInfo->personName = '담당자_수정';

@@ -17,7 +17,7 @@
     $joinForm->LinkID = $LinkID;
 
     // 사업자번호, "-"제외 10자리
-    $joinForm->CorpNum = '0000010022';
+    $joinForm->CorpNum = '0000000001';
 
     // 대표자성명
     $joinForm->CEOName = '대표자성명';
@@ -44,7 +44,7 @@
     $joinForm->ContactTEL	= '010-1234-1234';
 
     // 아이디, 6자 이상 20자미만
-    $joinForm->ID = 'userid_phpdd__';
+    $joinForm->ID = 'userid_phpdd';
 
     // 비밀번호, 6자 이상 20자미만
     $joinForm->PWD = 'thisispassword';
