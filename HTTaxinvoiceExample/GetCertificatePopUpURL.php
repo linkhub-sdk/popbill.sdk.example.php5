@@ -29,7 +29,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>인증정보 설정 팝업 URL</legend>
+				<legend>홈택스 인증정보 설정 팝업 URL</legend>
 				<ul>
 					<?php
 						if ( isset ( $url ) ) {
