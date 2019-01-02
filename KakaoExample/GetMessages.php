@@ -15,7 +15,7 @@
     $testCorpNum = '1234567890';
 
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
-    $ReceiptNum = '';
+    $ReceiptNum = '018123114023400001';
 
     try {
         $result = $KakaoService->GetMessages($testCorpNum, $ReceiptNum);

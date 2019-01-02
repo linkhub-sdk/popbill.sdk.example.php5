@@ -15,7 +15,7 @@
     $testCorpNum = '1234567890';
 
     // 전송 요청시 할당한 전송요청번호
-    $requestNum = '';
+    $requestNum = '20190101-001';
 
     try {
         $result = $KakaoService->GetMessagesRN($testCorpNum, $requestNum);
