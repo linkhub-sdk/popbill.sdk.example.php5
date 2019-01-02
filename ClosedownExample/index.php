@@ -26,7 +26,7 @@
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인) </li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 URL) </li>
         </ul>
-    </fieldset>>
+    </fieldset>
     <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>
