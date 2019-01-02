@@ -17,7 +17,7 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>문자 전송 API</legend>
+        <legend>문자 전송</legend>
         <fieldset class="fieldset2">
             <legend>단문 문자 전송</legend>
             <ul>
