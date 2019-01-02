@@ -21,7 +21,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20181228-05';
+    $mgtKey = '20190101-001';
 
     // 발신번호
     $sender = '07043042991';

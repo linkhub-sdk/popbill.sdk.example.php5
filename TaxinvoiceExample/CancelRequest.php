@@ -20,7 +20,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20181228-05';
+    $mgtKey = '20190101-001';
 
     // 메모
     $memo = '역발행 요청 취소메모입니다';

@@ -20,7 +20,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서관리번호
-    $mgtKey = '20181228-01';
+    $mgtKey = '20190101-001';
 
 
     /************************************************************
@@ -214,7 +214,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[0]->serialNum = 1;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[0]->purchaseDT = '20161102';	  // 거래일자
+    $Taxinvoice->detailList[0]->purchaseDT = '20190101';	  // 거래일자
     $Taxinvoice->detailList[0]->itemName = '품목명1번';	  	// 품명
     $Taxinvoice->detailList[0]->spec = '';				      // 규격
     $Taxinvoice->detailList[0]->qty = '';					        // 수량
@@ -225,7 +225,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[1]->serialNum = 2;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[1]->purchaseDT = '20161102';	  // 거래일자
+    $Taxinvoice->detailList[1]->purchaseDT = '20190101';	  // 거래일자
     $Taxinvoice->detailList[1]->itemName = '품목명2번';	  	// 품명
     $Taxinvoice->detailList[1]->spec = '';				      // 규격
     $Taxinvoice->detailList[1]->qty = '';					        // 수량

@@ -52,11 +52,10 @@
             <li><a href="GetPopUpURL.php">GetPopUpURL</a> - 세금계산서 보기 URL</li>
             <li><a href="GetPrintURL.php">GetPrintURL</a> - 세금계산서 인쇄 [공급자/공급받는자] URL</li>
             <li><a href="GetEPrintURL.php">GetEPrintURL</a> - 세금계산서 인쇄 [공급받는자용] URL</li>
-            <li><a href="GetMassPrintURL.php">GetMassPrintURL</a> - (세금계산서 대량 인쇄 URL</li>
+            <li><a href="GetMassPrintURL.php">GetMassPrintURL</a> - 세금계산서 대량 인쇄 URL</li>
             <li><a href="GetMailURL.php">GetMailURL</a> - 세금계산서 메일링크 URL</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>부가기능</legend>
         <ul>
