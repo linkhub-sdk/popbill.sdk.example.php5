@@ -5,6 +5,11 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
+    /**
+     * 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+     * - 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
+     */
+
 	include 'common.php';
 
     // 팝빌 회원 사업자번호
@@ -12,7 +17,6 @@
 
     // 팝빌 회원 아이디
     $testUserID = 'testkorea';
-
 
     // 팩스전송 발신번호
     $Sender = '07043042992';
