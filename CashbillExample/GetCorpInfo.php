@@ -29,11 +29,11 @@
 			<fieldset class="fieldset1">
 				<legend>회사정보 확인</legend>
 				<ul>
-					<?
-						if ( isset($code) ) {
-					?>
-						<li>Response.code : <?= $code ?> </li>
-						<li>Response.message : <?= $message ?></li>
+                    <?php
+                    if ( isset($code) ) {
+                        ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
 					<?
 						} else {
 					?>
