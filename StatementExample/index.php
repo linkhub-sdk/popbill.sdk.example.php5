@@ -21,7 +21,6 @@
             <li><a href="Delete.php">Delete</a> (삭제)</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>전자명세서 정보확인</legend>
         <ul>
@@ -33,7 +32,6 @@
             <li><a href="GetURL.php">GetURL</a> (전자명세서 문서함 관련 URL)</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>전자명세서 보기/인쇄</legend>
         <ul>
@@ -44,7 +42,6 @@
             <li><a href="GetMailURL.php">GetMailURL</a> (전자명세서 메일링크 URL)</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>부가기능</legend>
         <ul>
@@ -62,7 +59,6 @@
             <li><a href="UpdateEmailConfig.php">UpdateEmailConfig</a> (전자명세서 알림메일 전송설정 수정)</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>포인트관리</legend>
         <ul>
@@ -74,7 +70,6 @@
             <li><a href="GetChargeInfo.php">GetChargeInfo</a> (과금정보 확인)</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>
