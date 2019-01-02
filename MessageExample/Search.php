@@ -70,34 +70,34 @@
 					<?php
 						}else{
 					?>
-							<li>code : <?php echo $result->code ?> </li>
-							<li>total : <?php echo $result->total ?> </li>
-							<li>perPage : <?php echo $result->perPage ?> </li>
-							<li>pageNum : <?php echo $result->pageNum ?> </li>
-							<li>pageCount : <?php echo $result->pageCount ?> </li>
-							<li>message : <?php echo $result->message ?> </li>
+                            <li>code (응답코드) : <?php echo $result->code ?> </li>
+                            <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
+                            <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
+                            <li>perPage (페이지당 목록개수) : <?php echo $result->perPage ?> </li>
+                            <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
+                            <li>message (응답메시지) : <?php echo $result->message ?> </li>
 					<?php
 							for ($i = 0; $i < Count($result->list); $i++) {
 					?>
 							<fieldset class="fieldset2">
 								<legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result->list)?>]</legend>
 								<ul>
-                  <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
-									<li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
-									<li> subject (제목) : <?php echo $result->list[$i]->subject ?> </li>
-									<li> type (메시지 유형) : <?php echo $result->list[$i]->type ?> </li>
-									<li> content (메시지 내용) : <?php echo $result->list[$i]->content ?> </li>
-									<li> sendNum (발신번호) : <?php echo $result->list[$i]->sendNum ?> </li>
-                  <li> senderName (발신자명) : <?php echo $result->list[$i]->senderName ?> </li>
-									<li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
-									<li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
-									<li> receiptDT (접수일시) : <?php echo $result->list[$i]->receiptDT ?> </li>
-									<li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
-									<li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
-                  <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
-									<li> tranNet (전송처리 이동통신사명) : <?php echo $result->list[$i]->tranNet ?> </li>
-									<li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
-									<li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
+                                    <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
+                                    <li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
+                                    <li> subject (제목) : <?php echo $result->list[$i]->subject ?> </li>
+                                    <li> type (메시지 유형) : <?php echo $result->list[$i]->type ?> </li>
+                                    <li> content (메시지 내용) : <?php echo $result->list[$i]->content ?> </li>
+                                    <li> sendNum (발신번호) : <?php echo $result->list[$i]->sendNum ?> </li>
+                                    <li> senderName (발신자명) : <?php echo $result->list[$i]->senderName ?> </li>
+                                    <li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
+                                    <li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
+                                    <li> receiptDT (접수일시) : <?php echo $result->list[$i]->receiptDT ?> </li>
+                                    <li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
+                                    <li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
+                                    <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
+                                    <li> tranNet (전송처리 이동통신사명) : <?php echo $result->list[$i]->tranNet ?> </li>
+                                    <li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
+                                    <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
 								</ul>
 							</fieldset>
 					<?php

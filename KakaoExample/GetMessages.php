@@ -43,14 +43,14 @@
                     ?>
                     <ul>
                         <li>contentType (카카오톡 유형) : <?php echo $result->contentType ?> </li>
-                        <li>templateCode (템플릿 코드) : <?php echo $result->templateCode ?> </li>
+                        <li>templateCode (템플릿 코드) : <?php echo $result->templateCode ? '$result->templateCode' : '' ?> </li>
                         <li>plusFriendID (플러스친구 아이디) : <?php echo $result->plusFriendID ?> </li>
                         <li>sendNum (발신번호) : <?php echo $result->sendNum ?> </li>
                         <li>altContent ([동보]대체문자 내용) : <?php echo $result->altContent ?> </li>
                         <li>altSendType (대체문자 전송유형) : <?php echo $result->altSendType ?> </li>
                         <li>reserveDT (예약일시) : <?php echo $result->reserveDT ?> </li>
                         <li>adsYN (광고전송 여부) : <?php echo $result->adsYN ?> </li>
-                        <li>imageURL (친구톡 이미지 URL) : <?php echo $result->imageURL ?> </li>
+                        <li>imageURL (친구톡 이미지 URL) : <?php echo $result->imageURL ? '$result->imageURL' : '' ?> </li>
                         <li>sendCnt (전송건수) : <?php echo $result->sendCnt ?> </li>
                         <li>successCnt (성공건수) : <?php echo $result->successCnt ?> </li>
                         <li>failCnt (실패건수) : <?php echo $result->failCnt ?> </li>
