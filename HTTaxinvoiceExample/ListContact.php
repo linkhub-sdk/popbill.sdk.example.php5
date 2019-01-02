@@ -48,7 +48,7 @@
                                 <li>fax(담당자 팩스번호) : <?php echo $result[$i]->fax ; ?></li>
                                 <li>tel(담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
                                 <li>regDT(등록일시) : <?php echo $result[$i]->regDT ; ?></li>
-                                <li>searchAllAllowYN(담당자 조회권한 설정) : <?php echo $result[$i]->searchAllAllowYN ? 'true' : 'fasle' ?></li>
+                                <li>searchAllAllowYN(회사 조회권한) : <?php echo $result[$i]->searchAllAllowYN ? 'true' : 'fasle' ?></li>
                                 <li>mgrYN(관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
                                 <li>state(상태) : <?php echo $result[$i]->state ; ?></li>
 							</ul>
