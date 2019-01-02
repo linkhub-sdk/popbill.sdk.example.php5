@@ -54,11 +54,11 @@
 					<?php
 						} else {
 					?>
-						  <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
-              <li>supplyCostTotal (공급가액 합계) : <?php echo $response->supplyCostTotal ?></li>
-              <li>taxTotal (세액 합계) : <?php echo $response->taxTotal ?></li>
-              <li>serviceFeeTotal (봉사료 합계) : <?php echo $response->serviceFeeTotal ?></li>
-              <li>amountTotal (합계 금액) : <?php echo $response->amountTotal ?></li>
+                            <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
+                            <li>supplyCostTotal (공급가액 합계) : <?php echo $response->supplyCostTotal ?></li>
+                            <li>taxTotal (세액 합계) : <?php echo $response->taxTotal ?></li>
+                            <li>serviceFeeTotal (봉사료 합계) : <?php echo $response->serviceFeeTotal ?></li>
+                            <li>amountTotal (합계 금액) : <?php echo $response->amountTotal ?></li>
 					<?php
         	  }
 					?>

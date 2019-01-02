@@ -21,10 +21,10 @@
     $CBType = KeyType::BUY;
 
     // 시작일자, 형식(yyyyMMdd)
-    $SDate = '20170101';
+    $SDate = '20181231';
 
     // 종료일자, 형식(yyyyMMdd)
-    $EDate = '20170301';
+    $EDate = '20190101';
 
     try {
         $jobID = $HTCashbillService->RequestJob( $testCorpNum, $CBType, $SDate, $EDate);
