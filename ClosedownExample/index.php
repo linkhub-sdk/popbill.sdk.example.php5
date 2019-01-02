@@ -16,7 +16,7 @@
             <li><a href="CheckCorpNums.php">CheckCorpNums</a> (휴폐업 대량조회) </li>
         </ul>
     </fieldset>
-    <fieldset class="fieldset1.php">
+    <fieldset class="fieldset1">
         <legend>포인트 관리</legend>
         <ul>
             <li><a href="GetChargeURL.php">GetChargeURL</a> (연동회원 포인트충전 URL) </li>
@@ -27,7 +27,7 @@
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 URL) </li>
         </ul>
     </fieldset>>
-    <fieldset class="fieldset1.php">
+    <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>
             <li><a href="CheckIsMember.php">CheckIsMember</a> (연동회원 가입여부 확인) </li>
