@@ -15,7 +15,7 @@
     $testCorpNum = '1234567890';
 
     try {
-        $result = $CashbillService->GetCorpInfo($testCorpNum, $testUserID);
+        $result = $CashbillService->GetCorpInfo($testCorpNum);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
