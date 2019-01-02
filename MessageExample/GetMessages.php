@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문자전송 요청 시 발급받은 접수번호(receiptNum)
-    $ReceiptNum = '';
+    $ReceiptNum = '019010211000000020';
 
     try {
         $result = $MessagingService->GetMessages($testCorpNum, $ReceiptNum);

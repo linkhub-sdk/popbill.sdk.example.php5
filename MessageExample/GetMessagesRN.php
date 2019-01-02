@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문자전송 요청 시 할당한 전송요청번호(requestNum)
-    $requestNum = '';
+    $requestNum = '20190101-001';
 
     try {
         $result = $MessagingService->GetMessagesRN($testCorpNum, $requestNum);

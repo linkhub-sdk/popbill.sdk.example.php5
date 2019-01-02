@@ -31,27 +31,21 @@
             <ul>
                 <?php
                 if ( isset( $result ) ) {
+                    for ( $i = 0; $i < Count ( $result ) ; $i++) {
                 ?>
-                    <fieldset class="fieldset2">
-                        <ul>
-                            <?php
-                            for ( $i = 0; $i < Count ( $result ) ; $i++) {
-                            ?>
-                                <li>
-                                    <?php
+                        <fieldset class ="fieldset2">
+                            <ul>
+                                <?php
                                     foreach($result[$i] as $number=>$regDT) {
-                                     ?>
-                                        <?php echo $number ?> : <?php echo $regDT?>
+                                        ?>
+                                    <li><?php echo $number ?> : <?php echo $regDT?></li>
                                     <?php
                                     }
                                     ?>
-                                </li>
-                            <?php
-                            }
-                            ?>
-                        </ul>
-                    </fieldset>
-                    <?php
+                                </ul>
+                            </fieldset>
+                        <?php
+                    }
                 } else {
                     ?>
                     <li>Response.code : <?php echo $code ?> </li>
