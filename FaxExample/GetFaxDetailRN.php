@@ -64,7 +64,7 @@
                             <li> receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
                             <li> requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
                             <li> chargePageCnt (과금 페이지수) : <?php echo $result[$i]->chargePageCnt ?> </li>
-                            <li> tiffFileSize (변환파일용랑) : <?php echo $result[$i]->tiffFileSize ?> (단위:byte)</li>
+                            <li> tiffFileSize (변환파일용랑) : <?php echo $result[$i]->tiffFileSize ?>byte</li>
                         </ul>
                     </fieldset>
                     <?php
