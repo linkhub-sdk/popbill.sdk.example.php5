@@ -16,7 +16,7 @@
     // 팝빌 회원 사업자번호, "-"제외 10자리
     $testCorpNum = '1234567890';
 
-    // 팝빌회원 사업자번호
+    // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
     // 팝빌에 등록된 플러스친구 아이디, ListPlusFriend API - plusFriendID 확인

@@ -159,12 +159,12 @@
 								}
 								if ($result[$i]->emailType == "TAX_SEND_INFO") {
 							?>
-									<li>[처리결과] TAX_SEND_INFO(전월 귀속분 [매출 발행 대기] 세금계산서 발행 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
+									<li>[정기발송] TAX_SEND_INFO(전월 귀속분 [매출 발행 대기] 세금계산서 발행 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 							<?php
 								}
 								if ($result[$i]->emailType == "ETC_CERT_EXPIRATION") {
 					    ?>
-									<li>[처리결과] ETC_CERT_EXPIRATION(팝빌에서 이용중인 공인인증서의 갱신 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
+									<li>[정기발송] ETC_CERT_EXPIRATION(팝빌에서 이용중인 공인인증서의 갱신 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
 					    <?php
 								}
 							}
