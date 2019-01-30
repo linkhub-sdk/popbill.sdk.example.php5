@@ -74,7 +74,6 @@
                                 <li>supplyCostTotal (공급가액 합계): <?php echo $result[$i]->supplyCostTotal ?></li>
                                 <li>taxTotal (세액 합계) : <?php echo $result[$i]->taxTotal ?></li>
                                 <li>issueDT (발행일시) : <?php echo $result[$i]->issueDT ?></li>
-                                <li>preIssueDT (발행예정일시) : <?php echo $result[$i]->preIssueDT ?></li>
                                 <li>stateDT (상태변경일시) : <?php echo $result[$i]->stateDT ?></li>
                                 <li>openYN (개봉 여부) : <?php echo $result[$i]->openYN ? 'true' : 'false' ?></li>
                                 <li>openDT (개봉 일시) : <?php echo $result[$i]->openDT ?></li>

@@ -44,7 +44,7 @@
     // [필수] 과세형태, '과세', '영세', '면세' 중 기재
     $Taxinvoice->taxType = '과세';
 
-    // [필수] 발행시점, 발행예정시 동작, '직접발행', '승인시자동발행' 중 기재
+    // [필수] 발행시점
     $Taxinvoice->issueTiming = '직접발행';
 
 
@@ -88,11 +88,6 @@
 
     // 공급자 휴대폰 번호
     $Taxinvoice->invoicerHP = '010-111-222';
-
-    // 정발행시 공급받는자 담당자에게 알림문자 전송여부
-    // - 안내문자 전송시 포인트가 차감되며 전송실패시 환불처리 됩니다.
-    $Taxinvoice->invoicerSMSSendYN = false;
-
 
     /************************************************************
      *                      공급받는자 정보
@@ -138,8 +133,9 @@
     // 공급받는자 담당자 휴대폰 번호
     $Taxinvoice->invoiceeHP1 = '010-111-222';
 
-    // 역발행요청시 공급자 담당자에게 알림문자 전송여부
-    // - 문자전송지 포인트가 차감되며, 전송실패시 포인트 환불처리됩니다.
+    // 역발행 요청시 알림문자 전송여부 (역발행에서만 사용가능)
+    // - 공급자 담당자 휴대폰번호(invoicerHP)로 전송
+    // - 전송시 포인트가 차감되며 전송실패하는 경우 포인트 환불처리
     $Taxinvoice->invoiceeSMSSendYN = false;
 
 
@@ -230,25 +226,6 @@
     $Taxinvoice->detailList[1]->supplyCost = '100000';       // 공급가액
     $Taxinvoice->detailList[1]->tax = '10000';               // 세액
     $Taxinvoice->detailList[1]->remark = '';                 // 비고
-
-
-    /************************************************************
-     *                      추가담당자 정보
-     * - 세금계산서 발행안내 메일을 수신받을 공급받는자 담당자가 다수인 경우
-     * 추가 담당자 정보를 등록하여 발행안내메일을 다수에게 전송할 수 있습니다. (최대 5명)
-     ************************************************************/
-
-    $Taxinvoice->addContactList = array();
-
-    $Taxinvoice->addContactList[] = new TaxinvoiceAddContact();
-    $Taxinvoice->addContactList[0]->serialNum = 1;                  // 일련번호 1부터 순차기재
-    $Taxinvoice->addContactList[0]->email = 'test@test.com';        // 이메일주소
-    $Taxinvoice->addContactList[0]->contactName = '팝빌담당자';        // 담당자명
-
-    $Taxinvoice->addContactList[] = new TaxinvoiceAddContact();
-    $Taxinvoice->addContactList[1]->serialNum = 2;                  // 일련번호 1부터 순차기재
-    $Taxinvoice->addContactList[1]->email = 'test@test.com';        // 이메일주소
-    $Taxinvoice->addContactList[1]->contactName = '링크허브';         // 담당자명
 
     // 메모
     $memo = '즉시요청 메모';

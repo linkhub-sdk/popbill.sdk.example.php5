@@ -46,7 +46,6 @@
                             <li> writeDate (작성일자) : <?php echo $result->writeDate  ?> </li>
                             <li> chargeDirection (과금방향) : <?php echo $result->chargeDirection  ?> </li>
                             <li> issueType (발행형태) : <?php echo $result->issueType  ?> </li>
-                            <li> issueTiming (발행시점) : <?php echo $result->issueTiming  ?> </li>
                             <li> taxType (과세형태) : <?php echo $result->taxType  ?> </li>
                             <li> supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal  ?> </li>
                             <li> taxTotal (세액 합계) : <?php echo $result->taxTotal ?>  </li>
