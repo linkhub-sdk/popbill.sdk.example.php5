@@ -18,10 +18,6 @@
             <li><a href="Update.php">Update</a> (수정)</li>
             <li><a href="Issue.php">Issue</a> (발행)</li>
             <li><a href="CancelIssue.php">CancelIssue</a> (발행취소)</li>
-            <li><a href="Send.php">Send</a> ([발행예정])</li>
-            <li><a href="CancelSend.php">CancelSend</a> ([발행예정] 취소)</li>
-            <li><a href="Accept.php">Accept</a> ([발행예정] 승인)</li>
-            <li><a href="Deny.php">Deny</a> ([발행예정] 거부)</li>
             <li><a href="Delete.php">Delete</a> (삭제)</li>
             <li><a href="RegistRequest.php">RegistRequest</a> ([역발행] 즉시 요청)</li>
             <li><a href="Request.php">Request</a> (역발행요청)</li>
