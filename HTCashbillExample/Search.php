@@ -77,13 +77,13 @@
                             <li>ntsconfirmNum (국세청승인번호) : <?php echo $response->list[$i]->ntsconfirmNum ?></li>
                             <li>tradeDate (거래일자) : <?php echo $response->list[$i]->tradeDate ?></li>
                             <li>tradeDT (거래일시) : <?php echo $response->list[$i]->tradeDT ?></li>
-                            <li>tradeUsage (거래유형) : <?php echo $response->list[$i]->tradeUsage ?></li>
-                            <li>tradeType (현금영수증 형태) : <?php echo $response->list[$i]->tradeType ?></li>
-                            <li>invoiceType (구분) : <?php echo $response->list[$i]->invoiceType; ?></li>
-                            <li>supplyCost (공급가액) : <?php echo $response->list[$i]->supplyCost ?></li>
-                            <li>tax (세액) : <?php echo $response->list[$i]->tax ?></li>
-                            <li>serviceFee (봉사료) : <?php echo $response->list[$i]->serviceFee ?></li>
+                            <li>tradeType (문서형태) : <?php echo $response->list[$i]->tradeType ?></li>
+                            <li>tradeUsage (거래구분) : <?php echo $response->list[$i]->tradeUsage ?></li>
                             <li>totalAmount (거래금액) : <?php echo $response->list[$i]->totalAmount ?></li>
+                            <li>supplyCost (공급가액) : <?php echo $response->list[$i]->supplyCost ?></li>
+                            <li>tax (부가세) : <?php echo $response->list[$i]->tax ?></li>
+                            <li>serviceFee (봉사료) : <?php echo $response->list[$i]->serviceFee ?></li>
+                            <li>invoiceType (매입/매출) : <?php echo $response->list[$i]->invoiceType; ?></li>
                             <li>franchiseCorpNum (발행자 사업자번호) : <?php echo $response->list[$i]->franchiseCorpNum ?></li>
                             <li>franchiseCorpName (발행자 상호) : <?php echo $response->list[$i]->franchiseCorpName ?></li>
                             <li>franchiseCorpType (발행자 사업자유형) : <?php echo $response->list[$i]->franchiseCorpType ?></li>
