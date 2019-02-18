@@ -17,11 +17,18 @@
     // 팝빌 회원 사업자번호, '-' 제외 10자리
     $testCorpNum = '1234567890';
 
+    // 팝빌회원 아이디
+    $testUserID = 'testkorea';
+
     // 문서관리번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
-    $mgtKey = '20190101-001';
+    $mgtKey = '20190218-001';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
+
+    // 발행안내메일 제목
+    // 공백처리시 기본양식으로 전송
+    $emailSubject = '';
 
     // 현금영수증 객체 생성
     $Cashbill = new Cashbill();
@@ -100,7 +107,7 @@
     $Cashbill->smssendYN = false;
 
     try {
-        $result = $CashbillService->RegistIssue($testCorpNum, $Cashbill, $memo);
+        $result = $CashbillService->RegistIssue($testCorpNum, $Cashbill, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
     }

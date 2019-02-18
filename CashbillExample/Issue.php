@@ -16,14 +16,21 @@
     // 팝빌 회원 사업자번호, '-' 제외 10자리
     $testCorpNum = '1234567890';
 
+    // 팝빌회원 아이디
+    $testUserID = 'testkorea';
+
     // 문서관리번호
     $mgtKey = '20190101-001';
 
     // 메모
     $memo = '현금영수증 발행메모';
 
+    // 발행안내 메일제목
+    // 공백처리시 기본양식으로 전송
+    $emailSubject = '';
+
     try {
-        $result = $CashbillService->Issue($testCorpNum, $mgtKey, $memo);
+        $result = $CashbillService->Issue($testCorpNum, $mgtKey, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
     }
