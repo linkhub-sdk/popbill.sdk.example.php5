@@ -14,9 +14,12 @@
     // 팝빌 회원 사업자번호, '-' 제외 10자리
     $testCorpNum = '1234567890';
 
+    // 팝빌 회원 아이디
+    $testUserID  = 'testkorea';
+
     // 전자명세서 문서관리번호
     // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20181228-02';
+    $mgtKey = '20190218-16';
 
     // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -24,6 +27,9 @@
     // 메모
     $memo = '즉시발행 메모';
 
+    // 발행 안내메일 제목
+    // 공백처리시 기본양식으로 전송됨.
+    $emailSubject = '발행 안내메일 제목';
 
     // 전자명세서 객체 생성
     $Statement = new Statement();
@@ -33,7 +39,7 @@
      ************************************************************/
 
     // [필수] 기재상 작성일자
-    $Statement->writeDate = '20181228';
+    $Statement->writeDate = '20190218';
 
     // [필수] (영수, 청구) 중 기재
     $Statement->purposeType = '영수';
@@ -158,7 +164,7 @@
 
 
     try {
-        $result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo);
+        $result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
     }

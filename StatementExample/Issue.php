@@ -14,17 +14,24 @@
     // 팝빌회원 사업자번호, "-"제외 10자리
     $testCorpNum = '1234567890';
 
+    // 팝빌회원 아이디
+    $testUserID = 'testkorea';
+
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 전자명세서 문서관리번호
-    $MgtKey = '20181228-04';
+    $MgtKey = '20190218-18';
 
     // 메모
     $memo = '전자명세서 발행 메모';
 
+    // 발행안내메일 제목
+    // 공백처리시 기본양식으로 전송
+    $emailSubject = '발행안내 메일 제목';
+
     try	{
-        $result = $StatementService->Issue($testCorpNum, $itemCode, $MgtKey, $memo);
+        $result = $StatementService->Issue($testCorpNum, $itemCode, $MgtKey, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
     }
