@@ -29,7 +29,7 @@
 
     // 발행안내메일 제목
     // 공백처리시 기본양식으로 전송
-    $emailSubject = '발행안내 메일 제목';
+    $emailSubject = '';
 
     try	{
         $result = $StatementService->Issue($testCorpNum, $itemCode, $MgtKey, $memo, $testUserID, $emailSubject);

@@ -30,7 +30,7 @@
 
     // 발행 안내메일 제목
     // 공백처리시 기본양식으로 전송됨.
-    $emailSubject = '발행 안내메일 제목';
+    $emailSubject = '';
 
     // 전자명세서 객체 생성
     $Statement = new Statement();
