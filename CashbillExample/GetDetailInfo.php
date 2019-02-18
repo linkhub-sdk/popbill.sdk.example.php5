@@ -7,8 +7,7 @@
 <?php
     /**
      * 현금영수증 1건의 상세정보를 조회합니다.
-     * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1.
-     *   현금영수증 구성" 을 참조하시기 바랍니다.
+     * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1. 현금영수증 구성" 을 참조하시기 바랍니다.
      */
 
     include 'common.php';
@@ -17,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서관리번호
-    $mgtKey = '20180912-01';
+    $mgtKey = '20190101-001';
 
     try {
         $result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);

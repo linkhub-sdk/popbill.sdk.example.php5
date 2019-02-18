@@ -7,8 +7,7 @@
 <?php
     /**
      * 세금계산서에 첨부된 파일을 삭제합니다.
-     * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목 중
-     *   파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+     * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFiles API) 의 응답항목 중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
      */
 
     include 'common.php';
@@ -20,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20181228-04';
+    $mgtKey = '20190101-001';
 
     // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
     $FileID = 'B6DB6884-EDA9-4D0F-A790-0334BD822118.PBF';

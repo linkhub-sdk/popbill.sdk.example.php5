@@ -41,16 +41,16 @@
 							<fieldset class="fieldset2">
 							<legend> 담당자 정보 [<?php echo $i+1?>]</legend>
 							<ul>
-								<li>id : <?php echo $result[$i]->id ?></li>
-								<li>email : <?php echo $result[$i]->email ?></li>
-								<li>hp : <?php echo $result[$i]->hp ?></li>
-								<li>personName : <?php echo $result[$i]->personName ?></li>
-								<li>searchAllAllowYN : <?php echo $result[$i]->searchAllAllowYN ; ?></li>
-								<li>tel : <?php echo $result[$i]->tel ?></li>
-								<li>fax : <?php echo $result[$i]->fax ?></li>
-								<li>mgrYN : <?php echo $result[$i]->mgrYN ?></li>
-								<li>regDT : <?php echo $result[$i]->regDT ?></li>
-								<li>state : <?php echo $result[$i]->state ?></li>
+                                <li>id(아이디) : <?php echo $result[$i]->id ; ?></li>
+                                <li>personName(담당자 성명) : <?php echo $result[$i]->personName ; ?></li>
+                                <li>email(담당자 이메일) : <?php echo $result[$i]->email ; ?></li>
+                                <li>hp(담당자 휴대폰번호) : <?php echo $result[$i]->hp ; ?></li>
+                                <li>fax(담당자 팩스번호) : <?php echo $result[$i]->fax ; ?></li>
+                                <li>tel(담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
+                                <li>regDT(등록일시) : <?php echo $result[$i]->regDT ; ?></li>
+                                <li>searchAllAllowYN(회사 조회권한) : <?php echo $result[$i]->searchAllAllowYN ? 'true' : 'fasle' ?></li>
+                                <li>mgrYN(관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
+                                <li>state(상태) : <?php echo $result[$i]->state ; ?></li>
 							</ul>
 							</fieldset>
 					<?php

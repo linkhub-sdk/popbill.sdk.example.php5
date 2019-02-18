@@ -7,8 +7,7 @@
 <?php
     /**
      * 검색조건을 사용하여 세금계산서 목록을 조회합니다.
-     * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] >
-     *   4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+     * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
      */
 
     include 'common.php';
@@ -29,7 +28,7 @@
     $SDate = '20181201';
 
     // [필수] 종료일자
-    $EDate = '20181231';
+    $EDate = '20190101';
 
     // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array (
@@ -109,12 +108,12 @@
 					<?php
 						} else {
 					?>
-							<li>code : <?php echo $result->code ?> </li>
-							<li>total : <?php echo $result->total ?> </li>
-							<li>perPage : <?php echo $result->perPage ?> </li>
-							<li>pageNum : <?php echo $result->pageNum ?> </li>
-							<li>pageCount : <?php echo $result->pageCount ?> </li>
-							<li>message : <?php echo $result->message ?> </li>
+                            <li>code (응답코드) : <?php echo $result->code ?> </li>
+                            <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
+                            <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
+                            <li>perPage (페이지당 목록개수) : <?php echo $result->perPage ?> </li>
+                            <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
+                            <li>message (응답메시지) : <?php echo $result->message ?> </li>
 					<?php
 							for ( $i = 0; $i < Count($result->list); $i++ ) {
 					?>
@@ -146,7 +145,6 @@
                                         <li>supplyCostTotal (공급가액 합계): <?php echo $result->list[$i]->supplyCostTotal ?></li>
                                         <li>taxTotal (세액 합계) : <?php echo $result->list[$i]->taxTotal ?></li>
                                         <li>issueDT (발행일시) : <?php echo $result->list[$i]->issueDT ?></li>
-                                        <li>preIssueDT (발행예정일시) : <?php echo $result->list[$i]->preIssueDT ?></li>
                                         <li>stateDT (상태변경일시) : <?php echo $result->list[$i]->stateDT ?></li>
                                         <li>openYN (개봉 여부) : <?php echo $result->list[$i]->openYN ? 'true' : 'false' ?></li>
                                         <li>openDT (개봉 일시) : <?php echo $result->list[$i]->openDT ?></li>

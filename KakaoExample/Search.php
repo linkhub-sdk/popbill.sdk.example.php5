@@ -6,7 +6,7 @@
 	</head>
 <?php
     /**
-     * 검색조건을 사용하여 카카오톡전송 내역을 조회합니다.
+     * 검색조건을 사용하여 알림톡/친구톡 전송 내역을 조회합니다.
      * - 최대 검색기간 : 6개월 이내
      */
 
@@ -19,7 +19,7 @@
     $SDate = '20180601';
 
     // [필수] 종료일자, 날짜형식(yyyyMMdd)
-    $EDate = '20180630';
+    $EDate = '20181231';
 
     // 전송상태값 배열, 0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-예약취소
     $State = array('0', '1', '2', '3', '4', '5');
@@ -82,22 +82,22 @@
 							<fieldset class="fieldset2">
 								<legend> 카카오톡 전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result->list)?>]</legend>
 								<ul>
-                  <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
-                  <li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
-                  <li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
-                  <li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
-                  <li> contentType (카카오톡 유형) : <?php echo $result->list[$i]->contentType ?> </li>
-                  <li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
-                  <li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
-                  <li> content (알림톡/친구톡 내용) : <?php echo $result->list[$i]->content ?> </li>
-                  <li> altContentType (대체문자 전송타입) : <?php echo $result->list[$i]->altContentType ?> </li>
-                  <li> altSendDT (대체문자 전송일시) : <?php echo $result->list[$i]->altSendDT ?> </li>
-                  <li> altResult (대체문자 전송결과 코드) : <?php echo $result->list[$i]->altResult ?> </li>
-                  <li> altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->list[$i]->altResultDT ?> </li>
-									<li> altContent (대체문자 내용) : <?php echo $result->list[$i]->altContent ?> </li>
-                  <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
-									<li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
-                  <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
+                                    <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
+                                    <li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
+                                    <li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
+                                    <li> resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
+                                    <li> contentType (카카오톡 유형) : <?php echo $result->list[$i]->contentType ?> </li>
+                                    <li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
+                                    <li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
+                                    <li> content (알림톡/친구톡 내용) : <?php echo $result->list[$i]->content ?> </li>
+                                    <li> altContentType (대체문자 전송타입) : <?php echo $result->list[$i]->altContentType ?> </li>
+                                    <li> altSendDT (대체문자 전송일시) : <?php echo $result->list[$i]->altSendDT ?> </li>
+                                    <li> altResult (대체문자 전송결과 코드) : <?php echo $result->list[$i]->altResult ?> </li>
+                                    <li> altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->list[$i]->altResultDT ?> </li>
+                                    <li> altContent (대체문자 내용) : <?php echo $result->list[$i]->altContent ?> </li>
+                                    <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
+                                    <li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
+                                    <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
 								</ul>
 							</fieldset>
 					<?php

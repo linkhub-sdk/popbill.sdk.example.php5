@@ -6,9 +6,8 @@
 	</head>
 <?php
     /**
-     * 역발행 세금계산서를 [취소] 처리합니다.
-     * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)
-     *   를 호출해야 합니다.
+     * [공급받는자]가 역)발행대기 상태의 세금계산서를 [취소]합니다.
+     * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)를 호출해야 합니다.
      */
 
     include 'common.php';
@@ -17,10 +16,10 @@
     $testCorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $mgtKeyType = ENumMgtKeyType::BUY;
 
     // 문서관리번호
-    $mgtKey = '20181228-05';
+    $mgtKey = '20190101-001';
 
     // 메모
     $memo = '역발행 요청 취소메모입니다';

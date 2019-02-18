@@ -19,7 +19,7 @@
     $itemCode = '121';
 
     // 문서관리번호
-    $mgtKey = '20181228-04';
+    $mgtKey = '20190101-001';
 
     try {
         $url = $StatementService->GetEPrintURL($testCorpNum, $itemCode, $mgtKey);

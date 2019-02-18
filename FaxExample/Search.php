@@ -16,10 +16,10 @@
     $testCorpNum = '1234567890';
 
     // 검색시작일자
-    $SDate = '20180925';
+    $SDate = '20181201';
 
     // 검색종료일자
-    $EDate = '20180930';
+    $EDate = '20190101';
 
     // 전송상태값 배열, 1-대기, 2-성공, 3-실패, 4-취소
     $State = array(1, 2, 3, 4);
@@ -66,12 +66,12 @@
                 <?php
             } else {
                 ?>
-                <li>code : <?php echo $result->code ?> </li>
-                <li>total : <?php echo $result->total ?> </li>
-                <li>perPage : <?php echo $result->perPage ?> </li>
-                <li>pageNum : <?php echo $result->pageNum ?> </li>
-                <li>pageCount : <?php echo $result->pageCount ?> </li>
-                <li>message : <?php echo $result->message ?> </li>
+                <li>code (응답코드) : <?php echo $result->code ?> </li>
+                <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
+                <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
+                <li>perPage (페이지당 목록개수) : <?php echo $result->perPage ?> </li>
+                <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
+                <li>message (응답메시지) : <?php echo $result->message ?> </li>
                 <?php
                 for ($i = 0; $i < Count($result->list); $i++) {
                     ?>

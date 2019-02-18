@@ -8,8 +8,7 @@
     /**
      * 세금계산서 상태 변경이력을 확인합니다.
      * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는
-     *   "[전자세금계산서 API 연동매뉴얼] > 3.6.4 상태 변경이력 확인"
-     *   을 참조하시기 바랍니다.
+     *   "[전자세금계산서 API 연동매뉴얼] > 3.5.5 상태 변경이력 확인" 을 참조하시기 바랍니다.
      */
 
     include 'common.php';
@@ -21,7 +20,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서관리번호
-    $mgtKey = '20181228-04';
+    $mgtKey = '20190101-001';
 
     try {
         $result = $TaxinvoiceService->GetLogs($testCorpNum, $mgtKeyType, $mgtKey);
@@ -50,13 +49,14 @@
 							<fieldset class ="fieldset2">
 							<legend> 세금계산서 상태변경 이력 [<?php echo $i+1 ?>] </legend>
 								<ul>
-                                    <li>log : <?php echo $result[$i]->log  ?></li>
-                                    <li>procType  : <?php echo $result[$i]->procType  ?></li>
-                                    <li>procCorpName  : <?php echo $result[$i]->procCorpName  ?></li>
-                                    <li>procMemo  : <?php echo $result[$i]->procMemo  ?></li>
-                                    <li>regDT  : <?php echo $result[$i]->regDT  ?></li>
-                                    <li>ip : <?php echo $result[$i]->ip ?></li>
-                                    <li>docLogType : <?php echo $result[$i]->docLogType ?></li>
+                                    <li>docLogType (로그타입) : <?php echo $result[$i]->docLogType ?></li>
+                                    <li>log (이력정보) : <?php echo $result[$i]->log  ?></li>
+                                    <li>procType (처리형태) : <?php echo $result[$i]->procType  ?></li>
+                                    <li>procCorpName (처리회사명) : <?php echo $result[$i]->procCorpName  ?></li>
+                                    <li>procContactName (처리담당자) : <?php echo $result[$i]->procCorpName  ?></li>
+                                    <li>procMemo (처리메모) : <?php echo $result[$i]->procMemo  ?></li>
+                                    <li>regDT (등록일시) : <?php echo $result[$i]->regDT  ?></li>
+                                    <li>ip (아이피) : <?php echo $result[$i]->ip ?></li>
 								</ul>
 							</fieldset>
 					<?php

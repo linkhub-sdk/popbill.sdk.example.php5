@@ -9,13 +9,14 @@
      * 1건의 현금영수증 보기 팝업 URL을 반환합니다.
      * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
      */
+
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
     $testCorpNum = '1234567890';
 
     // 문서관리번호
-    $mgtKey = '20170302-01';
+    $mgtKey = '20190101-001';
 
     try {
         $url = $CashbillService->GetPopUpURL($testCorpNum, $mgtKey);

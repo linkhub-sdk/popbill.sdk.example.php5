@@ -14,7 +14,6 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $testCorpNum = '1234567890';
 
-
     // 회사정보 클래스 생성
     $CorpInfo = new CorpInfo();
 

@@ -18,13 +18,13 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서관리번호
-    $mgtKey = '20181228-05';
+    $mgtKey = '20190101-001';
 
     // 첨부할 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $subItemCode = 121;
 
     // 첨부할 명세서 관리번호
-    $subMgtKey = '20181228-01';
+    $subMgtKey = '20190101-001';
 
     try {
         $result = $TaxinvoiceService->AttachStatement($testCorpNum, $mgtKeyType, $mgtKey, $subItemCode, $subMgtKey);

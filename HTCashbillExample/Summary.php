@@ -6,9 +6,9 @@
 	</head>
 <?php
     /**
-     * 검색조건을 사용하여 수집 결과 요약정보를 조회합니다.
-     * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
-     *   > 3.3.2. Summary (수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
+     * 현금영수증 매입/매출 내역의 수집 결과 요약정보를 조회합니다.
+     * - 응답항목에 관한 정보는 "[홈택스연동 (현금영수증) API 연동매뉴얼] >
+     *   3.2.2. Summary(수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
      */
 
     include 'common.php';
@@ -54,11 +54,11 @@
 					<?php
 						} else {
 					?>
-						  <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
-              <li>supplyCostTotal (공급가액 합계) : <?php echo $response->supplyCostTotal ?></li>
-              <li>taxTotal (세액 합계) : <?php echo $response->taxTotal ?></li>
-              <li>serviceFeeTotal (봉사료 합계) : <?php echo $response->serviceFeeTotal ?></li>
-              <li>amountTotal (합계 금액) : <?php echo $response->amountTotal ?></li>
+                            <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
+                            <li>supplyCostTotal (공급가액 합계) : <?php echo $response->supplyCostTotal ?></li>
+                            <li>taxTotal (세액 합계) : <?php echo $response->taxTotal ?></li>
+                            <li>serviceFeeTotal (봉사료 합계) : <?php echo $response->serviceFeeTotal ?></li>
+                            <li>amountTotal (합계 금액) : <?php echo $response->amountTotal ?></li>
 					<?php
         	  }
 					?>

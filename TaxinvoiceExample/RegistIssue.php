@@ -20,7 +20,7 @@
 
     // 세금계산서 문서관리번호
     // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20181228-03';
+    $invoicerMgtKey = '20190101-001';
 
     // 지연발행 강제여부
     $forceIssue = false;
@@ -48,7 +48,7 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20181228';
+    $Taxinvoice->writeDate = '20190101';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '정발행';
@@ -63,9 +63,8 @@
     // [필수] 과세형태, '과세', '영세', '면세' 중 기재
     $Taxinvoice->taxType = '과세';
 
-    // [필수] 발행시점, 발행예정시 동작, '직접발행', '승인시자동발행' 중 기재
+    // [필수] 발행시점
     $Taxinvoice->issueTiming = '직접발행';
-
 
 
     /************************************************************
@@ -108,11 +107,10 @@
     // 공급자 휴대폰 번호
     $Taxinvoice->invoicerHP = '010-111-222';
 
-    // 정발행시 공급받는자 담당자에게 알림문자 전송여부
-    // - 안내문자 전송시 포인트가 차감되며 전송실패시 환불처리 됩니다.
+    // 발행시 알림문자 전송여부 (정발행에서만 사용가능)
+    // - 공급받는자 주)담당자 휴대폰번호(invoiceeHP1)로 전송
+    // - 전송시 포인트가 차감되며 전송실패하는 경우 포인트 환불처리
     $Taxinvoice->invoicerSMSSendYN = false;
-
-
 
     /************************************************************
      *                      공급받는자 정보
@@ -157,11 +155,6 @@
     // 공급받는자 담당자 휴대폰 번호
     $Taxinvoice->invoiceeHP1 = '010-111-222';
 
-    // 역발행요청시 공급자 담당자에게 알림문자 전송여부
-    // - 문자전송지 포인트가 차감되며, 전송실패시 포인트 환불처리됩니다.
-    $Taxinvoice->invoiceeSMSSendYN = false;
-
-
 
     /************************************************************
      *                       세금계산서 기재정보
@@ -195,10 +188,12 @@
     $Taxinvoice->remark2 = '비고2';
     $Taxinvoice->remark3 = '비고3';
 
-    // 기재상 '권' 항목, 최대값 32767, 미기재시 null 처리
+    // 기재상 '권' 항목, 최대값 32767
+    // 미기재시 $Taxinvoice->kwon = 'null';
     $Taxinvoice->kwon = '1';
 
-    // 기재상 '호' 항목, 최대값 32767 ,미기재시 null 처리
+    // 기재상 '호' 항목, 최대값 32767
+    // 미기재시 $Taxinvoice->ho = 'null';
     $Taxinvoice->ho = '1';
 
     // 사업자등록증 이미지파일 첨부여부
@@ -222,7 +217,6 @@
     //$Taxinvoice->originalTaxinvoiceKey = '';
 
 
-
     /************************************************************
      *                       상세항목(품목) 정보
      ************************************************************/
@@ -231,7 +225,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[0]->serialNum = 1;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[0]->purchaseDT = '20181228';	  // 거래일자
+    $Taxinvoice->detailList[0]->purchaseDT = '20190101';	  // 거래일자
     $Taxinvoice->detailList[0]->itemName = '품목명1번';	  	// 품명
     $Taxinvoice->detailList[0]->spec = '';				      // 규격
     $Taxinvoice->detailList[0]->qty = '';					        // 수량
@@ -242,7 +236,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[1]->serialNum = 2;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[1]->purchaseDT = '20181228';	  // 거래일자
+    $Taxinvoice->detailList[1]->purchaseDT = '20190101';	  // 거래일자
     $Taxinvoice->detailList[1]->itemName = '품목명2번';	  	// 품명
     $Taxinvoice->detailList[1]->spec = '';				      // 규격
     $Taxinvoice->detailList[1]->qty = '';					        // 수량

@@ -6,8 +6,7 @@
 	</head>
 <?php
     /**
-     * 문자전송요청시 발급받은 접수번호(receiptNum)로
-     * 예약문자 전송을 취소합니다.
+     * 문자전송요청시 발급받은 접수번호(receiptNum)로 예약문자 전송을 취소합니다.
      * - 예약취소는 예약전송시간 10분전까지만 가능합니다.
      */
 
@@ -17,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 예약문자전송 요청시 발급받은 접수번호
-    $ReceiptNum = '';
+    $ReceiptNum = '019010211000000020';
 
     try {
         $result = $MessagingService->CancelReserve($testCorpNum ,$ReceiptNum);

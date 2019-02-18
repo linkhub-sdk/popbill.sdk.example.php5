@@ -6,8 +6,9 @@
 	</head>
 <?php
     /**
-     * 홈택스연계 인증정보 설정 팝업 URL을 반환합니다.
-     * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+     * 홈택스연동 인증관리를 위한 URL을 반환합니다.
+     * 인증방식에는 부서사용자/공인인증서 인증 방식이 있습니다.
+     * - 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
      */
 
     include 'common.php';
@@ -28,7 +29,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>인증정보 설정 팝업 URL</legend>
+				<legend>홈택스 인증정보 설정 팝업 URL</legend>
 				<ul>
 					<?php
 						if ( isset ( $url ) ) {
