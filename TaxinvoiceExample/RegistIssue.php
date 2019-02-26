@@ -20,7 +20,7 @@
 
     // 세금계산서 문서관리번호
     // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20190101-001';
+    $invoicerMgtKey = '20190226-011';
 
     // 지연발행 강제여부
     $forceIssue = false;
@@ -48,7 +48,7 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20190101';
+    $Taxinvoice->writeDate = '20190226';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '정발행';
@@ -225,7 +225,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[0]->serialNum = 1;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[0]->purchaseDT = '20190101';	  // 거래일자
+    $Taxinvoice->detailList[0]->purchaseDT = '20190226';	  // 거래일자
     $Taxinvoice->detailList[0]->itemName = '품목명1번';	  	// 품명
     $Taxinvoice->detailList[0]->spec = '';				      // 규격
     $Taxinvoice->detailList[0]->qty = '';					        // 수량
@@ -236,7 +236,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[1]->serialNum = 2;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[1]->purchaseDT = '20190101';	  // 거래일자
+    $Taxinvoice->detailList[1]->purchaseDT = '20190226';	  // 거래일자
     $Taxinvoice->detailList[1]->itemName = '품목명2번';	  	// 품명
     $Taxinvoice->detailList[1]->spec = '';				      // 규격
     $Taxinvoice->detailList[1]->qty = '';					        // 수량
@@ -271,6 +271,7 @@
             $writeSpecification, $forceIssue, $memo, $emailSubject, $dealInvoiceMgtKey);
         $code = $result->code;
         $message = $result->message;
+        $ntsConfirmNum = $result->ntsConfirmNum;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -284,8 +285,15 @@
 			<fieldset class="fieldset1">
 				<legend>전자세금계산서 즉시발행</legend>
 				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
+					<li>응답코드 (code) : <?php echo $code ?></li>
+					<li>응답메시지 (message) : <?php echo $message ?></li>
+          <?php
+            if ( isset($ntsConfirmNum) ) {
+          ?>
+            <li>국세청승인번호 (ntsConfirmNum) : <?php echo $ntsConfirmNum ?></li>
+          <?php
+            }
+          ?>
 				</ul>
 			</fieldset>
 		 </div>

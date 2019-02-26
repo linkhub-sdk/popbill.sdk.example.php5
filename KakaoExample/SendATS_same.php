@@ -26,13 +26,17 @@
     $testUserID = 'testkorea';
 
     // 템플릿 코드 - 템플릿 목록 조회 (ListATSTemplate API)의 반환항목 확인
-    $templateCode = '018060000179';
+    $templateCode = '019020000163';
 
     // 팝빌에 사전 등록된 발신번호
     $sender = '07043042991';
 
     // 알림톡 내용, 최대 1000자
-    $content = '[테스트] 테스트 템플릿입니다.';
+    $content = '[ 팝빌 ]'.PHP_EOL;
+    $content .= '신청하신 #{템플릿코드}에 대한 심사가 완료되어 승인 처리되었습니다.해당 템플릿으로 전송 가능합니다.'.PHP_EOL.PHP_EOL;
+    $content .= '문의사항 있으시면 파트너센터로 편하게 연락주시기 바랍니다.'.PHP_EOL.PHP_EOL;
+    $content .= '팝빌 파트너센터 : 1600-8536'.PHP_EOL;
+    $content .= 'support@linkhub.co.kr'.PHP_EOL;
 
     // 대체문자 내용
     $altContent = '대체문자 내용';
@@ -58,8 +62,23 @@
         );
     }
 
+    // 버튼정보를 수정하지 않고 템플릿 신청시 기재한 버튼내용을 전송하는 경우, null처리.
+    $buttons = null;
+
+    // 버튼배열, 버튼링크URL에 #{템플릿변수}를 기재하여 승인받은 경우 URL 수정가능.
+    // $buttons[] = array(
+    //     // 버튼 표시명
+    //     'n' => '템플릿 안내',
+    //     // 버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
+    //     't' => 'WL',
+    //     // 링크1, [앱링크] Android, [웹링크] Mobile
+    //     'u1' => 'https://www.popbill.com',
+    //     // 링크2, [앱링크] IOS, [웹링크] PC URL
+    //     'u2' => 'http://www.popbill.com',
+    // );
+
     try {
-        $receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID, $requestNum);
+        $receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID, $requestNum, $buttons);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

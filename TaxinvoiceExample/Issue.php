@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서관리번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20190226-012';
 
     // 메모
     $memo = '발행 메모입니다';
@@ -36,6 +36,7 @@
         $result = $TaxinvoiceService->Issue($testCorpNum, $mgtKeyType, $mgtKey, $memo, $EmailSubject, $forceIssue);
         $code = $result->code;
         $message = $result->message;
+        $ntsConfirmNum = $result->ntsConfirmNum;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -48,9 +49,16 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>세금계산서 발행</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
+        <ul>
+					<li>응답코드 (code) : <?php echo $code ?></li>
+					<li>응답메시지 (message) : <?php echo $message ?></li>
+          <?php
+            if ( isset($ntsConfirmNum) ) {
+          ?>
+            <li>국세청승인번호 (ntsConfirmNum) : <?php echo $ntsConfirmNum ?></li>
+          <?php
+            }
+          ?>
 				</ul>
 			</fieldset>
 		 </div>
