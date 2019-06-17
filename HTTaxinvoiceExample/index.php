@@ -25,6 +25,7 @@
             <li><a href="GetTaxinvoice.php">GetTaxinvoice</a> (상세정보 확인 (JSON) </li>
             <li><a href="GetXML.php">GetXML</a> (상세정보 확인 (XML) </li>
             <li><a href="GetPopUpURL.php">GetPopUpURL</a> (홈택스 전자세금계산서 보기 팝업 URL) </li>
+            <li><a href="GetPrintURL.php">GetPrintURL</a> (홈택스 전자세금계산서 인쇄 팝업 URL) </li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -49,6 +50,7 @@
             <li><a href="GetChargeInfo.php">GetChargeInfo</a> (과금정보 확인) </li>
             <li><a href="GetFlatRatePopUpURL.php">GetFlatRatePopUpURL</a> (정액제 서비스 신청 URL) </li>
             <li><a href="GetFlatRateState.php">GetFlatRateState</a> (정액제 서비스 상태 확인) </li>
+
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
