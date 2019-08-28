@@ -20,7 +20,7 @@
     // 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-위수탁
     $TIKeyType = KeyType::SELL;
 
-    // 수집일자유형, W-작성일자, R-등록일자, I-발행일자
+    // 수집일자유형, W-작성일자, I-발행일자, S-전송일자
     $DType = 'W';
 
     // 시작일자, 형식(yyyyMMdd)
