@@ -15,13 +15,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '123456790';
+    $testCorpNum = '1234567890';
 
     // 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-위수탁
     $TIKeyType = KeyType::SELL;
 
     // 수집일자유형, W-작성일자, I-발행일자, S-전송일자
-    $DType = 'W';
+    $DType = 'S';
 
     // 시작일자, 형식(yyyyMMdd)
     $SDate = '20181231';

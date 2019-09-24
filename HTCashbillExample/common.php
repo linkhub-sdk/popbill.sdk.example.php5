@@ -3,7 +3,7 @@
   * 팝빌 홈택스(현금영수증) 연동 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : blog.linkhub.co.kr/584
-  * 업데이트 일자 : 2019-01-02
+  * 업데이트 일자 : 2019-09-24
   * 연동기술지원 연락처 : 1600-9854 / 070-4304-2991
   * 연동기술지원 이메일 : code@linkhub.co.kr
   *
@@ -33,4 +33,7 @@
 
   // 연동환경 설정값, 개발용(true), 상업용(false)
   $HTCashbillService->IsTest(true);
+
+  // 인증토큰에 대한 IP제한기능 사용여부, 권장(true)
+  $HTCashbillService->IPRestrictOnOff(true);
 ?>
