@@ -20,7 +20,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20191024-32';
 
     try {
         $result = $StatementService->GetDetailInfo($testCorpNum, $itemCode, $mgtKey);
@@ -106,6 +106,11 @@
                                             <li> spare3(여분3) : <?php echo $result->detailList[$i]->spare3 ?> </li>
                                             <li> spare4(여분4) : <?php echo $result->detailList[$i]->spare4 ?> </li>
                                             <li> spare5(여분5) : <?php echo $result->detailList[$i]->spare5 ?> </li>
+                                            <li> spare6(여분6) : <?php echo $result->detailList[$i]->spare6 ?> </li>
+                                            <li> spare7(여분7) : <?php echo $result->detailList[$i]->spare7 ?> </li>
+                                            <li> spare8(여분8) : <?php echo $result->detailList[$i]->spare8 ?> </li>
+                                            <li> spare9(여분9) : <?php echo $result->detailList[$i]->spare9 ?> </li>
+                                            <li> spare10(여분10) : <?php echo $result->detailList[$i]->spare10 ?> </li>
 										</ul>
 								</fieldset>
 					<?php

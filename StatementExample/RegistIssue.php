@@ -19,7 +19,7 @@
 
     // 전자명세서 문서번호
     // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20190218-32';
+    $mgtKey = '20191024-32';
 
     // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -134,6 +134,10 @@
     $Statement->detailList[0]->spare3 = 'spare3';
     $Statement->detailList[0]->spare4 = 'spare4';
     $Statement->detailList[0]->spare5 = 'spare5';
+    $Statement->detailList[0]->spare6 = 'spare6';
+    $Statement->detailList[0]->spare7 = 'spare7';
+    $Statement->detailList[0]->spare8 = 'spare8';
+    $Statement->detailList[0]->spare9 = 'spare9';
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
