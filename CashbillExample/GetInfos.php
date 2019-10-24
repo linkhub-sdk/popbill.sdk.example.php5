@@ -15,7 +15,7 @@
     // 팝빌회원 사업자번호
     $testCorpNum = '1234567890';
 
-    // 문서관리번호 배열, 최대 1000건
+    // 문서번호 배열, 최대 1000건
     $MgtKeyList = array(
         '20190101-001',
         '20190101-002',
@@ -49,7 +49,7 @@
 									<legend> 현금영수증 상태/요약정보[<?php echo $i+1?>]</legend>
 									<ul>
                                         <li> itemKey (현금영수증 아이템키) : <?php echo $result[$i]->itemKey ?></li>
-                                        <li> mgtKey (문서관리번호) : <?php echo $result[$i]->mgtKey ?></li>
+                                        <li> mgtKey (문서번호) : <?php echo $result[$i]->mgtKey ?></li>
                                         <li> tradeDate (거래일자) : <?php echo $result[$i]->tradeDate ?></li>
                                         <li> tradeType (문서형태) : <?php echo $result[$i]->tradeType ?></li>
                                         <li> tradeUsage (거래구분) : <?php echo $result[$i]->tradeUsage ?></li>

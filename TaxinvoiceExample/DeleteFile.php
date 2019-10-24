@@ -18,7 +18,7 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::SELL;
 
-    // 문서관리번호
+    // 문서번호
     $mgtKey = '20190101-001';
 
     // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조

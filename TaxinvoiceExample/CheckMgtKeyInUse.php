@@ -6,8 +6,8 @@
 	</head>
 <?php
     /**
-     * 세금계산서 관리번호 중복여부를 확인합니다.
-     * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
+     * 세금계산서 문서번호 중복여부를 확인합니다.
+     * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
      */
 
     include 'common.php';
@@ -15,7 +15,7 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $testCorpNum = '1234567890';
 
-    // 세금계산서 관리번호, 발행자별로 중복없이 1~24자리 영문,숫자로 구성
+    // 세금계산서 문서번호, 발행자별로 중복없이 1~24자리 영문,숫자로 구성
     $mgtKey = '20190101-001';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
@@ -35,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>관리번호 사용여부 확인</legend>
+				<legend>문서번호 사용여부 확인</legend>
 				<ul>
 					<?php
 						if ( isset($code) ) {
@@ -45,7 +45,7 @@
 					<?php
 						} else {
 					?>
-						<li>문서관리번호 사용여부 : <?php echo $result ?></li>
+						<li>문서문서번호 사용여부 : <?php echo $result ?></li>
 					<?php
 						}
 					?>

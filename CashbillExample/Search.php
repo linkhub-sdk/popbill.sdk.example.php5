@@ -105,7 +105,7 @@
 									<legend> 현금영수증 상태/요약 정보[<?php echo $i+1?>]</legend>
 									<ul>
                                         <li> itemKey (현금영수증 아이템키) : <?php echo $result->list[$i]->itemKey ?></li>
-                                        <li> mgtKey (문서관리번호) : <?php echo $result->list[$i]->mgtKey ?></li>
+                                        <li> mgtKey (문서번호) : <?php echo $result->list[$i]->mgtKey ?></li>
                                         <li> tradeDate (거래일자) : <?php echo $result->list[$i]->tradeDate ?></li>
                                         <li> tradeType (문서형태) : <?php echo $result->list[$i]->tradeType ?></li>
                                         <li> tradeUsage (거래구분) : <?php echo $result->list[$i]->tradeUsage ?></li>

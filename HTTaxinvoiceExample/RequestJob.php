@@ -24,10 +24,10 @@
     $DType = 'S';
 
     // 시작일자, 형식(yyyyMMdd)
-    $SDate = '20181231';
+    $SDate = '20190901';
 
     // 종료일자, 형식(yyyyMMdd)
-    $EDate = '20190101';
+    $EDate = '20191231';
 
     try {
         $jobID = $HTTaxinvoiceService->RequestJob($testCorpNum, $TIKeyType, $DType, $SDate, $EDate);

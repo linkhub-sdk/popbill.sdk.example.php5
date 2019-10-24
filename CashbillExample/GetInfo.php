@@ -15,7 +15,7 @@
     // 팝빌회원 사업자번호
     $testCorpNum = '1234567890';
 
-    // 문서관리번호
+    // 문서번호
     $mgtKey = '20190101-001';
 
     try {
@@ -43,7 +43,7 @@
 							{
 					?>
                                 <li> itemKey (현금영수증 아이템키) : <?php echo $result->itemKey ?></li>
-                                <li> mgtKey (문서관리번호) : <?php echo $result->mgtKey ?></li>
+                                <li> mgtKey (문서번호) : <?php echo $result->mgtKey ?></li>
                                 <li> tradeDate (거래일자) : <?php echo $result->tradeDate ?></li>
                                 <li> tradeType (문서형태) : <?php echo $result->tradeType ?></li>
                                 <li> tradeUsage (거래구분) : <?php echo $result->tradeUsage ?></li>

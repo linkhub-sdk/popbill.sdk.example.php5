@@ -7,7 +7,7 @@
 <?php
     /**
      * [공급받는자]가 역)발행대기 상태의 세금계산서를 [취소]합니다.
-     * - [취소]한 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)를 호출해야 합니다.
+     * - [취소]한 세금계산서의 문서번호를 재사용하기 위해서는 삭제 (Delete API)를 호출해야 합니다.
      */
 
     include 'common.php';
@@ -18,7 +18,7 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::BUY;
 
-    // 문서관리번호
+    // 문서번호
     $mgtKey = '20190101-001';
 
     // 메모

@@ -19,7 +19,7 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::SELL;
 
-    // 조회할 세금계산서 문서관리번호
+    // 조회할 세금계산서 문서번호
     $mgtKey = '20190101-001';
 
     try {
@@ -56,7 +56,7 @@
                             <li>writeDate (작성일자) : <?php echo $result->writeDate ?></li>
                             <li>invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName ?></li>
                             <li>invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?></li>
-                            <li>invoicerMgtKey (공급자 문서관리번호) : <?php echo $result->invoicerMgtKey ?></li>
+                            <li>invoicerMgtKey (공급자 문서번호) : <?php echo $result->invoicerMgtKey ?></li>
                             <li>invoicerPrintYN (공급자 인쇄여부) : <?php echo $result->invoicerPrintYN ? 'true' : 'false' ?></li>
                             <li>invoiceeCorpName (공급받는자 상호) : <?php echo $result->invoiceeCorpName ?></li>
                             <li>invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum ?></li>

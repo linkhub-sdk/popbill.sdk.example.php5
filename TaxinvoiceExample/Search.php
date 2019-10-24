@@ -132,7 +132,7 @@
 
                                         <li>invoicerCorpName (공급자 상호) : <?php echo $result->list[$i]->invoicerCorpName ?></li>
                                         <li>invoicerCorpNum (공급자 사업자번호) : <?php echo $result->list[$i]->invoicerCorpNum ?></li>
-                                        <li>invoicerMgtKey (공급자 문서관리번호) : <?php echo $result->list[$i]->invoicerMgtKey ?></li>
+                                        <li>invoicerMgtKey (공급자 문서번호) : <?php echo $result->list[$i]->invoicerMgtKey ?></li>
                                         <li>invoicerPrintYN (공급자 인쇄여부) : <?php echo $result->list[$i]->invoicerPrintYN ? 'true' : 'false' ?></li>
 
                                         <li>invoiceeCorpName (공급받는자 상호) : <?php echo $result->list[$i]->invoiceeCorpName ?></li>

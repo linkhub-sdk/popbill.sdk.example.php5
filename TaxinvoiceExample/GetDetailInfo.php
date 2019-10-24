@@ -18,7 +18,7 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::SELL;
 
-    // 세금계산서 문서관리번호
+    // 세금계산서 문서번호
     $mgtKey = '20190101-001';
 
     try {
@@ -53,7 +53,7 @@
                             <li> ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum  ?> </li>
 
                             <li> invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?> </li>
-                            <li> invoicerMgtKey (공급자 문서관리번호) : <?php echo $result->invoicerMgtKey  ?> </li>
+                            <li> invoicerMgtKey (공급자 문서번호) : <?php echo $result->invoicerMgtKey  ?> </li>
                             <li> invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName  ?> </li>
                             <li> invoicerCEOName (공급자 대표자명) : <?php echo $result->invoicerCEOName  ?> </li>
                             <li> invoicerAddr (공급자 주소) : <?php echo $result->invoicerAddr  ?> </li>
@@ -65,7 +65,7 @@
 
                             <li> invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum  ?> </li>
                             <li> invoiceeType (공급받는자 구분) : <?php echo $result->invoiceeType ?>  </li>
-                            <li> invoiceeMgtKey (공급받는자 문서관리번호) : <?php echo $result->invoiceeMgtKey  ?> </li>
+                            <li> invoiceeMgtKey (공급받는자 문서번호) : <?php echo $result->invoiceeMgtKey  ?> </li>
                             <li> invoiceeCorpName (공급받는자 상호) : <?php echo $result->invoiceeCorpName  ?> </li>
                             <li> invoiceeCEOName (공급받는자 대표자명) : <?php echo $result->invoiceeCEOName  ?> </li>
                             <li> invoiceeAddr (공급받는자 주소) : <?php echo $result->invoiceeAddr  ?> </li>

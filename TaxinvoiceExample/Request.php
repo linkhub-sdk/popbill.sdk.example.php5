@@ -20,7 +20,7 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::BUY;
 
-    // 문서관리번호
+    // 문서번호
     $mgtKey = '20190101-001';
 
     // 메모
