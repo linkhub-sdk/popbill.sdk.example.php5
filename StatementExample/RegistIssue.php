@@ -87,8 +87,11 @@
     $Statement->receiverBizType = '공급받는자 업태';
     $Statement->receiverContactName = '공급받는자 담당자명';
     $Statement->receiverTEL = '010-0000-1111';
+
     $Statement->receiverHP = '010-1111-2222';
-    $Statement->receiverEmail = 'frenchofkiss@gmail.com';
+    // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
+    // 실제 거래처의 메일주소가 기재되지 않도록 주의
+    $Statement->receiverEmail = 'test@test.com';
 
     /************************************************************
      *                       전자명세서 기재정보
