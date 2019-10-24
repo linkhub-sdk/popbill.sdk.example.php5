@@ -20,7 +20,7 @@
 
     // 세금계산서 문서번호
     // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20190226-012';
+    $invoicerMgtKey = '20191024-012';
 
 
     /************************************************************
@@ -31,7 +31,7 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20190226';
+    $Taxinvoice->writeDate = '20191024';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '정발행';
@@ -202,11 +202,10 @@
      ************************************************************/
 
     // 수정사유코드, 수정사유에 따라 1~6중 선택기재
-    //$Taxinvoice->modifyCode = '';
+    // $Taxinvoice->modifyCode = '';
 
-    // 원본세금계산서 ItemKey 기재, 문서확인 (GetInfo API)의 응답결과(ItemKey 항목) 확인
-    //$Taxinvoice->originalTaxinvoiceKey = '';
-
+    // 원본세금계산서의 국세청 승인번호 기재
+    // $Taxinvoice->orgNTSConfirmNum = '';
 
 
     /************************************************************

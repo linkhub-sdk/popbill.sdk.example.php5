@@ -197,8 +197,8 @@
     // 수정사유코드, 수정사유에 따라 1~6중 선택기재
     //$Taxinvoice->modifyCode = '';
 
-    // 원본세금계산서 ItemKey 기재, 문서확인 (GetInfo API)의 응답결과(ItemKey 항목) 확인
-    //$Taxinvoice->originalTaxinvoiceKey = '';
+    // 원본세금계산서의 국세청 승인번호 기재
+    // $Taxinvoice->orgNTSConfirmNum = '';
 
 
     /************************************************************
