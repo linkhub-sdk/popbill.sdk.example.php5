@@ -55,7 +55,7 @@
     // 수신자 정보
     $receivers[] = array(
         // 수신번호
-        'rcv' => '01043245117',
+        'rcv' => '010111222',
         // 수신자명
         'rcvnm' => '수신자명'
     );
@@ -71,7 +71,7 @@
     //     't' => 'WL',
     //     // 링크1, [앱링크] iOS, [웹링크] Mobile
     //     'u1' => 'https://www.popbill.com',
-    //     // 링크2, [앱링크] Android, [웹링크] PC URL
+    //     // 링크2, [앱링크] IOS, [웹링크] PC URL
     //     'u2' => 'http://www.popbill.com',
     // );
 
