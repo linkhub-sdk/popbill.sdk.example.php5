@@ -5,9 +5,9 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
-/*
-* 팝빌에 등록된 은행계좌 목록을 반환한다.
-*/
+    /*
+    * 팝빌에 등록된 은행계좌 목록을 반환한다.
+    */
 
     include 'common.php';
 

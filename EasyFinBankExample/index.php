@@ -6,7 +6,7 @@
 </head>
 <body>
 <div id="content">
-    <p class="heading1">팝빌 간편 계좌조회 API SDK PHP 5.x Example.</p>
+    <p class="heading1">팝빌 계좌조회 API SDK PHP 5.x Example.</p>
     <br/>
     <fieldset class="fieldset1">
         <legend>계좌 관리</legend>
