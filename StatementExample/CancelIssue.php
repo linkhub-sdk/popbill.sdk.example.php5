@@ -7,6 +7,7 @@
 <?php
     /**
      * 1건의 전자명세서를 [발행취소] 처리합니다.
+     * - https://docs.popbill.com/statement/php/api#CancelIssue
      */
 
     include 'common.php';

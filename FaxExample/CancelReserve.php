@@ -8,6 +8,7 @@
     /**
      * 팩스전송요청시 발급받은 접수번호(receiptNum)로 팩스 예약전송건을 취소합니다.
      * - 예약전송 취소는 예약전송시간 10분전까지 가능하며, 팩스변환 이후 가능합니다.
+     * - https://docs.popbill.com/fax/php/api#CancelReserve
      */
 
     include 'common.php';

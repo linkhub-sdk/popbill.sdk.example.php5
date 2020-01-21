@@ -8,6 +8,7 @@
     /**
      * 검색조건을 사용하여 문자전송 내역을 조회합니다.
      * - 최대 검색기간 : 6개월 이내
+     * - https://docs.popbill.com/message/php/api#Search
      */
 
     include 'common.php';

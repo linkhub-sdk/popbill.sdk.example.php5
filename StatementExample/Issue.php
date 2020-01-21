@@ -7,6 +7,7 @@
 <?php
     /**
      * 1건의 [임시저장] 상태의 전자명세서를 발행처리합니다.
+     * - https://docs.popbill.com/statement/php/api#StmIssue
      */
 
     include 'common.php';

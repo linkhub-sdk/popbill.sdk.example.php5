@@ -8,6 +8,7 @@
     /**
     * (주)카카오로 부터 승인된 알림톡 템플릿 목록을 확인합니다.
     * - 반환항목중 템플릿코드(templateCode)는 알림톡 전송시 사용됩니다.
+    * - https://docs.popbill.com/kakao/php/api#ListATSTemplate
     */
 
     include 'common.php';
@@ -45,7 +46,7 @@
                                 <li>templateCode (템플릿 코드) : <?php echo $result[$i]->templateCode ?></li>
                                 <li>templateName (템플릿 제목) : <?php echo $result[$i]->templateName ?></li>
                                 <li>template (템플릿 내용) : <?php echo $result[$i]->template ?></li>
-                                <li>plusFriendID (플러스친구 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
+                                <li>plusFriendID (카카오톡채널 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
                             </ul>
                             <?php
                             if (isset($result[$i]->btns)) {

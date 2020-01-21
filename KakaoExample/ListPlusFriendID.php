@@ -6,7 +6,8 @@
 	</head>
 <?php
     /**
-     * 팝빌에 등록된 플러스친구 계정목록을 확인합니다.
+     * 팝빌에 등록된 카카오톡채널 계정목록을 확인합니다.
+     * - https://docs.popbill.com/kakao/php/api#ListPlusFriendID
      */
 
     include 'common.php';
@@ -27,7 +28,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>플러스친구 목록 확인</legend>
+				<legend>카카오톡채널 목록 확인</legend>
 				<ul>
 					<?php
 						if ( isset($code) ) {
@@ -39,10 +40,10 @@
 							for ($i = 0; $i < Count($result); $i++) {
 					?>
 							<fieldset class="fieldset2">
-							<legend> 플러스친구 계정목록 [<?php echo $i+1?>]</legend>
+							<legend> 카카오톡채널 계정목록 [<?php echo $i+1?>]</legend>
 							<ul>
-								<li>plusFriendID (플러스친구 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
-								<li>plusFriendName (플러스친구 이름) : <?php echo $result[$i]->plusFriendName ?></li>
+								<li>plusFriendID (카카오톡채널 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
+								<li>plusFriendName (카카오톡채널 이름) : <?php echo $result[$i]->plusFriendName ?></li>
 								<li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
 							</ul>
 							</fieldset>

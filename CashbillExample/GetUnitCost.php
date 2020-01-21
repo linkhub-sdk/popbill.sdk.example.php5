@@ -7,6 +7,7 @@
 <?php
     /**
      * 현금영수증 발행단가를 확인합니다.
+     * - https://docs.popbill.com/cashbill/php/api#GetUnitCost
      */
 
     include 'common.php';

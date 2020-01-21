@@ -7,6 +7,7 @@
 <?php
     /**
      * 카카오톡 서비스 과금정보를 확인합니다.
+     * - https://docs.popbill.com/kakao/php/api#GetChargeInfo
      */
 
     include 'common.php';

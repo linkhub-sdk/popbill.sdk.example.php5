@@ -8,6 +8,7 @@
     /**
      * 인감 및 첨부문서 등록 팝업 URL을 반환합니다.
      * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#GetSealURL
      */
 
     include 'common.php';

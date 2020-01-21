@@ -7,7 +7,8 @@
 <?php
     /**
      * 전자명세서 문서번호 중복여부를 확인합니다.
-     * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합하여 사업자별로 중복되지 않도록 구성해야합니다.
+     * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합하여 사업자별로 중복되지 않도록 구성해야합니다.
+     * - https://docs.popbill.com/statement/php/api#CheckMgtKeyInUse
      */
 
     include 'common.php';

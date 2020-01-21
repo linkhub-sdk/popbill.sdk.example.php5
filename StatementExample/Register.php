@@ -7,6 +7,7 @@
 <?php
     /**
      * 1건의 전자명세서를 임시저장합니다.
+     * - https://docs.popbill.com/statement/php/api#Register
      */
 
     include 'common.php';

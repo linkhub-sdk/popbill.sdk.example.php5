@@ -7,6 +7,7 @@
 <?php
     /**
      * 대용량 연계사업자 유통메일주소 목록을 반환합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#GetEmailPublicKeys
      */
 
     include 'common.php';

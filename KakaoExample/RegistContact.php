@@ -5,6 +5,10 @@
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
+    /*
+    * 연동회원 사업자의 담당자 정보(팝빌 로그인 계정)를 추가합니다.
+    * - https://docs.popbill.com/kakao/php/api#RegistContact
+    */
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리

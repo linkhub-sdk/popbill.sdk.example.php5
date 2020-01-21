@@ -6,7 +6,8 @@
 	</head>
 <?php
     /**
-     *  홈택스 전자세금계산서 부서사용자 계정을 등록한다.
+     * 홈택스 전자세금계산서 부서사용자 계정을 등록한다.
+     * - https://docs.popbill.com/httaxinvoice/php/api#RegistDeptUser
      */
 
     include 'common.php';

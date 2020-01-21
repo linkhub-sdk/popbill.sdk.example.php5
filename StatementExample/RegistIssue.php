@@ -7,6 +7,7 @@
 <?php
     /**
      * 1건의 전자명세서를 즉시발행 처리합니다.
+     * - https://docs.popbill.com/statement/php/api#RegistIssue
      */
 
     include 'common.php';

@@ -8,6 +8,7 @@
     /**
      * 팩스 전송내역 팝업 URL을 반환합니다.
      * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
+     * - https://docs.popbill.com/fax/php/api#GetSentListURL
      */
 
     include 'common.php';

@@ -7,6 +7,7 @@
 <?php
     /**
      * 연동회원의 담당자 목록을 확인합니다.
+     * - https://docs.popbill.com/cashbill/php/api#ListContact
      */
 
     include 'common.php';

@@ -7,8 +7,7 @@
 <?php
     /**
      * 다수건의 전자명세서 상태/요약 정보를 확인합니다.
-     * - 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼] > 3.2.2.
-     *   GetInfos (상태 대량 확인)"을 참조하시기 바랍니다.
+     * - https://docs.popbill.com/statement/php/api#GetInfos
      */
 
     include 'common.php';

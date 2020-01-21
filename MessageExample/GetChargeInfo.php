@@ -7,6 +7,7 @@
 <?php
     /**
      * 문자 API 서비스 과금정보를 확인합니다.
+     * - https://docs.popbill.com/message/php/api#GetChargeInfo
      */
 
     include 'common.php';

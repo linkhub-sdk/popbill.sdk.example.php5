@@ -12,7 +12,7 @@
     <fieldset class="fieldset1">
         <legend>정방행/역발행/위수탁발행</legend>
         <ul>
-            <li><a href="CheckMgtKeyInUse.php">CheckMgtKeyInUse</a> (관리번호 확인)</li>
+            <li><a href="CheckMgtKeyInUse.php">CheckMgtKeyInUse</a> (문서번호 확인)</li>
             <li><a href="RegistIssue.php">RegistIssue</a> (즉시 발행)</li>
             <li><a href="Register.php">Register</a> (임시저장)</li>
             <li><a href="Update.php">Update</a> (수정)</li>
@@ -67,7 +67,7 @@
             <li><a href="AttachStatement.php">AttachStatement</a> (전자명세서 첨부)</li>
             <li><a href="DetachStatement.php">DetachStatement</a> (전자명세서 첨부해제)</li>
             <li><a href="GetEmailPublicKeys.php">GetEmailPublicKeys</a> (유통사업자 메일 목록 확인)</li>
-            <li><a href="AssignMgtKey.php">AssignMgtKey</a> (관리번호 할당)</li>
+            <li><a href="AssignMgtKey.php">AssignMgtKey</a> (문서번호 할당)</li>
             <li><a href="ListEmailConfig.php">ListEmailConfig</a> (세금계산서 알림메일 전송목록 조회)</li>
             <li><a href="UpdateEmailConfig.php">UpdateEmailConfig</a> (세금계산서 알림메일 전송설정 수정)</li>
         </ul>

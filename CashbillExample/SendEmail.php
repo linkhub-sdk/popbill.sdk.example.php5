@@ -7,6 +7,7 @@
 <?php
     /**
      * 현금영수증 발행 안내메일을 재전송합니다.
+     * - https://docs.popbill.com/cashbill/php/api#SendEmail
      */
 
     include 'common.php';

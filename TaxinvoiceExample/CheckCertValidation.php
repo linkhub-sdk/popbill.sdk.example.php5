@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 공인인증서의 유효성을 확인합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#CheckCertValidation
      */
 
     include 'common.php';

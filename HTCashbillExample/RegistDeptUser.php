@@ -7,6 +7,7 @@
 <?php
     /**
      * 홈택스 현금영수증 부서사용자 계정을 등록한다.
+     * - https://docs.popbill.com/htcashbill/php/api#RegistDeptUser
      */
 
     include 'common.php';

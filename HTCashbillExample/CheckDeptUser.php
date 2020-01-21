@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 현금영수증 부서사용자 아이디를 확인한다.
+     * - https://docs.popbill.com/htcashbill/php/api#CheckDeptUser
      */
 
     include 'common.php';

@@ -7,6 +7,7 @@
 <?php
     /*
     * 수집된 거래내역에 메모를 저장한다.
+    * - https://docs.popbill.com/easyfinbank/php/api#SaveMemo
     */
 
     include 'common.php';

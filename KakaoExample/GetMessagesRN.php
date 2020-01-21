@@ -7,6 +7,7 @@
 <?php
     /**
      * 전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인한다.
+     * - https://docs.popbill.com/kakao/php/api#GetMessagesRN
      */
 
     include 'common.php';
@@ -44,7 +45,7 @@
                 <ul>
                     <li>contentType (카카오톡 유형) : <?php echo $result->contentType ?> </li>
                     <li>templateCode (템플릿 코드) : <?php echo $result->templateCode ? $result->templateCode : '' ?> </li>
-                    <li>plusFriendID (플러스친구 아이디) : <?php echo $result->plusFriendID ?> </li>
+                    <li>plusFriendID (카카오톡채널 아이디) : <?php echo $result->plusFriendID ?> </li>
                     <li>sendNum (발신번호) : <?php echo $result->sendNum ?> </li>
                     <li>altContent ([동보]대체문자 내용) : <?php echo $result->altContent ?> </li>
                     <li>altSendType (대체문자 전송유형) : <?php echo $result->altSendType ?> </li>

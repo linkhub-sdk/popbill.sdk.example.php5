@@ -6,8 +6,9 @@
 </head>
 <?php
     /**
-     * 플러스친구 계정관리 팝업 URL을 반환합니다.
+     * 카카오톡채널 계정관리 팝업 URL을 반환합니다.
      * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
+     * - https://docs.popbill.com/kakao/php/api#GetPlusFriendMgtURL
      */
 
     include 'common.php';
@@ -30,7 +31,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>플러스친구 계정관리 팝업 URL</legend>
+        <legend>카카오톡채널 계정관리 팝업 URL</legend>
         <ul>
           <?php
           if (isset($url)) {

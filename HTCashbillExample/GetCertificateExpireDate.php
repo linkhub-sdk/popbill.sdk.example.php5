@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 홈택스 공인인증서의 만료일자를 반환합니다.
+     * - https://docs.popbill.com/htcashbill/php/api#GetCertificateExpireDate
      */
 
     include 'common.php';

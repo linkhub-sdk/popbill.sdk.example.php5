@@ -7,6 +7,7 @@
 <?php
     /**
      * 계좌조회 API 서비스 과금정보를 확인합니다.
+     * - https://docs.popbill.com/easyfinbank/php/api#GetChargeInfo
      */
 
     include 'common.php';

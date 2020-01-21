@@ -7,6 +7,7 @@
 <?php
     /**
      * [동보전송] 친구톡(텍스트) 전송을 요청합니다.
+     * - https://docs.popbill.com/kakao/php/api#SendFTS
      * - 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
      * - 팝빌에 등록되지 않은 발신번호로 알림톡 메시지를 전송하는 경우 발신 번호 미등록 오류로 처리된다.
      * - 발신번호 사전등록 방법. (사이트/API 등록방법 제공)
@@ -22,7 +23,7 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-    // 팝빌에 등록된 플러스친구 아이디, ListPlusFriend API - plusFriendID 확인
+    // 팝빌에 등록된 카카오톡채널 아이디, ListPlusFriend API - plusFriendID 확인
     $plusFriendID = '@팝빌';
 
     // 팝빌에 사전 등록된 발신번호

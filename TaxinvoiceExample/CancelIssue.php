@@ -10,6 +10,7 @@
      * - [발행취소]는 국세청 전송전에만 가능합니다.
      * - 발행취소된 세금계산서는 국세청에 전송되지 않습니다.
      * - 발행취소 세금계산서에 사용된 문서번호를 재사용 하기 위해서는 삭제(Delete API)를 호출하여 해당세금계산서를 삭제해야 합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#CancelIssue
      */
 
     include 'common.php';

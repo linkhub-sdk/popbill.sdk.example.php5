@@ -8,6 +8,7 @@
     /**
      * 1건의 전자세금계산서 인쇄팝업 URL을 반환합니다.
      * - 반환된 URL은 보안정책으로 인해 30초의 유효시간을 갖습니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#GetPrintURL
      */
 
     include 'common.php';

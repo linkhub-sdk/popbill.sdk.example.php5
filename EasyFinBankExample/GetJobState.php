@@ -7,6 +7,7 @@
 <?php
     /*
     * 계좌 거래내역 수집 상태를 확인한다.
+    * - https://docs.popbill.com/easyfinbank/php/api#GetJobState
     */
 
     include 'common.php';

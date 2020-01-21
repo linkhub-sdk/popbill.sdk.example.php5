@@ -7,8 +7,7 @@
 <?php
     /**
      * 전자명세서 1건의 상세정보를 조회합니다.
-     * - 응답항목에 대한 자세한 사항은 "[전자명세서 API 연동매뉴얼] > 4.1.
-     *   전자명세서 구성" 을 참조하시기 바랍니다.
+     * - https://docs.popbill.com/statement/php/api#GetDetailInfo
      */
 
     include 'common.php';

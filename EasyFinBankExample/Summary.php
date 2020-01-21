@@ -7,6 +7,7 @@
 <?php
     /*
     * 계좌 거래내역 요약정보를 조회한다.
+    * - https://docs.popbill.com/easyfinbank/php/api#Summary
     */
 
     include 'common.php';

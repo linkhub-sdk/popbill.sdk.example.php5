@@ -7,7 +7,8 @@
 <?php
     /**
      * 현금영수증 문서번호 중복여부를 확인합니다.
-     * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 사업자별로 중복되지 않도록 구성해야합니다.
+     * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 사업자별로 중복되지 않도록 구성해야합니다.
+     * - https://docs.popbill.com/cashbill/php/api#CheckMgtKeyInUse
      */
 
     include 'common.php';
@@ -43,7 +44,7 @@
 					<?php
 						} else {
 					?>
-						<li>연동관리번호 사용여부 : <?php echo $result ?></li>
+						<li>연동문서번호 사용여부 : <?php echo $result ?></li>
 					<?php
 						}
 					?>

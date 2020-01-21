@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 발신번호 목록을 확인합니다.
+     * - https://docs.popbill.com/kakao/php/api#GetSenderNumberList
      */
 
     include 'common.php';

@@ -7,6 +7,7 @@
 <?php
     /*
     * 1시간 이내 수집 요청 목록을 확인한다.
+    * - https://docs.popbill.com/easyfinbank/php/api#ListActiveJob
     */
 
     include 'common.php';

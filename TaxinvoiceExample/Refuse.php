@@ -8,6 +8,7 @@
     /**
      * 공급받는자에게 요청받은 역)발행대기 상태의 세금계산서를 [공급자]가 [거부]합니다.
      * - 세금계산서의 문서번호를 재사용하기 위해서는 삭제 (Delete API)를 호출하여 [삭제] 처리해야 합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#Refuse
      */
 
     include 'common.php';

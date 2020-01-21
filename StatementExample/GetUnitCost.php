@@ -7,6 +7,7 @@
 <?php
     /**
      * 전자명세서 발행단가를 확인합니다.
+     * - https://docs.popbill.com/statement/php/api#GetUnitCost
      */
 
     include 'common.php';

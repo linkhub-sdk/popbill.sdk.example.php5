@@ -7,6 +7,7 @@
 <?php
     /**
      * 전자세금계산서 관련 메일전송 항목에 대한 전송여부를 목록으로 반환한다.
+     * - https://docs.popbill.com/taxinvoice/php/api#ListEmailConfig
      */
 
     include 'common.php';

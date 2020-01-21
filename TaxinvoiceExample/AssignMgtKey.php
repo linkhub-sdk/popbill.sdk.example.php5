@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌사이트에서 작성된 세금계산서에 파트너 문서번호를 할당합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#AssignMgtKey
      */
 
     include 'common.php';

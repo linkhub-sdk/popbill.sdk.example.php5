@@ -7,6 +7,7 @@
 <?php
     /**
      * 문자전송에 대한 전송결과 요약정보를 확인합니다.
+     * - https://docs.popbill.com/message/php/api#GetStates
      */
 
     include 'common.php';

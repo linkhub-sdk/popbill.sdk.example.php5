@@ -7,6 +7,7 @@
 <?php
     /**
      * 전자명세서에 첨부된 다른 전자명세서를 첨부해제합니다.
+     * - https://docs.popbill.com/statement/php/api#DetachStatement
      */
 
     include 'common.php';
@@ -23,7 +24,7 @@
     // 첨부해제할 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $subItemCode = '121';
 
-    // 첨부해제할 명세서 관리번호
+    // 첨부해제할 명세서 문서번호
     $subMgtKey = '20190101-002';
 
     try {

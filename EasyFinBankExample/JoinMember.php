@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌 연동회원 가입을 요청합니다.
+     * - https://docs.popbill.com/easyfinbank/php/api#JoinMember
      */
 
     include 'common.php';

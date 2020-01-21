@@ -7,6 +7,7 @@
 <?php
     /**
      * 080 서비스 수신거부 목록을 확인합니다.
+     * - https://docs.popbill.com/message/php/api#GetAutoDenyList
      */
 
     include 'common.php';

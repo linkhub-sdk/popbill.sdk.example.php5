@@ -8,6 +8,7 @@
     /**
      * 팝빌 전자명세서 문서함 관련 팝업 URL을 반환합니다.
      * 반환된 URL은 보안정책에 따라 30초의 유효시간을 갖습니다.
+     * - https://docs.popbill.com/statement/php/api#GetURL
      */
 
     include 'common.php';

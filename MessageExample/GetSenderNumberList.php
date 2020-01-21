@@ -7,6 +7,7 @@
 <?php
     /**
      * 문자 발신번호 목록을 반환합니다.
+     * - https://docs.popbill.com/message/php/api#GetSenderNumberList
      */
 
     include 'common.php';

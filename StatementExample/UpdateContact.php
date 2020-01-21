@@ -7,6 +7,7 @@
 <?php
     /**
      * 연동회원의 담당자 정보를 수정합니다.
+     * - https://docs.popbill.com/statement/php/api#UpdateContact
      */
 
     include 'common.php';

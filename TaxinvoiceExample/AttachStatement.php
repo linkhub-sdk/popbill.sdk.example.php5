@@ -7,6 +7,7 @@
 <?php
     /**
      * 1건의 전자명세서를 세금계산서에 첨부합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#AttachStatement
      */
 
     include 'common.php';

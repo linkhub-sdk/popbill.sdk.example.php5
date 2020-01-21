@@ -7,6 +7,7 @@
 <?php
     /**
      * 세금계산서에 첨부된 전자명세서 1건을 첨부해제합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#DetachStatement
      */
 
     include 'common.php';

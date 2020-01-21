@@ -6,7 +6,8 @@
 	</head>
 <?php
     /**
-     * 세금계싼서 발행안내 메일을 재전송합니다.
+     * 세금계산서 발행안내 메일을 재전송합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#SendEmail
      */
 
     include 'common.php';
