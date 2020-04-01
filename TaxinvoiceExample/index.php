@@ -51,6 +51,8 @@
             <li><a href="GetEPrintURL.php">GetEPrintURL</a> (세금계산서 인쇄 [공급받는자용] URL)</li>
             <li><a href="GetMassPrintURL.php">GetMassPrintURL</a> (세금계산서 대량 인쇄 URL)</li>
             <li><a href="GetMailURL.php">GetMailURL</a> (세금계산서 메일링크 URL)</li>
+            <li><a href="GetPDF.php">GetPDF</a> (세금계산서 팩스파일 다운로드)</li>
+            <li><a href="GetPDFURL.php">GetPDFURL</a> (세금계산서 팩스파일 다운로드 URL)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

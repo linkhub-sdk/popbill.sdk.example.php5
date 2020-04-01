@@ -48,6 +48,8 @@
             <li><a href="GetPrintURL.php">GetPrintURL</a> (현금영수증 인쇄 URL)</li>
             <li><a href="GetMassPrintURL.php">GetMassPrintURL</a> (현금영수증 대량 인쇄 URL)</li>
             <li><a href="GetMailURL.php">GetMailURL</a> (현금영수증 메일링크 URL)</li>
+            <li><a href="GetPDF.php">GetPDF</a> (현금영수증 팩스파일 다운로드)</li>
+            <li><a href="GetPDFURL.php">GetPDFURL</a> (현금영수증 팩스파일 다운로드 URL)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
