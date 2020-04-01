@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20200401-01';
 
     // PDF 파일경로, PDF 파일을 저장할 폴더에 777 권한 필요.
     $pdfFilePath = './'.$mgtKey.'.pdf';

@@ -20,7 +20,7 @@
 
     // 세금계산서 문서번호
     // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20200325-01';
+    $invoicerMgtKey = '20200401-01';
 
     // 지연발행 강제여부
     $forceIssue = false;
@@ -48,7 +48,7 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20200325';
+    $Taxinvoice->writeDate = '20200401';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '정발행';
@@ -126,13 +126,13 @@
     $Taxinvoice->invoiceeTaxRegID = '';
 
     // [필수] 공급자 상호
-    $Taxinvoice->invoiceeCorpName = '';
+    $Taxinvoice->invoiceeCorpName = '공급받는자 상호';
 
     // [역발행시 필수] 공급받는자 문서번호, 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
     $Taxinvoice->invoiceeMgtKey = '';
 
     // [필수] 공급받는자 대표자성명
-    $Taxinvoice->invoiceeCEOName = '';
+    $Taxinvoice->invoiceeCEOName = '공급받는자 대표자성명';
 
     // 공급받는자 주소
     $Taxinvoice->invoiceeAddr = '공급받는자 주소';
