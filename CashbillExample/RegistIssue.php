@@ -21,7 +21,7 @@
     $testUserID = 'testkorea';
 
     // 문서번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
-    $mgtKey = '20200118-01';
+    $mgtKey = '20200428-01';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
@@ -89,7 +89,7 @@
     $Cashbill->identityNum = '0101112222';
 
     // 주문자명
-    $Cashbill->customerName = '고객명';
+    $Cashbill->customerName = '주식회사주문자명담당자';
 
     // 주문상품명
     $Cashbill->itemName = '상품명';

@@ -37,6 +37,7 @@
         <ul>
             <li><a href="GetPopUpURL.php">GetPopUpURL</a> (전자명세서 보기 URL)</li>
             <li><a href="GetPrintURL.php">GetPrintURL</a> (전자명세서 인쇄 [공급자] URL)</li>
+            <li><a href="GetViewURL.php">GetViewURL</a> (전자명세서 보기 URL - 메뉴/버튼없는 뷰)</li>
             <li><a href="GetEPrintURL.php">GetEPrintURL</a> (전자명세서 인쇄 [공급받는자용] URL)</li>
             <li><a href="GetMassPrintURL.php">GetMassPrintURL</a> (전자명세서 대량 인쇄 URL)</li>
             <li><a href="GetMailURL.php">GetMailURL</a> (전자명세서 메일링크 URL)</li>
