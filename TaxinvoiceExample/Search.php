@@ -25,10 +25,10 @@
     $DType = 'W';
 
     // [필수] 시작일자
-    $SDate = '20181201';
+    $SDate = '20200401';
 
     // [필수] 종료일자
-    $EDate = '20190101';
+    $EDate = '20200531';
 
     // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array (
@@ -54,6 +54,15 @@
         'N',
         'R',
         'T'
+    );
+
+    // 휴폐업상태 배열 , N-미확인, 0-미등록, 1-사업중, 2-폐업, 3-휴업
+    $CloseDownState = array (
+        'N',
+        '0',
+        '1',
+        '2',
+        '3'
     );
 
     // 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
@@ -86,7 +95,8 @@
     try {
         $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
             $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
-            $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserID, $IssueType);
+            $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserID,
+            $IssueType, $CloseDownState);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
