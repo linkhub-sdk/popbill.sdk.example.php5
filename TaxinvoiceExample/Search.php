@@ -92,11 +92,14 @@
     // 연동문서 조회여부, 공백-전체조회, 0-일반문서 조회, 1-연동문서 조회
     $InterOPYN = '';
 
+    // 전자세금계산서 문서번호, 공백-전체조회
+    $MgtKey = '';
+
     try {
         $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
             $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
             $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserID,
-            $IssueType, $CloseDownState);
+            $IssueType, $CloseDownState, $MgtKey);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
