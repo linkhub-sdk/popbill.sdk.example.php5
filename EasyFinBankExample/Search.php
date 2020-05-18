@@ -65,7 +65,7 @@
                     ?>
                     <li>code (응답코드) : <?php echo $response->code ?></li>
                     <li>message (응답메시지) : <?php echo $response->message ?></li>
-                    <li>total (총 검색결고 건수) : <?php echo $response->total ?></li>
+                    <li>total (총 검색결과 건수) : <?php echo $response->total ?></li>
                     <li>perPage (페이지당 검색개수) : <?php echo $response->perPage ?></li>
                     <li>pageNum (페이지 번호) : <?php echo $response->pageNum ?></li>
                     <li>pageCount (페이지 개수) : <?php echo $response->pageCount ?></li>
