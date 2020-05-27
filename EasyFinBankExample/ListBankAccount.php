@@ -46,9 +46,18 @@
                                 <li>accountNumber (계좌번호) : <?php echo $result[$i]->accountNumber ?></li>
                                 <li>accountName (계좌 별칭) : <?php echo $result[$i]->accountName ?></li>
                                 <li>accountType (계좌 유형) : <?php echo $result[$i]->accountType ?></li>
-                                <li>state (정액제 상태) : <?php echo $result[$i]->state ?></li>
+                                <li>state (계좌 상태) : <?php echo $result[$i]->state ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
                                 <li>memo (메모) : <?php echo $result[$i]->memo ?></li>
+
+                                <li>contractDT (정액제 서비스 시작일시) : <?php echo $result[$i]->contractDT ?></li>
+                                <li>useEndDate (정액제 서비스 종료일) : <?php echo $result[$i]->useEndDate ?></li>
+                                <li>baseDate (자동연장 결제일) : <?php echo $result[$i]->baseDate ?></li>
+                                <li>contractState (정액제 서비스 상태) : <?php echo $result[$i]->contractState ?></li>
+                                <li>closeRequestYN (정액제 서비스 해지신청 여부) : <?php echo $result[$i]->closeRequestYN ?></li>
+                                <li>useRestrictYN (정액제 서비스 사용제한 여부) : <?php echo $result[$i]->useRestrictYN ?></li>
+                                <li>closeOnExpired (정액제 서비스 만료 시 해지 여부) : <?php echo $result[$i]->closeOnExpired ?></li>
+                                <li>unPaidYN (미수금 보유 여부) : <?php echo $result[$i]->unPaidYN ?></li>
                             </ul>
                         </fieldset>
                         <?php
