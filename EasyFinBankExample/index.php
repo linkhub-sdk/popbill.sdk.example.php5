@@ -13,7 +13,6 @@
         <ul>
             <li><a href="RegistBankAccount.php">RegistBankAccount</a> (계좌 등록) </li>
             <li><a href="UpdateBankAccount.php">UpdateBankAccount</a> (계좌정보 수정) </li>
-            <li><a href="UpdateBankAccount.php">UpdateBankAccount</a> (계좌정보 수정) </li>
             <li><a href="GetBankAccountInfo.php">GetBankAccountInfo</a> (계좌 정보 확인) </li>
             <li><a href="ListBankAccount.php">ListBankAccount</a> (계좌 목록 확인) </li>
             <li><a href="CloseBankAccount.php">CloseBankAccount</a> (계좌 정액제 해지요청) </li>
