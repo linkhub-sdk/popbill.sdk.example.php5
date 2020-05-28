@@ -30,12 +30,12 @@
     $BankAccountInfo->AccountPWD = '';
 
     // [필수] 계좌유형, "법인" 또는 "개인" 입력
-    $BankAccountInfo->AccountType = '법인';
+    $BankAccountInfo->AccountType = '';
 
     // [필수] 예금주 식별정보 (‘-‘ 제외)
     // 계좌유형이 “법인”인 경우 : 사업자번호(10자리)
     // 계좌유형이 “개인”인 경우 : 예금주 생년월일 (6자리-YYMMDD)
-    $BankAccountInfo->IdentityNumber = '6798700433';
+    $BankAccountInfo->IdentityNumber = '';
 
     // 계좌 별칭
     $BankAccountInfo->AccountName = '';

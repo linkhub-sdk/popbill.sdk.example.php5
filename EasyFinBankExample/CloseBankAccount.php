@@ -26,7 +26,7 @@
     // 해지유형, “일반”, “중도” 중 선택 기재
     // 일반해지 – 이용중인 정액제 사용기간까지 이용후 정지
     // 중도해지 – 요청일 기준으로 정지, 정액제 잔여기간은 일할로 계산되어 포인트 환불 (무료 이용기간 중 중도해지 시 전액 환불)
-    $closeType = '중도';
+    $closeType = '';
 
     try {
         $result = $EasyFinBankService->CloseBankAccount($testCorpNum, $bankCode, $accountNumber, $closeType);
