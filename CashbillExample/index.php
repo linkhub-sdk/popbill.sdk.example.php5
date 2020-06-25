@@ -61,6 +61,7 @@
             <li><a href="SendFAX.php">SendFAX</a> (팩스 전송)</li>
             <li><a href="ListEmailConfig.php">ListEmailConfig</a> (현금영수증 알림메일 전송목록 조회)</li>
             <li><a href="UpdateEmailConfig.php">UpdateEmailConfig</a> (현금영수증 알림메일 전송설정 수정)</li>
+            <li><a href="AssignMgtKey.php">AssignMgtKey</a> (문서번호 할당)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
