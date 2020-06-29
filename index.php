@@ -18,7 +18,8 @@
             <li><a href="HTTaxinvoiceExample">HTTaxinvoiceExample</a> - 홈택스연동 (전자세금계산서) API</li>
             <li><a href="HTCashbillExample">HTCashbillExample</a> - 홈택스연동 (현금영수증) API</li>
             <li><a href="ClosedownExample">ClosedownService</a> - 휴폐업조회 API</li>
-            <li><a href="EasyFinBankExample">EasyFinBankService</a> - 간편 계좌조회 API</li>
+            <li><a href="EasyFinBankExample">EasyFinBankService</a> - 계좌조회 API</li>
+            <li><a href="AccountCheckExample">AccountCheckService</a> - 예금주조회 API</li>
 
             <li><a href="MessageExample">MessageService</a> - 문자메시지 API</li>
             <li><a href="FaxExample">FaxService</a> - 팩스 API</li>
