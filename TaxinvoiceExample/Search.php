@@ -25,10 +25,10 @@
     $DType = 'W';
 
     // [필수] 시작일자
-    $SDate = '20200401';
+    $SDate = '20200701';
 
     // [필수] 종료일자
-    $EDate = '20200531';
+    $EDate = '20200731';
 
     // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array (
@@ -65,6 +65,12 @@
         '3'
     );
 
+    // 등록유형 배열, P-팝빌 등록, H-홈택스, 외부ASP
+    $RegType = array (
+        'P',
+        'H'
+    );
+
     // 지연발행여부, 0-정상발행분만 조회, 1-지연발행분만 조회, 미기재시 전체조회
     $LateOnly = 0;
 
@@ -99,7 +105,7 @@
         $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
             $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
             $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserID,
-            $IssueType, $CloseDownState, $MgtKey);
+            $IssueType, $CloseDownState, $MgtKey, $RegType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
