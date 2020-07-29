@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
-    $ReceiptNum = '018123114023400001';
+    $ReceiptNum = '020072911054400001';
 
     try {
         $result = $KakaoService->GetMessages($testCorpNum, $ReceiptNum);
@@ -93,6 +93,7 @@
                                 <li> altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->msgs[$i]->altResultDT ?> </li>
                                 <li> receiptNum (접수번호) : <?php echo $result->msgs[$i]->receiptNum ?> </li>
                                 <li> requestNum (요청번호) : <?php echo $result->msgs[$i]->requestNum ?> </li>
+                                <li> interOPRefKey (파트너 지정키) : <?php echo $result->msgs[$i]->interOPRefKey ?> </li>
                             </ul>
                         </fieldset>
                         <?php
