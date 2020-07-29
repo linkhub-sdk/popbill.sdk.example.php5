@@ -52,7 +52,7 @@
                                     <li>log (이력정보) : <?php echo $result[$i]->log  ?></li>
                                     <li>procType (처리형태) : <?php echo $result[$i]->procType  ?></li>
                                     <li>procCorpName (처리회사명) : <?php echo $result[$i]->procCorpName  ?></li>
-                                    <li>procContactName (처리담당자) : <?php echo $result[$i]->procCorpName  ?></li>
+                                    <li>procContactName (처리담당자) : <?php echo $result[$i]->procContactName  ?></li>
                                     <li>procMemo (처리메모) : <?php echo $result[$i]->procMemo  ?></li>
                                     <li>regDT (등록일시) : <?php echo $result[$i]->regDT  ?></li>
                                     <li>ip (아이피) : <?php echo $result[$i]->ip ?></li>
