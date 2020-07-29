@@ -19,7 +19,7 @@
     $testUserID = 'testkorea';
 
     // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-    $JobID = '019121916000000001';
+    $JobID = '020072911000000001';
 
     // 거래유형 배열, I-입금, O-출금
     $TradeType = array (
@@ -69,6 +69,7 @@
                     <li>perPage (페이지당 검색개수) : <?php echo $response->perPage ?></li>
                     <li>pageNum (페이지 번호) : <?php echo $response->pageNum ?></li>
                     <li>pageCount (페이지 개수) : <?php echo $response->pageCount ?></li>
+                    <li>lastScrapDT (최종 조회일시) : <?php echo $response->lastScrapDT ?></li>
 
                     <?php
                     for ( $i = 0; $i < Count ( $response->list ); $i++ ) {
