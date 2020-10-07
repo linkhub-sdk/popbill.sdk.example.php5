@@ -36,4 +36,6 @@
   // 팝빌 API 서비스 고정 IP 사용여부(GA), 기본값(false)
   $ClosedownService->UseStaticIP(false);
 
+  // LocalTime 사용 여부 true(기본값) - 사용, false(미사용)
+  $ClosedownService->UseLocalTimeYN(true);
 ?>

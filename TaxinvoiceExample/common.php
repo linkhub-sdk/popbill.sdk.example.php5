@@ -27,7 +27,7 @@
 
   // 통신방식 기본은 CURL , curl 사용에 문제가 있을경우 STREAM 사용가능.
   // STREAM 사용시에는 php.ini의 allow_url_fopen = on 으로 설정해야함.
-  define('LINKHUB_COMM_MODE','STREAM');
+  define('LINKHUB_COMM_MODE','CURL');
 
   $TaxinvoiceService = new TaxinvoiceService($LinkID, $SecretKey);
 
@@ -40,4 +40,6 @@
   // 팝빌 API 서비스 고정 IP 사용여부(GA), 기본값(false)
   $TaxinvoiceService->UseStaticIP(false);
 
+  // LocalTime 사용 여부 true(기본값) - 사용, false(미사용)
+  $TaxinvoiceService->UseLocalTimeYN(true);
 ?>
