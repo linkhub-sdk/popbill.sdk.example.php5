@@ -3,7 +3,7 @@
   * 팝빌 팩스 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : https://docs.popbill.com/fax/tutorial/php
-  * 업데이트 일자 : 2020-07-29
+  * 업데이트 일자 : 2020-10-07
   * 연동기술지원 연락처 : 1600-9854 / 070-4304-2991
   * 연동기술지원 이메일 : code@linkhub.co.kr
   *
@@ -36,6 +36,6 @@
   // 팝빌 API 서비스 고정 IP 사용여부(GA), 기본값(false)
   $FaxService->UseStaticIP(false);
 
-  // LocalTime 사용 여부 true(기본값) - 사용, false(미사용)
+  // 로컬서버 시간 사용 여부 true(기본값) - 사용, false(미사용)
   $FaxService->UseLocalTimeYN(true);
 ?>
