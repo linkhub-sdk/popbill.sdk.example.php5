@@ -6,11 +6,11 @@
 	</head>
 <?php
     /**
-     * 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
-     * - https://docs.popbill.com/fax/php/api#SendFAX
+     * 바이너리 데이터를 팩스 전송합니다. (전송할 바이너리 데이터 개수는 최대 20개까지 가능)
+     * - https://docs.popbill.com/fax/php/api#SendFAXBinary
      */
 
-	include 'common.php';
+		include 'common.php';
 
     // 팝빌 회원 사업자번호
     $testCorpNum = '1234567890';
@@ -28,24 +28,22 @@
     $Receivers[] = array(
         // 팩스 수신번호
         'rcv' => '070111222',
-
-        // 수신자명
+        // 팩스 수신자명
         'rcvnm' => '팝빌담당자'
     );
 
-		//전송할 Binary 데이터
+		//파일정보 배열, 최대 20개까지 입력가능.
     $FileDatas = array(
       array(
-				//파일이름.확장자
+				//파일명
         'fileName' => 'test.pdf',
-				//Bianry data
+				//바이너리데이터
         'fileData' => file_get_contents('./test.pdf')
-			),
-			array(
-				'fileName' => 'test2.PNG',
-				//Bianry data
-        'fileData' => file_get_contents('./test2.PNG')
 			)
+			// array(
+			// 	'fileName' => 'test2.PNG',
+			// 	'fileData' => file_get_contents('./test2.PNG')
+			// )
     );
 
     // 예약전송일시(yyyyMMddHHmmss) ex) 20151212230000, null인경우 즉시전송

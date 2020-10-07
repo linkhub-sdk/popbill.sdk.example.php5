@@ -6,8 +6,8 @@
 	</head>
 <?php
     /**
-     * [대량전송] 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
-     * - https://docs.popbill.com/fax/php/api#SendFAX
+     * [대량전송] 바이너리 데이터를 팩스 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+     * - https://docs.popbill.com/fax/php/api#SendFAXBinary
      */
 
     include 'common.php';
@@ -39,19 +39,18 @@
         'rcvnm' => '수신담당자'
     );
 
-    // 팩스전송파일, 해당파일에 읽기 권한이 설정되어 있어야 함. 최대 20개.
+		//파일정보 배열, 최대 20개까지 입력가능.
     $FileDatas = array(
       array(
-        //파일이름.확장자
+				//파일명
         'fileName' => 'test.pdf',
-        //Bianry data
+				//바이너리데이터
         'fileData' => file_get_contents('./test.pdf')
-      )
-      // array(
-      //   'fileName' => 'test2.PNG',
-      //   //Bianry data
-      //   'fileData' => file_get_contents('./test2.PNG')
-      // )
+			)
+			// array(
+			// 	'fileName' => 'test2.PNG',
+			// 	'fileData' => file_get_contents('./test2.PNG')
+			// )
     );
 
     // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
