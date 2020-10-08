@@ -10,7 +10,7 @@
      * - https://docs.popbill.com/fax/php/api#SendFAXBinary
      */
 
-		include 'common.php';
+    include 'common.php';
 
     // 팝빌 회원 사업자번호
     $testCorpNum = '1234567890';
@@ -32,18 +32,18 @@
         'rcvnm' => '팝빌담당자'
     );
 
-		//파일정보 배열, 최대 20개까지 입력가능.
+    //파일정보 배열, 최대 20개까지 입력가능.
     $FileDatas = array(
       array(
-				//파일명
+        //파일명
         'fileName' => 'test.pdf',
-				//바이너리데이터
-        'fileData' => file_get_contents('./test.pdf')
-			)
-			// array(
-			// 	'fileName' => 'test2.PNG',
-			// 	'fileData' => file_get_contents('./test2.PNG')
-			// )
+        //바이너리데이터
+        'fileData' => file_get_contents('./test.pdf') //바이너리 데이터 가져오기
+        )
+        // array(
+        //'fileName' => 'test2.PNG',
+        //'fileData' => file_get_contents('./test2.PNG')
+        // )
     );
 
     // 예약전송일시(yyyyMMddHHmmss) ex) 20151212230000, null인경우 즉시전송
@@ -73,7 +73,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>팩스 전송 요청</legend>
+				<legend>바이너리 데이터 팩스 전송 요청</legend>
 				<ul>
 					<?php
 						if ( isset($receiptNum) ) {
