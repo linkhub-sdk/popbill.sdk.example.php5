@@ -6,7 +6,7 @@
 	</head>
 <?php
     /**
-     * [대량전송] 바이너리 데이터를 팩스 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+     * [대량전송] 바이너리 데이터를 팩스 전송합니다. (전송할 바이너리 데이터 개수는 최대 20개까지 가능)
      * - https://docs.popbill.com/fax/php/api#SendFAXBinary
      */
 
@@ -39,18 +39,19 @@
         'rcvnm' => '수신담당자'
     );
 
-    //파일정보 배열, 최대 20개까지 입력가능.
-    $FileDatas = array(
-      array(
+    // 파일정보 배열, 최대 20개.
+    $FileDatas[] = array(
         //파일명
         'fileName' => 'test.pdf',
         //바이너리데이터
-        'fileData' => file_get_contents('./test.pdf') //바이너리 데이터 가져오기
-        )
-        // array(
-        // 'fileName' => 'test2.PNG',
-        // 'fileData' => file_get_contents('./test2.PNG')
-        // )
+        'fileData' => file_get_contents('./test.pdf') //file_get_contenst-바이너리데이터 추출
+    );
+
+    $FileDatas[] = array(
+        //파일명
+        'fileName' => 'test2.PNG',
+        //바이너리데이터
+        'fileData' => file_get_contents('./test2.PNG') //file_get_contenst-바이너리데이터 추출
     );
 
     // 예약전송일시(yyyyMMddHHmmss) ex)20151212230000, null인경우 즉시전송
