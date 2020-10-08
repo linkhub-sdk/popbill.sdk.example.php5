@@ -53,29 +53,29 @@
 
     // 개별정보 배열, 최대 1000건
     for($i=0; $i<5; $i++){
-			// //수신자별 개별 버튼 전송하는 경우
-			// $btn1 = new KakaoButton;
-			// //버튼 표시명
-			// $btn1->n = '템플릿 안내';
-			// //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
-			// $btn1->t = 'WL';
-			// //[앱링크] iOS, [웹링크] Mobile
-			// $btn1->u1 = 'http://www.popbill.com';
-			// //[앱링크] Android, [웹링크] PC URL
-			// $btn1->u2 = 'http://www.popbill.com';
-			
-			// $btn2 = new KakaoButton;
-			// //버튼 표시명
-			// $btn2->n = '템플릿 안내';
-			// //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
-			// $btn2->t = 'WL';
-			// //[앱링크] iOS, [웹링크] Mobile
-			// $btn2->u1 = 'http://www.popbill.com';
-			// //[앱링크] Android, [웹링크] PC URL
-			// $btn2->u2 = 'http://www.popbill.com' . $i;
+        // //수신자별 개별 버튼내용 전송하는 경우
+        // $btn1 = new KakaoButton;
+        // //버튼 표시명
+        // $btn1->n = '템플릿 안내';
+        // //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
+        // $btn1->t = 'WL';
+        // //[앱링크] iOS, [웹링크] Mobile
+        // $btn1->u1 = 'http://www.popbill.com';
+        // //[앱링크] Android, [웹링크] PC URL
+        // $btn1->u2 = 'http://www.popbill.com';
 
-			// //수신자별 개별 버튼 전송하는 경우
-			// $btns = array($btn1, $btn2);
+        // $btn2 = new KakaoButton;
+        // //버튼 표시명
+        // $btn2->n = '템플릿 안내';
+        // //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
+        // $btn2->t = 'WL';
+        // //[앱링크] iOS, [웹링크] Mobile
+        // $btn2->u1 = 'http://www.popbill.com';
+        // //[앱링크] Android, [웹링크] PC URL
+        // $btn2->u2 = 'http://www.popbill.com' . $i;
+
+        // //수신자별 개별 버튼내용 전송하는 경우
+        // $btns = array($btn1, $btn2);
 
       	$receivers[] = array(
             // 수신번호
@@ -88,8 +88,8 @@
             'altmsg' => '대체문자 내용'.$i,
             // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
             'interOPRefKey' => '20200729-'.$i,
-						// //수신자별 개별 버튼 전송하는 경우
-						// 'btns' => $btns,
+            // //수신자별 개별 버튼내용 전송하는 경우
+            // 'btns' => $btns,
         );
     }
 

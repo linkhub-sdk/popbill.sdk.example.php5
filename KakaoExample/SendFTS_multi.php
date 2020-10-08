@@ -38,33 +38,33 @@
     // 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $requestNum = '';
+    $requestNum = '2020-10-08-004';
 
     // 수신정보 배열, 최대 1000건
     for($i=0; $i<10; $i++){
-			// //수신자별 개별 버튼 전송하는 경우
-			// $btn1 = new KakaoButton;
-			// //버튼 표시명
-			// $btn1->n = '템플릿 안내';
-			// //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
-			// $btn1->t = 'WL';
-			// //[앱링크] iOS, [웹링크] Mobile
-			// $btn1->u1 = 'http://www.popbill.com';
-			// //[앱링크] Android, [웹링크] PC URL
-			// $btn1->u2 = 'http://www.popbill.com';
-			
-			// $btn2 = new KakaoButton;
-			// //버튼 표시명
-			// $btn2->n = '템플릿 안내';
-			// //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
-			// $btn2->t = 'WL';
-			// //[앱링크] iOS, [웹링크] Mobile
-			// $btn2->u1 = 'http://www.popbill.com';
-			// //[앱링크] Android, [웹링크] PC URL
-			// $btn2->u2 = 'http://www.popbill.com' . $i;
-
-			// //수신자별 개별 버튼 전송하는 경우
-			// $btns = array($btn1, $btn2);
+        // //수신자별 개별 버튼내용 전송하는 경우
+        // $btn1 = new KakaoButton;
+        // //버튼 표시명
+        // $btn1->n = '템플릿 안내';
+        // //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
+        // $btn1->t = 'WL';
+        // //[앱링크] iOS, [웹링크] Mobile
+        // $btn1->u1 = 'http://www.popbill.com';
+        // //[앱링크] Android, [웹링크] PC URL
+        // $btn1->u2 = 'http://www.popbill.com';
+		//
+        // $btn2 = new KakaoButton;
+        // //버튼 표시명
+        // $btn2->n = '템플릿 안내';
+        // //버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
+        // $btn2->t = 'WL';
+        // //[앱링크] iOS, [웹링크] Mobile
+        // $btn2->u1 = 'http://www.popbill.com';
+        // //[앱링크] Android, [웹링크] PC URL
+        // $btn2->u2 = 'http://www.popbill.com' . $i;
+		//
+        // //수신자별 개별 버튼내용 전송하는 경우
+        // $btns = array($btn1, $btn2);
 
         $receivers[] = array(
             // 수신번호
@@ -75,12 +75,12 @@
             'msg' => '친구톡 메시지 내용'.$i,
             // 대체문자
             'altmsg' => '대체문자 내용'.$i,
-						// //수신자별 개별 버튼 전송하는 경우
-						// 'btns' => $btns,
+            //수신자별 개별 버튼내용 전송하는 경우
+            // 'btns' => $btns,
         );
     }
 
-		// 버튼내용을 전송하지 않는 경우, null처리.
+    // 버튼내용을 전송하지 않는 경우, null처리.
     // $buttons = null;
 
     // 버튼배열, 최대 5개
