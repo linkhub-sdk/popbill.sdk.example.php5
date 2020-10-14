@@ -71,6 +71,7 @@
         // $btn2->u2 = 'http://www.popbill.com' . $i;
 
         // 생성한 버튼 개별 버튼정보 배열에 입력
+        // $btns = array();
         // $btns[] = $btn1;
         // $btns[] = $btn2;
 
