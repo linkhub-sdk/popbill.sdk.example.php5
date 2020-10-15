@@ -36,14 +36,14 @@
     $FileDatas[] = array(
         //파일명
         'fileName' => 'test.pdf',
-        //바이너리데이터
+        //fileData - BLOB 데이터 입력
         'fileData' => file_get_contents('./test.pdf') //file_get_contenst-바이너리데이터 추출
 	);
 
     $FileDatas[] = array(
         //파일명
         'fileName' => 'test2.PNG',
-        //바이너리데이터
+        //fileData - BLOB 데이터 입력
         'fileData' => file_get_contents('./test2.PNG') //file_get_contenst-바이너리데이터 추출
     );
 
