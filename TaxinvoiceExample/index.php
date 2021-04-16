@@ -29,6 +29,7 @@
         <legend>국세청 즉시 전송</legend>
         <ul>
             <li><a href="SendToNTS.php">SendToNTS</a> (국세청 즉시전송)</li>
+            <li><a href="GetSendToNTSConfig.php">GetSendToNTSConfig</a> (국세청 즉시전송 설정여부)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
