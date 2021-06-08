@@ -18,6 +18,7 @@
             <li><a href="CloseBankAccount.php">CloseBankAccount</a> (계좌 정액제 해지요청) </li>
             <li><a href="RevokeCloseBankAccount.php">RevokeCloseBankAccount</a> (계좌 정액제 해지요청 취소) </li>
             <li><a href="GetBankAccountMgtURL.php">GetBankAccountMgtURL</a> (계좌 관리 팝업 URL) </li>
+            <li><a href="DeleteBankAccount.php">DeleteBankAccount</a> (종량제 계좌 삭제) </li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

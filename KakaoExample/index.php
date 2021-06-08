@@ -27,6 +27,7 @@
         <legend>알림톡 템플릿 관리</legend>
         <ul>
             <li><a href="GetATSTemplateMgtURL.php">GetATSTemplateMgtURL</a> (알림톡 템플릿관리 팝업 URL)</li>
+            <li><a href="GetATSTemplate.php">GetATSTemplate</a> (알림톡 템플릿 정보 확인)</li>
             <li><a href="ListATSTemplate.php">ListATSTemplate</a> (알림톡 템플릿 목록 확인)</li>
         </ul>
     </fieldset>
