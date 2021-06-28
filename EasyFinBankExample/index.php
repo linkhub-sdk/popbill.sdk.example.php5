@@ -61,6 +61,7 @@
             <li><a href="GetCorpInfo.php">GetCorpInfo</a> (회사정보 확인) </li>
             <li><a href="UpdateCorpInfo.php">UpdateCorpInfo</a> (회사정보 수정) </li>
             <li><a href="RegistContact.php">RegistContact</a> (담당자 등록) </li>
+            <li><a href="GetContactInfo.php">GetContactInfo</a> (담당자 정보 확인)</li>
             <li><a href="ListContact.php">ListContact</a> (담당자 목록 확인) </li>
             <li><a href="UpdateContact.php">UpdateContact</a> (담당자 정보 수정) </li>
         </ul>
