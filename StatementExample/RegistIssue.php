@@ -20,7 +20,7 @@
 
     // 전자명세서 문서번호
     // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20191024-32';
+    $mgtKey = '20210628-PHP004';
 
     // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -40,7 +40,7 @@
      ************************************************************/
 
     // [필수] 기재상 작성일자
-    $Statement->writeDate = '20190218';
+    $Statement->writeDate = '20210628';
 
     // [필수] (영수, 청구) 중 기재
     $Statement->purposeType = '영수';
@@ -170,11 +170,11 @@
         'CBalance' => '150000'
     );
 
-
     try {
         $result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
+		$invoiceNum = $result->invoiceNum;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -188,8 +188,15 @@
 			<fieldset class="fieldset1">
 				<legend>전자명세서 즉시발행</legend>
 				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
+					<li>응답코드 (code) : <?php echo $code ?></li>
+					<li>응답메시지 (message) : <?php echo $message ?></li>
+					<?php
+		              if ( isset($invoiceNum) ) {
+		            ?>
+		              <li>팝빌 승인번호 (invoiceNum) : <?php echo $invoiceNum ?></li>
+		            <?php
+		              }
+		            ?>
 				</ul>
 			</fieldset>
 		 </div>
