@@ -45,10 +45,10 @@
     $joinForm->ContactTEL	= '07043042991';
 
     // 아이디, 6자 이상 20자미만
-    $joinForm->ID = 'userid_phpdd';
+    $joinForm->ID = 'join_test_php004';
 
-    // 비밀번호, 6자 이상 20자미만
-    $joinForm->PWD = 'thisispassword';
+    // 비밀번호(8자이상 20자 이하) 영문, 숫자, 특수문자 조합
+    $joinForm->Password = 'qwe123!@#';
 
     try	{
         $result = $TaxinvoiceService->JoinMember($joinForm);
