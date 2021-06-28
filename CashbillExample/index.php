@@ -70,6 +70,8 @@
         <ul>
             <li><a href="GetBalance.php">GetBalance</a> (연동회원 잔여포인트 확인)</li>
             <li><a href="GetChargeURL.php">GetChargeURL</a> (연동회원 포인트충전 URL)</li>
+            <li><a href="GetPaymentURL.php">GetPaymentURL</a> (연동회원 포인트 결제내역 URL)</li>
+            <li><a href="GetUseHistoryURL.php">GetUseHistoryURL</a> (연동회원 사용내역 URL)</li>
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인)</li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 URL)</li>
             <li><a href="GetUnitCost.php">GetUnitCost</a> (발행 단가 확인)</li>

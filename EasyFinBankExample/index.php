@@ -44,6 +44,8 @@
             <li><a href="GetFlatRateState.php">GetFlatRateState</a> (정액제 서비스 상태 확인) </li>
             <li><a href="GetBalance.php">GetBalance</a> (연동회원 잔여포인트 확인) </li>
             <li><a href="GetChargeURL.php">GetChargeURL</a> (연동회원 포인트충전 URL) </li>
+            <li><a href="GetPaymentURL.php">GetPaymentURL</a> (연동회원 포인트 결제내역 URL)</li>
+            <li><a href="GetUseHistoryURL.php">GetUseHistoryURL</a> (연동회원 사용내역 URL)</li>
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인) </li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 URL) </li>
             <li><a href="GetChargeInfo.php">GetChargeInfo</a> (과금정보 확인) </li>
