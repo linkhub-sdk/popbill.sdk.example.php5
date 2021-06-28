@@ -14,21 +14,17 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $testCorpNum = '1234567890';
 
-    // 계좌정보 클래스 생성
-    $BankAccountInfo = new EasyFinBankAccountForm();
-
     // [필수] 은행코드
     // 산업은행-0002 / 기업은행-0003 / 국민은행-0004 /수협은행-0007 / 농협은행-0011 / 우리은행-0020
     // SC은행-0023 / 대구은행-0031 / 부산은행-0032 / 광주은행-0034 / 제주은행-0035 / 전북은행-0037
     // 경남은행-0039 / 새마을금고-0045 / 신협은행-0048 / 우체국-0071 / KEB하나은행-0081 / 신한은행-0088 /씨티은행-0027
-    $BankAccountInfo->BankCode = '';
+    $bankCode = '';
 
     // [필수] 계좌번호 하이픈('-') 제외
-    $BankAccountInfo->AccountNumber = '';
-
+    $accountNumber = '';
 
     try {
-        $result = $EasyFinBankService->DeleteBankAccount($testCorpNum, $BankAccountInfo);
+        $result = $EasyFinBankService->DeleteBankAccount($testCorpNum, $bankCode, $accountNumber);
         $code = $result->code;
         $message = $result->message;
     }
