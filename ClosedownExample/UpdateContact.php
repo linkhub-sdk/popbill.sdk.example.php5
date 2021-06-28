@@ -39,8 +39,8 @@
     // 팩스번호
     $ContactInfo->fax = '070-111-222';
 
-    // 전체조회 여부, false-개인조회, true-전체조회
-    $ContactInfo->searchAllAllowYN = true;
+    // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
+    $ContactInfo->searchRole = 3;
 
     try {
         $result = $ClosedownService->UpdateContact($testCorpNum, $ContactInfo, $testUserID);

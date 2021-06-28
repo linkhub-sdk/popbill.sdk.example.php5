@@ -21,8 +21,8 @@
     // 담당자 아이디
     $ContactInfo->id = 'testkorea001';
 
-    // 담당자 패스워드
-    $ContactInfo->pwd = 'testkorea001_!@//';
+    // 담당자 패스워드(8자이상 20자 이하) 영문, 숫자, 특수문자 조합
+    $ContactInfo->Password = 'asdf1234!@#$';
 
     // 담당자명
     $ContactInfo->personName = '담당자_수정';
@@ -39,11 +39,8 @@
     // 팩스
     $ContactInfo->fax = '070-111-222';
 
-    // 회사조회 여부, false-개인조회, true-회사조회
-    $ContactInfo->searchAllAllowYN = true;
-
-    // 관리자여부
-    $ContactInfo->mgrYN = false;
+    // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
+    $ContactInfo->searchRole = 3;
 
     try {
         $result = $HTCashbillService->RegistContact( $testCorpNum, $ContactInfo);
