@@ -16,15 +16,15 @@
     $testCorpNum = '1234567890';
 
     // 제출아이디, 최대 36자리 영문, 숫자, '-'조합으로 구성
-    $SubmitID = 'PHPTEST022';
+    $SubmitID = 'PHPTEST0705001';
 
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
     // 세금계산서 문서번호
     // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20210701-PHP00';
-	$trusteeMgtKey = '20210701-PHP00';
+    $invoicerMgtKey = '20210705-PHP00';
+
     // 지연발행 강제여부
     $forceIssue = false;
 
@@ -49,10 +49,10 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20210701';
+    $Taxinvoice->writeDate = '20210705';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
-    $Taxinvoice->issueType = '위수탁';
+    $Taxinvoice->issueType = '정발행';
 
     // [필수] 과금방향,
     // - '정과금'(공급자 과금), '역과금'(공급받는자 과금) 중 기재, 역과금은 역발행시에만 가능.
@@ -201,9 +201,6 @@
     // 통장사본 이미지파일 첨부여부
     $Taxinvoice->bankBookYN = false;
 
-
-	$Taxinvoice->trusteeMgtKey = $trusteeMgtKey = '20210701-PHP00'. $i;
-	$Taxinvoice->trusteeCorpNum = '1234567890';
     /************************************************************
      *                     수정 세금계산서 기재정보
      * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
@@ -288,7 +285,13 @@
 				<ul>
 					<li>응답코드 (code) : <?php echo $code ?></li>
 					<li>응답메시지 (message) : <?php echo $message ?></li>
-					<li>접수아이디 (receiptID) : <?php echo $receiptID ?></li>
+					<?php
+		              if ( isset($receiptID) ) {
+		            ?>
+		              <li>접수아이디 (receiptID) : <?php echo $receiptID ?></li>
+		            <?php
+		              }
+		            ?>
 				</ul>
 			</fieldset>
 		 </div>
