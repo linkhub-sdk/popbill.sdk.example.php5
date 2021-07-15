@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+    <title>팝빌 SDK PHP 5.X Example.</title>
+  </head>
 <?php
     /**
-     * [임시저장] 또는 [발행대기] 상태의 세금계산서를 [공급자]가 [발행]합니다.
+     * "임시저장" 또는 "(역)발행대기" 상태의 세금계산서를 발행(전자서명)하며, "발행완료" 상태로 처리합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#TIIssue
      */
 
@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20190226-012';
+    $mgtKey = '20210701-012';
 
     // 메모
     $memo = '발행 메모입니다';
@@ -43,15 +43,15 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 발행</legend>
+  <body>
+    <div id="content">
+      <p class="heading1">Response</p>
+      <br/>
+      <fieldset class="fieldset1">
+        <legend>세금계산서 발행</legend>
         <ul>
-					<li>응답코드 (code) : <?php echo $code ?></li>
-					<li>응답메시지 (message) : <?php echo $message ?></li>
+          <li>응답코드 (code) : <?php echo $code ?></li>
+          <li>응답메시지 (message) : <?php echo $message ?></li>
           <?php
             if ( isset($ntsConfirmNum) ) {
           ?>
@@ -59,8 +59,8 @@
           <?php
             }
           ?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+        </ul>
+      </fieldset>
+     </div>
+  </body>
 </html>

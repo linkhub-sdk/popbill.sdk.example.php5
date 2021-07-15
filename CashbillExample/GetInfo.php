@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 1건의 현금영수증 상태/요약 정보를 확인합니다.
+     * 현금영수증 1건의 상태 및 요약정보를 확인합니다.
      * - https://docs.popbill.com/cashbill/php/api#GetInfo
      */
 
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210101-001';
 
     try {
         $result = $CashbillService->GetInfo($testCorpNum, $mgtKey);
@@ -26,23 +26,23 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>현금영수증 요약/상태정보 확인</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-							{
-					?>
-                                <li> itemKey (현금영수증 아이템키) : <?php echo $result->itemKey ?></li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>현금영수증 요약/상태정보 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                            {
+                    ?>
+                                <li> itemKey (팝빌번호) : <?php echo $result->itemKey ?></li>
                                 <li> mgtKey (문서번호) : <?php echo $result->mgtKey ?></li>
                                 <li> tradeDate (거래일자) : <?php echo $result->tradeDate ?></li>
                                 <li> tradeType (문서형태) : <?php echo $result->tradeType ?></li>
@@ -66,12 +66,12 @@
                                 <li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->ntsresultCode ?></li>
                                 <li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->ntsresultMessage ?></li>
                                 <li> printYN (인쇄여부) : <?php echo $result->printYN ?></li>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

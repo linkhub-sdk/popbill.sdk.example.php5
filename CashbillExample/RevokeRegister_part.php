@@ -1,13 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
      * 1건의 (부분)취소현금영수증을 [임시저장]합니다.
-     * - https://docs.popbill.com/cashbill/php/api#RevokeRegister
      */
 
     include 'common.php';
@@ -18,7 +17,7 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-    // 문서번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
+    // 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $mgtKey = '20190101-001';
 
     // 원본현금영수증 승인번호, 문서정보 확인(GetInfo API)을 통해 확인가능.
@@ -61,17 +60,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>(부분)취소현금영수증 임시저장</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>(부분)취소현금영수증 임시저장</legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

@@ -6,16 +6,18 @@
     </head>
 <?php
     /**
-     * 검색조건을 사용하여 세금계산서 목록을 조회합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#Search
+     * 접수시 기재한 SubmitID를 사용하여 세금계산서 접수결과를 확인합니다.
+     * - https://docs.popbill.com/taxinvoice/php/api#GetBulkResult
      */
 
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
     $testCorpNum = '1234567890';
+
     // 초대량 발행 접수시 기재한 제출아이디
     $submitID = 'PHPTEST021';
+    
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 

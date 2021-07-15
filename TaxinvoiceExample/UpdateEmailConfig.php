@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 전자세금계산서 관련 메일전송 항목에 대한 전송여부를 수정한다.
+     * 세금계산서 관련 메일 항목에 대한 발송설정을 수정합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#UpdateEmailConfig
      *
      * 메일전송유형

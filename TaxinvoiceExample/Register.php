@@ -1,13 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 1건의 세금계산서를 [임시저장]합니다.
-     * - 세금계산서 임시저장(Register API) 호출후에는 발행(Issue API)을 호출해야만 국세청으로 전송됩니다.
+     * 작성된 세금계산서 데이터를 팝빌에 저장합니다.
+     * - "임시저장" 상태의 세금계산서는 발행(Issue)함수를 호출하여 "발행완료" 처리한 경우에만 국세청으로 전송됩니다.
      * - 정발행시 임시저장(Register)과 발행(Issue)을 한번의 호출로 처리하는 즉시발행(RegistIssue API) 프로세스 연동을 권장합니다.
      * - 역발행시 임시저장(Register)과 역발행요청(Request)을 한번의 호출로 처리하는 즉시요청(RegistRequest API) 프로세스 연동을 권장합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#Register
@@ -19,8 +19,8 @@
     $testCorpNum = '1234567890';
 
     // 세금계산서 문서번호
-    // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20200717-01';
+    // - 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
+    $invoicerMgtKey = '20210701-01';
 
     /************************************************************
      *                        세금계산서 정보
@@ -30,7 +30,7 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20200717';
+    $Taxinvoice->writeDate = '20210701';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '정발행';
@@ -58,7 +58,7 @@
     // [필수] 공급자 상호
     $Taxinvoice->invoicerCorpName = '공급자상호';
 
-    // [필수] 공급자 문서번호, 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+    // [필수] 공급자 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $Taxinvoice->invoicerMgtKey = $invoicerMgtKey;
 
     // [필수] 공급자 대표자성명
@@ -107,7 +107,7 @@
     // [필수] 공급자 상호
     $Taxinvoice->invoiceeCorpName = '공급받는자 상호';
 
-    // [역발행시 필수] 공급받는자 문서번호, 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+    // [역발행시 필수] 공급받는자 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $Taxinvoice->invoiceeMgtKey = '';
 
     // [필수] 공급받는자 대표자성명
@@ -211,7 +211,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[0]->serialNum = 1;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[0]->purchaseDT = '20190101';	  // 거래일자
+    $Taxinvoice->detailList[0]->purchaseDT = '20210701';	  // 거래일자
     $Taxinvoice->detailList[0]->itemName = '품목명1번';	  	// 품명
     $Taxinvoice->detailList[0]->spec = '';				      // 규격
     $Taxinvoice->detailList[0]->qty = '';					        // 수량
@@ -222,7 +222,7 @@
 
     $Taxinvoice->detailList[] = new TaxinvoiceDetail();
     $Taxinvoice->detailList[1]->serialNum = 2;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-    $Taxinvoice->detailList[1]->purchaseDT = '20190101';	  // 거래일자
+    $Taxinvoice->detailList[1]->purchaseDT = '20210701';	  // 거래일자
     $Taxinvoice->detailList[1]->itemName = '품목명2번';	  	// 품명
     $Taxinvoice->detailList[1]->spec = '';				      // 규격
     $Taxinvoice->detailList[1]->qty = '';					        // 수량
@@ -264,17 +264,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자세금계산서 임시저장</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>전자세금계산서 임시저장</legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

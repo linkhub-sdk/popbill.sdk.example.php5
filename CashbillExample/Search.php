@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
+     * 검색조건에 해당하는 현금영수증을 조회합니다.
      * - https://docs.popbill.com/cashbill/php/api#Search
      */
 
@@ -19,10 +19,10 @@
     $DType = 'R';
 
     // [필수] 시작일자
-    $SDate = '20181201';
+    $SDate = '20210701';
 
     // [필수] 종료일자
-    $EDate = '20190101';
+    $EDate = '20210710';
 
     // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array(
@@ -77,20 +77,20 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>현금영수증 목록조회</legend>
-				<ul>
-   				<?php
-						if( isset ( $code ) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>현금영수증 목록조회</legend>
+                <ul>
+                   <?php
+                        if( isset ( $code ) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
           ?>
                             <li>code (응답코드) : <?php echo $result->code ?> </li>
                             <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
@@ -99,12 +99,12 @@
                             <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
                             <li>message (응답메시지) : <?php echo $result->message ?> </li>
           <?php
-							for ($i = 0; $i < Count($result->list); $i++) {
-					?>
-								<fieldset class="fieldset2">
-									<legend> 현금영수증 상태/요약 정보[<?php echo $i+1?>]</legend>
-									<ul>
-                                        <li> itemKey (현금영수증 아이템키) : <?php echo $result->list[$i]->itemKey ?></li>
+                            for ($i = 0; $i < Count($result->list); $i++) {
+                    ?>
+                                <fieldset class="fieldset2">
+                                    <legend> 현금영수증 상태/요약 정보[<?php echo $i+1?>]</legend>
+                                    <ul>
+                                        <li> itemKey (팝빌번호) : <?php echo $result->list[$i]->itemKey ?></li>
                                         <li> mgtKey (문서번호) : <?php echo $result->list[$i]->mgtKey ?></li>
                                         <li> tradeDate (거래일자) : <?php echo $result->list[$i]->tradeDate ?></li>
                                         <li> tradeType (문서형태) : <?php echo $result->list[$i]->tradeType ?></li>
@@ -129,13 +129,13 @@
                                         <li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->list[$i]->ntsresultMessage ?></li>
                                         <li> printYN (인쇄여부) : <?php echo $result->list[$i]->printYN ?></li>
                                     </ul>
-								</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

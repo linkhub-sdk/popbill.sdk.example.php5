@@ -6,7 +6,7 @@
 	</head>
 <?php
     /**
-     * 1건의 세금계산서 상세정보를 확인합니다.
+     * 세금계산서 1건의 상세정보를 확인합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#GetDetailInfo
      */
 
@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210701-001';
 
     try {
         $result = $TaxinvoiceService->GetDetailInfo($testCorpNum, $mgtKeyType, $mgtKey);

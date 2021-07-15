@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 연동회원의 담당자 목록을 확인합니다.
+     * 연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 목록을 확인합니다.
      * - https://docs.popbill.com/cashbill/php/api#ListContact
      */
 
@@ -49,7 +49,7 @@
                                 <li>fax(담당자 팩스번호) : <?php echo $result[$i]->fax ; ?></li>
                                 <li>tel(담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
                                 <li>regDT(등록일시) : <?php echo $result[$i]->regDT ; ?></li>
-                                <<li>searchRole(담당자 권한) : <?php echo $result[$i]->searchRole ; ?></li>
+                                <li>searchRole(담당자 권한) : <?php echo $result[$i]->searchRole ; ?></li>
                                 <li>mgrYN(관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
                                 <li>state(상태) : <?php echo $result[$i]->state ; ?></li>
                             </ul>

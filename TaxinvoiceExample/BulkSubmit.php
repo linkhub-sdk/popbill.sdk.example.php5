@@ -1,9 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+    <title>팝빌 SDK PHP 5.X Example.</title>
+  </head>
 <?php
     /**
      * 최대 100건의 세금계산서 발행을 한번의 요청으로 접수합니다.
@@ -22,7 +22,7 @@
     $testUserID = 'testkorea';
 
     // 세금계산서 문서번호
-    // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+    // - 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $invoicerMgtKey = '20210705-PHP00';
 
     // 지연발행 강제여부
@@ -38,7 +38,7 @@
     $writeSpecification = false;
 
     // 거래명세서 동시작성시 명세서 관리번호
-    // - 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+    // - 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $dealInvoiceMgtKey = '';
 
     for($i=0; $i<100; $i++){
@@ -77,7 +77,7 @@
     // [필수] 공급자 상호
     $Taxinvoice->invoicerCorpName = 'BulkTEST';
 
-    // [필수] 공급자 문서번호, 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+    // [필수] 공급자 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $Taxinvoice->invoicerMgtKey = $invoicerMgtKey . $i;
 
     // [필수] 공급자 대표자성명
@@ -125,7 +125,7 @@
     // [필수] 공급자 상호
     $Taxinvoice->invoiceeCorpName = 'BulkTEST';
 
-    // [역발행시 필수] 공급받는자 문서번호, 최대 24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
+    // [역발행시 필수] 공급받는자 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     $Taxinvoice->invoiceeMgtKey = '';
 
     // [필수] 공급받는자 대표자성명
@@ -209,7 +209,7 @@
 
     // 수정사유코드, 수정사유에 따라 1~6중 선택기재
     // $Taxinvoice->modifyCode = '2';
-	//
+  //
     // 원본세금계산서의 국세청 승인번호 기재
     // $Taxinvoice->orgNTSConfirmNum = '';
 
@@ -276,24 +276,24 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자세금계산서 초대량 발행 접수</legend>
-				<ul>
-					<li>응답코드 (code) : <?php echo $code ?></li>
-					<li>응답메시지 (message) : <?php echo $message ?></li>
-					<?php
-		              if ( isset($receiptID) ) {
-		            ?>
-		              <li>접수아이디 (receiptID) : <?php echo $receiptID ?></li>
-		            <?php
-		              }
-		            ?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+  <body>
+    <div id="content">
+      <p class="heading1">Response</p>
+      <br/>
+      <fieldset class="fieldset1">
+        <legend>전자세금계산서 초대량 발행 접수</legend>
+        <ul>
+          <li>응답코드 (code) : <?php echo $code ?></li>
+          <li>응답메시지 (message) : <?php echo $message ?></li>
+          <?php
+                  if ( isset($receiptID) ) {
+                ?>
+                  <li>접수아이디 (receiptID) : <?php echo $receiptID ?></li>
+                <?php
+                  }
+                ?>
+        </ul>
+      </fieldset>
+     </div>
+  </body>
 </html>

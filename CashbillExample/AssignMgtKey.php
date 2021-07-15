@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example</title>
+    </head>
 <?php
     /**
-     * 팝빌사이트에서 작성된 현금영수증의 파트너 문서번호를 할당합니다.
+     * 팝빌 사이트를 통해 발행하였지만 문서번호가 존재하지 않는 현금영수증에 문서번호를 할당합니다.
      */
 
     include 'common.php';
@@ -17,9 +17,9 @@
     // 현금영수증 아이템키, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
     $itemKey = '020061716421500001';
 
-    // 할당할 문서번호, 숫자, 영문 '-', '_' 조합으로 1~24자리까지
+    // 할당할 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
     // 사업자번호별 중복없는 고유번호 할당
-    $mgtKey = '20200625-001';
+    $mgtKey = '20210625-001';
 
     try {
         $result = $CashbillService->AssignMgtKey($testCorpNum, $itemKey, $mgtKey);

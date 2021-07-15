@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 대량의 현금영수증 상태/요약 정보를 확인합니다. (최대 1000건)
+     * 다수건의 현금영수증 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
      * - https://docs.popbill.com/cashbill/php/api#GetInfos
      */
 
@@ -17,8 +17,8 @@
 
     // 문서번호 배열, 최대 1000건
     $MgtKeyList = array(
-        '20190101-001',
-        '20190101-002',
+        '20210101-001',
+        '20210101-002',
     );
 
     try {
@@ -29,26 +29,26 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>현금영수증 상태/요약정보 확인 - 대량</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-							for ($i = 0; $i < Count($result); $i++) {
-					?>
-								<fieldset class="fieldset2">
-									<legend> 현금영수증 상태/요약정보[<?php echo $i+1?>]</legend>
-									<ul>
-                                        <li> itemKey (현금영수증 아이템키) : <?php echo $result[$i]->itemKey ?></li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>현금영수증 상태/요약정보 확인 - 대량</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                            for ($i = 0; $i < Count($result); $i++) {
+                    ?>
+                                <fieldset class="fieldset2">
+                                    <legend> 현금영수증 상태/요약정보[<?php echo $i+1?>]</legend>
+                                    <ul>
+                                        <li> itemKey (팝빌번호) : <?php echo $result[$i]->itemKey ?></li>
                                         <li> mgtKey (문서번호) : <?php echo $result[$i]->mgtKey ?></li>
                                         <li> tradeDate (거래일자) : <?php echo $result[$i]->tradeDate ?></li>
                                         <li> tradeType (문서형태) : <?php echo $result[$i]->tradeType ?></li>
@@ -72,14 +72,14 @@
                                         <li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result[$i]->ntsresultCode ?></li>
                                         <li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result[$i]->ntsresultMessage ?></li>
                                         <li> printYN (인쇄여부) : <?php echo $result[$i]->printYN ?></li>
-									</ul>
-								</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                    </ul>
+                                </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

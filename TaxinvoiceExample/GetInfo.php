@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 1건의 세금계산서 상태/요약 정보를 확인합니다.
+     * 세금계산서 1건의 상태 및 요약정보를 확인합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#GetInfo
      */
 
@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 조회할 세금계산서 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210701-001';
 
     try {
         $result = $TaxinvoiceService->GetInfo($testCorpNum, $mgtKeyType, $mgtKey);
@@ -29,22 +29,22 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 상태 및 요약 정보 확인</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-                            <li>itemKey (팝빌 관리번호) : <?php echo $result->itemKey ?></li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>세금계산서 상태 및 요약 정보 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
+                            <li>itemKey (팝빌번호) : <?php echo $result->itemKey ?></li>
                             <li>stateCode (상태코드) : <?php echo $result->stateCode ?></li>
                             <li>taxType (과세형태) : <?php echo $result->taxType ?></li>
                             <li>purposeType (영수/청구) : <?php echo $result->purposeType ?></li>
@@ -59,7 +59,7 @@
                             <li>invoicerPrintYN (공급자 인쇄여부) : <?php echo $result->invoicerPrintYN ? 'true' : 'false' ?></li>
                             <li>invoiceeCorpName (공급받는자 상호) : <?php echo $result->invoiceeCorpName ?></li>
                             <li>invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum ?></li>
-                            <li>invoiceeMgtKey (공급받는자 관리번호) : <?php echo $result->invoiceeMgtKey ?></li>
+                            <li>invoiceeMgtKey (공급받는자 문서번호) : <?php echo $result->invoiceeMgtKey ?></li>
                             <li>invoiceePrintYN (공급받는자 인쇄여부) : <?php echo $result->invoiceePrintYN ? 'true' : 'false' ?></li>
                             <li>closeDownState (공급받는자 휴폐업상태) : <?php echo $result->closeDownState ?></li>
                             <li>closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result->closeDownStateDate ?></li>
@@ -75,11 +75,11 @@
                             <li>ntsresultDT (국세청 결과 수신일시) : <?php echo $result->ntsresultDT ?></li>
                             <li>ntssendErrCode (전송실패 사유코드) : <?php echo $result->ntssendErrCode ?></li>
                             <li>stateMemo (상태메모) : <?php echo $result->stateMemo ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

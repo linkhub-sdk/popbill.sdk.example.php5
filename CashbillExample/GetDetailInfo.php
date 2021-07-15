@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 현금영수증 1건의 상세정보를 조회합니다.
+     * 현금영수증 1건의 상세정보를 확인합니다.
      * - https://docs.popbill.com/cashbill/php/api#GetDetailInfo
      */
 
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210101-001';
 
     try {
         $result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);
@@ -26,22 +26,22 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>현금영수증 상세정보 확인</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-                            <li>mgtKey (현금영수증 관리번호) : <?php echo $result->mgtKey ?> </li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>현금영수증 상세정보 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
+                            <li>mgtKey (현금영수증 문서번호) : <?php echo $result->mgtKey ?> </li>
                             <li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
                             <li>orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?> </li>
                             <li>tradeDate (거래일자) : <?php echo $result->tradeDate ?> </li>
@@ -66,11 +66,11 @@
                             <li>hp (주문자 휴대폰) : <?php echo $result->hp ?> </li>
                             <li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN ?> </li>
                             <li>cancelType (취소사유) : <?php echo $result->cancelType ?> </li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

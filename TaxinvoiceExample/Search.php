@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 검색조건을 사용하여 세금계산서 목록을 조회합니다.
+     * 검색조건에 해당하는 세금계산서를 조회합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#Search
      */
 
@@ -25,10 +25,10 @@
     $DType = 'W';
 
     // [필수] 시작일자
-    $SDate = '20200701';
+    $SDate = '20210701';
 
     // [필수] 종료일자
-    $EDate = '20200731';
+    $EDate = '20210710';
 
     // 전송상태값 배열, 문서상태 값 3자리 배열, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array (
@@ -112,33 +112,33 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 목록조회 </legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>세금계산서 목록조회 </legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
                             <li>code (응답코드) : <?php echo $result->code ?> </li>
                             <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
                             <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
                             <li>perPage (페이지당 목록개수) : <?php echo $result->perPage ?> </li>
                             <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
                             <li>message (응답메시지) : <?php echo $result->message ?> </li>
-					<?php
-							for ( $i = 0; $i < Count($result->list); $i++ ) {
-					?>
-								<fieldset class="fieldset2">
-									<legend> 세금계산서 상태/요약 정보 [<?php echo $i+1?>]</legend>
-									<ul>
+                    <?php
+                            for ( $i = 0; $i < Count($result->list); $i++ ) {
+                    ?>
+                                <fieldset class="fieldset2">
+                                    <legend> 세금계산서 상태/요약 정보 [<?php echo $i+1?>]</legend>
+                                    <ul>
                                         <li>itemKey (팝빌 관리번호) : <?php echo $result->list[$i]->itemKey ?></li>
                                         <li>stateCode (상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
                                         <li>taxType (과세형태) : <?php echo $result->list[$i]->taxType ?></li>
@@ -174,13 +174,13 @@
                                         <li>ntssendErrCode (전송실패 사유코드) : <?php echo $result->list[$i]->ntssendErrCode ?></li>
                                         <li>stateMemo (상태메모) : <?php echo $result->list[$i]->stateMemo ?></li>
                                     </ul>
-								</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

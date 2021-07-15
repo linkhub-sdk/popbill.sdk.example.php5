@@ -1,15 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 1건의 현금영수증을 [즉시발행]합니다.
-     * - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
-     * - 현금영수증 국세청 전송 정책에 대한 정보는 "[현금영수증 API 연동매뉴얼] > 1.3. 국세청 전송정책"을 참조하시기 바랍니다.
-     * - 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
+     * 현금영수증 데이터를 팝빌에 전송하여 발행합니다.
+     * - 현금영수증 국세청 전송 정책 : https://docs.popbill.com/cashbill/ntsSendPolicy?lang=php
+     * - https://docs.popbill.com/cashbill/php/api#RegistIssue
      */
 
     include 'common.php';
@@ -20,8 +19,8 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-    // 문서번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
-    $mgtKey = '20200428-01';
+    // 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
+    $mgtKey = '20210701-01';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
@@ -118,17 +117,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>현금영수증 즉시발행</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>현금영수증 즉시발행</legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

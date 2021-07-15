@@ -1,14 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * [발행완료] 상태의 세금계산서를 국세청으로 즉시전송합니다.
-     * - 국세청 즉시전송을 호출하지 않은 세금계산서는 발행일 기준 익일 오후 3시에 팝빌 시스템에서 일괄적으로 국세청으로 전송합니다.
-     * - 익일전송시 전송일이 법정공휴일인 경우 다음 영업일에 전송됩니다.
+     * 연동회원의 국세청 전송 옵션 설정 상태를 확인합니다.
+     * - 국세청 전송 옵션 설정은 팝빌 사이트 [전자세금계산서] > [환경설정] > [세금계산서 관리] 메뉴에서 설정할 수 있으며, API로 설정은 불가능 합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#SendToNTS
      */
 
@@ -21,7 +20,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210701-001';
 
     try {
         $result = $TaxinvoiceService->SendToNTS($testCorpNum, $mgtKeyType, $mgtKey);
@@ -33,17 +32,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>국세청 즉시전송</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>국세청 즉시전송</legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 대량의 세금계산서 상태/요약 정보를 확인합니다. (최대 1000건)
+     * 다수건의 세금계산서 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
      * - https://docs.popbill.com/taxinvoice/php/api#GetInfos
      */
 
@@ -20,9 +20,9 @@
 
     // 세금계산서 문서번호 배열, 최대 1000건
     $MgtKeyList = array();
-    array_push($MgtKeyList, "20190101-001");
-    array_push($MgtKeyList, '20190101-002');
-    array_push($MgtKeyList, '20190101-003');
+    array_push($MgtKeyList, "20210701-001");
+    array_push($MgtKeyList, '20210701-002');
+    array_push($MgtKeyList, '20210701-003');
 
     try {
         $result = $TaxinvoiceService->GetInfos($testCorpNum, $mgtKeyType, $MgtKeyList);
@@ -32,26 +32,26 @@
         $message= $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 요약정보 대량 확인</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-							for ( $i = 0; $i < Count($result) ; $i++ ) {
-					?>
-							<fieldset class="fieldset2">
-							<legend> 세금계산서 요약정보[<?php echo $i+1?>]</legend>
-							<ul>
-                                <li>itemKey (팝빌 관리번호) : <?php echo $result[$i]->itemKey ?></li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>세금계산서 요약정보 대량 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                            for ( $i = 0; $i < Count($result) ; $i++ ) {
+                    ?>
+                            <fieldset class="fieldset2">
+                            <legend> 세금계산서 요약정보[<?php echo $i+1?>]</legend>
+                            <ul>
+                                <li>itemKey (팝빌번호) : <?php echo $result[$i]->itemKey ?></li>
                                 <li>stateCode (상태코드) : <?php echo $result[$i]->stateCode ?></li>
                                 <li>taxType (과세형태) : <?php echo $result[$i]->taxType ?></li>
                                 <li>purposeType (영수/청구) : <?php echo $result[$i]->purposeType ?></li>
@@ -66,7 +66,7 @@
                                 <li>invoicerPrintYN (공급자 인쇄여부) : <?php echo $result[$i]->invoicerPrintYN ? 'true' : 'false' ?></li>
                                 <li>invoiceeCorpName (공급받는자 상호) : <?php echo $result[$i]->invoiceeCorpName ?></li>
                                 <li>invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result[$i]->invoiceeCorpNum ?></li>
-                                <li>invoiceeMgtKey (공급받는자 관리번호) : <?php echo $result[$i]->invoiceeMgtKey ?></li>
+                                <li>invoiceeMgtKey (공급받는자 문서번호) : <?php echo $result[$i]->invoiceeMgtKey ?></li>
                                 <li>invoiceePrintYN (공급받는자 인쇄여부) : <?php echo $result[$i]->invoiceePrintYN ? 'true' : 'false' ?></li>
                                 <li>closeDownState (공급받는자 휴폐업상태) : <?php echo $result[$i]->closeDownState ?></li>
                                 <li>closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result[$i]->closeDownStateDate ?></li>
@@ -84,12 +84,12 @@
                                 <li>stateMemo (상태메모) : <?php echo $result[$i]->stateMemo ?></li>
                             </ul>
                             </fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>
