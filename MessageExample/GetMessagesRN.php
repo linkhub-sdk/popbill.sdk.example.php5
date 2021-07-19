@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 문자전송요청시 할당한 전송요청번호(requestNum)로 전송상태를 확인합니다
+     * 파트너가 할당한 전송요청 번호를 통해 문자 전송상태 및 결과를 확인합니다.
      * - https://docs.popbill.com/message/php/api#GetMessagesRN
      */
 
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문자전송 요청 시 할당한 전송요청번호(requestNum)
-    $requestNum = '20190101-001';
+    $requestNum = '"20210703-001';
 
     try {
         $result = $MessagingService->GetMessagesRN($testCorpNum, $requestNum);
@@ -26,26 +26,26 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>문자전송 내역 및 전송상태 확인 </legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>문자전송 내역 및 전송상태 확인 </legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
 
-					<?php
-						} else {
-							for ($i = 0; $i < Count($result); $i++) {
-					?>
-							<fieldset class="fieldset2">
-								<legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result)?>]</legend>
-								<ul>
+                    <?php
+                        } else {
+                            for ($i = 0; $i < Count($result); $i++) {
+                    ?>
+                            <fieldset class="fieldset2">
+                                <legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result)?>]</legend>
+                                <ul>
                                     <li> state (전송상태 코드) : <?php echo $result[$i]->state ?> </li>
                                     <li> result (전송결과 코드) : <?php echo $result[$i]->result ?> </li>
                                     <li> subject (제목) : <?php echo $result[$i]->subject ?> </li>
@@ -62,14 +62,14 @@
                                     <li> tranNet (전송처리 이동통신사명) : <?php echo $result[$i]->tranNet ?> </li>
                                     <li> receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
                                     <li> requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
-								</ul>
-							</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                </ul>
+                            </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

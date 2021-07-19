@@ -1,13 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 1건의 전자명세서를 수정합니다.
-     * - [임시저장] 상태의 전자명세서만 수정할 수 있습니다.
+     * "임시저장" 상태의 전자명세서를 수정합니다.
      * - https://docs.popbill.com/statement/php/api#Update
      */
 
@@ -18,7 +17,7 @@
 
     // 전자명세서 문서번호
     // 1~24자리로 영문, 숫자 '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210701-001';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -31,7 +30,7 @@
      ************************************************************/
 
     // [필수] 기재상 작성일자
-    $Statement->writeDate = '20190101';
+    $Statement->writeDate = '20210701';
 
     // [필수] (영수, 청구) 중 기재
     $Statement->purposeType = '청구';
@@ -107,7 +106,7 @@
 
     $Statement->detailList[0] = new StatementDetail();
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20190101';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20210701';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -124,7 +123,7 @@
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20190101';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20210701';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';
@@ -162,17 +161,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자명세서 수정</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>전자명세서 수정</legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

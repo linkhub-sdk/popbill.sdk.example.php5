@@ -1,13 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 검색조건을 사용하여 알림톡/친구톡 전송 내역을 조회합니다.
-     * - 최대 검색기간 : 6개월 이내
+     * 검색조건에 해당하는 카카오톡 전송내역을 조회합니다. (최대 검색기간 : 6개월)
      * - https://docs.popbill.com/kakao/php/api#Search
      */
 
@@ -17,10 +16,10 @@
     $testCorpNum = '1234567890';
 
     // [필수] 시작일자, 날짜형식(yyyyMMdd)
-    $SDate = '20180601';
+    $SDate = '20210601';
 
     // [필수] 종료일자, 날짜형식(yyyyMMdd)
-    $EDate = '20181231';
+    $EDate = '20210630';
 
     // 전송상태값 배열, 0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-예약취소
     $State = array('0', '1', '2', '3', '4', '5');
@@ -56,33 +55,33 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>카카오톡 전송내역 목록 조회 </legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						}else{
-					?>
-							<li>code (응답코드) : <?php echo $result->code ?> </li>
-							<li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
-							<li>perPage (페이지당 검색개수) : <?php echo $result->perPage ?> </li>
-							<li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
-							<li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
-							<li>message (응답 메시지) : <?php echo $result->message ?> </li>
-					<?php
-						for ($i = 0; $i < Count($result->list); $i++) {
-					?>
-							<fieldset class="fieldset2">
-								<legend> 카카오톡 전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result->list)?>]</legend>
-								<ul>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>카카오톡 전송내역 목록 조회 </legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        }else{
+                    ?>
+                            <li>code (응답코드) : <?php echo $result->code ?> </li>
+                            <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
+                            <li>perPage (페이지당 검색개수) : <?php echo $result->perPage ?> </li>
+                            <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
+                            <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
+                            <li>message (응답 메시지) : <?php echo $result->message ?> </li>
+                    <?php
+                        for ($i = 0; $i < Count($result->list); $i++) {
+                    ?>
+                            <fieldset class="fieldset2">
+                                <legend> 카카오톡 전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result->list)?>]</legend>
+                                <ul>
                                     <li> state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
                                     <li> sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
                                     <li> result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
@@ -99,14 +98,14 @@
                                     <li> reserveDT (예약일시) : <?php echo $result->list[$i]->reserveDT ?> </li>
                                     <li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
                                     <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
-								</ul>
-							</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                </ul>
+                            </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

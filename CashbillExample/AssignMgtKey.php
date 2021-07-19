@@ -7,6 +7,7 @@
 <?php
     /**
      * 팝빌 사이트를 통해 발행하였지만 문서번호가 존재하지 않는 현금영수증에 문서번호를 할당합니다.
+     * - https://dev-docs.linkhub.kr/cashbill/php/api#AssignMgtKey
      */
 
     include 'common.php';

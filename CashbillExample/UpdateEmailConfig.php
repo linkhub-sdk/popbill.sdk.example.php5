@@ -43,11 +43,11 @@
             <br/>
             <fieldset class="fieldset1">
                 <legend>알림메일 전송설정 수정</legend>
-        <ul>
+                 <ul>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>
                 </ul>
-      </fieldset>
+            </fieldset>
          </div>
     </body>
 </html>

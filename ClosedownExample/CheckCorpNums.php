@@ -6,7 +6,7 @@
 </head>
 <?php
     /**
-     * 다수의 사업자에 대한 휴폐업여부를 조회합니다. (최대 1000건)
+     * 다수건의 사업자번호에 대한 휴폐업정보를 확인합니다. (최대 1,000건)
      * - https://docs.popbill.com/closedown/php/api#CheckCorpNums
      */
 

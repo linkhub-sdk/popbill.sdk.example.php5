@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 전자명세서 API 서비스 과금정보를 확인합니다.
+     * 팝빌 전자명세서 API 서비스 과금정보를 확인합니다.
      * - https://docs.popbill.com/statement/php/api#GetChargeInfo
      */
 
@@ -29,29 +29,29 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>과금정보 확인</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-						<li>unitCost(발행단가) : <?php echo $result->unitCost ; ?></li>
-						<li>chargeMethod(과금유형) : <?php echo $result->chargeMethod ; ?></li>
-						<li>rateSystem(과금제도) : <?php echo $result->rateSystem ; ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>과금정보 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
+                        <li>unitCost(발행단가) : <?php echo $result->unitCost ; ?></li>
+                        <li>chargeMethod(과금유형) : <?php echo $result->chargeMethod ; ?></li>
+                        <li>rateSystem(과금제도) : <?php echo $result->rateSystem ; ?></li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

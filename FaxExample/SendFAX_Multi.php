@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * [대량전송] 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+     * 동일한 팩스파일을 다수의 수신자에게 전송하기 위해 팝빌에 접수합니다. (최대 전송파일 개수 : 20개) (최대 1,000건)
+     * - 팩스전송 문서 파일포맷 안내 : https://docs.popbill.com/fax/format?lang=php
      * - https://docs.popbill.com/fax/php/api#SendFAX
      */
 
@@ -65,27 +66,27 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>팩스 전송 - 대량</legend>
-				<ul>
-					<?php
-						if ( isset($receiptNum) ) {
-					?>
-							<li>receiptNum (팩스접수번호) : <?php echo $receiptNum ?></li>
-					<?php
-						} else {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>팩스 전송 - 대량</legend>
+                <ul>
+                    <?php
+                        if ( isset($receiptNum) ) {
+                    ?>
+                            <li>receiptNum (팩스접수번호) : <?php echo $receiptNum ?></li>
+                    <?php
+                        } else {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

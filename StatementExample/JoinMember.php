@@ -6,7 +6,7 @@
 	</head>
 <?php
     /**
-     * 팝빌 연동회원 가입을 요청합니다.
+     * 사용자를 연동회원으로 가입처리합니다.
      * - https://docs.popbill.com/statement/php/api#JoinMember
      */
 
@@ -47,7 +47,7 @@
     // 아이디, 6자 이상 20자미만
     $joinForm->ID = 'userid_phpdd';
 
-    // 비밀번호(8자이상 20자 이하) 영문, 숫자, 특수문자 조합
+    // 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
     $joinForm->Password = 'qwe123!@#';
 
     try	{

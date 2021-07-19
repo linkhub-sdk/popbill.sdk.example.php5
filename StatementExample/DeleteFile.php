@@ -1,14 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 전자명세서에 첨부된 파일을 삭제합니다.
-     * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
-     *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+     * 삭제 가능한 상태의 전자명세서를 삭제합니다.
      * - https://docs.popbill.com/statement/php/api#DeleteFile
      */
 
@@ -21,7 +19,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210703-001';
 
     // 첨부된 파일의 아이디, GetFiles API 응답항목중 AttachedFile 항목
     $FileID= 'A0450FBE-FF2D-43E7-ABAB-EFC17886C456.PBF';
@@ -36,17 +34,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>첨부파일 삭제 </legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>첨부파일 삭제 </legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

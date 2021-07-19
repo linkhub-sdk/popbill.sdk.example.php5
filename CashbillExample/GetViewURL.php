@@ -32,7 +32,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>현금영수증 보기 URL () (메뉴/버튼 제외)</legend>
+                <legend>현금영수증 보기 URL (메뉴/버튼 제외)</legend>
                 <ul>
                     <?php
                         if ( isset($url) ) {

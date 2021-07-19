@@ -7,7 +7,7 @@
 <?php
     /**
      * 현금영수증 발행시 과금되는 포인트 단가를 확인합니다.
-     * - https://docs.popbill.com/cashbill/java/api#GetUnitCost
+     * - https://docs.popbill.com/cashbill/php/api#GetUnitCost
      */
 
     include 'common.php';

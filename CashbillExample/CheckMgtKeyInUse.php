@@ -7,8 +7,6 @@
 <?php
     /**
      * 파트너가 현금영수증 관리 목적으로 할당하는 문서번호 사용여부를 확인합니다.
-     * - 이미 사용 중인 문서번호는 중복 사용이 불가하고, 현금영수증이 삭제된 경우에만 문서번호의 재사용이 가능합니다.
-     * - 문서번호는 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
      * - https://docs.popbill.com/cashbill/php/api#CheckMgtKeyInUse
      */
 
@@ -18,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210701-001';
 
     try {
         $result = $CashbillService->CheckMgtKeyInUse($testCorpNum, $mgtKey);

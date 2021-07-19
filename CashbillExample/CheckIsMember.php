@@ -31,7 +31,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>연동회원사 가입여부 확인</legend>
+                <legend>연동회원 가입여부 확인</legend>
                 <ul>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>

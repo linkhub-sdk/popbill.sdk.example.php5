@@ -6,7 +6,7 @@
 </head>
 <?php
     /**
-     * 팩스전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
+     * 팝빌에서 반환 받은 접수번호를 통해 팩스 전송상태 및 결과를 확인합니다.
      * - https://docs.popbill.com/fax/php/api#GetFaxDetail
      */
 
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 팩스전송 접수번호
-    $ReceiptNum = '018092923330400001';
+    $ReceiptNum = '021010717501200001';
 
     try {
         $result = $FaxService->GetFaxDetail($testCorpNum, $ReceiptNum);

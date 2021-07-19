@@ -15,9 +15,9 @@
             <li><a href="UpdateBankAccount.php">UpdateBankAccount</a> (계좌정보 수정) </li>
             <li><a href="GetBankAccountInfo.php">GetBankAccountInfo</a> (계좌 정보 확인) </li>
             <li><a href="ListBankAccount.php">ListBankAccount</a> (계좌 목록 확인) </li>
+            <li><a href="GetBankAccountMgtURL.php">GetBankAccountMgtURL</a> (계좌 관리 팝업 URL) </li>
             <li><a href="CloseBankAccount.php">CloseBankAccount</a> (계좌 정액제 해지요청) </li>
             <li><a href="RevokeCloseBankAccount.php">RevokeCloseBankAccount</a> (계좌 정액제 해지요청 취소) </li>
-            <li><a href="GetBankAccountMgtURL.php">GetBankAccountMgtURL</a> (계좌 관리 팝업 URL) </li>
             <li><a href="DeleteBankAccount.php">DeleteBankAccount</a> (종량제 계좌 삭제) </li>
         </ul>
     </fieldset>

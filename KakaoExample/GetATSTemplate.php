@@ -1,13 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-    * (주)카카오로 부터 승인된 알림톡 템플릿 정보를 확인합니다.
-    * - 반환항목중 템플릿코드(templateCode)는 알림톡 전송시 사용됩니다.
+    * 승인된 알림톡 템플릿 정보를 확인합니다.
     * - https://docs.popbill.com/kakao/php/api#GetATSTemplate
     */
 
@@ -31,45 +30,45 @@
     }
 ?>
 <body>
-	<div id="content">
-		<p class="heading1">Response</p>
-		<br/>
-		<fieldset class="fieldset1">
-			<legend>알림톡 템플릿 정보 확인</legend>
-			<ul>
-				<?php
-					if ( isset($code) ) {
-				?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-				<?php
-					} else {
-				?>
-						<li>templateCode (템플릿 코드) : <?php echo $templateInfo->templateCode ?></li>
-						<li>templateName (템플릿 제목) : <?php echo $templateInfo->templateName ?></li>
-						<li>template (템플릿 내용) : <?php echo $templateInfo->template ?></li>
-						<li>plusFriendID (카카오톡채널 아이디) : <?php echo $templateInfo->plusFriendID ?></li>
-						<?php
-						if (isset($templateInfo->btns)) {
-							for ($j = 0; $j < Count($templateInfo->btns); $j++) {
-						?>
-								<fieldset class="fieldset1">
-									<legend> 버튼정보 [<?php echo $j + 1 ?>]</legend>
-									<ul>
-										<li>t (버튼유형) : <?php echo $templateInfo->btns[$j]->t ?></li>
-										<li>n (버튼명) : <?php echo $templateInfo->btns[$j]->n ?></li>
-										<li>u1 (버튼링크1) : <?php echo (isset($templateInfo->btns[$j]->u1)) ? $templateInfo->btns[$j]->u1 : ''; ?></li>
-										<li>u2 (버튼링크2) : <?php echo (isset($templateInfo->btns[$j]->u2)) ? $templateInfo->btns[$j]->u2 : ''; ?></li>
-									</ul>
-								</fieldset>
-				<?php
-							}
-						}
-					}
-				?>
-			</ul>
-		</fieldset>
-	 </div>
+    <div id="content">
+        <p class="heading1">Response</p>
+        <br/>
+        <fieldset class="fieldset1">
+            <legend>알림톡 템플릿 정보 확인</legend>
+            <ul>
+                <?php
+                    if ( isset($code) ) {
+                ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                <?php
+                    } else {
+                ?>
+                        <li>templateCode (템플릿 코드) : <?php echo $templateInfo->templateCode ?></li>
+                        <li>templateName (템플릿 제목) : <?php echo $templateInfo->templateName ?></li>
+                        <li>template (템플릿 내용) : <?php echo $templateInfo->template ?></li>
+                        <li>plusFriendID (카카오톡채널 아이디) : <?php echo $templateInfo->plusFriendID ?></li>
+                        <?php
+                        if (isset($templateInfo->btns)) {
+                            for ($j = 0; $j < Count($templateInfo->btns); $j++) {
+                        ?>
+                                <fieldset class="fieldset1">
+                                    <legend> 버튼정보 [<?php echo $j + 1 ?>]</legend>
+                                    <ul>
+                                        <li>t (버튼유형) : <?php echo $templateInfo->btns[$j]->t ?></li>
+                                        <li>n (버튼명) : <?php echo $templateInfo->btns[$j]->n ?></li>
+                                        <li>u1 (버튼링크1) : <?php echo (isset($templateInfo->btns[$j]->u1)) ? $templateInfo->btns[$j]->u1 : ''; ?></li>
+                                        <li>u2 (버튼링크2) : <?php echo (isset($templateInfo->btns[$j]->u2)) ? $templateInfo->btns[$j]->u2 : ''; ?></li>
+                                    </ul>
+                                </fieldset>
+                <?php
+                            }
+                        }
+                    }
+                ?>
+            </ul>
+        </fieldset>
+     </div>
 </body>
 
 </html>

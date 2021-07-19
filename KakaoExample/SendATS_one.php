@@ -1,22 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 단건의 알림톡을 전송합니다.
+     * 승인된 템플릿의 내용을 작성하여 1건의 알림톡 전송을 팝빌에 접수합니다.
+     * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
      * - https://docs.popbill.com/kakao/php/api#SendATS
-     *
-     * - 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리된다.
-     * - 알림톡 템플릿 등록방법.  (사이트/API 등록방법 제공)
-     *     1.팝빌 사이트 로그인 [문자/팩스] > [카카오톡] > [카카오톡 관리] > 알림톡 템플릿 관리
-     *     2.getATSTemplateMgtURL API를 통해 반환된 URL을 이용하여 템플릿 관리
-     * - 팝빌에 등록되지 않은 발신번호로 알림톡 메시지를 전송하는 경우 발신번호 미등록 오류로 처리된다.
-     * - 발신번호 사전등록 방법. (사이트/API 등록방법 제공)
-     *    1.팝빌 사이트 로그인 [문자/팩스] > [카카오톡] > [발신번호 사전등록] 에서 등록
-     *    2.getSenderNumberMgtURL API를 통해 반환된 URL을 이용하여 발신번호 등록
      */
 
     include 'common.php';
@@ -84,27 +76,27 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>알림톡 1건 전송</legend>
-				<ul>
-					<?php
-						if ( isset($receiptNum) ) {
-					?>
-							<li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
-					<?php
-						} else {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>알림톡 1건 전송</legend>
+                <ul>
+                    <?php
+                        if ( isset($receiptNum) ) {
+                    ?>
+                            <li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
+                    <?php
+                        } else {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 연동회원의 정액제 서비스 이용상태를 확인합니다.
+     * 홈택스연동 정액제 서비스 상태를 확인합니다.
      * - https://docs.popbill.com/httaxinvoice/php/api#GetFlatRateState
      */
 
@@ -23,21 +23,21 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>정액제 서비스 상태 확인</legend>
-				<ul>
-					<?php
-						if ( isset ( $code ) ) {
-					?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>정액제 서비스 상태 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset ( $code ) ) {
+                    ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
                             <li>referenceID (사업자번호) : <?php echo $result->referenceID ?></li>
                             <li>contractDT (정액제 서비스 시작일시) : <?php echo $result->contractDT ?></li>
                             <li>useEndDate (정액제 서비스 종료일) : <?php echo $result->useEndDate ?></li>
@@ -47,11 +47,11 @@
                             <li>useRestrictYN (정액제 서비스 사용제한 여부) : <?php echo $result->useRestrictYN ? 'true' : 'false' ?></li>
                             <li>closeOnExpired (정액제 서비스 만료 시 해지여부) : <?php echo $result->closeOnExpired  ? 'true' : 'false' ?></li>
                             <li>unPaidYN (미수금 보유 여부) : <?php echo $result->unPaidYN ? 'true' : 'false' ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

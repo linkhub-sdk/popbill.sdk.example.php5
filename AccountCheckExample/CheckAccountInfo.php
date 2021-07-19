@@ -6,7 +6,8 @@
 </head>
 <?php
     /**
-     * 계좌의 예금주 정보를 조회합니다.
+     * 1건의 예금주성명을 조회합니다.
+     * - https://docs.popbill.com/accountcheck/php/api#CheckAccountInfo
      */
 
     include 'common.php';

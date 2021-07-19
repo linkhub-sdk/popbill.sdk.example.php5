@@ -6,7 +6,7 @@
 </head>
 <?php
     /**
-     * 검색조건을 사용하여 전자명세서 목록을 조회합니다.
+     * 검색조건에 해당하는 전자명세서를 조회합니다.
      * - https://docs.popbill.com/statement/php/api#Search
      */
 
@@ -19,10 +19,10 @@
     $DType = 'W';
 
     // [필수] 시작일자
-    $SDate = '20181201';
+    $SDate = '20210601';
 
     // [필수] 종료일자
-    $EDate = '20190101';
+    $EDate = '20210630';
 
 
     // 전송상태값 배열, 문서상태값 3자리 배열, 2,3번째 와일드카드 사용가능
@@ -90,7 +90,7 @@
                         <legend> 전자명세서 요약정보[<?php echo $i+1?>]</legend>
                         <ul>
                             <li> itemKey(아이템키) : <?php echo $result->list[$i]->itemKey ?></li>
-                            <li> itemCode(문서종류코드) : <?php echo $result->list[$i]->itemCode ?></li>
+                            <li> itemCode(명세서 코드) : <?php echo $result->list[$i]->itemCode ?></li>
                             <li> stateCode(상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
                             <li> taxType(세금형태) : <?php echo $result->list[$i]->taxType ?></li>
                             <li> purposeType(영수/청구) : <?php echo $result->list[$i]->purposeType ?></li>

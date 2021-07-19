@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 1건의 전자명세서를 임시저장합니다.
+     * 작성된 전자명세서 데이터를 팝빌에 저장합니다.
+     * - 임시저장후 발행(Issue API)를 호출해야 수신자에게 메일로 전달됩니다.
      * - https://docs.popbill.com/statement/php/api#Register
      */
 
@@ -16,12 +17,10 @@
     $testCorpNum = '1234567890';
 
     // 문서번호, 발행자별 고유번호 할당, 1~24자리 영문,숫자 조합으로 중복없이 구성
-    $mgtKey = '20190218-18';
+    $mgtKey = '20210703-18';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
-
-
 
     // 전자명세서 객체 생성
     $Statement = new Statement();
@@ -31,7 +30,7 @@
      ************************************************************/
 
     // [필수] 기재상 작성일자
-    $Statement->writeDate = '20190218';
+    $Statement->writeDate = '20210703';
 
     // [필수] (영수, 청구) 중 기재
     $Statement->purposeType = '영수';
@@ -112,7 +111,7 @@
 
     $Statement->detailList[0] = new StatementDetail();
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20181228';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20210703';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -129,7 +128,7 @@
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20181228';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20210703';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';
@@ -167,17 +166,17 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자명세서 임시저장</legend>
-				<ul>
-					<li>Response.code : <?php echo $code ?></li>
-					<li>Response.message : <?php echo $message ?></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>전자명세서 임시저장</legend>
+                <ul>
+                    <li>Response.code : <?php echo $code ?></li>
+                    <li>Response.message : <?php echo $message ?></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

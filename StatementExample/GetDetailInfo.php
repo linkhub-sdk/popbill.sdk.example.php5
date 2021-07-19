@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 전자명세서 1건의 상세정보를 조회합니다.
+     * 전자명세서 1건의 상세정보 확인합니다.
      * - https://docs.popbill.com/statement/php/api#GetDetailInfo
      */
 
@@ -19,7 +19,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20191024-32';
+    $mgtKey = '20210702-32';
 
     try {
         $result = $StatementService->GetDetailInfo($testCorpNum, $itemCode, $mgtKey);
@@ -29,24 +29,24 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자명세서 상세정보 확인</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-                        <li> itemCode(문서종류코드) : <?php echo $result->itemCode ?> </li>
-                        <li> mgtKey(관리번호) : <?php echo $result->mgtKey ?> </li>
-                        <li> invoiceNum(팝빌부여 문서고유번호) : <?php echo $result->invoiceNum ?> </li>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>전자명세서 상세정보 확인</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
+                        <li> itemCode(명세서 코드) : <?php echo $result->itemCode ?> </li>
+                        <li> mgtKey(문서번호) : <?php echo $result->mgtKey ?> </li>
+                        <li> invoiceNum(팝빌 승인번호) : <?php echo $result->invoiceNum ?> </li>
                         <li> formCode(맞춤양식 코드) : <?php echo $result->formCode ?> </li>
                         <li> writeDate(작성일자) : <?php echo $result->writeDate ?> </li>
                         <li> taxType(세금형태) : <?php echo $result->taxType  ?> </li>
@@ -84,13 +84,13 @@
                         <li> bankBookYN(통장사본 첨부여부) : <?php echo $result->bankBookYN ?> </li>
                         <li> smssendYN(알림문자 전송여부) : <?php echo $result->smssendYN ?> </li>
                         <li> autoacceptYN(발행시 자동승인 여부) : <?php echo $result->autoacceptYN ?> </li>
-					<?php
-							if ( !is_null($result->detailList) ) {
-								for ( $i = 0; $i < Count($result->detailList); $i++){
-					?>
-								<fieldset class="fieldset2">
-									<legend>detailList <?php echo $i+1 ?></legend>
-										<ul>
+                    <?php
+                            if ( !is_null($result->detailList) ) {
+                                for ( $i = 0; $i < Count($result->detailList); $i++){
+                    ?>
+                                <fieldset class="fieldset2">
+                                    <legend>detailList <?php echo $i+1 ?></legend>
+                                        <ul>
                                             <li> serialNum(일련번호) : <?php echo $result->detailList[$i]->serialNum ?> </li>
                                             <li> purchaseDT(거래일자) : <?php echo $result->detailList[$i]->purchaseDT ?> </li>
                                             <li> itemName(품목명) : <?php echo $result->detailList[$i]->itemName ?> </li>
@@ -110,30 +110,30 @@
                                             <li> spare8(여분8) : <?php echo $result->detailList[$i]->spare8 ?> </li>
                                             <li> spare9(여분9) : <?php echo $result->detailList[$i]->spare9 ?> </li>
                                             <li> spare10(여분10) : <?php echo $result->detailList[$i]->spare10 ?> </li>
-										</ul>
-								</fieldset>
-					<?php
-								}
-							}
-							if ( !is_null($result->propertyBag) ) {
-					?>
-					<fieldset class="fieldset2">
-						<legend>propertyBag [추가속성 정보]</legend>
-						<ul>
-					<?php
-							foreach ($result->propertyBag as $key=>$data){
-					?>
-							<li> <?php echo $key ?> : <?php echo $data ?> </li>
-					<?php
-							}
-					?>
-						</ul>
-					<?php
-							}
-						}
-					?>
-				    </ul>
-			    </fieldset>
-		 </div>
-	</body>
+                                        </ul>
+                                </fieldset>
+                    <?php
+                                }
+                            }
+                            if ( !is_null($result->propertyBag) ) {
+                    ?>
+                    <fieldset class="fieldset2">
+                        <legend>propertyBag [추가속성 정보]</legend>
+                        <ul>
+                    <?php
+                            foreach ($result->propertyBag as $key=>$data){
+                    ?>
+                            <li> <?php echo $key ?> : <?php echo $data ?> </li>
+                    <?php
+                            }
+                    ?>
+                        </ul>
+                    <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </fieldset>
+         </div>
+    </body>
 </html>

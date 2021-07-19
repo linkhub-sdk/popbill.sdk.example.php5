@@ -1,19 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * [동보전송] 친구톡(이미지) 전송을 요청합니다.
-     * - https://docs.popbill.com/kakao/php/api#SendFMS
+     * 이미지가 첨부된 다수건의 친구톡 전송을 팝빌에 접수하며, 모든 수신자에게 동일 내용을 전송합니다. (최대 1,000건)
      * - 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
-     * - 전송포맷-JPG파일 / 용량제한-최대500kbyte / 이미지 높이/너비 비율 1.333-이하, 1/2이상
-     * - 팝빌에 등록되지 않은 발신번호로 알림톡 메시지를 전송하는 경우 발신 번호 미등록 오류로 처리된다.
-     * - 발신번호 사전등록 방법. (사이트/API 등록방법 제공)
-     *    1.팝빌 사이트 로그인 [문자/팩스] > [카카오톡] > [발신번호 사전등록] 에서 등록
-     *    2.getSenderNumberMgtURL API를 통해 반환된 URL을 이용하여 발신번호 등록
+     * - 이미지 전송규격 / jpg 포맷, 용량 최대 500KByte, 이미지 높이/너비 비율 1.333 이하, 1/2 이상
+     * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
+     * - https://docs.popbill.com/kakao/php/api#SendFMS
      */
 
     include 'common.php';
@@ -90,27 +87,27 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>친구톡(이미지) 동일내용 대량전송</legend>
-				<ul>
-					<?php
-						if ( isset($receiptNum) ) {
-					?>
-							<li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
-					<?php
-						} else {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>친구톡(이미지) 동일내용 대량전송</legend>
+                <ul>
+                    <?php
+                        if ( isset($receiptNum) ) {
+                    ?>
+                            <li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
+                    <?php
+                        } else {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

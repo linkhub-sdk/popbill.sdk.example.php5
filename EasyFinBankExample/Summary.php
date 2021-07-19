@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /*
-    * 계좌 거래내역 요약정보를 조회한다.
+    * GetJobState(수집 상태 확인)를 통해 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래내역의 요약 정보를 조회합니다.
     * - https://docs.popbill.com/easyfinbank/php/api#Summary
     */
 
@@ -39,31 +39,31 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>수집결과 요약정보 조회</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-						  <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
-              <li>cntAccIn (입금 거래 건수) : <?php echo $response->cntAccIn ?></li>
-              <li>cntAccOut (출금거래 건수) : <?php echo $response->cntAccOut ?></li>
-              <li>totalAccIn (입금액 합계) : <?php echo $response->totalAccIn ?></li>
-              <li>totalAccOut (출금액 합계) : <?php echo $response->totalAccOut ?></li>
-					<?php
-        	  }
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>수집결과 요약정보 조회</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
+                        <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
+                        <li>cntAccIn (입금 거래 건수) : <?php echo $response->cntAccIn ?></li>
+                        <li>cntAccOut (출금거래 건수) : <?php echo $response->cntAccOut ?></li>
+                        <li>totalAccIn (입금액 합계) : <?php echo $response->totalAccIn ?></li>
+                        <li>totalAccOut (출금액 합계) : <?php echo $response->totalAccOut ?></li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

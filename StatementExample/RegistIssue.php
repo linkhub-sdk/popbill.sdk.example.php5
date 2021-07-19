@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+    <title>팝빌 SDK PHP 5.X Example.</title>
+  </head>
 <?php
     /**
-     * 1건의 전자명세서를 즉시발행 처리합니다.
+     * 작성된 전자명세서 데이터를 팝빌에 저장과 동시에 발행하여, "발행완료" 상태로 처리합니다.
+     * - 팝빌 사이트 [전자명세서] > [환경설정] > [전자명세서 관리] 메뉴의 발행시 자동승인 옵션 설정을 통해 전자명세서를 "발행완료" 상태가 아닌 "승인대기" 상태로 발행 처리 할 수 있습니다.
      * - https://docs.popbill.com/statement/php/api#RegistIssue
      */
 
@@ -121,7 +122,7 @@
     $Statement->detailList[0] = new StatementDetail();
 
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20181228';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20210628';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -142,7 +143,7 @@
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20181228';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20210628';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';
@@ -174,31 +175,31 @@
         $result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
-		$invoiceNum = $result->invoiceNum;
+    $invoiceNum = $result->invoiceNum;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자명세서 즉시발행</legend>
-				<ul>
-					<li>응답코드 (code) : <?php echo $code ?></li>
-					<li>응답메시지 (message) : <?php echo $message ?></li>
-					<?php
-		              if ( isset($invoiceNum) ) {
-		            ?>
-		              <li>팝빌 승인번호 (invoiceNum) : <?php echo $invoiceNum ?></li>
-		            <?php
-		              }
-		            ?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+  <body>
+    <div id="content">
+      <p class="heading1">Response</p>
+      <br/>
+      <fieldset class="fieldset1">
+        <legend>전자명세서 즉시발행</legend>
+        <ul>
+          <li>응답코드 (code) : <?php echo $code ?></li>
+          <li>응답메시지 (message) : <?php echo $message ?></li>
+          <?php
+                  if ( isset($invoiceNum) ) {
+                ?>
+                  <li>팝빌 승인번호 (invoiceNum) : <?php echo $invoiceNum ?></li>
+                <?php
+                  }
+                ?>
+        </ul>
+      </fieldset>
+     </div>
+  </body>
 </html>

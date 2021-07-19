@@ -6,7 +6,7 @@
 </head>
 <?php
     /**
-     * 전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인한다.
+     * 파트너가 할당한 전송요청 번호를 통해 알림톡/친구톡 전송상태 및 결과를 확인합니다.
      * - https://docs.popbill.com/kakao/php/api#GetMessagesRN
      */
 

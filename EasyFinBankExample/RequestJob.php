@@ -1,13 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
   /*
-  * 계좌 거래내역 수집을 요청한다.
-  * - 검색기간은 현재일 기준 90일 이내로만 요청할 수 있다.
+  * 계좌 거래내역을 확인하기 위해 팝빌에 수집요청을 합니다. 조회기간은 당일 기준으로 90일 이내로만 지정 가능합니다.
+  * - 반환 받은 작업아이디는 함수 호출 시점부터 1시간 동안 유효합니다.
   * - https://docs.popbill.com/easyfinbank/php/api#RequestJob
   */
 
@@ -23,10 +23,10 @@
     $AccountNumber = '2070064402404';
 
     // 시작일자, 형식(yyyyMMdd)
-    $SDate = '20200701';
+    $SDate = '20210701';
 
     // 종료일자, 형식(yyyyMMdd)
-    $EDate = '20200729';
+    $EDate = '20210710';
 
     try {
         $jobID = $EasyFinBankService->RequestJob($testCorpNum, $BankCode, $AccountNumber, $SDate, $EDate);
@@ -36,27 +36,27 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>수집 요청</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-						<li>Response.code : <?php echo $code ?> </li>
-						<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-					?>
-						<li>jobID(작업아이디) : <?php echo $jobID ?></li>
-					<?php
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>수집 요청</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                    ?>
+                        <li>jobID(작업아이디) : <?php echo $jobID ?></li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

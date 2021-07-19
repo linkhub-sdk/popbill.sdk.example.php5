@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
-		<title>팝빌 SDK PHP 5.X Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <title>팝빌 SDK PHP 5.X Example.</title>
+    </head>
 <?php
     /**
-     * 다수건의 전자명세서 상태/요약 정보를 확인합니다.
+     * 다수건의 전자명세서 상태 및 요약정보 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
      * - https://docs.popbill.com/statement/php/api#GetInfos
      */
 
@@ -20,9 +20,9 @@
 
     // 조회할 전자명세서 문서번호 배열, 최대 1000건
     $MgtKeyList = array(
-        '20190101-001',
-        '20190101-002',
-        '20190101-003'
+        '20210703-001',
+        '20210703-002',
+        '20210703-003'
     );
 
     try {
@@ -33,27 +33,27 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자명세서 상태/요약정보 확인 - 대량</legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-							for ($i = 0; $i < Count($result); $i++) {
-					?>
-							<fieldset class="fieldset2">
-								<legend> 전자명세서 상태/요약정보[<?php echo $i+1?>]</legend>
-								<ul>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>전자명세서 상태/요약정보 확인 - 대량</legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                            for ($i = 0; $i < Count($result); $i++) {
+                    ?>
+                            <fieldset class="fieldset2">
+                                <legend> 전자명세서 상태/요약정보[<?php echo $i+1?>]</legend>
+                                <ul>
                                     <li> itemKey(아이템키) : <?php echo $result[$i]->itemKey ?></li>
-                                    <li> itemCode(문서종류코드) : <?php echo $result[$i]->itemCode ?></li>
+                                    <li> itemCode(명세서 코드) : <?php echo $result[$i]->itemCode ?></li>
                                     <li> stateCode(상태코드) : <?php echo $result[$i]->stateCode ?></li>
                                     <li> taxType(세금형태) : <?php echo $result[$i]->taxType ?></li>
                                     <li> purposeType(영수/청구) : <?php echo $result[$i]->purposeType ?></li>
@@ -72,14 +72,14 @@
                                     <li> openDT(개봉 일시) : <?php echo $result[$i]->openDT ?></li>
                                     <li> stateMemo(상태메모) : <?php echo $result[$i]->stateMemo ?></li>
                                     <li> regDT(등록일시) : <?php echo $result[$i]->regDT ?></li>
-								</ul>
-							</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                </ul>
+                            </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

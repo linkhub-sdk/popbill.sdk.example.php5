@@ -27,25 +27,25 @@
         $message = $pe->getMessage();
     }
 ?>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전송내역 요약정보 확인 </legend>
-				<ul>
-					<?php
-						if ( isset($code) ) {
-					?>
-							<li>Response.code : <?php echo $code ?> </li>
-							<li>Response.message : <?php echo $message ?></li>
-					<?php
-						} else {
-							for ($i = 0; $i < Count($result); $i++) {
-					?>
-							<fieldset class="fieldset2">
-								<legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result)?>]</legend>
-								<ul>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>전송내역 요약정보 확인 </legend>
+                <ul>
+                    <?php
+                        if ( isset($code) ) {
+                    ?>
+                            <li>Response.code : <?php echo $code ?> </li>
+                            <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                        } else {
+                            for ($i = 0; $i < Count($result); $i++) {
+                    ?>
+                            <fieldset class="fieldset2">
+                                <legend> 문자전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result)?>]</legend>
+                                <ul>
                                     <li> rNum (접수번호) : <?php echo $result[$i]->rNum ?> </li>
                                     <li> sn (일련번호) : <?php echo $result[$i]->sn ?> </li>
                                     <li> stat (전송 상태코드) : <?php echo $result[$i]->stat ?> </li>
@@ -54,14 +54,14 @@
                                     <li> rDT (전송결과 수신일시) : <?php echo $result[$i]->rDT ?> </li>
                                     <li> net (전송처리 이동통신사명) : <?php echo $result[$i]->net ?> </li>
                                     <li> srt (구 전송결과 코드) : <?php echo $result[$i]->srt ?> </li>
-								</ul>
-							</fieldset>
-					<?php
-							}
-						}
-					?>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+                                </ul>
+                            </fieldset>
+                    <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

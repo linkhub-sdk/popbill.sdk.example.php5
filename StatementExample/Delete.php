@@ -6,9 +6,9 @@
 	</head>
 <?php
     /**
-     * 1건의 전자명세서를 삭제합니다.
+     * 삭제 가능한 상태의 전자명세서를 삭제합니다.
      * - 전자명세서를 삭제하면 사용된 문서번호(mgtKey)를 재사용할 수 있습니다.
-     * - 삭제가능한 문서 상태 : [임시저장], [발행취소]
+     * - 삭제 가능한 상태: "임시저장", "취소", "승인거부", "발행취소"
      * - https://docs.popbill.com/statement/php/api#Delete
      */
 
@@ -21,7 +21,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $MgtKey = '20190101-001';
+    $MgtKey = '20210702-001';
 
     try	{
         $result = $StatementService->Delete($testCorpNum, $itemCode, $MgtKey);
