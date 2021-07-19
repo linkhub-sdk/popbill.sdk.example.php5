@@ -7,6 +7,7 @@
 <?php
     /**
      * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다.
+     * - 세금계산서 국세청 전송 정책 : https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=php
      * - https://docs.popbill.com/taxinvoice/php/api#RegistIssue
      */
 
