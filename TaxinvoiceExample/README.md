@@ -9,7 +9,7 @@ popbill.taxinvoice.example.php
 
 ####예제 목록
 + common.php - 공통부분
-+ CheckMgtKeyInUse.php - 관리번호 확인
++ CheckMgtKeyInUse.php - 문서번호 확인
 + RegistIssue.php - 즉시 발행
 + Register.php - 임시저장
 + Update.php - 수정
@@ -47,7 +47,7 @@ popbill.taxinvoice.example.php
 + AttachStatement.php - 전자명세서 첨부
 + DetachStatement.php - 전자명세서 첨부해제
 + GetEmailPublicKeys.php - 유통사업자 메일 목록 확인
-+ AssignMgtKey.php - 관리번호 할당
++ AssignMgtKey.php - 문서번호 할당
 + ListEmailConfig.php - 세금계산서 알림메일 전송목록 조회
 + UpdateEmailConfig.php - 세금계산서 알림메일 전송설정 수정
 + GetTaxCertURL.php - 공인인증서 등록 URL

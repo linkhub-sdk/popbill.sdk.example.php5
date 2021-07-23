@@ -139,7 +139,7 @@
                                 <fieldset class="fieldset2">
                                     <legend> 세금계산서 상태/요약 정보 [<?php echo $i+1?>]</legend>
                                     <ul>
-                                        <li>itemKey (팝빌 관리번호) : <?php echo $result->list[$i]->itemKey ?></li>
+                                        <li>itemKey (팝빌번호) : <?php echo $result->list[$i]->itemKey ?></li>
                                         <li>stateCode (상태코드) : <?php echo $result->list[$i]->stateCode ?></li>
                                         <li>taxType (과세형태) : <?php echo $result->list[$i]->taxType ?></li>
                                         <li>purposeType (영수/청구) : <?php echo $result->list[$i]->purposeType ?></li>
@@ -156,7 +156,7 @@
 
                                         <li>invoiceeCorpName (공급받는자 상호) : <?php echo $result->list[$i]->invoiceeCorpName ?></li>
                                         <li>invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->list[$i]->invoiceeCorpNum ?></li>
-                                        <li>invoiceeMgtKey (공급받는자 관리번호) : <?php echo $result->list[$i]->invoiceeMgtKey ?></li>
+                                        <li>invoiceeMgtKey (공급받는자 문서번호) : <?php echo $result->list[$i]->invoiceeMgtKey ?></li>
                                         <li>invoiceePrintYN (공급받는자 인쇄여부) : <?php echo $result->list[$i]->invoiceePrintYN ? 'true' : 'false' ?></li>
                                         <li>closeDownState (공급받는자 휴폐업상태) : <?php echo $result->list[$i]->closeDownState ?></li>
                                         <li>closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result->list[$i]->closeDownStateDate ?></li>
