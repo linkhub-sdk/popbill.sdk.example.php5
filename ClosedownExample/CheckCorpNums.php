@@ -48,7 +48,7 @@
     } else {
         ?>
         <p class="info">> state (휴폐업상태) : null-알수없음, 0-등록되지 않은 사업자번호, 1-사업중, 2-폐업, 3-휴업</p>
-        <p class="info">> type (사업 유형) : null-알수없음, 1-일반과세자, 2-면세과세자, 3-간이과세자, 4-비영리법인, 국가기관</p>
+        <p class="info">> taxType (사업 유형) : null-알수없음, 10-일반과세자, 20-면세과세자, 30-간이과세자, 31-간이과세자(세금계산서 발급사업자), 40-비영리법인, 국가기관</p>
         <br/>
         <?php
         for ($i = 0; $i < Count($result); $i++) {
@@ -57,7 +57,7 @@
                 <legend>휴폐업조회 결과 [ <?php echo $i + 1 ?> ]</legend>
                 <ul>
                     <li>사업자번호(corpNum) : <?php echo $result[$i]->corpNum ?></li>
-                    <li>사업자유형(type) : <?php echo $result[$i]->type ?></li>
+                    <li>사업자유형(taxType) : <?php echo $result[$i]->taxType ?></li>
                     <li>휴폐업상태(state) : <?php echo $result[$i]->state ?></li>
                     <li>휴폐업일자(stateDate) : <?php echo $result[$i]->stateDate ?></li>
                     <li>과세유형 전환일자(typeDate) : <?php echo $result[$i]->typeDate ?></li>
