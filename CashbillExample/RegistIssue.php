@@ -35,14 +35,6 @@
     // [필수] 현금영수증 문서번호,
     $Cashbill->mgtKey = $mgtKey;
 
-    // [취소 현금영수증 발행시 필수] 원본 현금영수증 국세청승인번호
-    // 국세청승인번호는 GetInfo API의 ConfirmNum 항목으로 확인할 수 있습니다.
-    $Cashbill->orgConfirmNum = '';
-
-    // [취소 현금영수증 발행시 필수] 원본 현금영수증 거래일자
-    // 현금영수증 거래일자는 GetInfo API의 TradeDate 항목으로 확인할 수 있습니다.
-    $Cashbill->orgTradeDate = '';
-
     // [필수] 문서형태, (승인거래, 취소거래) 중 기재
     $Cashbill->tradeType = '승인거래';
 
