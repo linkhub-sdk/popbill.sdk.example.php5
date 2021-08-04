@@ -16,13 +16,13 @@
     $testCorpNum = '1234567890';
 
     // 문서번호, 사업자별로 중복없이 1~24자리 영문, 숫자, '-', '_' 조합으로 구성
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210801-001';
 
     // 원본현금영수증 승인번호, 문서정보 확인(GetInfo API)을 통해 확인가능.
     $orgConfirmNum = '820116333';
 
     // 원본현금영수증 거래일자, 문서정보 확인(GetInfo API)을 통해 확인가능.
-    $orgTradeDate = '20181231';
+    $orgTradeDate = '20210730';
 
     try {
         $result = $CashbillService->RevokeRegister($testCorpNum, $mgtKey, $orgConfirmNum, $orgTradeDate);

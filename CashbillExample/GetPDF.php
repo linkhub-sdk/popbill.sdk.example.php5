@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210801-001';
 
     // PDF 파일경로, PDF 파일을 저장할 폴더에 777 권한 필요.
     $pdfFilePath = './'.$mgtKey.'.pdf';

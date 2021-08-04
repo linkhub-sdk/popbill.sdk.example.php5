@@ -21,7 +21,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210801-001';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -39,7 +39,7 @@
      *                       전자명세서 정보
      ************************************************************/
     // [필수] 기재상 작성일자
-    $Statement->writeDate = '20190101';
+    $Statement->writeDate = '20210801';
 
     // [필수] (영수, 청구) 중 기재
     $Statement->purposeType = '영수';
@@ -111,7 +111,7 @@
 
     $Statement->detailList[0] = new StatementDetail();
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20190101';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20210801';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -128,7 +128,7 @@
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20190101';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20210801';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';

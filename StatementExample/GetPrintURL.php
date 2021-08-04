@@ -20,7 +20,7 @@
     $itemCode = '121';
 
     // 전자명세서 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210801-001';
 
     try {
         $url = $StatementService->GetPrintURL($testCorpNum, $itemCode, $mgtKey);

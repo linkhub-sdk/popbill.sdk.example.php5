@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     //국세청 승인번호
-    $NTSConfirmNum = '2016110441000203000005a9';
+    $NTSConfirmNum = '2021110441000203000005a9';
 
     try {
         $result = $HTTaxinvoiceService->GetXML($testCorpNum, $NTSConfirmNum);

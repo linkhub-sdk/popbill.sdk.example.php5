@@ -17,7 +17,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20190101-001';
+    $mgtKey = '20210801-001';
 
     // 현금영수증 객체 생성
     $Cashbill = new Cashbill();

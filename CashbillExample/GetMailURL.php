@@ -17,7 +17,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20210101-001';
+    $mgtKey = '20210701-001';
 
     try {
         $url = $CashbillService->GetMailURL($testCorpNum, $mgtKey);
