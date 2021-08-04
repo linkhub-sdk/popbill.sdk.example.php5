@@ -20,7 +20,7 @@
     $testUserID = 'testkorea';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20210701-01';
+    $mgtKey = '20210804-001';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
@@ -103,6 +103,8 @@
         $result = $CashbillService->RegistIssue($testCorpNum, $Cashbill, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
+        $confirmNum = $result->confirmNum;
+        $tradeDate = $result->tradeDate;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -118,6 +120,14 @@
                 <ul>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                      if ( isset($confirmNum) ) {
+                    ?>
+                      <li>Response.confirmNum : <?php echo $confirmNum ?></li>
+                      <li>Response.tradeDate : <?php echo $tradeDate ?></li>
+                    <?php
+                      }
+                    ?>
                 </ul>
             </fieldset>
          </div>
