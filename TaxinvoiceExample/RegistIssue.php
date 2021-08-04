@@ -21,7 +21,7 @@
 
     // 세금계산서 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20210712-02';
+    $invoicerMgtKey = '20210804-001';
 
     // 지연발행 강제여부
     $forceIssue = false;
@@ -49,7 +49,7 @@
     $Taxinvoice = new Taxinvoice();
 
     // [필수] 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20200717';
+    $Taxinvoice->writeDate = '20210804';
 
     // [필수] 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '정발행';
@@ -188,11 +188,11 @@
     $Taxinvoice->remark3 = '비고3';
 
     // 기재상 '권' 항목, 최대값 32767
-    // 미기재시 $Taxinvoice->kwon = 'null';
+    // 미기재시 $Taxinvoice->kwon = null;
     $Taxinvoice->kwon = '1';
 
     // 기재상 '호' 항목, 최대값 32767
-    // 미기재시 $Taxinvoice->ho = 'null';
+    // 미기재시 $Taxinvoice->ho = null;
     $Taxinvoice->ho = '1';
 
     // 사업자등록증 이미지파일 첨부여부

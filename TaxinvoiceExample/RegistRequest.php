@@ -175,11 +175,11 @@
     $Taxinvoice->remark3 = '비고3';
 
     // 기재상 '권' 항목, 최대값 32767
-    // 미기재시 $Taxinvoice->kwon = 'null';
+    // 미기재시 $Taxinvoice->kwon = null;
     $Taxinvoice->kwon = '1';
 
     // 기재상 '호' 항목, 최대값 32767
-    // 미기재시 $Taxinvoice->ho = 'null';
+    // 미기재시 $Taxinvoice->ho = null;
     $Taxinvoice->ho = '1';
 
     // 사업자등록증 이미지파일 첨부여부
