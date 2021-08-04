@@ -175,7 +175,7 @@
         $result = $StatementService->RegistIssue($testCorpNum, $Statement, $memo, $testUserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
-    $invoiceNum = $result->invoiceNum;
+        $invoiceNum = $result->invoiceNum;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -192,12 +192,12 @@
           <li>응답코드 (code) : <?php echo $code ?></li>
           <li>응답메시지 (message) : <?php echo $message ?></li>
           <?php
-                  if ( isset($invoiceNum) ) {
-                ?>
-                  <li>팝빌 승인번호 (invoiceNum) : <?php echo $invoiceNum ?></li>
-                <?php
-                  }
-                ?>
+              if ( isset($invoiceNum) ) {
+          ?>
+          <li>팝빌 승인번호 (invoiceNum) : <?php echo $invoiceNum ?></li>
+          <?php
+              }
+          ?>
         </ul>
       </fieldset>
      </div>
