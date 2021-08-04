@@ -21,7 +21,7 @@
 
     // 세금계산서 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20210804-001';
+    $invoicerMgtKey = '20210804-003';
 
     // 지연발행 강제여부
     $forceIssue = false;
@@ -189,11 +189,11 @@
 
     // 기재상 '권' 항목, 최대값 32767
     // 미기재시 $Taxinvoice->kwon = null;
-    $Taxinvoice->kwon = '1';
+    $Taxinvoice->kwon = 1;
 
     // 기재상 '호' 항목, 최대값 32767
     // 미기재시 $Taxinvoice->ho = null;
-    $Taxinvoice->ho = '1';
+    $Taxinvoice->ho = 1;
 
     // 사업자등록증 이미지파일 첨부여부
     $Taxinvoice->businessLicenseYN = false;
