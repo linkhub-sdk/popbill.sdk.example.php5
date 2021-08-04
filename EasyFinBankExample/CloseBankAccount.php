@@ -7,7 +7,7 @@
 <?php
     /*
     * 계좌의 정액제 해지를 요청합니다.
-    * -https://docs.popbill.com/easyfinbank/php/api#CloseBankAccount
+    * - https://docs.popbill.com/easyfinbank/php/api#CloseBankAccount
     */
 
     include 'common.php';

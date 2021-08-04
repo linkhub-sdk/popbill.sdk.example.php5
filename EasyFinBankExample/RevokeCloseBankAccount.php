@@ -7,7 +7,7 @@
 <?php
     /*
     * 신청한 정액제 해지요청을 취소합니다.
-    * -https://docs.popbill.com/easyfinbank/php/api#RevokeCloseBankAccount
+    * - https://docs.popbill.com/easyfinbank/php/api#RevokeCloseBankAccount
     */
 
     include 'common.php';

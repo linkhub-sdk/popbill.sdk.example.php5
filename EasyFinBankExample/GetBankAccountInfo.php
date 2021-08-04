@@ -7,7 +7,7 @@
 <?php
     /*
     * 팝빌에 등록된 계좌 정보를 확인합니다.
-    * -https://docs.popbill.com/easyfinbank/php/api#GetBankAccountInfo
+    * - https://docs.popbill.com/easyfinbank/php/api#GetBankAccountInfo
     */
 
     include 'common.php';
