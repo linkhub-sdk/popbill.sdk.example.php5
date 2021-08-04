@@ -59,6 +59,8 @@
 
         $code = $result->code;
         $message = $result->message;
+        $confirmNum = $result->confirmNum;
+        $tradeDate = $result->tradeDate;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -74,6 +76,14 @@
                 <ul>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>
+                    <?php
+                      if ( isset($confirmNum) ) {
+                    ?>
+                      <li>Response.confirmNum : <?php echo $confirmNum ?></li>
+                      <li>Response.tradeDate : <?php echo $tradeDate ?></li>
+                    <?php
+                      }
+                    ?>
                 </ul>
             </fieldset>
          </div>
