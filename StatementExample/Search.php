@@ -6,7 +6,7 @@
 </head>
 <?php
     /**
-     * 검색조건에 해당하는 전자명세서를 조회합니다.
+     * 검색조건에 해당하는 전자명세서를 조회합니다. (조회기간 단위 : 최대 6개월)
      * - https://docs.popbill.com/statement/php/api#Search
      */
 
