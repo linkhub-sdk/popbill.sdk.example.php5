@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 템플릿 코드
-    $templateCode = '021010000078';
+    $templateCode = '021020000177';
 
     // 팝빌 회원 아이디
     $userID = 'testkorea';
@@ -47,6 +47,8 @@
                         <li>templateCode (템플릿 코드) : <?php echo $templateInfo->templateCode ?></li>
                         <li>templateName (템플릿 제목) : <?php echo $templateInfo->templateName ?></li>
                         <li>template (템플릿 내용) : <?php echo $templateInfo->template ?></li>
+                        <li>ads (광고메시지 내용) : <?php echo $templateInfo->ads ?></li>
+                        <li>appendix (부가메시지 내용) : <?php echo $templateInfo->appendix ?></li>
                         <li>plusFriendID (카카오톡채널 아이디) : <?php echo $templateInfo->plusFriendID ?></li>
                         <?php
                         if (isset($templateInfo->btns)) {

@@ -45,6 +45,8 @@
                                 <li>templateCode (템플릿 코드) : <?php echo $result[$i]->templateCode ?></li>
                                 <li>templateName (템플릿 제목) : <?php echo $result[$i]->templateName ?></li>
                                 <li>template (템플릿 내용) : <?php echo $result[$i]->template ?></li>
+                                <li>ads (광고메시지 내용) : <?php echo $result[$i]->ads ?></li>
+                                <li>appendix (부가메시지 내용) : <?php echo $result[$i]->appendix ?></li>
                                 <li>plusFriendID (카카오톡채널 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
                             </ul>
                             <?php
