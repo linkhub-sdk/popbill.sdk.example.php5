@@ -20,7 +20,7 @@
     $testUserID = 'testkorea';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20210804-001';
+    $mgtKey = '20211215-TEST004';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
@@ -61,6 +61,9 @@
 
     // [필수] 가맹점 사업자번호
     $Cashbill->franchiseCorpNum = $testCorpNum;
+
+    // 가맹점 종사업장 식별번호
+    $Cashbill->franchiseTaxRegID = "";
 
     // 가맹점 상호
     $Cashbill->franchiseCorpName = '발행자 상호';

@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호, 발행자별 중복없이 1~24자리 영문,숫자로 구성
-    $mgtKey = '20210801-029';
+    $mgtKey = '20211215-TEST100';
 
     // 현금영수증 객체 생성
     $Cashbill = new Cashbill();
@@ -50,6 +50,9 @@
 
     // [필수] 가맹점 사업자번호
     $Cashbill->franchiseCorpNum = $testCorpNum;
+
+    // 가맹점 종사업장 식별번호
+    $Cashbill->franchiseTaxRegID = "0993";
 
     // 가맹점 상호
     $Cashbill->franchiseCorpName = '발행자 상호';

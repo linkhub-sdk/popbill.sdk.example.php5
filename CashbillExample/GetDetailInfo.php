@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20211215-TEST100';
 
     try {
         $result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);
@@ -54,6 +54,7 @@
                             <li>tax (부가세) : <?php echo $result->tax ?> </li>
                             <li>serviceFee (봉사료) : <?php echo $result->serviceFee ?> </li>
                             <li>franchiseCorpNum (가맹점 사업자번호) : <?php echo $result->franchiseCorpNum ?> </li>
+                            <li>franchiseTaxRegID (가맹점 종사업장 식별번호) : <?php echo $result->franchiseTaxRegID ?> </li>
                             <li>franchiseCorpName (가맹점 상호) : <?php echo $result->franchiseCorpName ?> </li>
                             <li>franchiseCEOName (가맹점 대표자 성명) : <?php echo $result->franchiseCEOName ?> </li>
                             <li>franchiseAddr (가맹점 주소) : <?php echo $result->franchiseAddr ?> </li>

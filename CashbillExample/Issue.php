@@ -18,7 +18,7 @@
     $testUserID = 'testkorea';
 
     // 문서번호
-    $mgtKey = '20210701-029';
+    $mgtKey = '20211215-TEST100';
 
     // 메모
     $memo = '현금영수증 발행메모';

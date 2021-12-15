@@ -19,14 +19,14 @@
     $DType = 'R';
 
     // [필수] 시작일자
-    $SDate = '20210701';
+    $SDate = '20211215';
 
     // [필수] 종료일자
-    $EDate = '20210710';
+    $EDate = '20211215';
 
     // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array(
-        '100',
+        '1**',
         '2**',
         '3**',
         '4**'
@@ -69,9 +69,13 @@
     // 식별번호 조회, 미기재시 전체조회
     $QString = '';
 
+    // 가맹점 종사업장 번호
+    // └ 다수건 검색시 콤마(",")로 구분. 예) 1234, 1000
+    $FranchiseTaxRegID = array();
+
     try {
         $result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
-            $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString, $TradeOpt);
+            $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString, $TradeOpt, $FranchiseTaxRegID);
     }	catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();
