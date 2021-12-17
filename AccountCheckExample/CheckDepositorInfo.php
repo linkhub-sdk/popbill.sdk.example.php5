@@ -6,8 +6,8 @@
 </head>
 <?php
     /**
-     * 1건의 예금주성명을 조회합니다.
-     * - https://docs.popbill.com/accountcheck/php/api#CheckAccountInfo
+     * 1건의 예금주실명을 조회합니다.
+     * - https://docs.popbill.com/accountcheck/php/api#CheckDepositorInfo
      */
 
     include 'common.php';
@@ -15,14 +15,23 @@
     //팝빌회원 사업자번호
     $MemberCorpNum = "1234567890";
 
+    //팝빌회원 아이디
+    $testUserID = "testkorea";
+
     // 기관코드
-    $BankCode = "0004";
+    $BankCode = "0081";
 
     // 계좌번호
-    $AccountNumber = "032984032";
+    $AccountNumber = "25791051309707";
+
+    //등록번호 유형, P-개인, B-사업자
+    $IdentityNumType = "P";
+
+    // 등록번호
+    $IdentityNum = "881030";
 
     try {
-        $result = $AccountCheckService->CheckAccountInfo($MemberCorpNum, $BankCode, $AccountNumber);
+        $result = $AccountCheckService->CheckDepositorInfo($MemberCorpNum, $BankCode, $AccountNumber, $IdentityNumType, $IdentityNum, $testUserID);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();
@@ -46,11 +55,13 @@
     } else {
         ?>
           <fieldset class="fieldset2">
-              <legend>예금주실명 조회 결과</legend>
+              <legend>예금주성명 조회 결과</legend>
               <ul>
                   <li> bankCode (기관코드) : <?php echo $result->bankCode ?></li>
                   <li> accountNumber (계좌번호) : <?php echo $result->accountNumber ?></li>
                   <li> accountName (예금주 성명) : <?php echo $result->accountName ?></li>
+                  <li> identityNumType (등록번호 유형) : <?php echo $result->identityNumType ?></li>
+                  <li> identityNum (등록번호) : <?php echo $result->identityNum ?></li>
                   <li> checkDate (확인일시) : <?php echo $result->checkDate ?></li>
                   <li> result (응답코드) : <?php echo $result->result ?></li>
                   <li> resultMessage (응답메시지) : <?php echo $result->resultMessage ?></li>

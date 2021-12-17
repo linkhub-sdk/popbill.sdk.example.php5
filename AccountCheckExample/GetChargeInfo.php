@@ -18,8 +18,11 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
+    // 서비스 유형, 성명 / 실명 중 택 1
+    $serviceType = '실명';
+
     try {
-        $result = $AccountCheckService->GetChargeInfo($testCorpNum, $testUserID);
+        $result = $AccountCheckService->GetChargeInfo($testCorpNum, $testUserID, $serviceType);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
