@@ -19,10 +19,10 @@
     $DType = 'R';
 
     // [필수] 시작일자
-    $SDate = '20211215';
+    $SDate = '20211201';
 
     // [필수] 종료일자
-    $EDate = '20211215';
+    $EDate = '20211220';
 
     // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
     $State = array(
@@ -71,7 +71,7 @@
 
     // 가맹점 종사업장 번호
     // └ 다수건 검색시 콤마(",")로 구분. 예) 1234, 1000
-    $FranchiseTaxRegID = array();
+    $FranchiseTaxRegID = "";
 
     try {
         $result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
