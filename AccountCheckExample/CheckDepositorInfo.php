@@ -19,16 +19,16 @@
     $testUserID = "testkorea";
 
     // 기관코드
-    $BankCode = "0081";
+    $BankCode = "";
 
     // 계좌번호
-    $AccountNumber = "25791051309707";
+    $AccountNumber = "";
 
     //등록번호 유형, P-개인, B-사업자
-    $IdentityNumType = "P";
+    $IdentityNumType = "";
 
     // 등록번호
-    $IdentityNum = "881030";
+    $IdentityNum = "";
 
     try {
         $result = $AccountCheckService->CheckDepositorInfo($MemberCorpNum, $BankCode, $AccountNumber, $IdentityNumType, $IdentityNum, $testUserID);
