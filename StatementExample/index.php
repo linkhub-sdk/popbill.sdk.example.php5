@@ -47,6 +47,7 @@
         <legend>부가기능</legend>
         <ul>
             <li><a href="GetAccessURL.php">GetAccessURL</a> (팝빌 로그인 URL)</li>
+            <li><a href="GetSealURL.php">GetSealURL</a> (인감 및 첨부문서 등록 URL)</li>
             <li><a href="AttachFile.php">AttachFile</a> (첨부파일 추가)</li>
             <li><a href="DeleteFile.php">DeleteFile</a> (첨부파일 삭제)</li>
             <li><a href="GetFiles.php">GetFiles</a> (첨부파일 목록 확인)</li>
