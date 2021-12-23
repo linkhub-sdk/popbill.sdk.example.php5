@@ -56,7 +56,6 @@
                             <li> failPageCnt (실패 페이지수) : <?php echo $result[$i]->failPageCnt ?> </li>
                             <li> refundPageCnt (환불 페이지수) : <?php echo $result[$i]->refundPageCnt ?> </li>
                             <li> cancelPageCnt (취소 페이지수) : <?php echo $result[$i]->cancelPageCnt ?> </li>
-                            <li> iSuccessPageCnt (지능망 성공장수) : <?php echo $result[$i]->iSuccessPageCnt ?> </li>
                             <li> receiveNumType (수신번호 유형) : <?php echo $result[$i]->receiveNumType ?> </li>
                             <li> receiptDT (접수일시) : <?php echo $result[$i]->receiptDT ?> </li>
                             <li> reserveDT (예약일시) : <?php echo $result[$i]->reserveDT ?> </li>
