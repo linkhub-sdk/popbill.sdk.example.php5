@@ -49,6 +49,7 @@
                             <li> sendNum (발신번호) : <?php echo $result[$i]->sendNum ?> </li>
                             <li> senderName (발신자명) : <?php echo $result[$i]->senderName ?> </li>
                             <li> receiveNum (수신번호) : <?php echo $result[$i]->receiveNum ?> </li>
+                            <li> receiveNumType (수신번호 유형) : <?php echo $result[$i]->receiveNumType ?> </li>
                             <li> receiveName (수신자명) : <?php echo $result[$i]->receiveName ?> </li>
                             <li> title (팩스제목) : <?php echo $result[$i]->title ?> </li>
                             <li> sendPageCnt (전체 페이지수) : <?php echo $result[$i]->sendPageCnt ?> </li>
@@ -56,7 +57,6 @@
                             <li> failPageCnt (실패 페이지수) : <?php echo $result[$i]->failPageCnt ?> </li>
                             <li> refundPageCnt (환불 페이지수) : <?php echo $result[$i]->refundPageCnt ?> </li>
                             <li> cancelPageCnt (취소 페이지수) : <?php echo $result[$i]->cancelPageCnt ?> </li>
-                            <li> receiveNumType (수신번호 유형) : <?php echo $result[$i]->receiveNumType ?> </li>
                             <li> receiptDT (접수일시) : <?php echo $result[$i]->receiptDT ?> </li>
                             <li> reserveDT (예약일시) : <?php echo $result[$i]->reserveDT ?> </li>
                             <li> sendDT (전송일시) : <?php echo $result[$i]->sendDT ?> </li>
