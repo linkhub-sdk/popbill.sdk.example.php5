@@ -52,7 +52,7 @@
     $Cashbill->franchiseCorpNum = $testCorpNum;
 
     // 가맹점 종사업장 식별번호
-    $Cashbill->franchiseTaxRegID = "0993";
+    $Cashbill->franchiseTaxRegID = "";
 
     // 가맹점 상호
     $Cashbill->franchiseCorpName = '발행자 상호';
