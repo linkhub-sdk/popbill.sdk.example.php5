@@ -42,7 +42,7 @@
                         <fieldset class="fieldset2">
                             <legend>계좌 정보 [ <?php echo $i+1 ?> / <?php echo Count($result) ?> ]</legend>
                             <ul>
-                                <li>bankCode (은행코드) : <?php echo $result[$i]->bankCode ?></li>
+                                <li>bankCode (기관코드) : <?php echo $result[$i]->bankCode ?></li>
                                 <li>accountNumber (계좌번호) : <?php echo $result[$i]->accountNumber ?></li>
                                 <li>accountName (계좌 별칭) : <?php echo $result[$i]->accountName ?></li>
                                 <li>accountType (계좌 유형) : <?php echo $result[$i]->accountType ?></li>
