@@ -84,6 +84,7 @@
                             <li> sendNum (발신번호) : <?php echo $result->list[$i]->sendNum ?> </li>
                             <li> senderName (발신자명) : <?php echo $result->list[$i]->senderName ?> </li>
                             <li> receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
+                            <li> receiveNumType (수신번호 유형) : <?php echo $result->list[$i]->receiveNumType ?> </li>
                             <li> receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
                             <li> title (팩스제목) : <?php echo $result->list[$i]->title ?> </li>
                             <li> sendPageCnt (전체 페이지수) : <?php echo $result->list[$i]->sendPageCnt ?> </li>
