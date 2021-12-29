@@ -12,8 +12,8 @@
     <fieldset class="fieldset1">
         <legend>예금주조회</legend>
         <ul>
-            <li><a href="CheckAccountInfo.php">CheckAccountInfo</a> (예금주 성명조회) </li>
-            <li><a href="CheckDepositorInfo.php">CheckDepositorInfo</a> (예금주 실명조회) </li>
+            <li><a href="CheckAccountInfo.php">CheckAccountInfo</a> (계좌성명조회) </li>
+            <li><a href="CheckDepositorInfo.php">CheckDepositorInfo</a> (계좌실명조회) </li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
