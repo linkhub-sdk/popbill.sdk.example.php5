@@ -14,6 +14,8 @@
         <ul>
             <li><a href="CheckMgtKeyInUse.php">CheckMgtKeyInUse</a> (문서번호 사용여부 확인)</li>
             <li><a href="RegistIssue.php">RegistIssue</a> (즉시발행)</li>
+            <li><a href="BulkSubmit.php">BulkSubmit</a> (초대량 발행 접수)</li>
+            <li><a href="GetBulkResult.php">GetBulkResult</a> (초대량 접수결과 확인)</li>
             <li><a href="Register.php">Register</a> (임시저장)</li>
             <li><a href="Update.php">Update</a> (수정)</li>
             <li><a href="Issue.php">Issue</a> (발행)</li>

@@ -77,11 +77,12 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>공인인증서 관리</legend>
+        <legend>인증서 관리</legend>
         <ul>
-            <li><a href="GetTaxCertURL.php">GetTaxCertURL</a> (공인인증서 등록 URL)</li>
-            <li><a href="GetCertificateExpireDate.php">GetCertificateExpireDate</a> (공인인증서 만료일 확인)</li>
-            <li><a href="CheckCertValidation.php">CheckCertValidation</a> (공인인증서 유효성 확인)</li>
+            <li><a href="GetTaxCertURL.php">GetTaxCertURL</a> (인증서 등록 URL)</li>
+            <li><a href="GetCertificateExpireDate.php">GetCertificateExpireDate</a> (인증서 만료일 확인)</li>
+            <li><a href="CheckCertValidation.php">CheckCertValidation</a> (인증서 유효성 확인)</li>
+            <li><a href="GetTaxCertInfo.php">GetTaxCertInfo</a> (인증서 정보 확인)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

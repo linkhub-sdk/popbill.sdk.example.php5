@@ -22,7 +22,7 @@
     $testUserID = 'testkorea';
 
     try {
-        $result = $TaxinvoiceService->GetBulkResult($testCorpNum, $submitID, $testUserID);
+        $result = $CashbillService->GetBulkResult($testCorpNum, $submitID, $testUserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
