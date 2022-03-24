@@ -12,6 +12,7 @@
     <fieldset class="fieldset1">
         <legend>발신번호 사전등록</legend>
         <ul>
+            <li><a href="CheckSenderNumber.php">CheckSenderNumber</a> (발신번호 등록여부 확인)</li>
             <li><a href="GetSenderNumberMgtURL.php">GetSenderNumberMgtURL</a> (팩스 발신번호 관리 팝업 URL)</li>
             <li><a href="GetSenderNumberList.php">GetSenderNumberList</a> (팩스 발신번호 목록 확인)</li>
         </ul>
