@@ -39,6 +39,7 @@
             <li><a href="GetInfo.php">GetInfo</a> (상태 확인)</li>
             <li><a href="GetInfos.php">GetInfos</a> (상태 대량 확인)</li>
             <li><a href="GetDetailInfo.php">GetDetailInfo</a> (상세정보 확인)</li>
+            <li><a href="GetXML.php">GetXML</a> (상세정보 확인 - XML)</li>
             <li><a href="Search.php">Search</a> (목록 조회)</li>
             <li><a href="GetLogs.php">GetLogs</a> (상태 변경이력 확인)</li>
             <li><a href="GetURL.php">GetURL</a> (세금계산서 문서함 관련 URL)</li>
