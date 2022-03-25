@@ -68,9 +68,12 @@
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
 
+    // 대체문자 제목
+    $altSubject = '대체문자 제목';
+
     try {
 
-        $receiptNum = $KakaoService->SendFTS($testCorpNum, $plusFriendID, $sender, $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $testUserID, $requestNum);
+        $receiptNum = $KakaoService->SendFTS($testCorpNum, $plusFriendID, $sender, $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $testUserID, $requestNum, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

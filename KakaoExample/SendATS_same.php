@@ -24,7 +24,7 @@
     $templateCode = '019020000163';
 
     // 팝빌에 사전 등록된 발신번호
-    $sender = '01043245117';
+    $sender = '';
 
     // 알림톡 내용, 최대 1000자
     $content = '[ 팝빌 ]'.PHP_EOL;
@@ -37,7 +37,7 @@
     $altContent = '대체문자 내용';
 
     // 대체문자 전송유형 공백-미전송, A-대체문자내용 전송, C-알림톡내용 전송
-    $altSendType = 'A';
+    $altSendType = 'C';
 
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
@@ -48,14 +48,14 @@
     $requestNum = '';
 
     // 수신정보 배열, 최대 1000건
-    for($i=0; $i<10; $i++){
+    for($i=0; $i<2; $i++){
         $receivers[] = array(
             // 수신번호
-            'rcv' => '010111222',
+            'rcv' => '',
             // 수신자명
             'rcvnm' => '수신자명',
             // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
-            'interOPRefKey' => '20210729-'.$i,
+            'interOPRefKey' => '20220324-'.$i,
         );
     }
 
@@ -74,8 +74,10 @@
     //     'u2' => 'http://www.popbill.com',
     // );
 
+    $altSubject = '대체문자 제목';
+
     try {
-        $receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID, $requestNum, $buttons);
+        $receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID, $requestNum, $buttons, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

@@ -45,6 +45,8 @@
                                 <li>plusFriendID (카카오톡채널 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
                                 <li>plusFriendName (카카오톡채널 이름) : <?php echo $result[$i]->plusFriendName ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
+                                <li>state (채널 상태) : <?php echo $result[$i]->state ?></li>
+                                <li>stateDT (채널 상태 일시) : <?php echo $result[$i]->stateDT ?></li>
                             </ul>
                             </fieldset>
                     <?php

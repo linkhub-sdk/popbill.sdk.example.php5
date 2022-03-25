@@ -76,9 +76,12 @@
     // 첨부 이미지 링크 URL
     $imageURL = 'http://popbill.com';
 
+    // 대체문자 제목
+    $altSubject = '대체문자 제목';
+
     try {
         $receiptNum = $KakaoService->SendFMS($testCorpNum, $plusFriendID, $sender,
-            $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $files, $imageURL, $testUserID, $requestNum);
+            $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $files, $imageURL, $testUserID, $requestNum, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();
