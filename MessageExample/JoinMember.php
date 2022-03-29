@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -39,10 +39,10 @@
     $joinForm->ContactName = '담당자상명';
 
     // 담당자 이메일
-    $joinForm->ContactEmail	= 'tester@test.com';
+    $joinForm->ContactEmail	= '';
 
     // 담당자 연락처
-    $joinForm->ContactTEL	= '07043042991';
+    $joinForm->ContactTEL	= '';
 
     // 아이디, 6자 이상 20자미만
     $joinForm->ID = 'userid_phpdd';
@@ -65,7 +65,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>연동회원 가입요청</legend>
+                <legend>연동회원 신규가입</legend>
                 <ul>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>

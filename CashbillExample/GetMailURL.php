@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
-     * 구매자가 수신하는 현금영수증 안내 메일의 하단에 버튼 URL 주소를 반환합니다.
+     * 현금영수증 안내메일의 상세보기 링크 URL을 반환합니다.
      * - 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
      * - https://docs.popbill.com/cashbill/php/api#GetMailURL
      */
@@ -17,7 +17,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20220324-PHP5-001';
 
     try {
         $url = $CashbillService->GetMailURL($testCorpNum, $mgtKey);

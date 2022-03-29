@@ -1,13 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 팩스 1건을 전송합니다. (최대 전송파일 개수: 20개)
-     * - 팩스전송 문서 파일포맷 안내 : https://docs.popbill.com/fax/format?lang=php
      * - https://docs.popbill.com/fax/php/api#SendFAX
      */
 
@@ -19,8 +18,9 @@
     // 팝빌 회원 아이디
     $testUserID = 'testkorea';
 
-    // 팩스전송 발신번호
-    $Sender = '07043042992';
+    // 발신번호
+    // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
+    $Sender = '';
 
     // 팩스전송 발신자명
     $SenderName = '발신자명';
@@ -28,19 +28,21 @@
     // 팩스 수신정보 배열, 최대 1000건
     $Receivers[] = array(
         // 팩스 수신번호
-        'rcv' => '070111222',
+        'rcv' => '',
 
         // 수신자명
         'rcvnm' => '팝빌담당자'
     );
 
-    // 팩스전송파일, 해당파일에 읽기 권한이 설정되어 있어야 함. 최대 20개.
+    // 팩스전송파일 (최대 20개)
     $Files = array('./test.pdf');
 
-    // 예약전송일시(yyyyMMddHHmmss) ex) 20151212230000, null인경우 즉시전송
+    // 예약전송일시(yyyyMMddHHmmss) ex) 20220324230000, null인경우 즉시전송
     $reserveDT = null;
 
-    // 광고팩스 전송여부
+    // 광고팩스 전송여부 , true / false 중 택 1
+    // └ true = 광고 , false = 일반
+    // └ 미입력 시 기본값 false 처리
     $adsYN = false;
 
     // 팩스제목
@@ -70,7 +72,7 @@
                     <?php
                         if ( isset($receiptNum) ) {
                     ?>
-                            <li>receiptNum(팩스접수번호) : <?php echo $receiptNum?></li>
+                            <li>receiptNum (팩스접수번호) : <?php echo $receiptNum?></li>
                     <?php
                         } else {
                     ?>

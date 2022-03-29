@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -18,9 +18,8 @@
 
     // 문서번호 배열, 최대 100건
     $mgtKeyList = array (
-        '20210701-001',
-        '20210701-002',
-        '20210701-003'
+        '20220324-PHP5-001',
+        '20220324-PHP5-002'
     );
 
     try {

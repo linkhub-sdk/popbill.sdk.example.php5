@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -20,10 +20,10 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20210710-001';
+    $mgtKey = '20220324-PHP5-002';
 
     // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
-    $FileID = 'B6DB6884-EDA9-4D0F-A790-0334BD822118.PBF';
+    $FileID = '';
 
     try {
         $result = $TaxinvoiceService->DeleteFile($testCorpNum, $mgtKeyType, $mgtKey, $FileID);

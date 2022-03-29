@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
     <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 접수시 기재한 SubmitID를 사용하여 세금계산서 접수결과를 확인합니다.
+     * - 개별 세금계산서 처리상태는 접수상태(txState)가 완료(2) 시 반환됩니다.
      * - https://docs.popbill.com/taxinvoice/php/api#GetBulkResult
      */
 
@@ -16,8 +17,8 @@
     $testCorpNum = '1234567890';
 
     // 초대량 발행 접수시 기재한 제출아이디
-    $submitID = 'PHPTEST021';
-    
+    $submitID = '20220324-PHP5-BULK';
+
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
@@ -54,8 +55,8 @@
                         <li>txResultCode (접수 결과코드) : <?php echo $result->txResultCode ?> </li>
                         <li>txStartDT (발행처리 시작일시) : <?php echo $result->txStartDT ?> </li>
                         <li>txEndDT (발행처리 완료일시) : <?php echo $result->txEndDT ?> </li>
-                        <li>receiptDT(접수일시) : <?php echo $result->receiptDT ?> </li>
-                        <li>receiptID(접수아이디) : <?php echo $result->receiptID ?> </li>
+                        <li>receiptDT (접수일시) : <?php echo $result->receiptDT ?> </li>
+                        <li>receiptID (접수아이디) : <?php echo $result->receiptID ?> </li>
                         <?php
                         for ( $i = 0; $i < Count($result->issueResult); $i++ ) {
                         ?>

@@ -1,12 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 현금영수증 1건의 상태 및 요약정보를 확인합니다.
+     * - 리턴값 'CashbillInfo'의 변수 'stateCode'를 통해 현금영수증의 상태코드를 확인합니다.
+     * - 현금영수증 상태코드 [https://docs.popbill.com/cashbill/stateCode?lang=php]
      * - https://docs.popbill.com/cashbill/php/api#GetInfo
      */
 
@@ -16,7 +18,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20220324-PHP5-001';
 
     try {
         $result = $CashbillService->GetInfo($testCorpNum, $mgtKey);
@@ -57,7 +59,7 @@
                                 <li> stateDT (상태변경일시) : <?php echo $result->stateDT ?></li>
                                 <li> identityNum (식별번호) : <?php echo $result->identityNum ?></li>
                                 <li> itemName (주문상품명) : <?php echo $result->itemName ?></li>
-                                <li> customerName (주문자)명) : <?php echo $result->customerName ?></li>
+                                <li> customerName (주문자명) : <?php echo $result->customerName ?></li>
                                 <li> confirmNum (국세청승인번호) : <?php echo $result->confirmNum ?></li>
                                 <li> orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?></li>
                                 <li> orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?></li>
@@ -65,7 +67,7 @@
                                 <li> ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result->ntsresultDT ?></li>
                                 <li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->ntsresultCode ?></li>
                                 <li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->ntsresultMessage ?></li>
-                                <li> printYN (인쇄여부) : <?php echo $result->printYN ?></li>
+                                <li> printYN (인쇄여부) : <?php echo $result->printYN ? 'true' : 'false' ?></li>
                     <?php
                             }
                         }

@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -29,16 +29,10 @@
     $ContactInfo->id = 'testkorea';
 
     // 담당자 연락처
-    $ContactInfo->tel = '070-4304-2991';
-
-    // 핸드폰 번호
-    $ContactInfo->hp = '010-1234-1234';
+    $ContactInfo->tel = '';
 
     // 이메일 주소
-    $ContactInfo->email = 'test@test.com';
-
-    // 팩스번호
-    $ContactInfo->fax = '070-111-222';
+    $ContactInfo->email = '';
 
     // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
     $ContactInfo->searchRole = 3;

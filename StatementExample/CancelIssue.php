@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 발신자가 발행한 전자명세서를 발행취소합니다.
+     * - "발행취소" 상태의 전자명세서를 삭제(Delete API) 함수를 이용하면, 전자명세서 관리를 위해 부여했던 문서번호를 재사용 할 수 있습니다.
      * - https://docs.popbill.com/statement/php/api#CancelIssue
      */
 
@@ -19,7 +20,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $MgtKey = '20210701-001';
+    $MgtKey = '20220324-PHP5-002';
 
     // 메모
     $memo = '전자명세서 발행취소 메모';

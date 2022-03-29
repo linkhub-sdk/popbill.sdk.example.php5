@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -47,14 +47,12 @@
                     <?php
                         } else {
                     ?>
-                        <li>bankCode (기관코드) : <?php echo $result->bankCode ?></li>
                         <li>accountNumber (계좌번호) : <?php echo $result->accountNumber ?></li>
+                        <li>bankCode (기관코드) : <?php echo $result->bankCode ?></li>
                         <li>accountName (계좌 별칭) : <?php echo $result->accountName ?></li>
                         <li>accountType (계좌 유형) : <?php echo $result->accountType ?></li>
                         <li>state (계좌 상태) : <?php echo $result->state ?></li>
                         <li>regDT (등록일시) : <?php echo $result->regDT ?></li>
-                        <li>memo (메모) : <?php echo $result->memo ?></li>
-
                         <li>contractDT (정액제 서비스 시작일시) : <?php echo $result->contractDT ?></li>
                         <li>useEndDate (정액제 서비스 종료일) : <?php echo $result->useEndDate ?></li>
                         <li>baseDate (자동연장 결제일) : <?php echo $result->baseDate ?></li>
@@ -63,6 +61,7 @@
                         <li>useRestrictYN (정액제 서비스 사용제한 여부) : <?php echo $result->useRestrictYN ?></li>
                         <li>closeOnExpired (정액제 서비스 만료 시 해지 여부) : <?php echo $result->closeOnExpired ?></li>
                         <li>unPaidYN (미수금 보유 여부) : <?php echo $result->unPaidYN ?></li>
+                        <li>memo (메모) : <?php echo $result->memo ?></li>
                     <?php
                         }
                     ?>

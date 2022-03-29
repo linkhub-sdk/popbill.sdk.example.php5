@@ -1,12 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 다수건의 현금영수증 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
+     * - 리턴값 'CashbillInfo'의 변수 'stateCode'를 통해 현금영수증의 상태코드를 확인합니다.
+     * - 현금영수증 상태코드 [https://docs.popbill.com/cashbill/stateCode?lang=php]
      * - https://docs.popbill.com/cashbill/php/api#GetInfos
      */
 
@@ -17,8 +19,8 @@
 
     // 문서번호 배열, 최대 1000건
     $MgtKeyList = array(
-        '20210701-001',
-        '20210701-002',
+        '20220324-PHP5-001',
+        '20220324-PHP5-002',
     );
 
     try {
@@ -71,7 +73,7 @@
                                         <li> ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result[$i]->ntsresultDT ?></li>
                                         <li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result[$i]->ntsresultCode ?></li>
                                         <li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result[$i]->ntsresultMessage ?></li>
-                                        <li> printYN (인쇄여부) : <?php echo $result[$i]->printYN ?></li>
+                                        <li> printYN (인쇄여부) : <?php echo $result[$i]->printYN ? 'true' : 'false' ?></li>
                                     </ul>
                                 </fieldset>
                     <?php

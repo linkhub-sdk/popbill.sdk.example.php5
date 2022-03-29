@@ -1,15 +1,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
     /**
      * 이미지가 첨부된 다수건의 친구톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
-     * - 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
-     * - 이미지 전송규격 / jpg 포맷, 용량 최대 500KByte, 이미지 높이/너비 비율 1.333 이하, 1/2 이상
+     * - 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
      * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
+     * - 대체문자의 경우, 포토문자(MMS) 형식은 지원하고 있지 않습니다.
      * - https://docs.popbill.com/kakao/php/api#SendFMS
      */
 
@@ -21,16 +21,18 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-    // 팝빌에 등록된 카카오톡채널 아이디, ListPlusFriend API - plusFriendID 확인
+    // 팝빌에 등록된 카카오톡 검색용 아이디, ListPlusFriend API - plusFriendID 확인
     $plusFriendID = '@팝빌';
 
     // 팝빌에 사전 등록된 발신번호
-    $sender = '07043042991';
+    $sender = '';
 
     // 대체문자 유형, 공백-미전송, A-대체문자내용 전송, C-친구톡내용 전송
     $altSendType = 'A';
 
-    // 광고전송여부
+	// 광고성 메시지 여부 ( true , false 중 택 1)
+    // └ true = 광고 , false = 일반
+    // - 미입력 시 기본값 false 처리
     $adsYN = false;
 
     // 전송요청번호
@@ -42,7 +44,7 @@
     for($i=0; $i<10; $i++){
         $receivers[] = array(
             // 수신번호
-            'rcv' => '010111222',
+            'rcv' => '',
             // 수신자명
             'rcvnm' => '수신자명',
             // 친구톡 내용, 최대 1000자
@@ -50,7 +52,7 @@
             // 대체문자
             'altmsg' => '대체문자 내용'.$i,
             // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
-            'interOPRefKey' => '20210729-'.$i,
+            'interOPRefKey' => '20220324-'.$i,
             // 대체문자 제목
             'altsjt' => '대체문자 제목'.$i
         );
@@ -112,13 +114,13 @@
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = '';
 
-    // 친구톡 이미지 전송규격
-    // - 전송 포맷 : JPG 파일(.jpg, jpeg)
-    // - 용량 제한 : 최대 500Byte
-    // - 이미지 가로/세로 비율 : 1.5 미만 (가로 500px 이상)
+    // 첨부이미지 파일 경로
+    // 이미지 파일 규격: 전송 포맷 – JPG 파일 (.jpg, .jpeg), 용량 – 최대 500 Kbyte, 크기 – 가로 500px 이상, 가로 기준으로 세로 0.5~1.3배 비율 가능
     $files = array('./test0001.jpg');
 
-    // 첨부 이미지 링크 URL
+    // 이미지 링크 URL
+    // └ 수신자가 친구톡 상단 이미지 클릭시 호출되는 URL
+    // 미입력시 첨부된 이미지를 링크 기능 없이 표시
     $imageURL = 'http://popbill.com';
 
     try {
@@ -139,7 +141,7 @@
 					<?php
 						if ( isset($receiptNum) ) {
 					?>
-							<li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
+							<li>receiptNum (접수번호) : <?php echo $receiptNum?></li>
 					<?php
 						} else {
 					?>

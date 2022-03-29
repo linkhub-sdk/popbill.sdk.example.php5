@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen"/>
 
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
@@ -51,7 +51,6 @@
             <li><a href="GetPrintURL.php">GetPrintURL</a> (현금영수증 인쇄 URL)</li>
             <li><a href="GetMassPrintURL.php">GetMassPrintURL</a> (현금영수증 대량 인쇄 URL)</li>
             <li><a href="GetMailURL.php">GetMailURL</a> (현금영수증 메일링크 URL)</li>
-            <li><a href="GetPDF.php">GetPDF</a> (현금영수증 팩스파일 다운로드)</li>
             <li><a href="GetPDFURL.php">GetPDFURL</a> (현금영수증 팩스파일 다운로드 URL)</li>
         </ul>
     </fieldset>

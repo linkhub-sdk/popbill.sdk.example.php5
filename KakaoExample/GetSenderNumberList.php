@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen"/>
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
@@ -35,10 +35,10 @@
          ?>
                 <fieldset class="fieldset2">
                     <ul>
-                        <li> 발신번호(number) : <?php echo $result[$i]->number ?></li>
-                        <li> 대표번호 지정여부(representYN) : <?php echo $result[$i]->representYN ? 'true' : 'false' ?></li>
-                        <li> 등록상태 (state) : <?php echo $result[$i]->state ?></li>
-                        <li> 메모 (memo) : <?php echo $result[$i]->memo ?></li>
+                        <li> number (발신번호) : <?php echo $result[$i]->number ?></li>
+                        <li> representYN (대표번호 지정여부) : <?php echo $result[$i]->representYN ? 'true' : 'false' ?></li>
+                        <li> state (등록상태) : <?php echo $result[$i]->state ?></li>
+                        <li> memo (메모) : <?php echo $result[$i]->memo ?></li>
                     </ul>
                 </fieldset>
 

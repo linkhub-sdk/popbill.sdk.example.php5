@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -42,16 +42,14 @@
                             <fieldset class="fieldset2">
                             <legend> 담당자 정보 [<?php echo $i+1?>]</legend>
                             <ul>
-                                <li>id(아이디) : <?php echo $result[$i]->id ; ?></li>
-                                <li>personName(담당자 성명) : <?php echo $result[$i]->personName ; ?></li>
-                                <li>email(담당자 이메일) : <?php echo $result[$i]->email ; ?></li>
-                                <li>hp(담당자 휴대폰번호) : <?php echo $result[$i]->hp ; ?></li>
-                                <li>fax(담당자 팩스번호) : <?php echo $result[$i]->fax ; ?></li>
-                                <li>tel(담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
-                                <li>regDT(등록일시) : <?php echo $result[$i]->regDT ; ?></li>
-                                <li>searchRole(담당자 권한) : <?php echo $result[$i]->searchRole ; ?></li>
-                                <li>mgrYN(관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
-                                <li>state(상태) : <?php echo $result[$i]->state ; ?></li>
+                                <li>id (아이디) : <?php echo $result[$i]->id ; ?></li>
+                                <li>personName (담당자 성명) : <?php echo $result[$i]->personName ; ?></li>
+                                <li>email (담당자 이메일) : <?php echo $result[$i]->email ; ?></li>
+                                <li>tel (담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
+                                <li>regDT (등록일시) : <?php echo $result[$i]->regDT ; ?></li>
+                                <li>searchRole (담당자 권한) : <?php echo $result[$i]->searchRole ; ?></li>
+                                <li>mgrYN (관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
+                                <li>state (상태) : <?php echo $result[$i]->state ; ?></li>
                             </ul>
                             </fieldset>
                     <?php

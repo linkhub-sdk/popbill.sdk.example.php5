@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
 		<title>팝빌 SDK PHP 5.X Example.</title>
 	</head>
 <?php
@@ -21,7 +21,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $MgtKey = '20210702-001';
+    $MgtKey = '20220324-PHP5-002';
 
     try	{
         $result = $StatementService->Delete($testCorpNum, $itemCode, $MgtKey);

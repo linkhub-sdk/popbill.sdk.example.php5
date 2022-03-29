@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 승인된 템플릿의 내용을 작성하여 다수건의 알림톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
+     * - 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
      * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
      * - https://docs.popbill.com/kakao/php/api#SendATS
      */
@@ -19,20 +20,23 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-    // 템플릿 코드 - 템플릿 목록 조회 (ListATSTemplate API)의 반환항목 확인
+    // 승인된 알림톡 템플릿코드
+    // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
+    //   팝빌사이트에서 승인된 알림톡 템플릿 코드를  확인 가능.
     $templateCode = '019020000163';
 
     // 팝빌에 사전 등록된 발신번호
     $sender = '';
 
-    // 대체문자 전송유형 공백-미전송, A-대체문자내용 전송, C-알림톡내용 전송
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     $altSendType = 'A';
 
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     $requestNum = '';
 
@@ -56,7 +60,7 @@
             // 대체문자 내용
             'altmsg' => '대체문자 내용'.$i,
             // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
-            'interOPRefKey' => '20210729-'.$i,
+            'interOPRefKey' => '20220324-'.$i,
             // 대체문자 제목
             'altsjt' => '대체문자 제목'.$i
         );
@@ -138,7 +142,7 @@
                     <?php
                         if ( isset($receiptNum) ) {
                     ?>
-                            <li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
+                            <li>receiptNum (접수번호) : <?php echo $receiptNum?></li>
                     <?php
                         } else {
                     ?>

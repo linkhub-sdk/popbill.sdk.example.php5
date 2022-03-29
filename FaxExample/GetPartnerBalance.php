@@ -1,13 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
     /**
      * 파트너의 잔여포인트를 확인합니다.
-     * - 과금방식이 연동과금인 경우 연동회원 잔여포인트(GetBalance API)를 이용하시기 바랍니다.
+     * - 과금방식이 연동과금인 경우 연동회원 잔여포인트 확인(GetBalance API) 함수를 이용하시기 바랍니다.
      * - https://docs.popbill.com/fax/php/api#GetPartnerBalance
      */
 
@@ -34,7 +34,7 @@
                     <?php
                         if ( isset($remainPoint) ) {
                     ?>
-                            <li>잔여포인트 : <?php echo $remainPoint ?></li>
+                            <li>remainPoint (잔여포인트) : <?php echo $remainPoint ?></li>
                     <?php
                         } else {
                     ?>

@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -12,19 +12,21 @@
 
     include 'common.php';
 
-    // [필수] 팝빌회원 사업자번호
+    // 팝빌회원 사업자번호
     $testCorpNum = '1234567890';
 
-    // [필수] 조회일자 유형, R-등록일자, T-거래일자, I-발행일자
+    // 일자 유형 ("R" , "T" , "I" 중 택 1)
+    // └ R = 등록일자 , T = 거래일자 , I = 발행일자
     $DType = 'R';
 
-    // [필수] 시작일자
-    $SDate = '20211201';
+    // 시작일자, 날짜형태(yyyyMMdd)
+    $SDate = '20220301';
 
-    // [필수] 종료일자
-    $EDate = '20211220';
+    // 종료일자, 날짜형태(yyyyMMdd)
+    $EDate = '20220331';
 
-    // 문서상태코드, 2,3번째 자리 와일드카드 사용가능, 미기재시 전체조회
+    // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
+    // - 미입력시 전체조회
     $State = array(
         '1**',
         '2**',
@@ -32,26 +34,34 @@
         '4**'
     );
 
-    // 문서형태, N-일반현금영수증, C-취소현금영수증
+    // 문서형태 배열 ("N" , "C" 중 선택, 다중 선택 가능)
+    // - N = 일반 현금영수증 , C = 취소 현금영수증
+    // - 미입력시 전체조회
     $TradeType = array(
         'N',
         'C'
     );
 
-    // 거래구분, P-소득공제, C-지출증빙
+    // 거래구분 배열 ("P" , "C" 중 선택, 다중 선택 가능)
+    // - P = 소득공제용 , C = 지출증빙용
+    // - 미입력시 전체조회
     $TradeUsage = array(
         'P',
         'C'
     );
 
-    // 거래유형, N-일반, B-도서공연, T-대중교통
+    // 거래유형 배열 ("N" , "B" , "T" 중 선택, 다중 선택 가능)
+    // - N = 일반 , B = 도서공연 , T = 대중교통
+    // - 미입력시 전체조회
     $TradeOpt = array(
         'N',
         'B',
         'T'
     );
 
-    // 과세형태, T-과세, N-비과세
+    // 과세형태 배열 ("T" , "N" 중 선택, 다중 선택 가능)
+    // - T = 과세 , N = 비과세
+    // - 미입력시 전체조회
     $TaxationType = array(
         'T',
         'N'
@@ -70,7 +80,8 @@
     $QString = '';
 
     // 가맹점 종사업장 번호
-    // └ 다수건 검색시 콤마(",")로 구분. 예) 1234,1000
+    // └ 다수건 검색시 콤마(",")로 구분. 예) "1234,1000"
+    // └ 미입력시 전제조회
     $FranchiseTaxRegID = "";
 
     try {
@@ -131,7 +142,7 @@
                                         <li> ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result->list[$i]->ntsresultDT ?></li>
                                         <li> ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->list[$i]->ntsresultCode ?></li>
                                         <li> ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->list[$i]->ntsresultMessage ?></li>
-                                        <li> printYN (인쇄여부) : <?php echo $result->list[$i]->printYN ?></li>
+                                        <li> printYN (인쇄여부) : <?php echo $result->list[$i]->printYN ? 'true' : 'false' ?></li>
                                     </ul>
                                 </fieldset>
                     <?php

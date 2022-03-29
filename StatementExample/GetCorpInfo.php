@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -38,11 +38,11 @@
                         <?php
                     } else {
                         ?>
-                        <li>ceoname(대표자 성명) : <?php echo $result->ceoname ?></li>
-                        <li>corpName(상호) : <?php echo $result->corpName ?></li>
-                        <li>addr(주소) : <?php echo $result->addr ?></li>
-                        <li>bizType(업태) : <?php echo $result->bizType ?></li>
-                        <li>bizClass(종목) : <?php echo $result->bizClass ?></li>
+                        <li>ceoname (대표자 성명) : <?php echo $result->ceoname ?></li>
+                        <li>corpName (상호) : <?php echo $result->corpName ?></li>
+                        <li>addr (주소) : <?php echo $result->addr ?></li>
+                        <li>bizType (업태) : <?php echo $result->bizType ?></li>
+                        <li>bizClass (종목) : <?php echo $result->bizClass ?></li>
                         <?php
                     }
                     ?>

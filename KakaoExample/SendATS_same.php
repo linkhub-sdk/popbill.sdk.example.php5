@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -20,7 +20,9 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
-    // 템플릿 코드 - 템플릿 목록 조회 (ListATSTemplate API)의 반환항목 확인
+    // 승인된 알림톡 템플릿코드
+    // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
+    //   팝빌사이트에서 승인된 알림톡 템플릿 코드를  확인 가능.
     $templateCode = '019020000163';
 
     // 팝빌에 사전 등록된 발신번호
@@ -36,14 +38,15 @@
     // 대체문자 내용
     $altContent = '대체문자 내용';
 
-    // 대체문자 전송유형 공백-미전송, A-대체문자내용 전송, C-알림톡내용 전송
+    // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
+    // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     $altSendType = 'C';
 
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     $requestNum = '';
 
@@ -93,7 +96,7 @@
                     <?php
                         if ( isset($receiptNum) ) {
                     ?>
-                            <li>receiptNum(접수번호) : <?php echo $receiptNum?></li>
+                            <li>receiptNum (접수번호) : <?php echo $receiptNum?></li>
                     <?php
                         } else {
                     ?>

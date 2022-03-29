@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen"/>
 
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
@@ -10,12 +10,13 @@
     <p class="heading1">팝빌 세금계산서 SDK PHP 5.x Example.</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>정방행/역발행/위수탁발행</legend>
+        <legend>정발행/역발행/위수탁발행</legend>
         <ul>
             <li><a href="CheckMgtKeyInUse.php">CheckMgtKeyInUse</a> (문서번호 확인)</li>
             <li><a href="RegistIssue.php">RegistIssue</a> (즉시 발행)</li>
             <li><a href="BulkSubmit.php">BulkSubmit</a> (초대량 발행 접수)</li>
             <li><a href="GetBulkResult.php">GetBulkResult</a> (초대량 접수결과 확인)</li>
+            <li><a href="Register.php">Register</a> (임시저장)</li>
             <li><a href="Update.php">Update</a> (수정)</li>
             <li><a href="Issue.php">Issue</a> (발행)</li>
             <li><a href="CancelIssue.php">CancelIssue</a> (발행취소)</li>

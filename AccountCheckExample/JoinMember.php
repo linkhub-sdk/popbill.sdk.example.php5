@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -20,29 +20,29 @@
     // 사업자번호, "-"제외 10자리
     $joinForm->CorpNum = '1234567890';
 
-    // 대표자성명
-    $joinForm->CEOName = '대표자성명';
+    // 대표자 성명, 최대 100자
+    $joinForm->CEOName = '대표자 성명';
 
-    // 사업자상호
-    $joinForm->CorpName = '테스트사업자상호';
+    // 회사명, 최대 200자
+    $joinForm->CorpName = '회사명';
 
-    // 사업자주소
-    $joinForm->Addr	= '테스트사업자주소';
+    // 사업장 주소, 최대 300자
+    $joinForm->Addr = '주소';
 
-    // 업태
+    // 업태, 최대 100자
     $joinForm->BizType = '업태';
 
-    // 종목
-    $joinForm->BizClass	= '종목';
+    // 종목, 최대 100자
+    $joinForm->BizClass = '종목';
 
-    // 담당자명
-    $joinForm->ContactName = '담당자상명';
+    // 담당자 성명, 최대 100자
+    $joinForm->ContactName = '담당자 성명';
 
-    // 담당자 이메일
-    $joinForm->ContactEmail	= 'tester@test.com';
+    // 담당자 이메일, 최대 100자
+    $joinForm->ContactEmail = '';
 
-    // 담당자 연락처
-    $joinForm->ContactTEL	= '07043042991';
+    // 담당자 연락처, 최대 20자
+    $joinForm->ContactTEL = '';
 
     // 아이디, 6자 이상 20자미만
     $joinForm->ID = 'userid_phpdd';

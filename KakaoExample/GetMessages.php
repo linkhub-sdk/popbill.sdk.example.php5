@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
-    $ReceiptNum = '020072911054400001';
+    $ReceiptNum = '022032411054400001';
 
     try {
         $result = $KakaoService->GetMessages($testCorpNum, $ReceiptNum);
@@ -45,7 +45,7 @@
                     <ul>
                         <li>contentType (카카오톡 유형) : <?php echo $result->contentType ?> </li>
                         <li>templateCode (템플릿 코드) : <?php echo $result->templateCode ? $result->templateCode : '' ?> </li>
-                        <li>plusFriendID (카카오톡채널 아이디) : <?php echo $result->plusFriendID ?> </li>
+                        <li>plusFriendID (검색용 아이디) : <?php echo $result->plusFriendID ?> </li>
                         <li>sendNum (발신번호) : <?php echo $result->sendNum ?> </li>
                         <li>altContent ([동보]대체문자 내용) : <?php echo $result->altContent ?> </li>
                         <li>altSendType (대체문자 전송유형) : <?php echo $result->altSendType ?> </li>
@@ -65,10 +65,10 @@
                         <fieldset class="fieldset2">
                             <legend> 버튼정보 [<?php echo $i+1 ?>/<?php echo Count($result->btns)?>]</legend>
                             <ul>
-                                <li> n (버튼명) : <?php echo $result->btns[$i]->n ?> </li>
-                                <li> t (버튼유형) : <?php echo $result->btns[$i]->t ?> </li>
-                                <li> u1 (버튼링크1) : <?php echo $result->btns[$i]->u1 ?> </li>
-                                <li> u2 (버튼링크2) : <?php echo $result->btns[$i]->u2 ?> </li>
+                                <li>n (버튼명) : <?php echo $result->btns[$i]->n ?> </li>
+                                <li>t (버튼유형) : <?php echo $result->btns[$i]->t ?> </li>
+                                <li>u1 (버튼링크1) : <?php echo $result->btns[$i]->u1 ?> </li>
+                                <li>u2 (버튼링크2) : <?php echo $result->btns[$i]->u2 ?> </li>
                             </ul>
                         </fieldset>
                         <?php
@@ -79,21 +79,22 @@
                         <fieldset class="fieldset2">
                             <legend> 개별 전송내역 [<?php echo $i+1 ?>/<?php echo Count($result->msgs)?>]</legend>
                             <ul>
-                                <li> state (전송상태 코드) : <?php echo $result->msgs[$i]->state ?> </li>
-                                <li> sendDT (전송일시) : <?php echo $result->msgs[$i]->sendDT ?> </li>
-                                <li> receiveNum (수신번호) : <?php echo $result->msgs[$i]->receiveNum ?> </li>
-                                <li> receiveName (수신자명) : <?php echo $result->msgs[$i]->receiveName ?> </li>
-                                <li> content (알림톡/친구톡 내용) : <?php echo $result->msgs[$i]->content ?> </li>
-                                <li> result (전송결과 코드) : <?php echo $result->msgs[$i]->result ?> </li>
-                                <li> resultDT (전송결과 수신일시) : <?php echo $result->msgs[$i]->resultDT ?> </li>
-                                <li> altContent (대체문자 내용) : <?php echo $result->msgs[$i]->content ?> </li>
-                                <li> altContentType (대체문자 전송유형) : <?php echo $result->msgs[$i]->altContentType ?> </li>
-                                <li> altSendDT (대체문자 전송일시) : <?php echo $result->msgs[$i]->altSendDT ?> </li>
-                                <li> altResult (대체문자 전송결과 코드) : <?php echo $result->msgs[$i]->altResult ?> </li>
-                                <li> altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->msgs[$i]->altResultDT ?> </li>
-                                <li> receiptNum (접수번호) : <?php echo $result->msgs[$i]->receiptNum ?> </li>
-                                <li> requestNum (요청번호) : <?php echo $result->msgs[$i]->requestNum ?> </li>
-                                <li> interOPRefKey (파트너 지정키) : <?php echo $result->msgs[$i]->interOPRefKey ?> </li>
+                                <li>state (전송상태 코드) : <?php echo $result->msgs[$i]->state ?> </li>
+                                <li>sendDT (전송일시) : <?php echo $result->msgs[$i]->sendDT ?> </li>
+                                <li>result (전송결과 코드) : <?php echo $result->msgs[$i]->result ?> </li>
+                                <li>resultDT (전송결과 수신일시) : <?php echo $result->msgs[$i]->resultDT ?> </li>
+                                <li>contentType (카카오톡 유형) : <?php echo $result->msgs[$i]->contentType ?> </li>
+                                <li>receiveNum (수신번호) : <?php echo $result->msgs[$i]->receiveNum ?> </li>
+                                <li>receiveName (수신자명) : <?php echo $result->msgs[$i]->receiveName ?> </li>
+                                <li>content (알림톡/친구톡 내용) : <?php echo $result->msgs[$i]->content ?> </li>
+                                <li>altContent (대체문자 내용) : <?php echo $result->msgs[$i]->content ?> </li>
+                                <li>altContentType (대체문자 전송유형) : <?php echo $result->msgs[$i]->altContentType ?> </li>
+                                <li>altSendDT (대체문자 전송일시) : <?php echo $result->msgs[$i]->altSendDT ?> </li>
+                                <li>altResult (대체문자 전송결과 코드) : <?php echo $result->msgs[$i]->altResult ?> </li>
+                                <li>altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->msgs[$i]->altResultDT ?> </li>
+                                <li>receiptNum (접수번호) : <?php echo $result->msgs[$i]->receiptNum ?> </li>
+                                <li>requestNum (요청번호) : <?php echo $result->msgs[$i]->requestNum ?> </li>
+                                <li>interOPRefKey (파트너 지정키) : <?php echo $result->msgs[$i]->interOPRefKey ?> </li>
                             </ul>
                         </fieldset>
                         <?php

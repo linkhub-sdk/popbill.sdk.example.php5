@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -19,7 +19,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20210702-001';
+    $mgtKey = '20220324-PHP5-001';
 
     try {
         $result = $StatementService->GetLogs($testCorpNum, $itemCode, $mgtKey);
@@ -48,12 +48,12 @@
                                 <fieldset class ="fieldset2">
                                 <legend>전자명세서 상태변경 이력 [<?php echo $i+1 ?>] </legend>
                                     <ul>
-                                        <li>docLogType(로그타입) : <?php echo $result[$i]->docLogType ?></li>
-                                        <li>log(이력정보) : <?php echo $result[$i]->log ?></li>
-                                        <li>procType(처리형태) : <?php echo $result[$i]->procType ?></li>
-                                        <li>procMemo(처리메모) : <?php echo $result[$i]->procMemo ?></li>
-                                        <li>regDT(등록일시) : <?php echo $result[$i]->regDT ?></li>
-                                        <li>ip(아이피) : <?php echo $result[$i]->ip ?></li>
+                                        <li>docLogType (로그타입) : <?php echo $result[$i]->docLogType ?></li>
+                                        <li>log (이력정보) : <?php echo $result[$i]->log ?></li>
+                                        <li>procType (처리형태) : <?php echo $result[$i]->procType ?></li>
+                                        <li>procMemo (처리메모) : <?php echo $result[$i]->procMemo ?></li>
+                                        <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
+                                        <li>ip (아이피) : <?php echo $result[$i]->ip ?></li>
                                     </ul>
                                 </fieldset>
                     <?php

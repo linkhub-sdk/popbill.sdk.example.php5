@@ -1,13 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example</title>
     </head>
 <?php
     /**
      * 파트너가 세금계산서 관리 목적으로 할당하는 문서번호의 사용여부를 확인합니다.
-     * - 문서번호는 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')로 구성 합니다.
+     * - 이미 사용 중인 문서번호는 중복 사용이 불가하고, 세금계산서가 삭제된 경우에만 문서번호의 재사용이 가능합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#CheckMgtKeyInUse
      */
 
@@ -17,7 +17,7 @@
     $testCorpNum = '1234567890';
 
     // 세금계산서 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20220324-PHP5-001';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::SELL;
@@ -46,7 +46,7 @@
                     <?php
                         } else {
                     ?>
-                        <li>문서문서번호 사용여부 : <?php echo $result ?></li>
+                        <li>문서번호 사용여부 : <?php echo $result ?></li>
                     <?php
                         }
                     ?>

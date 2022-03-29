@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -19,7 +19,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20210704-001';
+    $mgtKey = '20220324-PHP5-001';
 
     try {
         $result = $StatementService->GetInfo($testCorpNum, $itemCode, $mgtKey);
@@ -44,26 +44,28 @@
                     <?php
                         } else {
                     ?>
-                            <li> itemKey(아이템키) : <?php echo $result->itemKey ?></li>
-                            <li> itemCode(명세서 코드) : <?php echo $result->itemCode ?></li>
-                            <li> stateCode(상태코드) : <?php echo $result->stateCode ?></li>
-                            <li> taxType(세금형태) : <?php echo $result->taxType ?></li>
-                            <li> purposeType(영수/청구) : <?php echo $result->purposeType ?></li>
-                            <li> writeDate(작성일자) : <?php echo $result->writeDate ?></li>
-                            <li> senderCorpName(발신자 상호) : <?php echo $result->senderCorpName ?></li>
-                            <li> senderCorpNum(발신자 사업자번호) : <?php echo $result->senderCorpNum ?></li>
-                            <li> senderPrintYN(발신자 인쇄여부) : <?php echo $result->senderPrintYN ?></li>
-                            <li> receiverCorpName(수신자 상호) : <?php echo $result->receiverCorpName ?></li>
-                            <li> receiverCorpNum(수신자 사업자번호) : <?php echo $result->receiverCorpNum ?></li>
-                            <li> receiverPrintYN(수신자 인쇄여부) : <?php echo $result->receiverPrintYN ?></li>
-                            <li> supplyCostTotal(공급가액 합계) : <?php echo $result->supplyCostTotal ?></li>
-                            <li> taxTotal(세액 합계) : <?php echo $result->taxTotal ?></li>
-                            <li> issueDT(발행일시) : <?php echo $result->issueDT ?></li>
-                            <li> stateDT(상태 변경일시) : <?php echo $result->stateDT ?></li>
-                            <li> openYN(메일 개봉 여부) : <?php echo $result->openYN ?></li>
-                            <li> openDT(개봉 일시) : <?php echo $result->openDT ?></li>
-                            <li> stateMemo(상태메모) : <?php echo $result->stateMemo ?></li>
-                            <li> regDT(등록일시) : <?php echo $result->regDT ?></li>
+                            <li> itemCode (명세서 코드) : <?php echo $result->itemCode ?></li>
+                            <li> itemKey (팝빌번호) : <?php echo $result->itemKey ?></li>
+                            <li> invoiceNum (팝빌승인번호) : <?php echo $result->invoiceNum ?></li>
+                            <li> mgtKey (파트너 문서번호) : <?php echo $result->mgtKey ?></li>
+                            <li> taxType (과세형태) : <?php echo $result->taxType ?></li>
+                            <li> writeDate (작성일자) : <?php echo $result->writeDate ?></li>
+                            <li> regDT (임시저장일시) : <?php echo $result->regDT ?></li>
+                            <li> senderCorpName (발신자 상호) : <?php echo $result->senderCorpName ?></li>
+                            <li> senderCorpNum (발신자 사업자번호) : <?php echo $result->senderCorpNum ?></li>
+                            <li> senderPrintYN (발신자 인쇄여부) : <?php echo $result->senderPrintYN ? 'true' : 'false' ?></li>
+                            <li> receiverCorpName (수신자 상호) : <?php echo $result->receiverCorpName ?></li>
+                            <li> receiverCorpNum (수신자 사업자번호) : <?php echo $result->receiverCorpNum ?></li>
+                            <li> receiverPrintYN (수신자 인쇄여부) : <?php echo $result->receiverPrintYN ? 'true' : 'false' ?></li>
+                            <li> supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal ?></li>
+                            <li> taxTotal (세액 합계) : <?php echo $result->taxTotal ?></li>
+                            <li> purposeType (영수/청구) : <?php echo $result->purposeType ?></li>
+                            <li> issueDT (발행일시) : <?php echo $result->issueDT ?></li>
+                            <li> stateCode (상태코드) : <?php echo $result->stateCode ?></li>
+                            <li> stateDT (상태 변경일시) : <?php echo $result->stateDT ?></li>
+                            <li> stateMemo (상태메모) : <?php echo $result->stateMemo ?></li>
+                            <li> openYN (개봉 여부) : <?php echo $result->openYN ? 'true' : 'false' ?></li>
+                            <li> openDT (개봉 일시) : <?php echo $result->openDT ?></li>
                     <?php
                         }
                     ?>

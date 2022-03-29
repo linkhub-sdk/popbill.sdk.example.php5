@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
     /**
-     * 문자전송에 대한 전송결과 요약정보를 확인합니다.
+     * 팝빌에서 반환받은 접수번호를 통해 문자 전송상태 및 결과에 대한 요약정보를 확인합니다.
      * - https://docs.popbill.com/message/php/api#GetStates
      */
 

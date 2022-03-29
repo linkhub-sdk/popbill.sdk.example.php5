@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
     <title>팝빌 SDK PHP 5.X Example.</title>
   </head>
 <?php
@@ -21,7 +21,7 @@
 
     // 전자명세서 문서번호
     // 1~24자리 숫자, 영문, '-', '_' 조합으로 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20210628-PHP004';
+    $mgtKey = '20220324-PHP5-001';
 
     // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -40,13 +40,13 @@
      *                       전자명세서 정보
      ************************************************************/
 
-    // [필수] 기재상 작성일자
-    $Statement->writeDate = '20210628';
+    // 기재상 작성일자
+    $Statement->writeDate = '20220324';
 
-    // [필수] (영수, 청구) 중 기재
+    // (영수, 청구) 중 기재
     $Statement->purposeType = '영수';
 
-    // [필수]  과세형태, (과세, 영세, 면세) 중 기재
+    //  과세형태, (과세, 영세, 면세) 중 기재
     $Statement->taxType = '과세';
 
     // 맞춤양식코드, 미기재시 기본양식으로 처리
@@ -71,9 +71,9 @@
     $Statement->senderBizClass = '공급자 업종';
     $Statement->senderBizType = '공급자 업태';
     $Statement->senderContactName = '공급자 담당자명';
-    $Statement->senderTEL = '070-7070-0707';
-    $Statement->senderHP = '010-000-2222';
-    $Statement->senderEmail = 'test@test.com';
+    $Statement->senderTEL = '';
+    $Statement->senderHP = '';
+    $Statement->senderEmail = '';
 
 
     /************************************************************
@@ -88,29 +88,38 @@
     $Statement->receiverBizClass = '공급받는자 업종';
     $Statement->receiverBizType = '공급받는자 업태';
     $Statement->receiverContactName = '공급받는자 담당자명';
-    $Statement->receiverTEL = '010-0000-1111';
+    $Statement->receiverTEL = '';
 
-    $Statement->receiverHP = '010-1111-2222';
+    $Statement->receiverHP = '';
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
-    $Statement->receiverEmail = 'test@test.com';
+    $Statement->receiverEmail = '';
 
     /************************************************************
      *                       전자명세서 기재정보
      ************************************************************/
 
-    $Statement->supplyCostTotal = '200000' ;				// [필수] 공급가액 합계
-    $Statement->taxTotal = '20000';							// [필수] 세액 합계
-    $Statement->totalAmount = '220000';						// [필수] 합계금액 (공급가액 합계+세액합계)
+    $Statement->supplyCostTotal = '200000' ;				// 공급가액 합계
+    $Statement->taxTotal = '20000';							// 세액 합계
+    $Statement->totalAmount = '220000';						// 합계금액 (공급가액 합계+세액합계)
 
     $Statement->serialNum = '123';							// 기재상 일련번호 항목
     $Statement->remark1 = '비고1';
     $Statement->remark2 = '비고2';
     $Statement->remark3 = '비고3';
 
-    $Statement->businessLicenseYN = False;					//사업자등록증 첨부 여부
-    $Statement->bankBookYN = False;							//통장사본 첨부 여부
-    $Statement->smssendYN = False;							//발행시 안내문자 전송여부
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
+    $Statement->businessLicenseYN = False;
+
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
+    $Statement->bankBookYN = False;
+
+    //발행시 안내문자 전송여부
+    $Statement->smssendYN = False;
 
 
     /************************************************************
@@ -122,7 +131,7 @@
     $Statement->detailList[0] = new StatementDetail();
 
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20210628';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20220324';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -143,7 +152,7 @@
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20210628';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20220324';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';

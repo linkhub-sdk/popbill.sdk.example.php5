@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen"/>
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
     /**
-     * GetJobState(수집 상태 확인)를 통해 상태 정보 확인된 작업아이디를 활용하여 현금영수증 매입/매출 내역을 조회합니다.
+     * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보 확인된 작업아이디를 활용하여 현금영수증 매입/매출 내역을 조회합니다.
      * - https://docs.popbill.com/htcashbill/php/api#Search
      */
 
@@ -15,16 +15,20 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $testCorpNum = '1234567890';
 
-    // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
-    $JobID = '018092923000000001';
+    // 수집요청(requestJob API) 함수 호출 시 반환받은 작업아이디
+    $JobID = '';
 
-    // 현금영수증 종류 배열, N-일반 현금영수증, C-취소 현금영수증
+    // 문서형태 배열 ("N" 와 "C" 중 선택, 다중 선택 가능)
+    // └ N = 일반 현금영수증 , C = 취소현금영수증
+    // - 미입력 시 전체조회
     $TradeType = array(
         'N',
         'C'
     );
 
-    // 거래용도 배열, P-소득공제용, C-지출증빙용
+    // 거래구분 배열 ("P" 와 "C" 중 선택, 다중 선택 가능)
+    // └ P = 소득공제용 , C = 지출증빙용
+    // - 미입력 시 전체조회
     $TradeUsage = array(
         'P',
         'C'
@@ -73,7 +77,7 @@
                     <fieldset class="fieldset2">
                         <legend> 현금영수증 정보 [<?php echo $i + 1 ?>]</legend>
                         <ul>
-                            <li>ntsconfirmNum (국세청승인번호) : <?php echo $response->list[$i]->ntsconfirmNum ?></li>
+                            <li>ntsconfirmNum (국세청 승인번호) : <?php echo $response->list[$i]->ntsconfirmNum ?></li>
                             <li>tradeDate (거래일자) : <?php echo $response->list[$i]->tradeDate ?></li>
                             <li>tradeDT (거래일시) : <?php echo $response->list[$i]->tradeDT ?></li>
                             <li>tradeType (문서형태) : <?php echo $response->list[$i]->tradeType ?></li>

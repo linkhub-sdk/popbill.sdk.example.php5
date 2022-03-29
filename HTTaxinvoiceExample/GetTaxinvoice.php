@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     //국세청 승인번호
-    $NTSConfirmNum = '202112264100020300002e07';
+    $NTSConfirmNum = '20220324888888880000277c';
 
     try {
         $result = $HTTaxinvoiceService->GetTaxinvoice($testCorpNum, $NTSConfirmNum);
@@ -41,7 +41,6 @@
                     <?php
                         } else {
                     ?>
-                    <li>ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum ?></li>
                     <li>writeDate (작성일자) : <?php echo $result->writeDate ?></li>
                     <li>issueDT (발행일시) : <?php echo $result->issueDT ?></li>
                     <li>invoiceType (전자세금계산서 종류) : <?php echo $result->invoiceType ?></li>
@@ -58,8 +57,7 @@
                     <li>remark1 (비고1) : <?php echo $result->remark1 ?></li>
                     <li>remark2 (비고2) : <?php echo $result->remark2 ?></li>
                     <li>remark3 (비고3) : <?php echo $result->remark3 ?></li>
-                    <li>modifyCode (수정 사유코드) : <?php echo $result->modifyCode ?></li>
-                    <li>orgNTSConfirmNum (원본 전자세금계산서 국세청 승인번호) : <?php echo $result->orgNTSConfirmNum ?></li>
+                    <li>ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum ?></li>
                     <li>invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?></li>
                     <li>invoicerTaxRegID (공급자 종사업장번호) : <?php echo $result->invoicerTaxRegID ?></li>
                     <li>invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName ?></li>
@@ -91,6 +89,8 @@
                     <li>trusteeContactName (수탁자 담당자 성명) : <?php echo $result->trusteeContactName ?></li>
                     <li>trusteeTEL (수탁자 담당자 연락처) : <?php echo $result->trusteeTEL ?></li>
                     <li>trusteeEmail (수탁자 담당자 이메일) : <?php echo $result->trusteeEmail ?></li>
+                    <li>modifyCode (수정 사유코드) : <?php echo $result->modifyCode ?></li>
+                    <li>orgNTSConfirmNum (원본 전자세금계산서 국세청 승인번호) : <?php echo $result->orgNTSConfirmNum ?></li>
             <?php
             for ( $i = 0; $i < Count($result->detailList); $i++ ){
                 ?>

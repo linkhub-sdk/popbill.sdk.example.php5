@@ -18,8 +18,7 @@
     // 조회할 사업자번호 배열, 최대 1000건
     $CorpNumList = array(
         "1234567890",
-        "6798700433",
-        "123-12-12312",
+        "888-88-88888"
     );
 
     try {
@@ -56,12 +55,12 @@
             <fieldset class="fieldset2">
                 <legend>휴폐업조회 결과 [ <?php echo $i + 1 ?> ]</legend>
                 <ul>
-                    <li>사업자번호(corpNum) : <?php echo $result[$i]->corpNum ?></li>
-                    <li>사업자유형(taxType) : <?php echo $result[$i]->taxType ?></li>
-                    <li>휴폐업상태(state) : <?php echo $result[$i]->state ?></li>
-                    <li>휴폐업일자(stateDate) : <?php echo $result[$i]->stateDate ?></li>
-                    <li>과세유형 전환일자(typeDate) : <?php echo $result[$i]->typeDate ?></li>
-                    <li>국세청 확일일자(checkDate) : <?php echo $result[$i]->checkDate ?></li>
+                    <li>사업자번호 (corpNum) : <?php echo $result[$i]->corpNum ?></li>
+                    <li>사업자 과세유형 (taxType) : <?php echo $result[$i]->taxType ?></li>
+                    <li>과세유형 전환일자 (typeDate) : <?php echo $result[$i]->typeDate ?></li>
+                    <li>휴폐업상태 (state) : <?php echo $result[$i]->state ?></li>
+                    <li>휴폐업일자 (stateDate) : <?php echo $result[$i]->stateDate ?></li>
+                    <li>국세청 확인일자 (checkDate) : <?php echo $result[$i]->checkDate ?></li>
                 </ul>
             </fieldset>
             <?php

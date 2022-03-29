@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20220324-PHP5-001';
 
     try {
         $result = $TaxinvoiceService->GetDetailInfo($testCorpNum, $mgtKeyType, $mgtKey);
@@ -64,7 +64,7 @@
                             <li> invoicerTEL (공급자 담당자 연락처) : <?php echo $result->invoicerTEL  ?> </li>
                             <li> invoicerHP (공급자 담당자 휴대폰) : <?php echo $result->invoicerHP  ?> </li>
                             <li> invoicerEmail (공급자 담당자 메일) : <?php echo $result->invoicerEmail  ?> </li>
-                            <li> invoicerSMSSendYN (발행안내문자 전송여부) : <?php echo $result->invoicerSMSSendYN  ?> </li>
+                            <li> invoicerSMSSendYN (발행안내문자 전송여부) : <?php echo $result->invoicerSMSSendYN ? 'true' : 'false' ?> </li>
 
                             <li> invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum  ?> </li>
                             <li> invoiceeTaxRegID (공급받는자 종사업장 식별번호) : <?php echo $result->invoiceeTaxRegID  ?> </li>
@@ -80,7 +80,7 @@
                             <li> invoiceeTEL1 (공급받는자 담당자 연락처) : <?php echo $result->invoiceeTEL1  ?> </li>
                             <li> invoiceeHP1 (공급받는자 담당자 휴대폰) : <?php echo $result->invoiceeHP1  ?> </li>
                             <li> invoiceeEmail1 (공급받는자 담당자 메일) : <?php echo $result->invoiceeEmail1 ?> </li>
-                            <li> invoiceeSMSSendYN (역발행안내문자 전송여부) : <?php echo $result->invoiceeSMSSendYN  ?> </li>
+                            <li> invoiceeSMSSendYN (역발행안내문자 전송여부) : <?php echo $result->invoiceeSMSSendYN  ? 'true' : 'false'  ?> </li>
                             <li> closeDownState (공급받는자 휴폐업상태) : <?php echo $result->closeDownState ?> </li>
                             <li> closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result->closeDownStateDate ?> </li>
 
@@ -91,8 +91,8 @@
                             <li> remark3 (비고3) : <?php echo $result->remark3  ?> </li>
                             <li> kwon (권) : <?php echo $result->kwon  ?> </li>
                             <li> ho(호)  : <?php echo $result->ho  ?> </li>
-                            <li> businessLicenseYN (사업자등록증 이미지 첨부여부) : <?php echo $result->businessLicenseYN  ?> </li>
-                            <li> bankBookYN (통장사본이미지 첨부여부) : <?php echo $result->bankBookYN  ?> </li>
+                            <li> businessLicenseYN (사업자등록증 이미지 첨부여부) : <?php echo $result->businessLicenseYN  ? 'true' : 'false'  ?> </li>
+                            <li> bankBookYN (통장사본이미지 첨부여부) : <?php echo $result->bankBookYN  ? 'true' : 'false'  ?> </li>
 
                             <li> cash (현금) : <?php echo $result->cash ?> </li>
                             <li> chkBill (수표) : <?php echo $result->chkBill ?> </li>

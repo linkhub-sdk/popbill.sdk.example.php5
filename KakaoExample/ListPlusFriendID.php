@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -42,8 +42,8 @@
                             <fieldset class="fieldset2">
                             <legend> 카카오톡 채널 목록 [<?php echo $i+1?>]</legend>
                             <ul>
-                                <li>plusFriendID (카카오톡채널 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
-                                <li>plusFriendName (카카오톡채널 이름) : <?php echo $result[$i]->plusFriendName ?></li>
+                                <li>plusFriendID (검색용 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
+                                <li>plusFriendName (채널명) : <?php echo $result[$i]->plusFriendName ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
                                 <li>state (채널 상태) : <?php echo $result[$i]->state ?></li>
                                 <li>stateDT (채널 상태 일시) : <?php echo $result[$i]->stateDT ?></li>

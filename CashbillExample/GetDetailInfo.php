@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20211215-TEST100';
+    $mgtKey = '20220324-PHP5-001';
 
     try {
         $result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);
@@ -65,7 +65,7 @@
                             <li>orderNumber (주문번호) : <?php echo $result->orderNumber ?> </li>
                             <li>email (주문자 이메일) : <?php echo $result->email ?> </li>
                             <li>hp (주문자 휴대폰) : <?php echo $result->hp ?> </li>
-                            <li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN ?> </li>
+                            <li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN  ? 'true' : 'false' ?> </li>
                             <li>cancelType (취소사유) : <?php echo $result->cancelType ?> </li>
                     <?php
                         }

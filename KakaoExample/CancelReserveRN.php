@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 예약전송 요청시 할당한 전송요청번호
-    $requestNum = '20210701-001';
+    $requestNum = '';
 
     try {
         $result = $KakaoService->CancelReserveRN($testCorpNum ,$requestNum);

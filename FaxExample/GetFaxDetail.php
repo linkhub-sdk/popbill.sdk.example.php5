@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen"/>
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
 <?php
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 팩스전송 접수번호
-    $ReceiptNum = '021121517562800001';
+    $ReceiptNum = '022032417562800001';
 
     try {
         $result = $FaxService->GetFaxDetail($testCorpNum, $ReceiptNum);
@@ -55,17 +55,17 @@
                             <li> sendPageCnt (전체 페이지수) : <?php echo $result[$i]->sendPageCnt ?> </li>
                             <li> successPageCnt (성공 페이지수) : <?php echo $result[$i]->successPageCnt ?> </li>
                             <li> failPageCnt (실패 페이지수) : <?php echo $result[$i]->failPageCnt ?> </li>
-                            <li> refundPageCnt (환불 페이지수) : <?php echo $result[$i]->refundPageCnt ?> </li>
                             <li> cancelPageCnt (취소 페이지수) : <?php echo $result[$i]->cancelPageCnt ?> </li>
-                            <li> receiptDT (접수일시) : <?php echo $result[$i]->receiptDT ?> </li>
                             <li> reserveDT (예약일시) : <?php echo $result[$i]->reserveDT ?> </li>
+                            <li> receiptDT (접수일시) : <?php echo $result[$i]->receiptDT ?> </li>
                             <li> sendDT (전송일시) : <?php echo $result[$i]->sendDT ?> </li>
                             <li> resultDT (전송결과 수신일시) : <?php echo $result[$i]->resultDT ?> </li>
-                            <li> fileNames (전송파일명 리스트) : <?php echo implode(', ', $result[$i]->fileNames) ?> </li>
+                            <li> fileNames (전송 파일명 리스트) : <?php echo implode(', ', $result[$i]->fileNames) ?> </li>
                             <li> receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
                             <li> requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
                             <li> chargePageCnt (과금 페이지수) : <?php echo $result[$i]->chargePageCnt ?> </li>
-                            <li> tiffFileSize (변환파일용랑) : <?php echo $result[$i]->tiffFileSize ?>byte</li>
+                            <li> refundPageCnt (환불 페이지수) : <?php echo $result[$i]->refundPageCnt ?> </li>
+                            <li> tiffFileSize (변환파일용량) : <?php echo $result[$i]->tiffFileSize ?>byte</li>
                         </ul>
                     </fieldset>
                     <?php

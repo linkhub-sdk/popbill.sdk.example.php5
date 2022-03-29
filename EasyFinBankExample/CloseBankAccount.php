@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -24,9 +24,10 @@
     // 계좌번호
     $accountNumber = '';
 
-    // 해지유형, “일반”, “중도” 중 선택 기재
-    // 일반해지 – 이용중인 정액제 사용기간까지 이용후 정지
-    // 중도해지 – 요청일 기준으로 정지, 정액제 잔여기간은 일할로 계산되어 포인트 환불 (무료 이용기간 중 중도해지 시 전액 환불)
+    // 해지유형, “일반”, “중도” 중 택 1
+    // 일반(일반해지) – 이용중인 정액제 기간 만료 후 해지
+    // 중도(중도해지) – 해지 요청일 기준으로 정지되고 팝빌 담당자가 승인시 해지
+    // └ 중도일 경우, 정액제 잔여기간은 일할로 계산되어 포인트 환불 (무료 이용기간 중 해지하면 전액 환불)
     $closeType = '';
 
     try {

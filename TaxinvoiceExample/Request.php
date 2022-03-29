@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -22,7 +22,7 @@
     $mgtKeyType = ENumMgtKeyType::BUY;
 
     // 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20220324-PHP-004';
 
     // 메모
     $memo = '역발행 요청 메모입니다';

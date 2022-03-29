@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -19,10 +19,11 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20210703-001';
+    $mgtKey = '20220324-PHP5-002';
 
-    // 첨부된 파일의 아이디, GetFiles API 응답항목중 AttachedFile 항목
-    $FileID= 'A0450FBE-FF2D-43E7-ABAB-EFC17886C456.PBF';
+    // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
+    // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
+    $FileID= '';
 
     try {
         $result = $StatementService->DeleteFile($testCorpNum, $itemCode, $mgtKey, $FileID);

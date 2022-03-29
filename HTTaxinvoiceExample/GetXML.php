@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/Example.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
         <title>팝빌 SDK PHP 5.X Example.</title>
     </head>
 <?php
@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     //국세청 승인번호
-    $NTSConfirmNum = '2021110441000203000005a9';
+    $NTSConfirmNum = '20220324888888880000277c';
 
     try {
         $result = $HTTaxinvoiceService->GetXML($testCorpNum, $NTSConfirmNum);
@@ -33,7 +33,7 @@
             <fieldset class="fieldset1">
                 <legend>상세정보 확인 - XML</legend>
                 <ul>
-                    <?php
+                    <?php 
                         if ( isset($code) ) {
                     ?>
                             <li>Response.code : <?php echo $code ?> </li>

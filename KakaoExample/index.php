@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/Example.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../Example.css" media="screen"/>
 
     <title>팝빌 SDK PHP 5.X Example.</title>
 </head>
@@ -94,7 +94,7 @@
         <ul>
             <li><a href="CheckIsMember.php">CheckIsMember</a> (연동회원 가입여부 확인)</li>
             <li><a href="CheckID.php">CheckID</a> (연동회원 아이디 중복 확인)</li>
-            <li><a href="JoinMember.php">JoinMember</a> (연동회원사 신규가입)</li>
+            <li><a href="JoinMember.php">JoinMember</a> (연동회원 신규가입)</li>
             <li><a href="GetAccessURL.php">GetAccessURL</a> (팝빌 로그인 URL)</li>
             <li><a href="RegistContact.php">RegistContact</a> (담당자 추가)</li>
             <li><a href="GetContactInfo.php">GetContactInfo</a> (담당자 정보 확인)</li>
