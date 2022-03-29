@@ -47,6 +47,7 @@
                         <li>templateCode (템플릿 코드) : <?php echo $result->templateCode ? $result->templateCode : '' ?> </li>
                         <li>plusFriendID (검색용 아이디) : <?php echo $result->plusFriendID ?> </li>
                         <li>sendNum (발신번호) : <?php echo $result->sendNum ?> </li>
+                        <li>altSubject ([동보]대체문자 제목) : <?php echo $result->altSubject ?> </li>
                         <li>altContent ([동보]대체문자 내용) : <?php echo $result->altContent ?> </li>
                         <li>altSendType (대체문자 전송유형) : <?php echo $result->altSendType ?> </li>
                         <li>reserveDT (예약일시) : <?php echo $result->reserveDT ?> </li>
@@ -87,7 +88,8 @@
                                 <li>receiveNum (수신번호) : <?php echo $result->msgs[$i]->receiveNum ?> </li>
                                 <li>receiveName (수신자명) : <?php echo $result->msgs[$i]->receiveName ?> </li>
                                 <li>content (알림톡/친구톡 내용) : <?php echo $result->msgs[$i]->content ?> </li>
-                                <li>altContent (대체문자 내용) : <?php echo $result->msgs[$i]->content ?> </li>
+                                <li>altSubject (대체문자 제목) : <?php echo $result->msgs[$i]->altSubject ?> </li>
+                                <li>altContent (대체문자 내용) : <?php echo $result->msgs[$i]->altContent ?> </li>
                                 <li>altContentType (대체문자 전송유형) : <?php echo $result->msgs[$i]->altContentType ?> </li>
                                 <li>altSendDT (대체문자 전송일시) : <?php echo $result->msgs[$i]->altSendDT ?> </li>
                                 <li>altResult (대체문자 전송결과 코드) : <?php echo $result->msgs[$i]->altResult ?> </li>

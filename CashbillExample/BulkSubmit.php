@@ -104,8 +104,7 @@
         $result = $CashbillService->BulkSubmit($testCorpNum, $submitID, $cashbillList);
         $code = $result->code;
         $message = $result->message;
-        $confirmNum = $result->confirmNum;
-        $tradeDate = $result->tradeDate;
+        $receiptID = $result->receiptID;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

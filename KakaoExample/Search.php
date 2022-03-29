@@ -99,6 +99,7 @@
                                     <li>receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
                                     <li>receiveName (수신자명) : <?php echo $result->list[$i]->receiveName ?> </li>
                                     <li>content (알림톡/친구톡 내용) : <?php echo $result->list[$i]->content ?> </li>
+                                    <li>altSubject (대체문자 제목) : <?php echo $result->list[$i]->altSubject ?> </li>
                                     <li>altContent (대체문자 내용) : <?php echo $result->list[$i]->altContent ?> </li>
                                     <li>altContentType (대체문자 전송타입) : <?php echo $result->list[$i]->altContentType ?> </li>
                                     <li>altSendDT (대체문자 전송일시) : <?php echo $result->list[$i]->altSendDT ?> </li>

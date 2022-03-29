@@ -77,6 +77,7 @@
     //     'u2' => 'http://www.popbill.com',
     // );
 
+    // 대체문자 제목
     $altSubject = '대체문자 제목';
 
     try {

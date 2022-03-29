@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 전자세금계산서 1건의 상세정보를 XML 형태의 문자열로 반환합니다.
+     * 전자세금계산서 1건의 상세정보를 XML로 반환합니다.
      * - https://docs.popbill.com/taxinvoice/php/api#GetXML
      */
 

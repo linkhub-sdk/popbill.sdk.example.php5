@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 접수시 기재한 SubmitID를 사용하여 세금계산서 접수결과를 확인합니다.
+     * 접수시 기재한 SubmitID를 사용하여 현금영수증 접수결과를 확인합니다.
      * - https://docs.popbill.com/cashbill/php/api#GetBulkResult
      */
 
@@ -54,8 +54,8 @@
                         <li>txResultCode (접수 결과코드) : <?php echo $result->txResultCode ?> </li>
                         <li>txStartDT (발행처리 시작일시) : <?php echo $result->txStartDT ?> </li>
                         <li>txEndDT (발행처리 완료일시) : <?php echo $result->txEndDT ?> </li>
-                        <li>receiptDT(접수일시) : <?php echo $result->receiptDT ?> </li>
-                        <li>receiptID(접수아이디) : <?php echo $result->receiptID ?> </li>
+                        <li>receiptDT (접수일시) : <?php echo $result->receiptDT ?> </li>
+                        <li>receiptID (접수아이디) : <?php echo $result->receiptID ?> </li>
                         <?php
                         for ( $i = 0; $i < Count($result->issueResult); $i++ ) {
                         ?>
