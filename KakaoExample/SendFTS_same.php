@@ -73,6 +73,7 @@
     $reserveDT = null;
 
     // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
     $altSubject = '대체문자 제목';
 
     try {

@@ -21,8 +21,11 @@
     // 문서번호
     $mgtKey = '20220324-PHP5-001';
 
+    // 팝빌회원 아이디
+    $userID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->GetXML($testCorpNum, $mgtKeyType, $mgtKey);
+        $result = $TaxinvoiceService->GetXML($testCorpNum, $mgtKeyType, $mgtKey, $userID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

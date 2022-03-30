@@ -46,7 +46,7 @@
                                 <li>plusFriendName (채널명) : <?php echo $result[$i]->plusFriendName ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
                                 <li>state (채널 상태) : <?php echo $result[$i]->state ?></li>
-                                <li>stateDT (채널 상태 확인 일시) : <?php echo $result[$i]->stateDT ?></li>
+                                <li>stateDT (채널 상태 일시) : <?php echo $result[$i]->stateDT ?></li>
                             </ul>
                             </fieldset>
                     <?php

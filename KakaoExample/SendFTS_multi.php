@@ -54,6 +54,7 @@
             // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
             'interOPRefKey' => '20220324-'.$i,
             // 대체문자 제목
+            // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
             'altsjt' => '대체문자 제목'.$i
         );
 
@@ -114,8 +115,13 @@
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
 
+    // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    // - 수신정보 배열에 대체문자 제목이 입력되지 않은 경우 적용.
+    $altSubject = '대체문자 제목';
+
     try {
-        $receiptNum = $KakaoService->SendFTS($testCorpNum, $plusFriendID, $sender, '', '', $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $testUserID, $requestNum);
+        $receiptNum = $KakaoService->SendFTS($testCorpNum, $plusFriendID, $sender, '', '', $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $testUserID, $requestNum, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

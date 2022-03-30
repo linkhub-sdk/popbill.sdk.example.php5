@@ -19,10 +19,13 @@
     // 확인할 발신번호
     $SenderNumber = '';
 
+    // 팝빌회원 아이디
+    $userID = 'testkorea';
+
     try {
-        $result = $KakaoService->CheckSenderNumber($testCorpNum ,$SenderNumber);
-        $code = $result->code;
-        $message = $result->message;
+        $Response = $KakaoService->CheckSenderNumber($testCorpNum ,$SenderNumber, $userID);
+        $code = $Response->code;
+        $message = $Response->message;
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

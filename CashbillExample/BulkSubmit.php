@@ -19,15 +19,17 @@
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
     $submitID = "20220324-PHP5-BULK";
 
+    // 최대 100건
+    $cashbillList = array();
 
-    for($i=0; $i<10; $i++) {
+    for($i=0; $i<100; $i++) {
         // 현금영수증 객체 생성
         $Cashbill = new Cashbill();
 
         // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
         $Cashbill->mgtKey = $submitID . "-" . $i;
 
-        // 문서형태, 승인거래 기재
+        // 문서형태, {승인거래, 취소거래} 중 기재
         $Cashbill->tradeType = '승인거래';
 
         // 거래구분, (소득공제용, 지출증빙용) 중 기재
@@ -36,6 +38,14 @@
         // 거래유형, {일반, 도서공연, 대중교통} 중 기재
         // - 미입력시 기본값 "일반" 처리
         $Cashbill->tradeOpt = '일반';
+
+        // // 원본 현금영수증 국세청 승인번호
+        // // 취소 현금영수증 작성시 필수
+        // $Cashbill->orgConfirmNum = '';
+        //
+        // // 원본 현금영수증 거래일자
+        // // 취소 현금영수증 작성시 필수
+        // $Cashbill->orgTradeDate = '';
 
         // 과세형태, (과세, 비과세) 중 기재
         $Cashbill->taxationType = '과세';
@@ -100,8 +110,11 @@
         $cashbillList[] = $Cashbill;
     }
 
+    // 팝빌회원 아이디
+    $userID = 'testkorea';
+
     try {
-        $result = $CashbillService->BulkSubmit($testCorpNum, $submitID, $cashbillList);
+        $result = $CashbillService->BulkSubmit($testCorpNum, $submitID, $cashbillList, $userID);
         $code = $result->code;
         $message = $result->message;
         $receiptID = $result->receiptID;
