@@ -30,6 +30,12 @@
     // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     $altSendType = 'A';
 
+    // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    // - 수신정보 배열에 대체문자 제목이 입력되지 않은 경우 적용.
+    // - 모든 수신자에게 다른 제목을 보낼 경우 62번 라인에 있는 altsjt 를 이용.
+    $altSubject = '대체문자 제목';
+
     // 광고성 메시지 여부 ( true , false 중 택 1)
     // └ true = 광고 , false = 일반
     // - 미입력 시 기본값 false 처리
@@ -49,13 +55,15 @@
             'rcvnm' => '수신자명',
             // 친구톡 내용, 최대 1000자
             'msg' => '친구톡 메시지 내용'.$i,
-            // 대체문자
-            'altmsg' => '대체문자 내용'.$i,
-            // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
-            'interOPRefKey' => '20220324-'.$i,
             // 대체문자 제목
             // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-            'altsjt' => '대체문자 제목'.$i
+            // - 모든 수신자에게 동일한 제목을 보낼 경우 배열의 모든 원소에 동일한 값을 입력하거나
+            //   값을 입력하지 않고 37번 라인에 있는 altSubject 를 이용
+            'altsjt' => '대체문자 제목'.$i,
+            // 대체문자 내용
+            'altmsg' => '대체문자 내용'.$i,
+            // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
+            'interOPRefKey' => '20220324-'.$i
         );
 
         // // 수신자별 개별 버튼내용 전송하는 경우
@@ -109,16 +117,11 @@
         // [앱링크] iOS, [웹링크] Mobile
         'u1' => 'http://www.popbill.com',
         // [앱링크] Android, [웹링크] PC URL
-        'u2' => 'http://www.popbill.com',
+        'u2' => 'http://www.popbill.com'
     );
 
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
-
-    // 대체문자 제목
-    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-    // - 수신정보 배열에 대체문자 제목이 입력되지 않은 경우 적용.
-    $altSubject = '대체문자 제목';
 
     try {
         $receiptNum = $KakaoService->SendFTS($testCorpNum, $plusFriendID, $sender, '', '', $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $testUserID, $requestNum, $altSubject);

@@ -33,6 +33,10 @@
     // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     $altSendType = 'A';
 
+    // 대체문자 제목
+    // 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    $altSubject = '대체문자 제목';
+
     // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     $altContent = '대체문자 내용';
@@ -67,7 +71,7 @@
         // [앱링크] iOS, [웹링크] Mobile
         'u1' => 'http://www.popbill.com',
         // [앱링크] Android, [웹링크] PC URL
-        'u2' => 'http://www.popbill.com',
+        'u2' => 'http://www.popbill.com'
     );
 
     // 예약전송일시, yyyyMMddHHmmss
@@ -81,10 +85,6 @@
     // └ 수신자가 친구톡 상단 이미지 클릭시 호출되는 URL
     // 미입력시 첨부된 이미지를 링크 기능 없이 표시
     $imageURL = 'http://popbill.com';
-
-    // 대체문자 제목
-    // 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-    $altSubject = '대체문자 제목';
 
     try {
         $receiptNum = $KakaoService->SendFMS($testCorpNum, $plusFriendID, $sender,

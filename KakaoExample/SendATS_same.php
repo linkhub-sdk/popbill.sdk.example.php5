@@ -35,12 +35,17 @@
     $content .= '팝빌 파트너센터 : 1600-8536'.PHP_EOL;
     $content .= 'support@linkhub.co.kr'.PHP_EOL;
 
-    // 대체문자 내용
-    $altContent = '대체문자 내용';
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
+    $altSendType = 'C';
+
+    // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    $altSubject = '대체문자 제목';
 
     // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
-    $altSendType = 'C';
+    $altContent = '대체문자 내용';
 
     // 예약전송일시, yyyyMMddHHmmss
     $reserveDT = null;
@@ -58,7 +63,7 @@
             // 수신자명
             'rcvnm' => '수신자명',
             // 파트너 지정키, 대량전송시, 수신자 구별용 메모.
-            'interOPRefKey' => '20220324-'.$i,
+            'interOPRefKey' => '20220324-'.$i
         );
     }
 
@@ -74,12 +79,8 @@
     //     // 링크1, [앱링크] iOS, [웹링크] Mobile
     //     'u1' => 'https://www.popbill.com',
     //     // 링크2, [앱링크] Android, [웹링크] PC URL
-    //     'u2' => 'http://www.popbill.com',
+    //     'u2' => 'http://www.popbill.com'
     // );
-
-    // 대체문자 제목
-    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-    $altSubject = '대체문자 제목';
 
     try {
         $receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $reserveDT, $testUserID, $requestNum, $buttons, $altSubject);
