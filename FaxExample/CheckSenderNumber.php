@@ -19,11 +19,8 @@
     // 확인할 발신번호
     $SenderNumber = '';
 
-    // 팝빌회원 아이디
-    $userID = 'testkorea';
-
     try {
-        $Response = $FaxService->CheckSenderNumber($testCorpNum ,$SenderNumber, $userID);
+        $Response = $FaxService->CheckSenderNumber($testCorpNum ,$SenderNumber);
         $code = $Response->code;
         $message = $Response->message;
     }

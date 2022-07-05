@@ -15,9 +15,6 @@
     //팝빌회원 사업자번호
     $MemberCorpNum = "1234567890";
 
-    //팝빌회원 아이디
-    $testUserID = "testkorea";
-
     // 기관코드
     $BankCode = "";
 
@@ -33,7 +30,7 @@
     $IdentityNum = "";
 
     try {
-        $result = $AccountCheckService->CheckDepositorInfo($MemberCorpNum, $BankCode, $AccountNumber, $IdentityNumType, $IdentityNum, $testUserID);
+        $result = $AccountCheckService->CheckDepositorInfo($MemberCorpNum, $BankCode, $AccountNumber, $IdentityNumType, $IdentityNum);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

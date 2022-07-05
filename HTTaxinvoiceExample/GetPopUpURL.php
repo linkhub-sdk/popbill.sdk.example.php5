@@ -19,8 +19,11 @@
     // 국세청 승인번호
     $NTSConfirmNum = "20220324888888880000277c";
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $url = $HTTaxinvoiceService->getPopUpURL($testCorpNum, $NTSConfirmNum);
+        $url = $HTTaxinvoiceService->getPopUpURL($testCorpNum, $NTSConfirmNum, $testUserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

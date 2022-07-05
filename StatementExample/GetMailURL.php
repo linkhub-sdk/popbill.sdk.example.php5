@@ -22,8 +22,11 @@
     // 전자명세서 문서번호
     $mgtKey = '20220324-PHP5-001';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $url = $StatementService->GetMailURL($testCorpNum, $itemCode, $mgtKey);
+        $url = $StatementService->GetMailURL($testCorpNum, $itemCode, $mgtKey, $testUserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

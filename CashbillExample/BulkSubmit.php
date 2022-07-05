@@ -110,11 +110,8 @@
         $cashbillList[] = $Cashbill;
     }
 
-    // 팝빌회원 아이디
-    $userID = 'testkorea';
-
     try {
-        $result = $CashbillService->BulkSubmit($testCorpNum, $submitID, $cashbillList, $userID);
+        $result = $CashbillService->BulkSubmit($testCorpNum, $submitID, $cashbillList);
         $code = $result->code;
         $message = $result->message;
         $receiptID = $result->receiptID;

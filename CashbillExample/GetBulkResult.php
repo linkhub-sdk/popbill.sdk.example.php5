@@ -18,11 +18,8 @@
     // 초대량 발행 접수시 기재한 제출아이디
     $submitID = '20220324-PHP5-BULK';
 
-    // 팝빌회원 아이디
-    $testUserID = 'testkorea';
-
     try {
-        $result = $CashbillService->GetBulkResult($testCorpNum, $submitID, $testUserID);
+        $result = $CashbillService->GetBulkResult($testCorpNum, $submitID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

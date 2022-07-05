@@ -15,9 +15,6 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $testCorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $testUserID = 'testkorea';
-
     // 수집 요청(RequestJob) 호출시 반환받은 작업아이디
     $JobID = '022032417000000014';
 
@@ -46,7 +43,7 @@
 
     try {
         $response = $EasyFinBankService->Search ( $testCorpNum, $JobID, $TradeType, $SearchString,
-          $Page, $PerPage, $Order, $testUserID );
+          $Page, $PerPage, $Order );
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

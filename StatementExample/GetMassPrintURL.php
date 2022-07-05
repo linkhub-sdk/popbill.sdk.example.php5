@@ -24,8 +24,11 @@
         '20220324-PHP5-002'
     );
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $url = $StatementService->GetMassPrintURL($testCorpNum, $itemCode, $mgtKeyList);
+        $url = $StatementService->GetMassPrintURL($testCorpNum, $itemCode, $mgtKeyList, $testUserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

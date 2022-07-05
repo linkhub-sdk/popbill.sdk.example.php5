@@ -25,8 +25,11 @@
         '20220324-PHP5-002',
     );
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $url = $TaxinvoiceService->GetMassPrintURL($testCorpNum, $mgtKeyType, $MgtKeyList);
+        $url = $TaxinvoiceService->GetMassPrintURL($testCorpNum, $mgtKeyType, $MgtKeyList, $testUserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

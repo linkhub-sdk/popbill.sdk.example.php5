@@ -14,12 +14,8 @@
 
     // 팝빌회원 사업자번호, '-'제외 10자리
     $testCorpNum = '1234567890';
-
-    // 팝빌회원 아이디
-    $testUserID = 'testkorea';
-
     try {
-        $result = $ClosedownService->GetChargeInfo($testCorpNum, $testUserID);
+        $result = $ClosedownService->GetChargeInfo($testCorpNum);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

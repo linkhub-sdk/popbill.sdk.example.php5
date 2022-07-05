@@ -19,9 +19,6 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $testCorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $testUserID = 'testkorea';
-
     // 세금계산서 공급받는자 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     $invoiceeMgtKey = '20220324-PHP5-003';
@@ -246,7 +243,7 @@
     $memo = '즉시요청 메모';
 
     try {
-        $result = $TaxinvoiceService->RegistRequest($testCorpNum, $Taxinvoice, $memo, $testUserID);
+        $result = $TaxinvoiceService->RegistRequest($testCorpNum, $Taxinvoice, $memo);
         $code = $result->code;
         $message = $result->message;
     } catch (PopbillException $pe) {

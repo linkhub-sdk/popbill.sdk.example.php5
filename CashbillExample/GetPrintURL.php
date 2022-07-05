@@ -19,8 +19,11 @@
     // 문서번호
     $mgtKey = '20220324-PHP5-001';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $url = $CashbillService->GetPrintURL($testCorpNum, $mgtKey);
+        $url = $CashbillService->GetPrintURL($testCorpNum, $mgtKey, $testUserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
