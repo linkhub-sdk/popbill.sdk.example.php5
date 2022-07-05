@@ -107,6 +107,7 @@
                                     <li> tranNet (전송처리 이동통신사명) : <?php echo $result->list[$i]->tranNet ?> </li>
                                     <li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
                                     <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
+                                    <li> interOPRefKey (파트너 지정키) : <?php echo $result[$i]->interOPRefKey ?> </li>
                                 </ul>
                             </fieldset>
                     <?php

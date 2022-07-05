@@ -104,6 +104,7 @@
                             <li> fileNames (전송 파일명 리스트) : <?php echo implode(', ', $result->list[$i]->fileNames) ?> </li>
                             <li> receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
                             <li> requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>
+                            <li> interOPRefKey (파트너 지정키) : <?php echo $result->list[$i]->interOPRefKey ?> </li>
                             <li> chargePageCnt (과금 페이지수) : <?php echo $result->list[$i]->chargePageCnt ?> </li>
                             <li> refundPageCnt (환불 페이지수) : <?php echo $result->list[$i]->refundPageCnt ?> </li>
                             <li> tiffFileSize (변환파일용량) : <?php echo $result->list[$i]->tiffFileSize ?> </li>
