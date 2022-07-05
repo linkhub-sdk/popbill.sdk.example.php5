@@ -15,8 +15,13 @@
     // 팝빌 회원 사업자 번호, "-"제외 10자리
     $testCorpNum = '1234567890';
 
+    // 수신번호 유형 : "일반" / "지능" 중 택 1
+    // └ 일반망 : 지능망을 제외한 번호
+    // └ 지능망 : 030*, 050*, 070*, 080*, 대표번호
+    $receiveNumType = '일반';
+
     try {
-        $unitCost= $FaxService->GetUnitCost($testCorpNum);
+        $unitCost= $FaxService->GetUnitCost($testCorpNum, $receiveNumType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

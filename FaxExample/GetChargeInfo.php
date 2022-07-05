@@ -18,8 +18,13 @@
     // 팝빌회원 아이디
     $testUserID = 'testkorea';
 
+    // 수신번호 유형 : "일반" / "지능" 중 택 1
+    // └ 일반망 : 지능망을 제외한 번호
+    // └ 지능망 : 030*, 050*, 070*, 080*, 대표번호
+    $receiveNumType = '지능';
+
     try {
-        $result = $FaxService->GetChargeInfo($testCorpNum, $testUserID);
+        $result = $FaxService->GetChargeInfo($testCorpNum, $testUserID, $receiveNumType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
