@@ -50,6 +50,9 @@
                         <li>plusFriendID (검색용 아이디) : <?php echo $templateInfo->plusFriendID ?></li>
                         <li>ads (광고메시지 내용) : <?php echo $templateInfo->ads ?></li>
                         <li>appendix (부가메시지 내용) : <?php echo $templateInfo->appendix ?></li>
+                        <li>secureYN (보안템플릿 여부) : <?php echo $templateInfo->secureYN ?></li>
+                        <li>state (템플릿 상태) : <?php echo $templateInfo->state ?></li>
+                        <li>stateDT (템플릿 상태 일시) : <?php echo $templateInfo->stateDT ?></li>
                         <?php
                         if (isset($templateInfo->btns)) {
                             for ($j = 0; $j < Count($templateInfo->btns); $j++) {

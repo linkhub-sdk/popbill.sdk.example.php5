@@ -48,6 +48,9 @@
                                 <li>plusFriendID (검색용 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
                                 <li>ads (광고메시지 내용) : <?php echo $result[$i]->ads ?></li>
                                 <li>appendix (부가메시지 내용) : <?php echo $result[$i]->appendix ?></li>
+                                <li>secureYN (보안템플릿 여부) : <?php echo $result[$i]->secureYN ?></li>
+                                <li>state (템플릿 상태) : <?php echo $result[$i]->state ?></li>
+                                <li>stateDT (템플릿 상태 일시) : <?php echo $result[$i]->stateDT ?></li>
                             </ul>
                             <?php
                             if (isset($result[$i]->btns)) {
