@@ -23,7 +23,7 @@
 
     // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
     // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
-    $FileID= '';
+    $FileID= '10223612-BAE6-491A-9496-62705E978DA5.PBF';
 
     try {
         $result = $StatementService->DeleteFile($testCorpNum, $itemCode, $mgtKey, $FileID);
