@@ -11,19 +11,20 @@
     <fieldset class="fieldset1">
         <legend>팝빌 API 목록</legend>
         <ul>
-            <li><a href="TaxinvoiceExample">TaxinvoiceService</a> - 전자세금계산서 API</li>
-            <li><a href="StatementExample">StatementService</a> - 전자명세서 API</li>
-            <li><a href="CashbillExample">CashbillService</a> - 현금영수증 API</li>
+            <li><a href="TaxinvoiceExample">TaxinvoiceExample</a> - 전자세금계산서 API</li>
+            <li><a href="StatementExample">StatementExample</a> - 전자명세서 API</li>
+            <li><a href="CashbillExample">CashbillExample</a> - 현금영수증 API</li>
 
             <li><a href="HTTaxinvoiceExample">HTTaxinvoiceExample</a> - 홈택스연동 (전자세금계산서) API</li>
             <li><a href="HTCashbillExample">HTCashbillExample</a> - 홈택스연동 (현금영수증) API</li>
-            <li><a href="ClosedownExample">ClosedownService</a> - 휴폐업조회 API</li>
-            <li><a href="EasyFinBankExample">EasyFinBankService</a> - 계좌조회 API</li>
-            <li><a href="AccountCheckExample">AccountCheckService</a> - 예금주조회 API</li>
+            <li><a href="ClosedownExample">ClosedownExample</a> - 휴폐업조회 API</li>
+            <li><a href="BizInfoCheckExample">BizInfoCheckExample</a> - 기업정보조회 API</li>
+            <li><a href="EasyFinBankExample">EasyFinBankExample</a> - 계좌조회 API</li>
+            <li><a href="AccountCheckExample">AccountCheckExample</a> - 예금주조회 API</li>
 
-            <li><a href="MessageExample">MessageService</a> - 문자메시지 API</li>
-            <li><a href="FaxExample">FaxService</a> - 팩스 API</li>
-            <li><a href="KakaoExample">KakaoService</a> - 카카오톡 API</li>
+            <li><a href="MessageExample">MessageExample</a> - 문자메시지 API</li>
+            <li><a href="FaxExample">FaxExample</a> - 팩스 API</li>
+            <li><a href="KakaoExample">KakaoExample</a> - 카카오톡 API</li>
         </ul>
     </fieldset>
 </div>
