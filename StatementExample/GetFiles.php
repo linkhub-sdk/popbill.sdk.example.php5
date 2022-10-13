@@ -50,10 +50,10 @@
                             <fieldset class ="fieldset2">
                                 <legend> 첨부파일 [<?php echo $i+1 ?>] </legend>
                                 <ul>
-                                    <li> serialNum (첨부파일 일련번호) : <?php echo $result[$i]->serialNum ?></li>
-                                    <li> attachedFile (파일아이디-첨부파일 삭제시 사용) : <?php echo $result[$i]->attachedFile ?></li>
-                                    <li> displayName (첨부파일명) : <?php echo $result[$i]->displayName ?></li>
-                                    <li> regDT (첨부일시) : <?php echo $result[$i]->regDT ?></li>
+                                    <li>serialNum (첨부파일 일련번호) : <?php echo $result[$i]->serialNum ?></li>
+                                    <li>attachedFile (파일아이디-첨부파일 삭제시 사용) : <?php echo $result[$i]->attachedFile ?></li>
+                                    <li>displayName (첨부파일명) : <?php echo $result[$i]->displayName ?></li>
+                                    <li>regDT (첨부일시) : <?php echo $result[$i]->regDT ?></li>
                                 </ul>
                             </fieldset>
                     <?php

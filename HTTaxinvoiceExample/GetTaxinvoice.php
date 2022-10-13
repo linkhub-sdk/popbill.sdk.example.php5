@@ -97,15 +97,15 @@
                     <fieldset class="fieldset2">
                         <legend> detailList[<?php echo $i+1 ?>] </legend>
                         <ul>
-                            <li> serialNum (일련번호) : <?php echo $result->detailList[$i]->serialNum ?> </li>
-                            <li> purchaseDT (거래일자) : <?php echo $result->detailList[$i]->purchaseDT ?> </li>
-                            <li> itemName (품명) : <?php echo $result->detailList[$i]->itemName ?> </li>
-                            <li> spec (규격) : <?php echo $result->detailList[$i]->spec ?> </li>
-                            <li> qty (수량) : <?php echo $result->detailList[$i]->qty ?> </li>
-                            <li> unitCost (단가) : <?php echo $result->detailList[$i]->unitCost ?> </li>
-                            <li> supplyCost (공급가액) : <?php echo $result->detailList[$i]->supplyCost ?> </li>
-                            <li> tax (세액) : <?php echo $result->detailList[$i]->tax ?> </li>
-                            <li> remark (비고) : <?php echo $result->detailList[$i]->remark ?> </li>
+                            <li>serialNum (일련번호) : <?php echo $result->detailList[$i]->serialNum ?> </li>
+                            <li>purchaseDT (거래일자) : <?php echo $result->detailList[$i]->purchaseDT ?> </li>
+                            <li>itemName (품명) : <?php echo $result->detailList[$i]->itemName ?> </li>
+                            <li>spec (규격) : <?php echo $result->detailList[$i]->spec ?> </li>
+                            <li>qty (수량) : <?php echo $result->detailList[$i]->qty ?> </li>
+                            <li>unitCost (단가) : <?php echo $result->detailList[$i]->unitCost ?> </li>
+                            <li>supplyCost (공급가액) : <?php echo $result->detailList[$i]->supplyCost ?> </li>
+                            <li>tax (세액) : <?php echo $result->detailList[$i]->tax ?> </li>
+                            <li>remark (비고) : <?php echo $result->detailList[$i]->remark ?> </li>
                         </ul>
                     </fieldset>
             <?php

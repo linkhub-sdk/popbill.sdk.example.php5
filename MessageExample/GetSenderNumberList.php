@@ -36,10 +36,10 @@
             ?>
                     <fieldset class="fieldset2">
                         <ul>
-                            <li> number (발신번호) : <?php echo $result[$i]->number ?></li>
-                            <li> representYN (대표번호 지정여부) : <?php echo $result[$i]->representYN ? 'true' : 'false' ?></li>
-                            <li> state (등록상태) : <?php echo $result[$i]->state ?></li>
-                            <li> memo (메모) : <?php echo $result[$i]->memo ?></li>
+                            <li>number (발신번호) : <?php echo $result[$i]->number ?></li>
+                            <li>representYN (대표번호 지정여부) : <?php echo $result[$i]->representYN ? 'true' : 'false' ?></li>
+                            <li>state (등록상태) : <?php echo $result[$i]->state ?></li>
+                            <li>memo (메모) : <?php echo $result[$i]->memo ?></li>
                         </ul>
                     </fieldset>
 

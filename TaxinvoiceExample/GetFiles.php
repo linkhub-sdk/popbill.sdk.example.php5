@@ -50,10 +50,10 @@
                             <fieldset class ="fieldset2">
                                 <legend> 첨부파일 [<?php echo $i+1 ?>] </legend>
                                 <ul>
-                                    <li> serialNum (순번) : <?php echo $result[$i]->serialNum; ?></li>
-                                    <li> displayName (파일명) : <?php echo $result[$i]->displayName; ?></li>
-                                    <li> attachedFile (파일아이디) : <?php echo $result[$i]->attachedFile; ?></li>
-                                    <li> regDT (등록일시) : <?php echo $result[$i]->regDT; ?></li>
+                                    <li>serialNum (순번) : <?php echo $result[$i]->serialNum; ?></li>
+                                    <li>displayName (파일명) : <?php echo $result[$i]->displayName; ?></li>
+                                    <li>attachedFile (파일아이디) : <?php echo $result[$i]->attachedFile; ?></li>
+                                    <li>regDT (등록일시) : <?php echo $result[$i]->regDT; ?></li>
                                 </ul>
                             </fieldset>
                     <?php

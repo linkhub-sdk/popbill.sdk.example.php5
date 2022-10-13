@@ -44,29 +44,29 @@
                     <fieldset class="fieldset2">
                         <legend> 팩스전송내역 조회 결과 [<?php echo $i + 1 ?>/<?php echo Count($result) ?>]</legend>
                         <ul>
-                            <li> state (전송상태 코드) : <?php echo $result[$i]->state ?> </li>
-                            <li> result (전송결과 코드) : <?php echo $result[$i]->result ?> </li>
-                            <li> sendNum (발신번호) : <?php echo $result[$i]->sendNum ?> </li>
-                            <li> senderName (발신자명) : <?php echo $result[$i]->senderName ?> </li>
-                            <li> receiveNum (수신번호) : <?php echo $result[$i]->receiveNum ?> </li>
-                            <li> receiveNumType (수신번호 유형) : <?php echo $result[$i]->receiveNumType ?> </li>
-                            <li> receiveName (수신자명) : <?php echo $result[$i]->receiveName ?> </li>
-                            <li> title (팩스제목) : <?php echo $result[$i]->title ?> </li>
-                            <li> sendPageCnt (전체 페이지수) : <?php echo $result[$i]->sendPageCnt ?> </li>
-                            <li> successPageCnt (성공 페이지수) : <?php echo $result[$i]->successPageCnt ?> </li>
-                            <li> failPageCnt (실패 페이지수) : <?php echo $result[$i]->failPageCnt ?> </li>
-                            <li> cancelPageCnt (취소 페이지수) : <?php echo $result[$i]->cancelPageCnt ?> </li>
-                            <li> reserveDT (예약일시) : <?php echo $result[$i]->reserveDT ?> </li>
-                            <li> receiptDT (접수일시) : <?php echo $result[$i]->receiptDT ?> </li>
-                            <li> sendDT (전송일시) : <?php echo $result[$i]->sendDT ?> </li>
-                            <li> resultDT (전송결과 수신일시) : <?php echo $result[$i]->resultDT ?> </li>
-                            <li> fileNames (전송 파일명 리스트) : <?php echo implode(', ', $result[$i]->fileNames) ?> </li>
-                            <li> receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
-                            <li> requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
-                            <li> interOPRefKey (파트너 지정키) : <?php echo $result[$i]->interOPRefKey ?> </li>
-                            <li> chargePageCnt (과금 페이지수) : <?php echo $result[$i]->chargePageCnt ?> </li>
-                            <li> refundPageCnt (환불 페이지수) : <?php echo $result[$i]->refundPageCnt ?> </li>
-                            <li> tiffFileSize (변환파일용량) : <?php echo $result[$i]->tiffFileSize ?>byte</li>
+                            <li>state (전송상태 코드) : <?php echo $result[$i]->state ?> </li>
+                            <li>result (전송결과 코드) : <?php echo $result[$i]->result ?> </li>
+                            <li>sendNum (발신번호) : <?php echo $result[$i]->sendNum ?> </li>
+                            <li>senderName (발신자명) : <?php echo $result[$i]->senderName ?> </li>
+                            <li>receiveNum (수신번호) : <?php echo $result[$i]->receiveNum ?> </li>
+                            <li>receiveNumType (수신번호 유형) : <?php echo $result[$i]->receiveNumType ?> </li>
+                            <li>receiveName (수신자명) : <?php echo $result[$i]->receiveName ?> </li>
+                            <li>title (팩스제목) : <?php echo $result[$i]->title ?> </li>
+                            <li>sendPageCnt (전체 페이지수) : <?php echo $result[$i]->sendPageCnt ?> </li>
+                            <li>successPageCnt (성공 페이지수) : <?php echo $result[$i]->successPageCnt ?> </li>
+                            <li>failPageCnt (실패 페이지수) : <?php echo $result[$i]->failPageCnt ?> </li>
+                            <li>cancelPageCnt (취소 페이지수) : <?php echo $result[$i]->cancelPageCnt ?> </li>
+                            <li>reserveDT (예약일시) : <?php echo $result[$i]->reserveDT ?> </li>
+                            <li>receiptDT (접수일시) : <?php echo $result[$i]->receiptDT ?> </li>
+                            <li>sendDT (전송일시) : <?php echo $result[$i]->sendDT ?> </li>
+                            <li>resultDT (전송결과 수신일시) : <?php echo $result[$i]->resultDT ?> </li>
+                            <li>fileNames (전송 파일명 리스트) : <?php echo implode(', ', $result[$i]->fileNames) ?> </li>
+                            <li>receiptNum (접수번호) : <?php echo $result[$i]->receiptNum ?> </li>
+                            <li>requestNum (요청번호) : <?php echo $result[$i]->requestNum ?> </li>
+                            <li>interOPRefKey (파트너 지정키) : <?php echo $result[$i]->interOPRefKey ?> </li>
+                            <li>chargePageCnt (과금 페이지수) : <?php echo $result[$i]->chargePageCnt ?> </li>
+                            <li>refundPageCnt (환불 페이지수) : <?php echo $result[$i]->refundPageCnt ?> </li>
+                            <li>tiffFileSize (변환파일용량) : <?php echo $result[$i]->tiffFileSize ?>byte</li>
                         </ul>
                     </fieldset>
                     <?php

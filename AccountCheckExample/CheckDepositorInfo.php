@@ -56,14 +56,14 @@
           <fieldset class="fieldset2">
               <legend>예금주성명 조회 결과</legend>
               <ul>
-                  <li> bankCode (기관코드) : <?php echo $result->bankCode ?></li>
-                  <li> accountNumber (계좌번호) : <?php echo $result->accountNumber ?></li>
-                  <li> accountName (예금주 성명) : <?php echo $result->accountName ?></li>
-                  <li> identityNumType (등록번호 유형) : <?php echo $result->identityNumType ?></li>
-                  <li> identityNum (등록번호) : <?php echo $result->identityNum ?></li>
-                  <li> checkDate (확인일시) : <?php echo $result->checkDate ?></li>
-                  <li> result (응답코드) : <?php echo $result->result ?></li>
-                  <li> resultMessage (응답메시지) : <?php echo $result->resultMessage ?></li>
+                  <li>bankCode (기관코드) : <?php echo $result->bankCode ?></li>
+                  <li>accountNumber (계좌번호) : <?php echo $result->accountNumber ?></li>
+                  <li>accountName (예금주 성명) : <?php echo $result->accountName ?></li>
+                  <li>identityNumType (등록번호 유형) : <?php echo $result->identityNumType ?></li>
+                  <li>identityNum (등록번호) : <?php echo $result->identityNum ?></li>
+                  <li>checkDate (확인일시) : <?php echo $result->checkDate ?></li>
+                  <li>result (응답코드) : <?php echo $result->result ?></li>
+                  <li>resultMessage (응답메시지) : <?php echo $result->resultMessage ?></li>
               </ul>
           </fieldset>
         <?php
