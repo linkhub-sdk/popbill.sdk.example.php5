@@ -60,6 +60,7 @@
                             <legend> issueResult(발행 결과) [<?php echo $i+1?>]</legend>
                             <ul>
                                 <li>code (응답코드) : <?php echo $result->issueResult[$i]->code ?></li>
+                                <li>message (응답메시지) : <?php echo $result->issueResult[$i]->message ?></li>
                                 <li>mgtKey (문서번호) : <?php echo $result->issueResult[$i]->mgtKey ?></li>
                                 <li>confirmNum (국세청 승인번호) : <?php echo $result->issueResult[$i]->confirmNum ?></li>
                                 <li>tradeDate (거래일자) : <?php echo $result->issueResult[$i]->tradeDate ?></li>

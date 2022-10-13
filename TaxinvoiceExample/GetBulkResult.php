@@ -63,6 +63,7 @@
                                 <li>invoicerMgtKey (공급자 문서번호) : <?php if(isset($result->issueResult[$i]->invoicerMgtKey)) echo $result->issueResult[$i]->invoicerMgtKey ?></li>
                                 <li>trusteeMgtKey (수탁자 문서번호) : <?php if(isset($result->issueResult[$i]->trusteeMgtKey)) echo $result->issueResult[$i]->trusteeMgtKey ?></li>
                                 <li>code (응답코드) : <?php echo $result->issueResult[$i]->code ?></li>
+                                <li>message (응답메시지) : <?php echo $result->issueResult[$i]->message ?></li>
                                 <li>ntsconfirmNum (국세청승인번호) : <?php echo $result->issueResult[$i]->ntsconfirmNum ?></li>
                                 <li>issueDT (발행일시) : <?php echo $result->issueResult[$i]->issueDT ?></li>
                             </ul>
