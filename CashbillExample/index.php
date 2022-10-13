@@ -16,9 +16,6 @@
             <li><a href="RegistIssue.php">RegistIssue</a> (즉시발행)</li>
             <li><a href="BulkSubmit.php">BulkSubmit</a> (초대량 발행 접수)</li>
             <li><a href="GetBulkResult.php">GetBulkResult</a> (초대량 접수결과 확인)</li>
-            <li><a href="Register.php">Register</a> (임시저장)</li>
-            <li><a href="Update.php">Update</a> (수정)</li>
-            <li><a href="Issue.php">Issue</a> (발행)</li>
             <li><a href="CancelIssue.php">CancelIssue</a> (발행취소)</li>
             <li><a href="Delete.php">Delete</a> (삭제)</li>
         </ul>
@@ -28,8 +25,6 @@
         <ul>
             <li><a href="RevokeRegistIssue.php">RevokeRegistIssue</a> (즉시발행)</li>
             <li><a href="RevokeRegistIssue_part.php">RevokeRegistIssue_part</a> (부분 - 즉시발행)</li>
-            <li><a href="RevokeRegister.php">RevokeRegister</a> (임시저장)</li>
-            <li><a href="RevokeRegister_part.php">RevokeRegister_part</a> (부분 - 임시저장)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -39,7 +34,6 @@
             <li><a href="GetInfos.php">GetInfos</a> (상태 대량 확인)</li>
             <li><a href="GetDetailInfo.php">GetDetailInfo</a> (상세정보 확인)</li>
             <li><a href="Search.php">Search</a> (목록 조회)</li>
-            <li><a href="GetLogs.php">GetLogs</a> (상태 변경이력 확인)</li>
             <li><a href="GetURL.php">GetURL</a> (현금영수증 문서함 관련 URL)</li>
         </ul>
     </fieldset>
