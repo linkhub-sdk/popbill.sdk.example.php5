@@ -26,13 +26,13 @@
     // 환불 신청 포인트
     $RefundForm->requestpoint = '100';
 
-    // 환불받을 계좌은행
+    // 계좌은행
     $RefundForm->accountbank = '국민';
 
-    // 환불받은 계좌번호
+    // 계좌번호
     $RefundForm->accountnum = '123123123-123';
 
-    // 환불받은 예금주
+    // 예금주
     $RefundForm->accountname = '테스트';
 
     // 환불사유
