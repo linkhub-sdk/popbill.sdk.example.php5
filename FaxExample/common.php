@@ -3,7 +3,7 @@
   * 팝빌 팩스 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : https://docs.popbill.com/fax/tutorial/php
-  * 업데이트 일자 : 2022-07-05
+  * 업데이트 일자 : 2022-10-19
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *

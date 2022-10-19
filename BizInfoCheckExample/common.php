@@ -3,7 +3,7 @@
   * 팝빌 기업정보조회 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : https://docs.popbill.com/bizinfocheck/tutorial/php
-  * 업데이트 일자 : 2022-09-30
+  * 업데이트 일자 : 2022-10-19
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *
