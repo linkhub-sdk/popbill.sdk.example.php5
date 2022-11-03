@@ -34,7 +34,6 @@
 
         // 거래구분, (소득공제용, 지출증빙용) 중 기재
         $Cashbill->tradeUsage = '소득공제용';
-
         
         // 거래일시, 날짜(yyyyMMddHHmmss)
         // 당일, 전일만 가능
