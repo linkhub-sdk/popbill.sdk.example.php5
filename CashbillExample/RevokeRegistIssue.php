@@ -20,13 +20,13 @@
     $testCorpNum = '1234567890';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20220324-PHP5-007';
+    $mgtKey = '20221103-PHP5-010';
 
     // 원본현금영수증 승인번호, 문서정보 확인(GetInfo API) 함수를 통해 확인가능.
-    $orgConfirmNum = 'TB0010304';
+    $orgConfirmNum = 'TB0000068';
 
     // 원본현금영수증 거래일자, 문서정보 확인(GetInfo API) 함수를 통해 확인가능.
-    $orgTradeDate = '20220323';
+    $orgTradeDate = '20221102';
 
     try {
         $result = $CashbillService->RevokeRegistIssue($testCorpNum, $mgtKey, $orgConfirmNum, $orgTradeDate);
@@ -34,6 +34,7 @@
         $message = $result->message;
         $confirmNum = $result->confirmNum;
         $tradeDate = $result->tradeDate;
+        $tradeDT = $result->tradeDT;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -54,6 +55,7 @@
                     ?>
                       <li>Response.confirmNum : <?php echo $confirmNum ?></li>
                       <li>Response.tradeDate : <?php echo $tradeDate ?></li>
+                      <li>Response.tradeDT : <?php echo $tradeDT ?></li>
                     <?php
                       }
                     ?>

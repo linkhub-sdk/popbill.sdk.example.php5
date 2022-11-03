@@ -21,7 +21,7 @@
     $testUserID = 'testkorea';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20220324-PHP5-003';
+    $mgtKey = '20221103-PHP5-010';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
@@ -38,6 +38,10 @@
 
     // 문서형태, 승인거래 기재
     $Cashbill->tradeType = '승인거래';
+
+    // 거래일시, 날짜(yyyyMMddHHmmss)
+    // 당일, 전일만 가능
+    $Cashbill->tradeDT = '20221103000000';
 
     // 거래구분, (소득공제용, 지출증빙용) 중 기재
     $Cashbill->tradeUsage = '소득공제용';
@@ -112,6 +116,7 @@
         $message = $result->message;
         $confirmNum = $result->confirmNum;
         $tradeDate = $result->tradeDate;
+        $tradeDT = $result->tradeDT;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -132,6 +137,7 @@
                     ?>
                       <li>Response.confirmNum : <?php echo $confirmNum ?></li>
                       <li>Response.tradeDate : <?php echo $tradeDate ?></li>
+                      <li>Response.tradeDT : <?php echo $tradeDT ?></li>
                     <?php
                       }
                     ?>

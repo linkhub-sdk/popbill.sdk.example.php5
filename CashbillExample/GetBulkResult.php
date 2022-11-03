@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 초대량 발행 접수시 기재한 제출아이디
-    $submitID = '20220324-PHP5-BULK';
+    $submitID = '20221103-PHP5-BULK';
 
     try {
         $result = $CashbillService->GetBulkResult($testCorpNum, $submitID);
@@ -64,6 +64,7 @@
                                 <li>mgtKey (문서번호) : <?php echo $result->issueResult[$i]->mgtKey ?></li>
                                 <li>confirmNum (국세청 승인번호) : <?php echo $result->issueResult[$i]->confirmNum ?></li>
                                 <li>tradeDate (거래일자) : <?php echo $result->issueResult[$i]->tradeDate ?></li>
+                                <li>tradeDT (거래일시) : <?php echo $result->issueResult[$i]->tradeDT ?></li>
                             </ul>
                         </fieldset>
                         <?php

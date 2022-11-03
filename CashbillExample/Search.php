@@ -20,10 +20,10 @@
     $DType = 'R';
 
     // 시작일자, 날짜형태(yyyyMMdd)
-    $SDate = '20220301';
+    $SDate = '20221101';
 
     // 종료일자, 날짜형태(yyyyMMdd)
-    $EDate = '20220331';
+    $EDate = '20221131';
 
     // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
     // - 미입력시 전체조회
@@ -119,6 +119,7 @@
                                         <li>itemKey (팝빌번호) : <?php echo $result->list[$i]->itemKey ?></li>
                                         <li>mgtKey (문서번호) : <?php echo $result->list[$i]->mgtKey ?></li>
                                         <li>tradeDate (거래일자) : <?php echo $result->list[$i]->tradeDate ?></li>
+                                        <li>tradeDT (거래일시) : <?php echo $result->list[$i]->tradeDT ?></li>
                                         <li>tradeType (문서형태) : <?php echo $result->list[$i]->tradeType ?></li>
                                         <li>tradeUsage (거래구분) : <?php echo $result->list[$i]->tradeUsage ?></li>
                                         <li>tradeOpt (거래유형) : <?php echo $result->list[$i]->tradeOpt ?></li>

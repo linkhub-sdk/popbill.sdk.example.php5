@@ -17,12 +17,12 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    $submitID = "20220324-PHP5-BULK";
+    $submitID = "20221103-PHP5-BULK";
 
     // 최대 100건
     $cashbillList = array();
 
-    for($i=0; $i<100; $i++) {
+    for($i=0; $i<2; $i++) {
         // 현금영수증 객체 생성
         $Cashbill = new Cashbill();
 
@@ -34,6 +34,11 @@
 
         // 거래구분, (소득공제용, 지출증빙용) 중 기재
         $Cashbill->tradeUsage = '소득공제용';
+
+        
+        // 거래일시, 날짜(yyyyMMddHHmmss)
+        // 당일, 전일만 가능
+        $Cashbill->tradeDT = '20221103000000';
 
         // 거래유형, {일반, 도서공연, 대중교통} 중 기재
         // - 미입력시 기본값 "일반" 처리
@@ -133,7 +138,7 @@
                     <?php
                       if ( isset($receiptID) ) {
                     ?>
-                      <li>Response.$receiptID : <?php echo $receiptID ?></li>
+                      <li>Response.receiptID : <?php echo $receiptID ?></li>
                     <?php
                       }
                     ?>

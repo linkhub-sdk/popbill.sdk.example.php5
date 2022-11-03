@@ -23,13 +23,13 @@
     $testUserID = 'testkorea';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20220324-PHP5-006';
+    $mgtKey = '20221103-PHP5-011';
 
     // 원본현금영수증 승인번호, 문서정보 확인(GetInfo API) 함수를 통해 확인가능.
-    $orgConfirmNum = 'TB0010305';
+    $orgConfirmNum = 'TB0000068';
 
     // 원본현금영수증 거래일자, 문서정보 확인(GetInfo API) 함수를 통해 확인가능.
-    $orgTradeDate = '20220323';
+    $orgTradeDate = '20221102';
 
     // 안내 문자 전송여부 , true / false 중 택 1
     // └ true = 전송 , false = 미전송
@@ -69,14 +69,23 @@
     // - 현금영수증 취소유형이 false 인 경우 미입력
     $totalAmount = '4400';
 
+    // 현금영수증 발행 안내메일 제목
+    $emailSubject = null;
+
+    // 거래일시, 날짜(yyyyMMddHHmmss)
+    // 당일, 전일만 가능
+    $tradeDT = '20221103190000';
+
+
     try {
         $result = $CashbillService->RevokeRegistIssue($testCorpNum, $mgtKey, $orgConfirmNum, $orgTradeDate,
-            $smssendYN, $memo, $testUserID, $isPartCancel, $cancelType, $supplyCost, $tax, $serviceFee, $totalAmount);
+            $smssendYN, $memo, $testUserID, $isPartCancel, $cancelType, $supplyCost, $tax, $serviceFee, $totalAmount, $emailSubject, $tradeDT);
 
         $code = $result->code;
         $message = $result->message;
         $confirmNum = $result->confirmNum;
         $tradeDate = $result->tradeDate;
+        $tradeDT = $result->tradeDT;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -97,6 +106,7 @@
                     ?>
                       <li>Response.confirmNum : <?php echo $confirmNum ?></li>
                       <li>Response.tradeDate : <?php echo $tradeDate ?></li>
+                      <li>Response.tradeDT : <?php echo $tradeDT ?></li>
                     <?php
                       }
                     ?>

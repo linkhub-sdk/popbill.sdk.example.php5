@@ -19,8 +19,8 @@
 
     // 문서번호 배열, 최대 1000건
     $MgtKeyList = array(
-        '20220324-PHP5-001',
-        '20220324-PHP5-002',
+        '20221103-PHP5-010',
+        '20221103-PHP5-011',
     );
 
     try {
@@ -53,6 +53,7 @@
                                         <li>itemKey (팝빌번호) : <?php echo $result[$i]->itemKey ?></li>
                                         <li>mgtKey (문서번호) : <?php echo $result[$i]->mgtKey ?></li>
                                         <li>tradeDate (거래일자) : <?php echo $result[$i]->tradeDate ?></li>
+                                        <li>tradeDT (거래일시) : <?php echo $result[$i]->tradeDT ?></li>
                                         <li>tradeType (문서형태) : <?php echo $result[$i]->tradeType ?></li>
                                         <li>tradeUsage (거래구분) : <?php echo $result[$i]->tradeUsage ?></li>
                                         <li>tradeOpt (거래유형) : <?php echo $result[$i]->tradeOpt ?></li>
