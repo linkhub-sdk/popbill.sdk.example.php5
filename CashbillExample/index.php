@@ -16,7 +16,6 @@
             <li><a href="RegistIssue.php">RegistIssue</a> (즉시발행)</li>
             <li><a href="BulkSubmit.php">BulkSubmit</a> (초대량 발행 접수)</li>
             <li><a href="GetBulkResult.php">GetBulkResult</a> (초대량 접수결과 확인)</li>
-            <li><a href="CancelIssue.php">CancelIssue</a> (발행취소)</li>
             <li><a href="Delete.php">Delete</a> (삭제)</li>
         </ul>
     </fieldset>
