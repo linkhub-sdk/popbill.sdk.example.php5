@@ -149,13 +149,7 @@
     $Statement->detailList[1]->spare3 = 'spare3';
     $Statement->detailList[1]->spare4 = 'spare4';
     $Statement->detailList[1]->spare5 = 'spare5';
-
-    /************************************************************
-     * 전자명세서 추가속성
-     * - 추가속성에 관한 자세한 사항은 "[전자명세서 API 연동매뉴얼] >
-     *   5.2. 기본양식 추가속성 테이블"을 참조하시기 바랍니다.
-     * - https://docs.popbill.com/statement/propertyBag?lang=java
-     ************************************************************/
+    
 
     $Statement->propertyBag = array(
         'Balance' => '50000',
