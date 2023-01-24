@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌 인증서버에 등록된 공동인증서의 정보를 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#GetTaxCertInfo
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/cert#GetTaxCertInfo
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 전자명세서의 1건의 상태 및 요약정보 확인합니다.
-     * - https://docs.popbill.com/statement/php/api#GetInfo
+     * - https://developers.popbill.com/reference/statement/php/api/info#GetInfo
      */
 
     include 'common.php';

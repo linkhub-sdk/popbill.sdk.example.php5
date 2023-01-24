@@ -7,7 +7,7 @@
 <?php
     /**
      * 기업정보조회시 과금되는 포인트 단가를 확인합니다.
-     * - https://docs.popbill.com/bizinfocheck/php/api#GetUnitCost
+     * - https://developers.popbill.com/reference/bizinfocheck/php/api/point#GetUnitCost
      */
 
     include 'common.php';

@@ -11,7 +11,7 @@
      * - 함수 호출시 포인트가 과금됩니다.
      * - 선팩스 전송 요청 시 작성한 문서번호는 팩스로 전송되는 파일명에 사용됩니다.
      * - 팩스 전송결과를 확인하기 위해서는 선팩스 전송 요청 시 반환받은 접수번호를 이용하여 팩스 API의 전송내역 확인 (GetFaxResult API) 함수를 이용하면 됩니다.
-     * - https://docs.popbill.com/statement/php/api#FAXSend
+     * - https://developers.popbill.com/reference/statement/php/api/etc#FAXSend
      */
 
     include 'common.php';

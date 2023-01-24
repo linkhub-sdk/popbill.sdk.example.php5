@@ -7,7 +7,7 @@
 <?php
     /**
      * 세금계산서와 관련된 안내 메일을 재전송 합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#SendEmail
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/etc#SendEmail
      */
 
     include 'common.php';

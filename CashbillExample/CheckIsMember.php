@@ -8,7 +8,7 @@
     /**
      * 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
      * - LinkID는 인증정보로 설정되어 있는 링크아이디 값입니다.
-     * - https://docs.popbill.com/cashbill/php/api#CheckIsMember
+     * - https://developers.popbill.com/reference/cashbill/php/api/member#CheckIsMember
      */
 
     include 'common.php';

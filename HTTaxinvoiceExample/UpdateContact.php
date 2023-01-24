@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 정보를 수정합니다.
-     * - https://docs.popbill.com/httaxinvoice/php/api#UpdateContact
+     * - https://developers.popbill.com/reference/httaxinvoice/php/api/member#UpdateContact
      */
 
     include 'common.php';

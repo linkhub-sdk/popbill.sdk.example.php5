@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불 신청내역을 확인합니다.
-     * - https://docs.popbill.com/httaxinvoice/php/api#GetRefundHistory
+     * - https://developers.popbill.com/reference/httaxinvoice/php/api/point#GetRefundHistory
      */
 
     include 'common.php';

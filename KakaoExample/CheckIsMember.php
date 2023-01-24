@@ -7,7 +7,7 @@
 <?php
     /**
      * 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
-     * - https://docs.popbill.com/kakao/php/api#CheckIsMember
+     * - https://developers.popbill.com/reference/kakaotalk/php/api/member#CheckIsMember
      */
 
     include 'common.php';

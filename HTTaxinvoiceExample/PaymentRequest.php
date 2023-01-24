@@ -7,7 +7,7 @@
 <?php
     /**
      * 무통장 입금을 신청합니다.
-     * - https://docs.popbill.com/httaxinvoice/php/api#PaymentRequest
+     * - https://developers.popbill.com/reference/httaxinvoice/php/api/point#PaymentRequest
      */
 
     include 'common.php';

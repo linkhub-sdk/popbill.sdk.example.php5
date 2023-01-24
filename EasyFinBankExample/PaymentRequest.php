@@ -7,7 +7,7 @@
 <?php
     /**
      * 무통장 입금을 신청합니다.
-     * - https://docs.popbill.com/easyfinbank/php/api#PaymentRequest
+     * - https://developers.popbill.com/reference/easyfinbank/php/api/point#PaymentRequest
      */
 
     include 'common.php';

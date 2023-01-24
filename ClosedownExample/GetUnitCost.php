@@ -7,7 +7,7 @@
 <?php
     /**
      * 휴폐업 조회시 과금되는 포인트 단가를 확인합니다.
-     * - https://docs.popbill.com/closedown/php/api#GetUnitCost
+     * - https://developers.popbill.com/reference/closedown/php/api/point#GetUnitCost
      */
 
     include 'common.php';

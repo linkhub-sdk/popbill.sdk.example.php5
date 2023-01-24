@@ -7,7 +7,7 @@
 <?php
     /**
      * 세금계산서 1건의 상세정보를 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#GetDetailInfo
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/info#GetDetailInfo
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원의 회사정보를 수정합니다.
-     * - https://docs.popbill.com/fax/php/api#UpdateCorpInfo
+     * - https://developers.popbill.com/reference/fax/php/api/member#UpdateCorpInfo
      */
 
     include 'common.php';

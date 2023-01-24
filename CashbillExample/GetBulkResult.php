@@ -7,7 +7,7 @@
 <?php
     /**
      * 접수시 기재한 SubmitID를 사용하여 현금영수증 접수결과를 확인합니다.
-     * - https://docs.popbill.com/cashbill/php/api#GetBulkResult
+     * - https://developers.popbill.com/reference/cashbill/php/api/issue#GetBulkResult
      */
 
     include 'common.php';

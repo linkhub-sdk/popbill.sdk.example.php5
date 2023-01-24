@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌에서 반환받은 접수번호를 통해 문자 전송상태 및 결과를 확인합니다.
-     * - https://docs.popbill.com/message/php/api#GetMessages
+     * - https://developers.popbill.com/reference/sms/php/api/info#GetMessages
      */
 
     include 'common.php';

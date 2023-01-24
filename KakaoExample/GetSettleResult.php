@@ -7,7 +7,7 @@
 <?php
     /**
      * 무통장 입금신청한 건의 정보를 확인합니다.
-     * - https://docs.popbill.com/kakao/php/api#GetSettleResult
+     * - https://developers.popbill.com/reference/kakaotalk/php/api/point#GetSettleResult
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 삭제 가능한 상태의 전자명세서를 삭제합니다.
-     * - https://docs.popbill.com/statement/php/api#DeleteFile
+     * - https://developers.popbill.com/reference/statement/php/api/etc#DeleteFile
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌 휴폐업조회 API 서비스 과금정보를 확인합니다.
-     * - https://docs.popbill.com/closedown/php/api#GetChargeInfo
+     * - https://developers.popbill.com/reference/closedown/php/api/point#GetChargeInfo
      */
 
     include 'common.php';

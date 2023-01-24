@@ -7,7 +7,7 @@
 <?php
     /**
      * 카카오톡 전송시 과금되는 포인트 단가를 확인합니다.
-     * - https://docs.popbill.com/kakao/php/api#GetUnitCost
+     * - https://developers.popbill.com/reference/kakaotalk/php/api/point#GetUnitCost
      */
 
     include 'common.php';

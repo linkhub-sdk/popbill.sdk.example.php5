@@ -7,7 +7,7 @@
 <?php
     /**
      * 최대 100건의 현금영수증 발행을 한번의 요청으로 접수합니다.
-     * - https://docs.popbill.com/cashbill/php/api#BulkSubmit
+     * - https://developers.popbill.com/reference/cashbill/php/api/issue#BulkSubmit
      */
 
     include 'common.php';

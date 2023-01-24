@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불을 신청합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#Refund
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/point#Refund
      */
 
     include 'common.php';

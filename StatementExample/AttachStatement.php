@@ -7,7 +7,7 @@
 <?php
     /**
      * 하나의 전자명세서에 다른 전자명세서를 첨부합니다.
-     * - https://docs.popbill.com/statement/php/api#AttachStatement
+     * - https://developers.popbill.com/reference/statement/php/api/etc#AttachStatement
      */
 
     include 'common.php';

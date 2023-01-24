@@ -7,7 +7,7 @@
 <?php
     /**
      * 계좌조회 서비스를 이용할 계좌를 팝빌에 등록합니다.
-     * - https://docs.popbill.com/easyfinbank/php/api#RegistBankAccount
+     * - https://developers.popbill.com/reference/easyfinbank/php/api/manage#RegistBankAccount
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 정보를 확인합니다.
-     * - https://docs.popbill.com/cashbill/php/api#GetContactInfo
+     * - https://developers.popbill.com/reference/cashbill/php/api/member#GetContactInfo
      */
 
     include 'common.php';

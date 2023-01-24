@@ -7,7 +7,7 @@
 <?php
     /**
      * 전용 080 번호에 등록된 수신거부 목록을 반환합니다.
-     * - https://docs.popbill.com/message/php/api#GetAutoDenyList
+     * - https://developers.popbill.com/reference/sms/php/api/info#GetAutoDenyList
      */
 
     include 'common.php';

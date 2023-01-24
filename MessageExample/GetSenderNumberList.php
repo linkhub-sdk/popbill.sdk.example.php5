@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌에 등록한 연동회원의 문자 발신번호 목록을 확인합니다.
-     * - https://docs.popbill.com/message/php/api#GetSenderNumberList
+     * - https://developers.popbill.com/reference/sms/php/api/sendnum#GetSenderNumberList
      */
 
     include 'common.php';

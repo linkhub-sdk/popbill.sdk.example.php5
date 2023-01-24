@@ -7,7 +7,7 @@
 <?php
     /**
      * 전자세금계산서 1건의 상세정보를 XML로 반환합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#GetXML
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/info#GetXML
      */
 
     include 'common.php';

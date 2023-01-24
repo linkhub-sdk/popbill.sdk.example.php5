@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌 홈택스연동(세금) API 서비스 과금정보를 확인합니다.
-     * - https://docs.popbill.com/httaxinvoice/php/api#GetChargeInfo
+     * - https://developers.popbill.com/reference/httaxinvoice/php/api/point#GetChargeInfo
      */
 
     include 'common.php';

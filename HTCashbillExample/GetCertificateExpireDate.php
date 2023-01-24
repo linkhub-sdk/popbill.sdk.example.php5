@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 인증서 만료일자를 확인합니다.
-     * - https://docs.popbill.com/htcashbill/php/api#GetCertificateExpireDate
+     * - https://developers.popbill.com/reference/htcashbill/php/api/cert#GetCertificateExpireDate
      */
 
     include 'common.php';

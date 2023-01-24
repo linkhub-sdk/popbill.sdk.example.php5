@@ -7,7 +7,7 @@
 <?php
     /**
      * 현금영수증 관련 메일 항목에 대한 발송설정을 확인합니다.
-     * - https://docs.popbill.com/cashbill/php/api#ListEmailConfig
+     * - https://developers.popbill.com/reference/cashbill/php/api/etc#ListEmailConfig
      */
 
     include 'common.php';

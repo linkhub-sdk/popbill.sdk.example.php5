@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 홈택스 전자세금계산서용 부서사용자 계정을 삭제합니다.
-     * - https://docs.popbill.com/httaxinvoice/php/api#DeleteDeptUser
+     * - https://developers.popbill.com/reference/httaxinvoice/php/api/cert#DeleteDeptUser
      */
 
     include 'common.php';

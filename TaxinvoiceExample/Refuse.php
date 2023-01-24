@@ -7,7 +7,7 @@
 <?php
     /**
      * 공급자가 공급받는자에게 역발행 요청 받은 세금계산서의 발행을 거부합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#Refuse
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/issue#Refuse
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌 전자명세서 API를 통해 발행한 전자명세서를 세금계산서에 첨부합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#AttachStatement
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/etc#AttachStatement
      */
 
     include 'common.php';

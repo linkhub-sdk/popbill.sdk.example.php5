@@ -7,7 +7,7 @@
 <?php
     /**
      * "임시저장" 상태의 세금계산서를 수정합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#Update
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/issue#Update
      */
 
     include 'common.php';
@@ -203,7 +203,7 @@
     /************************************************************
      *                     수정 세금계산서 기재정보
      * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
-     * - [참고] 수정세금계산서 작성방법 안내 - https://docs.popbill.com/taxinvoice/modify?lang=php
+     * - [참고] 수정세금계산서 작성방법 안내 - https://developers.popbill.com/guide/taxinvoice/php/introduction/modified-taxinvoice
      ************************************************************/
 
     // 수정사유코드, 수정사유에 따라 1~6중 선택기재

@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불을 신청합니다.
-     * - https://docs.popbill.com/kakao/php/api#Refund
+     * - https://developers.popbill.com/reference/kakaotalk/php/api/point#Refund
      */
 
     include 'common.php';

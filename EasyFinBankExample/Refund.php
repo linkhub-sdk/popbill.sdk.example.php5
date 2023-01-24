@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불을 신청합니다.
-     * - https://docs.popbill.com/easyfinbank/php/api#Refund
+     * - https://developers.popbill.com/reference/easyfinbank/php/api/point#Refund
      */
 
     include 'common.php';

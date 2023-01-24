@@ -7,7 +7,7 @@
 <?php
     /**
      * 현금영수증 1건의 상세정보를 확인합니다.
-     * - https://docs.popbill.com/cashbill/php/api#GetDetailInfo
+     * - https://developers.popbill.com/reference/cashbill/php/api/info#GetDetailInfo
      */
 
     include 'common.php';

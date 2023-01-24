@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원의 회사정보를 확인합니다.
-     * - https://docs.popbill.com/bizinfocheck/php/api#GetCorpInfo
+     * - https://developers.popbill.com/reference/bizinfocheck/php/api/member#GetCorpInfo
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /*
     * 한 건의 거래 내역에 메모를 저장합니다.
-    * - https://docs.popbill.com/easyfinbank/php/api#SaveMemo
+    * - https://developers.popbill.com/reference/easyfinbank/php/api/search#SaveMemo
     */
 
     include 'common.php';

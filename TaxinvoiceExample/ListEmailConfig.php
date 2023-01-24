@@ -7,7 +7,7 @@
 <?php
     /**
      * 세금계산서 관련 메일 항목에 대한 발송설정을 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#ListEmailConfig
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/etc#ListEmailConfig
      */
 
     include 'common.php';

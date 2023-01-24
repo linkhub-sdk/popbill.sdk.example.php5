@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불을 신청합니다.
-     * - https://docs.popbill.com/htcashbill/php/api#Refund
+     * - https://developers.popbill.com/reference/htcashbill/php/api/point#Refund
      */
 
     include 'common.php';

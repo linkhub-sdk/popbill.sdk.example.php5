@@ -7,7 +7,7 @@
 <?php
     /**
      * 홈택스연동 인증을 위해 팝빌에 등록된 전자세금계산서용 부서사용자 계정을 확인합니다.
-     * - https://docs.popbill.com/httaxinvoice/php/api#CheckDeptUser
+     * - https://developers.popbill.com/reference/httaxinvoice/php/api/cert#CheckDeptUser
      */
 
     include 'common.php';

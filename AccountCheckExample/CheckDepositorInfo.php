@@ -7,7 +7,7 @@
 <?php
     /**
      * 1건의 예금주실명을 조회합니다.
-     * - https://docs.popbill.com/accountcheck/php/api#CheckDepositorInfo
+     * - https://developers.popbill.com/reference/accountcheck/php/api/check#CheckDepositorInfo
      */
 
     include 'common.php';

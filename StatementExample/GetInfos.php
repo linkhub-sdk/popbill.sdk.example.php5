@@ -7,7 +7,7 @@
 <?php
     /**
      * 다수건의 전자명세서 상태 및 요약정보 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
-     * - https://docs.popbill.com/statement/php/api#GetInfos
+     * - https://developers.popbill.com/reference/statement/php/api/info#GetInfos
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 포인트 결제내역을 확인합니다.
-     * - https://docs.popbill.com/accountcheck/php/api#GetPaymentHistory
+     * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetPaymentHistory
      */
 
     include 'common.php';

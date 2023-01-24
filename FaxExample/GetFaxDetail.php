@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌에서 반환 받은 접수번호를 통해 팩스 전송상태 및 결과를 확인합니다.
-     * - https://docs.popbill.com/fax/php/api#GetFaxDetail
+     * - https://developers.popbill.com/reference/fax/php/api/info#GetFaxDetail
      */
 
     include 'common.php';

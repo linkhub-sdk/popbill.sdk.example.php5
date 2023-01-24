@@ -7,7 +7,7 @@
 <?php
     /**
      * 최대 2,000byte의 장문(LMS) 메시지 다수건 전송을 팝빌에 접수합니다. (최대 1,000건)
-     *  - https://docs.popbill.com/message/php/api#SendLMS
+     *  - https://developers.popbill.com/reference/sms/php/api/send#SendLMS
      */
 
     include 'common.php';

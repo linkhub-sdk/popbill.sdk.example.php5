@@ -7,7 +7,7 @@
 <?php
     /**
      * 세금계산서의 상태에 대한 변경이력을 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#GetLogs
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/info#GetLogs
      */
 
     include 'common.php';

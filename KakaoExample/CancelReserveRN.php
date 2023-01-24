@@ -7,7 +7,7 @@
 <?php
     /**
      * 파트너가 할당한 전송요청 번호를 통해 예약접수된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
-     * - https://docs.popbill.com/kakao/php/api#CancelReserveRN
+     * - https://developers.popbill.com/reference/kakaotalk/php/api/send#CancelReserveRN
      */
 
     include 'common.php';

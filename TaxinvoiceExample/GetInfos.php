@@ -8,8 +8,8 @@
     /**
      * 다수건의 세금계산서 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
      * - 리턴값 'TaxinvoiceInfo'의 변수 'stateCode'를 통해 세금계산서의 상태코드를 확인합니다.
-     * - 세금계산서 상태코드 [https://docs.popbill.com/taxinvoice/stateCode?lang=php]
-     * - https://docs.popbill.com/taxinvoice/php/api#GetInfos
+     * - 세금계산서 상태코드 [https://developers.popbill.com/reference/taxinvoice/php/response-code]
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/info#GetInfos
      */
 
     include 'common.php';

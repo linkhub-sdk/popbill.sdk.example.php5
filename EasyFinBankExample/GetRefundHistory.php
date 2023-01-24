@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불 신청내역을 확인합니다.
-     * - https://docs.popbill.com/easyfinbank/php/api#GetRefundHistory
+     * - https://developers.popbill.com/reference/easyfinbank/php/api/point#GetRefundHistory
      */
 
     include 'common.php';

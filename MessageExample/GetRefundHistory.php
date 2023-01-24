@@ -7,7 +7,7 @@
 <?php
     /**
      * 환불 신청내역을 확인합니다.
-     * - https://docs.popbill.com/message/php/api#GetRefundHistory
+     * - https://developers.popbill.com/reference/sms/php/api/point#GetRefundHistory
      */
 
     include 'common.php';

@@ -7,7 +7,7 @@
 <?php
     /**
      * 무통장 입금신청한 건의 정보를 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#GetSettleResult
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/point#GetSettleResult
      */
 
     include 'common.php';

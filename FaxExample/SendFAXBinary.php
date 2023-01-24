@@ -7,7 +7,7 @@
 <?php
     /**
      * 전송할 파일의 바이너리 데이터를 팩스 1건 전송합니다. (최대 전송파일 개수: 20개)
-     * - https://docs.popbill.com/fax/php/api#SendFAXBinary
+     * - https://developers.popbill.com/reference/fax/php/api/send#SendFAXBinary
      */
 
     include 'common.php';

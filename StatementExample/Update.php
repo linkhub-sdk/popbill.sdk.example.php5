@@ -7,7 +7,7 @@
 <?php
     /**
      * "임시저장" 상태의 전자명세서를 수정합니다.
-     * - https://docs.popbill.com/statement/php/api#Update
+     * - https://developers.popbill.com/reference/statement/php/api/issue#Update
      */
 
     include 'common.php';

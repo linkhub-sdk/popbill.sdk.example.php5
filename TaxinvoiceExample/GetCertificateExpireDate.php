@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌 인증서버에 등록된 인증서의 만료일을 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/php/api#GetCertificateExpireDate
+     * - https://developers.popbill.com/reference/taxinvoice/php/api/cert#GetCertificateExpireDate
      */
 
     include 'common.php';

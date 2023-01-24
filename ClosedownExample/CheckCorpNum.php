@@ -7,7 +7,7 @@
 <?php
     /**
      * 사업자번호 1건에 대한 휴폐업정보를 확인합니다.
-     * - https://docs.popbill.com/closedown/php/api#CheckCorpNum
+     * - https://developers.popbill.com/reference/closedown/php/api/check#CheckCorpNum
      */
 
     include 'common.php';

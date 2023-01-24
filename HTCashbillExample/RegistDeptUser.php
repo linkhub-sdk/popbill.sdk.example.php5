@@ -7,7 +7,7 @@
 <?php
     /**
      * 홈택스연동 인증을 위해 팝빌에 현금영수증 자료조회 부서사용자 계정을 등록합니다.
-     * - https://docs.popbill.com/htcashbill/php/api#RegistDeptUser
+     * - https://developers.popbill.com/reference/htcashbill/php/api/cert#RegistDeptUser
      */
 
     include 'common.php';

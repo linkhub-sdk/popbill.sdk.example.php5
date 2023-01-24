@@ -8,7 +8,7 @@
     /**
      * 검색조건에 해당하는 문자 전송내역을 조회합니다. (조회기간 단위 : 최대 2개월)
      * - 문자 접수일시로부터 6개월 이내 접수건만 조회할 수 있습니다.
-     * - https://docs.popbill.com/message/php/api#Search
+     * - https://developers.popbill.com/reference/sms/php/api/info#Search
      */
 
     include 'common.php';

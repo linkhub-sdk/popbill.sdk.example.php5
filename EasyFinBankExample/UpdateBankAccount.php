@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌에 등록된 계좌정보를 수정합니다.
-     * - https://docs.popbill.com/easyfinbank/php/api#UpdateBankAccount
+     * - https://developers.popbill.com/reference/easyfinbank/php/api/manage#UpdateBankAccount
      */
 
     include 'common.php';

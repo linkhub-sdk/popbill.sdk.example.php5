@@ -7,7 +7,7 @@
 <?php
     /**
     * 승인된 알림톡 템플릿 정보를 확인합니다.
-    * - https://docs.popbill.com/kakao/php/api#GetATSTemplate
+    * - https://developers.popbill.com/reference/kakaotalk/php/api/template#GetATSTemplate
     */
 
     include 'common.php';
