@@ -3,7 +3,7 @@
   * 팝빌 홈택스(현금영수증) 연동 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : https://developers.popbill.com/guide/htcashbill/php/getting-started/tutorial
-  * 업데이트 일자 : 2022-10-19
+  * 업데이트 일자 : 2023-01-26
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *
