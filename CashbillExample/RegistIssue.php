@@ -115,7 +115,6 @@
         $message = $result->message;
         $confirmNum = $result->confirmNum;
         $tradeDate = $result->tradeDate;
-        $tradeDT = $result->tradeDT;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -136,7 +135,6 @@
                     ?>
                       <li>Response.confirmNum : <?php echo $confirmNum ?></li>
                       <li>Response.tradeDate : <?php echo $tradeDate ?></li>
-                      <li>Response.tradeDT : <?php echo $tradeDT ?></li>
                     <?php
                       }
                     ?>

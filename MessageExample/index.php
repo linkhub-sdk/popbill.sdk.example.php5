@@ -66,6 +66,7 @@
             <li><a href="Search.php">Search</a> (문자전송 목록 조회)</li>
             <li><a href="GetSentListURL.php">GetSentListURL</a> (문자 전송내역 팝업 URL)</li>
             <li><a href="GetAutoDenyList.php">GetAutoDenyList</a> (080 수신거부 목록 확인)</li>
+            <li><a href="CheckAutoDenyNumber.php">CheckAutoDenyNumber</a> (080 수신거부 확인)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

@@ -28,7 +28,7 @@
 
     // 담당자 휴대폰
     // 무통장 입금 승인 알림톡이 전송됩니다.
-    $paymentForm->settlerHP = '01012341234';
+    $paymentForm->notifyHP = '01012341234';
 
     // 입금자명
     $paymentForm->paymentName = '입금자명';

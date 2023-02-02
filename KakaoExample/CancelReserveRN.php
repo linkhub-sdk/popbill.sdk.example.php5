@@ -18,8 +18,11 @@
     // 예약전송 요청시 할당한 전송요청번호
     $requestNum = '';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $result = $KakaoService->CancelReserveRN($testCorpNum ,$requestNum);
+        $result = $KakaoService->CancelReserveRN($testCorpNum ,$requestNum, $testUserID);
         $code = $result->code;
         $message = $result->message;
     }

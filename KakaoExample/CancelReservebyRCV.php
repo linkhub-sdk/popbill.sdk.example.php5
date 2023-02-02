@@ -21,8 +21,11 @@
     // 예약문자전송 요청시 입력한 수신번호
     $ReceiveNum = '01011112222';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $result = $KakaoService->CancelReservebyRCV($testCorpNum ,$ReceiptNum, $ReceiveNum);
+        $result = $KakaoService->CancelReservebyRCV($testCorpNum ,$ReceiptNum, $ReceiveNum, $testUserID);
         $code = $result->code;
         $message = $result->message;
     }

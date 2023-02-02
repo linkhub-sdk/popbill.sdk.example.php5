@@ -64,7 +64,7 @@
                                 <li>mgtKey (문서번호) : <?php echo $result->issueResult[$i]->mgtKey ?></li>
                                 <li>confirmNum (국세청 승인번호) : <?php echo $result->issueResult[$i]->confirmNum ?></li>
                                 <li>tradeDate (거래일자) : <?php echo $result->issueResult[$i]->tradeDate ?></li>
-                                <li>tradeDT (거래일시) : <?php echo $result->issueResult[$i]->tradeDT ?></li>
+                                <li>issueDT (발행일시) : <?php echo $result->issueResult[$i]->issueDT ?></li>
                             </ul>
                         </fieldset>
                         <?php

@@ -72,7 +72,7 @@
                     <li>pageNum (페이지 번호) : <?php echo $response->pageNum ?></li>
                     <li>pageCount (페이지 개수) : <?php echo $response->pageCount ?></li>
                     <li>lastScrapDT (최종 조회일시) : <?php echo $response->lastScrapDT ?></li>
-
+                    <li>balance (현재 잔액) : <?php echo $response->balance ?></li>
                     <?php
                     for ( $i = 0; $i < Count ( $response->list ); $i++ ) {
                         ?>
