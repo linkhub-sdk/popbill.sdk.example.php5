@@ -38,7 +38,6 @@
     // 환불사유
     $RefundForm->reason = '환불사유';
 
-
     try	{
         $result = $EasyFinBankService->Refund($testCorpNum, $RefundForm);
         $code = $result->code;
