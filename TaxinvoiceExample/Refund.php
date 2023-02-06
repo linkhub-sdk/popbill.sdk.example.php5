@@ -38,6 +38,8 @@
     // 환불사유
     $RefundForm->reason = '환불사유';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
 
     try	{
         $result = $TaxinvoiceService->Refund($testCorpNum, $RefundForm);

@@ -30,8 +30,11 @@
     // 정렬방향, A-오름차순, D-내림차순
     $Order = "D";
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try	{
-        $result = $ClosedownService->getUseHistory($testCorpNum, $SDate, $EDate, $Page, $PerPage, $Order);
+        $result = $ClosedownService->getUseHistory($testCorpNum, $SDate, $EDate, $Page, $PerPage, $Order, $testUserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

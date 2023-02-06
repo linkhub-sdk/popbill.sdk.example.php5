@@ -38,8 +38,11 @@
     // 환불사유
     $RefundForm->reason = '환불사유';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try	{
-        $result = $EasyFinBankService->Refund($testCorpNum, $RefundForm);
+        $result = $EasyFinBankService->Refund($testCorpNum, $RefundForm, $testUserID);
         $code = $result->code;
         $message = $result->message;
     }

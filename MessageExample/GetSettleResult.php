@@ -18,8 +18,11 @@
     // paymentRequest 를 통해 얻은 settleCode.
     $settleCode = '202210040000000070';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $result = $MessagingService->GetSettleResult($testCorpNum, $settleCode);
+        $result = $MessagingService->GetSettleResult($testCorpNum, $settleCode, $testUserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

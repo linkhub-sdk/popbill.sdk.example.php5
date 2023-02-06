@@ -27,8 +27,11 @@
     // 페이지당 검색개수, 최대 1000건
     $PerPage = 30;
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try	{
-        $result = $FaxService->getPaymentHistory($testCorpNum, $SDate, $EDate, $Page, $PerPage);
+        $result = $FaxService->getPaymentHistory($testCorpNum, $SDate, $EDate, $Page, $PerPage, $testUserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

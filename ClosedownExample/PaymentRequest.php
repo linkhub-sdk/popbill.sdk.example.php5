@@ -36,8 +36,11 @@
     // 결제금액
     $paymentForm->settleCost = '11000';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
+
     try {
-        $result = $ClosedownService->PaymentRequest($testCorpNum, $paymentForm);
+        $result = $ClosedownService->PaymentRequest($testCorpNum, $paymentForm, $testUserID);
         $code = $result->code;
         $message = $result->message;
         $settleCode = $result->settleCode;

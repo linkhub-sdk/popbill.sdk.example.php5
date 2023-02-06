@@ -38,9 +38,11 @@
     // 환불사유
     $RefundForm->reason = '환불사유';
 
+    // 팝빌 회원 아이디
+    $testUserID = 'testkorea';
 
     try	{
-        $result = $StatementService->Refund($testCorpNum, $RefundForm);
+        $result = $StatementService->Refund($testCorpNum, $RefundForm, $testUserID);
         $code = $result->code;
         $message = $result->message;
     }
