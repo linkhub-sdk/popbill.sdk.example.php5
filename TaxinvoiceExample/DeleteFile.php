@@ -20,7 +20,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-002';
+    $mgtKey = '20230102-PHP5-002';
 
     // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
     $FileID = '';

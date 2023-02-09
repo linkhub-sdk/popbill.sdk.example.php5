@@ -3,7 +3,7 @@
   * 팝빌 기업정보조회 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : https://developers.popbill.com/guide/bizinfocheck/php/getting-started/tutorial
-  * 업데이트 일자 : 2023-01-26
+  * 업데이트 일자 : 2023-02-09
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *
@@ -28,7 +28,7 @@
   $BizInfoCheckService= new BizInfoCheckService($LinkID,$SecretKey);
 
   // 연동환경 설정값, 개발용(true), 상업용(false)
-  $BizInfoCheckService->IsTest(true);
+  $BizInfoCheckService->IsTest(false);
 
   // 인증토큰에 대한 IP제한기능 사용여부, 권장(true)
   $BizInfoCheckService->IPRestrictOnOff(true);

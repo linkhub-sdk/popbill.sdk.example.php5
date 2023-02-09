@@ -17,7 +17,7 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    $submitID = "20221103-PHP5-BULK";
+    $submitID = "20230103-PHP5-BULK";
 
     // 최대 100건
     $cashbillList = array();

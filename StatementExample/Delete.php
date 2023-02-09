@@ -21,7 +21,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $MgtKey = '20220324-PHP5-002';
+    $MgtKey = '20230102-PHP5-002';
 
     try	{
         $result = $StatementService->Delete($testCorpNum, $itemCode, $MgtKey);

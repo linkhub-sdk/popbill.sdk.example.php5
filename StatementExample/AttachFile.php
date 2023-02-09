@@ -19,7 +19,7 @@
     $itemCode= '121';
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-001';
+    $mgtKey = '20230102-PHP5-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
     $filepath = './uploadtest.pdf';

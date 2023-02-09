@@ -17,7 +17,7 @@
     $testCorpNum = '1234567890';
 
     // 초대량 발행 접수시 기재한 제출아이디
-    $submitID = '20220324-PHP5-BULK';
+    $submitID = '20230102-PHP5-BULK';
 
     try {
         $result = $TaxinvoiceService->GetBulkResult($testCorpNum, $submitID);

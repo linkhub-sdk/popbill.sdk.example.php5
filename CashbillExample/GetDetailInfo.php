@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20221103-PHP5-011';
+    $mgtKey = '20230102-PHP5-011';
 
     try {
         $result = $CashbillService->GetDetailInfo($testCorpNum, $mgtKey);

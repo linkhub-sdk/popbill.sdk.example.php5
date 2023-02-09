@@ -21,7 +21,7 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-001';
+    $mgtKey = '20230102-PHP5-001';
 
     // 팝빌 회원 아이디
     $testUserID = 'testkorea';

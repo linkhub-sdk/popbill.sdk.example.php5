@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-005';
+    $mgtKey = '20230102-PHP5-005';
 
     // 메모
     $memo = '역)발행 요청 거부메모입니다';

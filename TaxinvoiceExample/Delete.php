@@ -18,7 +18,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-001';
+    $mgtKey = '20230102-PHP5-001';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $mgtKeyType = ENumMgtKeyType::SELL;

@@ -22,8 +22,8 @@
 
     // 세금계산서 문서번호 배열, 최대 1000건
     $MgtKeyList = array();
-    array_push($MgtKeyList, "20220324-PHP5-001");
-    array_push($MgtKeyList, '20220324-PHP5-002');
+    array_push($MgtKeyList, "20230102-PHP5-001");
+    array_push($MgtKeyList, '20230102-PHP5-002');
 
     try {
         $result = $TaxinvoiceService->GetInfos($testCorpNum, $mgtKeyType, $MgtKeyList);

@@ -19,11 +19,11 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    $SubmitID = '20220324-PHP5-BULK';
+    $SubmitID = '20230102-PHP5-BULK';
 
     // 세금계산서 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $invoicerMgtKey = '20220324-PHP5-BULK-';
+    $invoicerMgtKey = '20230102-PHP5-BULK-';
 
     // 지연발행 강제여부  (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
@@ -43,7 +43,7 @@
         $Taxinvoice = new Taxinvoice();
 
         // 작성일자, 형식(yyyyMMdd) 예)20150101
-        $Taxinvoice->writeDate = '20220324';
+        $Taxinvoice->writeDate = '20230102';
 
         // 발행형태, '정발행', '역발행', '위수탁' 중 기재
         $Taxinvoice->issueType = '정발행';
@@ -223,7 +223,7 @@
 
         $Taxinvoice->detailList[] = new TaxinvoiceDetail();
         $Taxinvoice->detailList[0]->serialNum = 1;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-        $Taxinvoice->detailList[0]->purchaseDT = '20220324';	  // 거래일자
+        $Taxinvoice->detailList[0]->purchaseDT = '20230102';	  // 거래일자
         $Taxinvoice->detailList[0]->itemName = '품목명1번';	  	// 품명
         $Taxinvoice->detailList[0]->spec = '';				      // 규격
         $Taxinvoice->detailList[0]->qty = '';					        // 수량
@@ -234,7 +234,7 @@
 
         $Taxinvoice->detailList[] = new TaxinvoiceDetail();
         $Taxinvoice->detailList[1]->serialNum = 2;				      // [상세항목 배열이 있는 경우 필수] 일련번호 1~99까지 순차기재,
-        $Taxinvoice->detailList[1]->purchaseDT = '20220324';	  // 거래일자
+        $Taxinvoice->detailList[1]->purchaseDT = '20230102';	  // 거래일자
         $Taxinvoice->detailList[1]->itemName = '품목명2번';	  	// 품명
         $Taxinvoice->detailList[1]->spec = '';				      // 규격
         $Taxinvoice->detailList[1]->qty = '';					        // 수량

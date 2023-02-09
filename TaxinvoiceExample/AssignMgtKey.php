@@ -22,7 +22,7 @@
     $itemKey = '022032414240100001';
 
     // 할당할 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20220324-PHP5-007';
+    $mgtKey = '20230109-PHP5-007';
 
     try {
         $result = $TaxinvoiceService->AssignMgtKey($testCorpNum, $mgtKeyType, $itemKey, $mgtKey);

@@ -22,7 +22,7 @@
     $mgtKeyType = ENumMgtKeyType::BUY;
 
     // 문서번호
-    $mgtKey = '20220324-PHP-004';
+    $mgtKey = '20230102-PHP-004';
 
     // 메모
     $memo = '역발행 요청 메모입니다';

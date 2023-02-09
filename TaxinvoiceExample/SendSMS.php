@@ -21,7 +21,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-001';
+    $mgtKey = '20230101-PHP5-001';
 
     // 발신번호
     $sender = '';

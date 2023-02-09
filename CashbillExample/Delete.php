@@ -18,7 +18,7 @@
     $testCorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-002';
+    $mgtKey = '20230102-PHP5-002';
 
     try {
         $result = $CashbillService->Delete($testCorpNum, $mgtKey);

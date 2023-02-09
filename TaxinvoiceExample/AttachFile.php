@@ -19,7 +19,7 @@
     $mgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20230102-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
     $filePath = './uploadtest.pdf';

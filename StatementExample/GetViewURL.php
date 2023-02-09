@@ -20,7 +20,7 @@
     $itemCode = '121';
 
     // 전자명세서 문서번호
-    $mgtKey = '20220324-PHP5-001';
+    $mgtKey = '20230101-PHP5-001';
 
     // 팝빌 회원 아이디
     $testUserID = 'testkorea';

@@ -21,7 +21,7 @@
     $mgtKeyType = ENumMgtKeyType::BUY;
 
     // 문서번호
-    $mgtKey = '20210701-001';
+    $mgtKey = '20230102-001';
 
     // 메모
     $memo = '역발행 요청 취소메모입니다';

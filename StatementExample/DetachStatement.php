@@ -19,13 +19,13 @@
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20220324-PHP5-001';
+    $mgtKey = '20230102-PHP5-001';
 
     // 첨부해제할 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $subItemCode = '121';
 
     // 첨부해제할 명세서 문서번호
-    $subMgtKey = '20220324-PHP5-002';
+    $subMgtKey = '20230102-PHP5-002';
 
     try {
         $result = $StatementService->DetachStatement($testCorpNum, $itemCode, $mgtKey, $subItemCode, $subMgtKey);
