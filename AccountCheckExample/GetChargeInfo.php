@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 예금주조회 API 서비스 과금정보를 확인합니다.
+     * 팝빌 휴폐업조회 API 서비스 과금정보를 확인합니다.
      * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetChargeInfo
      */
 

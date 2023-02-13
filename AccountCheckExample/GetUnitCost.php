@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 예금주 성명 조회시 과금되는 포인트 단가를 확인합니다.
+     * 예금주 조회시 과금되는 포인트 단가를 확인합니다.
      * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetUnitCost
      */
 

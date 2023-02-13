@@ -12,8 +12,8 @@
     * - 임시저장(Register API) 함수와 발행(Issue API) 함수를 한 번의 프로세스로 처리합니다.
     * - 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
     *   └ 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
-     * - https://developers.popbill.com/reference/taxinvoice/php/api/issue#RegistIssue
-     */
+    * - https://developers.popbill.com/reference/taxinvoice/php/api/issue#RegistIssue
+    */
 
     include 'common.php';
 

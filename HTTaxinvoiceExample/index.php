@@ -43,22 +43,21 @@
     <fieldset class="fieldset1">
         <legend>포인트 관리 / 정액제 신청</legend>
         <ul>
+            <li><a href="GetFlatRateState.php">GetFlatRateState</a> (정액제 서비스 상태 확인) </li>
+            <li><a href="GetFlatRatePopUpURL.php">GetFlatRatePopUpURL</a> (정액제 서비스 신청 URL) </li>
+            <li><a href="GetChargeInfo.php">GetChargeInfo</a> (과금정보 확인) </li>
             <li><a href="GetBalance.php">GetBalance</a> (연동회원 잔여포인트 확인) </li>
-            <li><a href="GetUseHistory.php">GetUseHistory</a> (포인트 사용내역 확인)</li>
-            <li><a href="GetPaymentHistory.php">GetPaymentHistory</a> (포인트 결제내역 확인)</li>
-            <li><a href="GetRefundHistory.php">GetRefundHistory</a> (환불 신청내역 확인)</li>
-            <li><a href="Refund.php">Refund</a> (환불 신청)</li>
+            <li><a href="GetChargeURL.php">GetChargeURL</a> (연동회원 포인트충전 URL) </li>
             <li><a href="PaymentRequest.php">PaymentRequest</a> (무통장 입금신청)</li>
             <li><a href="GetSettleResult.php">GetSettleResult</a> (무통장 입금신청 정보확인)</li>
-            <li><a href="GetChargeURL.php">GetChargeURL</a> (연동회원 포인트충전 URL) </li>
-            <li><a href="GetPaymentURL.php">GetPaymentURL</a> (연동회원 포인트 결제내역 URL)</li>
-            <li><a href="GetUseHistoryURL.php">GetUseHistoryURL</a> (연동회원 사용내역 URL)</li>
-            <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인) </li>
+            <li><a href="GetPaymentHistory.php">GetPaymentHistory</a> (포인트 결제내역 확인)</li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 URL) </li>
-            <li><a href="GetChargeInfo.php">GetChargeInfo</a> (과금정보 확인) </li>
-            <li><a href="GetFlatRatePopUpURL.php">GetFlatRatePopUpURL</a> (정액제 서비스 신청 URL) </li>
-            <li><a href="GetFlatRateState.php">GetFlatRateState</a> (정액제 서비스 상태 확인) </li>
-
+            <li><a href="GetUseHistory.php">GetUseHistory</a> (포인트 사용내역 확인)</li>
+            <li><a href="GetUseHistoryURL.php">GetUseHistoryURL</a> (연동회원 사용내역 URL)</li>
+            <li><a href="Refund.php">Refund</a> (환불 신청)</li>
+            <li><a href="GetRefundHistory.php">GetRefundHistory</a> (환불 신청내역 확인)</li>
+            <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인) </li>
+            <li><a href="GetPaymentURL.php">GetPaymentURL</a> (연동회원 포인트 결제내역 URL)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

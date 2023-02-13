@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 무통장 입금신청한 건의 정보를 확인합니다.
+     * 연동회원 포인트 충전에 대한 결제내역 1건을 확인합니다.
      * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetSettleResult
      */
 

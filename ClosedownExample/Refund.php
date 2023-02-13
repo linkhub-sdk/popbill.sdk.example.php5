@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 환불을 신청합니다.
+     * 연동회원 포인트를 환불 신청합니다.
      * - https://developers.popbill.com/reference/closedown/php/api/point#Refund
      */
 

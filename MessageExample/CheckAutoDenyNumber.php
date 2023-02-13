@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 전용 080 번호에 등록된 수신거부 목록을 반환합니다.
+     * 팝빌회원에 등록된 080 수신거부 번호 정보를 확인합니다.
      * - https://developers.popbill.com/reference/sms/php/api/info#CheckAutoDenyNumber
      */
 

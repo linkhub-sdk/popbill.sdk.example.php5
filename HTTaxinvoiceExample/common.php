@@ -3,7 +3,7 @@
   * 팝빌 홈택스(전자세금계산서) 연동 API PHP SDK Example
   *
   * PHP SDK 연동환경 설정방법 안내 : https://developers.popbill.com/guide/httaxinvoice/php/getting-started/environment-set-up
-  * 업데이트 일자 : 2023-02-09
+  * 업데이트 일자 : 2023-02-13
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *

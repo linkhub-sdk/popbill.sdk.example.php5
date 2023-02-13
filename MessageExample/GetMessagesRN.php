@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 파트너가 할당한 전송요청 번호를 통해 문자 전송상태 및 결과를 확인합니다.
+     * 파트너가 할당한 전송 요청번호를 통해 문자 전송상태 및 결과를 확인합니다.
      * - https://developers.popbill.com/reference/sms/php/api/info#GetMessagesRN
      */
 
