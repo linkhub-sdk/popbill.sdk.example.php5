@@ -16,7 +16,7 @@
     $testCorpNum = '1234567890';
 
     // 현금영수증, SELL-매출, BUY-매입
-    $CBType = KeyType::BUY;
+    $CBType = HTCashbillKeyType::BUY;
 
     // 시작일자, 형식(yyyyMMdd)
     $SDate = '20230101';
