@@ -7,7 +7,7 @@
 <?php
     /**
      * 전자세금계산서 PDF 파일을 다운 받을 수 있는 URL을 반환합니다.
-     * 반환되는 URL은 보안정책상 30초의 유효시간을 갖으며, 유효시간 이후 호출시 정상적으로 페이지가 호출되지 않습니다.
+     * - 반환되는 URL은 보안정책상 30초의 유효시간을 갖으며, 유효시간 이후 호출시 정상적으로 페이지가 호출되지 않습니다.
      * - https://developers.popbill.com/reference/taxinvoice/php/api/view#GetPDFURL
      */
 

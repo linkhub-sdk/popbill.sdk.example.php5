@@ -7,7 +7,7 @@
 <?php
     /**
      * 현금영수증 안내메일의 상세보기 링크 URL을 반환합니다.
-     * 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
+     * - 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
      * - https://developers.popbill.com/reference/cashbill/php/api/view#GetMailURL
      */
 
