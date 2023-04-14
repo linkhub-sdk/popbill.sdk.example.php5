@@ -45,6 +45,7 @@
         $result = $AccountCheckService->Refund($testCorpNum, $RefundForm, $testUserID);
         $code = $result->code;
         $message = $result->message;
+        $refundCode = $result->refundCode;
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();
@@ -60,6 +61,7 @@
                 <ul>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>
+                    <li>Response.refundCode : <?php echo $refundCode ?></li>
                 </ul>
             </fieldset>
          </div>

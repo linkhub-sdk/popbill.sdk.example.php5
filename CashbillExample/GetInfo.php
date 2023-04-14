@@ -55,7 +55,6 @@
                                 <li>totalAmount (거래금액) : <?php echo $result->totalAmount ?></li>
                                 <li>issueDT (발행일시) : <?php echo $result->issueDT ?></li>
                                 <li>regDT (등록일시) : <?php echo $result->regDT ?></li>
-                                <li>stateMemo (상태메모) : <?php echo $result->stateMemo ?></li>
                                 <li>stateCode (상태코드) : <?php echo $result->stateCode ?></li>
                                 <li>stateDT (상태변경일시) : <?php echo $result->stateDT ?></li>
                                 <li>identityNum (식별번호) : <?php echo $result->identityNum ?></li>
@@ -69,6 +68,7 @@
                                 <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->ntsresultCode ?></li>
                                 <li>ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->ntsresultMessage ?></li>
                                 <li>printYN (인쇄여부) : <?php echo $result->printYN ? 'true' : 'false' ?></li>
+                                <li>interOPYN (연동문서 여부) : <?php echo $result[$i]->interOPYN ? 'true' : 'false' ?></li>
                     <?php
                             }
                         }
