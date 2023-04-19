@@ -104,8 +104,8 @@
             <li><a href="GetRefundHistory.php">GetRefundHistory</a> (연동회원 포인트 환불내역 확인)</li>
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인)</li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 팝업 URL)</li>
-            <li><a href="GetRefundablePoint">환불 가능 포인트 조회</a></li>
-<li><a href="GetRefundResult">환불 신청 상태 조회</a></li>
+            <li><a href="GetRefundableBalance.php">GetRefundableBalance</a> (환불 가능 포인트 조회)</li>
+            <li><a href="GetRefundInfo.php">GetRefundInfo</a> (환불 신청 상태 조회)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -120,7 +120,7 @@
             <li><a href="GetContactInfo.php">GetContactInfo</a> (담당자 정보 확인)</li>
             <li><a href="ListContact.php">ListContact</a> (담당자 목록 확인)</li>
             <li><a href="UpdateContact.php">UpdateContact</a> (담당자 정보 수정)</li>
-            <li><a href="QuitMember">회원 탈퇴</a></li>
+            <li><a href="QuitMember.php">QuitMember</a> (회원 탈퇴)</li>
         </ul>
     </fieldset>
 </div>

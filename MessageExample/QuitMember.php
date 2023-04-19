@@ -37,8 +37,19 @@ try {
         <fieldset class="fieldset1">
             <legend>회원 탈퇴</legend>
             <ul>
-                <li>code (응답 코드) : <?php $result->code ?></li>
-                <li>message (응답 메시지) : <?php $result->message ?></li>
+                <?php
+                    if( isset ( $code ) ) {
+                ?>
+                    <li>Response.code : <?php echo $code ?> </li>
+                    <li>Response.message : <?php echo $message ?></li>
+                <?php
+                    } else {
+                ?>
+                    <li>code (응답 코드) : <?php $result->code ?></li>
+                    <li>message (응답 메시지) : <?php $result->message ?></li>
+                <?php
+                    }
+                ?>
             </ul>
         </fieldset>
     </div>

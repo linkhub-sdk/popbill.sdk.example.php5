@@ -31,11 +31,11 @@
             <li><a href="GetUseHistoryURL.php">GetUseHistoryURL</a> (연동회원 포인트 사용내역 팝업 URL)</li>
             <li><a href="Refund.php">Refund</a> (연동회원 포인트 환불신청)</li>
             <li><a href="GetRefundHistory.php">GetRefundHistory</a> (연동회원 포인트 환불내역 확인)</li>
-            <li><a href="GetRefundResult.php">GetRefundResult</a> (연동회원 포인트 환불신청 상태확인)</li>
+            <li><a href="GetRefundInfo.php">GetRefundInfo</a> (연동회원 포인트 환불신청 상태확인)</li>
             <li><a href="GetPartnerBalance.php">GetPartnerBalance</a> (파트너 잔여포인트 확인) </li>
             <li><a href="GetPartnerURL.php">GetPartnerURL</a> (파트너 포인트충전 팝업 URL) </li>
-            <li><a href="GetRefundablePoint">환불 가능 포인트 조회</a></li>
-<li><a href="GetRefundResult">환불 신청 상태 조회</a></li>
+            <li><a href="GetRefundableBalance.php">GetRefundableBalance</a> (환불 가능 포인트 조회)</li>
+            <li><a href="GetRefundInfo.php">GetRefundInfo</a> (환불 신청 상태 조회)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -51,7 +51,7 @@
             <li><a href="ListContact.php">ListContact</a> (담당자 목록 확인) </li>
             <li><a href="UpdateContact.php">UpdateContact</a> (담당자 정보 수정) </li>
             <li><a href="GetAccessURL.php">GetAccessURL</a> (팝빌 로그인 URL) </li>
-            <li><a href="QuitMember">회원 탈퇴</a></li>
+            <li><a href="QuitMember.php">QuitMember</a> (회원 탈퇴)</li>
         </ul>
     </fieldset>
 </div>

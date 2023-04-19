@@ -37,14 +37,26 @@ try {
         <fieldset class="fieldset1">
             <legend>환불 신청 상태 조회</legend>
             <ul>
-                <li>reqDT (신청일시) : <?php $result->reqDT ?></li>
-                <li>requestPoint (환불 신청포인트) : <?php $result->requestPoint ?></li>
-                <li>accountBank (환불계좌 은행명) : <?php $result->accountBank ?></li>
-                <li>accountNum (환불계좌번호) : <?php $result->accountNum ?></li>
-                <li>accountName (환불계좌 예금주명) : <?php $result->accountName ?></li>
-                <li>state (상태) : <?php $result->state ?></li>
-                <li>reason (환불사유) : <?php $result->reason ?></li>
+                <?php
+                    if( isset ( $code ) ) {
+                ?>
+                    <li>Response.code : <?php echo $code ?> </li>
+                    <li>Response.message : <?php echo $message ?></li>
+                <?php
+                    } else {
+                ?>
+                    <li>reqDT (신청일시) : <?php echo $result->reqDT ?></li>
+                    <li>requestPoint (환불 신청포인트) : <?php echo $result->requestPoint ?></li>
+                    <li>accountBank (환불계좌 은행명) : <?php echo $result->accountBank ?></li>
+                    <li>accountNum (환불계좌번호) : <?php echo $result->accountNum ?></li>
+                    <li>accountName (환불계좌 예금주명) : <?php echo $result->accountName ?></li>
+                    <li>state (상태) : <?php echo $result->state ?></li>
+                    <li>reason (환불사유) : <?php echo $result->reason ?></li>
+                <?php
+                    }
+                ?>
             </ul>
+
         </fieldset>
     </div>
 </body>
