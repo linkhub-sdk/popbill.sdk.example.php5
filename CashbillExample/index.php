@@ -92,7 +92,7 @@
             <li><a href="GetContactInfo.php">GetContactInfo</a> (담당자 정보 확인)</li>
             <li><a href="ListContact.php">ListContact</a> (담당자 목록 확인)</li>
             <li><a href="UpdateContact.php">UpdateContact</a> (담당자 정보 수정)</li>
-            <li><a href="QuitRequest">회원 탈퇴</a></li>
+            <li><a href="QuitMember">회원 탈퇴</a></li>
         </ul>
     </fieldset>
 </div>

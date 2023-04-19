@@ -8,7 +8,7 @@
 <?php
 /**
  * 팝빌 회원을 탈퇴합니다.
- * - https://developers.popbill.com/reference/fax/php/api/member#QuiteRequest
+ * - https://developers.popbill.com/reference/httaxinvoice/php/api/member#QuitMember
  */
 
 include 'common.php';
@@ -23,7 +23,7 @@ $QuitReason = "테스트용 탈퇴사유";
 $testUserID = 'testkorea';
 
 try {
-    $result = $FaxService->QuitRequest($testCorpNum, $QuitReason, $testUserID);
+    $result = $HTTaxinvoiceService->QuitMember($testCorpNum, $QuitReason, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
