@@ -8,7 +8,7 @@
 <?php
 /**
  * 환불 가능한 포인트를 반환합니다.
- * - https://developers.popbill.com/reference/taxinvoice/php/api/point#GetRefundablePoint
+ * - https://developers.popbill.com/reference/cashbill/php/api/point#GetRefundableBalance
  */
 
 include 'common.php';
@@ -20,7 +20,7 @@ $testCorpNum = '1234567890';
 $testUserID = 'testkorea';
 
 try {
-    $result = $TaxinvoiceService->GetRefundablePoint($testCorpNum, $testUserID);
+    $result = $CashbillService->GetRefundableBalance($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -32,7 +32,6 @@ try {
         <p class="heading1">Response</p>
         <br />
         <fieldset class="fieldset1">
-            <legend>환불 가능 포인트 조회</legend>
             <ul>
                 <li>refundableBalance (환불 가능 포인트) : <?php $result->refundableBalance ?></li>
             </ul>

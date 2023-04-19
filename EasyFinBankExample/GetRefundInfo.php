@@ -8,7 +8,7 @@
 <?php
 /**
  * 환불 신청의 상태를 확인합니다.
- * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetRefundResult
+ * - https://developers.popbill.com/reference/easyfinbank/php/api/point#GetRefundInfo
  */
 
 include 'common.php';
@@ -23,7 +23,7 @@ $testUserID = 'testkorea';
 $RefundCode;
 
 try {
-    $result = $AccountCheckService->GetRefundResult($testCorpNum, $RefundCode, $testUserID);
+    $result = $EasyFinBankService->GetRefundInfo($testCorpNum, $RefundCode, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -37,14 +37,13 @@ try {
         <fieldset class="fieldset1">
             <legend>환불 신청 상태 조회</legend>
             <ul>
-                <li>refundableBalance (환불 가능 포인트) : <?php $result->refundableBalance ?></li>
-                <li>reqDT () : <?php $result->reqDT ?></li>
-                <li>requestPoint () : <?php $result->requestPoint ?></li>
-                <li>accountBank () : <?php $result->accountBank ?></li>
-                <li>accountNum () : <?php $result->accountNum ?></li>
-                <li>accountName () : <?php $result->accountName ?></li>
-                <li>state () : <?php $result->state ?></li>
-                <li>reason () : <?php $result->reason ?></li>
+                <li>reqDT (신청일시) : <?php $result->reqDT ?></li>
+                <li>requestPoint (환불 신청포인트) : <?php $result->requestPoint ?></li>
+                <li>accountBank (환불계좌 은행명) : <?php $result->accountBank ?></li>
+                <li>accountNum (환불계좌번호) : <?php $result->accountNum ?></li>
+                <li>accountName (환불계좌 예금주명) : <?php $result->accountName ?></li>
+                <li>state (상태) : <?php $result->state ?></li>
+                <li>reason (환불사유) : <?php $result->reason ?></li>
             </ul>
         </fieldset>
     </div>

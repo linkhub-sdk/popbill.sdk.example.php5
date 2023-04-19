@@ -7,8 +7,8 @@
 </head>
 <?php
 /**
- * 환불 신청의 상태를 확인합니다.
- * - https://developers.popbill.com/reference/sms/php/api/point#GetRefundResult
+ * 환불 가능한 포인트를 반환합니다.
+ * - https://developers.popbill.com/reference/taxinvoice/php/api/point#GetRefundableBalance
  */
 
 include 'common.php';
@@ -19,11 +19,8 @@ $testCorpNum = '1234567890';
 // 팝빌 회원 아이디
 $testUserID = 'testkorea';
 
-// 환불 신청 코드
-$RefundCode;
-
 try {
-    $result = $MessagingService->GetRefundResult($testCorpNum, $RefundCode, $testUserID);
+    $result = $TaxinvoiceService->GetRefundableBalance($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -35,16 +32,9 @@ try {
         <p class="heading1">Response</p>
         <br />
         <fieldset class="fieldset1">
-            <legend>환불 신청 상태 조회</legend>
+            <legend>환불 가능 포인트 조회</legend>
             <ul>
                 <li>refundableBalance (환불 가능 포인트) : <?php $result->refundableBalance ?></li>
-                <li>reqDT () : <?php $result->reqDT ?></li>
-                <li>requestPoint () : <?php $result->requestPoint ?></li>
-                <li>accountBank () : <?php $result->accountBank ?></li>
-                <li>accountNum () : <?php $result->accountNum ?></li>
-                <li>accountName () : <?php $result->accountName ?></li>
-                <li>state () : <?php $result->state ?></li>
-                <li>reason () : <?php $result->reason ?></li>
             </ul>
         </fieldset>
     </div>

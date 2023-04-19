@@ -8,7 +8,7 @@
 <?php
 /**
  * 환불 가능한 포인트를 반환합니다.
- * - https://developers.popbill.com/reference/htcashbill/php/api/point#GetRefundablePoint
+ * - https://developers.popbill.com/reference/sms/php/api/point#GetRefundableBalance
  */
 
 include 'common.php';
@@ -20,7 +20,7 @@ $testCorpNum = '1234567890';
 $testUserID = 'testkorea';
 
 try {
-    $result = $HTCashbillService->GetRefundablePoint($testCorpNum, $testUserID);
+    $result = $MessagingService->GetRefundableBalance($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();

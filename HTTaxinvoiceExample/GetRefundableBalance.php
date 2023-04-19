@@ -8,7 +8,7 @@
 <?php
 /**
  * 환불 가능한 포인트를 반환합니다.
- * - https://developers.popbill.com/reference/bizinfocheck/php/api/point#GetRefundablePoint
+ * - https://developers.popbill.com/reference/httaxinvoice/php/api/point#GetRefundableBalance
  */
 
 include 'common.php';
@@ -20,7 +20,7 @@ $testCorpNum = '1234567890';
 $testUserID = 'testkorea';
 
 try {
-    $result = $BizInfoCheckService->GetRefundablePoint($testCorpNum, $testUserID);
+    $result = $HTTaxinvoiceService->GetRefundableBalance($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
