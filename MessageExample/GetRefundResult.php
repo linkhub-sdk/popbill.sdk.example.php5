@@ -8,7 +8,7 @@
 <?php
 /**
  * 환불 신청의 상태를 확인합니다.
- * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetRefundResult
+ * - https://developers.popbill.com/reference/sms/php/api/point#GetRefundResult
  */
 
 include 'common.php';
@@ -23,7 +23,7 @@ $testUserID = 'testkorea';
 $RefundCode;
 
 try {
-    $result = $AccountCheckService->GetRefundResult($testCorpNum, $RefundCode, $testUserID);
+    $result = $MessagingService->GetRefundResult($testCorpNum, $RefundCode, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();

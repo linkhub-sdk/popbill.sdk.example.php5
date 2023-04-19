@@ -7,8 +7,8 @@
 </head>
 <?php
 /**
- * 환불 가능한 포인트를 반환합니다.
- * - https://developers.popbill.com/reference/cashbill/php/api/point#GetRefundablePoint
+ * 팝빌 회원을 탈퇴합니다.
+ * - https://developers.popbill.com/reference/easyfinbank/php/api/member#QuiteRequest
  */
 
 include 'common.php';
@@ -16,11 +16,14 @@ include 'common.php';
 // 팝빌 회원 사업자 번호, "-"제외 10자리
 $testCorpNum = '1234567890';
 
+// 탈퇴 사유
+$QuitReason = "테스트용 탈퇴사유";
+
 // 팝빌 회원 아이디
 $testUserID = 'testkorea';
 
 try {
-    $result = $CashbillService->GetRefundablePoint($testCorpNum, $testUserID);
+    $result = $EasyFinBankService->QuitRequest($testCorpNum, $QuitReason, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -32,8 +35,10 @@ try {
         <p class="heading1">Response</p>
         <br />
         <fieldset class="fieldset1">
+            <legend>회원 탈퇴</legend>
             <ul>
-                <li>refundableBalance (환불 가능 포인트) : <?php $result->refundableBalance ?></li>
+                <li>code (응답 코드) : <?php $result->code ?></li>
+                <li>message (응답 메시지) : <?php $result->message ?></li>
             </ul>
         </fieldset>
     </div>
