@@ -20,7 +20,7 @@ $testCorpNum = '1234567890';
 $testUserID = 'testkorea';
 
 try {
-    $result = $MessagingService->GetRefundableBalance($testCorpNum, $testUserID);
+    $refundableBalance = $MessagingService->GetRefundableBalance($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();

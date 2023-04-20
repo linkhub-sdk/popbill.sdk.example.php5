@@ -24,13 +24,7 @@ $RefundCode="023040000017";
 
 try {
     $result = $CashbillService->GetRefundInfo($testCorpNum, $RefundCode, $testUserID);
-    $reqDT = $result->reqDT;
-    $requestPoint = $result->requestPoint;
-    $accountBank = $result->accountBank;
-    $accountNum = $result->accountNum;
-    $accountName = $result->accountName;
-    $state  = $result->state;
-    $reason  = $result->reason;
+
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -52,13 +46,13 @@ try {
                 <?php
                     } else {
                 ?>
-                    <li>reqDT (신청일시) : <?php echo $reqDT ?></li>
-                    <li>requestPoint (환불 신청포인트) : <?php echo $requestPoint ?></li>
-                    <li>accountBank (환불계좌 은행명) : <?php echo $accountBank ?></li>
-                    <li>accountNum (환불계좌번호) : <?php echo $accountNum ?></li>
-                    <li>accountName (환불계좌 예금주명) : <?php echo $accountName ?></li>
-                    <li>state (상태) : <?php echo $state ?></li>
-                    <li>reason (환불사유) : <?php echo $reason ?></li>
+                    <li>reqDT (신청일시) : <?php echo $result->reqDT ?></li>
+                    <li>requestPoint (환불 신청포인트) : <?php echo $result->requestPoint ?></li>
+                    <li>accountBank (환불계좌 은행명) : <?php echo $result->accountBank ?></li>
+                    <li>accountNum (환불계좌번호) : <?php echo $result->accountNum ?></li>
+                    <li>accountName (환불계좌 예금주명) : <?php echo $result->accountName ?></li>
+                    <li>state (상태) : <?php echo $result->state ?></li>
+                    <li>reason (환불사유) : <?php echo $result->reason ?></li>
                 <?php
                     }
                 ?>

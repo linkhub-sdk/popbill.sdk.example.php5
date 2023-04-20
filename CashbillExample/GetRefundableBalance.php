@@ -20,7 +20,7 @@ $testCorpNum = '1234567890';
 $testUserID = 'testkorea';
 
 try {
-    $result = $CashbillService->GetRefundableBalance($testCorpNum, $testUserID);
+    $refundableBalance = $CashbillService->GetRefundableBalance($testCorpNum, $testUserID);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -41,7 +41,7 @@ try {
                 <?php
                     } else {
                 ?>
-                    <li>refundableBalance (환불 가능 포인트) : <?php echo $result->refundableBalance ?></li>
+                    <li>refundableBalance (환불 가능 포인트) : <?php echo $refundableBalance ?></li>
                 <?php
                     }
                 ?>
