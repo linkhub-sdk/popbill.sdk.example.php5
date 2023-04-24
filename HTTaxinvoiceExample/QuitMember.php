@@ -47,8 +47,8 @@ try {
                 <?php
                     } else {
                 ?>
-                    <li>code (응답 코드) : <?php $result->code ?></li>
-                    <li>message (응답 메시지) : <?php $result->message ?></li>
+                    <li>code (응답 코드) : <?php echo $result->code ?></li>
+                    <li>message (응답 메시지) : <?php echo $result->message ?></li>
                 <?php
                     }
                 ?>
