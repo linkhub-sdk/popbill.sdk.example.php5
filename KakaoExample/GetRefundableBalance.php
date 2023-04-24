@@ -14,7 +14,7 @@
 include 'common.php';
 
 // 팝빌 회원 사업자 번호, "-"제외 10자리
-$testCorpNum = '8442801306';
+$testCorpNum = '1234567890';
 
 // 팝빌 회원 아이디
 $testUserID = 'testkorea';
