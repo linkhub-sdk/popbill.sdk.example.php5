@@ -59,9 +59,20 @@
             <fieldset class="fieldset1">
                 <legend>환불신청</legend>
                 <ul>
+                <?php
+                if (isset($refundCode)) {
+                ?>
+                    <li>code (응답 코드) : <?php echo $code ?></li>
+                    <li>message (응답 메시지) : <?php echo $message ?></li>
+                    <li>refundCode (환불 코드) : <?php echo $refundCode ?></li>
+                <?php
+                } else {
+                ?>
                     <li>Response.code : <?php echo $code ?></li>
                     <li>Response.message : <?php echo $message ?></li>
-                    <li>Response.refundCode : <?php echo $refundCode ?></li>
+                <?php
+                }
+                ?>
                 </ul>
             </fieldset>
          </div>
