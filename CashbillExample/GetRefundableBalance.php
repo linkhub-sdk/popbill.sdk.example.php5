@@ -7,7 +7,7 @@
 </head>
 <?php
 /**
- * 환불 가능한 포인트를 반환합니다.
+ * 환불 가능한 포인트를 확인합니다. (보너스 포인트는 환불가능포인트에서 제외됩니다.)
  * - https://developers.popbill.com/reference/cashbill/php/api/point#GetRefundableBalance
  */
 
