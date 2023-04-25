@@ -27,6 +27,8 @@ $testUserID = 'testkorea';
 
 try {
     $result = $FaxService->QuitMember($testCorpNum, $QuitReason, $testUserID);
+    $code = $result->code;
+    $message = $result->message;
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -40,19 +42,8 @@ try {
         <fieldset class="fieldset1">
             <legend>회원 탈퇴</legend>
             <ul>
-                <?php
-                    if( isset ( $code ) ) {
-                ?>
-                    <li>Response.code : <?php echo $code ?> </li>
-                    <li>Response.message : <?php echo $message ?></li>
-                <?php
-                    } else {
-                ?>
-                    <li>code (응답 코드) : <?php echo $result->code ?></li>
-                    <li>message (응답 메시지) : <?php echo $result->message ?></li>
-                <?php
-                    }
-                ?>
+                <li>code (응답 코드) : <?php echo $code ?></li>
+                <li>message (응답 메시지) : <?php echo $message ?></li>
             </ul>
         </fieldset>
     </div>
