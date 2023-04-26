@@ -19,7 +19,7 @@ $testCorpNum = '1234567890';
 // 팝빌 회원 아이디
 $testUserID = 'testkorea';
 
-// 환불 신청 코드
+// 환불코드
 $RefundCode="023040000017";
 
 try {
