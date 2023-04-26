@@ -17,7 +17,7 @@
 
     // 예약문자전송 요청시 할당한 전송요청번호
     $requestNum = '20230102_001';
-    
+
     // 예약문자전송 요청시 입력한 수신번호
     $ReceiveNum = '010222333';
 
@@ -38,8 +38,8 @@
             <fieldset class="fieldset1">
                 <legend>문자 예약전송 취소 </legend>
                 <ul>
-                    <li>Response.code : <?php echo $code ?></li>
-                    <li>Response.message : <?php echo $message ?></li>
+                    <li>code (응답 코드) : <?php echo $code ?></li>
+                    <li>message (응답 메시지) : <?php echo $message ?></li>
                 </ul>
             </fieldset>
          </div>

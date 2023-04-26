@@ -98,14 +98,14 @@
             <fieldset class="fieldset1">
                 <legend>(부분)취소현금영수증 즉시발행</legend>
                 <ul>
-                    <li>Response.code : <?php echo $code ?></li>
-                    <li>Response.message : <?php echo $message ?></li>
+                    <li>code (응답 코드) : <?php echo $code ?></li>
+                    <li>message (응답 메시지) : <?php echo $message ?></li>
                     <?php
                       if ( isset($confirmNum) ) {
                     ?>
-                      <li>Response.confirmNum : <?php echo $confirmNum ?></li>
-                      <li>Response.tradeDate : <?php echo $tradeDate ?></li>
-                      <li>Response.tradeDT : <?php echo $tradeDT ?></li>
+                      <li>confirmNum (국세청 승인번호) : <?php echo $confirmNum ?></li>
+                      <li>tradeDate : (거래일자) <?php echo $tradeDate ?></li>
+                      <li>tradeDT (거래일시) : <?php echo $tradeDT ?></li>
                     <?php
                       }
                     ?>

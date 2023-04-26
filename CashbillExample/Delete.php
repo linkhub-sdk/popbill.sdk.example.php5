@@ -37,8 +37,8 @@
             <fieldset class="fieldset1">
                 <legend>현금영수증 삭제</legend>
                 <ul>
-                    <li>Response.code : <?php echo $code ?></li>
-                    <li>Response.message : <?php echo $message ?></li>
+                    <li>code (응답 코드) : <?php echo $code ?></li>
+                    <li>message (응답 메시지) : <?php echo $message ?></li>
                 </ul>
             </fieldset>
          </div>

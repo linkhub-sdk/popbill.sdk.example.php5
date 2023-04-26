@@ -34,7 +34,7 @@
 
         // 거래구분, (소득공제용, 지출증빙용) 중 기재
         $Cashbill->tradeUsage = '소득공제용';
-        
+
         // 거래일시, 날짜(yyyyMMddHHmmss)
         // 당일, 전일만 가능
         $Cashbill->tradeDT = '20221103000000';
@@ -132,12 +132,12 @@
             <fieldset class="fieldset1">
                 <legend>현금영수증 초대량 발행 접수</legend>
                 <ul>
-                    <li>Response.code : <?php echo $code ?></li>
-                    <li>Response.message : <?php echo $message ?></li>
+                    <li>code (응답 코드) : <?php echo $code ?></li>
+                    <li>message (응답 메시지) : <?php echo $message ?></li>
                     <?php
                       if ( isset($receiptID) ) {
                     ?>
-                      <li>Response.receiptID : <?php echo $receiptID ?></li>
+                      <li>receiptID (접수아이디) : <?php echo $receiptID ?></li>
                     <?php
                       }
                     ?>

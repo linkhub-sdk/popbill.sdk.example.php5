@@ -74,7 +74,7 @@
                         <li>과세유형전환일자 (closeDownTaxTypeDate) : <?php echo $result->closeDownTaxTypeDate?></li>
                         <li>휴폐업상태 (closeDownState) : <?php echo $result->closeDownState?></li>
                         <li>휴폐업일자 (closeDownStateDate) : <?php echo $result->closeDownStateDate?></li>
-                    
+
                     </ul>
                 </fieldset>
 
@@ -85,8 +85,8 @@
                 <fieldset class="fieldset2">
                     <legend>기업정보조회 - 단건</legend>
                     <ul>
-                        <li>Response.code : <?php echo $code ?> </li>
-                        <li>Response.message : <?php echo $message ?></li>
+                        <li>code (응답 코드) : <?php echo $code ?></li>
+                        <li>message (응답 메시지) : <?php echo $message ?></li>
                     </ul>
                 </fieldset>
             <?php
