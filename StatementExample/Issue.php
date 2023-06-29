@@ -16,10 +16,10 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -35,7 +35,7 @@
     $emailSubject = '';
 
     try	{
-        $result = $StatementService->Issue($testCorpNum, $itemCode, $MgtKey, $memo, $testUserID, $emailSubject);
+        $result = $StatementService->Issue($CorpNum, $itemCode, $MgtKey, $memo, $UserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
     }

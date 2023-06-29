@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 카카오톡 전송유형 ATS-알림톡, FTS-친구톡(텍스트), FMS-친구톡(이미지)
     $kakaoType = ENumKakaoType::FMS;
 
     try {
-        $result = $KakaoService->GetChargeInfo($testCorpNum, $kakaoType);
+        $result = $KakaoService->GetChargeInfo($CorpNum, $kakaoType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

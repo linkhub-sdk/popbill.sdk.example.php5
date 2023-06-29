@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 조회할 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try	{
-        $result = $ClosedownService->CheckID($testUserID);
+        $result = $ClosedownService->CheckID($UserID);
         $code = $result->code;
         $message = $result->message;
     }

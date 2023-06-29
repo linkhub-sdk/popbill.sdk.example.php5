@@ -16,7 +16,7 @@
 include 'common.php';
 
 // 팝빌회원 사업자번호
-$testCorpNum = '1234567890';
+$CorpNum = '1234567890';
 
 // 문서번호 배열, 최대 1000건
 $MgtKeyList = array(
@@ -25,7 +25,7 @@ $MgtKeyList = array(
 );
 
 try {
-    $result = $CashbillService->GetInfos($testCorpNum, $MgtKeyList);
+    $result = $CashbillService->GetInfos($CorpNum, $MgtKeyList);
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();

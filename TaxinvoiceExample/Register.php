@@ -18,7 +18,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 세금계산서 문서번호
     // - 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능
@@ -53,7 +53,7 @@
      ************************************************************/
 
     // 공급자 사업자번호
-    $Taxinvoice->invoicerCorpNum = $testCorpNum;
+    $Taxinvoice->invoicerCorpNum = $CorpNum;
 
     // 공급자 종사업장 식별번호, 4자리 숫자 문자열
     $Taxinvoice->invoicerTaxRegID = '';
@@ -269,7 +269,7 @@
     $writeSpecification = false;
 
     try {
-        $result = $TaxinvoiceService->Register($testCorpNum, $Taxinvoice);
+        $result = $TaxinvoiceService->Register($CorpNum, $Taxinvoice);
         $code = $result->code;
         $message = $result->message;
     }

@@ -15,7 +15,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 기관코드
     $BankCode = '';
@@ -30,7 +30,7 @@
     $EDate = '20230131';
 
     try {
-        $jobID = $EasyFinBankService->RequestJob($testCorpNum, $BankCode, $AccountNumber, $SDate, $EDate);
+        $jobID = $EasyFinBankService->RequestJob($CorpNum, $BankCode, $AccountNumber, $SDate, $EDate);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

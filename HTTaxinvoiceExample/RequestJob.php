@@ -14,7 +14,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-위수탁
     $TIKeyType = HTTIKeyType::SELL;
@@ -29,7 +29,7 @@
     $EDate = '20230131';
 
     try {
-        $jobID = $HTTaxinvoiceService->RequestJob($testCorpNum, $TIKeyType, $DType, $SDate, $EDate);
+        $jobID = $HTTaxinvoiceService->RequestJob($CorpNum, $TIKeyType, $DType, $SDate, $EDate);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

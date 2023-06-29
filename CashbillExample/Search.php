@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 일자 유형 ("R" , "T" , "I" 중 택 1)
     // └ R = 등록일자 , T = 거래일자 , I = 발행일자
@@ -82,7 +82,7 @@
     $FranchiseTaxRegID = "";
 
     try {
-        $result = $CashbillService->Search( $testCorpNum, $DType, $SDate, $EDate, $State, $TradeType,
+        $result = $CashbillService->Search( $CorpNum, $DType, $SDate, $EDate, $State, $TradeType,
             $TradeUsage, $TaxationType, $Page, $PerPage, $Order, $QString, $TradeOpt, $FranchiseTaxRegID);
     }	catch(PopbillException $pe) {
         $code = $pe->getCode();

@@ -15,19 +15,19 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::BUY;
+    $MgtKeyType = ENumMgtKeyType::BUY;
 
     // 문서번호
-    $mgtKey = '20230102-001';
+    $MgtKey = '20230102-001';
 
     // 메모
     $memo = '역발행 요청 취소메모입니다';
 
     try {
-        $result = $TaxinvoiceService->CanCelRequest($testCorpNum, $mgtKeyType, $mgtKey, $memo);
+        $result = $TaxinvoiceService->CanCelRequest($CorpNum, $MgtKeyType, $MgtKey, $memo);
         $code = $result->code;
         $message = $result->message;
     }

@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     try {
-        $ExpireDate = $HTCashbillService->GetCertificateExpireDate($testCorpNum);
+        $ExpireDate = $HTCashbillService->GetCertificateExpireDate($CorpNum);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

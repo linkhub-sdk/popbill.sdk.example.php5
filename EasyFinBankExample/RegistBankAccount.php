@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 계좌정보 클래스 생성
     $BankAccountInfo = new EasyFinBankAccountForm();
@@ -59,7 +59,7 @@
     $BankAccountInfo->Memo = '';
 
     try {
-        $result = $EasyFinBankService->RegistBankAccount($testCorpNum, $BankAccountInfo);
+        $result = $EasyFinBankService->RegistBankAccount($CorpNum, $BankAccountInfo);
         $code = $result->code;
         $message = $result->message;
     }

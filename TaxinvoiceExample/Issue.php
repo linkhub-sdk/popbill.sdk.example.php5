@@ -18,13 +18,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
-    $mgtKey = '20230102-PHP5-002';
+    $MgtKey = '20230102-PHP5-002';
 
     // 메모
     $memo = '발행 메모입니다';
@@ -41,7 +41,7 @@
     $EmailSubject = null;
 
     try {
-        $result = $TaxinvoiceService->Issue($testCorpNum, $mgtKeyType, $mgtKey, $memo, $EmailSubject, $forceIssue);
+        $result = $TaxinvoiceService->Issue($CorpNum, $MgtKeyType, $MgtKey, $memo, $EmailSubject, $forceIssue);
         $code = $result->code;
         $message = $result->message;
         $ntsConfirmNum = $result->ntsConfirmNum;

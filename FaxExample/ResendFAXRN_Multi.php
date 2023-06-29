@@ -16,10 +16,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 팩스전송 발신번호, 공백처리시 기존전송정보로 재전송
     $Sender = '';
@@ -52,7 +52,7 @@
 
 
     // 예약전송일시(yyyyMMddHHmmss) ex)20220324230000, null인경우 즉시전송
-    $reserveDT = null;
+    $ReserveDT = null;
 
     // 팩스 제목
     $title = '팩스 재전송 제목';
@@ -63,11 +63,11 @@
     // 재전송 팩스의 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $requestNum = '';
+    $RequestNum = '';
 
     try {
-        $receiptNum = $FaxService->ResendFAXRN($testCorpNum, $requestNum, $Sender,
-            $SenderName, $Receivers, $originalFAXrequestNum, $reserveDT, $testUserID, $title);
+        $receiptNum = $FaxService->ResendFAXRN($CorpNum, $RequestNum, $Sender,
+            $SenderName, $Receivers, $originalFAXrequestNum, $ReserveDT, $UserID, $title);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

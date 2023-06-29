@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 확인할 담당자 아이디
-    $contactID = "linkhub111";
+    $ContactID = "linkhub111";
 
     try {
-        $result = $EasyFinBankService->GetContactInfo($testCorpNum, $contactID);
+        $result = $EasyFinBankService->GetContactInfo($CorpNum, $ContactID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

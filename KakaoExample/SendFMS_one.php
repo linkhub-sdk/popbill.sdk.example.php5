@@ -16,10 +16,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 팝빌에 등록된 카카오톡 검색용 아이디
     $plusFriendID = '@팝빌';
@@ -53,7 +53,7 @@
 	// 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $requestNum = '';
+    $RequestNum = '';
 
     // 수신자 정보
     $receivers[] = array(
@@ -76,7 +76,7 @@
     );
 
     // 예약전송일시, yyyyMMddHHmmss
-    $reserveDT = null;
+    $ReserveDT = null;
 
 	// 첨부이미지 파일 경로
     // 이미지 파일 규격: 전송 포맷 – JPG 파일 (.jpg, .jpeg), 용량 – 최대 500 Kbyte, 크기 – 가로 500px 이상, 가로 기준으로 세로 0.5~1.3배 비율 가능
@@ -88,8 +88,8 @@
     $imageURL = 'http://popbill.com';
 
     try {
-        $receiptNum = $KakaoService->SendFMS($testCorpNum, $plusFriendID, $sender,
-            $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $reserveDT, $files, $imageURL, $testUserID, $requestNum, $altSubject);
+        $receiptNum = $KakaoService->SendFMS($CorpNum, $plusFriendID, $sender,
+            $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $ReserveDT, $files, $imageURL, $UserID, $RequestNum, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 담당자 정보 객체 생성
     $ContactInfo = new ContactInfo();
@@ -37,7 +37,7 @@
     $ContactInfo->searchRole = 3;
 
     try {
-        $result = $HTTaxinvoiceService->UpdateContact($testCorpNum, $ContactInfo, $testUserID);
+        $result = $HTTaxinvoiceService->UpdateContact($CorpNum, $ContactInfo, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

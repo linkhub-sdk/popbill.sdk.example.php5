@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     try	{
-        $result = $FaxService->CheckIsMember($testCorpNum, $LinkID);
+        $result = $FaxService->CheckIsMember($CorpNum, $LinkID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 조회할 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try	{
-        $result = $MessagingService->CheckID($testUserID);
+        $result = $MessagingService->CheckID($UserID);
         $code = $result->code;
         $message = $result->message;
     }

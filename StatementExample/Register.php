@@ -14,10 +14,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 문서번호, 발행자별 고유번호 할당, 1~24자리 영문,숫자 조합으로 중복없이 구성
-    $mgtKey = '202230102-PHP5-002';
+    $MgtKey = '202230102-PHP5-002';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -45,14 +45,14 @@
     $Statement->itemCode = $itemCode;
 
     // 전자명세서 문서번호
-    $Statement->mgtKey = $mgtKey;
+    $Statement->mgtKey = $MgtKey;
 
 
     /************************************************************
      *                         공급자 정보
      ************************************************************/
 
-    $Statement->senderCorpNum = $testCorpNum;
+    $Statement->senderCorpNum = $CorpNum;
     $Statement->senderTaxRegID = '';
     $Statement->senderCorpName = '공급자 상호';
     $Statement->senderCEOName = '공급자 대표자 성명';
@@ -164,7 +164,7 @@
     );
 
     try {
-        $result = $StatementService->Register($testCorpNum, $Statement);
+        $result = $StatementService->Register($CorpNum, $Statement);
         $code = $result->code;
         $message = $result->message;
     }

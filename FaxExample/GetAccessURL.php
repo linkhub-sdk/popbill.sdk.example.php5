@@ -14,13 +14,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $url = $FaxService->GetAccessURL($testCorpNum, $testUserID);
+        $url = $FaxService->GetAccessURL($CorpNum, $UserID);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();
@@ -32,20 +32,20 @@
     <br/>
     <fieldset class="fieldset1">
         <legend>팝빌 로그인 URL</legend>
-        <ul>
-          <?php
-          if (isset($url)) {
-          ?>
-              <li>url : <?php echo $url ?></li>
-          <?php
-          } else {
-          ?>
-              <li>code (응답 코드) : <?php echo $code ?></li>
-              <li>message (응답 메시지) : <?php echo $message ?></li>
-          <?php
-          }
-          ?>
-        </ul>
+            <ul>
+            <?php
+                if (isset($url)) {
+            ?>
+                <li>url : <?php echo $url ?></li>
+            <?php
+                } else {
+            ?>
+                <li>code (응답 코드) : <?php echo $code ?></li>
+                <li>message (응답 메시지) : <?php echo $message ?></li>
+            <?php
+                }
+            ?>
+            </ul>
     </fieldset>
 </div>
 </body>

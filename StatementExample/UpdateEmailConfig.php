@@ -20,7 +20,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 메일 전송 유형
     $emailType = 'SMT_ISSUE';
@@ -29,7 +29,7 @@
     $sendYN = True;
 
     try {
-        $result = $StatementService->UpdateEmailConfig($testCorpNum, $emailType, $sendYN);
+        $result = $StatementService->UpdateEmailConfig($CorpNum, $emailType, $sendYN);
 
         $code = $result->code;
         $message = $result->message;

@@ -15,7 +15,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
@@ -63,7 +63,7 @@
          ************************************************************/
 
         // 공급자 사업자번호
-        $Taxinvoice->invoicerCorpNum = $testCorpNum;
+        $Taxinvoice->invoicerCorpNum = $CorpNum;
 
         // 공급자 종사업장 식별번호, 4자리 숫자 문자열
         $Taxinvoice->invoicerTaxRegID = '';
@@ -267,7 +267,7 @@
     }
 
     try {
-        $result = $TaxinvoiceService->BulkSubmit($testCorpNum, $SubmitID, $taxinvoiceList, false);
+        $result = $TaxinvoiceService->BulkSubmit($CorpNum, $SubmitID, $taxinvoiceList, false);
         $code = $result->code;
         $message = $result->message;
         $receiptID = $result->receiptID;

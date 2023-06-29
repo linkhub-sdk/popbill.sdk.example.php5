@@ -14,13 +14,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 확인할 발신번호
     $SenderNumber = '';
 
     try {
-        $Response = $MessagingService->CheckSenderNumber($testCorpNum ,$SenderNumber);
+        $Response = $MessagingService->CheckSenderNumber($CorpNum ,$SenderNumber);
         $code = $Response->code;
         $message = $Response->message;
     }

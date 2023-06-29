@@ -16,13 +16,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20230202-PHP5-011';
+    $MgtKey = '20230202-PHP5-011';
 
     // 원본현금영수증 승인번호, 문서정보 확인(GetInfo API) 함수를 통해 확인가능.
     $orgConfirmNum = 'TB0000068';
@@ -77,8 +77,8 @@
 
 
     try {
-        $result = $CashbillService->RevokeRegistIssue($testCorpNum, $mgtKey, $orgConfirmNum, $orgTradeDate,
-            $smssendYN, $memo, $testUserID, $isPartCancel, $cancelType, $supplyCost, $tax, $serviceFee, $totalAmount, $emailSubject, $tradeDT);
+        $result = $CashbillService->RevokeRegistIssue($CorpNum, $MgtKey, $orgConfirmNum, $orgTradeDate,
+            $smssendYN, $memo, $UserID, $isPartCancel, $cancelType, $supplyCost, $tax, $serviceFee, $totalAmount, $emailSubject, $tradeDT);
 
         $code = $result->code;
         $message = $result->message;

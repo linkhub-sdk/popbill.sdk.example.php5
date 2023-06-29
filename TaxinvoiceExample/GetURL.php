@@ -14,17 +14,17 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // [TBOX] 임시문서함, [SWBOX] 매출 발행 대기함, [PWBOX] 매입 발행 대기함
     // [SBOX] 매출문서함, [PBOX] 매입문서함, [WRITE] 정발행 작성
     $TOGO = 'TBOX';
 
     try {
-        $url = $TaxinvoiceService->GetURL($testCorpNum, $testUserID, $TOGO);
+        $url = $TaxinvoiceService->GetURL($CorpNum, $UserID, $TOGO);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

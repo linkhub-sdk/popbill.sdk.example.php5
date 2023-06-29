@@ -14,13 +14,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // [CHRG] : 포인트충전 URL
     $TOGO = 'CHRG';
 
     try {
-        $url = $FaxService->GetPartnerURL($testCorpNum, $TOGO);
+        $url = $FaxService->GetPartnerURL($CorpNum, $TOGO);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

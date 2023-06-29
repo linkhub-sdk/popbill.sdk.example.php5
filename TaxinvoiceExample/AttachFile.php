@@ -13,19 +13,19 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서번호
-    $mgtKey = '20230102-001';
+    $MgtKey = '20230102-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
     $filePath = './uploadtest.pdf';
 
     try {
-        $result = $TaxinvoiceService->AttachFile($testCorpNum, $mgtKeyType, $mgtKey, $filePath);
+        $result = $TaxinvoiceService->AttachFile($CorpNum, $MgtKeyType, $MgtKey, $filePath);
         $code = $result->code;
         $message = $result->message;
     }

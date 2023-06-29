@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
@@ -67,7 +67,7 @@
         $Cashbill->serviceFee = '0';
 
         // 가맹점 사업자번호, '-'제외 10자리
-        $Cashbill->franchiseCorpNum = $testCorpNum;
+        $Cashbill->franchiseCorpNum = $CorpNum;
 
         // 가맹점 종사업장 식별번호
         $Cashbill->franchiseTaxRegID = "";
@@ -115,7 +115,7 @@
     }
 
     try {
-        $result = $CashbillService->BulkSubmit($testCorpNum, $submitID, $cashbillList);
+        $result = $CashbillService->BulkSubmit($CorpNum, $submitID, $cashbillList);
         $code = $result->code;
         $message = $result->message;
         $receiptID = $result->receiptID;

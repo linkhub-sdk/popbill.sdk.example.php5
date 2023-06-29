@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 일자 유형 ("R" , "W" , "I" 중 택 1)
     // └ R = 등록일자 , W = 작성일자 , I = 발행일자
@@ -125,9 +125,9 @@
     $MgtKey = '';
 
     try {
-        $result = $TaxinvoiceService->Search($testCorpNum, $mgtKeyType, $DType, $SDate,
+        $result = $TaxinvoiceService->Search($CorpNum, $MgtKeyType, $DType, $SDate,
             $EDate, $State, $Type, $TaxType, $LateOnly, $Page, $PerPage, $Order,
-            $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $testUserID,
+            $TaxRegIDType, $TaxRegIDYN, $TaxRegID, $QString, $InterOPYN, $UserID,
             $IssueType, $CloseDownState, $MgtKey, $RegType);
     }
     catch (PopbillException $pe) {

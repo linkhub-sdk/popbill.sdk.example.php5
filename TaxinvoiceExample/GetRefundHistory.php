@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    $testCorpNum = "1234567890";
+    $CorpNum = "1234567890";
 
     // 페이지번호
     $Page = 1;
@@ -22,10 +22,10 @@
     $PerPage = 30;
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try	{
-        $result = $TaxinvoiceService->getRefundHistory($testCorpNum, $Page, $PerPage, $testUserID);
+        $result = $TaxinvoiceService->getRefundHistory($CorpNum, $Page, $PerPage, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

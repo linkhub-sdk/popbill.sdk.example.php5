@@ -14,7 +14,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 시작일자
     $SDate = '20230101';
@@ -57,7 +57,7 @@
     $QString = '';
 
     try {
-        $result = $MessagingService->Search( $testCorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, '', $QString );
+        $result = $MessagingService->Search( $CorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, '', $QString );
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

@@ -13,16 +13,16 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 예약전송 요청시 할당한 전송요청번호
-    $requestNum = '';
+    $RequestNum = '';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $result = $KakaoService->CancelReserveRN($testCorpNum ,$requestNum, $testUserID);
+        $result = $KakaoService->CancelReserveRN($CorpNum ,$RequestNum, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

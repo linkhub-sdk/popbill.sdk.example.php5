@@ -14,16 +14,16 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // TBOX(임시문서함), PBOX(발행문서함), WRITE(현금영수증 작성)
     $TOGO = 'WRITE';
 
     try {
-        $url = $CashbillService->GetURL($testCorpNum, $testUserID, $TOGO);
+        $url = $CashbillService->GetURL($CorpNum, $UserID, $TOGO);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

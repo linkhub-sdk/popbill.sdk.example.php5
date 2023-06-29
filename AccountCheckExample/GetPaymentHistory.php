@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    $testCorpNum = "1234567890";
+    $CorpNum = "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
     $SDate = "20230101";
@@ -28,10 +28,10 @@
     $PerPage = 30;
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try	{
-        $result = $AccountCheckService->getPaymentHistory($testCorpNum, $SDate, $EDate, $Page, $PerPage, $testUserID);
+        $result = $AccountCheckService->getPaymentHistory($CorpNum, $SDate, $EDate, $Page, $PerPage, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

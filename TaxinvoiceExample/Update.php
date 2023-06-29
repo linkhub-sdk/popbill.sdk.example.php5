@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서번호
-    $mgtKey = '20230101-PHP5-002';
+    $MgtKey = '20230101-PHP5-002';
 
 
     /************************************************************
@@ -52,7 +52,7 @@
      ************************************************************/
 
     // 공급자 사업자번호
-    $Taxinvoice->invoicerCorpNum = $testCorpNum;
+    $Taxinvoice->invoicerCorpNum = $CorpNum;
 
     // 공급자 종사업장 식별번호, 4자리 숫자 문자열
     $Taxinvoice->invoicerTaxRegID = '';
@@ -61,7 +61,7 @@
     $Taxinvoice->invoicerCorpName = '공급자 상호_수정';
 
     // 공급자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $Taxinvoice->invoicerMgtKey = $mgtKey;
+    $Taxinvoice->invoicerMgtKey = $MgtKey;
 
     // 공급자 대표자성명
     $Taxinvoice->invoicerCEOName = '공급자 대표자성명';
@@ -263,7 +263,7 @@
     // $Taxinvoice->addContactList[1]->contactName	= '링크허브';		  // 담당자명
 
     try {
-        $result = $TaxinvoiceService->Update($testCorpNum, $mgtKeyType, $mgtKey, $Taxinvoice);
+        $result = $TaxinvoiceService->Update($CorpNum, $MgtKeyType, $MgtKey, $Taxinvoice);
         $code = $result->code;
         $message = $result->message;
     }

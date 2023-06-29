@@ -17,7 +17,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 세금계산서 공급받는자 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
@@ -100,7 +100,7 @@
     // - {invoiceeType}이 "사업자" 인 경우, 사업자번호 (하이픈 ('-') 제외 10자리)
     // - {invoiceeType}이 "개인" 인 경우, 주민등록번호 (하이픈 ('-') 제외 13자리)
     // - {invoiceeType}이 "외국인" 인 경우, "9999999999999" (하이픈 ('-') 제외 13자리)
-    $Taxinvoice->invoiceeCorpNum = $testCorpNum;
+    $Taxinvoice->invoiceeCorpNum = $CorpNum;
 
     // 공급받는자 종사업장 식별번호, 4자리 숫자 문자열
     $Taxinvoice->invoiceeTaxRegID = '';
@@ -243,7 +243,7 @@
     $memo = '즉시요청 메모';
 
     try {
-        $result = $TaxinvoiceService->RegistRequest($testCorpNum, $Taxinvoice, $memo);
+        $result = $TaxinvoiceService->RegistRequest($CorpNum, $Taxinvoice, $memo);
         $code = $result->code;
         $message = $result->message;
     } catch (PopbillException $pe) {

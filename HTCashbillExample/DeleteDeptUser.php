@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     try	{
-        $result = $HTCashbillService->DeleteDeptUser($testCorpNum);
+        $result = $HTCashbillService->DeleteDeptUser($CorpNum);
         $code = $result->code;
         $message = $result->message;
     }

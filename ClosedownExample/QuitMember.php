@@ -17,16 +17,16 @@
 include 'common.php';
 
 // 팝빌 회원 사업자 번호, "-"제외 10자리
-$testCorpNum = '1234567890';
+$CorpNum = '1234567890';
 
 // 탈퇴 사유
 $QuitReason = "테스트용 탈퇴사유";
 
 // 팝빌 회원 아이디
-$testUserID = 'testkorea';
+$UserID = 'testkorea';
 
 try {
-    $result = $ClosedownService->QuitMember($testCorpNum, $QuitReason, $testUserID);
+    $result = $ClosedownService->QuitMember($CorpNum, $QuitReason, $UserID);
     $code = $result->code;
     $message = $result->message;
 } catch (PopbillException $pe) {

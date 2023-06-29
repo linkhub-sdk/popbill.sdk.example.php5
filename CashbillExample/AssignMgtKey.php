@@ -13,17 +13,17 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 현금영수증 팝빌번호, 문서 목록조회(Search API) 함수의 반환항목 중 ItemKey 참조
     $itemKey = '022032909262700001';
 
     // 할당할 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
 
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     try {
-        $result = $CashbillService->AssignMgtKey($testCorpNum, $itemKey, $mgtKey);
+        $result = $CashbillService->AssignMgtKey($CorpNum, $itemKey, $MgtKey);
         $code = $result->code;
         $message = $result->message;
     }

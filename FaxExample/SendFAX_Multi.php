@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 발신번호
     // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
@@ -48,7 +48,7 @@
     $Files = array('./test.pdf');
 
     // 예약전송일시(yyyyMMddHHmmss) ex)20220324230000, null인경우 즉시전송
-    $reserveDT = null;
+    $ReserveDT = null;
 
     // 광고팩스 전송여부 , true / false 중 택 1
     // └ true = 광고 , false = 일반
@@ -61,11 +61,11 @@
     // 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $requestNum = '';
+    $RequestNum = '';
 
     try {
-        $receiptNum = $FaxService->SendFAX($testCorpNum, $Sender, $Receivers, $Files,
-            $reserveDT, $testUserID, $SenderName, $adsYN, $title, $requestNum);
+        $receiptNum = $FaxService->SendFAX($CorpNum, $Sender, $Receivers, $Files,
+            $ReserveDT, $UserID, $SenderName, $adsYN, $title, $RequestNum);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

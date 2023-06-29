@@ -14,10 +14,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-" 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     // 발신번호
     $sender = '';
@@ -26,7 +26,7 @@
     $receiver = '';
 
     try {
-        $result = $CashbillService->SendFAX($testCorpNum, $mgtKey, $sender, $receiver);
+        $result = $CashbillService->SendFAX($CorpNum, $MgtKey, $sender, $receiver);
         $code = $result->code;
         $message = $result->message;
     }

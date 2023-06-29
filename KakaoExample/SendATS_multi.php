@@ -15,10 +15,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 승인된 알림톡 템플릿코드
     // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
@@ -42,12 +42,12 @@
     $altSubject = '대체문자 제목';
 
     // 예약전송일시, yyyyMMddHHmmss
-    $reserveDT = null;
+    $ReserveDT = null;
 
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $requestNum = '';
+    $RequestNum = '';
 
     // 알림톡 내용, 최대 1000자
     // 사전에 승인받은 템플릿 내용과 다를 경우 전송실패 처리
@@ -138,7 +138,7 @@
     );
 
     try {
-        $receiptNum = $KakaoService->SendATS($testCorpNum, $templateCode, $sender, '', '', $altSendType, $receivers, $reserveDT, $testUserID, $requestNum, $buttons, $altSubject);
+        $receiptNum = $KakaoService->SendATS($CorpNum, $templateCode, $sender, '', '', $altSendType, $receivers, $ReserveDT, $UserID, $RequestNum, $buttons, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

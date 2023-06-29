@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 전송 요청시 할당한 전송요청번호
-    $requestNum = '';
+    $RequestNum = '';
 
     try {
-        $result = $KakaoService->GetMessagesRN($testCorpNum, $requestNum);
+        $result = $KakaoService->GetMessagesRN($CorpNum, $RequestNum);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

@@ -13,16 +13,16 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 서비스 유형, 성명 / 실명 중 택 1
     $serviceType = '실명';
 
     try {
-        $result = $AccountCheckService->GetChargeInfo($testCorpNum, $testUserID, $serviceType);
+        $result = $AccountCheckService->GetChargeInfo($CorpNum, $UserID, $serviceType);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

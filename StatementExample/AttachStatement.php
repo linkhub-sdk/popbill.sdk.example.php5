@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20230102-PHP-001';
+    $MgtKey = '20230102-PHP-001';
 
     // 첨부할 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $subItemCode = '121';
@@ -29,7 +29,7 @@
 
 
     try {
-        $result = $StatementService->AttachStatement($testCorpNum, $itemCode, $mgtKey, $subItemCode, $subMgtKey);
+        $result = $StatementService->AttachStatement($CorpNum, $itemCode, $MgtKey, $subItemCode, $subMgtKey);
         $code = $result->code;
         $message = $result->message;
     }

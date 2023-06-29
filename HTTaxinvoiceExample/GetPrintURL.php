@@ -14,16 +14,16 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 국세청 승인번호
     $NTSConfirmNum = '202102014100020300001824';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $url = $HTTaxinvoiceService->getPrintURL($testCorpNum, $NTSConfirmNum, $testUserID);
+        $url = $HTTaxinvoiceService->getPrintURL($CorpNum, $NTSConfirmNum, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

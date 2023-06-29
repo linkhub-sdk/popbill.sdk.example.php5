@@ -14,7 +14,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -26,7 +26,7 @@
     $memo = '전자명세서 발행취소 메모';
 
     try	{
-        $result = $StatementService->CancelIssue($testCorpNum, $itemCode, $MgtKey, $memo);
+        $result = $StatementService->CancelIssue($CorpNum, $itemCode, $MgtKey, $memo);
         $code = $result->code;
         $message = $result->message;
     }

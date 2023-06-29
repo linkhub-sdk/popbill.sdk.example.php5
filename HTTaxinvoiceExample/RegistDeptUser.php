@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 홈택스에서 생성한 전자세금계산서 부서사용자 아이디
     $deptUserID = 'userid_test';
@@ -22,7 +22,7 @@
     $deptUserPWD = 'passwd_test';
 
     try	{
-        $result = $HTTaxinvoiceService->RegistDeptUser($testCorpNum, $deptUserID, $deptUserPWD);
+        $result = $HTTaxinvoiceService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD);
         $code = $result->code;
         $message = $result->message;
     }

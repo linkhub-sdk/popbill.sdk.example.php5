@@ -13,16 +13,16 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // paymentRequest 를 통해 얻은 settleCode.
     $settleCode = '202210040000000070';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $result = $EasyFinBankService->GetSettleResult($testCorpNum, $settleCode, $testUserID);
+        $result = $EasyFinBankService->GetSettleResult($CorpNum, $settleCode, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

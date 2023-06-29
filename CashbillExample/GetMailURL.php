@@ -14,16 +14,16 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $url = $CashbillService->GetMailURL($testCorpNum, $mgtKey, $testUserID);
+        $url = $CashbillService->GetMailURL($CorpNum, $MgtKey, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

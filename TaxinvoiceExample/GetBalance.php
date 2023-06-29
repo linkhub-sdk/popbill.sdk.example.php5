@@ -14,10 +14,10 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     try {
-        $remainPoint = $TaxinvoiceService->GetBalance($testCorpNum);
+        $remainPoint = $TaxinvoiceService->GetBalance($CorpNum);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

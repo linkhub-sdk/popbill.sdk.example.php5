@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 서비스 유형 ("성명" / "실명" 중 택 1 , 성명 = 예금주성명조회, 실명 = 예금주실명조회)
     $serviceType = "성명";
 
     try {
-        $unitCost = $AccountCheckService->GetUnitCost($testCorpNum, $serviceType);
+        $unitCost = $AccountCheckService->GetUnitCost($CorpNum, $serviceType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

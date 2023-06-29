@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 문자 전송유형 ENumMessageType::SMS(단문), ENumMessageType::LMS(장문), ENumMessageType::MMS(포토)
     $messageType = ENumMessageType::SMS;
 
     try {
-        $unitCost= $MessagingService->GetUnitCost($testCorpNum, $messageType);
+        $unitCost= $MessagingService->GetUnitCost($CorpNum, $messageType);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

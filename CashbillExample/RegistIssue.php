@@ -14,13 +14,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20230101-PHP5-010';
+    $MgtKey = '20230101-PHP5-010';
 
     // 메모
     $memo = '현금영수증 즉시발행 메모';
@@ -33,7 +33,7 @@
     $Cashbill = new Cashbill();
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    $Cashbill->mgtKey = $mgtKey;
+    $Cashbill->mgtKey = $MgtKey;
 
     // 문서형태, 승인거래 기재
     $Cashbill->tradeType = '승인거래';
@@ -65,7 +65,7 @@
     $Cashbill->serviceFee = '0';
 
     // 가맹점 사업자번호
-    $Cashbill->franchiseCorpNum = $testCorpNum;
+    $Cashbill->franchiseCorpNum = $CorpNum;
 
     // 가맹점 종사업장 식별번호
     $Cashbill->franchiseTaxRegID = "";
@@ -110,7 +110,7 @@
     $Cashbill->hp = '';
 
     try {
-        $result = $CashbillService->RegistIssue($testCorpNum, $Cashbill, $memo, $testUserID, $emailSubject);
+        $result = $CashbillService->RegistIssue($CorpNum, $Cashbill, $memo, $UserID, $emailSubject);
         $code = $result->code;
         $message = $result->message;
         $confirmNum = $result->confirmNum;

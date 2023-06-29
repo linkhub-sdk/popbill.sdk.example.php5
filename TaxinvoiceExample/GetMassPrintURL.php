@@ -14,10 +14,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호 배열 최대 100건
     $MgtKeyList = array(
@@ -26,10 +26,10 @@
     );
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $url = $TaxinvoiceService->GetMassPrintURL($testCorpNum, $mgtKeyType, $MgtKeyList, $testUserID);
+        $url = $TaxinvoiceService->GetMassPrintURL($CorpNum, $MgtKeyType, $MgtKeyList, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

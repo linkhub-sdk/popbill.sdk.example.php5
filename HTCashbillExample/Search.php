@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 수집요청(requestJob API) 함수 호출 시 반환받은 작업아이디
     $JobID = '';
@@ -44,7 +44,7 @@
     $Order = "D";
 
     try {
-        $response = $HTCashbillService->Search($testCorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order);
+        $response = $HTCashbillService->Search($CorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

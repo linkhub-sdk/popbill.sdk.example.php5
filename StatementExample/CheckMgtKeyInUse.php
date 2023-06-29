@@ -14,16 +14,16 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 명세서 종류코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     try {
-        $result = $StatementService->CheckMgtKeyInUse($testCorpNum ,$itemCode, $mgtKey);
+        $result = $StatementService->CheckMgtKeyInUse($CorpNum ,$itemCode, $MgtKey);
         $result ? $result = '사용중' : $result = '미사용중';
     }
     catch ( PopbillException $pe ) {

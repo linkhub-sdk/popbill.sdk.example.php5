@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 조회할 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     try	{
-        $result = $StatementService->CheckIsMember($testCorpNum ,$LinkID);
+        $result = $StatementService->CheckIsMember($CorpNum ,$LinkID);
         $code = $result->code;
         $message = $result->message;
     }

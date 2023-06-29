@@ -17,10 +17,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20230102-PHPT-003';
+    $MgtKey = '20230102-PHPT-003';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
@@ -53,13 +53,13 @@
     $Statement->itemCode = $itemCode;
 
     // 전자명세서 문서번호
-    $Statement->mgtKey = $mgtKey;
+    $Statement->mgtKey = $MgtKey;
 
 
     /************************************************************
      *                         공급자 정보
      ************************************************************/
-    $Statement->senderCorpNum = $testCorpNum;
+    $Statement->senderCorpNum = $CorpNum;
     $Statement->senderTaxRegID = '';
     $Statement->senderCorpName = '공급자 상호';
     $Statement->senderCEOName = '공급자 대표자 성명';
@@ -158,7 +158,7 @@
     );
 
     try {
-        $receiptNum = $StatementService->FAXSend($testCorpNum, $Statement, $sendNum, $receiveNum);
+        $receiptNum = $StatementService->FAXSend($CorpNum, $Statement, $sendNum, $receiveNum);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

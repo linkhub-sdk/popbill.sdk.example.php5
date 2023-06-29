@@ -15,13 +15,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     // 발신번호
     $sender = '';
@@ -33,7 +33,7 @@
     $contents = '메세지 전송 내용입니다. 메세지의 길이가 90Byte를 초과하는 길이가 조정되어 전송되오니 참고하여 테스트하시기 바랍니다';
 
     try {
-        $result = $StatementService->SendSMS($testCorpNum, $itemCode, $mgtKey, $sender,
+        $result = $StatementService->SendSMS($CorpNum, $itemCode, $MgtKey, $sender,
             $receiver, $contents);
         $code = $result->code;
         $message = $result->message;

@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 기관코드
     // 산업은행-0002 / 기업은행-0003 / 국민은행-0004 /수협은행-0007 / 농협은행-0011 / 우리은행-0020
@@ -31,7 +31,7 @@
     $closeType = '';
 
     try {
-        $result = $EasyFinBankService->CloseBankAccount($testCorpNum, $bankCode, $accountNumber, $closeType);
+        $result = $EasyFinBankService->CloseBankAccount($CorpNum, $bankCode, $accountNumber, $closeType);
         $code = $result->code;
         $message = $result->message;
     }

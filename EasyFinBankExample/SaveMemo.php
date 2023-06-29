@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 거래내역 아이디, SeachAPI 응답항목 중 tid
     $TID = "";
@@ -22,7 +22,7 @@
     $Memo = "Memo-테스트";
 
     try {
-        $result = $EasyFinBankService->SaveMemo($testCorpNum, $TID, $Memo);
+        $result = $EasyFinBankService->SaveMemo($CorpNum, $TID, $Memo);
         $code = $result->code;
         $message = $result->message;
     }

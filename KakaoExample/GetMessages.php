@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
     $ReceiptNum = '022032411054400001';
 
     try {
-        $result = $KakaoService->GetMessages($testCorpNum, $ReceiptNum);
+        $result = $KakaoService->GetMessages($CorpNum, $ReceiptNum);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

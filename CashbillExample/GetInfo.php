@@ -15,13 +15,13 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 문서번호
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     try {
-        $result = $CashbillService->GetInfo($testCorpNum, $mgtKey);
+        $result = $CashbillService->GetInfo($CorpNum, $MgtKey);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

@@ -13,20 +13,20 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 문서번호
-    $mgtKey = '20230102-PHP5-002';
+    $MgtKey = '20230102-PHP5-002';
 
     // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
     // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
     $FileID= '10223612-BAE6-491A-9496-62705E978DA5.PBF';
 
     try {
-        $result = $StatementService->DeleteFile($testCorpNum, $itemCode, $mgtKey, $FileID);
+        $result = $StatementService->DeleteFile($CorpNum, $itemCode, $MgtKey, $FileID);
         $code = $result->code;
         $message = $result->message;
     }

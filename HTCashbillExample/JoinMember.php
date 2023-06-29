@@ -13,46 +13,46 @@
     include 'common.php';
 
 
-    $joinForm = new JoinForm();
+    $JoinInfo = new JoinForm();
 
     // 링크아이디
-    $joinForm->LinkID = $LinkID;
+    $JoinInfo->LinkID = $LinkID;
 
     // 사업자번호, "-"제외 10자리
-    $joinForm->CorpNum = '1234567890';
+    $JoinInfo->CorpNum = '1234567890';
 
     // 대표자성명
-    $joinForm->CEOName = '대표자성명';
+    $JoinInfo->CEOName = '대표자성명';
 
     // 사업자상호
-    $joinForm->CorpName = '테스트사업자상호';
+    $JoinInfo->CorpName = '테스트사업자상호';
 
     // 사업자주소
-    $joinForm->Addr	= '테스트사업자주소';
+    $JoinInfo->Addr	= '테스트사업자주소';
 
     // 업태
-    $joinForm->BizType = '업태';
+    $JoinInfo->BizType = '업태';
 
     // 종목
-    $joinForm->BizClass	= '종목';
+    $JoinInfo->BizClass	= '종목';
 
     // 담당자명
-    $joinForm->ContactName = '담당자상명';
+    $JoinInfo->ContactName = '담당자상명';
 
     // 담당자 이메일
-    $joinForm->ContactEmail	= '';
+    $JoinInfo->ContactEmail	= '';
 
     // 담당자 연락처
-    $joinForm->ContactTEL	= '';
+    $JoinInfo->ContactTEL	= '';
 
     // 아이디, 6자 이상 20자미만
-    $joinForm->ID = 'userid_phpdd';
+    $JoinInfo->ID = 'userid_phpdd';
 
     // 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
-    $joinForm->Password = 'qwe123!@#';
+    $JoinInfo->Password = 'qwe123!@#';
 
     try	{
-        $result = $HTCashbillService->JoinMember( $joinForm );
+        $result = $HTCashbillService->JoinMember( $JoinInfo );
         $code = $result->code;
         $message = $result->message;
     }

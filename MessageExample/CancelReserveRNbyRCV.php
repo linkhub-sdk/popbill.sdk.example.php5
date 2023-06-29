@@ -13,16 +13,16 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 예약문자전송 요청시 할당한 전송요청번호
-    $requestNum = '20230102_001';
+    $RequestNum = '20230102_001';
 
     // 예약문자전송 요청시 입력한 수신번호
     $ReceiveNum = '010222333';
 
     try {
-        $result = $MessagingService->CancelReserveRNbyRCV($testCorpNum ,$requestNum, $ReceiveNum);
+        $result = $MessagingService->CancelReserveRNbyRCV($CorpNum ,$RequestNum, $ReceiveNum);
         $code = $result->code;
         $message = $result->message;
     }

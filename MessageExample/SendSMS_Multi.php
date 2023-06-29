@@ -14,10 +14,10 @@
     include 'common.php';
 
     // 팝빌 회원 사업자번호, "-" 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 예약전송일시(yyyyMMddHHmmss) null인 경우 즉시전송
-    $reserveDT = null;
+    $ReserveDT = null;
 
     // 광고성 메시지 여부 ( true , false 중 택 1)
     // └ true = 광고 , false = 일반
@@ -26,7 +26,7 @@
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $requestNum = '';
+    $RequestNum = '';
 
     // 문자전송정보 최대 1000건까지 호출가능
     for ($i = 0; $i < 100; $i++ ) {
@@ -41,7 +41,7 @@
     }
 
     try {
-        $receiptNum = $MessagingService->SendSMS($testCorpNum,'','', $Messages, $reserveDT, $adsYN, '', '', '', $requestNum);
+        $receiptNum = $MessagingService->SendSMS($CorpNum,'','', $Messages, $ReserveDT, $adsYN, '', '', '', $RequestNum);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

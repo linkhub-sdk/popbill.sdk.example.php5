@@ -13,7 +13,7 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 검색일자 유형 ("R" , "W" , "I" 중 택 1)
     // - R = 등록일자 , W = 작성일자 , I = 발행일자
@@ -59,7 +59,7 @@
     $QString = '';
 
     try {
-        $result = $StatementService->Search($testCorpNum, $DType, $SDate, $EDate,
+        $result = $StatementService->Search($CorpNum, $DType, $SDate, $EDate,
             $State, $ItemCode, $Page, $PerPage, $Order, $QString);
     }	catch(PopbillException $pe) {
         $code = $pe->getCode();

@@ -13,16 +13,16 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 문서번호
-    $mgtKey = '20230102-PHP5-001';
+    $MgtKey = '20230102-PHP5-001';
 
     try {
-        $result = $TaxinvoiceService->GetLogs($testCorpNum, $mgtKeyType, $mgtKey);
+        $result = $TaxinvoiceService->GetLogs($CorpNum, $MgtKeyType, $MgtKey);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

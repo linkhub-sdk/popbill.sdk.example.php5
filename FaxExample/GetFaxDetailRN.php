@@ -13,13 +13,13 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팩스전송 요청시 할당한 전송요청번호
-    $requestNum = '';
+    $RequestNum = '';
 
     try {
-        $result = $FaxService->GetFaxDetailRN($testCorpNum, $requestNum);
+        $result = $FaxService->GetFaxDetailRN($CorpNum, $RequestNum);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

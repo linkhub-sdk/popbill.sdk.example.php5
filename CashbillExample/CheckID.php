@@ -13,10 +13,10 @@
     include 'common.php';
 
     // 중복조회할 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try	{
-        $result = $CashbillService->CheckID($testUserID);
+        $result = $CashbillService->CheckID($UserID);
         $code = $result->code;
         $message = $result->message;
     }

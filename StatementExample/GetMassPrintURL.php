@@ -13,22 +13,22 @@
     include 'common.php';
 
     // 팝빌 회원 사업자 번호, "-"제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 문서번호 배열, 최대 100건
-    $mgtKeyList = array (
+    $MgtKeyList = array (
         '20230102-PHP5-001',
         '20230102-PHP5-002'
     );
 
     // 팝빌 회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     try {
-        $url = $StatementService->GetMassPrintURL($testCorpNum, $itemCode, $mgtKeyList, $testUserID);
+        $url = $StatementService->GetMassPrintURL($CorpNum, $itemCode, $MgtKeyList, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

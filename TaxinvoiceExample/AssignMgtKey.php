@@ -13,19 +13,19 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-'제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
-    $mgtKeyType = ENumMgtKeyType::SELL;
+    $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 아이템키, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
     $itemKey = '022032414240100001';
 
     // 할당할 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $mgtKey = '20230109-PHP5-007';
+    $MgtKey = '20230109-PHP5-007';
 
     try {
-        $result = $TaxinvoiceService->AssignMgtKey($testCorpNum, $mgtKeyType, $itemKey, $mgtKey);
+        $result = $TaxinvoiceService->AssignMgtKey($CorpNum, $MgtKeyType, $itemKey, $MgtKey);
         $code = $result->code;
         $message = $result->message;
     }

@@ -18,10 +18,10 @@
     include 'common.php';
 
     // 팝빌회원 사업자번호, '-' 제외 10자리
-    $testCorpNum = '1234567890';
+    $CorpNum = '1234567890';
 
     // 팝빌회원 아이디
-    $testUserID = 'testkorea';
+    $UserID = 'testkorea';
 
     // 세금계산서 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
@@ -81,7 +81,7 @@
      ************************************************************/
 
     // 공급자 사업자번호
-    $Taxinvoice->invoicerCorpNum = $testCorpNum;
+    $Taxinvoice->invoicerCorpNum = $CorpNum;
 
     // 공급자 종사업장 식별번호, 4자리 숫자 문자열
     $Taxinvoice->invoicerTaxRegID = '';
@@ -286,7 +286,7 @@
 
 
     try {
-        $result = $TaxinvoiceService->RegistIssue($testCorpNum, $Taxinvoice, $testUserID,
+        $result = $TaxinvoiceService->RegistIssue($CorpNum, $Taxinvoice, $UserID,
             $writeSpecification, $forceIssue, $memo, $emailSubject, $dealInvoiceMgtKey);
         $code = $result->code;
         $message = $result->message;
