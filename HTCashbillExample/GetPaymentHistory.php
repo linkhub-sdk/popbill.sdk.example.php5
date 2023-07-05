@@ -65,7 +65,7 @@
                                     <legend>포인트 결제내역정보[<?php echo $i+1?>]</legend>
                                     <ul>
                                         <li>productType (결제 내용) : <?php echo $result->list[$i]->productType ?></li>
-                                        <li>productName (정액제 상품명) : <?php echo $result->list[$i]->productName ?></li>
+                                        <li>productName (결제 상품명) : <?php echo $result->list[$i]->productName ?></li>
                                         <li>settleType (결제유형) : <?php echo $result->list[$i]->settleType ?></li>
                                         <li>settlerName (담당자명) : <?php echo $result->list[$i]->settlerName ?></li>
                                         <li>settlerEmail (담당자메일) : <?php echo $result->list[$i]->settlerEmail ?></li>
