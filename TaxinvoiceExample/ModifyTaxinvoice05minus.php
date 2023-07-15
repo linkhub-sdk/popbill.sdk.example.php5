@@ -27,6 +27,15 @@ $CorpNum = "1234567890";
 
 $Taxinvoice = new Taxinvoice();
 
+
+/**********************************************************************
+ * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
+ * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
+ *********************************************************************/
+
+// 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+$Taxinvoice->orgNTSConfirmNum = "20230706-original-TI00001";
+
 // 작성일자, 날짜형식(yyyyMMdd)
 // 원본 세금계산서의 작성일자 기재
 $Taxinvoice->writeDate = "20230313";
@@ -199,16 +208,6 @@ $Taxinvoice->businessLicenseYN = false;
 // └ true = 첨부 , false = 미첨부(기본값)
 // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
 $Taxinvoice->bankBookYN = false;
-
-/**********************************************************************
- * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
- * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
- *********************************************************************/
-
-
-// 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
-$Taxinvoice->orgNTSConfirmNum = null;
-
 /**********************************************************************
  * 상세항목(품목) 정보
  *********************************************************************/
@@ -238,6 +237,17 @@ $Taxinvoice->detailList[1]->unitCost = "50000"; // 단가
 $Taxinvoice->detailList[1]->supplyCost = "50000"; // 공급가액
 $Taxinvoice->detailList[1]->tax = "5000"; // 세액
 $Taxinvoice->detailList[1]->remark = "품목비고2"; // 비고
+
+/**********************************************************************
+ * 추가담당자 정보 - 세금계산서 발행 안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 - 담당자 정보를 추가하여 발행 안내메일을 다수에게 전송할 수
+ * 있습니다. (최대 5명)
+ *********************************************************************/
+$Taxinvoice->addContactList = array();
+$Taxinvoice->addContactList[] = new TaxinvoiceAddContact();
+$Taxinvoice->addContactList[0]->serialNum = 1;
+$Taxinvoice->addContactList[0]->contactName = "추가 담당자 성명";
+$Taxinvoice->addContactList[0]->email = "test2@test.com";
+
 
 // 즉시발행 메모
 $Memo = "수정세금계산서 발행 메모";
