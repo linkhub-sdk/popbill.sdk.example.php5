@@ -28,6 +28,19 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
+        <legend>수정세금계산서 발행</legend>
+        <ul>
+            <li><a href="ModifyTaxinvoice01minus.php">RegistIssue</a> - 기재사항 착오정정(취소분)</li>
+            <li><a href="ModifyTaxinvoice01plus.php">RegistIssue</a> - 기재사항 착오정정(수정분)</li>
+            <li><a href="ModifyTaxinvoice02.php">RegistIssue</a> - 공급가액 변동</li>
+            <li><a href="ModifyTaxinvoice03.php">RegistIssue</a> - 환입</li>
+            <li><a href="ModifyTaxinvoice04.php">RegistIssue</a> - 계약의 해제</li>
+            <li><a href="ModifyTaxinvoice05minus.php">RegistIssue</a> - 내국신용장 사후개설(취소분)</li>
+            <li><a href="ModifyTaxinvoice05plus.php">RegistIssue</a> - 내국신용장 사후개설(수정분)</li>
+            <li><a href="ModifyTaxinvoice06.php">RegistIssue</a> - 착오에 의한 이중발급</li>
+        </ul>
+    </fieldset>
+    <fieldset class="fieldset1">
         <legend>국세청 즉시 전송</legend>
         <ul>
             <li><a href="SendToNTS.php">SendToNTS</a> (국세청 즉시전송)</li>
