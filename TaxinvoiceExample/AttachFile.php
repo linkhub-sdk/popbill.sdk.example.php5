@@ -22,7 +22,7 @@
     $MgtKey = '20230102-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
-    $filePath = './uploadtest.pdf';
+    $filePath = 'user/test/upload/uploadtest.pdf';
 
     try {
         $result = $TaxinvoiceService->AttachFile($CorpNum, $MgtKeyType, $MgtKey, $filePath);
