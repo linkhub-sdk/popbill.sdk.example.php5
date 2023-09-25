@@ -9,7 +9,6 @@
      * "임시저장" 상태의 세금계산서에 1개의 파일을 첨부합니다. (최대 5개)
      * - https://developers.popbill.com/reference/taxinvoice/php/api/etc#AttachFile
      */
-
     include 'common.php';
 
     // 팝빌 회원 사업자번호, '-' 제외 10자리
@@ -22,10 +21,12 @@
     $MgtKey = '20230102-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
-    $filePath = 'user/test/upload/uploadtest.pdf';
+    $filePath = './uploadtest.pdf';
+
+    $displayName = "DisplayName.pdf";
 
     try {
-        $result = $TaxinvoiceService->AttachFile($CorpNum, $MgtKeyType, $MgtKey, $filePath);
+        $result = $TaxinvoiceService->AttachFile($CorpNum, $MgtKeyType, $MgtKey, $filePath,null, $displayName);
         $code = $result->code;
         $message = $result->message;
     }
@@ -33,6 +34,7 @@
         $code = $pe->getCode();
         $message = $pe->getMessage();
     }
+
 ?>
     <body>
         <div id="content">
@@ -48,3 +50,4 @@
          </div>
     </body>
 </html>
+
