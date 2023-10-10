@@ -21,12 +21,16 @@
     $MgtKey = '20230102-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
-    $filePath = './uploadtest.pdf';
+    $FilePath = './uploadtest.pdf';
 
-    $displayName = "DisplayName.pdf";
+    // 팝빌회원 아이디
+    $UserID = "testkorea";
+
+    // 첨부파일명
+    $DisplayName = "DisplayName.pdf";
 
     try {
-        $result = $TaxinvoiceService->AttachFile($CorpNum, $MgtKeyType, $MgtKey, $filePath,null, $displayName);
+        $result = $TaxinvoiceService->AttachFile($CorpNum, $MgtKeyType, $MgtKey, $FilePath, $UserID, $DisplayName);
         $code = $result->code;
         $message = $result->message;
     }
@@ -47,7 +51,7 @@
                     <li>message (응답 메시지) : <?php echo $message ?></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>
 

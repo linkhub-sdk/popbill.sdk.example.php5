@@ -22,10 +22,16 @@
     $MgtKey = '20230102-PHP5-001';
 
     // 첨부파일 경로, 해당 파일에 읽기 권한이 설정되어 있어야 합니다.
-    $filepath = './uploadtest.pdf';
+    $FilePath = './uploadtest.pdf';
+
+    // 팝빌회원 아이디
+    $UserID = "testkorea";
+
+    // 첨부파일명
+    $DisplayName = "DisplayName.pdf";
 
     try {
-        $result = $StatementService->AttachFile($CorpNum, $itemCode, $MgtKey, $filepath);
+        $result = $StatementService->AttachFile($CorpNum, $itemCode, $MgtKey, $FilePath, $UserID, $DisplayName);
         $code = $result->code;
         $message = $result->message;
     }
@@ -45,6 +51,6 @@
                     <li>message (응답 메시지) : <?php echo $message ?></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>
