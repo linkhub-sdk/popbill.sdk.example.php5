@@ -4,8 +4,8 @@
  * PHP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/kakaotalk/php/getting-started/tutorial?fwn=php
  *
  * 업데이트 일자 : 2024-02-26
- * 연동기술지원 연락처 : 1600-9854
- * 연동기술지원 이메일 : code@linkhubcorp.com
+ * 연동 기술지원 연락처 : 1600-9854
+ * 연동 기술지원 이메일 : code@linkhubcorp.com
  *         
  * <테스트 연동개발 준비사항>
  * 1) API Key 변경 (연동신청 시 메일로 전달된 정보)
