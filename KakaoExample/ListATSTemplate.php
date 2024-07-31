@@ -62,6 +62,7 @@
                                         <li>t (버튼유형) : <?php echo $result[$i]->btns[$j]->t ?></li>
                                         <li>u1 (버튼링크1) : <?php echo (isset($result[$i]->btns[$j]->u1)) ? $result[$i]->btns[$j]->u1 : ''; ?></li>
                                         <li>u2 (버튼링크2) : <?php echo (isset($result[$i]->btns[$j]->u2)) ? $result[$i]->btns[$j]->u2 : ''; ?></li>
+                                        <li>tg (아웃링크) : <?php echo (isset($result[$i]->btns[$j]->tg)) ? $result[$i]->btns[$j]->tg : ''; ?></li>
                                     </ul>
                                     <?php
                                 }

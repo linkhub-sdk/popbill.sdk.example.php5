@@ -84,6 +84,8 @@
         // $btn1->u1 = 'http://www.popbill.com';
         // //[앱링크] Android, [웹링크] PC URL
         // $btn1->u2 = 'http://www.popbill.com';
+        // //아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
+        // $btn1->tg = 'out';
         //
         // // 생성한 버튼 개별 버튼정보 배열에 입력
         // $btns[] = $btn1;
@@ -98,6 +100,8 @@
         // $btn2->u1 = 'http://www.popbill.com';
         // //[앱링크] Android, [웹링크] PC URL
         // $btn2->u2 = 'http://www.popbill.com' . $i;
+        // //아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
+        // $btn2->tg = 'out';
         //
         // // 생성한 버튼 개별 버튼정보 배열에 입력
         // $btns[] = $btn2;
@@ -106,12 +110,14 @@
         // $receivers[$i]['btns'] = $btns;
     }
 
-    // 버튼내용을 전송하지 않는 경우, null처리.
+    // 버튼정보를 수정하지 않고 템플릿 신청시 기재한 버튼내용을 전송하는 경우, null처리.
     // 개별 버튼내용 전송하는 경우, null처리.
     // $buttons = null;
 
     // 동일 버튼정보 배열, 수신자별 동일 버튼내용 전송하는경우
     // 동일 버튼정보 배열 생성, 최대 5개
+    // 버튼링크URL에 #{템플릿변수}를 기재하여 승인받은 경우 URL 수정가능.
+    // 버튼의 개수는 템플릿 신청 시 승인받은 버튼의 개수와 동일하게 생성, 다를 경우 전송실패 처리
     $buttons[] = array(
         // 버튼 표시명
         'n' => '웹링크',
@@ -120,7 +126,9 @@
         // [앱링크] iOS, [웹링크] Mobile
         'u1' => 'http://www.popbill.com',
         // [앱링크] Android, [웹링크] PC URL
-        'u2' => 'http://www.popbill.com'
+        'u2' => 'http://www.popbill.com',
+        // 아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
+        'tg' => 'out'
     );
 
     // 예약전송일시, yyyyMMddHHmmss

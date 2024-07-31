@@ -68,8 +68,8 @@ try {
                                 <li>itemName (주문상품명) : <?php echo $result[$i]->itemName ?></li>
                                 <li>customerName (주문자명) : <?php echo $result[$i]->customerName ?></li>
                                 <li>confirmNum (국세청승인번호) : <?php echo $result[$i]->confirmNum ?></li>
-                                <li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result[$i]->orgConfirmNum ?></li>
-                                <li>orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result[$i]->orgTradeDate ?></li>
+                                <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result[$i]->orgConfirmNum ?></li>
+                                <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <?php echo $result[$i]->orgTradeDate ?></li>
                                 <li>ntssendDT (국세청 전송일시) : <?php echo $result[$i]->ntssendDT ?></li>
                                 <li>ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result[$i]->ntsresultDT ?></li>
                                 <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result[$i]->ntsresultCode ?></li>

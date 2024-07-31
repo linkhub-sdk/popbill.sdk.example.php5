@@ -96,21 +96,21 @@
             <fieldset class="fieldset1">
                 <legend>현금영수증 목록조회</legend>
                 <ul>
-                   <?php
+                    <?php
                         if( isset ( $code ) ) {
                     ?>
                             <li>code (응답 코드) : <?php echo $code ?></li>
                             <li>message (응답 메시지) : <?php echo $message ?></li>
                     <?php
                         } else {
-          ?>
+                    ?>
                             <li>code (응답코드) : <?php echo $result->code ?> </li>
                             <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
                             <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
                             <li>perPage (페이지당 목록개수) : <?php echo $result->perPage ?> </li>
                             <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
                             <li>message (응답메시지) : <?php echo $result->message ?> </li>
-          <?php
+                    <?php
                             for ($i = 0; $i < Count($result->list); $i++) {
                     ?>
                                 <fieldset class="fieldset2">
@@ -134,8 +134,8 @@
                                         <li>itemName (주문상품명) : <?php echo $result->list[$i]->itemName ?></li>
                                         <li>customerName (주문자명) : <?php echo $result->list[$i]->customerName ?></li>
                                         <li>confirmNum (국세청승인번호) : <?php echo $result->list[$i]->confirmNum ?></li>
-                                        <li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->list[$i]->orgConfirmNum ?></li>
-                                        <li>orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->list[$i]->orgTradeDate ?></li>
+                                        <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result->list[$i]->orgConfirmNum ?></li>
+                                        <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <?php echo $result->list[$i]->orgTradeDate ?></li>
                                         <li>ntssendDT (국세청 전송일시) : <?php echo $result->list[$i]->ntssendDT ?></li>
                                         <li>ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result->list[$i]->ntsresultDT ?></li>
                                         <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->list[$i]->ntsresultCode ?></li>
@@ -150,6 +150,6 @@
                     ?>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

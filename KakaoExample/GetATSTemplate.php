@@ -61,6 +61,7 @@
                                         <li>n (버튼명) : <?php echo $templateInfo->btns[$j]->n ?></li>
                                         <li>u1 (버튼링크1) : <?php echo (isset($templateInfo->btns[$j]->u1)) ? $templateInfo->btns[$j]->u1 : ''; ?></li>
                                         <li>u2 (버튼링크2) : <?php echo (isset($templateInfo->btns[$j]->u2)) ? $templateInfo->btns[$j]->u2 : ''; ?></li>
+                                        <li>tg (아웃링크) : <?php echo (isset($templateInfo->btns[$j]->tg)) ? $templateInfo->btns[$j]->tg : ''; ?></li>
                                     </ul>
                                 </fieldset>
                 <?php

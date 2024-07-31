@@ -70,6 +70,7 @@
                                 <li>t (버튼유형) : <?php echo $result->btns[$i]->t ?> </li>
                                 <li>u1 (버튼링크1) : <?php echo $result->btns[$i]->u1 ?> </li>
                                 <li>u2 (버튼링크2) : <?php echo $result->btns[$i]->u2 ?> </li>
+                                <li>tg (아웃링크) : <?php echo $result->btns[$i]->tg ?> </li>
                             </ul>
                         </fieldset>
                         <?php

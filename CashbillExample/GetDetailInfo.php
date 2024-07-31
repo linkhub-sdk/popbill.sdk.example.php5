@@ -42,8 +42,8 @@
                         } else {
                     ?>
                             <li>mgtKey (현금영수증 문서번호) : <?php echo $result->mgtKey ?> </li>
-                            <li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
-                            <li>orgTradeDate (원본 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?> </li>
+                            <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
+                            <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?> </li>
                             <li>tradeDate (거래일자) : <?php echo $result->tradeDate ?> </li>
                             <li>tradeDT (거래일시) : <?php echo $result->tradeDT ?> </li>
                             <li>tradeType (문서형태) : <?php echo $result->tradeType ?> </li>
