@@ -12,14 +12,17 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, "-"제외 10자리
+    // 팝빌회원 사업자번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
     // 전송 요청시 발급받은 카카오톡 접수번호
     $ReceiptNum = '022032410242700001';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $KakaoService->CancelReserve($CorpNum ,$ReceiptNum);
+        $result = $KakaoService->CancelReserve($CorpNum ,$ReceiptNum, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

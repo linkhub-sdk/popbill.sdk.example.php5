@@ -11,7 +11,7 @@
      */
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁

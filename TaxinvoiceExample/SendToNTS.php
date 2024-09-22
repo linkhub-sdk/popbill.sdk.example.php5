@@ -22,8 +22,11 @@
     // 문서번호
     $MgtKey = '20230101-PHP5-002';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->SendToNTS($CorpNum, $MgtKeyType, $MgtKey);
+        $result = $TaxinvoiceService->SendToNTS($CorpNum, $MgtKeyType, $MgtKey, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -12,12 +12,15 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
     $submitID = "20230103-PHP5-BULK";
+
+    // 팝빌회원 아이디
+    $UserID = "testkorea";
 
     // 최대 100건
     $cashbillList = array();
@@ -115,7 +118,7 @@
     }
 
     try {
-        $result = $CashbillService->BulkSubmit($CorpNum, $submitID, $cashbillList);
+        $result = $CashbillService->BulkSubmit($CorpNum, $submitID, $cashbillList, $UserID);
         $code = $result->code;
         $message = $result->message;
         $receiptID = $result->receiptID;

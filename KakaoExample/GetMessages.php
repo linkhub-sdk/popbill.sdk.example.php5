@@ -18,8 +18,11 @@
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
     $ReceiptNum = '022032411054400001';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $KakaoService->GetMessages($CorpNum, $ReceiptNum);
+        $result = $KakaoService->GetMessages($CorpNum, $ReceiptNum, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

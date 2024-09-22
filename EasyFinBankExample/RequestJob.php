@@ -29,8 +29,11 @@
     // 종료일자, 형식(yyyyMMdd)
     $EDate = '20230131';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $jobID = $EasyFinBankService->RequestJob($CorpNum, $BankCode, $AccountNumber, $SDate, $EDate);
+        $jobID = $EasyFinBankService->RequestJob($CorpNum, $BankCode, $AccountNumber, $SDate, $EDate, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

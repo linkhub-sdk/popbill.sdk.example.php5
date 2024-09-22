@@ -26,8 +26,11 @@
     // 메모
     $memo = '역발행 요청 취소메모입니다';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->CanCelRequest($CorpNum, $MgtKeyType, $MgtKey, $memo);
+        $result = $TaxinvoiceService->CanCelRequest($CorpNum, $MgtKeyType, $MgtKey, $memo, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

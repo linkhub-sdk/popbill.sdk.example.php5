@@ -18,8 +18,11 @@
     // 서비스 유형 ("성명" / "실명" 중 택 1 , 성명 = 예금주성명조회, 실명 = 예금주실명조회)
     $serviceType = "성명";
 
+    // 팝빌회원 아이디
+    $UserID = "testokrea";
+
     try {
-        $unitCost = $AccountCheckService->GetUnitCost($CorpNum, $serviceType);
+        $unitCost = $AccountCheckService->GetUnitCost($CorpNum, $serviceType, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

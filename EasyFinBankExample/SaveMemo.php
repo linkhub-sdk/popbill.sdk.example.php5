@@ -21,8 +21,11 @@
     // 메모
     $Memo = "Memo-테스트";
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->SaveMemo($CorpNum, $TID, $Memo);
+        $result = $EasyFinBankService->SaveMemo($CorpNum, $TID, $Memo, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

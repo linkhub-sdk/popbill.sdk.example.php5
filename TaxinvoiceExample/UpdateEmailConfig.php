@@ -47,8 +47,11 @@
     // 전송 여부 (True = 전송, False = 미전송)
     $sendYN = True;
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->UpdateEmailConfig($CorpNum, $emailType, $sendYN);
+        $result = $TaxinvoiceService->UpdateEmailConfig($CorpNum, $emailType, $sendYN, $UserID);
 
         $code = $result->code;
         $message = $result->message;

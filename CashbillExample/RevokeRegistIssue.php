@@ -16,7 +16,7 @@
 
 include 'common.php';
 
-// 팝빌 회원 사업자번호, '-' 제외 10자리
+// 팝빌회원 사업자번호, '-' 제외 10자리
 $CorpNum = '1234567890';
 
 // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
@@ -34,7 +34,6 @@ try {
     $message = $result->message;
     $confirmNum = $result->confirmNum;
     $tradeDate = $result->tradeDate;
-    $tradeDT = $result->tradeDT;
 } catch (PopbillException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
@@ -55,7 +54,6 @@ try {
                 ?>
                     <li>confirmNum (국세청 승인번호) : <?php echo $confirmNum ?></li>
                     <li>tradeDate (거래일자) : <?php echo $tradeDate ?></li>
-                    <li>tradeDT (거래일시) : <?php echo $tradeDT ?></li>
                 <?php
                 }
                 ?>

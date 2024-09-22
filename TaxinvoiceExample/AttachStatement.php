@@ -12,7 +12,7 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
@@ -27,8 +27,11 @@
     // 첨부할 명세서 관리번호
     $subMgtKey = '20230102-PHP5-002';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->AttachStatement($CorpNum, $MgtKeyType, $MgtKey, $subItemCode, $subMgtKey);
+        $result = $TaxinvoiceService->AttachStatement($CorpNum, $MgtKeyType, $MgtKey, $subItemCode, $subMgtKey, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

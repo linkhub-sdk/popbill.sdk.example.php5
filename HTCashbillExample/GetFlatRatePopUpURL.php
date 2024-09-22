@@ -13,11 +13,14 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    // 팝빌회원 사업자 번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $url = $HTCashbillService->GetFlatRatePopUpURL($CorpNum);
+        $url = $HTCashbillService->GetFlatRatePopUpURL($CorpNum, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

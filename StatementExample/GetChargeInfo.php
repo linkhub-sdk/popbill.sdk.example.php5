@@ -18,8 +18,11 @@
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $StatementService->GetChargeInfo( $CorpNum, $itemCode );
+        $result = $StatementService->GetChargeInfo($CorpNum, $itemCode, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

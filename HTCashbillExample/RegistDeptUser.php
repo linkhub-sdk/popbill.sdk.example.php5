@@ -21,8 +21,11 @@
     // 홈택스에서 생성한 현금영수증 부서사용자 비밀번호
     $deptUserPWD = 'passwd_test';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try	{
-        $result = $HTCashbillService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD);
+        $result = $HTCashbillService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

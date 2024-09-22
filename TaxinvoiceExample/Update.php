@@ -15,6 +15,9 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
@@ -262,8 +265,11 @@
     // $Taxinvoice->addContactList[1]->email = '';	    // 이메일주소
     // $Taxinvoice->addContactList[1]->contactName	= '링크허브';		  // 담당자명
 
+    // 전자거래명세서 동시작성 여부
+    $writeSpecification = false;
+
     try {
-        $result = $TaxinvoiceService->Update($CorpNum, $MgtKeyType, $MgtKey, $Taxinvoice);
+        $result = $TaxinvoiceService->Update($CorpNum, $MgtKeyType, $MgtKey, $Taxinvoice, $UserID, $writeSpecification);
         $code = $result->code;
         $message = $result->message;
     }

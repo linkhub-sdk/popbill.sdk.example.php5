@@ -23,9 +23,12 @@
         '20230102-PHP5-001',
         '20230102-PHP5-002'
     );
+    
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
 
     try {
-        $result = $StatementService->GetInfos($CorpNum, $itemCode, $MgtKeyList);
+        $result = $StatementService->GetInfos($CorpNum, $itemCode, $MgtKeyList, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

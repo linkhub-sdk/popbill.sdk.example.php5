@@ -24,8 +24,11 @@
     // 수신이메일주소
     $receiver = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->SendEmail($CorpNum, $MgtKeyType, $MgtKey, $receiver);
+        $result = $TaxinvoiceService->SendEmail($CorpNum, $MgtKeyType, $MgtKey, $receiver, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -19,8 +19,11 @@
     // 초대량 발행 접수시 기재한 제출아이디
     $submitID = '20230102-PHP5-BULK';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->GetBulkResult($CorpNum, $submitID);
+        $result = $TaxinvoiceService->GetBulkResult($CorpNum, $submitID, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

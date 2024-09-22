@@ -18,8 +18,11 @@
     // 템플릿 코드
     $templateCode = '021020000177';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $templateInfo = $KakaoService->GetATSTemplate($CorpNum, $templateCode);
+        $templateInfo = $KakaoService->GetATSTemplate($CorpNum, $templateCode, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

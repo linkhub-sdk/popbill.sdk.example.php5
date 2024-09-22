@@ -43,8 +43,11 @@
     // 정렬방향, D-내림차순, A-오름차순
     $Order = "D";
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $response = $HTCashbillService->Search($CorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order);
+        $response = $HTCashbillService->Search($CorpNum, $JobID, $TradeType, $TradeUsage, $Page, $PerPage, $Order, $UserID);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

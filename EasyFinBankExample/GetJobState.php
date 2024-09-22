@@ -24,8 +24,11 @@
     // 수집 요청시 반환받은 작업아이디
     $jobID = '022032415000000002';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->GetJobState($CorpNum, $jobID);
+        $result = $EasyFinBankService->GetJobState($CorpNum, $jobID, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

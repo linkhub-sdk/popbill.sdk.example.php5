@@ -24,8 +24,11 @@
     // 수집요청시 발급받은 작업아이디
     $jobID = '022032415000000001';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $HTCashbillService->GetJobState( $CorpNum, $jobID);
+        $result = $HTCashbillService->GetJobState( $CorpNum, $jobID, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

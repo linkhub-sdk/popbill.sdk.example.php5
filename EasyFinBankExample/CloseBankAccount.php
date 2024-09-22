@@ -30,8 +30,11 @@
     // └ 중도일 경우, 정액제 잔여기간은 일할로 계산되어 포인트 환불 (무료 이용기간 중 해지하면 전액 환불)
     $closeType = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->CloseBankAccount($CorpNum, $bankCode, $accountNumber, $closeType);
+        $result = $EasyFinBankService->CloseBankAccount($CorpNum, $bankCode, $accountNumber, $closeType, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

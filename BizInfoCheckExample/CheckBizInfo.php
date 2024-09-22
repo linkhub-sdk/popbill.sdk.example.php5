@@ -20,8 +20,10 @@
         // 조회할 사업자번호
         $CheckCorpNum = $_GET['CorpNum'];
 
+        $UserID = "testkorea";
+
         try {
-            $result = $BizInfoCheckService->checkBizInfo($MemberCorpNum, $CheckCorpNum);
+            $result = $BizInfoCheckService->checkBizInfo($MemberCorpNum, $CheckCorpNum, $UserID);
         }
         catch (PopbillException $pe) {
             $code = $pe->getCode();

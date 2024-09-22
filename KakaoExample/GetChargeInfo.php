@@ -18,8 +18,11 @@
     // 카카오톡 전송유형 ATS-알림톡, FTS-친구톡(텍스트), FMS-친구톡(이미지)
     $kakaoType = ENumKakaoType::FMS;
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $KakaoService->GetChargeInfo($CorpNum, $kakaoType);
+        $result = $KakaoService->GetChargeInfo($CorpNum, $kakaoType, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

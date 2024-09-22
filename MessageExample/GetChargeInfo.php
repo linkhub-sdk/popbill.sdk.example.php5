@@ -18,8 +18,10 @@
     // 문자 전송유형, ENumMessageType::SMS(단문), ENumMessageType::LMS(장문), ENumMessageType::MMS(포토)
     $messageType = ENumMessageType::SMS;
 
+    $UserID = 'testkorea';
+
     try {
-        $result = $MessagingService->GetChargeInfo($CorpNum, $messageType);
+        $result = $MessagingService->GetChargeInfo($CorpNum, $messageType, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

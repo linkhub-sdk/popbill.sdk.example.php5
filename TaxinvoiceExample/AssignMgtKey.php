@@ -24,8 +24,11 @@
     // 할당할 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     $MgtKey = '20230109-PHP5-007';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->AssignMgtKey($CorpNum, $MgtKeyType, $itemKey, $MgtKey);
+        $result = $TaxinvoiceService->AssignMgtKey($CorpNum, $MgtKeyType, $itemKey, $MgtKey, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

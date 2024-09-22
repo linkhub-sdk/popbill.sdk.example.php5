@@ -21,7 +21,7 @@ ModifyTaxinvoice02.php<html xmlns="http://www.w3.org/1999/xhtml">
 
 include 'common.php';
 
-// 팝빌 회원 사업자 번호
+// 팝빌회원 사업자 번호
 $CorpNum = "1234567890";
 
 $Taxinvoice = new Taxinvoice();

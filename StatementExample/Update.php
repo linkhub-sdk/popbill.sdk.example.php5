@@ -12,7 +12,7 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 전자명세서 문서번호
@@ -21,6 +21,9 @@
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
 
     // 전자명세서 객체 생성
     $Statement = new Statement();
@@ -161,7 +164,7 @@
 
 
     try {
-        $result = $StatementService->Update($CorpNum, $itemCode, $MgtKey, $Statement);
+        $result = $StatementService->Update($CorpNum, $itemCode, $MgtKey, $Statement, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

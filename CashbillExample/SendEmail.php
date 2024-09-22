@@ -12,7 +12,7 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, "-" 제외 10자리
+    // 팝빌회원 사업자번호, "-" 제외 10자리
     $CorpNum = '1234567890';
 
     // 문서번호
@@ -21,8 +21,11 @@
     // 수신메일 주소
     $receiver = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $CashbillService->SendEmail($CorpNum, $MgtKey, $receiver);
+        $result = $CashbillService->SendEmail($CorpNum, $MgtKey, $receiver, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

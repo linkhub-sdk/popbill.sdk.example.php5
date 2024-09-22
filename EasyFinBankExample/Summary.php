@@ -28,9 +28,12 @@
     // 조회 검색어, 입금/출금액, 메모, 적요 like 검색
     $SearchString = "";
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
         $response = $EasyFinBankService->Summary($CorpNum, $JobID,
-          $TradeType, $SearchString);
+          $TradeType, $SearchString, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

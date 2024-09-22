@@ -12,7 +12,7 @@
 
     include 'common.php';
 
-    //팝빌회원 사업자번호
+    // 팝빌회원 사업자번호
     $MemberCorpNum = "1234567890";
 
     // 기관코드
@@ -21,13 +21,16 @@
     // 계좌번호
     $AccountNumber = "";
 
-    //등록번호 유형, P-개인, B-사업자
+    // 등록번호 유형, P-개인, B-사업자
     $IdentityNumType = "";
 
     // 등록번호
     // └ 등록번호 유형 값이 "B"인 경우 사업자번호(10 자리)입력 ('-' 제외)
     // └ 등록번호 유형 값이 "P"인 경우 생년월일(6 자리) 입력 (형식 : YYMMDD)
     $IdentityNum = "";
+
+    // 팝빌회원 아이디
+    $UserID = "testkorea";
 
     try {
         $result = $AccountCheckService->CheckDepositorInfo($MemberCorpNum, $BankCode, $AccountNumber, $IdentityNumType, $IdentityNum);
@@ -61,7 +64,7 @@
                   <li>accountName (예금주 성명) : <?php echo $result->accountName ?></li>
                   <li>identityNumType (등록번호 유형) : <?php echo $result->identityNumType ?></li>
                   <li>identityNum (등록번호) : <?php echo $result->identityNum ?></li>
-                  <li>checkDate (확인일시) : <?php echo $result->checkDate ?></li>
+                  <li>checkDT (확인일시) : <?php echo $result->checkDT ?></li>
                   <li>result (응답코드) : <?php echo $result->result ?></li>
                   <li>resultMessage (응답메시지) : <?php echo $result->resultMessage ?></li>
               </ul>

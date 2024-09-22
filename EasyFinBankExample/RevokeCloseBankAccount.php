@@ -24,8 +24,11 @@
     // 계좌번호
     $accountNumber = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->RevokeCloseBankAccount($CorpNum, $bankCode, $accountNumber);
+        $result = $EasyFinBankService->RevokeCloseBankAccount($CorpNum, $bankCode, $accountNumber, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

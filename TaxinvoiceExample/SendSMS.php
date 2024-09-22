@@ -14,7 +14,7 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
@@ -32,8 +32,11 @@
     // 메시지 내용, 90byte 초과시 길이가 조정되어 전송됨.
     $contents = '문자전송 내용입니다. 90Byte를 초과한내용은 길이 조정되어 전송됩니다. 참고하시기 바랍니다.';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->SendSMS($CorpNum , $MgtKeyType, $MgtKey, $sender, $receiver, $contents);
+        $result = $TaxinvoiceService->SendSMS($CorpNum , $MgtKeyType, $MgtKey, $sender, $receiver, $contents, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

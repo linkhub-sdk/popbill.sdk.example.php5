@@ -21,8 +21,11 @@
     // 홈택스에서 생성한 전자세금계산서 부서사용자 비밀번호
     $deptUserPWD = 'passwd_test';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try	{
-        $result = $HTTaxinvoiceService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD);
+        $result = $HTTaxinvoiceService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

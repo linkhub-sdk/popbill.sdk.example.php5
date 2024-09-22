@@ -41,9 +41,12 @@
     // - 미입력시 전체조회
     $SearchString = "";
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
         $response = $EasyFinBankService->Search ( $CorpNum, $JobID, $TradeType, $SearchString,
-          $Page, $PerPage, $Order );
+          $Page, $PerPage, $Order, $UserID );
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

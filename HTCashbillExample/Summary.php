@@ -35,8 +35,10 @@
         'C'
     );
 
+    $UserID = 'testkorea';
+
     try {
-        $response = $HTCashbillService->Summary($CorpNum, $JobID, $TradeType, $TradeUsage);
+        $response = $HTCashbillService->Summary($CorpNum, $JobID, $TradeType, $TradeUsage, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

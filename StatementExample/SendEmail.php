@@ -12,7 +12,7 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
@@ -24,8 +24,11 @@
     // 수신자 이메일주소
     $receiver = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $StatementService->SendEmail($CorpNum, $itemCode, $MgtKey, $receiver);
+        $result = $StatementService->SendEmail($CorpNum, $itemCode, $MgtKey, $receiver, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

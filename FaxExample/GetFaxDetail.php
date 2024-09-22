@@ -12,14 +12,17 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자 번호, "-"제외 10자리
+    // 팝빌회원 사업자 번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
     // 팩스전송 접수번호
     $ReceiptNum = '022032417562800001';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $FaxService->GetFaxDetail($CorpNum, $ReceiptNum);
+        $result = $FaxService->GetFaxDetail($CorpNum, $ReceiptNum, $UserID);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

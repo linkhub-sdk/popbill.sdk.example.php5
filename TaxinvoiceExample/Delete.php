@@ -23,8 +23,11 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->Delete($CorpNum, $MgtKeyType, $MgtKey);
+        $result = $TaxinvoiceService->Delete($CorpNum, $MgtKeyType, $MgtKey, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -24,8 +24,11 @@
     // 계좌번호
     $accountNumber = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->GetBankAccountInfo($CorpNum, $bankCode, $accountNumber);
+        $result = $EasyFinBankService->GetBankAccountInfo($CorpNum, $bankCode, $accountNumber, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

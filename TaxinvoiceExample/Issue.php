@@ -17,7 +17,7 @@
 
     include 'common.php';
 
-    // 팝빌 회원 사업자번호, '-' 제외 10자리
+    // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
@@ -40,8 +40,11 @@
     // 발행 안내메일 제목, 미기재시 기본제목으로 전송
     $EmailSubject = null;
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->Issue($CorpNum, $MgtKeyType, $MgtKey, $memo, $EmailSubject, $forceIssue);
+        $result = $TaxinvoiceService->Issue($CorpNum, $MgtKeyType, $MgtKey, $memo, $EmailSubject, $forceIssue, $UserID);
         $code = $result->code;
         $message = $result->message;
         $ntsConfirmNum = $result->ntsConfirmNum;
