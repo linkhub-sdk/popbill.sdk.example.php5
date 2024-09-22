@@ -35,7 +35,7 @@
 
   $TaxinvoiceService = new TaxinvoiceService($LinkID, $SecretKey);
 
-  // 연동환경 설정, true-테스트, false-운영(Production), (기본값:true)
+  // 연동환경 설정, true-테스트, false-운영(Production), (기본값:false)
   $TaxinvoiceService->IsTest(true);
 
   // 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)

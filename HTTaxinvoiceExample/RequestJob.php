@@ -28,8 +28,11 @@
     // 종료일자, 형식(yyyyMMdd)
     $EDate = '20230131';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $jobID = $HTTaxinvoiceService->RequestJob($CorpNum, $TIKeyType, $DType, $SDate, $EDate);
+        $jobID = $HTTaxinvoiceService->RequestJob($CorpNum, $TIKeyType, $DType, $SDate, $EDate, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

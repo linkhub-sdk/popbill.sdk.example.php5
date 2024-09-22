@@ -57,7 +57,7 @@
     $content .= '팝빌 파트너센터 : 1600-8536'.PHP_EOL;
     $content .= 'support@linkhub.co.kr'.PHP_EOL;
 
-    // 수신정보 배열, 최대 1000건
+    // 수신정보 배열, 최대 1,000건
     for($i=0; $i<5; $i++){
         $receivers[] = array(
             // 수신번호

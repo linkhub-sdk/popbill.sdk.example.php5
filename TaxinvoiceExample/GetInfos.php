@@ -20,7 +20,7 @@
     // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
-    // 세금계산서 문서번호 배열, 최대 1000건
+    // 세금계산서 문서번호 배열, 최대 1,000건
     $MgtKeyList = array();
     array_push($MgtKeyList, "20230102-PHP5-001");
     array_push($MgtKeyList, '20230102-PHP5-002');

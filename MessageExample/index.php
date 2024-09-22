@@ -23,28 +23,28 @@
             <legend>단문 문자 전송</legend>
             <ul>
                 <li><a href="SendSMS.php">SendSMS</a> (단문 문자메시지 1건 전송)</li>
-                <li><a href="SendSMS_Multi.php">SendSMS</a> (단문 문자메시지 다량(최대1000건) 전송)</li>
+                <li><a href="SendSMS_Multi.php">SendSMS</a> (단문 문자메시지 다량(최대1,000건) 전송)</li>
             </ul>
         </fieldset>
         <fieldset class="fieldset2">
             <legend>장문 문자 전송</legend>
             <ul>
                 <li><a href="SendLMS.php">SendLMS</a> (장문 문자메시지 1건 전송)</li>
-                <li><a href="SendLMS_Multi.php">SendLMS</a> (장문 문자메시지 다량(최대1000건) 전송)</li>
+                <li><a href="SendLMS_Multi.php">SendLMS</a> (장문 문자메시지 다량(최대1,000건) 전송)</li>
             </ul>
         </fieldset>
         <fieldset class="fieldset2">
             <legend>단/장문 문자 자동인식 전송</legend>
             <ul>
                 <li><a href="SendXMS.php">SendXMS</a> (단/장문 자동인식 문자메시지 1건 전송)</li>
-                <li><a href="SendXMS_Multi.php">SendXMS</a> (단/장문 자동인식 문자메시지 다량(최대1000건) 전송)</li>
+                <li><a href="SendXMS_Multi.php">SendXMS</a> (단/장문 자동인식 문자메시지 다량(최대1,000건) 전송)</li>
             </ul>
         </fieldset>
         <fieldset class="fieldset2">
             <legend>포토 문자 전송</legend>
             <ul>
                 <li><a href="SendMMS.php">SendMMS</a> (포토 문자메시지 1건 전송)</li>
-                <li><a href="SendMMS_Multi.php">SendMMS</a> (포토 문자메시지 (최대1000건) 전송)</li>
+                <li><a href="SendMMS_Multi.php">SendMMS</a> (포토 문자메시지 (최대1,000건) 전송)</li>
             </ul>
         </fieldset>
         <fieldset class="fieldset2">
