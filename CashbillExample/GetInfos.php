@@ -75,7 +75,6 @@ try {
                                 <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result[$i]->ntsresultCode ?></li>
                                 <li>ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result[$i]->ntsresultMessage ?></li>
                                 <li>printYN (인쇄여부) : <?php echo $result[$i]->printYN ? 'true' : 'false' ?></li>
-                                <li>interOPYN (연동문서 여부) : <?php echo $result[$i]->interOPYN ? 'true' : 'false' ?></li>
                             </ul>
                         </fieldset>
                 <?php
