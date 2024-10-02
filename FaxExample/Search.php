@@ -27,9 +27,9 @@
     // - 미입력 시 전체조회
     $State = array(1, 2, 3, 4);
 
-    // 예약여부 (false , true 중 택 1)
-    // false = 전체조회, true = 예약전송건 조회
-    // 미입력시 기본값 false 처리
+    // 예약여부 (null, false, true 중 택 1)
+    // └ null = 전체, false = 즉시전송건, true = 예약전송건 
+    // - 미입력 시 전체조회
     $ReserveYN = false;
 
     // 개인조회 여부 (false , true 중 택 1)
@@ -51,8 +51,11 @@
     // - 미입력시 전체조회
     $QString = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $FaxService->Search($CorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order, '', $QString);
+        $result = $FaxService->Search($CorpNum, $SDate, $EDate, $State, $ReserveYN, $SenderOnly, $Page, $PerPage, $Order, $UserID, $QString);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

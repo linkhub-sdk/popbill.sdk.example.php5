@@ -212,7 +212,7 @@
     // 수정사유코드, 수정사유에 따라 1~6중 선택기재
     //$Taxinvoice->modifyCode = '';
 
-    // 원본세금계산서의 국세청 승인번호 기재
+    // 당초 세금계산서의 국세청 승인번호 기재
     // $Taxinvoice->orgNTSConfirmNum = '';
 
 

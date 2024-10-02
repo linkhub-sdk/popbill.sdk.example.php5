@@ -56,8 +56,11 @@
     // - 미입력시 전체조회
     $QString = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $KakaoService->Search( $CorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, '', $QString );
+        $result = $KakaoService->Search( $CorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, $UserID, $QString );
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

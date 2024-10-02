@@ -84,8 +84,6 @@
         // $btn1->u1 = 'http://www.popbill.com';
         // //[앱링크] Android, [웹링크] PC URL
         // $btn1->u2 = 'http://www.popbill.com';
-        // //아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
-        // $btn1->tg = 'out';
         //
         // // 생성한 버튼 개별 버튼정보 배열에 입력
         // $btns[] = $btn1;
@@ -100,8 +98,6 @@
         // $btn2->u1 = 'http://www.popbill.com';
         // //[앱링크] Android, [웹링크] PC URL
         // $btn2->u2 = 'http://www.popbill.com' . $i;
-        // //아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
-        // $btn2->tg = 'out';
         //
         // // 생성한 버튼 개별 버튼정보 배열에 입력
         // $btns[] = $btn2;
@@ -126,9 +122,7 @@
         // [앱링크] iOS, [웹링크] Mobile
         'u1' => 'http://www.popbill.com',
         // [앱링크] Android, [웹링크] PC URL
-        'u2' => 'http://www.popbill.com',
-        // 아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
-        'tg' => 'out'
+        'u2' => 'http://www.popbill.com'
     );
 
     // 예약전송일시, yyyyMMddHHmmss

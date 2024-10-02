@@ -9,7 +9,7 @@ ModifyTaxinvoice02.php<html xmlns="http://www.w3.org/1999/xhtml">
 /**
  * 계약의 해제에 의한 수정세금계산서 발행
  * - 재화 또는 용역/서비스가 공급되지 아니하였거나 계약이 해제된 경우 이용하는 수정사유 입니다.
- * - 원본 전자세금계산서와 동일한 내용의 부(-) 세금계산서 발행
+ * - 당초 전자세금계산서와 동일한 내용의 부(-) 세금계산서 발행
  * - 수정세금계산서 가이드: [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
  */
 
@@ -31,7 +31,7 @@ $Taxinvoice = new Taxinvoice();
  * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
  *********************************************************************/
 
-// 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+// 수정세금계산서 작성시 당초 세금계산서 국세청 승인번호 기재
 $Taxinvoice->orgNTSConfirmNum = "20230706-original-TI00001";
 
 // 작성일자, 날짜형식(yyyyMMdd)

@@ -39,7 +39,7 @@
             <li><a href="GetFaxDetailRN.php">GetFaxDetailRN</a> (팩스전송 전송결과 확인 - 요청번호할당)</li>
             <li><a href="Search.php">Search</a> (팩스전송 목록조회)</li>
             <li><a href="GetSentListURL.php">GetSentListURL</a> (팩스 전송내역 팝업 URL)</li>
-            <li><a href="GetPreviewURL.php">GetPreviewURL</a> (팩스 미리보기 팝업 URL)</li>
+            <li><a href="GetPreviewURL.php">GetPreviewURL</a> (팩스 변환결과 확인 팝업 URL)</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

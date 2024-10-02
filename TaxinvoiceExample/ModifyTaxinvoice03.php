@@ -31,7 +31,7 @@ $Taxinvoice = new Taxinvoice();
  * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
  *********************************************************************/
 
-// 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+// 수정세금계산서 작성시 당초 세금계산서 국세청 승인번호 기재
 $Taxinvoice->orgNTSConfirmNum = "20230706-original-TI00001";
 
 // 작성일자, 날짜형식(yyyyMMdd)
@@ -48,7 +48,7 @@ $Taxinvoice->taxTotal = "-1000";
 $Taxinvoice->totalAmount = "-11000";
 
 // 비고
-// - 환입에 의한 수정세금계산서 작성의 경우, 원본 = 세금계산서의 작성일자 기재 필수
+// - 환입에 의한 수정세금계산서 작성의 경우, 당초 세금계산서의 작성일자 기재 필수
 $Taxinvoice->remark1 = "20230208";
 // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
 $Taxinvoice->modifyCode = 3;

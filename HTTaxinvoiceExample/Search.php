@@ -125,7 +125,7 @@
                                 <li>invoiceType (구분) : <?php echo $response->list[$i]->invoiceType ; ?></li>
 
                                 <li>modifyYN (수정 전자세금계산서 여부) : <?php echo $response->list[$i]->modifyYN  ? 'true' : 'false' ?></li>
-                                <li>orgNTSConfirmNum (원본 전자세금계산서 국세청승인번호) : <?php echo $response->list[$i]->orgNTSConfirmNum ; ?></li>
+                                <li>orgNTSConfirmNum (당초 전자세금계산서 국세청승인번호) : <?php echo $response->list[$i]->orgNTSConfirmNum ; ?></li>
 
                                 <li>purchaseDate (거래일자) : <?php echo $response->list[$i]->purchaseDate ?></li>
                                 <li>itemName (품명) : <?php echo $response->list[$i]->itemName ?></li>

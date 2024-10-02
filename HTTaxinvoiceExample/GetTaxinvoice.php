@@ -93,7 +93,7 @@
                     <li>trusteeTEL (수탁자 담당자 연락처) : <?php echo $result->trusteeTEL ?></li>
                     <li>trusteeEmail (수탁자 담당자 이메일) : <?php echo $result->trusteeEmail ?></li>
                     <li>modifyCode (수정 사유코드) : <?php echo $result->modifyCode ?></li>
-                    <li>orgNTSConfirmNum (원본 전자세금계산서 국세청 승인번호) : <?php echo $result->orgNTSConfirmNum ?></li>
+                    <li>orgNTSConfirmNum (당초 전자세금계산서 국세청 승인번호) : <?php echo $result->orgNTSConfirmNum ?></li>
             <?php
             for ( $i = 0; $i < Count($result->detailList); $i++ ){
                 ?>
