@@ -16,10 +16,13 @@
     $CorpNum = '1234567890';
 
     // 문자전송 요청 시 할당한 전송요청번호(requestNum)
-    $RequestNum = '"';
+    $RequestNum = '';
+
+    // 팝빌회원 아이디
+    $UserID = null;
 
     try {
-        $result = $MessagingService->GetMessagesRN($CorpNum, $RequestNum);
+        $result = $MessagingService->GetMessagesRN($CorpNum, $RequestNum, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

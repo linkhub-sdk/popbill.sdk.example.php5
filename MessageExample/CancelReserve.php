@@ -18,8 +18,11 @@
     // 예약문자전송 요청시 발급받은 접수번호
     $ReceiptNum = '022032416000000004';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $MessagingService->CancelReserve($CorpNum ,$ReceiptNum);
+        $result = $MessagingService->CancelReserve($CorpNum ,$ReceiptNum, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

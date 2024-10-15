@@ -18,9 +18,6 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     $MgtKey = '20230202-PHP5-011';
 
@@ -37,6 +34,9 @@
 
     // 메모
     $memo = '부분취소현금영수증 발행메모';
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
 
     // 현금영수증 취소유형 , true / false 중 택 1
     // └ true = 부분 취소 , false = 전체 취소
@@ -74,7 +74,6 @@
     // 거래일시, 날짜(yyyyMMddHHmmss)
     // 당일, 전일만 가능
     $tradeDT = '20221103190000';
-
 
     try {
         $result = $CashbillService->RevokeRegistIssue($CorpNum, $MgtKey, $orgConfirmNum, $orgTradeDate,

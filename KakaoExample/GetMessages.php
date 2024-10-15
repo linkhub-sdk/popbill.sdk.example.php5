@@ -16,7 +16,7 @@
     $CorpNum = '1234567890';
 
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
-    $ReceiptNum = '022032411054400001';
+    $ReceiptNum = '';
 
     // 팝빌회원 아이디
     $UserID = 'testkorea';

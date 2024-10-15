@@ -29,6 +29,9 @@
     // 메모
     $memo = '발행 메모입니다';
 
+    // 발행 안내메일 제목, 미기재시 기본제목으로 전송
+    $EmailSubject = null;
+
     // 지연발행 강제여부  (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
     // - 미입력 시 기본값 false 처리
@@ -36,9 +39,6 @@
     // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
     //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     $forceIssue = false;
-
-    // 발행 안내메일 제목, 미기재시 기본제목으로 전송
-    $EmailSubject = null;
 
     // 팝빌회원 아이디
     $UserID = 'testkorea';

@@ -26,8 +26,11 @@
     // 계좌번호 하이픈('-') 제외
     $accountNumber = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->DeleteBankAccount($CorpNum, $bankCode, $accountNumber);
+        $result = $EasyFinBankService->DeleteBankAccount($CorpNum, $bankCode, $accountNumber, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -26,7 +26,7 @@
     );
 
     // 조회 검색어, 입금/출금액, 메모, 적요 like 검색
-    $SearchString = "";
+    $SearchString = null;
 
     // 팝빌회원 아이디
     $UserID = 'testkorea';

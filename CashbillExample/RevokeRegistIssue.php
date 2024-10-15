@@ -28,8 +28,28 @@ $orgConfirmNum = 'TB0000068';
 // 당초 승인 현금영수증 거래일자, 문서정보 확인(GetInfo API) 함수를 통해 확인가능.
 $orgTradeDate = '20230103';
 
+// 안내 문자 전송여부 , true / false 중 택 1
+// └ true = 전송 , false = 미전송
+// └ 당초 승인 현금영수증의 구매자(고객)의 휴대폰번호 문자 전송
+$smssendYN = false;
+
+// 현금영수증 상태 이력을 관리하기 위한 메모
+$Memo = "취소 현금영수증 발행 메모";
+
+// 팝빌회원 아이디
+$UserID = 'testkorea';
+
+// 현금영수증 취소유형 - false 기재
+$isPartCancel = false;
+
+// 취소사유 , 1 / 2 / 3 중 택 1
+// └ 1 = 거래취소 , 2 = 오류발급취소 , 3 = 기타
+// └ 미입력시 기본값 1 처리
+$cancelType = 1;
+
+
 try {
-    $result = $CashbillService->RevokeRegistIssue($CorpNum, $MgtKey, $orgConfirmNum, $orgTradeDate);
+    $result = $CashbillService->RevokeRegistIssue($CorpNum, $MgtKey, $orgConfirmNum, $orgTradeDate, $smssendYN, $Memo, $UserID, $isPartCancel, $cancelType);
     $code = $result->code;
     $message = $result->message;
     $confirmNum = $result->confirmNum;

@@ -17,9 +17,6 @@
     // 팝빌회원 사업자번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 팝빌에 등록된 카카오톡 검색용 아이디
     $plusFriendID = '@팝빌';
 
@@ -27,36 +24,27 @@
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
-    $sender = '';
+    $sender = null;
 
     // 친구톡 내용, 최대 400자
     $content = '친구톡 내용';
 
-    // 대체문자 유형 (null , "C" , "A" 중 택 1)
-    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
-    $altSendType = 'A';
-
-    // 대체문자 제목
-    // 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-    $altSubject = '대체문자 제목';
-
     // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     $altContent = '대체문자 내용';
+
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
+    $altSendType = 'A';
 
     // 광고성 메시지 여부 ( true , false 중 택 1)
     // └ true = 광고 , false = 일반
     // - 미입력 시 기본값 false 처리
     $adsYN = True;
 
-    // 전송요청번호
-    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
-    // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
-
     // 수신정보 배열, 최대 1,000건
     for($i=0; $i<10; $i++){
-        $receivers[] = array(
+        $Messages[] = array(
             // 수신번호
             'rcv' => '',
             // 수신자명
@@ -64,9 +52,8 @@
         );
     }
 
-
     // 버튼배열, 최대 5개
-    $buttons[] = array(
+    $Btns[] = array(
         // 버튼 표시명
         'n' => '웹링크',
         // 버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
@@ -89,9 +76,21 @@
     // 미입력시 첨부된 이미지를 링크 기능 없이 표시
     $imageURL = 'http://popbill.com';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
+    // 전송요청번호
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
+    // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    $RequestNum = null;
+
+    // 대체문자 제목
+    // 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    $altSubject = '대체문자 제목';
+
     try {
         $receiptNum = $KakaoService->SendFMS($CorpNum, $plusFriendID, $sender,
-            $content, $altContent, $altSendType, $adsYN, $receivers, $buttons, $ReserveDT, $files, $imageURL, $UserID, $RequestNum, $altSubject);
+            $content, $altContent, $altSendType, $adsYN, $Messages, $Btns, $ReserveDT, $files, $imageURL, $UserID, $RequestNum, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

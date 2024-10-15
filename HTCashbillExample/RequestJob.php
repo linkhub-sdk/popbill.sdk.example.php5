@@ -28,7 +28,7 @@
     $UserID = 'testkorea';
 
     try {
-        $jobID = $HTCashbillService->RequestJob( $CorpNum, $CBType, $SDate, $EDate, $UserID);
+        $jobID = $HTCashbillService->RequestJob($CorpNum, $CBType, $SDate, $EDate, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

@@ -22,8 +22,11 @@
     // 문서번호
     $MgtKey = '20230102-PHP5-001';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $StatementService->GetFiles($CorpNum, $itemCode, $MgtKey);
+        $result = $StatementService->GetFiles($CorpNum, $itemCode, $MgtKey, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

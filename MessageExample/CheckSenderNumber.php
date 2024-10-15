@@ -19,8 +19,11 @@
     // 확인할 발신번호
     $SenderNumber = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $Response = $MessagingService->CheckSenderNumber($CorpNum ,$SenderNumber);
+        $Response = $MessagingService->CheckSenderNumber($CorpNum ,$SenderNumber, $UserID);
         $code = $Response->code;
         $message = $Response->message;
     }

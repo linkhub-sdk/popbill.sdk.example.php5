@@ -18,8 +18,11 @@
     // 문자전송 요청 시 발급받은 접수번호(receiptNum)
     $ReceiptNum = '022032409000000005';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $MessagingService->GetMessages($CorpNum, $ReceiptNum);
+        $result = $MessagingService->GetMessages($CorpNum, $ReceiptNum, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

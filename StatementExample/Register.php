@@ -22,9 +22,6 @@
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 전자명세서 객체 생성
     $Statement = new Statement();
 
@@ -35,7 +32,7 @@
     // 기재상 작성일자
     $Statement->writeDate = '202230102';
 
-    // (영수, 청구) 중 기재
+    // 결제대금 수취여부, (영수, 청구, 없음) 중 기재
     $Statement->purposeType = '영수';
 
     //  과세형태, (과세, 영세, 면세) 중 기재
@@ -154,7 +151,6 @@
     $Statement->detailList[1]->spare4 = 'spare4';
     $Statement->detailList[1]->spare5 = 'spare5';
 
-
     /************************************************************
      * 전자명세서 추가속성
      * - 추가속성에 관한 자세한 사항은 "[전자명세서 API 연동매뉴얼] >
@@ -165,6 +161,9 @@
         'Deposit' => '100000',
         'CBalance' => '150000'
     );
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
 
     try {
         $result = $StatementService->Register($CorpNum, $Statement);

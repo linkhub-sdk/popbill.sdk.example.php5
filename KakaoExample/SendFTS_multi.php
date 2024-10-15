@@ -17,9 +17,6 @@
     // 팝빌회원 사업자번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 팝빌에 등록된 카카오톡채널 아이디, ListPlusFriend API - plusFriendID 확인
     $plusFriendID = '@팝빌';
 
@@ -27,31 +24,26 @@
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
-    $sender = '';
+    $sender = null;
+
+    // 대량 전송의 경우 미사용
+    $Content = null;
+
+    // 대량 전송의 경우 미사용
+    $AltContent = null;
 
     // 대체문자 유형 (null , "C" , "A" 중 택 1)
     // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     $altSendType = 'A';
-
-    // 대체문자 제목
-    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-    // - 수신정보 배열에 대체문자 제목이 입력되지 않은 경우 적용.
-    // - 모든 수신자에게 다른 제목을 보낼 경우 62번 라인에 있는 altsjt 를 이용.
-    $altSubject = '대체문자 제목';
 
     // 광고성 메시지 여부 ( true , false 중 택 1)
     // └ true = 광고 , false = 일반
     // - 미입력 시 기본값 false 처리
     $adsYN = True;
 
-    // 전송요청번호
-    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
-    // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
-
     // 수신정보 배열, 최대 1,000건
     for($i=0; $i<10; $i++){
-        $receivers[] = array(
+        $Messages[] = array(
             // 수신번호
             'rcv' => '',
             // 수신자명
@@ -103,18 +95,18 @@
         // $btns[] = $btn2;
         //
         // // 개별 버튼정보 배열 수신자정보에 추가
-        // $receivers[$i]['btns'] = $btns;
+        // $Messages[$i]['btns'] = $btns;
     }
 
     // 버튼정보를 수정하지 않고 템플릿 신청시 기재한 버튼내용을 전송하는 경우, null처리.
     // 개별 버튼내용 전송하는 경우, null처리.
-    // $buttons = null;
+    // $Btns = null;
 
     // 동일 버튼정보 배열, 수신자별 동일 버튼내용 전송하는경우
     // 동일 버튼정보 배열 생성, 최대 5개
     // 버튼링크URL에 #{템플릿변수}를 기재하여 승인받은 경우 URL 수정가능.
     // 버튼의 개수는 템플릿 신청 시 승인받은 버튼의 개수와 동일하게 생성, 다를 경우 전송실패 처리
-    $buttons[] = array(
+    $Btns[] = array(
         // 버튼 표시명
         'n' => '웹링크',
         // 버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
@@ -127,9 +119,23 @@
 
     // 예약전송일시, yyyyMMddHHmmss
     $ReserveDT = null;
+    
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
+    // 전송요청번호
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
+    // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    $RequestNum = null;
+
+    // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    // - 수신정보 배열에 대체문자 제목이 입력되지 않은 경우 적용.
+    // - 모든 수신자에게 다른 제목을 보낼 경우 62번 라인에 있는 altsjt 를 이용.
+    $altSubject = '대체문자 제목';
 
     try {
-        $receiptNum = $KakaoService->SendFTS($CorpNum, $plusFriendID, $sender, '', '', $altSendType, $adsYN, $receivers, $buttons, $ReserveDT, $UserID, $RequestNum, $altSubject);
+        $receiptNum = $KakaoService->SendFTS($CorpNum, $plusFriendID, $sender, $Content, $AltContent, $altSendType, $adsYN, $Messages, $Btns, $ReserveDT, $UserID, $RequestNum, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

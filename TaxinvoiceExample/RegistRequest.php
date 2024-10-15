@@ -19,9 +19,6 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 세금계산서 공급받는자 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     $invoiceeMgtKey = '20230102-PHP5-003';
@@ -44,7 +41,7 @@
     // -'역과금'은 역발행 세금계산서 발행 시에만 이용가능
     $Taxinvoice->chargeDirection = '정과금';
 
-    // '영수', '청구' 중 기재
+    // 결제대금 수취여부, '영수', '청구', '없음' 중 기재
     $Taxinvoice->purposeType = '영수';
 
     // 과세형태, '과세', '영세', '면세' 중 기재
@@ -244,6 +241,9 @@
 
     // 메모
     $memo = '즉시요청 메모';
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
 
     try {
         $result = $TaxinvoiceService->RegistRequest($CorpNum, $Taxinvoice, $memo, $UserID);

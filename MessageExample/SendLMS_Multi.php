@@ -15,6 +15,31 @@
     // 팝빌회원 사업자번호, "-" 제외 10자리
     $CorpNum = '1234567890';
 
+    // 발신번호
+    // 대량전송 경우 사용하지 않음
+    $Sender = null;
+
+    // 메시지 제목
+    // 대량전송 경우 사용하지 않음
+    $Subject = null;
+
+    // 메시지 내용
+    // 대량전송 경우 사용하지 않음
+    $Content = null;
+
+    // 문자전송정보, 최대 1,000건
+    for ($i = 0; $i < 10; $i++){
+        $Messages[] = array(
+            'snd' => '',		    // 발신번호
+            'sndnm' => '발신자명',   // 발신자명
+            'rcv' => '',			// 수신번호
+            'rcvnm' => '수신자성명'.$i,	    // 수신자 성명
+            'msg'	=> '개별 메시지 내용',  // 개별 메시지 내용. 장문은 2000byte로 길이가 조정되어 전송됨.
+            'sjt'	=> '개별 메시지 제목',	// 개별 메시지 제목
+            'interOPRefKey' => '20220705'.$i    // 파트너 지정키, 수신자 구별용 메모
+        );
+    }
+
     // 예약전송일시(yyyyMMddHHmmss), null인경우 즉시전송
     $ReserveDT = null;
 
@@ -22,25 +47,23 @@
     // └ true = 광고 , false = 일반
     $adsYN = false;
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
+    // 발신자명
+    // 대량전송 경우 사용하지 않음
+    $senderName = null;
+
+    $SystemYN = false;
+
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
+    $RequestNum = null;
 
-    for ($i = 0; $i < 10; $i++){
-        $Messages[] = array(
-            'snd' => '',		// 발신번호
-            'sndnm' => '발신자명',			// 발신자명
-            'rcv' => '',			// 수신번호
-            'rcvnm' => '수신자성명'.$i,	// 수신자 성명
-            'msg'	=> '개별 메시지 내용',  // 개별 메시지 내용. 장문은 2000byte로 길이가 조정되어 전송됨.
-            'sjt'	=> '개별 메시지 제목',	 // 개별 메시지 제목
-            'interOPRefKey' => '20220705'.$i    // 파트너 지정키, 수신자 구별용 메모
-        );
-    }
-
+    
     try {
-        $receiptNum = $MessagingService->SendLMS($CorpNum, '', '', '', $Messages, $ReserveDT, $adsYN, '', '', '', $RequestNum);
+        $receiptNum = $MessagingService->SendLMS($CorpNum, $Sender, $Subject, $Content, $Messages, $ReserveDT, $adsYN, $UserID, $senderName, $SystemYN, $RequestNum);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

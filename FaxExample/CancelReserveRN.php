@@ -18,6 +18,9 @@
     // 예약팩스전송 요청시 할당한 전송요청번호
     $RequestNum = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
         $result = $FaxService->CancelReserveRN($CorpNum ,$RequestNum);
         $code = $result->code;

@@ -15,30 +15,44 @@
     // 팝빌회원 사업자번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
+    // 팝빌에 사전 등록된 발신번호
+    // 단건전송, 동보전송 경우 사용
+    $Sender = '';
+
+    // 메시지 내용
+    // 단건전송, 동보전송 경우 사용
+    $Content = '';
+
+    // 문자전송정보
+    $Messages[] = array(
+        'rcv'   => '',			    // 수신번호
+        'rcvnm' => '수신자성명',	 // 수신자성명
+        'interOPRefKey' => '',      // SMS/LMS/MMS 대량/동보전송시 파트너가 개별건마다 입력할 수 있는 값
+    );
+
     // 예약전송일시(yyyyMMddHHmmss) null인 경우 즉시전송
-    $ReserveDT = '';
+    $ReserveDT = null;
 
     // 광고성 메시지 여부 ( true , false 중 택 1)
     // └ true = 광고 , false = 일반
     $adsYN = false;
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
+    // 발신자명
+    // 단건전송, 동보전송 경우 사용
+    $senderName = '';
+
+    $SystemYN = false;
+
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
-
-    $Messages[] = array(
-        'snd'   => '',		        // 발신번호
-        'sndnm' => '발신자명',		 // 발신자명
-        'rcv'   => '',			    // 수신번호
-        'rcvnm' => '수신자성명',	 // 수신자성명
-        'msg'	=> '안녕하세요.',	 // 개별 메시지 내용
-        'sjt'   => '메시지 제목',    // SMS 사용 불가, 미입력시 팝빌에서 설정한 기본값 사용
-        'interOPRefKey' => '',      // SMS/LMS/MMS 대량/동보전송시 파트너가 개별건마다 입력할 수 있는 값
-    );
+    $RequestNum = null;
 
     try {
-        $receiptNum = $MessagingService->SendSMS($CorpNum, '', '', $Messages, $ReserveDT, $adsYN, '', '', '', $RequestNum);
+        $receiptNum = $MessagingService->SendSMS($CorpNum, $Sender, $Content, $Messages, $ReserveDT, $adsYN, $UserID, $senderName, $SystemYN, $RequestNum);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

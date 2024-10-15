@@ -3,7 +3,7 @@
  * 팝빌 전자명세서 API Java SDK PHP Example
  * PHP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/statement/php/getting-started/tutorial?fwn=php
  *
- * 업데이트 일자 : 2024-10-02
+ * 업데이트 일자 : 2024-10-15
  * 연동 기술지원 연락처 : 1600-9854
  * 연동 기술지원 이메일 : code@linkhubcorp.com
  *         

@@ -56,7 +56,7 @@
 
     // 통합검색어, 거래처 상호명 또는 거래처 사업자번호로 조회
     // - 미입력시 전체조회
-    $QString = '';
+    $QString = null;
 
     try {
         $result = $StatementService->Search($CorpNum, $DType, $SDate, $EDate,

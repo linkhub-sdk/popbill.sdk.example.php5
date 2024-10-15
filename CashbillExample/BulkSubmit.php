@@ -32,20 +32,6 @@
         // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
         $Cashbill->mgtKey = $submitID . "-" . $i;
 
-        // 문서형태, {승인거래, 취소거래} 중 기재
-        $Cashbill->tradeType = '승인거래';
-
-        // 거래구분, (소득공제용, 지출증빙용) 중 기재
-        $Cashbill->tradeUsage = '소득공제용';
-
-        // 거래일시, 날짜(yyyyMMddHHmmss)
-        // 당일, 전일만 가능
-        $Cashbill->tradeDT = '20221103000000';
-
-        // 거래유형, {일반, 도서공연, 대중교통} 중 기재
-        // - 미입력시 기본값 "일반" 처리
-        $Cashbill->tradeOpt = '일반';
-
         // // 당초 승인 현금영수증 국세청 승인번호
         // // 취소 현금영수증 작성시 필수
         // $Cashbill->orgConfirmNum = '';
@@ -53,6 +39,20 @@
         // // 당초 승인 현금영수증 거래일자
         // // 취소 현금영수증 작성시 필수
         // $Cashbill->orgTradeDate = '';
+
+        // 거래일시, 날짜(yyyyMMddHHmmss)
+        // 당일, 전일만 가능
+        $Cashbill->tradeDT = '20221103000000';
+
+        // 문서형태, {승인거래, 취소거래} 중 기재
+        $Cashbill->tradeType = '승인거래';
+
+        // 거래구분, (소득공제용, 지출증빙용) 중 기재
+        $Cashbill->tradeUsage = '소득공제용';
+
+        // 거래유형, {일반, 도서공연, 대중교통} 중 기재
+        // - 미입력시 기본값 "일반" 처리
+        $Cashbill->tradeOpt = '일반';
 
         // 과세형태, (과세, 비과세) 중 기재
         $Cashbill->taxationType = '과세';
@@ -107,12 +107,12 @@
         // 실제 거래처의 메일주소가 기재되지 않도록 주의
         $Cashbill->email = '';
 
-        // 발행시 알림문자 전송여부
-        $Cashbill->smssendYN = false;
-
         // 주문자 휴대폰
         // - {smssendYN} 의 값이 true 인 경우 아래 휴대폰번호로 안내 문자 전송
         $Cashbill->hp = '';
+
+        // 발행시 알림문자 전송여부
+        $Cashbill->smssendYN = false;
 
         $cashbillList[] = $Cashbill;
     }

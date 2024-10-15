@@ -18,8 +18,11 @@
     // 예약문자전송 요청시 할당한 전송요청번호
     $RequestNum = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $MessagingService->CancelReserveRN($CorpNum ,$RequestNum);
+        $result = $MessagingService->CancelReserveRN($CorpNum ,$RequestNum, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -20,37 +20,9 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 세금계산서 문서번호
     // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     $invoicerMgtKey = '20230102-PHP5-001';
-
-    // 지연발행 강제여부  (true / false 중 택 1)
-    // └ true = 가능 , false = 불가능
-    // - 미입력 시 기본값 false 처리
-    // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
-    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
-    //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
-    $forceIssue = false;
-
-    // 즉시발행 메모
-    $memo = '즉시발행 메모';
-
-    // 안내메일 제목, 미기재시 기본제목으로 전송
-    $emailSubject = '';
-
-    // 거래명세서 동시작성여부  (true / false 중 택 1)
-    // └ true = 사용 , false = 미사용
-    // - 미입력 시 기본값 false 처리
-    $writeSpecification = false;
-
-    // {writeSpecification} = true인 경우, 거래명세서 문서번호 할당
-    // - 미입력시 기본값 세금계산서 문서번호와 동일하게 할당
-    $dealInvoiceMgtKey = '';
-
-
 
     /************************************************************
      *                        세금계산서 정보
@@ -70,7 +42,7 @@
     // -'역과금'은 역발행 세금계산서 발행 시에만 이용가능
     $Taxinvoice->chargeDirection = '정과금';
 
-    // '영수', '청구' 중 기재
+    // 결제대금 수취여부, '영수', '청구', '없음' 중 기재
     $Taxinvoice->purposeType = '영수';
 
     // 과세형태, '과세', '영세', '면세' 중 기재
@@ -170,7 +142,6 @@
     // 공급받는자 담당자 휴대폰 번호
     $Taxinvoice->invoiceeHP1 = '';
 
-
     /************************************************************
      *                       세금계산서 기재정보
      ************************************************************/
@@ -235,7 +206,6 @@
     // 당초 세금계산서의 국세청 승인번호 기재
     // $Taxinvoice->orgNTSConfirmNum = '';
 
-
     /************************************************************
      *                       상세항목(품목) 정보
      ************************************************************/
@@ -264,8 +234,6 @@
     $Taxinvoice->detailList[1]->tax = '10000';				      // 세액
     $Taxinvoice->detailList[1]->remark = '';		    // 비고
 
-
-
     /************************************************************
      *                      추가담당자 정보
      * - 세금계산서 발행안내 메일을 수신받을 공급받는자 담당자가 다수인 경우
@@ -284,6 +252,31 @@
     $Taxinvoice->addContactList[1]->email = 'test@test.com';	    // 이메일주소
     $Taxinvoice->addContactList[1]->contactName	= '링크허브';		  // 담당자명
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
+    // 거래명세서 동시작성여부  (true / false 중 택 1)
+    // └ true = 사용 , false = 미사용
+    // - 미입력 시 기본값 false 처리
+    $writeSpecification = false;
+
+    // 지연발행 강제여부  (true / false 중 택 1)
+    // └ true = 가능 , false = 불가능
+    // - 미입력 시 기본값 false 처리
+    // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
+    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
+    //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
+    $forceIssue = false;
+
+    // 즉시발행 메모
+    $memo = '즉시발행 메모';
+
+    // 안내메일 제목, 미기재시 기본제목으로 전송
+    $emailSubject = null;
+
+    // {writeSpecification} = true인 경우, 거래명세서 문서번호 할당
+    // - 미입력시 기본값 세금계산서 문서번호와 동일하게 할당
+    $dealInvoiceMgtKey = null;
 
     try {
         $result = $TaxinvoiceService->RegistIssue($CorpNum, $Taxinvoice, $UserID,

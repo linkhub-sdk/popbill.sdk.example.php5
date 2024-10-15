@@ -18,21 +18,17 @@
     // 팝빌 회원 사업자번호
     $CorpNum = '1234567890';
 
-    // 팝빌 회원 아이디
-    $UserID = 'testkorea';
-
     // 팩스 접수번호
     $ReceiptNum = '022032417421600001';
 
     // 팩스전송 발신번호, 공백처리시 기존전송정보로 재전송
-    $Sender = '';
+    $SenderNum = '';
 
     // 팩스전송 발신자명, 공백처리시 기존전송정보로 재전송
     $SenderName = '발신자명';
 
     // 팩스수신정보를 기존전송정보와 동일하게 재전송하는 경우, Receivers 변수 null 처리
     //$Receivers = NULL;
-
 
     // 팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1,000건)
     $Receivers[] = array(
@@ -53,9 +49,11 @@
         'interOPRefKey' => '20220705-02'
     );
 
-
     // 예약전송일시(yyyyMMddHHmmss) ex)20220324230000, null인경우 즉시전송
     $ReserveDT = null;
+
+    // 팝빌 회원 아이디
+    $UserID = 'testkorea';
 
     // 팩스 제목
     $title = '팩스 재전송 제목';
@@ -63,10 +61,10 @@
     // 재전송 팩스의 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 생성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
+    $RequestNum = null;
 
     try {
-        $receiptNum = $FaxService->ResendFAX($CorpNum, $ReceiptNum, $Sender,
+        $receiptNum = $FaxService->ResendFAX($CorpNum, $ReceiptNum, $SenderNum,
             $SenderName, $Receivers, $ReserveDT, $UserID, $title, $RequestNum);
     } catch (PopbillException $pe) {
         $code = $pe->getCode();

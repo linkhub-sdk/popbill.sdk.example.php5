@@ -18,6 +18,9 @@
     // 팩스예약전송 접수번호
     $ReceiptNum = '022032417505800001';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
         $result = $FaxService->CancelReserve($CorpNum ,$ReceiptNum);
         $code = $result->code;

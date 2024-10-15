@@ -25,8 +25,11 @@
     // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
     $FileID= '10223612-BAE6-491A-9496-62705E978DA5.PBF';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $StatementService->DeleteFile($CorpNum, $itemCode, $MgtKey, $FileID);
+        $result = $StatementService->DeleteFile($CorpNum, $itemCode, $MgtKey, $FileID, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

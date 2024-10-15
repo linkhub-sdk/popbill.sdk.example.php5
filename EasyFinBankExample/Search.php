@@ -26,6 +26,12 @@
         'O'
     );
 
+    // "입·출금액" / "메모" / "비고" 중 검색하고자 하는 값 입력
+    // - 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
+    // - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3 값
+    // - 미입력시 전체조회
+    $SearchString = null;
+
     // 페이지 번호
     $Page = 1;
 
@@ -34,12 +40,6 @@
 
     // 정렬방향, D-내림차순, A-오름차순
     $Order = "D";
-
-    // "입·출금액" / "메모" / "비고" 중 검색하고자 하는 값 입력
-    // - 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
-    // - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3 값
-    // - 미입력시 전체조회
-    $SearchString = "";
 
     // 팝빌회원 아이디
     $UserID = 'testkorea';

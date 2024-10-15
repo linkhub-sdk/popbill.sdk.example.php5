@@ -15,9 +15,6 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 계좌정보 클래스 생성
     $BankAccountInfo = new EasyFinBankAccountForm();
 
@@ -60,6 +57,9 @@
 
     // 메모
     $BankAccountInfo->Memo = '';
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
 
     try {
         $result = $EasyFinBankService->RegistBankAccount($CorpNum, $BankAccountInfo, $UserID);

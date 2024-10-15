@@ -25,8 +25,11 @@
     // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
     $FileID = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $TaxinvoiceService->DeleteFile($CorpNum, $MgtKeyType, $MgtKey, $FileID);
+        $result = $TaxinvoiceService->DeleteFile($CorpNum, $MgtKeyType, $MgtKey, $FileID, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

@@ -25,12 +25,6 @@
     // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
-    // 팩스전송 발신번호
-    $sendNum = '';
-
-    // 팩스수신번호
-    $receiveNum = '';
-
     // 전자명세서 객체 생성
     $Statement = new Statement();
 
@@ -40,7 +34,7 @@
     // 기재상 작성일자
     $Statement->writeDate = '20230102';
 
-    // (영수, 청구) 중 기재
+    // 결제대금 수취여부, (영수, 청구, 없음) 중 기재
     $Statement->purposeType = '영수';
 
     //  과세형태, (과세, 영세, 면세) 중 기재
@@ -157,8 +151,17 @@
         'CBalance' => '150000'
     );
 
+    // 팩스전송 발신번호
+    $sendNum = '';
+
+    // 팩스수신번호
+    $receiveNum = '';
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $receiptNum = $StatementService->FAXSend($CorpNum, $Statement, $sendNum, $receiveNum);
+        $receiptNum = $StatementService->FAXSend($CorpNum, $Statement, $sendNum, $receiveNum, $UserID);
     }
     catch(PopbillException $pe) {
         $code = $pe->getCode();

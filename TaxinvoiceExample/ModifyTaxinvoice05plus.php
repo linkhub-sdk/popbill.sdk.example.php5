@@ -66,7 +66,7 @@ $Taxinvoice->chargeDirection = "정과금";
 // 발행형태, [정발행, 역발행, 위수탁] 중 기재
 $Taxinvoice->issueType = "정발행";
 
-// [영수, 청구, 없음] 중 기재
+// 결제대금 수취여부, [영수, 청구, 없음] 중 기재
 $Taxinvoice->purposeType = "영수";
 
 

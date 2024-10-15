@@ -25,8 +25,11 @@
     // 수신팩스번호
     $receiver = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $CashbillService->SendFAX($CorpNum, $MgtKey, $sender, $receiver);
+        $result = $CashbillService->SendFAX($CorpNum, $MgtKey, $sender, $receiver, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

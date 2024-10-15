@@ -23,8 +23,11 @@
     // 문서번호
     $MgtKey = '20240919-PHP5-003';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try	{
-        $result = $StatementService->Delete($CorpNum, $itemCode, $MgtKey);
+        $result = $StatementService->Delete($CorpNum, $itemCode, $MgtKey, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

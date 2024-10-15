@@ -17,9 +17,6 @@
     // 팝빌회원 사업자번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
-    // 팝빌회원 아이디
-    $UserID = 'testkorea';
-
     // 승인된 알림톡 템플릿코드
     // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
     // 팝빌사이트에서 승인된 알림톡 템플릿 코드를 확인 가능.
@@ -29,7 +26,7 @@
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
-    $sender = '';
+    $sender = null;
 
     // 알림톡 내용, 최대 1000자
     $content = '[ 팝빌 ]'.PHP_EOL;
@@ -38,39 +35,38 @@
     $content .= '팝빌 파트너센터 : 1600-8536'.PHP_EOL;
     $content .= 'support@linkhub.co.kr'.PHP_EOL;
 
-    // 대체문자 유형 (null , "C" , "A" 중 택 1)
-    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
-    $altSendType = 'A';
-
-    // 대체문자 제목
-    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
-    $altSubject = '대체문자 제목';
-
     // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     $altContent = '대체문자 내용';
 
-    // 예약전송일시, yyyyMMddHHmmss
-    $ReserveDT = null;
-
-    // 전송요청번호
-    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
-    // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
+    $altSendType = 'A';
 
     // 수신자 정보
-    $receivers[] = array(
+    $Messages[] = array(
         // 수신번호
         'rcv' => '',
         // 수신자명
         'rcvnm' => '수신자명'
     );
 
+    // 예약전송일시, yyyyMMddHHmmss
+    $ReserveDT = null;
+
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
+    // 전송요청번호
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
+    // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    $RequestNum = null;
+
     // 버튼정보를 수정하지 않고 템플릿 신청시 기재한 버튼내용을 전송하는 경우, null처리.
-    $buttons = null;
+    $Btns = null;
 
     // 버튼배열, 버튼링크URL에 #{템플릿변수}를 기재하여 승인받은 경우 URL 수정가능.
-    // $buttons[] = array(
+    // $Btns[] = array(
     //     // 버튼 표시명
     //     'n' => '템플릿 안내',
     //     // 버튼 유형, WL-웹링크, AL-앱링크, MD-메시지 전달, BK-봇키워드
@@ -80,11 +76,16 @@
     //     // 링크2, [앱링크] Android, [웹링크] PC URL
     //     'u2' => 'http://www.popbill.com',
     //     // 아웃 링크, out-디바이스 기본 브라우저, 미입력-카카오톡 인앱 브라우저
+    //      //친구톡 사용 시 적용되지 않음
     //     'tg' => 'out'
     // );
 
+    // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    $altSubject = '대체문자 제목';
+
     try {
-        $receiptNum = $KakaoService->SendATS($CorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $receivers, $ReserveDT, $UserID, $RequestNum, $buttons, $altSubject);
+        $receiptNum = $KakaoService->SendATS($CorpNum, $templateCode, $sender, $content, $altContent, $altSendType, $Messages, $ReserveDT, $UserID, $RequestNum, $Btns, $altSubject);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

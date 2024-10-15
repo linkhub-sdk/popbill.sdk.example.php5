@@ -15,15 +15,9 @@
     // 팝빌 회원 사업자번호
     $CorpNum = '1234567890';
 
-    // 팝빌 회원 아이디
-    $UserID = 'testkorea';
-
     // 발신번호
     // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
     $Sender = '';
-
-    // 팩스전송 발신자명
-    $SenderName = '발신자명';
 
     // 팩스 수신정보 배열, 최대 1,000건
     $Receivers[] = array(
@@ -51,6 +45,12 @@
     // 예약전송일시(yyyyMMddHHmmss) ex) 2020324230000, null인경우 즉시전송
     $ReserveDT = null;
 
+    // 팝빌 회원 아이디
+    $UserID = 'testkorea';
+
+    // 팩스전송 발신자명
+    $SenderName = '발신자명';
+
     // 광고팩스 전송여부 , true / false 중 택 1
     // └ true = 광고 , false = 일반
     // └ 미입력 시 기본값 false 처리
@@ -62,7 +62,8 @@
     // 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 생성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    $RequestNum = '';
+    $RequestNum = null;
+    
     try {
         $receiptNum = $FaxService->SendFAXBinary($CorpNum, $Sender, $Receivers, $FileDatas,
             $ReserveDT, $UserID, $SenderName, $adsYN, $title, $RequestNum);

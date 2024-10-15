@@ -32,10 +32,10 @@
     // - 미입력 시 전체조회
     $Item = array( 'SMS', 'LMS', 'MMS' );
 
-    // 예약여부 (false , true 중 택 1)
-    // └ false = 전체조회, true = 예약전송건 조회
-    // - 미입력시 기본값 false 처리
-    $ReserveYN = false;
+    // 예약여부 (null, false , true 중 택 1)
+    // └ null = 전체조회, false = 즉시전송건 조회, true = 예약전송건 조회
+    // - 미입력 시 전체조회
+    $ReserveYN = null;
 
     // 개인조회 여부 (false , true 중 택 1)
     // false = 접수한 문자 전체 조회 (관리자권한)
@@ -52,12 +52,15 @@
     // 정렬방향, D-내림차순, A-오름차순
     $Order = 'D';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     // 조회하고자 하는 발신자명 또는 수신자명
     // - 미입력시 전체조회
-    $QString = '';
+    $QString = null;
 
     try {
-        $result = $MessagingService->Search( $CorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, '', $QString );
+        $result = $MessagingService->Search($CorpNum, $SDate, $EDate, $State, $Item, $ReserveYN, $SenderYN, $Page, $PerPage, $Order, $UserID, $QString);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

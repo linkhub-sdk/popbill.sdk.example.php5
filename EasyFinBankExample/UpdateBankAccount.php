@@ -48,8 +48,11 @@
     // 메모
     $UpdateInfo->Memo = '';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try {
-        $result = $EasyFinBankService->UpdateBankAccount($CorpNum, $BankCode, $AccountNumber, $UpdateInfo);
+        $result = $EasyFinBankService->UpdateBankAccount($CorpNum, $BankCode, $AccountNumber, $UpdateInfo, $UserID);
         $code = $result->code;
         $message = $result->message;
     }

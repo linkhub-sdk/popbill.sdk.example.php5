@@ -19,7 +19,7 @@
     $serviceType = "성명";
 
     // 팝빌회원 아이디
-    $UserID = "testokrea";
+    $UserID = "testkorea";
 
     try {
         $unitCost = $AccountCheckService->GetUnitCost($CorpNum, $serviceType, $UserID);

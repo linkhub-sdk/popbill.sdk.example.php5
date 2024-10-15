@@ -25,6 +25,9 @@
     // 메모
     $memo = '전자명세서 발행취소 메모';
 
+    // 팝빌회원 아이디
+    $UserID = 'testkorea';
+
     try	{
         $result = $StatementService->CancelIssue($CorpNum, $itemCode, $MgtKey, $memo);
         $code = $result->code;

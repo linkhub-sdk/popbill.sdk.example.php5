@@ -18,7 +18,7 @@
     $UserID = 'testkorea';
 
     try {
-        $result = $MessagingService->GetSenderNumberList($CorpNum, $testkorea);
+        $result = $MessagingService->GetSenderNumberList($CorpNum, $UserID);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();
