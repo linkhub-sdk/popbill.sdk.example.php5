@@ -41,13 +41,8 @@
                     <?php
                         } else {
                             for($i=0; $i<Count($result); $i++){
-                                if ($result[$i]->emailType == "TAX_ISSUE") {
-                    ?>
-                                    <li>[정발행] TAX_ISSUE(공급받는자에게 전자세금계산서 발행 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
-                            <?php
-                                }
                                 if ($result[$i]->emailType == "TAX_ISSUE_INVOICER") {
-                            ?>
+                    ?>
                                     <li>[정발행] TAX_ISSUE_INVOICER(공급자에게 전자세금계산서 발행 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
                             <?php
                                 }
@@ -74,6 +69,11 @@
                                 if ($result[$i]->emailType == "TAX_REFUSE") {
                             ?>
                                     <li>[역발행] TAX_REFUSE(공급받는자에게 세금계산서 거부 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
+                            <?php
+                                }
+                                if ($result[$i]->emailType == "TAX_REVERSE_ISSUE") {
+                            ?>
+                                    <li>[역발행] TAX_REFUSE(공급받는자에게 세금계산서 발행 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
                             <?php
                                 }
                                 if ($result[$i]->emailType == "TAX_TRUST_ISSUE") {

@@ -3,7 +3,7 @@
   * 팝빌 팩스 API PHP SDK Example
   * PHP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/fax/php/getting-started/tutorial?fwn=php
   *
-  * 업데이트 일자 : 2024-10-15
+  * 업데이트 일자 : 2024-10-22
   * 연동 기술지원 연락처 : 1600-9854
   * 연동 기술지원 이메일 : code@linkhubcorp.com
   *         
@@ -16,9 +16,6 @@
   *     - IPRestrictOnOff : 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
   *     - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
   *     - UseLocalTimeYN : 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true)
-  * 3) 발신번호 사전등록을 합니다. (등록방법은 사이트/API 두가지 방식이 있습니다.)
-  *     - 1. 팝빌 사이트 로그인 > [문자/팩스] > [팩스] > [발신번호 사전등록] 메뉴에서 등록
-  *     - 2. getSenderNumberMgtURL API를 통해 반환된 URL을 이용하여 발신번호 등록
   */
 
   require_once '../Popbill/PopbillFax.php';

@@ -59,15 +59,13 @@
     // 대량전송 경우 사용하지 않음.
     $senderName = null;
 
-    $SystemYN = false;
-
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     $RequestNum = null;
 
     try {
-        $receiptNum = $MessagingService->SendMMS($CorpNum, $Sender, $Subject, $Content, $Messages, $FilePaths, $ReserveDT, $adsYN, $UserID, $senderName, $SystemYN, $RequestNum);
+        $receiptNum = $MessagingService->SendMMS($CorpNum, $Sender, $Subject, $Content, $Messages, $FilePaths, $ReserveDT, $adsYN, $UserID, $senderName, $RequestNum);
     }
     catch (PopbillException $pe) {
         $code = $pe->getCode();

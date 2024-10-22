@@ -51,7 +51,7 @@
                     <li>taxTotal (세액 합계) : <?php echo $result->taxTotal ?></li>
                     <li>supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal ?></li>
                     <li>totalAmount (합계금액) : <?php echo $result->totalAmount ?></li>
-                    <li>purposeType (영수/청구) : <?php echo $result->purposeType ?></li>
+                    <li>purposeType (결제대금 수취여부) : <?php echo $result->purposeType ?></li>
                     <li>serialNum (일련번호) : <?php echo $result->serialNum ?></li>
                     <li>cash (현금) : <?php echo $result->cash ?></li>
                     <li>chkBill (수표) : <?php echo $result->chkBill ?></li>

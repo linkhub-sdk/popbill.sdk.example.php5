@@ -53,7 +53,7 @@
                         <li>formCode (맞춤양식 코드) : <?php echo $result->formCode ?> </li>
                         <li>writeDate (작성일자) : <?php echo $result->writeDate ?> </li>
                         <li>taxType (과세형태) : <?php echo $result->taxType  ?> </li>
-                        <li>purposeType (영수/청구) : <?php echo $result->purposeType ?> </li>
+                        <li>purposeType (결제대금 수취여부) : <?php echo $result->purposeType ?> </li>
                         <li>serialNum (기재상 일련번호) : <?php echo $result->serialNum ?> </li>
                         <li>taxTotal (세액 합계) : <?php echo $result->taxTotal ?> </li>
                         <li>supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal ?> </li>

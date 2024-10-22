@@ -69,7 +69,7 @@
                                     <li>receiverPrintYN (수신자 인쇄여부) : <?php echo $result[$i]->receiverPrintYN ? 'true' : 'false' ?></li>
                                     <li>supplyCostTotal (공급가액 합계) : <?php echo $result[$i]->supplyCostTotal ?></li>
                                     <li>taxTotal (세액 합계) : <?php echo $result[$i]->taxTotal ?></li>
-                                    <li>purposeType (영수/청구) : <?php echo $result[$i]->purposeType ?></li>
+                                    <li>purposeType (결제대금 수취여부) : <?php echo $result[$i]->purposeType ?></li>
                                     <li>issueDT (발행일시) : <?php echo $result[$i]->issueDT ?></li>
                                     <li>stateCode (상태코드) : <?php echo $result[$i]->stateCode ?></li>
                                     <li>stateDT (상태 변경일시) : <?php echo $result[$i]->stateDT ?></li>

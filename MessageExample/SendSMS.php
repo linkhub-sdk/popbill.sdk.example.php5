@@ -16,18 +16,15 @@
     $CorpNum = '1234567890';
 
     // 팝빌에 사전 등록된 발신번호
-    // 단건전송, 동보전송 경우 사용
     $Sender = '';
 
     // 메시지 내용
-    // 단건전송, 동보전송 경우 사용
     $Content = '';
 
     // 문자전송정보
     $Messages[] = array(
         'rcv'   => '',			    // 수신번호
-        'rcvnm' => '수신자성명',	 // 수신자성명
-        'interOPRefKey' => '',      // SMS/LMS/MMS 대량/동보전송시 파트너가 개별건마다 입력할 수 있는 값
+        'rcvnm' => '수신자성명' 	 // 수신자성명
     );
 
     // 예약전송일시(yyyyMMddHHmmss) null인 경우 즉시전송
@@ -41,10 +38,7 @@
     $UserID = 'testkorea';
 
     // 발신자명
-    // 단건전송, 동보전송 경우 사용
     $senderName = '';
-
-    $SystemYN = false;
 
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
@@ -52,7 +46,7 @@
     $RequestNum = null;
 
     try {
-        $receiptNum = $MessagingService->SendSMS($CorpNum, $Sender, $Content, $Messages, $ReserveDT, $adsYN, $UserID, $senderName, $SystemYN, $RequestNum);
+        $receiptNum = $MessagingService->SendSMS($CorpNum, $Sender, $Content, $Messages, $ReserveDT, $adsYN, $UserID, $senderName, $RequestNum);
     } catch(PopbillException $pe) {
         $code = $pe->getCode();
         $message = $pe->getMessage();

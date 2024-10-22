@@ -59,7 +59,7 @@
                                 <li>issueType (발행형태) : <?php echo $result[$i]->issueType ?></li>
                                 <li>supplyCostTotal (공급가액 합계): <?php echo $result[$i]->supplyCostTotal ?></li>
                                 <li>taxTotal (세액 합계) : <?php echo $result[$i]->taxTotal ?></li>
-                                <li>purposeType (영수/청구) : <?php echo $result[$i]->purposeType ?></li>
+                                <li>purposeType (결제대금 수취여부) : <?php echo $result[$i]->purposeType ?></li>
                                 <li>issueDT (발행일시) : <?php echo $result[$i]->issueDT ?></li>
                                 <li>lateIssueYN (지연발행 여부) : <?php echo $result[$i]->lateIssueYN ? 'true' : 'false' ?></li>
                                 <li>preIssueDT (발행예정일시) : <?php echo $result[$i]->preIssueDT ?></li>

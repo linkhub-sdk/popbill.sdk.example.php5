@@ -33,23 +33,16 @@
     //$Receivers = null;
 
     // 팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1,000건)
-    $Receivers[] = array(
-        // 팩스 수신번호
-        'rcv' => '',
-        // 팩스 수신자명
-        'rcvnm' => '팝빌담당자',
-        // 파트너 지정키, 수신자 구별용 메모
-        'interOPRefKey' => '20220705-03'
-    );
-
-    $Receivers[] = array(
-        // 팩스 수신번호
-        'rcv' => '',
-        // 팩스 수신자명
-        'rcvnm' => '수신담당자',
-        // 파트너 지정키, 수신자 구별용 메모
-        'interOPRefKey' => '20220705-04'
-    );
+    for($i=0; $i<10; $i++){
+        $Receivers[] = array(
+            // 팩스 수신번호
+            'rcv' => '',
+            // 팩스 수신자명
+            'rcvnm' => '팝빌담당자',
+            // 파트너 지정키, 수신자 구별용 메모
+            'interOPRefKey' => '20220705-'.$i
+        );
+    }
 
     // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
     $originalFAXrequestNum = '';
