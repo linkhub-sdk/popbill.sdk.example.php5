@@ -20,10 +20,10 @@
     $DType = 'R';
 
     // 시작일자, 날짜형태(yyyyMMdd)
-    $SDate = '20230101';
+    $SDate = '20241101';
 
     // 종료일자, 날짜형태(yyyyMMdd)
-    $EDate = '20230131';
+    $EDate = '20241131';
 
     // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
     // - 미입력시 전체조회
@@ -125,6 +125,9 @@
                                         <li>tradeOpt (거래유형) : <?php echo $result->list[$i]->tradeOpt ?></li>
                                         <li>taxationType (과세형태) : <?php echo $result->list[$i]->taxationType ?></li>
                                         <li>totalAmount (거래금액) : <?php echo $result->list[$i]->totalAmount ?></li>
+                                        <li>supplyCost (공급가액) : <?php echo $result->list[$i]->supplyCost ?></li>
+                                        <li>tax (부가세) : <?php echo $result->list[$i]->tax ?></li>
+                                        <li>serviceFee (봉사료) : <?php echo $result->list[$i]->serviceFee ?></li>
                                         <li>issueDT (발행일시) : <?php echo $result->list[$i]->issueDT ?></li>
                                         <li>regDT (등록일시) : <?php echo $result->list[$i]->regDT ?></li>
                                         <li>stateMemo (상태메모) : <?php echo $result->list[$i]->stateMemo ?></li>
@@ -132,6 +135,9 @@
                                         <li>stateDT (상태변경일시) : <?php echo $result->list[$i]->stateDT ?></li>
                                         <li>identityNum (식별번호) : <?php echo $result->list[$i]->identityNum ?></li>
                                         <li>itemName (주문상품명) : <?php echo $result->list[$i]->itemName ?></li>
+                                        <li>orderNumber (주문번호) : <?php echo $result->list[$i]->orderNumber ?></li>
+                                        <li>email (구매자(고객) 이메일) : <?php echo $result->list[$i]->email ?></li>
+                                        <li>hp (구매자(고객) 휴대폰) : <?php echo $result->list[$i]->hp ?></li>
                                         <li>customerName (주문자명) : <?php echo $result->list[$i]->customerName ?></li>
                                         <li>confirmNum (국세청승인번호) : <?php echo $result->list[$i]->confirmNum ?></li>
                                         <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result->list[$i]->orgConfirmNum ?></li>

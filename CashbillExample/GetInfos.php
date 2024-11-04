@@ -20,7 +20,7 @@ $CorpNum = '1234567890';
 
 // 문서번호 배열, 최대 1,000건
 $MgtKeyList = array(
-    '20230102-PHP5-010',
+    '20241101-002',
     '20230102-PHP5-011',
 );
 
@@ -60,12 +60,18 @@ try {
                                 <li>tradeOpt (거래유형) : <?php echo $result[$i]->tradeOpt ?></li>
                                 <li>taxationType (과세형태) : <?php echo $result[$i]->taxationType ?></li>
                                 <li>totalAmount (거래금액) : <?php echo $result[$i]->totalAmount ?></li>
+                                <li>supplyCost (공급가액) : <?php echo $result[$i]->supplyCost ?></li>
+                                <li>tax (부가세) : <?php echo $result[$i]->tax ?></li>
+                                <li>serviceFee (봉사료) : <?php echo $result[$i]->serviceFee ?></li>        
                                 <li>issueDT (발행일시) : <?php echo $result[$i]->issueDT ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
                                 <li>stateCode (상태코드) : <?php echo $result[$i]->stateCode ?></li>
                                 <li>stateDT (상태변경일시) : <?php echo $result[$i]->stateDT ?></li>
                                 <li>identityNum (식별번호) : <?php echo $result[$i]->identityNum ?></li>
                                 <li>itemName (주문상품명) : <?php echo $result[$i]->itemName ?></li>
+                                <li>orderNumber (주문번호) : <?php echo $result[$i]->orderNumber ?></li>
+                                <li>email (구매자(고객) 이메일) : <?php echo $result[$i]->email ?></li>
+                                <li>hp (구매자(고객) 휴대폰) : <?php echo $result[$i]->hp ?></li>
                                 <li>customerName (주문자명) : <?php echo $result[$i]->customerName ?></li>
                                 <li>confirmNum (국세청승인번호) : <?php echo $result[$i]->confirmNum ?></li>
                                 <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result[$i]->orgConfirmNum ?></li>
@@ -75,6 +81,7 @@ try {
                                 <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result[$i]->ntsresultCode ?></li>
                                 <li>ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result[$i]->ntsresultMessage ?></li>
                                 <li>printYN (인쇄여부) : <?php echo $result[$i]->printYN ? 'true' : 'false' ?></li>
+                                <li>interOPYN (연동문서 여부) : <?php echo $result[$i]->interOPYN ? 'true' : 'false' ?></li>
                             </ul>
                         </fieldset>
                 <?php

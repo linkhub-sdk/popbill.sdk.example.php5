@@ -18,7 +18,7 @@
     $CorpNum = '1234567890';
 
     // 문서번호
-    $MgtKey = '20230102-PHP5-001';
+    $MgtKey = '20241101-002';
 
     try {
         $result = $CashbillService->GetInfo($CorpNum, $MgtKey);
@@ -53,12 +53,18 @@
                                 <li>tradeOpt (거래유형) : <?php echo $result->tradeOpt ?></li>
                                 <li>taxationType (과세형태) : <?php echo $result->taxationType ?></li>
                                 <li>totalAmount (거래금액) : <?php echo $result->totalAmount ?></li>
+                                <li>supplyCost (공급가액) : <?php echo $result->supplyCost ?></li>
+                                <li>tax (부가세) : <?php echo $result->tax ?></li>
+                                <li>serviceFee (봉사료) : <?php echo $result->serviceFee ?></li>  
                                 <li>issueDT (발행일시) : <?php echo $result->issueDT ?></li>
                                 <li>regDT (등록일시) : <?php echo $result->regDT ?></li>
                                 <li>stateCode (상태코드) : <?php echo $result->stateCode ?></li>
                                 <li>stateDT (상태변경일시) : <?php echo $result->stateDT ?></li>
                                 <li>identityNum (식별번호) : <?php echo $result->identityNum ?></li>
                                 <li>itemName (주문상품명) : <?php echo $result->itemName ?></li>
+                                <li>orderNumber (주문번호) : <?php echo $result->orderNumber ?></li>
+                                <li>email (구매자(고객) 이메일) : <?php echo $result->email ?></li>
+                                <li>hp (구매자(고객) 휴대폰) : <?php echo $result->hp ?></li>
                                 <li>customerName (주문자명) : <?php echo $result->customerName ?></li>
                                 <li>confirmNum (국세청승인번호) : <?php echo $result->confirmNum ?></li>
                                 <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?></li>
@@ -68,6 +74,7 @@
                                 <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result->ntsresultCode ?></li>
                                 <li>ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result->ntsresultMessage ?></li>
                                 <li>printYN (인쇄여부) : <?php echo $result->printYN ? 'true' : 'false' ?></li>
+                                <li>interOPYN (연동문서 여부) : <?php echo $result->interOPYN ? 'true' : 'false' ?></li>
                     <?php
                             }
                         }
