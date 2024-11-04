@@ -84,7 +84,7 @@
                             <li>closeDownState (공급받는자 휴폐업상태) : <?php echo $result->closeDownState ?> </li>
                             <li>closeDownStateDate (공급받는자 휴폐업일자) : <?php echo $result->closeDownStateDate ?> </li>
 
-                            <li>purposeType (결제대금 수취여부) : <?php echo $result->purposeType  ?> </li>
+                            <li>purposeType (영수/청구) : <?php echo $result->purposeType  ?> </li>
                             <li>serialNum (일련번호) : <?php echo $result->serialNum ?>  </li>
                             <li>remark1 (비고1) : <?php echo $result->remark1 ?>  </li>
                             <li>remark2 (비고2) : <?php echo $result->remark2  ?> </li>

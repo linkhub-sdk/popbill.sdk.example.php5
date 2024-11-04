@@ -35,7 +35,7 @@
         'Z'
     );
 
-    // 결제대금 수취여부 ("R" , "C", "N" 중 선택, 다중 선택 가능)
+    // 영수/청구 ("R", "C", "N" 중 선택, 다중 선택 가능)
     // └ R = 영수, C = 청구, N = 없음
     // - 미입력 시 전체조회
     $PurposeType = array (
@@ -117,7 +117,7 @@
                                 <li>issueDate (발행일자) : <?php echo $response->list[$i]->issueDate ; ?></li>
                                 <li>sendDate (전송일자) : <?php echo $response->list[$i]->sendDate ; ?></li>
                                 <li>taxType (과세형태) : <?php echo $response->list[$i]->taxType ; ?></li>
-                                <li>purposeType (결제대금 수취여부) : <?php echo $response->list[$i]->purposeType ; ?></li>
+                                <li>purposeType (영수/청구) : <?php echo $response->list[$i]->purposeType ; ?></li>
                                 <li>supplyCostTotal (공급가액 합계) : <?php echo $response->list[$i]->supplyCostTotal ; ?></li>
                                 <li>taxTotal (세액 합계) : <?php echo $response->list[$i]->taxTotal ; ?></li>
                                 <li>totalAmount (합계금액) : <?php echo $response->list[$i]->totalAmount ; ?></li>
