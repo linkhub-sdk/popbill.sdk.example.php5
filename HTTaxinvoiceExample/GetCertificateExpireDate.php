@@ -28,7 +28,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>홈택스연동 인증서 만료일시 확인</legend>
+                <legend>홈택스수집 인증서 만료일시 확인</legend>
                 <ul>
                     <?php
                         if ( isset ( $ExpireDate ) ) {

@@ -6,7 +6,7 @@
 </head>
 <?php
     /**
-     * 다수건의 사업자번호에 대한 휴폐업정보를 확인합니다. (최대 1,000건)
+     * 다수건의 사업자번호에 대한 사업자등록상태 (휴폐업조회) 를 확인합니다. (최대 1,000건)
      * - https://developers.popbill.com/reference/closedown/php/api/check#CheckCorpNums
      */
 
@@ -53,7 +53,7 @@
         for ($i = 0; $i < Count($result); $i++) {
             ?>
             <fieldset class="fieldset2">
-                <legend>휴폐업조회 결과 [ <?php echo $i + 1 ?> ]</legend>
+                <legend>사업자등록상태조회 (휴폐업조회) 결과 [ <?php echo $i + 1 ?> ]</legend>
                 <ul>
                     <li>사업자번호 (corpNum) : <?php echo $result[$i]->corpNum ?></li>
                     <li>사업자 과세유형 (taxType) : <?php echo $result[$i]->taxType ?></li>

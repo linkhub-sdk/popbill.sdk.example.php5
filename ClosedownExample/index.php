@@ -7,13 +7,13 @@
 </head>
 <body>
 <div id="content">
-    <p class="heading1">팝빌 휴폐업조회 SDK PHP 5.X Example.</p>
+    <p class="heading1">팝빌 휴사업자등록상태조회 (휴폐업조회) SDK PHP 5.X Example.</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>휴폐업조회</legend>
+        <legend>사업자등록상태조회 (휴폐업조회)</legend>
         <ul>
-            <li><a href="CheckCorpNum.php">CheckCorpNum</a> (휴폐업 단건조회) </li>
-            <li><a href="CheckCorpNums.php">CheckCorpNums</a> (휴폐업 대량조회) </li>
+            <li><a href="CheckCorpNum.php">CheckCorpNum</a> (사업자등록상태조회 (휴폐업조회) - 단건) </li>
+            <li><a href="CheckCorpNums.php">CheckCorpNums</a> (사업자등록상태조회 (휴폐업조회) - 대량) </li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

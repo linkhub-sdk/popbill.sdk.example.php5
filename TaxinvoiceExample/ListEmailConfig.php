@@ -103,7 +103,7 @@
                                 }
                                 if ($result[$i]->emailType == "TAX_CLOSEDOWN") {
                             ?>
-                                    <li>[처리결과] TAX_CLOSEDOWN(거래처의 휴폐업 여부 확인 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
+                                    <li>[처리결과] TAX_CLOSEDOWN(거래처의 사업자등록상태 (휴폐업) 확인 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
                             <?php
                                 }
                                 if ($result[$i]->emailType == "TAX_NTSFAIL_INVOICER") {

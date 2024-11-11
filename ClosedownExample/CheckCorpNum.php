@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 사업자번호 1건에 대한 휴폐업정보를 확인합니다.
+     * 사업자번호 1건에 대한 사업자등록상태조회 (휴폐업조회) 를 확인합니다.
      * - https://developers.popbill.com/reference/closedown/php/api/check#CheckCorpNum
      */
 
@@ -34,7 +34,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>휴폐업조회 - 단건</legend>
+                <legend>사업자등록상태조회 (휴폐업조회) - 단건</legend>
                     <div class ="fieldset4">
                     <form method= "GET" id="corpnum_form" action="CheckCorpNum.php">
                         <input class= "txtCorpNum left" type="text" placeholder="사업자번호 기재" id="CorpNum" name="CorpNum" value ='<?php echo (isset($result->corpNum) ? $result->corpNum : "") ?>' tabindex=1/>
@@ -46,7 +46,7 @@
                 if(isset($result)) {
             ?>
                 <fieldset class="fieldset2">
-                    <legend>휴폐업조회 - 단건</legend>
+                    <legend>사업자등록상태조회 (휴폐업조회) - 단건</legend>
                     <ul>
                         <li>사업자번호 (corpNum) : <?php echo $result->corpNum?></li>
                         <li>사업자 과세유형 (taxType) : <?php echo $result->taxType?></li>
@@ -65,7 +65,7 @@
             ?>
 
                 <fieldset class="fieldset2">
-                    <legend>휴폐업조회 - 단건</legend>
+                    <legend>사업자등록상태조회 (휴폐업조회) - 단건</legend>
                     <ul>
                         <li>code (응답 코드) : <?php echo $code ?></li>
                         <li>message (응답 메시지) : <?php echo $message ?></li>

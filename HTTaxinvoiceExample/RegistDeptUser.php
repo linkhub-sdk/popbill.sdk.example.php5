@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 홈택스연동 인증을 위해 팝빌에 전자세금계산서용 부서사용자 계정을 등록합니다.
+     * 홈택스수집 인증을 위해 팝빌에 전자세금계산서용 부서사용자 계정을 등록합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/php/api/cert#RegistDeptUser
      */
 

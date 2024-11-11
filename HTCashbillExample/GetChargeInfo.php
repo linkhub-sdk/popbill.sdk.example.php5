@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 팝빌 홈택스연동 API 서비스 과금정보를 확인합니다.
+     * 팝빌 홈택스수집 API 서비스 과금정보를 확인합니다.
      * - https://developers.popbill.com/reference/htcashbill/php/api/point#GetChargeInfo
      */
 
