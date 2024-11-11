@@ -96,7 +96,7 @@
                                     <li>[위수탁발행] TAX_TRUST_CANCEL_ISSUE(공급받는자에게 전자세금계산서 발행취소 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
                             <?php
                                 }
-                                if ($result[$i]->emailType == "TAX_TRUST_CALCEL_ISSUE_INVOICER") {
+                                if ($result[$i]->emailType == "TAX_TRUST_CANCEL_ISSUE_INVOICER") {
                             ?>
                                     <li>[위수탁발행] TAX_TRUST_CALCEL_ISSUE_INVOICER(공급자에게 전자세금계산서 발행취소 메일 전송 여부) : <?php echo $result[$i]->sendYN ? 'true' : 'false' ?></li>
                             <?php
