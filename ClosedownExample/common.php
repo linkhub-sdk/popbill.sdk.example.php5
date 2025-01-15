@@ -3,7 +3,7 @@
   * 팝빌 사업자등록상태조회 (휴폐업조회) API PHP SDK Example
   * PHP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/closedown/php/getting-started/tutorial?fwn=php
   *
-  * 업데이트 일자 : 2024-11-11
+  * 업데이트 일자 : 2025-01-15
   * 연동 기술지원 연락처 : 1600-9854
   * 연동 기술지원 이메일 : code@linkhubcorp.com
   *         
