@@ -55,31 +55,35 @@ try {
                                 <li>mgtKey (문서번호) : <?php echo $result[$i]->mgtKey ?></li>
                                 <li>tradeDate (거래일자) : <?php echo $result[$i]->tradeDate ?></li>
                                 <li>tradeDT (거래일시) : <?php echo $result[$i]->tradeDT ?></li>
+
                                 <li>tradeType (문서형태) : <?php echo $result[$i]->tradeType ?></li>
                                 <li>tradeUsage (거래구분) : <?php echo $result[$i]->tradeUsage ?></li>
                                 <li>tradeOpt (거래유형) : <?php echo $result[$i]->tradeOpt ?></li>
+
                                 <li>taxationType (과세형태) : <?php echo $result[$i]->taxationType ?></li>
                                 <li>totalAmount (거래금액) : <?php echo $result[$i]->totalAmount ?></li>
                                 <li>supplyCost (공급가액) : <?php echo $result[$i]->supplyCost ?></li>
                                 <li>tax (부가세) : <?php echo $result[$i]->tax ?></li>
-                                <li>serviceFee (봉사료) : <?php echo $result[$i]->serviceFee ?></li>        
+                                <li>serviceFee (봉사료) : <?php echo $result[$i]->serviceFee ?></li>
+
                                 <li>issueDT (발행일시) : <?php echo $result[$i]->issueDT ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ?></li>
                                 <li>stateCode (상태코드) : <?php echo $result[$i]->stateCode ?></li>
-                                <li>stateDT (상태변경일시) : <?php echo $result[$i]->stateDT ?></li>
+                                <li>stateDT (상태 변경일시) : <?php echo $result[$i]->stateDT ?></li>
                                 <li>identityNum (식별번호) : <?php echo $result[$i]->identityNum ?></li>
                                 <li>itemName (주문상품명) : <?php echo $result[$i]->itemName ?></li>
                                 <li>orderNumber (주문번호) : <?php echo $result[$i]->orderNumber ?></li>
                                 <li>email (구매자(고객) 이메일) : <?php echo $result[$i]->email ?></li>
                                 <li>hp (구매자(고객) 휴대폰) : <?php echo $result[$i]->hp ?></li>
-                                <li>customerName (주문자명) : <?php echo $result[$i]->customerName ?></li>
+                                <li>customerName (구매자(고객) 성명) : <?php echo $result[$i]->customerName ?></li>
+
                                 <li>confirmNum (국세청승인번호) : <?php echo $result[$i]->confirmNum ?></li>
-                                <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result[$i]->orgConfirmNum ?></li>
-                                <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <?php echo $result[$i]->orgTradeDate ?></li>
+                                <li>orgConfirmNum (당초 국세청승인번호) : <?php echo $result[$i]->orgConfirmNum ?></li>
+                                <li>orgTradeDate (당초 거래일자) : <?php echo $result[$i]->orgTradeDate ?></li>
                                 <li>ntssendDT (국세청 전송일시) : <?php echo $result[$i]->ntssendDT ?></li>
                                 <li>ntsresultDT (국세청 처리결과 수신일시) : <?php echo $result[$i]->ntsresultDT ?></li>
-                                <li>ntsresultCode (국세청 처리결과 상태코드) : <?php echo $result[$i]->ntsresultCode ?></li>
-                                <li>ntsresultMessage (국세청 처리결과 메시지) : <?php echo $result[$i]->ntsresultMessage ?></li>
+                                <li>ntsresultCode (국세청 결과코드) : <?php echo $result[$i]->ntsresultCode ?></li>
+                                <li>ntsresultMessage (국세청 결과메시지) : <?php echo $result[$i]->ntsresultMessage ?></li>
                                 <li>printYN (인쇄여부) : <?php echo $result[$i]->printYN ? 'true' : 'false' ?></li>
                                 <li>interOPYN (연동문서 여부) : <?php echo $result[$i]->interOPYN ? 'true' : 'false' ?></li>
                             </ul>

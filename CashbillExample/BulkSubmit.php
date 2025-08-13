@@ -19,9 +19,6 @@
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
     $submitID = "20230103-PHP5-BULK";
 
-    // 팝빌회원 아이디
-    $UserID = "testkorea";
-
     // 최대 100건
     $cashbillList = array();
 
@@ -32,17 +29,17 @@
         // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
         $Cashbill->mgtKey = $submitID . "-" . $i;
 
-        // // 당초 승인 현금영수증 국세청 승인번호
+        // // 당초 국세청 승인번호
         // // 취소 현금영수증 작성시 필수
         // $Cashbill->orgConfirmNum = '';
         //
-        // // 당초 승인 현금영수증 거래일자
+        // // 당초 거래일자
         // // 취소 현금영수증 작성시 필수
         // $Cashbill->orgTradeDate = '';
 
         // 거래일시, 날짜(yyyyMMddHHmmss)
         // 당일, 전일만 가능
-        $Cashbill->tradeDT = '20221103000000';
+        $Cashbill->tradeDT = '';
 
         // 문서형태, {승인거래, 취소거래} 중 기재
         $Cashbill->tradeType = '승인거래';
@@ -93,7 +90,7 @@
         // └ 주민등록번호 13자리, 휴대폰번호 10~11자리, 카드번호 13~19자리, 사업자번호 10자리 입력 가능
         $Cashbill->identityNum = '0101112222';
 
-        // 주문자명
+        // 구매자 성명
         $Cashbill->customerName = '주식회사주문자명담당자';
 
         // 주문상품명
@@ -102,12 +99,12 @@
         // 주문번호
         $Cashbill->orderNumber = '주문번호';
 
-        // 주문자 이메일
+        // 구매자 메일
         // 팝빌 테스트 환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
         // 실제 거래처의 메일주소가 기재되지 않도록 주의
         $Cashbill->email = '';
 
-        // 주문자 휴대폰
+        // 구매자 휴대폰
         // - {smssendYN} 의 값이 true 인 경우 아래 휴대폰번호로 안내 문자 전송
         $Cashbill->hp = '';
 
@@ -116,6 +113,9 @@
 
         $cashbillList[] = $Cashbill;
     }
+
+    // 팝빌회원 아이디
+    $UserID = "testkorea";
 
     try {
         $result = $CashbillService->BulkSubmit($CorpNum, $submitID, $cashbillList, $UserID);

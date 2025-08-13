@@ -38,16 +38,16 @@
     // 담당자 성명, 최대 100자
     $JoinInfo->ContactName = '담당자 성명';
 
-    // 담당자 이메일, 최대 100자
+    // 담당자 메일, 최대 100자
     $JoinInfo->ContactEmail = '';
 
-    // 담당자 연락처, 최대 20자
+    // 담당자 휴대폰, 최대 20자
     $JoinInfo->ContactTEL = '';
 
-    // 아이디, 6자 이상 20자미만
+    // 아이디
     $JoinInfo->ID = 'userid_phpdd';
 
-    // 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
+      // 비밀번호
     $JoinInfo->Password = 'qwe123!@#';
 
     try	{

@@ -51,32 +51,33 @@
                     <legend>기업정보조회 - 단건</legend>
                     <ul>
                         <li>사업자번호 (corpNum) : <?php echo $result->corpNum?></li>
-                        <li>법인번호 (companyRegNum) : <?php echo $result->companyRegNum?></li>
-                        <li>확인일시 (checkDT) : <?php echo $result->checkDT?></li>
+                        <li>법인등록번호 (companyRegNum) : <?php echo $result->companyRegNum?></li>
+                        <li>기업정보조회일시 (checkDT) : <?php echo $result->checkDT?></li>
                         <li>상호 (corpName) : <?php echo $result->corpName?></li>
+                        <li>대표자명 (CEOName) : <?php echo $result->ceoname?></li>
+
                         <li>기업형태코드 (corpCode) : <?php echo $result->corpCode?></li>
                         <li>기업규모코드 (corpScaleCode) : <?php echo $result->corpScaleCode?></li>
-                        <li>개인법인코드 (personCorpCode) : <?php echo $result->personCorpCode?></li>
-                        <li>본점지점코드 (headOfficeCode) : <?php echo $result->headOfficeCode?></li>
+                        <li>개인/법인코드 (personCorpCode) : <?php echo $result->personCorpCode?></li>
+                        <li>본점/지점코드 (headOfficeCode) : <?php echo $result->headOfficeCode?></li>
                         <li>산업코드 (industryCode) : <?php echo $result->industryCode?></li>
-                        <li>설립구분코드 (establishCode) : <?php echo $result->establishCode?></li>
                         <li>설립일자 (establishDate) : <?php echo $result->establishDate?></li>
-                        <li>대표자명 (CEOName) : <?php echo $result->ceoname?></li>
-                        <li>사업장구분코드 (workPlaceCode) : <?php echo $result->workPlaceCode?></li>
-                        <li>주소구분코드 (addrCode) : <?php echo $result->addrCode?></li>
+                        <li>설립코드 (establishCode) : <?php echo $result->establishCode?></li>
+
+                        <li>사업장코드 (workPlaceCode) : <?php echo $result->workPlaceCode?></li>
+                        <li>주소유형코드 (addrCode) : <?php echo $result->addrCode?></li>
                         <li>우편번호 (zipCode) : <?php echo $result->zipCode?></li>
                         <li>주소 (addr) : <?php echo $result->addr?></li>
                         <li>상세주소 (addrDetail) : <?php echo $result->addrDetail?></li>
                         <li>영문주소 (enAddr) : <?php echo $result->enAddr?></li>
                         <li>업종 (bizClass) : <?php echo $result->bizClass?></li>
                         <li>업태 (bizType) : <?php echo $result->bizType?></li>
-                        <li>결과코드 (result) : <?php echo $result->result?></li>
-                        <li>결과메시지 (resultMessage) : <?php echo $result->resultMessage?></li>
-                        <li>사업자과세유형 (closeDownTaxType) : <?php echo $result->closeDownTaxType?></li>
-                        <li>과세유형전환일자 (closeDownTaxTypeDate) : <?php echo $result->closeDownTaxTypeDate?></li>
+                        <li>상태코드 (result) : <?php echo $result->result?></li>
+                        <li>상태메시지 (resultMessage) : <?php echo $result->resultMessage?></li>
                         <li>휴폐업상태 (closeDownState) : <?php echo $result->closeDownState?></li>
                         <li>휴폐업일자 (closeDownStateDate) : <?php echo $result->closeDownStateDate?></li>
-
+                        <li>과세유형 (closeDownTaxType) : <?php echo $result->closeDownTaxType?></li>
+                        <li>과세유형 전환일자 (closeDownTaxTypeDate) : <?php echo $result->closeDownTaxTypeDate?></li>
                     </ul>
                 </fieldset>
 

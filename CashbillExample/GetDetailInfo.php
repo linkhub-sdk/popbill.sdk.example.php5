@@ -41,9 +41,9 @@
                     <?php
                         } else {
                     ?>
-                            <li>mgtKey (현금영수증 문서번호) : <?php echo $result->mgtKey ?> </li>
-                            <li>orgConfirmNum (당초 승인 현금영수증 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
-                            <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <?php echo $result->orgTradeDate ?> </li>
+                            <li>mgtKey (문서번호) : <?php echo $result->mgtKey ?> </li>
+                            <li>orgConfirmNum (당초 국세청승인번호) : <?php echo $result->orgConfirmNum ?> </li>
+                            <li>orgTradeDate (당초 거래일자) : <?php echo $result->orgTradeDate ?> </li>
                             <li>tradeDate (거래일자) : <?php echo $result->tradeDate ?> </li>
                             <li>tradeDT (거래일시) : <?php echo $result->tradeDT ?> </li>
                             <li>tradeType (문서형태) : <?php echo $result->tradeType ?> </li>
@@ -54,6 +54,7 @@
                             <li>supplyCost (공급가액) : <?php echo $result->supplyCost ?> </li>
                             <li>tax (부가세) : <?php echo $result->tax ?> </li>
                             <li>serviceFee (봉사료) : <?php echo $result->serviceFee ?> </li>
+
                             <li>franchiseCorpNum (가맹점 사업자번호) : <?php echo $result->franchiseCorpNum ?> </li>
                             <li>franchiseTaxRegID (가맹점 종사업장 식별번호) : <?php echo $result->franchiseTaxRegID ?> </li>
                             <li>franchiseCorpName (가맹점 상호) : <?php echo $result->franchiseCorpName ?> </li>
@@ -61,12 +62,12 @@
                             <li>franchiseAddr (가맹점 주소) : <?php echo $result->franchiseAddr ?> </li>
                             <li>franchiseTEL (가맹점 전화번호) : <?php echo $result->franchiseTEL ?> </li>
                             <li>identityNum (식별번호) : <?php echo $result->identityNum ?> </li>
-                            <li>customerName (주문자명) : <?php echo $result->customerName ?> </li>
+                            <li>customerName (구매자 성명) : <?php echo $result->customerName ?> </li>
                             <li>itemName (주문상품명) : <?php echo $result->itemName ?> </li>
                             <li>orderNumber (주문번호) : <?php echo $result->orderNumber ?> </li>
-                            <li>email (주문자 이메일) : <?php echo $result->email ?> </li>
-                            <li>hp (주문자 휴대폰) : <?php echo $result->hp ?> </li>
-                            <li>smssendYN (발행 안내문자 전송여부) : <?php echo $result->smssendYN  ? 'true' : 'false' ?> </li>
+                            <li>email (구매자 메일) : <?php echo $result->email ?> </li>
+                            <li>hp (구매자 휴대폰) : <?php echo $result->hp ?> </li>
+                            <li>smssendYN (구매자 알림문자 전송여부) : <?php echo $result->smssendYN  ? 'true' : 'false' ?> </li>
                             <li>cancelType (취소사유) : <?php echo $result->cancelType ?> </li>
                     <?php
                         }
