@@ -41,14 +41,14 @@
                     <?php
                         } else {
                     ?>
-                            <li>id (아이디) : <?php echo $result->id ; ?></li>
-                            <li>personName (담당자 성명) : <?php echo $result->personName ; ?></li>
-                            <li>email (담당자 이메일) : <?php echo $result->email ; ?></li>
-                            <li>tel (담당자 연락처) : <?php echo $result->tel ; ?></li>
-                            <li>regDT (등록일시) : <?php echo $result->regDT ; ?></li>
-                            <li>searchRole (담당자 권한) : <?php echo $result->searchRole ; ?></li>
-                            <li>mgrYN (관리자 여부) : <?php echo $result->mgrYN ; ?></li>
-                            <li>state (상태) : <?php echo $result->state ; ?></li>
+                          <li>id (아이디) : <?php echo $result->id ; ?></li>
+                          <li>personName (담당자 성명) : <?php echo $result->personName ; ?></li>
+                          <li>tel (담당자 휴대폰) : <?php echo $result->tel ; ?></li>
+                          <li>email (담당자 메일) : <?php echo $result->email ; ?></li>
+                          <li>regDT (등록일시) : <?php echo $result->regDT ; ?></li>
+                          <li>searchRole (권한) : <?php echo $result->searchRole ; ?></li>
+                          <li>mgrYN (역할) : <?php echo $result->mgrYN ; ?></li>
+                          <li>state (계정상태) : <?php echo $result->state ; ?></li>
                     <?php
                         }
                     ?>

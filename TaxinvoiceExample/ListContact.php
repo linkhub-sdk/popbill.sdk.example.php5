@@ -44,12 +44,12 @@
                             <ul>
                                 <li>id (아이디) : <?php echo $result[$i]->id ; ?></li>
                                 <li>personName (담당자 성명) : <?php echo $result[$i]->personName ; ?></li>
-                                <li>email (담당자 이메일) : <?php echo $result[$i]->email ; ?></li>
-                                <li>tel (담당자 연락처) : <?php echo $result[$i]->tel ; ?></li>
+                                <li>email (담당자 메일) : <?php echo $result[$i]->email ; ?></li>
+                                <li>tel (담당자 휴대폰) : <?php echo $result[$i]->tel ; ?></li>
                                 <li>regDT (등록일시) : <?php echo $result[$i]->regDT ; ?></li>
-                                <li>searchRole (담당자 권한) : <?php echo $result[$i]->searchRole ; ?></li>
-                                <li>mgrYN (관리자 여부) : <?php echo $result[$i]->mgrYN ; ?></li>
-                                <li>state (상태) : <?php echo $result[$i]->state ; ?></li>
+                                <li>searchRole (권한) : <?php echo $result[$i]->searchRole ; ?></li>
+                                <li>mgrYN (역할) : <?php echo $result[$i]->mgrYN ; ?></li>
+                                <li>state (계정상태) : <?php echo $result[$i]->state ; ?></li>
                             </ul>
                             </fieldset>
                     <?php
