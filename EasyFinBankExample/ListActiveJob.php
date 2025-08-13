@@ -50,7 +50,7 @@
                             <li>jobState (수집상태) : <?php echo $result[$i]->jobState ?></li>
                             <li>startDate (시작일자) : <?php echo $result[$i]->startDate ?></li>
                             <li>endDate (종료일자) : <?php echo $result[$i]->endDate ?></li>
-                            <li>errorCode (오류코드) : <?php echo $result[$i]->errorCode ?></li>
+                            <li>errorCode (수집 결과코드) : <?php echo $result[$i]->errorCode ?></li>
                             <li>errorReason (오류메시지) : <?php echo $result[$i]->errorReason ?></li>
                             <li>jobStartDT (작업 시작일시) : <?php echo $result[$i]->jobStartDT ?></li>
                             <li>jobEndDT (작업 종료일시) : <?php echo $result[$i]->jobEndDT ?></li>

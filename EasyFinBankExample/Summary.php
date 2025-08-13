@@ -55,7 +55,7 @@
                     <?php
                         } else {
                     ?>
-                        <li>count (수집 결과 건수) : <?php echo $response->count ?></li>
+                        <li>count (수집 건수) : <?php echo $response->count ?></li>
                         <li>cntAccIn (입금 거래 건수) : <?php echo $response->cntAccIn ?></li>
                         <li>cntAccOut (출금거래 건수) : <?php echo $response->cntAccOut ?></li>
                         <li>totalAccIn (입금액 합계) : <?php echo $response->totalAccIn ?></li>
