@@ -22,19 +22,19 @@
     // 담당자 정보 객체 생성
     $ContactInfo = new ContactInfo();
 
-    // 담당자명
+    // 담당자 성명
     $ContactInfo->personName = '담당자_수정';
 
-    // 담당자 아이디
+    // 아이디
     $ContactInfo->id = 'testkorea';
 
-    // 담당자 연락처
+    // 담당자 휴대폰
     $ContactInfo->tel = '';
 
-    // 이메일 주소
+    // 담당자 메일
     $ContactInfo->email = '';
 
-    // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
+    // 권한, 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
     $ContactInfo->searchRole = 3;
 
     try {

@@ -71,7 +71,7 @@
                 <li>code (응답코드) : <?php echo $response->code ?></li>
                 <li>message (응답메시지) : <?php echo $response->message ?></li>
                 <li>total (총 검색결과 건수) : <?php echo $response->total ?></li>
-                <li>perPage (페이지당 검색개수) : <?php echo $response->perPage ?></li>
+                <li>perPage (페이지당 목록 건수) : <?php echo $response->perPage ?></li>
                 <li>pageNum (페이지 번호) : <?php echo $response->pageNum ?></li>
                 <li>pageCount (페이지 개수) : <?php echo $response->pageCount ?></li>
                 <?php
@@ -89,7 +89,7 @@
                             <li>supplyCost (공급가액) : <?php echo $response->list[$i]->supplyCost ?></li>
                             <li>tax (부가세) : <?php echo $response->list[$i]->tax ?></li>
                             <li>serviceFee (봉사료) : <?php echo $response->list[$i]->serviceFee ?></li>
-                            <li>invoiceType (매입/매출) : <?php echo $response->list[$i]->invoiceType; ?></li>
+                            <li>invoiceType (현금영수증 유형) : <?php echo $response->list[$i]->invoiceType; ?></li>
                             <li>franchiseCorpNum (발행자 사업자번호) : <?php echo $response->list[$i]->franchiseCorpNum ?></li>
                             <li>franchiseCorpName (발행자 상호) : <?php echo $response->list[$i]->franchiseCorpName ?></li>
                             <li>franchiseCorpType (발행자 사업자유형) : <?php echo $response->list[$i]->franchiseCorpType ?></li>

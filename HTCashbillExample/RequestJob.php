@@ -15,7 +15,7 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $CorpNum = '1234567890';
 
-    // 현금영수증, SELL-매출, BUY-매입
+    // 현금영수증 유형, SELL-매출, BUY-매입
     $CBType = HTCBKeyType::BUY;
 
     // 시작일자, 형식(yyyyMMdd)
