@@ -8,13 +8,6 @@
     /**
      * 전자명세서 관련 메일 항목에 대한 발송설정을 수정합니다.
      * - https://developers.popbill.com/reference/statement/php/api/etc#UpdateEmailConfig
-     *
-     * 메일전송유형
-     * - SMT_ISSUE : 수신자에게 전자명세서가 발행 되었음을 알려주는 메일입니다.
-     * - SMT_ACCEPT : 발신자에게 전자명세서가 승인 되었음을 알려주는 메일입니다.
-     * - SMT_DENY : 발신자에게 전자명세서가 거부 되었음을 알려주는 메일입니다.
-     * - SMT_CANCEL : 수신자에게 전자명세서가 취소 되었음을 알려주는 메일입니다.
-     * - SMT_CANCEL_ISSUE : 수신자에게 전자명세서가 발행취소 되었음을 알려주는 메일입니다.
      */
 
     include 'common.php';

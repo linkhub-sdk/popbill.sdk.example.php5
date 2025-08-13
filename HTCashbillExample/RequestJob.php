@@ -19,10 +19,10 @@
     $CBType = HTCBKeyType::BUY;
 
     // 시작일자, 형식(yyyyMMdd)
-    $SDate = '20230101';
+    $SDate = '20250801';
 
     // 종료일자, 형식(yyyyMMdd)
-    $EDate = '20230131';
+    $EDate = '20250831';
 
     // 팝빌회원 아이디
     $UserID = 'testkorea';

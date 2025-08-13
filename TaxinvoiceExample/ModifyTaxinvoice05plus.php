@@ -36,7 +36,7 @@ $Taxinvoice->orgNTSConfirmNum = "20230706-original-TI00001";
 
 // 작성일자, 날짜형식(yyyyMMdd)
 // 당초 세금계산서의 작성 일자
-$Taxinvoice->writeDate = "20230313";
+$Taxinvoice->writeDate = "20250813";
 
 // 공급가액 합계
 $Taxinvoice->supplyCostTotal = "1000000";
@@ -219,7 +219,7 @@ $Taxinvoice->detailList = array();
 
 $Taxinvoice->detailList[] = new TaxinvoiceDetail();
 $Taxinvoice->detailList[0]->serialNum = 1; // 일련번호, 1부터 순차기재
-$Taxinvoice->detailList[0]->purchaseDT = "20230102"; // 거래일자
+$Taxinvoice->detailList[0]->purchaseDT = "20250813"; // 거래일자
 $Taxinvoice->detailList[0]->itemName = "품목명"; // 품목명
 $Taxinvoice->detailList[0]->spec = "규격"; // 규격
 $Taxinvoice->detailList[0]->qty = "1"; // 수량
@@ -230,7 +230,7 @@ $Taxinvoice->detailList[0]->remark = "품목비고"; // 비고
 
 $Taxinvoice->detailList[] = new TaxinvoiceDetail();
 $Taxinvoice->detailList[1]->serialNum = 2; // 일련번호, 1부터 순차기재
-$Taxinvoice->detailList[1]->purchaseDT = "20230102"; // 거래일자
+$Taxinvoice->detailList[1]->purchaseDT = "20250813"; // 거래일자
 $Taxinvoice->detailList[1]->itemName = "품목명2"; // 품목명
 $Taxinvoice->detailList[1]->spec = "규격"; // 규격
 $Taxinvoice->detailList[1]->qty = "1"; // 수량

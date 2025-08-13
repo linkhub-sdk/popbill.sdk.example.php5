@@ -37,7 +37,7 @@
 
     // 거래일시, 날짜(yyyyMMddHHmmss)
     // 당일, 전일만 가능
-    $Cashbill->tradeDT = '20221103000000';
+    $Cashbill->tradeDT = '';
 
     // 문서형태, 승인거래 기재
     $Cashbill->tradeType = '승인거래';

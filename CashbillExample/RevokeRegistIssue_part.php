@@ -73,7 +73,7 @@
 
     // 거래일시, 날짜(yyyyMMddHHmmss)
     // 당일, 전일만 가능
-    $tradeDT = '20221103190000';
+    $tradeDT = '';
 
     try {
         $result = $CashbillService->RevokeRegistIssue($CorpNum, $MgtKey, $orgConfirmNum, $orgTradeDate,

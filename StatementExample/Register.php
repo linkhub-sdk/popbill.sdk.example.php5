@@ -30,7 +30,7 @@
      ************************************************************/
 
     // 기재상 작성일자
-    $Statement->writeDate = '202230102';
+    $Statement->writeDate = '20250813';
 
     // 영수/청구, ('영수', '청구', '없음') 중 기재
     $Statement->purposeType = '영수';
@@ -119,7 +119,7 @@
 
     $Statement->detailList[0] = new StatementDetail();
     $Statement->detailList[0]->serialNum = '1';					//품목 일련번호 1부터 순차 기재
-    $Statement->detailList[0]->purchaseDT = '20220324';			//거래일자 yyyyMMdd
+    $Statement->detailList[0]->purchaseDT = '20250813';			//거래일자 yyyyMMdd
     $Statement->detailList[0]->itemName = '품명';
     $Statement->detailList[0]->spec = '규격';
     $Statement->detailList[0]->unit = '단위';
@@ -136,7 +136,7 @@
 
     $Statement->detailList[1] = new StatementDetail();
     $Statement->detailList[1]->serialNum = '2';					//품목 일련번호 순차기재
-    $Statement->detailList[1]->purchaseDT = '20220324';			//거래일자 yyyyMMdd
+    $Statement->detailList[1]->purchaseDT = '20250813';			//거래일자 yyyyMMdd
     $Statement->detailList[1]->itemName = '품명';
     $Statement->detailList[1]->spec = '규격';
     $Statement->detailList[1]->unit = '단위';

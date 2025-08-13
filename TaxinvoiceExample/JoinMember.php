@@ -38,10 +38,10 @@
     // 담당자명
     $JoinInfo->ContactName = '담당자상명';
 
-    // 담당자 이메일
+    // 담당자 메일
     $JoinInfo->ContactEmail	= '';
 
-    // 담당자 연락처
+    // 담당자 휴대폰
     $JoinInfo->ContactTEL	= '';
 
     // 아이디, 6자 이상 20자미만
