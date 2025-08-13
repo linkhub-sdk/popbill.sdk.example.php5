@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원 사업자번호에 담당자(팝빌 로그인 계정)를 추가합니다.
-     * - https://developers.popbill.com/reference/accountcheck/php/api/member#RegistContact
+     * - https://developers.popbill.com/reference/accountcheck/php/common-api/member#RegistContact
      */
 
     include 'common.php';

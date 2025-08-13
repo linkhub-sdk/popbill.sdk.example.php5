@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원의 회사정보를 확인합니다.
-     * - https://developers.popbill.com/reference/kakaotalk/php/api/member#GetCorpInfo
+     * - https://developers.popbill.com/reference/kakaotalk/php/common-api/member#GetCorpInfo
      */
 
     include 'common.php';

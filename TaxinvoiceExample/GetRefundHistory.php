@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원의 포인트 환불신청내역을 확인합니다.
-     * - https://developers.popbill.com/reference/taxinvoice/php/api/point#GetRefundHistory
+     * - https://developers.popbill.com/reference/taxinvoice/php/common-api/point#GetRefundHistory
      */
 
     include 'common.php';

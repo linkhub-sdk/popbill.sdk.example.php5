@@ -7,7 +7,7 @@
 <?php
     /**
     * 문자 전송시 과금되는 포인트 단가를 확인합니다.
-    * - https://developers.popbill.com/reference/sms/php/api/point#GetUnitCost
+    * - https://developers.popbill.com/reference/sms/php/common-api/point#GetUnitCost
     */
 
     include 'common.php';

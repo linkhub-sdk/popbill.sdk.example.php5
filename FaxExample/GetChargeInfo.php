@@ -7,7 +7,7 @@
 <?php
     /**
      * 팝빌 팩스 API 서비스 과금정보를 확인합니다.
-     * - https://developers.popbill.com/reference/fax/php/api/point#GetChargeInfo
+     * - https://developers.popbill.com/reference/fax/php/common-api/point#GetChargeInfo
      */
 
     include 'common.php';

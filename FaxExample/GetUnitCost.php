@@ -7,7 +7,7 @@
 <?php
     /**
      * 팩스 전송시 과금되는 포인트 단가를 확인합니다.
-     * - https://developers.popbill.com/reference/fax/php/api/point#GetUnitCost
+     * - https://developers.popbill.com/reference/fax/php/common-api/point#GetUnitCost
      */
 
     include 'common.php';

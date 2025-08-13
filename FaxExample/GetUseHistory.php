@@ -7,7 +7,7 @@
 <?php
     /**
      * 포인트 사용내역을 확인합니다.
-     * - https://developers.popbill.com/reference/fax/php/api/point#GetUseHistory
+     * - https://developers.popbill.com/reference/fax/php/common-api/point#GetUseHistory
      */
 
     include 'common.php';

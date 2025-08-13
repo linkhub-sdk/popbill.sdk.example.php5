@@ -7,7 +7,7 @@
 <?php
     /**
      * 사업자등록상태 (휴폐업) 조회시 과금되는 포인트 단가를 확인합니다.
-     * - https://developers.popbill.com/reference/closedown/php/api/point#GetUnitCost
+     * - https://developers.popbill.com/reference/closedown/php/common-api/point#GetUnitCost
      */
 
     include 'common.php';

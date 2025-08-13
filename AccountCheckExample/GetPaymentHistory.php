@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원의 포인트 결제내역을 확인합니다.
-     * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetPaymentHistory
+     * - https://developers.popbill.com/reference/accountcheck/php/common-api/point#GetPaymentHistory
      */
 
     include 'common.php';

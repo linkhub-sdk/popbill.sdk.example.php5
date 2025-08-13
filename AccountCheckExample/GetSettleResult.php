@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원 포인트 충전에 대한 결제내역 1건을 확인합니다.
-     * - https://developers.popbill.com/reference/accountcheck/php/api/point#GetSettleResult
+     * - https://developers.popbill.com/reference/accountcheck/php/common-api/point#GetSettleResult
      */
 
     include 'common.php';

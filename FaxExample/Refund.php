@@ -8,7 +8,7 @@
 <?php
 /**
  * 연동회원 포인트를 환불 신청합니다.
- * - https://developers.popbill.com/reference/fax/php/api/point#Refund
+ * - https://developers.popbill.com/reference/fax/php/common-api/point#Refund
  */
 
 include 'common.php';

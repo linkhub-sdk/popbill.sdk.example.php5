@@ -7,7 +7,7 @@
 <?php
     /**
      * 홈택스수집 정액제 서비스 상태를 확인합니다.
-     * - https://developers.popbill.com/reference/httaxinvoice/php/api/point#GetFlatRateState
+     * - https://developers.popbill.com/reference/httaxinvoice/php/common-api/point#GetFlatRateState
      */
 
     include 'common.php';

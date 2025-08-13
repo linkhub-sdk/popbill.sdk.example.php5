@@ -7,7 +7,7 @@
 <?php
     /**
      * 무통장 입금을 신청합니다.
-     * - https://developers.popbill.com/reference/sms/php/api/point#PaymentRequest
+     * - https://developers.popbill.com/reference/sms/php/common-api/point#PaymentRequest
      */
 
     include 'common.php';

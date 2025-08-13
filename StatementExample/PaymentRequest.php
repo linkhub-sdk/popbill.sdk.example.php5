@@ -7,7 +7,7 @@
 <?php
     /**
      * 연동회원 포인트 충전을 위해 무통장입금을 신청합니다.
-     * - https://developers.popbill.com/reference/statement/php/api/point#PaymentRequest
+     * - https://developers.popbill.com/reference/statement/php/common-api/point#PaymentRequest
      */
 
     include 'common.php';
