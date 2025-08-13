@@ -36,19 +36,19 @@
     // 종목
     $JoinInfo->BizClass	= '종목';
 
-    // 담당자명
+    // 담당자 성명
     $JoinInfo->ContactName = '담당자상명';
 
-    // 담당자 이메일
+    // 담당자 메일
     $JoinInfo->ContactEmail	= '';
 
-    // 담당자 연락처
+    // 담당자 휴대폰
     $JoinInfo->ContactTEL	= '';
 
-    // 아이디, 6자 이상 20자미만
+    // 아이디
     $JoinInfo->ID = 'userid_phpdd';
 
-    // 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
+    // 비밀번호
     $JoinInfo->Password = 'qwe123!@#';
 
     try	{

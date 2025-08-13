@@ -52,6 +52,7 @@
                     <li>supplyCostTotal (공급가액 합계) : <?php echo $result->supplyCostTotal ?></li>
                     <li>totalAmount (합계금액) : <?php echo $result->totalAmount ?></li>
                     <li>purposeType (영수/청구) : <?php echo $result->purposeType ?></li>
+
                     <li>serialNum (일련번호) : <?php echo $result->serialNum ?></li>
                     <li>cash (현금) : <?php echo $result->cash ?></li>
                     <li>chkBill (수표) : <?php echo $result->chkBill ?></li>
@@ -60,9 +61,10 @@
                     <li>remark1 (비고1) : <?php echo $result->remark1 ?></li>
                     <li>remark2 (비고2) : <?php echo $result->remark2 ?></li>
                     <li>remark3 (비고3) : <?php echo $result->remark3 ?></li>
+
                     <li>ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum ?></li>
                     <li>invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?></li>
-                    <li>invoicerTaxRegID (공급자 종사업장번호) : <?php echo $result->invoicerTaxRegID ?></li>
+                    <li>invoicerTaxRegID (공급자 종사업장 식별번호) : <?php echo $result->invoicerTaxRegID ?></li>
                     <li>invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName ?></li>
                     <li>invoicerCEOName (공급자 대표자성명) : <?php echo $result->invoicerCEOName ?></li>
                     <li>invoicerAddr (공급자 주소) : <?php echo $result->invoicerAddr ?></li>
@@ -71,9 +73,10 @@
                     <li>invoicerContactName (공급자 담당자 성명) : <?php echo $result->invoicerContactName ?></li>
                     <li>invoicerTEL (공급자 담당자 연락처) : <?php echo $result->invoicerTEL ?></li>
                     <li>invoicerEmail (공급자 담당자 이메일) : <?php echo $result->invoicerEmail ?></li>
-                    <li>invoiceeCorpNum (공급받는자 사업자번호) : <?php echo $result->invoiceeCorpNum ?></li>
-                    <li>invoiceeType (공급받는자 구분) : <?php echo $result->invoiceeCorpNum ?></li>
-                    <li>invoiceeTaxRegID (공급받는자 종사업장번호) : <?php echo $result->invoiceeCorpNum ?></li>
+
+                    <li>invoiceeCorpNum (공급받는자 등록번호) : <?php echo $result->invoiceeCorpNum ?></li>
+                    <li>invoiceeType (공급받는자 유형) : <?php echo $result->invoiceeCorpNum ?></li>
+                    <li>invoiceeTaxRegID (공급받는자 종사업장 식별번호) : <?php echo $result->invoiceeCorpNum ?></li>
                     <li>invoiceeCorpName (공급받는자 상호) : <?php echo $result->invoiceeCorpNum ?></li>
                     <li>invoiceeCEOName (공급받는자 대표자 성명) : <?php echo $result->invoiceeCEOName ?></li>
                     <li>invoiceeAddr (공급받는자 주소) : <?php echo $result->invoiceeAddr ?></li>
@@ -83,7 +86,7 @@
                     <li>invoiceeTEL1 (공급받는자 담당자 연락처) : <?php echo $result->invoiceeTEL1 ?></li>
                     <li>invoiceeEmail1 (공급받는자 담당자 이메일) : <?php echo $result->invoiceeEmail1 ?></li>
                     <li>trusteeCorpNum (수탁자 사업자번호) : <?php echo $result->trusteeCorpNum ?></li>
-                    <li>trusteeTaxRegID (수탁자 종사업장번호) : <?php echo $result->trusteeTaxRegID ?></li>
+                    <li>trusteeTaxRegID (수탁자 종사업장 식별번호) : <?php echo $result->trusteeTaxRegID ?></li>
                     <li>trusteeCorpName (수탁자 상호) : <?php echo $result->trusteeCorpName ?></li>
                     <li>trusteeCEOName (수탁자 대표자성명) : <?php echo $result->trusteeCEOName ?></li>
                     <li>trusteeAddr (수탁자 주소) : <?php echo $result->trusteeAddr ?></li>
@@ -92,8 +95,9 @@
                     <li>trusteeContactName (수탁자 담당자 성명) : <?php echo $result->trusteeContactName ?></li>
                     <li>trusteeTEL (수탁자 담당자 연락처) : <?php echo $result->trusteeTEL ?></li>
                     <li>trusteeEmail (수탁자 담당자 이메일) : <?php echo $result->trusteeEmail ?></li>
+
                     <li>modifyCode (수정 사유코드) : <?php echo $result->modifyCode ?></li>
-                    <li>orgNTSConfirmNum (당초 전자세금계산서 국세청 승인번호) : <?php echo $result->orgNTSConfirmNum ?></li>
+                    <li>orgNTSConfirmNum (당초 국세청승인번호) : <?php echo $result->orgNTSConfirmNum ?></li>
             <?php
             for ( $i = 0; $i < Count($result->detailList); $i++ ){
                 ?>

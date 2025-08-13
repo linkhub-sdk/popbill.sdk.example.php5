@@ -62,7 +62,7 @@
                         <li>remark2 (비고2) : <?php echo $result->remark2 ?> </li>
                         <li>remark3 (비고3) : <?php echo $result->remark3 ?> </li>
                         <li>senderCorpNum (발신자 사업자번호) : <?php echo $result->senderCorpNum ?> </li>
-                        <li>senderTaxRegID (발신자 종사업장번호) : <?php echo $result->senderTaxRegID ?> </li>
+                        <li>senderTaxRegID (발신자 종사업장 식별번호) : <?php echo $result->senderTaxRegID ?> </li>
                         <li>senderCorpName (발신자 상호) : <?php echo $result->senderCEOName ?> </li>
                         <li>senderCEOName (발신자 대표자성명) : <?php echo $result->senderCEOName ?> </li>
                         <li>senderAddr (발신자 주소) : <?php echo $result->senderAddr ?> </li>
@@ -74,7 +74,7 @@
                         <li>senderEmail (발신자 메일주소) : <?php echo $result->senderEmail ?> </li>
                         <li>senderFAX (발신자 팩스번호) : <?php echo $result->senderFAX ?> </li>
                         <li>receiverCorpNum (수신자 사업자번호) : <?php echo $result->receiverCorpNum ?> </li>
-                        <li>receiverTaxRegID (수신자 종사업장번호) : <?php echo $result->receiverTaxRegID ?> </li>
+                        <li>receiverTaxRegID (수신자 종사업장 식별번호) : <?php echo $result->receiverTaxRegID ?> </li>
                         <li>receiverCorpName (수신자 상호) : <?php echo $result->receiverCorpName ?> </li>
                         <li>receiverCEOName (수신자 대표자성명) : <?php echo $result->receiverCEOName ?> </li>
                         <li>receiverAddr (수신자 주소) : <?php echo $result->receiverAddr ?> </li>
