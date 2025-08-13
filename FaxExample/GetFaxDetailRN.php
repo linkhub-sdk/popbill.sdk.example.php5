@@ -47,8 +47,8 @@
                     <fieldset class="fieldset2">
                         <legend> 팩스전송내역 조회 결과 [<?php echo $i + 1 ?>/<?php echo Count($result) ?>]</legend>
                         <ul>
-                            <li>state (전송상태 코드) : <?php echo $result[$i]->state ?> </li>
-                            <li>result (전송결과 코드) : <?php echo $result[$i]->result ?> </li>
+                            <li>state (상태코드) : <?php echo $result[$i]->state ?> </li>
+                            <li>result (결과코드) : <?php echo $result[$i]->result ?> </li>
                             <li>sendNum (발신번호) : <?php echo $result[$i]->sendNum ?> </li>
                             <li>senderName (발신자명) : <?php echo $result[$i]->senderName ?> </li>
                             <li>receiveNum (수신번호) : <?php echo $result[$i]->receiveNum ?> </li>
