@@ -49,6 +49,7 @@
             <li><a href="GetContactInfo.php">GetContactInfo</a> (담당자 정보 확인)</li>
             <li><a href="ListContact.php">ListContact</a> (담당자 목록 확인) </li>
             <li><a href="UpdateContact.php">UpdateContact</a> (담당자 정보 수정) </li>
+            <li><a href="DeleteContact.php">DeleteContact</a> (담당자 삭제) </li>
             <li><a href="GetAccessURL.php">GetAccessURL</a> (팝빌 로그인 URL) </li>
             <li><a href="QuitMember.php">QuitMember</a> (회원 탈퇴)</li>
         </ul>

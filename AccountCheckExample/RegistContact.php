@@ -19,7 +19,7 @@
     $ContactInfo = new ContactInfo();
 
     // 담당자 아이디
-    $ContactInfo->id = 'testkorea001';
+    $ContactInfo->id = 'testkorea20250813_01';
 
     // 담당자 패스워드(8자이상 20자 이하) 영문, 숫자, 특수문자 조합
     $ContactInfo->Password = 'asdf1234!@#$';
@@ -28,10 +28,10 @@
     $ContactInfo->personName = '담당자_수정';
 
     // 연락처
-    $ContactInfo->tel = '';
+    $ContactInfo->tel = '01000000000';
 
     // 이메일주소
-    $ContactInfo->email = '';
+    $ContactInfo->email = 'test@test.com';
 
     // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
     $ContactInfo->searchRole = 3;
