@@ -93,7 +93,7 @@
                     <fieldset class="fieldset2">
                         <legend> 전자명세서 요약정보[<?php echo $i+1?>]</legend>
                         <ul>
-                            <li>itemCode (명세서 코드) : <?php echo $result->list[$i]->itemCode ?></li>
+                            <li>itemCode (전자명세서 문서 유형) : <?php echo $result->list[$i]->itemCode ?></li>
                             <li>itemKey (팝빌번호) : <?php echo $result->list[$i]->itemKey ?></li>
                             <li>invoiceNum (팝빌승인번호) : <?php echo $result->list[$i]->invoiceNum ?></li>
                             <li>mgtKey (파트너 문서번호) : <?php echo $result->list[$i]->mgtKey ?></li>

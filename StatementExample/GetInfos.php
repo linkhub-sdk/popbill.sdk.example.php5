@@ -15,7 +15,7 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $CorpNum = '1234567890';
 
-    // 명세서 코드 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
+    // 전자명세서 문서 유형 - 121(거래명세서), 122(청구서), 123(견적서) 124(발주서), 125(입금표), 126(영수증)
     $itemCode = '121';
 
     // 조회할 전자명세서 문서번호 배열, 최대 1,000건
@@ -54,7 +54,7 @@
                             <fieldset class="fieldset2">
                                 <legend> 전자명세서 상태/요약정보[<?php echo $i+1?>]</legend>
                                 <ul>
-                                    <li>itemCode (명세서 코드) : <?php echo $result[$i]->itemCode ?></li>
+                                    <li>itemCode (전자명세서 문서 유형) : <?php echo $result[$i]->itemCode ?></li>
                                     <li>itemKey (팝빌번호) : <?php echo $result[$i]->itemKey ?></li>
                                     <li>invoiceNum (팝빌승인번호) : <?php echo $result[$i]->invoiceNum ?></li>
                                     <li>mgtKey (파트너 문서번호) : <?php echo $result[$i]->mgtKey ?></li>
