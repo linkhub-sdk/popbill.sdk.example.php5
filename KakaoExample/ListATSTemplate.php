@@ -46,8 +46,8 @@
                                 <li>templateName (템플릿 제목) : <?php echo $result[$i]->templateName ?></li>
                                 <li>template (템플릿 내용) : <?php echo $result[$i]->template ?></li>
                                 <li>plusFriendID (검색용 아이디) : <?php echo $result[$i]->plusFriendID ?></li>
-                                <li>ads (광고메시지 내용) : <?php echo $result[$i]->ads ?></li>
-                                <li>appendix (부가메시지 내용) : <?php echo $result[$i]->appendix ?></li>
+                                <li>ads (광고 메시지) : <?php echo $result[$i]->ads ?></li>
+                                <li>appendix (부가 메시지) : <?php echo $result[$i]->appendix ?></li>
                                 <li>secureYN (보안템플릿 여부) : <?php echo $result[$i]->secureYN ?></li>
                                 <li>state (템플릿 상태) : <?php echo $result[$i]->state ?></li>
                                 <li>stateDT (템플릿 상태 일시) : <?php echo $result[$i]->stateDT ?></li>
@@ -62,7 +62,6 @@
                                         <li>t (버튼유형) : <?php echo $result[$i]->btns[$j]->t ?></li>
                                         <li>u1 (버튼링크1) : <?php echo (isset($result[$i]->btns[$j]->u1)) ? $result[$i]->btns[$j]->u1 : ''; ?></li>
                                         <li>u2 (버튼링크2) : <?php echo (isset($result[$i]->btns[$j]->u2)) ? $result[$i]->btns[$j]->u2 : ''; ?></li>
-                                        <li>tg (아웃링크) : <?php echo (isset($result[$i]->btns[$j]->tg)) ? $result[$i]->btns[$j]->tg : ''; ?></li>
                                     </ul>
                                     <?php
                                 }

@@ -82,9 +82,9 @@
                         }else{
                     ?>
                             <li>code (응답코드) : <?php echo $result->code ?> </li>
-                            <li>message (응답 메시지) : <?php echo $result->message ?> </li>
+                            <li>message (응답메시지) : <?php echo $result->message ?> </li>
                             <li>total (총 검색결과 건수) : <?php echo $result->total ?> </li>
-                            <li>perPage (페이지당 검색개수) : <?php echo $result->perPage ?> </li>
+                            <li>perPage (페이지당 목록 건수) : <?php echo $result->perPage ?> </li>
                             <li>pageNum (페이지 번호) : <?php echo $result->pageNum ?> </li>
                             <li>pageCount (페이지 개수) : <?php echo $result->pageCount ?> </li>
                     <?php
@@ -93,9 +93,9 @@
                             <fieldset class="fieldset2">
                                 <legend> 카카오톡 전송내역 조회 결과 [<?php echo $i+1 ?>/<?php echo Count($result->list)?>]</legend>
                                 <ul>
-                                    <li>state (전송상태 코드) : <?php echo $result->list[$i]->state ?> </li>
+                                    <li>state (상태코드) : <?php echo $result->list[$i]->state ?> </li>
                                     <li>sendDT (전송일시) : <?php echo $result->list[$i]->sendDT ?> </li>
-                                    <li>result (전송결과 코드) : <?php echo $result->list[$i]->result ?> </li>
+                                    <li>result (카카오 결과코드) : <?php echo $result->list[$i]->result ?> </li>
                                     <li>resultDT (전송결과 수신일시) : <?php echo $result->list[$i]->resultDT ?> </li>
                                     <li>contentType (카카오톡 유형) : <?php echo $result->list[$i]->contentType ?> </li>
                                     <li>receiveNum (수신번호) : <?php echo $result->list[$i]->receiveNum ?> </li>
@@ -105,7 +105,7 @@
                                     <li>altContent (대체문자 내용) : <?php echo $result->list[$i]->altContent ?> </li>
                                     <li>altContentType (대체문자 전송타입) : <?php echo $result->list[$i]->altContentType ?> </li>
                                     <li>altSendDT (대체문자 전송일시) : <?php echo $result->list[$i]->altSendDT ?> </li>
-                                    <li>altResult (대체문자 전송결과 코드) : <?php echo $result->list[$i]->altResult ?> </li>
+                                    <li>altResult (대체문자 통신사 결과코드) : <?php echo $result->list[$i]->altResult ?> </li>
                                     <li>altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->list[$i]->altResultDT ?> </li>
                                     <li>receiptNum (접수번호) : <?php echo $result->list[$i]->receiptNum ?> </li>
                                     <li>requestNum (요청번호) : <?php echo $result->list[$i]->requestNum ?> </li>

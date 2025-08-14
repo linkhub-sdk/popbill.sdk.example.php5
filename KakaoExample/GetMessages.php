@@ -50,12 +50,13 @@
                         <li>templateCode (템플릿 코드) : <?php echo $result->templateCode ? $result->templateCode : '' ?> </li>
                         <li>plusFriendID (검색용 아이디) : <?php echo $result->plusFriendID ?> </li>
                         <li>sendNum (발신번호) : <?php echo $result->sendNum ?> </li>
-                        <li>altSubject ([동보]대체문자 제목) : <?php echo $result->altSubject ?> </li>
-                        <li>altContent ([동보]대체문자 내용) : <?php echo $result->altContent ?> </li>
-                        <li>altSendType (대체문자 전송유형) : <?php echo $result->altSendType ?> </li>
+                        <li>altSubject (대체문자 제목) : <?php echo $result->altSubject ?> </li>
+                        <li>altContent (대체문자 내용) : <?php echo $result->altContent ?> </li>
+                        <li>altSendType (대체문자 유형) : <?php echo $result->altSendType ?> </li>
                         <li>reserveDT (예약일시) : <?php echo $result->reserveDT ?> </li>
                         <li>adsYN (광고전송 여부) : <?php echo $result->adsYN ?> </li>
                         <li>imageURL (친구톡 이미지 URL) : <?php echo $result->imageURL ? $result->imageURL : '' ?> </li>
+
                         <li>sendCnt (전송건수) : <?php echo $result->sendCnt ?> </li>
                         <li>successCnt (성공건수) : <?php echo $result->successCnt ?> </li>
                         <li>failCnt (실패건수) : <?php echo $result->failCnt ?> </li>
@@ -84,19 +85,21 @@
                         <fieldset class="fieldset2">
                             <legend> 개별 전송내역 [<?php echo $i+1 ?>/<?php echo Count($result->msgs)?>]</legend>
                             <ul>
-                                <li>state (전송상태 코드) : <?php echo $result->msgs[$i]->state ?> </li>
+                                <li>state (상태코드) : <?php echo $result->msgs[$i]->state ?> </li>
                                 <li>sendDT (전송일시) : <?php echo $result->msgs[$i]->sendDT ?> </li>
-                                <li>result (전송결과 코드) : <?php echo $result->msgs[$i]->result ?> </li>
+                                <li>result (카카오 결과코드) : <?php echo $result->msgs[$i]->result ?> </li>
                                 <li>resultDT (전송결과 수신일시) : <?php echo $result->msgs[$i]->resultDT ?> </li>
                                 <li>contentType (카카오톡 유형) : <?php echo $result->msgs[$i]->contentType ?> </li>
                                 <li>receiveNum (수신번호) : <?php echo $result->msgs[$i]->receiveNum ?> </li>
                                 <li>receiveName (수신자명) : <?php echo $result->msgs[$i]->receiveName ?> </li>
+
                                 <li>content (알림톡/친구톡 내용) : <?php echo $result->msgs[$i]->content ?> </li>
                                 <li>altSubject (대체문자 제목) : <?php echo $result->msgs[$i]->altSubject ?> </li>
                                 <li>altContent (대체문자 내용) : <?php echo $result->msgs[$i]->altContent ?> </li>
-                                <li>altContentType (대체문자 전송유형) : <?php echo $result->msgs[$i]->altContentType ?> </li>
+                                <li>altContentType (대체문자 전송타입) : <?php echo $result->msgs[$i]->altContentType ?> </li>
+
                                 <li>altSendDT (대체문자 전송일시) : <?php echo $result->msgs[$i]->altSendDT ?> </li>
-                                <li>altResult (대체문자 전송결과 코드) : <?php echo $result->msgs[$i]->altResult ?> </li>
+                                <li>altResult (대체문자 통신사 결과코드) : <?php echo $result->msgs[$i]->altResult ?> </li>
                                 <li>altResultDT (대체문자 전송결과 수신일시) : <?php echo $result->msgs[$i]->altResultDT ?> </li>
                                 <li>receiptNum (접수번호) : <?php echo $result->msgs[$i]->receiptNum ?> </li>
                                 <li>requestNum (요청번호) : <?php echo $result->msgs[$i]->requestNum ?> </li>

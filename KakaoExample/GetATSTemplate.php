@@ -48,8 +48,8 @@
                         <li>templateName (템플릿 제목) : <?php echo $templateInfo->templateName ?></li>
                         <li>template (템플릿 내용) : <?php echo $templateInfo->template ?></li>
                         <li>plusFriendID (검색용 아이디) : <?php echo $templateInfo->plusFriendID ?></li>
-                        <li>ads (광고메시지 내용) : <?php echo $templateInfo->ads ?></li>
-                        <li>appendix (부가메시지 내용) : <?php echo $templateInfo->appendix ?></li>
+                        <li>ads (광고 메시지) : <?php echo $templateInfo->ads ?></li>
+                        <li>appendix (부가 메시지) : <?php echo $templateInfo->appendix ?></li>
                         <li>secureYN (보안템플릿 여부) : <?php echo $templateInfo->secureYN ?></li>
                         <li>state (템플릿 상태) : <?php echo $templateInfo->state ?></li>
                         <li>stateDT (템플릿 상태 일시) : <?php echo $templateInfo->stateDT ?></li>
@@ -64,7 +64,6 @@
                                         <li>n (버튼명) : <?php echo $templateInfo->btns[$j]->n ?></li>
                                         <li>u1 (버튼링크1) : <?php echo (isset($templateInfo->btns[$j]->u1)) ? $templateInfo->btns[$j]->u1 : ''; ?></li>
                                         <li>u2 (버튼링크2) : <?php echo (isset($templateInfo->btns[$j]->u2)) ? $templateInfo->btns[$j]->u2 : ''; ?></li>
-                                        <li>tg (아웃링크) : <?php echo (isset($templateInfo->btns[$j]->tg)) ? $templateInfo->btns[$j]->tg : ''; ?></li>
                                     </ul>
                                 </fieldset>
                 <?php
