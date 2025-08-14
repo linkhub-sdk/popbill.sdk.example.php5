@@ -20,7 +20,7 @@ $CorpNum = '1234567890';
 $UserID = 'testkorea';
 
 // 환불코드
-$RefundCode="023040000017";
+$RefundCode = "023040000017";
 
 try {
     $result = $TaxinvoiceService->GetRefundInfo($CorpNum, $RefundCode, $UserID);

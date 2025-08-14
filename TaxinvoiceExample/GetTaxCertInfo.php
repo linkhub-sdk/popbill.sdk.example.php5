@@ -43,8 +43,8 @@
                     ?>
                         <li>regDT (등록일시) : <?php echo $result->regDT ?></li>
                         <li>expireDT (만료일시) : <?php echo $result->expireDT ?></li>
-                        <li>issuerDN (인증서 발급자 DN) : <?php echo $result->issuerDN ?></li>
-                        <li>subjectDN (등록된 인증서 DN) : <?php echo $result->subjectDN ?></li>
+                        <li>issuerDN (발급자 DN) : <?php echo $result->issuerDN ?></li>
+                        <li>subjectDN (인증서 DN) : <?php echo $result->subjectDN ?></li>
                         <li>issuerName (인증서 종류) : <?php echo $result->issuerName ?></li>
                         <li>oid (OID) : <?php echo $result->oid ?></li>
                         <li>regContactName (등록 담당자 성명) : <?php echo $result->regContactName ?></li>

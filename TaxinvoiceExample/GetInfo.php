@@ -17,7 +17,7 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $CorpNum = '1234567890';
 
-    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    // 문서번호 유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 조회할 세금계산서 문서번호
@@ -46,29 +46,30 @@
                     <?php
                         } else {
                     ?>
-                            <li>itemKey (팝빌번호) : <?php echo $result->itemKey ?></li>
+                            <li>itemKey (팝빌 식별번호) : <?php echo $result->itemKey ?></li>
                             <li>taxType (과세형태) : <?php echo $result->taxType ?></li>
                             <li>writeDate (작성일자) : <?php echo $result->writeDate ?></li>
-                            <li>regDT (임시저장 일자) : <?php echo $result->regDT ?></li>
+                            <li>regDT (임시저장 일시) : <?php echo $result->regDT ?></li>
                             <li>issueType (발행형태) : <?php echo $result->issueType ?></li>
                             <li>supplyCostTotal (공급가액 합계): <?php echo $result->supplyCostTotal ?></li>
                             <li>taxTotal (세액 합계) : <?php echo $result->taxTotal ?></li>
                             <li>purposeType (영수/청구) : <?php echo $result->purposeType ?></li>
+
                             <li>issueDT (발행일시) : <?php echo $result->issueDT ?></li>
                             <li>lateIssueYN (지연발행 여부) : <?php echo $result->lateIssueYN ? 'true' : 'false' ?></li>
-                            <li>preIssueDT (발행예정일시) : <?php echo $result->preIssueDT ?></li>
                             <li>openYN (개봉 여부) : <?php echo $result->openYN ? 'true' : 'false' ?></li>
-                            <li>openDT (개봉 일시) : <?php echo $result->openDT ?></li>
+                            <li>openDT (개봉일시) : <?php echo $result->openDT ?></li>
                             <li>stateMemo (상태메모) : <?php echo $result->stateMemo ?></li>
                             <li>stateCode (상태코드) : <?php echo $result->stateCode ?></li>
-                            <li>stateDT (상태변경일시) : <?php echo $result->stateDT ?></li>
+                            <li>stateDT (상태 변경일시) : <?php echo $result->stateDT ?></li>
                             <li>ntsconfirmNum (국세청승인번호) : <?php echo $result->ntsconfirmNum ?></li>
                             <li>ntsresult (국세청 전송결과) : <?php echo $result->ntsresult ?></li>
                             <li>ntssendDT (국세청 전송일시) : <?php echo $result->ntssendDT ?></li>
                             <li>ntsresultDT (국세청 결과 수신일시) : <?php echo $result->ntsresultDT ?></li>
-                            <li>ntssendErrCode (전송실패 사유코드) : <?php echo $result->ntssendErrCode ?></li>
+                            <li>ntssendErrCode (국세청 결과코드) : <?php echo $result->ntssendErrCode ?></li>
                             <li>modifyCode (수정 사유코드) : <?php echo $result->modifyCode ?></li>
                             <li>interOPYN (연동문서 여부) : <?php echo $result->interOPYN ? 'true' : 'false' ?></li>
+
                             <li>invoicerCorpName (공급자 상호) : <?php echo $result->invoicerCorpName ?></li>
                             <li>invoicerCorpNum (공급자 사업자번호) : <?php echo $result->invoicerCorpNum ?></li>
                             <li>invoicerMgtKey (공급자 문서번호) : <?php echo $result->invoicerMgtKey ?></li>

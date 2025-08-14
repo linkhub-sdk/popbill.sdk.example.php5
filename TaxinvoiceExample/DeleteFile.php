@@ -16,13 +16,13 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
-    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    // 문서번호 유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
     $MgtKey = '20230102-PHP5-002';
 
-    // 삭제할 첨부파일 아이디, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
+    // 파일 식별번호, getFiles(첨부파일목록) API 응답전문에서 attachedFile 변수값 참조
     $FileID = '';
 
     // 팝빌회원 아이디

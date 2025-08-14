@@ -15,7 +15,7 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $CorpNum = '1234567890';
 
-    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    // 문서번호 유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 세금계산서 아이템키, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조

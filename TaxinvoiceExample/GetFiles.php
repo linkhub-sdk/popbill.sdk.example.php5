@@ -16,7 +16,7 @@
     // 팝빌회원 사업자번호, '-'제외 10자리
     $CorpNum = '1234567890';
 
-    // 발행유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
+    // 문서번호 유형, ENumMgtKeyType::SELL:매출, ENumMgtKeyType::BUY:매입, ENumMgtKeyType::TRUSTEE:위수탁
     $MgtKeyType = ENumMgtKeyType::SELL;
 
     // 문서번호
@@ -50,10 +50,10 @@
                             <fieldset class ="fieldset2">
                                 <legend> 첨부파일 [<?php echo $i+1 ?>] </legend>
                                 <ul>
-                                    <li>serialNum (순번) : <?php echo $result[$i]->serialNum; ?></li>
+                                    <li>serialNum (첨부파일 일련번호) : <?php echo $result[$i]->serialNum; ?></li>
+                                    <li>attachedFile (파일 식별번호) : <?php echo $result[$i]->attachedFile; ?></li>
                                     <li>displayName (파일명) : <?php echo $result[$i]->displayName; ?></li>
-                                    <li>attachedFile (파일아이디) : <?php echo $result[$i]->attachedFile; ?></li>
-                                    <li>regDT (등록일시) : <?php echo $result[$i]->regDT; ?></li>
+                                    <li>regDT (첨부일시) : <?php echo $result[$i]->regDT; ?></li>
                                 </ul>
                             </fieldset>
                     <?php

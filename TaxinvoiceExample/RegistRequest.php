@@ -19,38 +19,74 @@
     // 팝빌회원 사업자번호, '-' 제외 10자리
     $CorpNum = '1234567890';
 
-    // 세금계산서 공급받는자 문서번호
-    // - 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $invoiceeMgtKey = '20230102-PHP5-003';
-
-    /************************************************************
-     *                        세금계산서 정보
-     ************************************************************/
-
     // 세금계산서 객체 생성
     $Taxinvoice = new Taxinvoice();
 
-    // 작성일자, 형식(yyyyMMdd) 예)20150101
-    $Taxinvoice->writeDate = '20250813';
-
     // 발행형태, '정발행', '역발행', '위수탁' 중 기재
     $Taxinvoice->issueType = '역발행';
+
+    // 과세형태, ('과세', '영세', '면세') 중 기재
+    $Taxinvoice->taxType = '과세';
 
     // 과금방향, {정과금, 역과금} 중 기재
     // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
     // -'역과금'은 역발행 세금계산서 발행 시에만 이용가능
     $Taxinvoice->chargeDirection = '정과금';
 
+    // 기재상 '일련번호'항목
+    $Taxinvoice->serialNum = '';
+
+    // 기재상 '권' 항목, 최대값 32767
+    // 미기재시 $Taxinvoice->kwon = null;
+    $Taxinvoice->kwon = 1;
+
+    // 기재상 '호' 항목, 최대값 32767
+    // 미기재시 $Taxinvoice->ho = null;
+    $Taxinvoice->ho = 1;
+
+    // 작성일자, 형식(yyyyMMdd) 예)20150101
+    $Taxinvoice->writeDate = '20250813';
+
     // 영수/청구, ('영수', '청구', '없음') 중 기재
     $Taxinvoice->purposeType = '영수';
 
-    // 과세형태, ('과세', '영세', '면세') 중 기재
-    $Taxinvoice->taxType = '과세';
+    // 공급가액 합계
+    $Taxinvoice->supplyCostTotal = '200000';
+
+    // 세액 합계
+    $Taxinvoice->taxTotal = '20000';
+
+    // 합계금액, (공급가액 합계 + 세액 합계)
+    $Taxinvoice->totalAmount = '220000';
+
+    // 기재상 '현금'항목
+    $Taxinvoice->cash = '';
+
+    // 기재상 '수표'항목
+    $Taxinvoice->chkBill = '';
+
+    // 기재상 '외상'항목
+    $Taxinvoice->credit = '';
+
+    // 기재상 '어음'항목
+    $Taxinvoice->note = '';
+
+    // 비고
+    // {invoiceeType}이 "외국인" 이면 remark1 필수
+    // - 외국인 등록번호 또는 여권번호 입력
+    $Taxinvoice->remark1 = '비고1';
+    $Taxinvoice->remark2 = '비고2';
+    $Taxinvoice->remark3 = '비고3';
+
 
 
     /************************************************************
-     *                         공급자 정보
-     ************************************************************/
+    *                         공급자 정보
+    ************************************************************/
+
+    // 공급자 문서번호,
+    // 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+    $Taxinvoice->invoicerMgtKey = '';
 
     // 공급자 사업자번호
     $Taxinvoice->invoicerCorpNum = '8888888888';
@@ -61,42 +97,49 @@
     // 공급자 상호
     $Taxinvoice->invoicerCorpName = '공급자상호';
 
-    // 공급자 문서번호,
-    // 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $Taxinvoice->invoicerMgtKey = '';
-
     // 공급자 대표자성명
     $Taxinvoice->invoicerCEOName = '공급자 대표자성명';
 
     // 공급자 주소
     $Taxinvoice->invoicerAddr = '공급자 주소';
 
-    // 공급자 종목
-    $Taxinvoice->invoicerBizClass = '공급자 종목';
-
     // 공급자 업태
     $Taxinvoice->invoicerBizType = '공급자 업태';
+
+    // 공급자 종목
+    $Taxinvoice->invoicerBizClass = '공급자 종목';
 
     // 공급자 담당자 성명
     $Taxinvoice->invoicerContactName = '공급자 담당자성명';
 
-    // 공급자 담당자 메일주소
+    // 공급자 담당자 메일
     $Taxinvoice->invoicerEmail = '';
 
     // 공급자 담당자 연락처
     $Taxinvoice->invoicerTEL = '';
 
-    // 공급자 휴대폰 번호
+    // 공급자 담당자 휴대폰
     $Taxinvoice->invoicerHP = '';
 
-    /************************************************************
-     *                      공급받는자 정보
-     ************************************************************/
+    // 공급자 알림문자 전송 여부 (true / false 중 택 1)
+    // └ true = 전송 , false = 미전송
+    // └ 공급받는자 (주)담당자 휴대폰번호 {invoiceeHP1} 값으로 문자 전송
+    // - 전송 시 포인트 차감되며, 전송실패시 환불처리
+    $Taxinvoice->invoicerSMSSendYN = false;
 
-    // 공급받는자 구분, '사업자', '개인', '외국인' 중 기재
+
+    /************************************************************
+    *                      공급받는자 정보
+    ************************************************************/
+
+    // [역발행시 필수] 공급받는자 문서번호,
+    // 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+    $Taxinvoice->invoiceeMgtKey = '20230102-PHP5-003';
+
+    // 공급받는자 유형, '사업자', '개인', '외국인' 중 기재
     $Taxinvoice->invoiceeType = '사업자';
 
-    // 공급받는자 사업자번호
+    // 공급받는자 등록번호
     // - {invoiceeType}이 "사업자" 인 경우, 사업자번호 (하이픈 ('-') 제외 10자리)
     // - {invoiceeType}이 "개인" 인 경우, 주민등록번호 (하이픈 ('-') 제외 13자리)
     // - {invoiceeType}이 "외국인" 인 경우, "9999999999999" (하이픈 ('-') 제외 13자리)
@@ -107,10 +150,6 @@
 
     // 공급자 상호
     $Taxinvoice->invoiceeCorpName = '공급받는자 상호';
-
-    // [역발행시 필수] 공급받는자 문서번호,
-    // 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    $Taxinvoice->invoiceeMgtKey = $invoiceeMgtKey;
 
     // 공급받는자 대표자성명
     $Taxinvoice->invoiceeCEOName = '공급받는자 대표자성명';
@@ -127,76 +166,22 @@
     // 공급받는자 담당자 성명
     $Taxinvoice->invoiceeContactName1 = '공급받는자 담당자성명';
 
-    // 공급받는자 담당자 메일주소
+    // 공급받는자 담당자 연락처
+    $Taxinvoice->invoiceeTEL1 = '';
+
+    // 공급받는자 담당자 휴대폰
+    $Taxinvoice->invoiceeHP1 = '';
+
+    // 공급받는자 담당자 메일
     // 팝빌 테스트 환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
     $Taxinvoice->invoiceeEmail1 = '';
 
-    // 공급받는자 담당자 연락처
-    $Taxinvoice->invoiceeTEL1 = '';
-
-    // 공급받는자 담당자 휴대폰 번호
-    $Taxinvoice->invoiceeHP1 = '';
-
-    // 역발행 안내 문자 전송여부 (true / false 중 택 1)
+    // 공급받는자 알림문자 전송 여부 (true / false 중 택 1)
     // └ true = 전송 , false = 미전송
     // └ 공급자 담당자 휴대폰번호 {invoicerHP} 값으로 문자 전송
     // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     $Taxinvoice->invoiceeSMSSendYN = false;
-
-
-    /************************************************************
-     *                       세금계산서 기재정보
-     ************************************************************/
-
-    // 공급가액 합계
-    $Taxinvoice->supplyCostTotal = '200000';
-
-    // 세액 합계
-    $Taxinvoice->taxTotal = '20000';
-
-    // 합계금액, (공급가액 합계 + 세액 합계)
-    $Taxinvoice->totalAmount = '220000';
-
-    // 기재상 '일련번호'항목
-    $Taxinvoice->serialNum = '';
-
-    // 기재상 '현금'항목
-    $Taxinvoice->cash = '';
-
-    // 기재상 '수표'항목
-    $Taxinvoice->chkBill = '';
-    // 기재상 '어음'항목
-    $Taxinvoice->note = '';
-
-    // 기재상 '외상'항목
-    $Taxinvoice->credit = '';
-
-    // 비고
-    // {invoiceeType}이 "외국인" 이면 remark1 필수
-    // - 외국인 등록번호 또는 여권번호 입력
-    $Taxinvoice->remark1 = '비고1';
-    $Taxinvoice->remark2 = '비고2';
-    $Taxinvoice->remark3 = '비고3';
-
-    // 기재상 '권' 항목, 최대값 32767
-    // 미기재시 $Taxinvoice->kwon = null;
-    $Taxinvoice->kwon = 1;
-
-    // 기재상 '호' 항목, 최대값 32767
-    // 미기재시 $Taxinvoice->ho = null;
-    $Taxinvoice->ho = 1;
-
-    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
-    // └ true = 첨부 , false = 미첨부(기본값)
-    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
-    $Taxinvoice->businessLicenseYN = false;
-
-    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
-    // └ true = 첨부 , false = 미첨부(기본값)
-    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
-    $Taxinvoice->bankBookYN = false;
-
 
     /************************************************************
      *                     수정 세금계산서 기재정보
@@ -210,6 +195,15 @@
     // 당초 세금계산서의 국세청 승인번호 기재
     // $Taxinvoice->orgNTSConfirmNum = '';
 
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
+    $Taxinvoice->businessLicenseYN = false;
+
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
+    $Taxinvoice->bankBookYN = false;
 
     /************************************************************
      *                       상세항목(품목) 정보
