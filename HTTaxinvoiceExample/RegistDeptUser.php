@@ -6,7 +6,7 @@
     </head>
 <?php
     /**
-     * 홈택스수집 인증을 위해 팝빌에 전자세금계산서용 부서사용자 계정을 등록합니다.
+     * 팝빌에 전자세금계산서 전용 부서사용자를 등록합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/php/api/cert#RegistDeptUser
      */
 
@@ -15,17 +15,20 @@
     // 사업자번호, "-"제외 10자리
     $CorpNum = '1234567890';
 
-    // 홈택스에서 생성한 전자세금계산서 부서사용자 아이디
+    // 부서사용자 아이디
     $deptUserID = 'userid_test';
 
-    // 홈택스에서 생성한 전자세금계산서 부서사용자 비밀번호
+    // 부서사용자 비밀번호
     $deptUserPWD = 'passwd_test';
+
+    // 부서사용자 대표자 주민번호
+    $identityNum = '';
 
     // 팝빌회원 아이디
     $UserID = 'testkorea';
 
     try	{
-        $result = $HTTaxinvoiceService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD, $UserID);
+        $result = $HTTaxinvoiceService->RegistDeptUser($CorpNum, $deptUserID, $deptUserPWD, $identityNum, $UserID);
         $code = $result->code;
         $message = $result->message;
     }
@@ -45,6 +48,6 @@
                     <li>message (응답 메시지) : <?php echo $message ?></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>
